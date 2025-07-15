@@ -193,7 +193,7 @@ apitoolkit.redactResponseBody=$.users[*].email,$.users[*].credit_card
 
 ```=html
 <div class="callout">
-  <p><i class="fa-regular fa-circle-info"></i> <b>Note</b></p>
+  <p><i class="fa-regular  fa-circle-info"></i> <b>Note</b></p>
   <ul>
     <li>The <code>apitoolkit.redactHeaders</code> config field expects a list of <b>case-insensitive headers as strings</b>.</li>
     <li>The <code>apitoolkit.redactRequestBody</code> and `apitoolkit.redactResponseBody` config fields expect a list of <b>JSONPaths as strings</b>.</li>
