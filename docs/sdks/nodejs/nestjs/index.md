@@ -8,7 +8,7 @@ menuWeight: 2
 
 # NestJs Integration Guide
 
-You can integrate your NestJs application with APIToolkit using OpenTelemetry. This allows you to send logs, metrics, and traces to APIToolkit for monitoring and analytics.
+You can integrate your NestJs application with Monoscope using OpenTelemetry. This allows you to send logs, metrics, and traces to Monoscope for monitoring and analytics.
 
 To get started, you'll need the OpenTelemetry Node.js library and some basic configuration.
 
@@ -54,14 +54,14 @@ OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
 OTEL_NODE_DISABLED_INSTRUMENTATIONS=net,connect,dns,fs
 ```
 
-## APIToolkit Middleware for NestJs + Express
+## Monoscope Middleware for NestJs + Express
 
-If your NestJs app uses the default Express adapter (which is the default unless changed), you can include the APIToolkit Express middleware to capture HTTP request and response details:
+If your NestJs app uses the default Express adapter (which is the default unless changed), you can include the Monoscope Express middleware to capture HTTP request and response details:
 
 ### Installation
 
 ```sh
-npm install --save apitoolkit-express
+npm install --save monoscope-express
 ```
 
 in your `main.ts` file
@@ -70,20 +70,20 @@ in your `main.ts` file
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
-import { APIToolkit } from "apitoolkit-express";
+import { Monoscope } from "monoscope-express";
 import axios from "axios";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const apitoolkitClient = APIToolkit.NewClient({
+  const monoscopeClient = Monoscope.NewClient({
     monitorAxios: axios, // Optional: Use this to monitor axios requests
   });
 
   app.use(apitoolkit.middleware);
 
   app.get("/", async (req, res) => {
-    // This axios request get's monitored and appears in the  APIToolkit explorer
+    // This axios request get's monitored and appears in the  Monoscope explorer
     const response = await axios.get(
       "https://jsonplaceholder.typicode.com/todos/1"
     );
@@ -91,14 +91,14 @@ async function bootstrap() {
   });
 
   // automatically report unhandled errors along with the request data
-  app.use(apitoolkitClient.errorMiddleware);
+  app.use(monoscopeClient.errorMiddleware);
 
   await app.listen(3000);
 }
 bootstrap();
 ```
 
-## APIToolkit Middleware with for NestJs + Fastify
+## Monoscope Middleware with for NestJs + Fastify
 
 If your NestJS app uses the Fastify adapter, you should follow our
 Fastify integration [fastify guide](/docs/sdks/nodejs/fastifyjs/){target="\_blank"}. for detailed setup instructions.
