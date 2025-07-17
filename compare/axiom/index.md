@@ -60,12 +60,12 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
             <td class="font-bold text-base md:text-lg lg:text-lg text-center">API Monitoring and Observability</td>
             <td class="border border-blue-500 bg-slate-50 dark:bg-inherit prose text-sm md:text-base lg:text-base leading-relaxed text-center">
                 <img class="h-6 mt-2 mb-4 block mx-auto" src="/assets/img/compare-logos/check.svg" alt="Icon that indicates this feature is supported." />
-                
+
                 Focused on <b>API-first</b> monitoring, observability, and application performance management (APM). Track and trace incoming and outgoing requests and capture the entire request-response chain of all endpoints on your API.
             </td>
             <td class="border prose text-sm md:text-base lg:text-base leading-relaxed text-center">
                 <img class="h-6 mt-2 mb-4 block mx-auto" src="/assets/img/compare-logos/check2.svg" alt="Icon that indicates this feature is supported." />
-                
+
                 More focused on log management and infrastructure monitoring.
             </td>
          </tr>
@@ -184,7 +184,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
          <tr>
             <td class="font-bold text-base md:text-lg lg:text-lg text-center">Customer Support</td>
             <td class="border border-blue-500 bg-slate-50 dark:bg-inherit prose text-sm md:text-base lg:text-base leading-relaxed text-center">
-                Users on any plan can <a href="https://apitoolkit.io/demo" target="_blank" rel="noopener noreferrer" class="text-slate-500">schedule a call</a> with an engineer on the team, join the community <a href="https://apitoolkit.io/discord" target="_blank" rel="noopener noreferrer" class="text-slate-500">Discord server</a>, write via email, or submit issues on <a href="https://github.com/apitoolkit" target="_blank" rel="noopener noreferrer" class="text-slate-500">GitHub</a>. Our support team is always ready to help, swiftly!
+                Users on any plan can <a href="https://apitoolkit.io/demo" target="_blank" rel="noopener noreferrer" class="text-slate-500">schedule a call</a> with an engineer on the team, join the community <a href="https://apitoolkit.io/discord" target="_blank" rel="noopener noreferrer" class="text-slate-500">Discord server</a>, write via email, or submit issues on <a href="https://github.com/monoscope-tech" target="_blank" rel="noopener noreferrer" class="text-slate-500">GitHub</a>. Our support team is always ready to help, swiftly!
             </td>
             <td class="border prose text-sm md:text-base lg:text-base leading-relaxed text-center">
                 Users get support via email and only the paid users get priority support.

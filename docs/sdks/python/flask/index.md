@@ -298,7 +298,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>observe_request()</code> function wraps an <a href="https://github.com/apitoolkit/apitoolkit-pyramid" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
+  <p>The <code>observe_request()</code> function wraps an <a href="https://github.com/monoscope-tech/apitoolkit-pyramid" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
 
  client and you can use it just like you would normally use HTTPX for any request.</p>
 </div>
@@ -306,7 +306,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 
 ```=html
 <hr />
-<a href="https://github.com/apitoolkit/apitoolkit-flask" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
+<a href="https://github.com/monoscope-tech/apitoolkit-flask" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
     <i class="fa-brands fa-github"></i>
     Explore the Flask SDK
 </a>
