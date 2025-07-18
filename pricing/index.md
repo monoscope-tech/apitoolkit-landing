@@ -18,27 +18,27 @@ faqs:
 ```=html
 <div class="w-full">
     <header class="w-full mt-32">
-        <div class="max-w-7xl  mx-auto px-2">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="w-full flex flex-col items-center text-center gap-4">
-                <h1 class="font-bold text-4xl text-[50px] dark:text-white">Pay Only for What You Use</h1>
+                <h1 class="font-bold text-3xl md:text-4xl lg:text-[50px] dark:text-white">Pay Only for What You Use</h1>
                 <p class="max-w-[300px] md:max-w-[500px] text-base-content font-medium text-base md:text-lg">Trust your APIs and only pay for the requests we analyze.</p>
             </div>
         </div>
     </header>
     <div class="max-w-7xl  mx-auto px-2">
-        <section class="w-full grid md:grid-cols-3 gap-8 py-24">
+        <section class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-12 md:py-24">
 
             <div
-                class="group rounded-2xl border p-6 flex duration-300 flex-col text-gray-700 justify-start gap-6 text-lef shadow-md">
+                class="group rounded-2xl border p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md">
                 <div class="flex flex-col gap-3 pb-1">
                 <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-[25px]">Free Plan</h3>
+                 <h3 class="font-medium text-xl md:text-[25px]">Free Plan</h3>
                 </div>
                     <div>
                         <div class="flex flex-col items-start gap-8px">
                             <span class="text-sm font-bold text-gray-400">Starts at ...</span>
                             <div class="">
-                               <span class="font-bold text-6xl" >$0</span>
+                               <span class="font-bold text-4xl md:text-6xl" >$0</span>
                                <span class="">/10k events per day</span>
                                <br>
                             </div>
@@ -93,7 +93,7 @@ faqs:
 
            <!-- GRADUATED PLAN -->
             <div
-                class="group rounded-2xl border border-[#0068ff] p-6 flex duration-300 flex-col text-gray-700 justify-start gap-6 text-lef shadow-md">
+                class="group rounded-2xl border border-[#0068ff] p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md">
                 <div class="flex flex-col gap-3 pb-1">
                 <div class="flex justify-between items-center">
                  <h3 class="font-medium text-[25px]">Pay as you use</h3>
@@ -239,12 +239,12 @@ faqs:
 
             <!-- ENTERPRISE PLAN -->
             <a href="mailto:hello@apitoolkit.io"
-                class="col-span-3 group rounded-2xl border p-6 flex duration-300 flex-col text-gray-50 justify-start gap-6 text-left bg-slate-900 shadow-md hover:-translate-y-3">
+                class="col-span-1 md:col-span-3 group rounded-2xl border p-4 md:p-6 flex duration-300 flex-col text-gray-50 justify-start gap-4 md:gap-6 text-left bg-slate-900 shadow-md hover:-translate-y-3">
                 <div class="flex flex-col gap-3 pb-1">
-                    <h3 class="font-medium text-3xl">Enterprise</h3>
+                    <h3 class="font-medium text-2xl md:text-3xl">Enterprise</h3>
                     <div>
                         <div class="flex flex-row items-start gap-8px">
-                            <div class="font-bold text-6xl">Contact us
+                            <div class="font-bold text-4xl md:text-6xl">Contact us
                             </div>
                         </div>
                         <div class="text-sm leading-120 font-medium text-gray-200">
@@ -284,10 +284,10 @@ faqs:
             </a>
         </section>
 
-        <div class="rounded-2xl grid grid-cols-2 border shadow-sm">
-          <div class="flex flex-col gap-8 p-10">
-             <h1 class="font-medium text-2xl" >Apply for the APItoolkit Startup Program</h1>
-            <div class="space-y-3 text-lg">
+        <div class="rounded-2xl grid grid-cols-1 md:grid-cols-2 border shadow-sm">
+          <div class="flex flex-col gap-4 md:gap-8 p-6 md:p-10">
+             <h1 class="font-medium text-xl md:text-2xl" >Apply for the APItoolkit Startup Program</h1>
+            <div class="space-y-3 text-base md:text-lg">
              <p>
              Enjoy 50 to 100% discount on your first year of subscription through our exclusive Startup Program. Qualification criteria:
             </p>
@@ -300,7 +300,7 @@ faqs:
             </div>
              <a href="https://tally.so/r/n9vVkY" target="_BLANK" class="btn btn-secondary">Apply now</a>
           </div>
-          <div class="flex flex-col gap-2" style="background-image: url('/assets/img/support-program.webp'); background-size: cover; background-position: center;">
+          <div class="hidden md:flex flex-col gap-2" style="background-image: url('/assets/img/support-program.webp'); background-size: cover; background-position: center;">
           </div>
         </div>
 
