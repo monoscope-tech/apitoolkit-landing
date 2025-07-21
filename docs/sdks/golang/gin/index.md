@@ -13,7 +13,7 @@ menuWeight: 4
 Install the APIToolkit gin SDK using the following command `go get` command:
 
 ```sh
-go get github.com/apitoolkit/apitoolkit-go/gin
+go get github.com/monoscope-tech/monoscope-go/gin
 ```
 
 ## Configuration
@@ -22,7 +22,7 @@ Before configuration open telemetery and setting up the APItoolkit middleware, y
 
 ```sh
 OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your apitoolkit API key
-OTEL_SERVICE_NAME="apitoolkit-otel-go-demo" # Service name for your the service you're integrating in
+OTEL_SERVICE_NAME="monoscope-otel-go-demo" # Service name for your the service you're integrating in
 OTEL_SERVICE_VERSION="0.0.1" # Your application's service version
 ```
 
@@ -37,7 +37,7 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/gin"
+	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 )
@@ -81,7 +81,7 @@ import (
 	"net/http"
 	"os"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/gin"
+	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 )
@@ -132,7 +132,7 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/gin"
+	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 )
@@ -191,7 +191,7 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/gin"
+	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
@@ -264,7 +264,7 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/gin"
+	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/extra/redisotel/v8"
 	"github.com/go-redis/redis/v8"

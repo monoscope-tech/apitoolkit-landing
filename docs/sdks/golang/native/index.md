@@ -13,7 +13,7 @@ menuWeight: 6
 Install the APIToolkit native Go SDK using the following command `go get` command:
 
 ```sh
-go get github.com/apitoolkit/apitoolkit-go/native
+go get github.com/monoscope-tech/monoscope-go/native
 ```
 
 ## Configuration
@@ -22,7 +22,7 @@ Before configuration open telemetery and setting up the APItoolkit middleware, y
 
 ```sh
 OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your apitoolkit API key
-OTEL_SERVICE_NAME="apitoolkit-otel-go-demo" # Service name for your the service you're integrating in
+OTEL_SERVICE_NAME="monoscope-otel-go-demo" # Service name for your the service you're integrating in
 OTEL_SERVICE_VERSION="0.0.1" # Your application's service version
 ```
 
@@ -36,7 +36,7 @@ package main
 import (
 	"log"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/native"
+	apitoolkit "github.com/monoscope-tech/monoscope-go/native"
   _ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 
 )
