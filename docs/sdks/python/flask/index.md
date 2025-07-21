@@ -8,7 +8,7 @@ menuWeight: 3
 
 # Flask SDK Guide
 
-In this guide, you’ll learn how to integrate OpenTelemetry into your Flask application and install the APItoolkit SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the APItoolkit SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
+In this guide, you’ll learn how to integrate OpenTelemetry into your Flask application and install the Monoscope SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the Monoscope SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
 
 ```=html
 <hr>
@@ -20,10 +20,10 @@ Ensure you have already completed the first three steps of the [onboarding guide
 
 ## Installation
 
-Kindly run the command below to install the apitoolkit flask sdks and necessary opentelemetry packages:
+Kindly run the command below to install the monoscope flask sdks and necessary opentelemetry packages:
 
 ```sh
-pip install apitoolkit-flask opentelemetry-distro opentelemetry-exporter-otlp
+pip install monoscope-flask opentelemetry-distro opentelemetry-exporter-otlp
 opentelemetry-bootstrap -a install
 ```
 
@@ -56,33 +56,33 @@ opentelemetry-instrument gunicorn server:app
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the APItoolkit dashboard.</p>
+  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the Monoscope dashboard.</p>
 </div>
 ```
 
-## APItoolkit Flask Configuration
+## Monoscope Flask Configuration
 
-After setting up open telemetry, you can now configure the apitoolkit django middleware.
-Next, initialize APItoolkit in your application's entry point (e.g., `main.py`), like so:
+After setting up open telemetry, you can now configure the monoscope flask middleware.
+Next, initialize Monoscope in your application's entry point (e.g., `main.py`), like so:
 
 ```python
 from flask import Flask
-from apitoolkit_flask import APIToolkit
+from monoscope_flask import Monoscope
 
 app = Flask(__name__)
 
-# Initialize APItoolkit
-apitoolkit = APIToolkit()
+# Initialize Monoscope
+monoscope = Monoscope()
 
 @app.before_request
 def before_request():
-  apitoolkit.beforeRequest()
+  monoscope.beforeRequest()
 
 @app.after_request
 def after_request(response):
-  apitoolkit.afterRequest(response)
+  monoscope.afterRequest(response)
   return response
-# END Initialize APItoolkit
+# END Initialize Monoscope
 
 @app.route('/hello', methods=['GET', 'POST'])
 def sample_route():
@@ -108,9 +108,9 @@ app.run(debug=True)
 
 ## Redacting Sensitive Data
 
-If you have fields that are sensitive and should not be sent to APItoolkit servers, you can mark those fields to be redacted (the fields will never leave your servers).
+If you have fields that are sensitive and should not be sent to Monoscope servers, you can mark those fields to be redacted (the fields will never leave your servers).
 
-To mark a field for redacting via this SDK, you need to add some additional fields to the `apitoolkit` configuration object with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
+To mark a field for redacting via this SDK, you need to add some additional fields to the `monoscope` configuration object with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
 
 1. `redact_headers`: A list of HTTP header keys.
 2. `redact_response_body`: A list of JSONPaths from the request body.
@@ -156,15 +156,15 @@ Examples of valid JSONPath expressions would be:
 :::
 | JSONPath | Description |
 | -------- | ----------- |
-| `$.user.addresses[*].zip` | In this case, APItoolkit will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
-| `$.user.credit_card` | In this case, APItoolkit will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.addresses[*].zip` | In this case, Monoscope will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.credit_card` | In this case, Monoscope will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=apitoolkit" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
-  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to APItoolkit will look like, after redacting any given JSON object</b>.</p>
+  <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=monoscope" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
+  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to Monoscope will look like, after redacting any given JSON object</b>.</p>
 </div>
 <hr />
 ```
@@ -173,7 +173,7 @@ Here's an example of what the configuration would look like with redacted fields
 
 ```python
 from flask import Flask
-from apitoolkit_flask import APIToolkit
+from monoscope_flask import Monoscope
 
 app = Flask(__name__)
 
@@ -181,7 +181,7 @@ redact_headers = ["content-type", "Authorization", "HOST"]
 redact_response_body = ["$.user.email", "$.user.addresses"]
 redact_request_body = ["$.users[*].email", "$.users[*].credit_card"]
 
-apitoolkit = APIToolkit(
+monoscope = APIToolkit(
   redact_headers=redact_headers,
   redact_response_body=redact_response_body,
   redact_request_body=redact_request_body
@@ -189,11 +189,11 @@ apitoolkit = APIToolkit(
 
 @app.before_request
 def before_request():
-  apitoolkit.beforeRequest()
+  monoscope.beforeRequest()
 
 @app.after_request
 def after_request(response):
-  apitoolkit.afterRequest(response)
+  monoscope.afterRequest(response)
   return response
 
 @app.route('/hello', methods=['GET', 'POST'])
@@ -216,25 +216,25 @@ app.run(debug=True)
 
 ## Error Reporting
 
-With APItoolkit, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+With Monoscope, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
-To manually report specific errors at different parts of your application, use the `report_error()` function from the `apitoolkit_flask` module, passing in the `request` and `error`, like so:
+To manually report specific errors at different parts of your application, use the `report_error()` function from the `monoscope_flask` module, passing in the `request` and `error`, like so:
 
 ```python
 from flask import Flask, request
-from apitoolkit_flask import APIToolkit, report_error
+from monoscope_flask import Monoscope, report_error
 
 app = Flask(__name__)
 
-apitoolkit = APIToolkit()
+monoscope = Monoscope()
 
 @app.before_request
 def before_request():
-  apitoolkit.beforeRequest()
+  monoscope.beforeRequest()
 
 @app.after_request
 def after_request(response):
-  apitoolkit.afterRequest(response)
+  monoscope.afterRequest(response)
   return response
 
 @app.route('/', methods=['GET', 'POST'])
@@ -243,7 +243,7 @@ def sample_route():
     value = 1 / 0
     return {"zero_division": value}
   except Exception as e:
-    # Report the error to APItoolkit
+    # Report the error to Monoscope
     report_error(request, e)
     return {"message": "Something went wrong"}
 
@@ -253,25 +253,25 @@ if __name__ == "__main__":
 
 ## Monitoring Outgoing Requests
 
-Outgoing requests are external API calls you make from your API. By default, APItoolkit monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
+Outgoing requests are external API calls you make from your API. By default, Monoscope monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
 
-To monitor outgoing HTTP requests from your application, use the `observe_request()` function from the `apitoolkit_flask` module, passing in the `request` argument, like so:
+To monitor outgoing HTTP requests from your application, use the `observe_request()` function from the `monoscope_flask` module, passing in the `request` argument, like so:
 
 ```python
 from flask import Flask, request
-from apitoolkit_flask import APIToolkit, observe_request
+from monoscope_flask import Monoscope, observe_request
 
 app = Flask(__name__)
 
-apitoolkit = APIToolkit()
+monoscope = Monoscope()
 
 @app.before_request
 def before_request():
-  apitoolkit.beforeRequest()
+  monoscope.beforeRequest()
 
 @app.after_request
 def after_request(response):
-  apitoolkit.afterRequest(response)
+  monoscope.afterRequest(response)
   return response
 
 @app.route('/', methods=['GET', 'POST'])
@@ -298,7 +298,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>observe_request()</code> function wraps an <a href="https://github.com/monoscope-tech/apitoolkit-pyramid" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
+  <p>The <code>observe_request()</code> function wraps an <a href="https://github.com/monoscope-tech/monoscope-flask" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
 
  client and you can use it just like you would normally use HTTPX for any request.</p>
 </div>
@@ -306,7 +306,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 
 ```=html
 <hr />
-<a href="https://github.com/monoscope-tech/apitoolkit-flask" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
+<a href="https://github.com/monoscope-tech/monoscope-flask" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
     <i class="fa-brands fa-github"></i>
     Explore the Flask SDK
 </a>

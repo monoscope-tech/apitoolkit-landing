@@ -8,7 +8,7 @@ menuWeight: 2
 
 # FastAPI SDK Guide
 
-In this guide, you’ll learn how to integrate OpenTelemetry into your FastAPI application and install the APItoolkit SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the APItoolkit SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
+In this guide, you’ll learn how to integrate OpenTelemetry into your FastAPI application and install the Monoscope SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the Monoscope SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
 
 ```=html
 <hr>
@@ -20,16 +20,16 @@ Ensure you have already completed the first three steps of the [onboarding guide
 
 ## Installation
 
-Kindly run the command below to install the apitoolkit fastapi sdk and necessary opentelemetry packages:
+Kindly run the command below to install the monoscope fastapi sdk and necessary opentelemetry packages:
 
 ```sh
-pip install apitoolkit-fastapi opentelemetry-distro opentelemetry-exporter-otlp
+pip install monoscope-fastapi opentelemetry-distro opentelemetry-exporter-otlp
 opentelemetry-bootstrap -a install
 ```
 
 ## Setup Open Telemetry
 
-Setting up open telemetry allows you to send traces, metrics and logs to the APIToolkit platform.
+Setting up open telemetry allows you to send traces, metrics and logs to the Monoscope platform.
 To setup open telemetry, you need to configure the following environment variables:
 
 ```sh
@@ -56,26 +56,26 @@ opentelemetry-instrument gunicorn -c gunicorn.conf.py main:app
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the APItoolkit dashboard.</p>
+  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the Monoscope dashboard.</p>
 </div>
 ```
 
-## APItoolkit FastAPI Configuration
+## Monoscope FastAPI Configuration
 
-After setting up open telemetry, you can now configure the apitoolkit fastapi middleware.
+After setting up open telemetry, you can now configure the monoscope fastapi middleware.
 
-Next, initialize APItoolkit in your application's entry point (e.g., `main.py`), like so:
+Next, initialize Monoscope in your application's entry point (e.g., `main.py`), like so:
 
 ```python
 from fastapi import FastAPI
-from apitoolkit_fastapi import APIToolkit
+from monoscope_fastapi import Monoscope
 
 app = FastAPI()
 
-# Initialize APItoolkit
-apitoolkit = APIToolkit()
-app.middleware("http")(apitoolkit.middleware)
-# END Initialize APItoolkit
+# Initialize Monoscope
+monoscope = Monoscope()
+app.middleware("http")(monoscope.middleware)
+# END Initialize Monoscope
 
 @app.get("/")
 def read_root():
@@ -99,9 +99,9 @@ def read_root():
 
 ## Redacting Sensitive Data
 
-If you have fields that are sensitive and should not be sent to APItoolkit servers, you can mark those fields to be redacted (the fields will never leave your servers).
+If you have fields that are sensitive and should not be sent to Monoscope servers, you can mark those fields to be redacted (the fields will never leave your servers).
 
-To mark a field for redacting via this SDK, you need to add some additional fields to the `apitoolkit` configuration object with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
+To mark a field for redacting via this SDK, you need to add some additional fields to the `monoscope` configuration object with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
 
 1. `redact_headers`: A list of HTTP header keys.
 2. `redact_response_body`: A list of JSONPaths from the request body.
@@ -147,15 +147,15 @@ Examples of valid JSONPath expressions would be:
 :::
 | JSONPath | Description |
 | -------- | ----------- |
-| `$.user.addresses[*].zip` | In this case, APItoolkit will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
-| `$.user.credit_card` | In this case, APItoolkit will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.addresses[*].zip` | In this case, Monoscope will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.credit_card` | In this case, Monoscope will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
   <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=apitoolkit" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
-  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to APItoolkit will look like, after redacting any given JSON object</b>.</p>
+  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to Monoscope will look like, after redacting any given JSON object</b>.</p>
 </div>
 <hr />
 ```
@@ -164,7 +164,7 @@ Here's an example of what the configuration would look like with redacted fields
 
 ```python
 from fastapi import FastAPI
-from apitoolkit_fastapi import APIToolkit
+from monoscope_fastapi import Monoscope
 
 app = FastAPI()
 
@@ -172,13 +172,13 @@ redact_headers = ["content-type", "Authorization", "HOST"]
 redact_response_body = ["$.user.email", "$.user.addresses"]
 redact_request_body = ["$.users[*].email", "$.users[*].credit_card"]
 
-apitoolkit = APIToolkit(
+monoscope = Monoscope(
   redact_headers=redact_headers,
   redact_response_body=redact_response_body,
   redact_request_body=redact_request_body
 )
 
-app.middleware("http")(apitoolkit.middleware)
+app.middleware("http")(monoscope.middleware)
 
 @app.get("/")
 def read_root():
@@ -198,18 +198,18 @@ def read_root():
 
 ## Error Reporting
 
-APItoolkit automatically detects different unhandled errors, API issues, and anomalies but you can report and track specific errors at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+Monoscope automatically detects different unhandled errors, API issues, and anomalies but you can report and track specific errors at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
-To manually report specific errors at different parts of your application, use the `report_error()` function from the `apitoolkit_fastapi` module, passing in the `request` and `error`, like so:
+To manually report specific errors at different parts of your application, use the `report_error()` function from the `monoscope_fastapi` module, passing in the `request` and `error`, like so:
 
 ```python
 from fastapi import FastAPI, Request
-from apitoolkit_fastapi import report_error
+from monoscope_fastapi import Monoscope, report_error
 
 app = FastAPI()
 
-apitoolkit = APIToolkit()
-app.middleware("http")(apitoolkit.middleware)
+monoscope = Monoscope()
+app.middleware("http")(monoscope.middleware)
 
 @app.get('/')
 async def sample_route(request: Request):
@@ -217,25 +217,25 @@ async def sample_route(request: Request):
     v = 1 / 0
     return {"zero_division": v}
   except Exception as e:
-    # Report the error to APItoolkit
+    # Report the error to Monoscope
     report_error(request, e)
     return {"message": "Something went wrong"}
 ```
 
 ## Monitoring Outgoing Requests
 
-Outgoing requests are external API calls you make from your API. By default, APItoolkit monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
+Outgoing requests are external API calls you make from your API. By default, Monoscope monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
 
-To monitor outgoing HTTP requests from your application, use the `observe_request()` function from the `apitoolkit_fastapi` module, passing in the `request` argument, like so:
+To monitor outgoing HTTP requests from your application, use the `observe_request()` function from the `monoscope_fastapi` module, passing in the `request` argument, like so:
 
 ```python
 from fastapi import FastAPI, Request
-from apitoolkit_fastapi import observe_request
+from monoscope_fastapi import observe_request
 
 app = FastAPI()
 
-apitoolkit = APIToolkit()
-app.middleware("http")(apitoolkit.middleware)
+monoscope = Monoscope()
+app.middleware("http")(monoscope.middleware)
 
 @app.get('/')
 async def sample_route(request: Request):
@@ -258,7 +258,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The `observe_request()` function wraps an <a href="https://github.com/monoscope-tech/apitoolkit-pyramid" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
+  <p>The `observe_request()` function wraps an <a href="https://github.com/monoscope-tech/monoscope-fastapi" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
 
  client and you can use it just like you would normally use HTTPX for any request.</p>
 </div>
@@ -266,7 +266,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 
 ```=html
 <hr />
-<a href="https://github.com/monoscope-tech/apitoolkit-fastapi" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
+<a href="https://github.com/monoscope-tech/monoscope-fastapi" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
     <i class="fa-brands fa-github"></i>
     Explore the FastAPI SDK
 </a>
