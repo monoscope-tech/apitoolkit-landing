@@ -18,17 +18,17 @@ go get github.com/monoscope-tech/monoscope-go/gin
 
 ## Configuration
 
-Before configuration open telemetery and setting up the APItoolkit middleware, you need to configure a few environment variables. These variables provide essential information for setting up openTelemetry and APItoolkit.
+Before configuration open telemetery and setting up the Monoscope middleware, you need to configure a few environment variables. These variables provide essential information for setting up openTelemetry and Monoscope.
 
 ```sh
-OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your apitoolkit API key
+OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your monoscope API key
 OTEL_SERVICE_NAME="monoscope-otel-go-demo" # Service name for your the service you're integrating in
 OTEL_SERVICE_VERSION="0.0.1" # Your application's service version
 ```
 
 ## Usage
 
-After setting up the environment variables, you can configure the OpenTelemetry SDK and APItoolkit middleware like so:
+After setting up the environment variables, you can configure the OpenTelemetry SDK and Monoscope middleware like so:
 
 ```go
 package main
@@ -37,23 +37,23 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
+	monoscope "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 )
 
 func main() {
 	// Configure openTelemetry
-	shutdown, err := apitoolkit.ConfigureOpenTelemetry()
+	shutdown, err := monoscope.ConfigureOpenTelemetry()
 	if err != nil {
 		log.Printf("error configuring openTelemetry: %v", err)
 	}
 	defer shutdown()
 
 	router := gin.Default()
-	// Add the apitoolkit gin middleware to monitor http requests
-	// And report errors to apitoolkit
-	router.Use(apitoolkit.Middleware(apitoolkit.Config{
+	// Add the monoscope gin middleware to monitor http requests
+	// And report errors to monoscope
+	router.Use(monoscope.Middleware(monoscope.Config{
 		RedactHeaders:      []string{"Authorization", "X-Api-Key"},
 		RedactRequestBody:  []string{"password", "credit_card"},
 		RedactResponseBody: []string{"password", "credit_card"},
@@ -69,7 +69,7 @@ func main() {
 
 ## Error Reporting
 
-APItoolkit automatically detects different unhandled errors, API issues, and anomalies but you can report and track specific errors at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+Monoscope automatically detects different unhandled errors, API issues, and anomalies but you can report and track specific errors at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
 To manually report specific errors at different parts of your application, use the `ReportError()` method, passing in the `context` and `error` arguments, like so:
 
@@ -81,27 +81,27 @@ import (
 	"net/http"
 	"os"
 
-	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
+	monoscope "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 )
 
 func main() {
 	// Configure openTelemetry
-	shutdown, err := apitoolkit.ConfigureOpenTelemetry()
+	shutdown, err := monoscope.ConfigureOpenTelemetry()
 	if err != nil {
 		log.Printf("error configuring openTelemetry: %v", err)
 	}
 	defer shutdown()
 
 	router := gin.New()
-	router.Use(apitoolkit.Middleware(apitoolkit.Config{}))
+	router.Use(monoscope.Middleware(monoscope.Config{}))
 
 	router.GET("/", func(c *gin.Context) {
 		file, err := os.Open("non-existing-file.txt")
 		if err != nil {
-			// Report the error to APItoolkit
-			apitoolkit.ReportError(c.Request.Context(), err)
+			// Report the error to Monoscope
+			monoscope.ReportError(c.Request.Context(), err)
 			c.JSON(http.StatusInternalServerError, gin.H{"message": "Something went wrong"})
 			return
 		}
@@ -113,14 +113,14 @@ func main() {
 
 ## Monitoring Outgoing Requests
 
-Outgoing requests are external API calls you make from your API. By default, APItoolkit monitors all requests users make from your application and they will all appear in the page.
+Outgoing requests are external API calls you make from your API. By default, Monoscope monitors all requests users make from your application and they will all appear in the page.
 
 ```=html
 <section class="tab-group" data-tab-group="group1">
-  <button class="tab-button" data-tab="tab1">Using APItoolkit</button>
+  <button class="tab-button" data-tab="tab1">Using Monoscope</button>
   <button class="tab-button" data-tab="tab2">Using Otel instrumentation</button>
   <div id="tab1" class="tab-content">
-  To monitor outgoing HTTP requests from your application, replace the default HTTP client transport with a custom RoundTripper. This allows you to capture and send copies of all incoming and outgoing requests to APItoolkit.
+  To monitor outgoing HTTP requests from your application, replace the default HTTP client transport with a custom RoundTripper. This allows you to capture and send copies of all incoming and outgoing requests to Monoscope.
 
 Here's an example of the configuration with a custom RoundTripper:
 ```
@@ -132,29 +132,29 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
+	monoscope "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 )
 
 func main() {
 	// Configure openTelemetry
-	shutdown, err := apitoolkit.ConfigureOpenTelemetry()
+	shutdown, err := monoscope.ConfigureOpenTelemetry()
 	if err != nil {
 		log.Printf("error configuring openTelemetry: %v", err)
 	}
 	defer shutdown()
 
 	router := gin.New()
-	router.Use(apitoolkit.Middleware(apitoolkit.Config{}))
+	router.Use(monoscope.Middleware(monoscope.Config{}))
 
 	router.GET("/", func(c *gin.Context) {
 		// Create a new HTTP client
-		HTTPClient := apitoolkit.HTTPClient(
+		HTTPClient := monoscope.HTTPClient(
 			c.Request.Context(),
-			apitoolkit.WithRedactHeaders("content-type", "Authorization", "HOST"),
-			apitoolkit.WithRedactRequestBody("$.user.email", "$.user.addresses"),
-			apitoolkit.WithRedactResponseBody("$.users[*].email", "$.users[*].credit_card"),
+			monoscope.WithRedactHeaders("content-type", "Authorization", "HOST"),
+			monoscope.WithRedactRequestBody("$.user.email", "$.user.addresses"),
+			monoscope.WithRedactResponseBody("$.users[*].email", "$.users[*].credit_card"),
 		)
 
 		// Make an outgoing HTTP request using the modified HTTPClient
@@ -174,7 +174,7 @@ func main() {
   </div>
 
    <div id="tab2" class="tab-content">
-  You can also use an otel instrumentation library to monitor outgoing requests from your server, but using this instead of the APItoolkit HTTP client will not log request and response bodies. To use otel outgoing request monitoring, you must first install it using the command below:
+  You can also use an otel instrumentation library to monitor outgoing requests from your server, but using this instead of the Monoscope HTTP client will not log request and response bodies. To use otel outgoing request monitoring, you must first install it using the command below:
 ```
 
 ```sh
@@ -191,7 +191,7 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
+	monoscope "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
@@ -203,14 +203,14 @@ var clientWithOtel = http.Client{
 
 func main() {
 	// Configure openTelemetry
-	shutdown, err := apitoolkit.ConfigureOpenTelemetry()
+	shutdown, err := monoscope.ConfigureOpenTelemetry()
 	if err != nil {
 		log.Printf("error configuring openTelemetry: %v", err)
 	}
 	defer shutdown()
 
 	router := gin.New()
-	router.Use(apitoolkit.Middleware(apitoolkit.Config{}))
+	router.Use(monoscope.Middleware(monoscope.Config{}))
 
 	router.GET("/", func(c *gin.Context) {
 		// Create a new request
@@ -249,7 +249,7 @@ func main() {
 
 ## OpenTelemetry Redis Instrumentation
 
-APItoolkit provides an OpenTelemetry Redis instrumentation library that you can use to monitor Redis requests. To use the Redis instrumentation, you must first install it using the command below:
+Monoscope provides an OpenTelemetry Redis instrumentation library that you can use to monitor Redis requests. To use the Redis instrumentation, you must first install it using the command below:
 
 ```sh
 go get github.com/go-redis/redis/extra/redisotel/v8
@@ -264,7 +264,7 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/monoscope-tech/monoscope-go/gin"
+	monoscope "github.com/monoscope-tech/monoscope-go/gin"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/extra/redisotel/v8"
 	"github.com/go-redis/redis/v8"
@@ -273,7 +273,7 @@ import (
 
 func main() {
 	// Configure openTelemetry
-	shutdown, err := apitoolkit.ConfigureOpenTelemetry()
+	shutdown, err := monoscope.ConfigureOpenTelemetry()
 	if err != nil {
 		log.Printf("error configuring openTelemetry: %v", err)
 	}
@@ -288,7 +288,7 @@ func main() {
 	rdb.AddHook(redisotel.NewTracingHook())
 
 	router := gin.Default()
-	router.Use(apitoolkit.Middleware(apitoolkit.Config{}))
+	router.Use(monoscope.Middleware(monoscope.Config{}))
 
 	router.GET("/greet/:name", func(c *gin.Context) {
 		// Get the current context from Gin
@@ -322,7 +322,7 @@ Set the following environment variables in your application to enable the SDK:
 :::
 | Variable Name | Description | Required | Example |
 | ----------------------------------- | ------------------------------------------------------------- | -------- | ---------------------------- |
-| `OTEL_RESOURCE_ATTRIBUTES` | APItoolkit project key (`at-project-key=<YOUR_API_KEY>`) | Yes | `at-project-key=my-api-key` |
+| `OTEL_RESOURCE_ATTRIBUTES` | Monoscope project key (`at-project-key=<YOUR_API_KEY>`) | Yes | `at-project-key=my-api-key` |
 | `OTEL_SERVICE_NAME` | The name of the service being monitored | No | `example-chi-server` |
 | `OTEL_SERVICE_VERSION` | The version of your application or service | No | `0.0.1` |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | The grpc endpoint for the OpenTelemetry collector. | No | `otelcol.apitoolkit.io:4317` |
@@ -335,7 +335,7 @@ Set the following environment variables in your application to enable the SDK:
 
 ## All Middleware Configuration Fields
 
-The middleware configuration specifies how the APItoolkit SDK should handle requests and responses. Below are the available fields:
+The middleware configuration specifies how the Monoscope SDK should handle requests and responses. Below are the available fields:
 
 {class="docs-table"}
 :::
@@ -357,7 +357,7 @@ The middleware configuration specifies how the APItoolkit SDK should handle requ
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tips</b></p>
   <ol>
   <li>
-  Remember to keep your APIToolkit project key (<code>at-project-key</code>) secure and not expose it in public repositories or logs.
+  Remember to keep your Monoscope project key (<code>at-project-key</code>) secure and not expose it in public repositories or logs.
   </li>
   </ul>
 </div>
