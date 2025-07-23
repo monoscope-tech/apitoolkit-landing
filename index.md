@@ -262,8 +262,8 @@ platforms:
         <script src="https://unpkg.com/split-type"></script>
 
         <div class="max-w-4xl space-y-12 scroll-highlight">
-            <p>Enterprise observability at <span class="font-medium text-textStrong">💰 1/20 the cost</span>. Our <span class="font-medium text-textStrong">🤖 AI agents</span> analyze your Logs, Metrics, events or API traffic in real-time, catching anomalies and errors that traditional tools miss.</p>
-            <p>Unlike other platforms, we <span class="font-medium text-textStrong">♾️ never sample or drop your data</span>. Every request, every error, every log—captured and searchable. <span class="font-medium text-textStrong">🔐 Own your data forever</span> with your own S3-compatible storage.</p>
+            <p>Enterprise observability at <span class="font-medium text-textStrong">💰 1/20 the cost</span>. Our <span class="font-medium text-textStrong">🤖 AI agents</span> analyze your <span class="font-medium text-textStrong">📊 Logs, Metrics, events</span> or <span class="font-medium text-textStrong">API traffic</span> in real-time, catching <span class="font-medium text-textStrong">🚨 anomalies and errors</span> that traditional tools miss.</p>
+            <p>Unlike other platforms, we <span class="font-medium text-textStrong">♾️ never sample or drop your data</span>. Every request, every error, every log—<span class="font-medium text-textStrong">✅ captured and searchable</span>. <span class="font-medium text-textStrong">🔐 Own your data forever</span> with your own <span class="font-medium text-textStrong">☁️ S3-compatible storage</span>.</p>
         </div>
         <script>
         gsap.registerPlugin(ScrollTrigger);
