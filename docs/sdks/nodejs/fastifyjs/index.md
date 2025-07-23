@@ -25,7 +25,7 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 Run the command below to install the Monoscope fastify sdk and Open telemetery API, SDK, and auto instrumentation tools.
 
 ```sh
-npm install --save monoscope-fastify @opentelemetry/api @opentelemetry/auto-instrumentations-node
+npm install --save @monoscopetech/fastify @opentelemetry/api @opentelemetry/auto-instrumentations-node
 ```
 
 ## Open Telemetery Configuration
@@ -55,7 +55,7 @@ Monoscope Fastify Middleware is a middleware that can be used to monitor HTTP re
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import fastify from "fastify";
-import { Monoscope } from "monoscope-fastify";
+import { Monoscope } from "@monoscopetech/fastify";
 import axios from "axios";
 
 const fastifyServer = fastify({});
@@ -106,7 +106,7 @@ The Fastify SDK automatically reports uncaught server errors to Monoscope. But y
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import fastify from "fastify";
-import { Monoscope, reportError } from "monoscope-fastify";
+import { Monoscope, reportError } from "@monoscopetech/fastify";
 import axios from "axios";
 
 const fastifyServer = fastify({});
@@ -140,7 +140,7 @@ To monitor all outgoing Axios requests globally, you can use the `monitorAxios` 
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import fastify from "fastify";
-import { Monoscope } from "monoscope-fastify";
+import { Monoscope } from "@monoscopetech/fastify";
 import axios from "axios";
 
 const fastifyServer = fastify({});
@@ -160,7 +160,7 @@ To monitor a specific Axios request, you can use the `observeAxios` function pro
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import fastify from "fastify";
-import { Monoscope, observeAxios } from "monoscope-fastify";
+import { Monoscope, observeAxios } from "@monoscopetech/fastify";
 
 const fastifyServer = fastify({});
 const monoscopeClient = Monoscope.NewClient({ fastify: fastifyServer });
@@ -196,7 +196,7 @@ Below is the full list of options for the `observeAxios` function:
 import "dotenv/config";
 import '@opentelemetry/auto-instrumentations-node/register'; // IMPORTANT: Do this as early as possible in your server
 import fastify from "fastify";
-import { Monoscope, observeAxios } from "monoscope-fastify";
+import { Monoscope, observeAxios } from "@monoscopetech/fastify";
 
 const fastifyServer = fastify({});
 const monoscopeClient = Monoscope.NewClient({fastify: fastifyServer});

@@ -61,7 +61,7 @@ If your NestJs app uses the default Express adapter (which is the default unless
 ### Installation
 
 ```sh
-npm install --save monoscope-express
+npm install --save @monoscopetech/express
 ```
 
 in your `main.ts` file
@@ -70,7 +70,7 @@ in your `main.ts` file
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
-import { Monoscope } from "monoscope-express";
+import { Monoscope } from "@monoscopetech/express";
 import axios from "axios";
 
 async function bootstrap() {

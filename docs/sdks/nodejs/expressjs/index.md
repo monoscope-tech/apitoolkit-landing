@@ -25,7 +25,7 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 Run the command below to install the Monoscope express sdk and Open telemetery API, SDK, and auto instrumentation tools.
 
 ```sh
-npm install --save monoscope-express @opentelemetry/api @opentelemetry/auto-instrumentations-node
+npm install --save @monoscopetech/express @opentelemetry/api @opentelemetry/auto-instrumentations-node
 ```
 
 ## OpenTelemetery Configuration
@@ -55,7 +55,7 @@ Monoscope Express Middleware is a middleware that can be used to monitor HTTP re
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { Monoscope } from "monoscope-express";
+import { Monoscope } from "@monoscopetech/express";
 import axios from "axios";
 
 const app = express();
@@ -113,7 +113,7 @@ To enable automatic error reporting, add the Monoscope `errorMiddleware` functio
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { Monoscope } from "monoscope-express";
+import { Monoscope } from "@monoscopetech/express";
 
 const app = express();
 
@@ -140,7 +140,7 @@ Or manually report errors within the context of a web request, by calling the Re
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { Monoscope, reportError } from "monoscope-express";
+import { Monoscope, reportError } from "@monoscopetech/express";
 
 const app = express();
 
@@ -181,7 +181,7 @@ To monitor all outgoing Axios requests globally, you can use the `monitorAxios` 
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { Monoscope } from "monoscope-express";
+import { Monoscope } from "@monoscopetech/express";
 import axios from "axios";
 const app = express();
 
@@ -200,7 +200,7 @@ To monitor a specific Axios request, you can use the `observeAxios` function pro
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { Monoscope, observeAxios } from "monoscope-express";
+import { Monoscope, observeAxios } from "@monoscopetech/express";
 
 const app = express();
 const monoscopeClient = Monoscope.NewClient({ serviceName: "my-service" });
@@ -236,7 +236,7 @@ Below is the full list of options for the `observeAxios` function:
 import "dotenv/config";
 import '@opentelemetry/auto-instrumentations-node/register'; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { Monoscope, observeAxios } from "monoscope-express";
+import { Monoscope, observeAxios } from "@monoscopetech/express";
 
 const app = express();
 const monoscopeClient = Monoscope.NewClient({serviceName: "my-service"});

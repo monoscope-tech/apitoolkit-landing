@@ -25,7 +25,7 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 Run the command below to install the Monoscope nextJs sdk and Open telemetery API, SDK, and auto instrumentation tools.
 
 ```sh
-npm install --save apitoolkit-next @opentelemetry/api @vercel/otel
+npm install --save @monoscopetech/next @opentelemetry/api @vercel/otel
 ```
 
 ## Setup Open Telemetry
@@ -61,7 +61,7 @@ To monitor http requests, wrap your routes with the `withMonoscopeAppRouter` fun
 #### App Router Example
 
 ```js
-import { withMonoscopeAppRouter } from "apitoolkit-next";
+import { withMonoscopeAppRouter } from "@monoscopetech/next";
 import { NextRequest, NextResponse } from "next/server";
 async function handleRequest(req: NextRequest) {
   return NextResponse.json({ message: "hello world" });
@@ -79,7 +79,7 @@ export const GET = withMonoscopeAppRouter(handleRequest, config);
 
 ```js
 import type { NextApiRequest, NextApiResponse } from "next";
-import { withMonoscopePagesRouter } from "apitoolkit-next";
+import { withMonoscopePagesRouter } from "@monoscopetech/next";
 
 function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: "Hello from Next.js!" });
@@ -121,7 +121,7 @@ To report errors to Monoscope, you can use the `reportError` function.
 
 ```typescript
 import { NextRequest, NextResponse } from "next/server";
-import { withMonoscopeAppRouter, reportError } from "apitoolkit-next";
+import { withMonoscopeAppRouter, reportError } from "@monoscopetech/next";
 async function handleRequest(req: NextRequest) {
   try {
     throw new Error("Something went wrong");
@@ -143,7 +143,7 @@ To monitor a specific Axios request, you can use the `observeAxios` function pro
 
 ```typescript
 import { NextRequest, NextResponse } from "next/server";
-import { withMonoscopeAppRouter, observeAxios } from "apitoolkit-next";
+import { withMonoscopeAppRouter, observeAxios } from "@monoscopetech/next";
 
 async function handleRequest(req: NextRequest) {
   // Observe an Axios request

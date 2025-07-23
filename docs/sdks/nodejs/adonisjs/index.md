@@ -25,7 +25,7 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 Run the command below to install the API, SDK, and Instrumentation tools.
 
 ```sh
-npm install --save monoscope-adonis @opentelemetry/api  @opentelemetry/auto-instrumentations-node
+npm install --save @monoscopetech/adonis @opentelemetry/api  @opentelemetry/auto-instrumentations-node
 ```
 
 ## Open Telemetery Configuration
@@ -52,16 +52,16 @@ OTEL_NODE_DISABLED_INSTRUMENTATIONS=net,connect,dns,fs
 
 Monoscope Adonis Middleware is a middleware that can be used to monitor HTTP requests. It is a wrapper around the Express.js middleware and provides additional functionalities on top of the open telemetry instrumentation which creates a custom span for each request capturing details about the request including request and response bodies.
 
-First configure the `monoscope-adonis` sdk by running the following command:
+First configure the `@monoscopetech/adonis` sdk by running the following command:
 
 ```sh
-node ace configure monoscope-adonis
+node ace configure @monoscopetech/adonis
 ```
 
 Then, create an `monoscope.js|ts` file in the `/conf` directory and export the `defineConfig` object with some properties like so:
 
 ```js
-import { defineConfig } from "monoscope-adonis";
+import { defineConfig } from "@monoscopetech/adonis";
 import axios from "axios";
 
 export default defineConfig({
@@ -71,13 +71,13 @@ export default defineConfig({
 });
 ```
 
-Then, register the middleware by adding the `monoscope-adonis` client to your global middleware list in the `start/kernel.js|ts` file like so:
+Then, register the middleware by adding the `@monoscopetech/adonis` client to your global middleware list in the `start/kernel.js|ts` file like so:
 
 ```js
 import "@opentelemetry/auto-instrumentations-node/register";
 
 import server from "@adonisjs/core/services/server";
-import Monoscope from "monoscope-adonis";
+import Monoscope from "@monoscopetech/adonis";
 
 const client = new Monoscope();
 
@@ -126,7 +126,7 @@ Then, use the `reportError()` function in your application's exception handler, 
 
 ```js
 import { HttpContext, ExceptionHandler } from "@adonisjs/core/http";
-import { reportError } from "monoscope-adonis";
+import { reportError } from "@monoscopetech/adonis";
 
 export default class HttpExceptionHandler extends ExceptionHandler {
   async handle(error: unknown, ctx: HttpContext) {
@@ -147,7 +147,7 @@ You can also manually report errors to Monoscope by calling the `reportError()` 
 
 ```ts
 import router from "@adonisjs/core/services/router";
-import { reportError } from "monoscope-adonis";
+import { reportError } from "@monoscopetech/adonis";
 router.get("/", async () => {
   try {
     throw new Error("something went wrong");
@@ -169,7 +169,7 @@ Monoscope supports monitoring outgoing HTTP requests made using libraries like A
 To monitor all outgoing Axios requests globally, you can use the `monitorAxios` option when initializing the Monoscope client.
 
 ```typescript
-import { defineConfig } from "monoscope-adonis";
+import { defineConfig } from "@monoscopetech/adonis";
 import axios from "axios";
 
 export default defineConfig({
@@ -187,7 +187,7 @@ To monitor a specific Axios request, you can use the `observeAxios` function pro
 
 ```typescript
 import router from "@adonisjs/core/services/router";
-import { observeAxios } from "monoscope-adonis";
+import { observeAxios } from "@monoscopetech/adonis";
 import axios from "axios";
 router.get("/", async () => {
   const res = await observeAxios({
@@ -217,7 +217,7 @@ Below is the full list of options for the `observeAxios` function:
 
 ```typescript
 import router from "@adonisjs/core/services/router";
-import { observeAxios } from "monoscope-adonis";
+import { observeAxios } from "@monoscopetech/adonis";
 import axios from "axios";
 router.get("/", async () => {
   const res = await observeAxios({
