@@ -274,8 +274,8 @@ platforms:
             gsap.from(text.chars, {
                 scrollTrigger: {
                     trigger: char,
-                    start: 'top 80%',
-                    end: 'bottom 20%',
+                    start: 'top 65%',  // Changed from 80% to 65% - text highlights when closer to center
+                    end: 'top 35%',    // Changed from 'bottom 20%' to 'top 35%' - completes near center
                     scrub: 1,
                     markers: false,
                 },
