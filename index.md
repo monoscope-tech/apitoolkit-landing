@@ -262,8 +262,8 @@ platforms:
         <script src="https://unpkg.com/split-type"></script>
 
         <div class="max-w-4xl space-y-12 scroll-highlight">
-            <p>APItoolkit offers the best features of Datadog, Sentry, Newrelic, etc., <span class="font-medium text-textStrong">at 1/20 the cost</span>. We train <span class="font-medium text-textStrong">private models</span> on your real-time logs, events, and API request payloads to <span class="font-medium text-textStrong">catch errors</span> and breaking or incremental changes that are impossible to detect on any other platform. Thanks to our unique crytography based algorithms. </p>
-            <p>You can <span class="font-medium text-textStrong">store all your data in your own S3-compatible storage</span>, giving you complete ownership and letting you query or ask questions of your data forever at no extra storage cost.</p>
+            <p>Enterprise observability at <span class="font-medium text-textStrong">💰 1/20 the cost</span>. Our <span class="font-medium text-textStrong">🤖 AI agents</span> analyze your Logs, Metrics, events or API traffic in real-time, catching anomalies and errors that traditional tools miss.</p>
+            <p>Unlike other platforms, we <span class="font-medium text-textStrong">♾️ never sample or drop your data</span>. Every request, every error, every log—captured and searchable. <span class="font-medium text-textStrong">🔐 Own your data forever</span> with your own S3-compatible storage.</p>
         </div>
         <script>
         gsap.registerPlugin(ScrollTrigger);
