@@ -1,9 +1,342 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "./**/*.{html,md,liquid}";
+@source not './_quickstatic/public/*.{html,md,liquid}';
+
+@layer base, utilities, custom;
+
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark,
+    cupcake;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* Simple colors */
+  --color-gray-25: oklch(99.1% 0.002 247);
+  --color-gray-150: oklch(94.5% 0.005 247);
+  --color-slate-25: oklch(99.1% 0.002 226);
+  --color-slate-150: oklch(94.5% 0.007 226);
+  --color-slate-250: oklch(89.2% 0.012 226);
+
+  /* Background colors */
+  --color-bgAlternate: oklch(97.7% 0.006 247);
+  --color-bgBase: oklch(99.1% 0.002 247);
+  --color-bgInverse: oklch(16.4% 0.012 263);
+  --color-bgOverlay: oklch(99.1% 0.002 247);
+  --color-bgRaised: oklch(99.1% 0.002 247);
+  --color-bgSunken: oklch(97.7% 0.006 247);
+  --color-bgBrand: rgb(0 104 255);
+
+  /* Fill colors */
+  --color-fillBrand-strong: rgb(0 104 255);
+  --color-fillBrand-weak: rgba(0 104 255 / 0.05);
+  --color-fillDisabled: rgba(0 17 102 / 0.1);
+  --color-fillStrong: rgba(0 6 38 / 0.9);
+  --color-fillError-strong: oklch(51.3% 0.197 21);
+  --color-fillError-weak: rgba(255 74 74 / 0.05);
+  --color-fillHover: rgba(0 21 128 / 0.04);
+  --color-fillInformation-strong: oklch(49.3% 0.088 241);
+  --color-fillInformation-weak: rgba(38 176 255 / 0.05);
+  --color-fillInverseDisabled: rgba(255 255 255 / 0.12);
+  --color-fillInverse-hover: rgba(255 255 255 / 0.06);
+  --color-fillInverse-press: rgba(255 255 255 / 0.12);
+  --color-fillInverse-strong: oklch(99.1% 0.002 247);
+  --color-fillInverse-weak: rgba(255 255 255 / 0.06);
+  --color-fillOverlay: rgba(0 13 77 / 0.45);
+  --color-fillPress: rgba(0 17 102 / 0.1);
+  --color-fillSelected: rgb(0 104 255);
+  --color-fillSuccess-strong: oklch(47.8% 0.13 162);
+  --color-fillSuccess-weak: rgba(10 204 146 / 0.05);
+  --color-fillWarning-strong: oklch(54.7% 0.126 69);
+  --color-fillWarning-weak: rgba(255 192 46 / 0.05);
+  --color-fillWeak: rgba(0 21 128 / 0.04);
+  --color-fillWeaker: rgba(0 21 128 / 0.02);
+  --color-fillWhite: rgb(255 255 255);
+  --color-fillYellow: oklch(85.8% 0.179 92);
+
+  /* Icon colors */
+  --color-iconBrand: rgba(0 104 255 / 0.8);
+  --color-iconDisabled: rgba(0 17 102 / 0.1);
+  --color-iconError: rgba(199 58 58 / 0.8);
+  --color-iconInformation: rgba(26 116 168 / 0.8);
+  --color-iconInverse: rgba(255 255 255 / 0.6);
+  --color-iconInverseDisabled: rgba(255 255 255 / 0.12);
+  --color-iconInverse-strong: rgb(255 255 255);
+  --color-iconNeutral: rgba(0 13 77 / 0.45);
+  --color-iconSuccess: rgba(6 122 87 / 0.8);
+  --color-iconWarning: rgba(143 108 26 / 0.8);
+
+  /* Stroke colors */
+  --color-strokeBrand-strong: rgba(0 104 255 / 0.8);
+  --color-strokeBrand-weak: rgba(0 104 255 / 0.2);
+  --color-strokeDisabled: rgba(0 17 102 / 0.1);
+  --color-strokeError-strong: rgba(199 58 58 / 0.8);
+  --color-strokeError-weak: rgba(199 58 58 / 0.14);
+  --color-strokeFocus: rgb(0 104 255);
+  --color-strokeInformation-strong: rgba(26 116 168 / 0.8);
+  --color-strokeInformation-weak: rgba(26 116 168 / 0.2);
+  --color-strokeInverseDisabled: rgba(255 255 255 / 0.12);
+  --color-strokeInverse-strong: rgba(255 255 255 / 0.6);
+  --color-strokeInverse-weak: rgba(255 255 255 / 0.12);
+  --color-strokeSelected: rgb(0 104 255);
+  --color-strokeStrong: rgba(0 13 77 / 0.45);
+  --color-strokeSuccess-strong: rgba(6 122 87 / 0.8);
+  --color-strokeSuccess-weak: rgba(6 122 87 / 0.2);
+  --color-strokeWarning-strong: rgba(143 108 26 / 0.8);
+  --color-strokeWarning-weak: rgba(143 108 26 / 0.2);
+  --color-strokeWeak: rgba(0 17 102 / 0.1);
+
+  /* Text colors */
+  --color-textBrand: rgb(0 104 255);
+  --color-textDisabled: rgba(0 13 77 / 0.45);
+  --color-textError: oklch(51.3% 0.197 21);
+  --color-textInformation: oklch(49.3% 0.088 241);
+  --color-textSuccess: oklch(47.8% 0.13 162);
+  --color-textWarning: oklch(54.7% 0.126 69);
+  --color-textInverseDisabled: rgba(255 255 255 / 0.12);
+  --color-textInverse-strong: rgb(255 255 255);
+  --color-textInverse-weak: rgba(255 255 255 / 0.78);
+  --color-textStrong: rgba(0 6 38 / 0.9);
+  --color-textWeak: rgba(0 8 51 / 0.65);
+  --animate-fadeBg: fadeBg 2s ease-out;
+
+  @keyframes fadeBg {
+    0% {
+      background-color: rgb(0 104 255);
+    }
+    70% {
+      background-color: rgb(0 104 255);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  /* Background colors - Dark theme */
+  --color-bgAlternate: oklch(20.1% 0.015 263);
+  --color-bgBase: oklch(16.4% 0.012 263);
+  --color-bgInverse: rgb(255 255 255);
+  --color-bgOverlay: oklch(26.4% 0.012 263);
+  --color-bgRaised: oklch(22% 0.01 263);
+  --color-bgSunken: rgb(0 0 0);
+  --color-bgBrand: rgb(59 130 246);
+
+  /* Fill colors - Dark theme */
+  --color-fillBrand-strong: rgb(59 130 246);
+  --color-fillBrand-weak: rgba(59 130 246 / 0.15);
+  --color-fillDisabled: rgba(255 255 255 / 0.12);
+  --color-fillStrong: rgb(255 255 255);
+  --color-fillError-strong: oklch(77.2% 0.126 21);
+  --color-fillError-weak: rgba(255 156 156 / 0.08);
+  --color-fillHover: rgba(255 255 255 / 0.06);
+  --color-fillInformation-strong: oklch(75.5% 0.098 241);
+  --color-fillInformation-weak: rgba(126 192 229 / 0.08);
+  --color-fillInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-fillInverse-hover: rgba(0 21 128 / 0.04);
+  --color-fillInverse-press: rgba(0 17 102 / 0.1);
+  --color-fillInverse-strong: oklch(16.4% 0.012 263);
+  --color-fillInverse-weak: rgba(0 21 128 / 0.04);
+  --color-fillOverlay: rgba(0 6 38 / 0.9);
+  --color-fillPress: rgba(255 255 255 / 0.12);
+  --color-fillSelected: rgb(59 130 246);
+  --color-fillSuccess-strong: oklch(75.3% 0.092 162);
+  --color-fillSuccess-weak: rgba(119 199 175 / 0.08);
+  --color-fillWarning-strong: oklch(79.5% 0.106 92);
+  --color-fillWarning-weak: rgba(224 190 112 / 0.08);
+  --color-fillWeak: rgba(255 255 255 / 0.06);
+  --color-fillWeaker: rgba(255 255 255 / 0.03);
+  --color-fillWhite: rgb(255 255 255);
+  --color-fillYellow: oklch(85.8% 0.179 92);
+
+  /* Icon colors - Dark theme */
+  --color-iconBrand: rgba(96 165 250 / 0.9);
+  --color-iconDisabled: rgba(255 255 255 / 0.12);
+  --color-iconError: rgba(255 156 156 / 0.8);
+  --color-iconInformation: rgba(126 192 229 / 0.8);
+  --color-iconInverse: rgba(0 13 77 / 0.45);
+  --color-iconInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-iconInverse-strong: rgba(0 6 38 / 0.9);
+  --color-iconNeutral: rgba(255 255 255 / 0.6);
+  --color-iconSuccess: rgba(119 199 175 / 0.8);
+  --color-iconWarning: rgba(224 190 112 / 0.8);
+
+  /* Stroke colors - Dark theme */
+  --color-strokeBrand-strong: rgba(96 165 250 / 0.5);
+  --color-strokeBrand-weak: rgba(96 165 250 / 0.15);
+  --color-strokeDisabled: rgba(255 255 255 / 0.12);
+  --color-strokeError-strong: rgba(248 113 113 / 0.5);
+  --color-strokeError-weak: rgba(248 113 113 / 0.15);
+  --color-strokeFocus: rgb(96 165 250);
+  --color-strokeInformation-strong: rgba(147 197 253 / 0.5);
+  --color-strokeInformation-weak: rgba(147 197 253 / 0.15);
+  --color-strokeInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-strokeInverse-strong: rgba(0 13 77 / 0.45);
+  --color-strokeInverse-weak: rgba(0 17 102 / 0.1);
+  --color-strokeSelected: rgb(59 130 246);
+  --color-strokeStrong: rgba(255 255 255 / 0.3);
+  --color-strokeSuccess-strong: rgba(134 239 172 / 0.5);
+  --color-strokeSuccess-weak: rgba(134 239 172 / 0.15);
+  --color-strokeWarning-strong: rgba(251 191 36 / 0.5);
+  --color-strokeWarning-weak: rgba(251 191 36 / 0.15);
+  --color-strokeWeak: rgba(255 255 255 / 0.08);
+
+  /* Text colors - Dark theme */
+  --color-textBrand: oklch(70% 0.15 241);
+  --color-textDisabled: rgba(255 255 255 / 0.2);
+  --color-textError: oklch(77.2% 0.126 21);
+  --color-textInformation: oklch(75.5% 0.098 241);
+  --color-textInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-textInverse-strong: rgba(0 6 38 / 0.9);
+  --color-textInverse-weak: rgba(0 8 51 / 0.65);
+  --color-textStrong: oklch(85% 0 0);
+  --color-textSuccess: oklch(75.3% 0.092 162);
+  --color-textWarning: oklch(79.5% 0.106 92);
+  --color-textWeak: oklch(70% 0 0);
+
+  /* Update fallback colors for dark mode */
+  --fallback-b2: rgba(255 255 255 / 0.06);
+  --tab-color: oklch(70% 0 0);
+  --fallback-pc: oklch(95% 0 0);
+  --fallback-bc: rgba(255 255 255 / 0.6);
+}
+.btn-primary {
+  @apply bg-fillBrand-strong hover:bg-fillBrand-strong text-textInverse-strong;
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: var(--color-iconBrand);
+  @apply hover:opacity-90 text-textInverse-strong ring-1 ring-strokeBrand-weak;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility our_container {
+  width: min(100vw, 1200px);
+  padding-inline: 8px;
+  @apply text-left;
+}
+
+@utility feature_img {
+  @apply w-32 sm:w-64 col-span-2;
+}
+
+@utility blue-button {
+  @apply drop-shadow-sm rounded-md bg-blue-900 hover:bg-blue-800 border-blue-900 text-xs text-white inline-block px-4 py-2 mt-2 sm:mt-0 no-underline;
+}
+
+@utility home-feature-image-div {
+  & img {
+    @apply rounded-lg drop-shadow-xl border-4 border-gray-200;
+  }
+
+  & video {
+    @apply rounded-lg drop-shadow-xl border-4 border-gray-200;
+  }
+}
+
+@utility home-feature-section {
+  & p {
+    @apply py-3;
+  }
+
+  & ul {
+    @apply list-disc space-y-1;
+  }
+}
+
+@utility home-feature-text-box {
+  @apply pr-4 max-w-prose;
+}
+
+@utility gradient1 {
+  background: #eb3349;
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(169, 208, 113, 0.05),
+    rgba(136, 173, 215, 0.15)
+  );
+}
+
+@utility bg-gradient-yellow {
+  background: hsla(38, 81%, 52%, 1);
+
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@utility bg-yellow-x-dark {
+  /* https://coolors.co/palette/dc562e-001d3d-003566-ffc300-ffd60a */
+  background-color: hsla(46, 100%, 50%, 1);
+}
+
+@utility bg-yellow-x-light {
+  background-color: hsla(50, 100%, 52%, 1);
+}
+
+@utility text-blue-x-dark {
+  color: hsla(211, 100%, 1%, 1);
+}
+
+@utility bg-blue-x-dark {
+  background-color: hsla(211, 100%, 1%, 1);
+}
+
+@utility bg-blue-x-light {
+  background-color: hsla(209, 100%, 20%, 1);
+}
+
+@utility bg-orange-x-dark {
+  background-color: hsla(14, 71%, 52%, 1);
+}
+
+@utility bg-bisque-x {
+  background-color: hsl(33deg 100% 88%);
+}
+
+@utility showcase1-buttons {
+  @apply drop-shadow-lg cursor-pointer inline-block border-2 border-blue-900 text-blue-900 px-2 sm:px-5 py-1 sm:py-2 rounded-lg text-center;
+}
+
+@utility showcase1-buttons-active {
+  @apply bg-blue-900 text-white;
+}
+
+@utility benefit-section {
+  @apply text-left;
+}
 
 @layer base {
-
   @font-face {
     font-family: "Inter Fallback";
     src: local("Arial"), local("ArialMT");
@@ -20,7 +353,9 @@
 
   :root {
     font-family: Inter, "Inter Fallback", sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
+    font-feature-settings:
+      "liga" 1,
+      "calt" 1;
     /* fix for Chrome */
   }
 
@@ -30,10 +365,8 @@
     }
   }
 
-
-
   .svg {
-    @apply text-iconNeutral;
+    /* @apply text-iconNeutral; */
   }
 
   .text-blue-title {
@@ -53,11 +386,11 @@
     @apply p-3 flex-col place-content-around;
   }
 
-  .pricing-card .flex-1>h3 {
+  .pricing-card .flex-1 > h3 {
     @apply text-3xl font-medium pb-3;
   }
 
-  .pricing-card .flex-1>h4>strong {
+  .pricing-card .flex-1 > h4 > strong {
     @apply text-4xl font-medium;
   }
 
@@ -98,110 +431,6 @@
   }
 }
 
-@layer components {
-  .our_container {
-    width: min(100vw, 1200px);
-    padding-inline: 8px;
-    @apply text-left;
-  }
-
-  .feature_img {
-    @apply w-32 sm:w-64 col-span-2;
-  }
-
-  .blue-button {
-    @apply drop-shadow rounded-md bg-blue-900 hover:bg-blue-800 border-blue-900 text-xs text-white inline-block px-4 py-2 mt-2 sm:mt-0 no-underline;
-  }
-
-  .home-feature-image-div img {
-    @apply rounded-lg drop-shadow-xl border-4 border-gray-200;
-  }
-
-  .home-feature-image-div video {
-    @apply rounded-lg drop-shadow-xl border-4 border-gray-200;
-  }
-
-  .home-feature-section p {
-    @apply py-3;
-  }
-
-  .home-feature-text-box {
-    @apply pr-4 max-w-prose;
-  }
-
-  .gradient1 {
-    background: #eb3349;
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right,
-        rgba(169, 208, 113, 0.05),
-        rgba(136, 173, 215, 0.15));
-  }
-
-  .bg-gradient-yellow {
-    background: hsla(38, 81%, 52%, 1);
-
-    background: #0f0c29;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,
-        #24243e,
-        #302b63,
-        #0f0c29);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,
-        #24243e,
-        #302b63,
-        #0f0c29);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-
-  /* https://coolors.co/palette/dc562e-001d3d-003566-ffc300-ffd60a */
-  .bg-yellow-x-dark {
-    background-color: hsla(46, 100%, 50%, 1);
-  }
-
-  .bg-yellow-x-light {
-    background-color: hsla(50, 100%, 52%, 1);
-  }
-
-  .text-blue-x-dark {
-    color: hsla(211, 100%, 1%, 1);
-  }
-
-  .bg-blue-x-dark {
-    background-color: hsla(211, 100%, 1%, 1);
-  }
-
-  .bg-blue-x-light {
-    background-color: hsla(209, 100%, 20%, 1);
-  }
-
-  .bg-orange-x-dark {
-    background-color: hsla(14, 71%, 52%, 1);
-  }
-
-  .bg-bisque-x {
-    background-color: hsl(33deg 100% 88%);
-  }
-
-  .home-feature-section ul {
-    @apply list-disc space-y-1;
-  }
-
-  .showcase1-buttons {
-    @apply drop-shadow-lg cursor-pointer inline-block border-2 border-blue-900 text-blue-900 px-2 sm:px-5 py-1 sm:py-2 rounded-lg text-center;
-  }
-
-  .showcase1-buttons-active {
-    @apply bg-blue-900 text-white;
-  }
-
-  .benefit-section {
-    @apply text-left;
-  }
-}
-
 .ul-1 {
   @apply pl-3 pb-1 space-y-1;
 }
@@ -228,11 +457,13 @@
 }
 
 .section-line {
-  background: linear-gradient(180deg,
-      rgba(236, 237, 240, 0),
-      #ecedf0 19.27%,
-      #ecedf0 79.17%,
-      rgba(236, 237, 240, 0));
+  background: linear-gradient(
+    180deg,
+    rgba(236, 237, 240, 0),
+    #ecedf0 19.27%,
+    #ecedf0 79.17%,
+    rgba(236, 237, 240, 0)
+  );
   overflow: hidden;
   position: relative;
 }
@@ -240,7 +471,7 @@
 .section-line::after {
   animation: movingline 6s ease infinite forwards;
   background: linear-gradient(180deg, #dde9ff, #266df0 86.46%, #dde9ff);
-  content: ' ';
+  content: " ";
   display: block;
   height: 0;
   position: absolute;
@@ -262,12 +493,18 @@
 }
 
 .light-shadow {
-  box-shadow: 0 0 0 0.5px #e4e5e9, 0 0 0 1px #e4e5e999, 0 0 0 3.5px #f9f9fb,
+  box-shadow:
+    0 0 0 0.5px #e4e5e9,
+    0 0 0 1px #e4e5e999,
+    0 0 0 3.5px #f9f9fb,
     0 0 0 4px #f3f4f7;
 }
 
 .dark-shadow {
-  box-shadow: 0 0 0 1px #3d414980, 0 0 0 3px #25272bcc, 0 0 0 4px #2d2f36cc;
+  box-shadow:
+    0 0 0 1px #3d414980,
+    0 0 0 3px #25272bcc,
+    0 0 0 4px #2d2f36cc;
 }
 
 .ripple {
@@ -314,36 +551,36 @@
   );
 }
 
-
-
 .carousel-menu {
-  @apply col-span-1 text-lg font-medium [&>label]:mb-1 [&>label]:sm:mb-5 [&>label]:rounded-md;
-  @apply [&>label]:border [&>label]:border-base-300 [&>label]:block [&>label]:sm:p-5 [&>input]:hidden;
+  @apply col-span-1 text-lg font-medium [&>label]:mb-1 sm:[&>label]:mb-5 [&>label]:rounded-md;
+  /* @apply [&>label]:border [&>label]:border-base-300 [&>label]:block sm:[&>label]:p-5 [&>input]:hidden; */
   @apply [&>label]:p-2;
 }
 
 .carousel-img-parent {
-  @apply [&>*]:rounded-lg [&>*]:border [&>*]:border-gray-200 [&>*]:drop-shadow-lg;
-  @apply [&>*]:hidden [&>*]:object-contain [&>*]:w-full [&>*]:aspect-[4/3];
+  @apply *:rounded-lg *:border *:border-gray-200 *:drop-shadow-lg;
+  @apply *:hidden *:object-contain *:w-full *:aspect-4/3;
 }
 
-.carousel-menu input:checked+label {
-  @apply ring;
+.carousel-menu input:checked + label {
+  @apply ring-3;
 }
-
 
 /* Animate elements into view on scroll */
 
 @media (prefers-reduced-motion: no-preference) {
   .timeline-fade-in {
-    scale: .8; opacity: 0;
+    scale: 0.8;
+    opacity: 0;
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range: 8% 40%;
   }
 
   @keyframes fade-in {
-    to {scale: 1; opacity: 1;}
+    to {
+      scale: 1;
+      opacity: 1;
+    }
   }
-
 }

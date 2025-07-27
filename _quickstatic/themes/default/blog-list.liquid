@@ -33,7 +33,7 @@
               class="overflow-hidden flex flex-col content-between justify-between border border-stone-200 dark:border-gray-700 p-1 sm:p-2 md:p-6 rounded-xl bg-base-100 hover:drop-shadow-2xl shadow-slate-200 transition duration-300 ease-in-out">
               <div>
 
-                <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-[7/3] rounded-md object-cover border border-slate-100 dark:border-gray-700 mt-2 block" />
+                <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-slate-100 dark:border-gray-700 mt-2 block" />
 
                 <p class="mt-4">{{ post.frontmatter.date | date: "%B %d, %Y"}}</p>
 

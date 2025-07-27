@@ -14,7 +14,7 @@ testimonials:
     photo: larrison_morrison.jpeg
     name: Lazarus Morrison
     title: Founder of Community Fluency
-    logo_raw: <div class="inline-flex items-center text-lg gap-1"><img src="/assets/img/customers/community_fluency.png" alt="Community Fluency" class="logo1 logo2"/> <span class="hidden sm:inline-block">Community<strong class="!text-lg">Fluency</strong></span></div>
+    logo_raw: <div class="inline-flex items-center text-lg gap-1"><img src="/assets/img/customers/community_fluency.png" alt="Community Fluency" class="logo1 logo2"/> <span class="hidden sm:inline-block">Community<strong class="text-lg!">Fluency</strong></span></div>
   - quote: "The best observability tool we use today at Woodcore, APItoolkit notifies us about any slight change that happens on the system. <br/><br/>Most especially, for the features we utilise today on APItoolkit, would cost us a lot more elsewhere."
     photo: samuel_joseph.jpeg
     name: Samuel Joseph
@@ -150,7 +150,7 @@ platforms:
         <div class="space-y-10 flex-1">
           <h1 class="text-[2.8rem]  font-normal leading-tight sm:leading-none sm:space-y-3">
             <span class="block">Find and fix production issues<span class="text-textDisabled">,</span></span>
-            <span class="text-textDisabled block">before <span id="heading-typewriter">customers notice</span></span>
+            <span class="text-textDisabled dark:text-textWeak block">before <span id="heading-typewriter">customers notice</span></span>
           </h1>
           <script>
           new Typewriter('#heading-typewriter', {
@@ -162,13 +162,13 @@ platforms:
           });
           </script>
           <ul class="text-[1.25rem] space-y-4 leading-tight [&_svg]:!text-strokeBrand-strong">
-            <li class="flex gap-2 items-center"><svg class="h-5 w-5 flex-shrink-0">
+            <li class="flex gap-2 items-center"><svg class="h-5 w-5 shrink-0">
               <use xlink:href="/assets/deps/sprite.svg#pie-chart"></use>
             </svg> Catch breaking changes and critical errors</li>
-            <li class="flex gap-2 items-center"><svg class="h-5 w-5 flex-shrink-0">
+            <li class="flex gap-2 items-center"><svg class="h-5 w-5 shrink-0">
               <use xlink:href="/assets/deps/sprite.svg#activity"></use>
             </svg> Analyze logs, metrics, traces and request payloads</li>
-            <li class="flex gap-2 items-center"><svg class="h-5 w-5 flex-shrink-0">
+            <li class="flex gap-2 items-center"><svg class="h-5 w-5 shrink-0">
               <use xlink:href="/assets/deps/sprite.svg#bar-chart-2"></use>
             </svg> Monitor performance and uptime of both APIs and external APIs</li>
           </ul>
@@ -224,7 +224,7 @@ platforms:
           </div>
           <div class="flex flex-col sm:flex-row text-textWeak gap-24 py-6">
             <div class="timeline-fade-in flex-1 border-l border-fillBrand-strong px-6 py-2 space-y-4">
-              <div class="flex gap-1"><div class="inline-flex space-x-1  w-[6rem]">
+              <div class="flex gap-1"><div class="inline-flex space-x-1  w-24">
                 {% for i in (1..5) %}<svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg>{% endfor %}
               </div></div>
               <p>"Easy onboarding and they added an integration just for our use case, thanks again! We didn't have insights into our api load before and this helps very much."</p>
@@ -238,7 +238,7 @@ platforms:
               <a class="text-textBrand underline underline-offset-2 block">Neorent case study</a>
             </div>
             <div class="timeline-fade-in flex-1 border-l border-fillBrand-strong px-6 py-2 space-y-4">
-              <div class="flex gap-1"><div class="inline-flex space-x-1  w-[6rem]">
+              <div class="flex gap-1"><div class="inline-flex space-x-1  w-24">
                 {% for i in (1..5) %}<svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg>{% endfor %}
               </div></div>
               <p>"We had a major incident, and our tech support could see via APItookit which third-party integration partner was responsible, and could take action without needing the engineering team's help"</p>
@@ -296,7 +296,7 @@ platforms:
           [&_svg]:h-5 [&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
           ">
          {% for platform in this.frontmatter.platforms %}
-         <label class="has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand"><svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#{{platform.icon}}"></use></svg> {{platform.title}}<input {% if forloop.first %}checked{% endif %} type="radio" class="hidden uc uc-{{platform.id}}" name="usecase" value="{{platform.id}}"/></label>
+         <label class="has-checked:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-checked:shadow has-[:checked]:!text-textBrand"><svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#{{platform.icon}}"></use></svg> {{platform.title}}<input {% if forloop.first %}checked{% endif %} type="radio" class="hidden uc uc-{{platform.id}}" name="usecase" value="{{platform.id}}"/></label>
          {% endfor %}
         </div>
 
@@ -313,14 +313,14 @@ platforms:
          {% for c in platform.children %}
           <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
             <input type="radio" name="{{platform.id}}" {% if forloop.first %}checked{% endif %}  class="hidden" value="1"/>
-            <svg class="h-6 w-6 bg-fillBrand-weak !text-iconBrand p-0.5 mt-0.5 rounded-sm flex-shrink-0">
-              <use class="block group-has-[:checked]:hidden" xlink:href="/assets/deps/sprite.svg#plus-square"></use>
-              <use class="hidden group-has-[:checked]:block" xlink:href="/assets/deps/sprite.svg#minus-square"></use>
+            <svg class="h-6 w-6 bg-fillBrand-weak !text-iconBrand p-0.5 mt-0.5 rounded-sm shrink-0">
+              <use class="block group-has-checked:hidden" xlink:href="/assets/deps/sprite.svg#plus-square"></use>
+              <use class="hidden group-has-checked:block" xlink:href="/assets/deps/sprite.svg#minus-square"></use>
             </svg>
             <div class="flex-1 space-y-2">
                 <h5 class="text-xl font-semibold text-textStrong">{{c.title}}</h5>
-                <p class="text-lg hidden group-has-[:checked]:block">{{c.details}}</p>
-                <a class="text-lg hidden group-has-[:checked]:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
+                <p class="text-lg hidden group-has-checked:block">{{c.details}}</p>
+                <a class="text-lg hidden group-has-checked:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
             </div>
           </label>
           {% endfor %}
@@ -489,39 +489,39 @@ platforms:
         <a class="block text-textBrand underline underline-offset-2">View all integrations.</a>
       </div>
       <div class="space-y-5 pt-5 mask-edges">
-        <div class="flex w-full overflow-x-hidden gap-5  max-w-[100vw]
+        <div class="flex w-full overflow-x-hidden gap-5  max-w-screen
           [&_img]:w-full
           [&>div>*]:inline-block [&>div>*]:w-24 [&>div>*]:p-3 [&>div>*]:rounded-xl
           [&>div>*]:border [&>div>*]:border-strokeWeak">
           {% assign icons = "postgresql.png,cloudflare.png,mongodb.png,azure-1.png,mysql.png,nginx.png,redis.png,elasticsearch.png,google-cloud.png,apache-kafka.png,kubernetes.png,prometheus-app.png,haproxy-icon.svg,docker.png" | split: "," %}
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5">
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5">
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5" aria-hidden="true" >
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5" aria-hidden="true" >
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
         </div>
-        <div class="flex w-full overflow-x-hidden gap-5  max-w-[100vw]
+        <div class="flex w-full overflow-x-hidden gap-5  max-w-screen
           [&_img]:w-full
           [&>div>*]:inline-block [&>div>*]:w-24 [&>div>*]:p-3 [&>div>*]:rounded-xl
           [&>div>*]:border [&>div>*]:border-strokeWeak">
           {% assign icons = "statsd-receiver.png,solacereceiver.jpg,zipkin-logo.png,snowflake.png,skywalking.jpg,riak-logo.png,huawei-icon.svg,apache_zookeeper-icon.svg,rabbitmq-icon.svg,podmanio-icon.svg,apache_couchdb-icon.svg,influxdata-icon.svg,jaegertracingio-icon.svg,oracle-icon.svg,memcached-icon.svg,signalfx-icon.svg" | split: "," %}
-          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse  whitespace-nowrap flex w-[max-content] shrink-0 gap-5">
+          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse  whitespace-nowrap flex w-max shrink-0 gap-5">
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
-          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse whitespace-nowrap flex w-[max-content] shrink-0 gap-5" aria-hidden="true" >
+          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse whitespace-nowrap flex w-max shrink-0 gap-5" aria-hidden="true" >
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
         </div>
-        <div class=" flex w-full overflow-x-hidden gap-5  max-w-[100vw]
+        <div class=" flex w-full overflow-x-hidden gap-5  max-w-screen
           [&_img]:w-full
           [&>div>*]:inline-block [&>div>*]:w-24 [&>div>*]:p-3 [&>div>*]:rounded-xl
           [&>div>*]:border [&>div>*]:border-strokeWeak">
           {% assign icons = "splunk-icon.svg,alibabacloud-icon.svg,apache_cassandra-icon.svg,logicmonitor-icon.svg,sematext-icon.svg,sentryio-icon.svg,tencent-logo.png,pulsar-logo.png,clickhouse-logo.png,coralognix.png,statsd-receiver.png,solacereceiver.jpg,zipkin-logo.png" | split: "," %}
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5">
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5">
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5" aria-hidden="true" >
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5" aria-hidden="true" >
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
         </div>
@@ -541,7 +541,7 @@ platforms:
       </div>
       <div class="grid grid-cols-6 sm:grid-cols-10 gap-2 sm:gap-6 [&>div]:border [&>div]:rounded-lg  [&>div]:flex [&>div]:flex-col
             [&>div]:justify-between  [&>div]:items-start [&_.logo1]:my-2  [&_.logo1]:brightness-0 [&_.logo1]:dark:invert [&_.logo1]:opacity-50 [&_.logo1]:h-6
-            [&_strong]:text-5xl [&_small]:text-xl  [&_.logo2]:!my-0 [&_.quote]:text-2xl
+            [&_strong]:text-5xl [&_small]:text-xl  [&_.logo2]:my-0! [&_.quote]:text-2xl
             [&_.col-span-6]:gap-8 [&_.quote]:leading-normal
             ">
         {% for t in this.frontmatter.testimonials %}
