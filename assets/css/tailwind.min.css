@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7156,14 +7156,29 @@
   .text-\[1\.25rem\] {
     font-size: 1.25rem;
   }
+  .text-\[2\.4rem\] {
+    font-size: 2.4rem;
+  }
   .text-\[2\.5rem\] {
     font-size: 2.5rem;
+  }
+  .text-\[2\.6rem\] {
+    font-size: 2.6rem;
   }
   .text-\[2\.8rem\] {
     font-size: 2.8rem;
   }
   .text-\[2rem\] {
     font-size: 2rem;
+  }
+  .text-\[3\.0rem\] {
+    font-size: 3.0rem;
+  }
+  .text-\[3\.8rem\] {
+    font-size: 3.8rem;
+  }
+  .text-\[4\.8rem\] {
+    font-size: 4.8rem;
   }
   .text-\[22px\] {
     font-size: 22px;
@@ -8622,6 +8637,48 @@
   }
   .group-has-\[\.uc-database\:checked\]\/uc\:shadow-none {
     &:is(:where(.group\/uc):has(*:is(.uc-database:checked)) *) {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .group-has-\[\.uc-tab-0\:checked\]\/uc\:flex {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-0:checked)) *) {
+      display: flex;
+    }
+  }
+  .group-has-\[\.uc-tab-0\:checked\]\/uc\:\!border-strokeDisabled {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-0:checked)) *) {
+      border-color: var(--color-strokeDisabled) !important;
+    }
+  }
+  .group-has-\[\.uc-tab-0\:checked\]\/uc\:shadow-none {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-0:checked)) *) {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .group-has-\[\.uc-tab-1\:checked\]\/uc\:flex {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-1:checked)) *) {
+      display: flex;
+    }
+  }
+  .group-has-\[\.uc-tab-2\:checked\]\/uc\:flex {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-2:checked)) *) {
+      display: flex;
+    }
+  }
+  .group-has-\[\.uc-tab-3\:checked\]\/uc\:flex {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-3:checked)) *) {
+      display: flex;
+    }
+  }
+  .group-has-\[\.uc-tab-3\:checked\]\/uc\:\!border-strokeDisabled {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-3:checked)) *) {
+      border-color: var(--color-strokeDisabled) !important;
+    }
+  }
+  .group-has-\[\.uc-tab-3\:checked\]\/uc\:shadow-none {
+    &:is(:where(.group\/uc):has(*:is(.uc-tab-3:checked)) *) {
       --tw-shadow: 0 0 #0000;
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
