@@ -145,9 +145,9 @@ platforms:
       - title: Debug directly from Slack, Whatsapp, Discord, etc
         details: Ask your monitoring bot questions in plain English. "What's our p95 latency?" or "Show me errors in checkout" — get instant answers with charts and logs.
         learnmore: /features/slack-integration
-      - title: Mobile app for on-the-go monitoring
-        details: Check dashboards, acknowledge alerts, and dive into issues from your phone. Your ops command center, in your pocket.
-        learnmore: /features/mobile-app
+      # - title: Mobile app for on-the-go monitoring
+      #   details: Check dashboards, acknowledge alerts, and dive into issues from your phone. Your ops command center, in your pocket.
+      #   learnmore: /features/mobile-app
       - title: CLI for developers who live in the terminal
         details: Query metrics, tail logs, and trace requests without leaving your development environment. Integrate monitoring into your workflow, not the other way around.
         learnmore: /features/cli
@@ -303,7 +303,7 @@ platforms:
 
     <!-- Tailwind class generation helper -->
     <div class="hidden group-has-[.uc-tab-0:checked]/uc:flex group-has-[.uc-tab-1:checked]/uc:flex group-has-[.uc-tab-2:checked]/uc:flex group-has-[.uc-tab-3:checked]/uc:flex group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none"></div>
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5 group/uc">
+    <div id="monitoring-section" class="max-w-7xl px-3 w-full text-textWeak space-y-5 group/uc">
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
       <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
 
@@ -587,4 +587,181 @@ platforms:
       </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const monitoringSection = document.getElementById('monitoring-section');
+  const tabs = document.querySelectorAll('input[name="usecase"]');
+  let sectionLocked = false;
+  let currentTab = 0;
+  let scrollAccumulator = 0;
+  let lastScrollTime = Date.now();
+  let edgeReleaseTimeout;
+
+  // Get current active tab
+  function getCurrentTab() {
+    for (let i = 0; i < tabs.length; i++) {
+      if (tabs[i].checked) return i;
+    }
+    return 0;
+  }
+
+  // Change to specific tab
+  function changeToTab(index) {
+    if (index >= 0 && index < tabs.length) {
+      tabs[index].checked = true;
+      currentTab = index;
+      scrollAccumulator = 0; // Reset accumulator after tab change
+    }
+  }
+
+  // Handle scroll events
+  function handleScroll(e) {
+    if (!sectionLocked) return;
+    
+    const delta = e.deltaY || e.detail || e.wheelDelta;
+    const now = Date.now();
+    
+    // Check if at edges
+    if ((delta > 0 && currentTab === tabs.length - 1) || (delta < 0 && currentTab === 0)) {
+      // At edge - accumulate scroll for release
+      if (!edgeReleaseTimeout) {
+        scrollAccumulator = 0;
+      }
+      
+      scrollAccumulator += Math.abs(delta);
+      
+      // Need significant scroll at edge to release (same threshold)
+      if (scrollAccumulator > 150) {
+        // Release immediately
+        sectionLocked = false;
+        scrollAccumulator = 0;
+        window.removeEventListener('wheel', handleScroll, { passive: false });
+        window.removeEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        return;
+      }
+      
+      // Still prevent scroll until threshold met
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Set timeout to reset accumulator if user stops
+      clearTimeout(edgeReleaseTimeout);
+      edgeReleaseTimeout = setTimeout(() => {
+        scrollAccumulator = 0;
+      }, 500);
+      
+      return;
+    }
+    
+    // Not at edge - always prevent scroll
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Clear edge timeout if scrolling away from edge
+    clearTimeout(edgeReleaseTimeout);
+    edgeReleaseTimeout = null;
+    
+    // Reset accumulator if too much time passed
+    if (now - lastScrollTime > 500) {
+      scrollAccumulator = 0;
+    }
+    lastScrollTime = now;
+    
+    // Accumulate scroll
+    scrollAccumulator += Math.abs(delta);
+    
+    // Need significant scroll to change tabs (threshold)
+    if (scrollAccumulator > 150) {
+      if (delta > 0 && currentTab < tabs.length - 1) {
+        // Scroll down - next tab
+        changeToTab(currentTab + 1);
+      } else if (delta < 0 && currentTab > 0) {
+        // Scroll up - previous tab
+        changeToTab(currentTab - 1);
+      }
+    }
+  }
+
+  // Check if section is fully in viewport
+  function isSectionFullyVisible() {
+    const rect = monitoringSection.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  }
+
+  // Check if section is almost fully visible
+  function isSectionAlmostVisible() {
+    const rect = monitoringSection.getBoundingClientRect();
+    const threshold = 50; // pixels of tolerance
+    return rect.top >= -threshold && rect.bottom <= window.innerHeight + threshold;
+  }
+
+  let snapTimeout;
+  let hasSnapped = false;
+
+  // Gentle snap when almost there
+  function snapIfNeeded() {
+    if (!sectionLocked && !hasSnapped && isSectionAlmostVisible() && !isSectionFullyVisible()) {
+      const rect = monitoringSection.getBoundingClientRect();
+      
+      // Only snap if we're really close (within 50px)
+      if (Math.abs(rect.top) < 50 || Math.abs(rect.bottom - window.innerHeight) < 50) {
+        hasSnapped = true;
+        monitoringSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Activate hijacking immediately
+        sectionLocked = true;
+        currentTab = getCurrentTab();
+        window.addEventListener('wheel', handleScroll, { passive: false });
+        window.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+      }
+    }
+  }
+
+  // Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Check for snap opportunity
+        snapIfNeeded();
+        
+        // Also check if already fully visible
+        if (isSectionFullyVisible() && !sectionLocked) {
+          sectionLocked = true;
+          currentTab = getCurrentTab();
+          window.addEventListener('wheel', handleScroll, { passive: false });
+          window.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        }
+      } else {
+        // Reset when section leaves view
+        sectionLocked = false;
+        hasSnapped = false;
+        scrollAccumulator = 0;
+        clearTimeout(edgeReleaseTimeout);
+        clearTimeout(snapTimeout);
+        edgeReleaseTimeout = null;
+        
+        // Remove scroll listeners
+        window.removeEventListener('wheel', handleScroll, { passive: false });
+        window.removeEventListener('DOMMouseScroll', handleScroll, { passive: false });
+      }
+    });
+  }, {
+    threshold: [0, 0.1, 0.5, 0.8, 0.9, 1.0],
+    rootMargin: '0px'
+  });
+
+  observer.observe(monitoringSection);
+  
+  // Update current tab on manual click
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('change', () => {
+      if (tab.checked) {
+        currentTab = index;
+        scrollAccumulator = 0;
+      }
+    });
+  });
+});
+</script>
 ```

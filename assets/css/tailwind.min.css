@@ -6356,6 +6356,9 @@
     color: var(--color-warning-content);
     --alert-color: var(--color-warning);
   }
+  .\!border-strokeDisabled {
+    border-color: var(--color-strokeDisabled) !important;
+  }
   .border-\[\#0068ff\] {
     border-color: #0068ff;
   }
@@ -7685,6 +7688,10 @@
   }
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-none {
+    --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-sm {
