@@ -683,17 +683,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Check if section is fully in viewport
+  // Get navbar height
+  function getNavbarHeight() {
+    const navbar = document.querySelector('nav') || document.querySelector('header');
+    return navbar ? navbar.offsetHeight : 80; // fallback to 80px if not found
+  }
+
+  // Check if section is fully in viewport (accounting for navbar)
   function isSectionFullyVisible() {
     const rect = monitoringSection.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    const navHeight = getNavbarHeight();
+    return rect.top >= navHeight && rect.bottom <= window.innerHeight;
   }
 
   // Check if section is almost fully visible
   function isSectionAlmostVisible() {
     const rect = monitoringSection.getBoundingClientRect();
+    const navHeight = getNavbarHeight();
     const threshold = 50; // pixels of tolerance
-    return rect.top >= -threshold && rect.bottom <= window.innerHeight + threshold;
+    return rect.top >= navHeight - threshold && rect.bottom <= window.innerHeight + threshold;
   }
 
   let snapTimeout;
@@ -703,11 +711,15 @@ document.addEventListener('DOMContentLoaded', function() {
   function snapIfNeeded() {
     if (!sectionLocked && !hasSnapped && isSectionAlmostVisible() && !isSectionFullyVisible()) {
       const rect = monitoringSection.getBoundingClientRect();
+      const navHeight = getNavbarHeight();
       
       // Only snap if we're really close (within 50px)
-      if (Math.abs(rect.top) < 50 || Math.abs(rect.bottom - window.innerHeight) < 50) {
+      if (Math.abs(rect.top - navHeight) < 50 || Math.abs(rect.bottom - window.innerHeight) < 50) {
         hasSnapped = true;
-        monitoringSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Scroll to position that accounts for navbar
+        const scrollTop = window.pageYOffset + rect.top - navHeight - 10; // 10px padding
+        window.scrollTo({ top: scrollTop, behavior: 'smooth' });
         
         // Activate hijacking immediately
         sectionLocked = true;
@@ -762,6 +774,25 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  // Global scroll listener to catch fast scrolling
+  let scrollCheckTimeout;
+  window.addEventListener('scroll', () => {
+    if (!sectionLocked) {
+      clearTimeout(scrollCheckTimeout);
+      scrollCheckTimeout = setTimeout(() => {
+        // Check if section is now fully visible after scroll
+        if (isSectionFullyVisible()) {
+          sectionLocked = true;
+          currentTab = getCurrentTab();
+          window.addEventListener('wheel', handleScroll, { passive: false });
+          window.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        } else if (isSectionAlmostVisible() && !hasSnapped) {
+          snapIfNeeded();
+        }
+      }, 50); // Quick check after scroll stops
+    }
+  }, { passive: true });
 });
 </script>
 ```
