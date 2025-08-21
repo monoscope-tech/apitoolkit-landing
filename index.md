@@ -353,35 +353,46 @@ platforms:
     </div>
 
     <!-- Powered by AI -->
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5">
-      <div class="flex justify-between">
+    <div class="w-full text-textWeak space-y-5">
+      <div class="max-w-7xl mx-auto px-3 flex justify-between">
         <div class="flex-1 space-y-5">
           <h2 class="text-4xl leading-tight font-normal text-textStrong">Put AI to work. <span class="text-textDisabled">seriously</span></h2>
           <p class="hidden max-w-prose text-2xl leading-normal">Generate queries, create visualizations, fix bugs, monitor logs, payloads, and kickstart whole analyses - all from a prompt.</p>
           <a href="/docs/features/" class="text-lg text-textBrand underline underline-offset-2 block ">Learn more</a>
         </div>
-        <div class="flex items-end">
+        <div class="hidden flex items-end">
           <div class="inline-flex gap-4  *:p-4  *:inline-flex *:items-center">
             <a class="border border-strokeDisabled p-4 rounded-lg"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
             <a class="border border-strokeStrong p-4 rounded-lg shadow"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
           </div>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row gap-12 pt-5 [&>div]:space-y-5 [&_h5]:text-textStrong [&_img]:border [&_img]:h-48 [&_img]:w-auto [&_img]:rounded-lg  [&_img]:border-strokeBrand-strong">
-        <div class="">
-          <img src="/assets/img/home/error-analytics.svg" class="bg-fillBrand-weak"/>
-          <h5 class="text-xl font-normal">Weekly reports that contain exactly what needs attention</h5>
-          <p>We tell you want errors popped up, which services or endpoints got slower, which weird log appeared, etc.</p>
-        </div>
-        <div class="">
-          <img src="/assets/img/home/specs.svg" class="bg-fillBrand-weak"/>
-          <h5 class="text-xl font-semibold">Query using natural language</h5>
-          <p>Ask questions about your data, your systems or logs without learning some strange query langauge.</p>
-        </div>
-        <div class="">
-          <img src="/assets/img/home/selfhost.svg" class="bg-fillBrand-weak"/>
-          <h5 class="text-xl font-semibold">Breaking and incremental change detection in APIs (yours or thirdparties)</h5>
-          <p>No need to stare at logs all day. See the errors, anomalies, etc which appeared in the last week.</p>
+      <div class="w-full">
+        <div class="flex flex-col md:flex-row gap-8 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-video [&_video]:object-cover [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/weekly-reports.mp4" type="video/mp4">
+              <source src="/assets/videos/weekly-reports.webm" type="video/webm">
+            </video>
+            <h5 class="text-xl">Weekly reports that contain exactly what needs attention</h5>
+            <p>We tell you want errors popped up, which services or endpoints got slower, which weird log appeared, etc.</p>
+          </div>
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/natural-language-query.mp4" type="video/mp4">
+              <source src="/assets/videos/natural-language-query.webm" type="video/webm">
+            </video>
+            <h5 class="text-xl">Query using natural language</h5>
+            <p>Ask questions about your data, your systems or logs without learning some strange query langauge.</p>
+          </div>
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/change-detection.mp4" type="video/mp4">
+              <source src="/assets/videos/change-detection.webm" type="video/webm">
+            </video>
+            <h5 class="text-xl">Breaking and incremental change detection in APIs (yours or thirdparties)</h5>
+            <p>No need to stare at logs all day. See the errors, anomalies, etc which appeared in the last week.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -618,19 +629,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle scroll events
   function handleScroll(e) {
     if (!sectionLocked) return;
-    
+
     const delta = e.deltaY || e.detail || e.wheelDelta;
     const now = Date.now();
-    
+
     // Check if at edges
     if ((delta > 0 && currentTab === tabs.length - 1) || (delta < 0 && currentTab === 0)) {
       // At edge - accumulate scroll for release
       if (!edgeReleaseTimeout) {
         scrollAccumulator = 0;
       }
-      
+
       scrollAccumulator += Math.abs(delta);
-      
+
       // Need significant scroll at edge to release (same threshold)
       if (scrollAccumulator > 150) {
         // Release immediately
@@ -640,37 +651,37 @@ document.addEventListener('DOMContentLoaded', function() {
         window.removeEventListener('DOMMouseScroll', handleScroll, { passive: false });
         return;
       }
-      
+
       // Still prevent scroll until threshold met
       e.preventDefault();
       e.stopPropagation();
-      
+
       // Set timeout to reset accumulator if user stops
       clearTimeout(edgeReleaseTimeout);
       edgeReleaseTimeout = setTimeout(() => {
         scrollAccumulator = 0;
       }, 500);
-      
+
       return;
     }
-    
+
     // Not at edge - always prevent scroll
     e.preventDefault();
     e.stopPropagation();
-    
+
     // Clear edge timeout if scrolling away from edge
     clearTimeout(edgeReleaseTimeout);
     edgeReleaseTimeout = null;
-    
+
     // Reset accumulator if too much time passed
     if (now - lastScrollTime > 500) {
       scrollAccumulator = 0;
     }
     lastScrollTime = now;
-    
+
     // Accumulate scroll
     scrollAccumulator += Math.abs(delta);
-    
+
     // Need significant scroll to change tabs (threshold)
     if (scrollAccumulator > 150) {
       if (delta > 0 && currentTab < tabs.length - 1) {
@@ -712,15 +723,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!sectionLocked && !hasSnapped && isSectionAlmostVisible() && !isSectionFullyVisible()) {
       const rect = monitoringSection.getBoundingClientRect();
       const navHeight = getNavbarHeight();
-      
+
       // Only snap if we're really close (within 50px)
       if (Math.abs(rect.top - navHeight) < 50 || Math.abs(rect.bottom - window.innerHeight) < 50) {
         hasSnapped = true;
-        
+
         // Scroll to position that accounts for navbar
         const scrollTop = window.pageYOffset + rect.top - navHeight - 10; // 10px padding
         window.scrollTo({ top: scrollTop, behavior: 'smooth' });
-        
+
         // Activate hijacking immediately
         sectionLocked = true;
         currentTab = getCurrentTab();
@@ -736,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (entry.isIntersecting) {
         // Check for snap opportunity
         snapIfNeeded();
-        
+
         // Also check if already fully visible
         if (isSectionFullyVisible() && !sectionLocked) {
           sectionLocked = true;
@@ -752,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(edgeReleaseTimeout);
         clearTimeout(snapTimeout);
         edgeReleaseTimeout = null;
-        
+
         // Remove scroll listeners
         window.removeEventListener('wheel', handleScroll, { passive: false });
         window.removeEventListener('DOMMouseScroll', handleScroll, { passive: false });
@@ -764,7 +775,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   observer.observe(monitoringSection);
-  
+
   // Update current tab on manual click
   tabs.forEach((tab, index) => {
     tab.addEventListener('change', () => {
@@ -774,7 +785,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   // Global scroll listener to catch fast scrolling
   let scrollCheckTimeout;
   window.addEventListener('scroll', () => {
