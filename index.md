@@ -187,8 +187,8 @@ platforms:
             </svg> Monitor performance and uptime of both APIs and external APIs</li>
           </ul>
           <div class="flex gap-2 sm:gap-4">
-            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Book a demo</a>
-            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Start 30 day free trial</a>
+            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
+            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
           </div>
           <div class="flex gap-4 items-center text-textWeak">
             <!-- TrustBox Rating -->
@@ -371,19 +371,19 @@ platforms:
         <div class="flex flex-col md:flex-row gap-8 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-video [&_video]:object-cover [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
-              <source src="/assets/videos/weekly-reports.mp4" type="video/mp4">
-              <source src="/assets/videos/weekly-reports.webm" type="video/webm">
-            </video>
-            <h5 class="text-xl">Weekly reports that contain exactly what needs attention</h5>
-            <p>We tell you want errors popped up, which services or endpoints got slower, which weird log appeared, etc.</p>
-          </div>
-          <div class="">
-            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/natural-language-query.mp4" type="video/mp4">
               <source src="/assets/videos/natural-language-query.webm" type="video/webm">
             </video>
-            <h5 class="text-xl">Query using natural language</h5>
-            <p>Ask questions about your data, your systems or logs without learning some strange query langauge.</p>
+            <h5 class="text-xl">Ask questions like you'd ask a colleague</h5>
+            <p>"Show me all 500 errors from the payments service yesterday" or "Why is the API slower than last week?"—get instant answers without learning query syntax.</p>
+          </div>
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/weekly-reports.mp4" type="video/mp4">
+              <source src="/assets/videos/weekly-reports.webm" type="video/webm">
+            </video>
+            <h5 class="text-xl">Weekly reports that tell you what actually broke</h5>
+            <p>Stop hunting through dashboards. Every Monday, get a summary of new errors, performance regressions, and anomalies that appeared—with context on what caused them.</p>
           </div>
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
@@ -416,9 +416,9 @@ platforms:
           {% endfor %}
 
           <div class="flex flex-col *:underline *:underline-offset-2 space-y-1 text-textBrand pl-2.5">
-            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/">Launch playground</a>
-            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank">Book a demo</a>
-            <a href="https://app.apitoolkit.io">Start free 30 day trial</a>
+            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
+            <a href="https://app.apitoolkit.io">Start free trial</a>
+            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
           </div>
 
         </div>
@@ -452,59 +452,90 @@ platforms:
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Flexible deployment options <span class="text-textDisabled">for every company</span></h2>
       <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, APItoolkit operates <br/>within your business and regulatory constraints.</p>
       <div>
-        <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Book a demo</a>
-        <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Start 30 day free trial</a>
+        <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
+        <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
       </div>
-      <div class="text-xl flex flex-col md:flex-row gap-10 pt-5 *:shadow *:flex-1 *:p-6 *:space-y-5 *:rounded-xl *:border [&_svg]:w-5 [&_svg]:h-5 [&_svg]:!text-iconBrand">
-        <div class="border-strokeBrand-weak ">
-          <div class="inline-block p-3 bg-fillBrand-weak rounded-full"><svg><use xlink:href="/assets/deps/sprite.svg#cloud"></use></svg></div>
-          <div class="flex flex-col">
-            <strong class="block font-normal text-sm">APITOOLKIT CLOUD</strong>
-            <h5 class="font-semibold text-2xl text-textStrong">Bring nothing</h5>
+      <div class="grid md:grid-cols-3 gap-8 pt-5">
+        <div class="rounded-xl border border-strokeBrand-weak p-8 flex flex-col">
+          <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#cloud"></use></svg></div>
+          <div class="mt-8 mb-6">
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">APITOOLKIT CLOUD</p>
+            <h3 class="text-2xl font-semibold text-textStrong">Bring nothing</h3>
           </div>
-          <ul class="list-disc space-y-2 list-inside">
+          
+          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Fully managed cloud service</li>
-            <li><strong>Predictable Usage-based</strong> pricing</li>
+            <li><strong>Predictable usage-based</strong> pricing</li>
             <li>Intelligent incident alerts</li>
             <li>Query your data in english</li>
             <li><strong>30 days data retention</strong> included</li>
           </ul>
-          <p class="text-base pt-2"><strong>Pricing:</strong> Free plan with 10k events/day, paid plans start at <strong>$34/month</strong> then <strong>$2 per 1M events</strong></p>
-          <a href="https://app.apitoolkit.io" class="block underline underline-offset-2 text-textBrand">Start 30 day free trial</a>
+          
+          <div class="border-t border-strokeWeak pt-6 space-y-4">
+            <div class="space-y-2">
+              <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+              <p class="text-2xl font-semibold text-textStrong">
+                Free <span class="text-base font-normal text-textWeak">up to 10k events/day</span>
+              </p>
+              <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> + <strong class="text-textStrong">$2 per 1M events</strong></p>
+            </div>
+            <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+          </div>
         </div>
 
-        <div class="bg-fillBrand-weak border-strokeBrand-weak shadow-fillBrand-weak">
-          <div class="inline-block p-3 bg-fillBrand-weak rounded-full"><svg><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
-          <div class="flex flex-col">
-            <strong class="block font-normal text-sm">APITOOLKIT CLOUD</strong>
-            <h5 class="font-semibold text-2xl text-textStrong">Bring your own s3 storage</h5>
+        <div class="rounded-xl border-2 border-strokeBrand-strong bg-fillBrand-weak p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fillBrand-strong text-textInverse-strong px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
+          <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
+          <div class="mt-8 mb-6">
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">APITOOLKIT CLOUD + S3</p>
+            <h3 class="text-2xl font-semibold text-textStrong">Bring your own storage</h3>
           </div>
-          <ul class="list-disc space-y-2 list-inside text-lg">
+          
+          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Own and control all your data</li>
             <li>Save <strong>all your data</strong> to any S3-compatible bucket</li>
             <li><strong>Unlimited data retention</strong> period</li>
             <li>Query years of data via APItoolkit</li>
             <li><strong>No extra cost</strong> for data retention</li>
           </ul>
-          <p class="text-base pt-2"><strong>Pricing:</strong> $200/month starting + <strong>$2 per 1M events</strong></p>
-          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block underline underline-offset-2 text-textBrand">Book a demo</a>
+          
+          <div class="border-t border-strokeBrand-weak pt-6 space-y-4">
+            <div class="space-y-2">
+              <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+              <p class="text-2xl font-semibold text-textStrong">
+                $200<span class="text-base font-normal text-textWeak">/month starting</span>
+              </p>
+              <p class="text-base text-textWeak">+ <strong class="text-textStrong">$2 per 1M events</strong></p>
+            </div>
+            <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+          </div>
         </div>
 
-        <div class="bg-fillWarning-weak border-strokeWarning-weak shadow-fillWarning-weak">
-          <div class="inline-block p-3 bg-fillBrand-weak rounded-full"><svg><use xlink:href="/assets/deps/sprite.svg#server"></use></svg></div>
-          <div class="flex flex-col">
-            <strong class="block font-normal text-sm">ON PREM</strong>
-            <h5 class="font-semibold text-2xl text-textStrong">Bring your own servers</h5>
+        <div class="rounded-xl border border-strokeWarning-weak bg-fillWarning-weak p-8 flex flex-col">
+          <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#server"></use></svg></div>
+          <div class="mt-8 mb-6">
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">SELF-HOSTED</p>
+            <h3 class="text-2xl font-semibold text-textStrong">Bring your own servers</h3>
           </div>
-          <ul class="list-disc space-y-2 list-inside">
+          
+          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Deploy to your own servers</li>
             <li><strong>Open source</strong> community edition available</li>
             <li>Enterprise edition with premium features</li>
             <li>Ideal for <strong>regulatory compliance</strong></li>
             <li>Complete data control</li>
           </ul>
-          <p class="text-base pt-2"><strong>Pricing:</strong> Community edition (free), Enterprise (custom pricing)</p>
-          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block underline underline-offset-2 text-textBrand">Book a demo</a>
+          
+          <div class="border-t border-strokeWeak pt-6 space-y-4">
+            <div class="space-y-2">
+              <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+              <p class="text-2xl font-semibold text-textStrong">
+                Free <span class="text-base font-normal text-textWeak">community edition</span>
+              </p>
+              <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">Custom pricing</strong></p>
+            </div>
+            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block text-center py-3 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors">Talk to an engineer</a>
+          </div>
         </div>
 
       </div>
