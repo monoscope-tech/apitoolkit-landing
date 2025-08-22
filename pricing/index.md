@@ -3,307 +3,372 @@ title: Pricing
 date: 2022-03-23
 updatedDate: 2024-06-15
 faqs:
-  - q: What programming languages are supported?
-    a: We currently support 17+ web frameworks in different programming languages (Python, Golang, Javascript, PHP, C#, Java, etc.). If we don't support your framework, kindly email us at <a href="mailto:hello@apitoolkit.io">hello@apitoolkit.io</a> and we'll create an SDK for you ASAP!
-  - q: Do my requests have to leave my server to APItoolkit servers?
-    a: If you want to benefit from the API monitoring and the log explorer feature, yes. However, we offer an <a href="/pricing/">enterprise plan</a> that allows you to run APItoolkit on-prem (on your servers).
-  - q: Will your SDKs slow down my backend?
-    a: It depends. Most SDKs stream data asynchronously via Google PubSub, so your requests will see almost zero change in performance. However, if you use PHP you may pay a very tiny performance hit to send data to Google PubSub. This is because PHP doesn't support async workflows by default. But if you have the GRPC extension installed in your PHP environment, it will be used by PubSub to stream data asynchronously like in other languages. But this performance hit is barely noticeable and usually under 5ms added to every request.
-  - q: How do you handle security and sensitive data?
-    a: We take security seriously at APItoolkit. We employ encryption and authentication measures to ensure the security of your data during transmission and storage. All our SDKs also support redacting data. You can simply specify the JSONPath to the fields that you don't want the SDKs to forward to APItoolkit, and those sensitive fields will be stripped out/redacted before the data even leaves your servers and replaced with the text "[CLIENT REDACTED]" on our end. We will never see anything you don't want us to see.
-  - q: I really love what you're doing. How can I show support?
-    a: Give us a shout-out on X (Twitter), Discord, or any social media you use. We would also appreciate honest feedback about what we're building and suggestions for what functionality you would love to see next.
+  - q: What's included in the free tier?
+    a: The free tier includes 10,000 events per day, unlimited team members, 30 days data retention, and access to all core features including logs, traces, API documentation, and custom monitors. Perfect for hobby projects and getting started.
+  - q: How does pricing scale with usage?
+    a: After the free tier, you pay $34/month for up to 20M events, then $2 per million events after that. For example, 50M events/month costs $94 ($34 base + $60 for 30M extra events). With Cloud + S3, it's $199/month for up to 100M events, then $2 per million events after that, plus you get unlimited data retention.
+  - q: What's the difference between deployment options?
+    a: <strong>Cloud:</strong> Fully managed, 30-day retention, starts free. <strong>Cloud + S3:</strong> Your data in your S3 bucket, unlimited retention, starts at $199/month. <strong>Self-hosted:</strong> Run on your servers, complete control, free community edition or custom enterprise pricing.
+  - q: Can I switch between plans?
+    a: Yes! You can upgrade or switch deployment options anytime. Moving from Cloud to Cloud + S3 is seamless—we'll help migrate your historical data. For self-hosted, our team provides migration assistance.
+  - q: What counts as an event?
+    a: An event includes API requests, log entries, traces, spans, and metric data points. We count all telemetry data processed by APItoolkit. Unlike competitors, we never sample or drop your data—every event is stored and searchable.
+  - q: Do you offer volume discounts?
+    a: Yes, we offer custom pricing for high-volume usage (typically above 1 billion events/month). Contact our sales team at <a href="mailto:hello@apitoolkit.io" class="text-textBrand">hello@apitoolkit.io</a> to discuss your specific needs.
 ---
 
 ```=html
 <div class="w-full">
     <header class="w-full mt-32">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <div class="w-full flex flex-col items-center text-center gap-4">
-                <h1 class="font-bold text-3xl md:text-4xl lg:text-[50px] dark:text-white">Pay Only for What You Use</h1>
-                <p class="max-w-[300px] md:max-w-[500px] text-base-content font-medium text-base md:text-lg">Trust your APIs and only pay for the requests we analyze.</p>
+        <div class="max-w-7xl mx-auto px-3">
+            <div class="w-full flex flex-col items-center text-center gap-5 text-textWeak">
+                <h1 class="text-4xl leading-tight font-normal text-textStrong">Flexible deployment options <span class="text-textDisabled">for every company</span></h1>
+                <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, APItoolkit operates <br/>within your business and regulatory constraints.</p>
+                <br/><br/>
             </div>
         </div>
     </header>
-    <div class="max-w-7xl  mx-auto px-2">
-        <section class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-12 md:py-24">
+    <div class="max-w-7xl mx-auto px-3">
+        <section class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 pt-5 pb-12">
 
             <!-- MONOSCOPE CLOUD -->
-            <div
-                class="group rounded-2xl border p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md">
-                <div class="flex flex-col gap-3 pb-1">
-                <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-xl md:text-[25px]">MONOSCOPE Cloud</h3>
+            <div class="rounded-xl border border-strokeBrand-weak p-8 flex flex-col">
+                <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#cloud"></use></svg></div>
+                <div class="mt-8 mb-6">
+                    <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD</p>
+                    <h3 class="text-2xl font-semibold text-textStrong">Bring nothing</h3>
                 </div>
-                    <div>
-                        <div class="flex flex-col items-start gap-8px">
-                            <span class="text-sm font-bold text-gray-400">FULLY MANAGED</span>
-                            <div class="">
-                               <span class="font-bold text-4xl md:text-6xl" >Free</span>
-                               <span class="text-base">/10k events per day</span>
-                               <br>
-                               <small class="text-sm">Then <strong>$34/month</strong> + <strong>$2 per 1M events</strong></small>
-                            </div>
-                        </div>
+
+                <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
+                    <li>Fully managed cloud service</li>
+                    <li><strong>Predictable usage-based</strong> pricing</li>
+                    <li>Intelligent incident alerts</li>
+                    <li>Query your data in english</li>
+                    <li><strong>30 days data retention</strong> included</li>
+                </ul>
+
+                <div class="mb-8">
+                    <p class="text-sm text-textDisabled mb-2">Estimate your monthly cost</p>
+                    <input type="range" min="0" max="495000000" step="10000000" value="0" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer range" id="cloud_price_range">
+                    <div class="flex justify-between text-sm text-textWeak mt-1">
+                        <span>Free</span>
+                        <span>250M</span>
+                        <span>500M events</span>
                     </div>
                 </div>
-                <div class="text-gray-700 mt-auto">
-                    <p class="font-bold mb-3">Bring nothing</p>
-                    <ul class="flex flex-col gap-3 text-sm font-medium">
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>Fully managed cloud service
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>Predictable usage-based pricing
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Intelligent incident alerts
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Query your data in english
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            30 days data retention included
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Unlimited team members
-                        </li>
-                    </ul>
+
+                <div class="border-t border-strokeWeak pt-6 space-y-4">
+                    <div class="space-y-2">
+                        <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+                        <p class="text-2xl font-semibold text-textStrong">
+                            <span id="cloud_price">Free</span> <span class="text-base font-normal text-textWeak" id="cloud_price_desc">up to 10k events/day</span>
+                        </p>
+                        <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                    </div>
+                    <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
                 </div>
-                <a  href="https://app.apitoolkit.io/p/new"
-                    class="mt-auto rounded-xl text-gray-700 flex flex-row justify-center px-4 py-[7px] border">
-                    Start free trial
-                </a>
             </div>
 
 
            <!-- CLOUD + S3 PLAN -->
-            <div
-                class="group rounded-2xl border-2 border-[#0068ff] bg-blue-50 p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md relative">
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0068ff] text-white px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
-                <div class="flex flex-col gap-3 pb-1">
-                <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-[25px]">MONOSCOPE Cloud + Your S3</h3>
+            <div class="rounded-xl border-2 border-strokeBrand-strong bg-fillBrand-weak p-8 flex flex-col relative">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fillBrand-strong text-textInverse-strong px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
+                <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
+                <div class="mt-8 mb-6">
+                    <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD + Your S3</p>
+                    <h3 class="text-2xl font-semibold text-textStrong">Bring your own storage</h3>
                 </div>
-                    <div>
-                        <div class="flex flex-col items-start gap-8px">
-                            <span class="text-sm font-bold text-gray-400" id="starts_at">BRING YOUR OWN STORAGE</span>
-                            <div class="">
-                               <span class="font-bold text-6xl" id="price">$200</span>
-                               <span class="" id="num_requests">/month starting</span>
-                               <br>
-                               <small class="text-sm">+ $2 per 1M events (logs, spans, metric samples, etc)</small>
-                               <span id="save_container" class="text-green-600 font-bold"></span>
-                            </div>
-                        </div>
+
+                <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
+                    <li>Own and control all your data</li>
+                    <li>Save <strong>all your data</strong> to any S3-compatible bucket</li>
+                    <li><strong>Unlimited data retention</strong> period</li>
+                    <li>Query years of data via APItoolkit</li>
+                    <li><strong>No extra cost</strong> for data retention</li>
+                </ul>
+
+                <div class="mb-8">
+                    <p class="text-sm text-textDisabled mb-2">Estimate your monthly cost</p>
+                    <input type="range" min="20000000" max="495000000" step="10000000" value="100000000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer range" id="price_range">
+                    <div class="flex justify-between text-sm text-textWeak mt-1">
+                        <span>20M</span>
+                        <span>250M</span>
+                        <span>500M events</span>
                     </div>
                 </div>
-                <div>
-                  <input type="range" min="20000000" max="495000000" step="10000000" value="100000000" class="range range-sm [--range-shdw:#0068ff]" style="--range-shdw:#0068ff" id="price_range">
+
+                <div class="border-t border-strokeBrand-weak pt-6 space-y-4">
+                    <div class="space-y-2">
+                        <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+                        <p class="text-2xl font-semibold text-textStrong">
+                            <span id="price">$199</span><span class="text-base font-normal text-textWeak" id="num_requests">/month starting</span>
+                        </p>
+                        <p class="text-base text-textWeak">Includes up to 100M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                    </div>
+                    <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
                 </div>
-                <div class="text-gray-700">
-                    <p class="font-bold mb-3">Bring your own storage</p>
-                    <ul class="flex flex-col gap-3 text-sm font-medium">
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>Own and control all your data
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Save all your data to any S3-compatible bucket
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Unlimited data retention period
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Query years of data via APItoolkit
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            No extra cost for data retention
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            All APItoolkit Cloud features included
-                        </li>
-                    </ul>
-                </div>
-                <a  href="https://app.apitoolkit.io/p/new"
-                    class="mt-auto rounded-xl bg-[#0068ff] text-white flex flex-row justify-center px-4 py-[7px]">
-                    Start free trial
-                </a>
             </div>
             <!-- SELF-HOSTED PLAN -->
-            <div
-                class="group rounded-2xl border border-orange-200 bg-orange-50 p-6 flex duration-300 flex-col text-gray-700 justify-start gap-6 text-lef shadow-md">
-                <div class="flex flex-col gap-3 pb-1">
-                <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-[25px]">Self-Hosted</h3>
+            <div class="rounded-xl border border-strokeWarning-weak bg-fillWarning-weak p-8 flex flex-col">
+                <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#server"></use></svg></div>
+                <div class="mt-8 mb-6">
+                    <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">SELF-HOSTED</p>
+                    <h3 class="text-2xl font-semibold text-textStrong">Bring your own servers</h3>
                 </div>
-                    <div>
-                        <div class="flex flex-col items-start gap-8px">
-                            <span class="text-sm font-bold text-gray-400">BRING YOUR OWN SERVERS</span>
-                            <div class="">
-                               <span class="font-bold text-6xl">Free</span>
-                               <span class="text-base">community edition</span>
-                               <br>
-                               <small class="text-sm">Enterprise: <strong>Custom pricing</strong></small>
+
+                <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
+                    <li>Deploy to your own servers</li>
+                    <li><strong>Open source</strong> community edition available</li>
+                    <li>Enterprise edition with premium features</li>
+                    <li>Ideal for <strong>regulatory compliance</strong></li>
+                    <li>Complete data control</li>
+                </ul>
+
+                <div class="border-t border-strokeWeak pt-6 space-y-4">
+                    <div class="space-y-2">
+                        <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+                        <p class="text-2xl font-semibold text-textStrong">
+                            Free <span class="text-base font-normal text-textWeak">community edition</span>
+                        </p>
+                        <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">Custom pricing</strong></p>
+                    </div>
+                    <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block text-center py-3 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors">Talk to an engineer</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Feature Comparison Table -->
+        <section class="w-full py-12 text-textWeak">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl font-semibold text-center mb-8 text-textStrong">Compare Features Across Plans</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full border border-gray-200 rounded-lg overflow-hidden">
+                        <thead class="bg-fillWeak">
+                            <tr>
+                                <th class="text-left p-4 font-semibold text-textStrong">Features</th>
+                                <th class="text-center p-4 font-semibold text-textStrong">Monoscope Cloud</th>
+                                <th class="text-center p-4 font-semibold text-textStrong bg-fillBrand-weak">Cloud + Your S3</th>
+                                <th class="text-center p-4 font-semibold text-textStrong">Self-Hosted</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Events per month</td>
+                                <td class="p-4 text-center">10k/day free, then unlimited</td>
+                                <td class="p-4 text-center bg-fillBrand-weak">Unlimited</td>
+                                <td class="p-4 text-center">Unlimited</td>
+                            </tr>
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Data retention</td>
+                                <td class="p-4 text-center">30 days</td>
+                                <td class="p-4 text-center bg-fillBrand-weak font-semibold text-textStrong">Unlimited</td>
+                                <td class="p-4 text-center">Custom</td>
+                            </tr>
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Team members</td>
+                                <td class="p-4 text-center">Unlimited</td>
+                                <td class="p-4 text-center bg-fillBrand-weak">Unlimited</td>
+                                <td class="p-4 text-center">Unlimited</td>
+                            </tr>
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Data ownership</td>
+                                <td class="p-4 text-center">Monoscope managed</td>
+                                <td class="p-4 text-center bg-fillBrand-weak font-semibold text-textStrong">Your S3 bucket</td>
+                                <td class="p-4 text-center font-semibold text-textStrong">Complete control</td>
+                            </tr>
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Infrastructure</td>
+                                <td class="p-4 text-center">Fully managed</td>
+                                <td class="p-4 text-center bg-fillBrand-weak">Managed + your storage</td>
+                                <td class="p-4 text-center">Self-managed</td>
+                            </tr>
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Setup time</td>
+                                <td class="p-4 text-center text-iconSuccess font-semibold">< 5 minutes</td>
+                                <td class="p-4 text-center bg-blue-50/30 text-green-600 font-semibold">< 15 minutes</td>
+                                <td class="p-4 text-center">Varies</td>
+                            </tr>
+                            <tr class="hover:bg-fillWeak">
+                                <td class="p-4 text-textWeak">Support</td>
+                                <td class="p-4 text-center">Community + Email</td>
+                                <td class="p-4 text-center bg-fillBrand-weak">Priority support</td>
+                                <td class="p-4 text-center">Custom SLA available</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Startup Program Section -->
+        <section class="w-full py-16">
+            <div class="max-w-5xl mx-auto px-3">
+                <div class="relative">
+                    <!-- Main container with gradient border effect -->
+                    <div class="relative rounded-3xl bg-gradient-to-r from-fillBrand-strong via-fillBrand-weak to-fillBrand-strong p-[1px]">
+                        <div class="rounded-3xl bg-bgBase overflow-hidden">
+                            <!-- Pattern background -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%230068ff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+                            </div>
+
+                            <div class="relative grid md:grid-cols-2 items-center">
+                                <!-- Left side content -->
+                                <div class="p-8 md:p-12 space-y-6">
+                                    <div class="space-y-4">
+                                        <div class="inline-flex items-center gap-2">
+                                            <div class="w-10 h-10 rounded-full bg-fillBrand-weak flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#zap"></use></svg>
+                                            </div>
+                                            <span class="text-sm font-semibold text-textBrand uppercase tracking-wider">Startup Program</span>
+                                        </div>
+
+                                        <h2 class="text-3xl md:text-4xl font-normal text-textStrong leading-tight">
+                                            Save up to <span class="text-textBrand">$10,000</span><br/>
+                                            on your first year
+                                        </h2>
+
+                                        <p class="text-lg text-textWeak">
+                                            Building the next big thing? We'll cover up to 100% of your APItoolkit costs while you focus on growth.
+                                        </p>
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <a href="https://tally.so/r/n9vVkY" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 bg-fillBrand-strong text-textInverse-strong rounded-xl font-semibold hover:shadow-lg hover:shadow-fillBrand-strong/20 transition-all duration-200 group">
+                                            Apply in 2 minutes
+                                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform"><use xlink:href="/assets/deps/sprite.svg#arrow-right"></use></svg>
+                                        </a>
+                                        <p class="text-sm text-textWeak mt-3">No credit card required</p>
+                                    </div>
+                                </div>
+
+                                <!-- Right side - Qualification badges -->
+                                <div class="p-8 md:p-12 bg-gradient-to-br from-fillBrand-weak/50 to-transparent">
+                                    <p class="text-sm font-medium text-textWeak uppercase tracking-wide mb-6">You qualify if you have:</p>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                            <div class="flex items-start gap-3">
+                                                <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                                    <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#calendar"></use></svg>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-textStrong">< 2</p>
+                                                    <p class="text-sm text-textWeak">years since founding</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                            <div class="flex items-start gap-3">
+                                                <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                                    <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#users"></use></svg>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-textStrong">< 5</p>
+                                                    <p class="text-sm text-textWeak">team members</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                            <div class="flex items-start gap-3">
+                                                <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                                    <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#dollar-sign"></use></svg>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-textStrong">< $100k</p>
+                                                    <p class="text-sm text-textWeak">in funding raised</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                            <div class="flex items-start gap-3">
+                                                <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                                                    <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#code"></use></svg>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-textStrong">SaaS</p>
+                                                    <p class="text-sm text-textWeak">or software product</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="text-gray-700">
-                    <p class="font-bold mb-3">Bring your own servers</p>
-                    <ul class="flex flex-col gap-3 text-sm font-medium">
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>Deploy to your own servers
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>Open source community edition available
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Enterprise edition with premium features
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Ideal for regulatory compliance
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Complete data control
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Custom support available
-                        </li>
-                    </ul>
-                </div>
-                <a  href="https://calendar.app.google/1a4HG5GZYv1sjjZG6"
-                    class="mt-auto rounded-xl text-gray-700 flex flex-row justify-center px-4 py-[7px] border border-gray-400">
-                    Talk to an engineer
-                </a>
-            </div>
 
-            <!-- CRITICAL SYSTEMS SUPPORT -->
-            <div class="col-span-1 md:col-span-3 mt-8">
-                <div class="rounded-2xl border-2 border-purple-200 bg-purple-50 p-6 md:p-8">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="flex flex-col gap-4">
-                            <h3 class="font-medium text-2xl text-gray-900">Critical Systems Support</h3>
-                            <p class="text-gray-700">Add continuous engineering support to any plan for companies building critical systems.</p>
-                            <div class="space-y-3">
-                                <div class="flex items-baseline gap-2">
-                                    <span class="font-bold text-4xl">$199</span>
-                                    <span class="text-gray-600">per month</span>
-                                </div>
-                                <p class="text-sm text-gray-600">Added to any deployment option above</p>
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <p class="font-semibold text-gray-900">Includes:</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex gap-2">
-                                    <span class="text-green-500">✓</span>
-                                    <span>We help you setup observability and realtime monitors</span>
-                                </li>
-                                <li class="flex gap-2">
-                                    <span class="text-green-500">✓</span>
-                                    <span>We setup uptime checks and multistep API tests for you</span>
-                                </li>
-                                <li class="flex gap-2">
-                                    <span class="text-green-500">✓</span>
-                                    <span>We'll be on call for your projects to catch and analyze issues</span>
-                                </li>
-                                <li class="flex gap-2">
-                                    <span class="text-green-500">✓</span>
-                                    <span>Senior Engineers jump on calls with your team to resolve issues</span>
-                                </li>
-                                <li class="flex gap-2">
-                                    <span class="text-green-500">✓</span>
-                                    <span>Weekly reports about everything that went wrong or might be broken</span>
-                                </li>
-                                <li class="flex gap-2">
-                                    <span class="text-green-500">✓</span>
-                                    <span>Up to 20 hours of support calls/sessions per month</span>
-                                </li>
-                            </ul>
-                            <a href="https://apitoolkit.lemonsqueezy.com/buy/6d1d07b5-85ab-4440-8d6a-4dd57db852de" class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
-                                Add Support Package
-                            </a>
-                        </div>
+                    <!-- Floating badge -->
+                    <div class="absolute -top-4 -right-4 bg-fillWarning-weak text-textWarning-strong px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-bounce">
+                        Limited spots available
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="rounded-2xl grid grid-cols-1 md:grid-cols-2 border shadow-sm">
-          <div class="flex flex-col gap-4 md:gap-8 p-6 md:p-10">
-             <h1 class="font-medium text-xl md:text-2xl" >Apply for the APItoolkit Startup Program</h1>
-            <div class="space-y-3 text-base md:text-lg">
-             <p>
-             Enjoy 50 to 100% discount on your first year of subscription through our exclusive Startup Program. Qualification criteria:
-            </p>
-            <ul class="list-disc">
-                <li>Building a software based product or service</li>
-                <li>Founded within the last 2 years</li>
-                <li>Less than $100k in funding</li>
-                <li>Have fewer than 5 employees</li>
-            </ul>
+        <!-- Trusted by developers section -->
+        <div class="max-w-7xl px-3 w-full text-textWeak py-12 mx-auto">
+            <div class="space-y-8">
+                <p class="">Trusted by 5000+ developers at proactive engineering companies</p>
+                <div class="grid grid-cols-4 sm:grid-cols-8 *:col-span-1  gap-4 md:gap-8  items-center *:brightness-0 *:dark:invert opacity-50">
+                    <img src="/assets/img/customers/andela.svg" alt="andela.svg" class="h-5 sm:h-8"><img src="/assets/img/customers/partna.svg" alt="partna.svg" class="h-5 sm:h-8"><img src="/assets/img/customers/grovepay.svg" alt="grovepay.svg" class="h-5 sm:h-8"><img src="/assets/img/customers/sameday.svg" alt="sameday.svg" class="h-5 sm:h-8"><img src="/assets/img/customers/platnova.png" alt="platnova.png" class="h-5 sm:h-8"><img src="/assets/img/customers/payfonte.svg" alt="payfonte.svg" class="h-5 sm:h-8"><img src="/assets/img/customers/thepeer.svg" alt="thepeer.svg" class="h-5 sm:h-8"><img src="/assets/img/customers/blockradar-full.svg" alt="blockradar-full.svg" class="h-5 sm:h-8">
+                </div>
+                <div class="flex flex-col sm:flex-row text-textWeak gap-24 py-6">
+                    <div class="timeline-fade-in flex-1 border-l border-fillBrand-strong px-6 py-2 space-y-4">
+                        <div class="flex gap-1"><div class="inline-flex space-x-1  w-[6rem]">
+                            <svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg>
+                        </div></div>
+                        <p>"Easy onboarding and they added an integration just for our use case, thanks again! We didn't have insights into our api load before and this helps very much."</p>
+                        <div class="flex gap-3 items-center">
+                            <img class="rounded-lg grayscale w-12 h-12 object-cover" src="/assets/img/love/sebastian_zwach.jpeg">
+                            <div class="flex-1 space-y-1">
+                                <p class="text-textStrong">Sebastian Zwach</p>
+                                <p class="text-xs">founder of Neorent GmbH</p>
+                            </div>
+                        </div>
+                        <a class="text-textBrand underline underline-offset-2 block">Neorent case study</a>
+                    </div>
+                    <div class="timeline-fade-in flex-1 border-l border-fillBrand-strong px-6 py-2 space-y-4">
+                        <div class="flex gap-1"><div class="inline-flex space-x-1  w-[6rem]">
+                            <svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg><svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg>
+                        </div></div>
+                        <p>"We had a major incident, and our tech support could see via APItookit which third-party integration partner was responsible, and could take action without needing the engineering team's help"</p>
+                        <div class="flex gap-3 items-center">
+                            <img class="rounded-lg grayscale w-12 h-12 object-cover" src="/assets/img/love/joshua.jpeg">
+                            <div class="flex-1 space-y-1">
+                                <p class="text-textStrong">Joshua Chinemezum</p>
+                                <p class="text-xs">CEO of Platnova</p>
+                            </div>
+                        </div>
+                        <a class="text-textBrand underline underline-offset-2 block">Platnova case study</a>
+                    </div>
+                </div>
             </div>
-             <a href="https://tally.so/r/n9vVkY" target="_BLANK" class="btn btn-secondary">Apply now</a>
-          </div>
-          <div class="hidden md:flex flex-col gap-2" style="background-image: url('/assets/img/support-program.webp'); background-size: cover; background-position: center;">
-          </div>
         </div>
+        <!-- FAQ Section -->
+        <section class="w-full py-16">
+          <div class="flex flex-col md:flex-row gap-16">
+              <div class="md:w-1/3 space-y-4">
+                  <h2 class="text-5xl leading-tight font-normal text-textStrong">Frequently Asked <span class="text-textDisabled">Questions</span></h2>
+                  <p class="text-2xl leading-normal text-textWeak">Here are some questions many have asked us.</p>
+                  <a href="/docs/faqs/" class="text-lg text-textBrand underline block">View all FAQs</a>
+              </div>
 
-        <section class="w-full py-4">
-        {% render "default/components/customers" %}
-
-        <hr />
-
-        {% render "default/components/faqs", this:this %}
+              <div class="md:w-2/3 space-y-3">
+                  {% for faq in this.frontmatter.faqs %}
+                  <div class="border border-strokeWeak rounded-lg p-6 bg-fillWeak hover:bg-fillBrand-weak transition-colors">
+                      <button class="cursor-pointer flex gap-4 items-center text-left w-full hover:text-textStrong" onclick="toggleFaq(event)">
+                          <svg class="shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70 transition-transform"><use xlink:href="/assets/deps/fontawesome/solid.svg#caret-right"></use></svg>
+                          <span class="text-lg font-medium">{{faq.q}}</span>
+                      </button>
+                      <div class="pl-9 pt-4 hidden text-textWeak">{{faq.a}}</div>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
         </section>
 
     </div>

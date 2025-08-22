@@ -477,7 +477,7 @@ platforms:
               <p class="text-2xl font-semibold text-textStrong">
                 Free <span class="text-base font-normal text-textWeak">up to 10k events/day</span>
               </p>
-              <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> + <strong class="text-textStrong">$2 per 1M events</strong></p>
+              <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
             </div>
             <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
           </div>
@@ -503,9 +503,9 @@ platforms:
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
               <p class="text-2xl font-semibold text-textStrong">
-                $200<span class="text-base font-normal text-textWeak">/month starting</span>
+                $199<span class="text-base font-normal text-textWeak">/month starting</span>
               </p>
-              <p class="text-base text-textWeak">+ <strong class="text-textStrong">$2 per 1M events</strong></p>
+              <p class="text-base text-textWeak">Includes up to 100M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
             </div>
             <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
           </div>
