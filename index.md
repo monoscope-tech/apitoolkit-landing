@@ -54,16 +54,19 @@ features:
         title: Logs and Traces
         details: Query all your logs and correlate them with trace breakdowns or the requests which triggered the logs.
         learnmore: /features/api-logs-and-metrics
+        video: /assets/videos/see-everything.mp4
       - icon: activity
         id: errors
         title: Errors and Performance
         details: Monitor API errors and performance in real time. Detect issues instantly, analyze trends, and optimize response times with detailed insights. Improve reliability with automated tracking, alerting, and in-depth analytics to ensure a seamless user experience.
         learnmore: /features/error-tracking
+        video: /assets/videos/know-instantly.mp4
       - icon: bar-chart
         id: metrics
         title: Metrics and dashboards
         details: Define and track custom metrics tailored to your API needs. Gain actionable insights, monitor key performance indicators, and optimize efficiency with real-time data visualization and alerts. Make data-driven decisions to enhance your API’s performance and reliability.
         learnmore: /features/api-management
+        video: /assets/videos/measure-anything.mp4
   - title: API management
     links:
       - icon: layout
@@ -71,11 +74,13 @@ features:
         title: API Catalog and Docs
         details: Organize, manage, and document your APIs effortlessly with a dynamic API catalog. Provide clear, up-to-date documentation, improve discoverability, and streamline onboarding for developers with interactive guides, code samples, and real-time updates.
         learnmore: /features/api-management
+        video: /assets/videos/ask-like-colleague.mp4
       - icon: copy
         id: change
         title: Anomalies
         details: Detect API changes and anomalies in real time. Stay ahead of unexpected behavior with automated monitoring, instant alerts, and detailed insights. Ensure stability, prevent disruptions, and maintain seamless performance with proactive change detection.
         learnmore: /features/api-observability
+        video: /assets/videos/change-detection.mp4
   - title: Alerts and Monitors
     links:
       - icon: compass
@@ -83,22 +88,25 @@ features:
         title: Monitors and healthchecks
         details: Ensure API reliability with automated monitors and health checks. Continuously track uptime, detect failures early, and receive instant alerts. Keep your services running smoothly with real-time insights and proactive issue resolution.
         learnmore: /docs/monitors
+        video: /assets/videos/know-instantly.mp4
       - icon: radio
         id: alerts
         title: Alerts and notifications
         details: Stay informed with real-time alerts and comprehensive reports. Customize alert channels and receive detailed analytics to monitor your API's performance and reliability effectively.
         learnmore: /docs/alerts
+        video: /assets/videos/know-instantly.mp4
       - icon: calendar
         id: reports
         title: Daily or weekly reports
         details: Receive comprehensive daily or weekly reports summarizing API performance, errors, and key metrics. Get actionable insights delivered to your inbox to stay ahead of potential issues.
         learnmore: /docs/reports
+        video: /assets/videos/weekly-reports.mp4
 
 platforms:
   - title: See Everything
     id: see-everything
     icon: eye
-    visual: Video showing unified logs and traces view, with smooth transitions between different data sources
+    visual: /assets/videos/see-everything.mp4
     children:
       - title: See exactly what your users saw -- via screen replay
         details: Watch the actual screen recording of user sessions that led to errors. No more guessing from bug reports—see every click, scroll, and action that triggered the issue.
@@ -112,7 +120,7 @@ platforms:
   - title: Measure Anything
     id: measure-anything
     icon: bar-chart-2
-    visual: Dashboard creation flow, then drilling into specific metrics
+    visual: /assets/videos/measure-anything.mp4
     children:
       - title: Custom metrics without the complexity
         details: Track business KPIs, technical metrics, or anything in between. If it matters to you, we'll help you measure it.
@@ -126,7 +134,7 @@ platforms:
   - title: Know Instantly
     id: know-instantly
     icon: bell
-    visual: Alert triggering → notification → automatic context gathering
+    visual: /assets/videos/know-instantly.mp4
     children:
       - title: Smart alerts that reduce noise
         details: Set intelligent thresholds that adapt to your traffic patterns. Get notified about real issues, not false alarms.
@@ -140,7 +148,7 @@ platforms:
   - title: From Anywhere
     id: from-anywhere
     icon: smartphone
-    visual: Slack conversation with bot, mobile app view, CLI in terminal
+    visual: /assets/videos/from-anywhere.mp4
     children:
       - title: Debug directly from Slack, Whatsapp, Discord, etc
         details: Ask your monitoring bot questions in plain English. "What's our p95 latency?" or "Show me errors in checkout" — get instant answers with charts and logs.
@@ -307,35 +315,22 @@ platforms:
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
       <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
 
-      <!-- Mobile layout -->
-      <div class="md:hidden py-8 space-y-4">
-        <div class="grid grid-cols-2 gap-2 bg-fillWeak border border-strokeWeak rounded-lg p-2">
+      <div class="flex flex-col md:flex-row md:justify-between py-8 gap-4">
+        <div class="grid grid-cols-2 md:flex bg-fillWeak border border-strokeWeak rounded-lg p-2 md:p-0
+          md:*:px-4 md:*:py-3 *:px-3 *:py-2.5 *:flex *:items-center *:gap-2
+          [&_svg]:h-4 [&_svg]:w-4 md:[&_svg]:h-5 md:[&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
+          *:text-sm md:*:text-base
+          ">
          {% for platform in this.frontmatter.platforms %}
-         <label class="cursor-pointer px-3 py-2.5 flex items-center gap-2 text-sm rounded-lg has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
+         <label class="cursor-pointer has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
            <input {% if forloop.first %}checked{% endif %} type="radio" class="hidden peer uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/>
-           <svg class="h-4 w-4 shrink-0 peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg> 
+           <svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
            <span>{{platform.title}}</span>
          </label>
          {% endfor %}
         </div>
-        <div class="flex justify-center gap-2">
-          <a class="inline-flex items-center shadow border border-strokeStrong p-3 rounded-lg cursor-pointer select-none group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
-          <a class="inline-flex items-center shadow border border-strokeStrong p-3 rounded-lg cursor-pointer select-none group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
-        </div>
-      </div>
 
-      <!-- Desktop layout -->
-      <div class="hidden md:flex justify-between py-8">
-        <div class="inline-flex justify-center bg-fillWeak border border-strokeWeak rounded-lg
-          *:px-4 *:py-3 *:inline-flex *:items-center *:gap-2
-          [&_svg]:h-5 [&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
-          ">
-         {% for platform in this.frontmatter.platforms %}
-         <label class="cursor-pointer has-checked:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-checked:shadow has-[:checked]:!text-textBrand"><svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg> {{platform.title}}<input {% if forloop.first %}checked{% endif %} type="radio" class="hidden uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/></label>
-         {% endfor %}
-        </div>
-
-        <div class="inline-flex gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-4 *:rounded-lg *:cursor-pointer select-none">
+        <div class="flex justify-center md:inline-flex gap-2 md:gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-3 md:*:p-4 *:rounded-lg *:cursor-pointer select-none">
           <a class="group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
           <a class="group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
         </div>
@@ -363,7 +358,9 @@ platforms:
 
         <div class="flex-1">
             <!-- Visual: {{platform.visual}} -->
-            <img src="/assets/img/home/dashboard-012025.svg" class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong"/>
+            <video autoplay muted loop playsinline class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
+              <source src="{{platform.visual}}" type="video/mp4">
+            </video>
         </div>
       </div>
       <!-- end {{platform.title}} -->
@@ -386,11 +383,10 @@ platforms:
         </div>
       </div>
       <div class="w-full">
-        <div class="flex flex-col md:flex-row gap-8 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-video [&_video]:object-cover [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
+        <div class="flex flex-col md:flex-row gap-8 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-[4/3] [&_video]:object-contain [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
-              <source src="/assets/videos/natural-language-query.mp4" type="video/mp4">
-              <source src="/assets/videos/natural-language-query.webm" type="video/webm">
+              <source src="/assets/videos/ask-like-colleague.mp4" type="video/mp4">
             </video>
             <h5 class="text-xl">Ask questions like you'd ask a colleague</h5>
             <p>"Show me all 500 errors from the payments service yesterday" or "Why is the API slower than last week?"—get instant answers without learning query syntax.</p>
@@ -398,7 +394,6 @@ platforms:
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/weekly-reports.mp4" type="video/mp4">
-              <source src="/assets/videos/weekly-reports.webm" type="video/webm">
             </video>
             <h5 class="text-xl">Weekly reports that tell you what actually broke</h5>
             <p>Stop hunting through dashboards. Every Monday, get a summary of new errors, performance regressions, and anomalies that appeared—with context on what caused them.</p>
@@ -406,7 +401,6 @@ platforms:
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/change-detection.mp4" type="video/mp4">
-              <source src="/assets/videos/change-detection.webm" type="video/webm">
             </video>
             <h5 class="text-xl">Breaking and incremental change detection in APIs (yours or thirdparties)</h5>
             <p>No need to stare at logs all day. See the errors, anomalies, etc which appeared in the last week.</p>
@@ -459,7 +453,13 @@ platforms:
             </div>
           </div>
           <div>
-            <img src="/assets/img/home/explore-012025.svg" class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong"/>
+            {% for feature in this.frontmatter.features %}
+            {% for f in feature.links %}
+            <video autoplay muted loop playsinline class="hidden group-has-[.ft-{{f.id}}:checked]/ft:block timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
+              <source src="{{f.video}}" type="video/mp4">
+            </video>
+            {% endfor %}
+            {% endfor %}
           </div>
         </div>
       </div>

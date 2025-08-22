@@ -8549,6 +8549,11 @@
       border-color: var(--color-strokeStrong);
     }
   }
+  .\*\:p-3 {
+    :is(& > *) {
+      padding: calc(var(--spacing) * 3);
+    }
+  }
   .\*\:p-4 {
     :is(& > *) {
       padding: calc(var(--spacing) * 4);
@@ -10443,6 +10448,11 @@
       }
     }
   }
+  .md\:p-0 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 0);
+    }
+  }
   .md\:p-2 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 2);
@@ -10548,6 +10558,35 @@
   .md\:opacity-0 {
     @media (width >= 48rem) {
       opacity: 0%;
+    }
+  }
+  .md\:\*\:p-4 {
+    @media (width >= 48rem) {
+      :is(& > *) {
+        padding: calc(var(--spacing) * 4);
+      }
+    }
+  }
+  .md\:\*\:px-4 {
+    @media (width >= 48rem) {
+      :is(& > *) {
+        padding-inline: calc(var(--spacing) * 4);
+      }
+    }
+  }
+  .md\:\*\:py-3 {
+    @media (width >= 48rem) {
+      :is(& > *) {
+        padding-block: calc(var(--spacing) * 3);
+      }
+    }
+  }
+  .md\:\*\:text-base {
+    @media (width >= 48rem) {
+      :is(& > *) {
+        font-size: var(--text-base);
+        line-height: var(--tw-leading, var(--text-base--line-height));
+      }
     }
   }
   .md\:group-hover\/nv\:pointer-events-auto {
@@ -11673,6 +11712,25 @@
       color: var(--color-strokeBrand-strong) !important;
     }
   }
+  .md\:\[\&_svg\]\:h-5 {
+    @media (width >= 48rem) {
+      & svg {
+        height: calc(var(--spacing) * 5);
+      }
+    }
+  }
+  .md\:\[\&_svg\]\:w-5 {
+    @media (width >= 48rem) {
+      & svg {
+        width: calc(var(--spacing) * 5);
+      }
+    }
+  }
+  .\[\&_video\]\:aspect-\[4\/3\] {
+    & video {
+      aspect-ratio: 4/3;
+    }
+  }
   .\[\&_video\]\:aspect-video {
     & video {
       aspect-ratio: var(--aspect-video);
@@ -11702,6 +11760,11 @@
   .\[\&_video\]\:border-strokeBrand-strong {
     & video {
       border-color: var(--color-strokeBrand-strong);
+    }
+  }
+  .\[\&_video\]\:object-contain {
+    & video {
+      object-fit: contain;
     }
   }
   .\[\&_video\]\:object-cover {
