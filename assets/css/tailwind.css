@@ -584,3 +584,32 @@
     }
   }
 }
+
+/* Navigation dropdown styles */
+@layer utilities {
+  /* Ensure dropdowns work properly on mobile */
+  .group\/nv:hover .group-hover\/nv\:opacity-100 {
+    opacity: 1;
+  }
+  
+  .group\/nv:hover .group-hover\/nv\:scale-100 {
+    transform: scale(1);
+  }
+  
+  .group\/nv:hover .group-hover\/nv\:pointer-events-auto {
+    pointer-events: auto;
+  }
+  
+  /* Better focus states for accessibility */
+  .group\/nv:focus-within .group-hover\/nv\:opacity-100 {
+    opacity: 1;
+  }
+  
+  .group\/nv:focus-within .group-hover\/nv\:scale-100 {
+    transform: scale(1);
+  }
+  
+  .group\/nv:focus-within .group-hover\/nv\:pointer-events-auto {
+    pointer-events: auto;
+  }
+}

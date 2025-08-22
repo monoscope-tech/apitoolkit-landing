@@ -1,12 +1,12 @@
-<header id="header" class="w-full flex flex-col items-center top-0 left-0 right-0 sticky bg-bgBase z-30 dark:border-gray-700 group">
-  <nav class="group-has-[#menuInput:checked]:h-full py-2 md:py-4 flex-1 flex flex-col md:flex-row max-w-7xl px-3 w-full justify-between items-center sticky top-0 z-10 group-has-[#menuInput:checked]:border-b md:border-b-0 border-b-strokeBrand-strong">
+<header id="header" class="w-full flex flex-col items-center top-0 left-0 right-0 sticky bg-bgBase/95 backdrop-blur-lg z-30 border-b border-strokeWeak group">
+  <nav class="group-has-[#menuInput:checked]:h-full py-3 md:py-4 flex-1 flex flex-col md:flex-row max-w-7xl px-3 w-full justify-between items-center sticky top-0 z-10">
       <div class="flex justify-between w-full md:w-auto ">
         <a href="/" class="py-1 md:px-0 " aria-label="Back to homepage">
           <img class="h-7 dark:hidden" src="/assets/brand/logo_full_color.svg" alt="APItoolkit full color logo">
           <img class="h-7 hidden dark:inline-block" src="/assets/brand/logo_full_white.svg" alt="APItoolkit white logo">
         </a>
-        <label class="md:hidden p-2 hover:bg-fillBrand-weak">
-          <svg class="h-5 w-5">
+        <label class="md:hidden p-2 hover:bg-fillBrand-weak rounded-lg transition-colors">
+          <svg class="h-5 w-5 text-iconWeak">
             <use class="block group-has-[#menuInput:checked]:hidden " xlink:href="/assets/deps/sprite.svg#menu"></use>
             <use class="hidden group-has-[#menuInput:checked]:block " xlink:href="/assets/deps/sprite.svg#xmark"></use>
           </svg><input type="checkbox" id="menuInput" class="hidden"/>
@@ -14,38 +14,60 @@
       </div>
       
 
-      <div class="hidden group-has-[#menuInput:checked]:flex md:flex flex-col md:flex-row pt-5 md:py-0 gap-2 md:gap-5 md:items-center w-full md:w-auto px-5 md:px-0">
+      <div class="hidden group-has-[#menuInput:checked]:flex md:flex flex-col md:flex-row pt-5 md:py-0 gap-1 md:gap-2 md:items-center w-full md:w-auto px-5 md:px-0">
         {% for navItem in config.raw.main_nav %}
           {% if navItem.dropdown %}
             <div class="relative group/nv">
-              <div class="flex cursor-pointer items-center p-2 gap-1 hover:bg-fillBrand-weak rounded-lg" title="{{navItem.title}}">
+              <button class="flex items-center gap-1.5 px-4 py-2.5 text-textWeak hover:text-textStrong hover:bg-fillWeak rounded-lg transition-all duration-200 font-normal" title="{{navItem.title}}">
                 {{navItem.title}} 
-                <svg class="shrink-0 h-5 w-5 text-current"><use xlink:href="/assets/deps/sprite.svg#chevron-down"></use></svg>
-              </div>
-              <div
-                class="flex flex-col group-hover/nv:opacity-100 group-hover/nv:h-auto w-96 h-0 z-40 overflow-y-hidden  duration-300 opacity-0 absolute top-full left-0 bg-base-100 border rounded-lg">
+                <svg class="shrink-0 h-4 w-4 text-current transition-transform group-hover/nv:rotate-180"><use xlink:href="/assets/deps/sprite.svg#chevron-down"></use></svg>
+              </button>
+              <div class="md:absolute md:top-full md:left-0 md:w-[420px] md:opacity-0 md:scale-95 md:pointer-events-none md:group-hover/nv:opacity-100 md:group-hover/nv:scale-100 md:group-hover/nv:pointer-events-auto transition-all duration-200">
+                <!-- Invisible bridge to maintain hover -->
+                <div class="absolute -top-2 left-0 right-0 h-2"></div>
+                <div class="bg-bgBase border border-strokeWeak rounded-xl shadow-xl p-2 mt-2">
                   {% for subItem in navItem.dropdown %}
-                    <a href="{{subItem.url}}" class="p-2 flex items-center gap-2 hover:bg-base-200 shrink-0"
+                    <a href="{{subItem.url}}" class="flex items-start gap-4 p-3 hover:bg-fillWeak rounded-lg transition-colors group/item"
                       title="{{subItem.title}}">
-                      <img src="/assets/img/nav-item.svg" class="h-12 shrink-0 w-12 border rounded-lg"
-                        alt="navigation item icon">
-                      <div class="flex flex-col">
-                        <h6 class="font-bold ">{{subItem.title}}</h6>
-                        <span class="text-gray-500 leading-[1.10]">{{subItem.description}}</span>
+                      <div class="w-10 h-10 bg-fillBrand-weak rounded-lg flex items-center justify-center shrink-0 group-hover/item:bg-fillBrand-strong transition-colors">
+                        {% if navItem.title == "Documentation" %}
+                          {% if subItem.title == "Get Started" %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#circle-play"></use></svg>
+                          {% elsif subItem.title == "SDK Guides" %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#plug"></use></svg>
+                          {% else %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#chart-line"></use></svg>
+                          {% endif %}
+                        {% else %}
+                          {% if subItem.title contains "Error" %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#bug"></use></svg>
+                          {% elsif subItem.title contains "analytics" %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#bar-chart"></use></svg>
+                          {% elsif subItem.title contains "management" %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#layout"></use></svg>
+                          {% else %}
+                            <svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#eye"></use></svg>
+                          {% endif %}
+                        {% endif %}
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h6 class="font-semibold text-textStrong group-hover/item:text-textBrand transition-colors">{{subItem.title}}</h6>
+                        <span class="text-sm text-textWeak leading-tight">{{subItem.description}}</span>
                       </div>
                     </a>
                   {% endfor %}
+                </div>
               </div>
             </div>
           {% else %}
-            <a href="{{navItem.url}}" class=" p-3 hover:bg-fillBrand-weak rounded-lg block">{{navItem.title}}</a>
+            <a href="{{navItem.url}}" class="px-4 py-2.5 text-textWeak hover:text-textStrong hover:bg-fillWeak rounded-lg transition-all duration-200 font-normal">{{navItem.title}}</a>
           {% endif %}
         {% endfor %}
       </div>
-      <div class="hidden group-has-[#menuInput:checked]:flex  md:flex gap-5 items-center w-full md:w-auto px-5 md:px-0">
-        <a href="https://app.apitoolkit.io" class="underline underline-offset-2">Login</a>
-        <a href="https://app.apitoolkit.io" class="underline underline-offset-2">Start free trial</a>
-        <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="bg-fillBrand-strong text-textInverse-strong px-6 py-3 rounded-xl shadow ">Book a demo</a>
+      <div class="hidden group-has-[#menuInput:checked]:flex md:flex gap-3 items-center w-full md:w-auto px-5 md:px-0 mt-4 md:mt-0">
+        <a href="https://app.apitoolkit.io" class="text-textWeak hover:text-textStrong transition-colors font-normal">Login</a>
+        <a href="https://app.apitoolkit.io" class="px-5 py-2.5 text-textBrand border border-strokeBrand-weak hover:bg-fillBrand-weak rounded-lg transition-all duration-200 font-normal">Start free trial</a>
+        <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="px-5 py-2.5 bg-fillBrand-strong text-textInverse-strong hover:bg-fillBrand-strong/90 rounded-lg transition-all duration-200 font-semibold shadow-sm hover:shadow-md">Book a demo</a>
       </div>
     </nav>
 </header>

@@ -12,7 +12,7 @@ faqs:
   - q: Can I switch between plans?
     a: Yes! You can upgrade or switch deployment options anytime. Moving from Cloud to Cloud + S3 is seamless—we'll help migrate your historical data. For self-hosted, our team provides migration assistance.
   - q: What counts as an event?
-    a: An event includes API requests, log entries, traces, spans, and metric data points. We count all telemetry data processed by APItoolkit. Unlike competitors, we never sample or drop your data—every event is stored and searchable.
+    a: An event includes API requests, log entries, traces, spans, and metric data points. We count all telemetry data processed by Monoscope. Unlike competitors, we never sample or drop your data—every event is stored and searchable.
   - q: Do you offer volume discounts?
     a: Yes, we offer custom pricing for high-volume usage (typically above 1 billion events/month). Contact our sales team at <a href="mailto:hello@apitoolkit.io" class="text-textBrand">hello@apitoolkit.io</a> to discuss your specific needs.
 ---
@@ -22,8 +22,8 @@ faqs:
     <header class="w-full mt-32">
         <div class="max-w-7xl mx-auto px-3">
             <div class="w-full flex flex-col items-center text-center gap-5 text-textWeak">
-                <h1 class="text-4xl leading-tight font-normal text-textStrong">Flexible deployment options <span class="text-textDisabled">for every company</span></h1>
-                <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, APItoolkit operates <br/>within your business and regulatory constraints.</p>
+                <h1 class="text-4xl leading-tight font-normal text-textStrong">Flexible pricing <span class="text-textDisabled">for every company</span></h1>
+                <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, monoscope operates <br/>within your business and regulatory constraints.</p>
                 <br/><br/>
             </div>
         </div>
@@ -83,7 +83,7 @@ faqs:
                     <li>Own and control all your data</li>
                     <li>Save <strong>all your data</strong> to any S3-compatible bucket</li>
                     <li><strong>Unlimited data retention</strong> period</li>
-                    <li>Query years of data via APItoolkit</li>
+                    <li>Query years of data via monoscope</li>
                     <li><strong>No extra cost</strong> for data retention</li>
                 </ul>
 
@@ -231,7 +231,7 @@ faqs:
                                         </h2>
 
                                         <p class="text-lg text-textWeak">
-                                            Building the next big thing? We'll cover up to 100% of your APItoolkit costs while you focus on growth.
+                                            Building the next big thing? We'll cover up to 100% of your monoscope costs while you focus on growth.
                                         </p>
                                     </div>
 
