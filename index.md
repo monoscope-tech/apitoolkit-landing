@@ -120,9 +120,9 @@ platforms:
       - title: Pre-built dashboards that actually work
         details: Start with battle-tested templates for your stack, then customize them to match your exact needs.
         learnmore: /features/dashboards
-      - title: Explore data without writing queries
-        details: Click to filter, drill down, and pivot your data. Find insights in seconds, not hours.
-        learnmore: /features/data-exploration
+      - title: Monitor performance and uptime of any service or process
+        details: Track response times, availability, and health of your APIs, databases, third-party services, and background jobs. Get alerted before users notice issues.
+        learnmore: /features/performance-monitoring
   - title: Know Instantly
     id: know-instantly
     icon: bell
