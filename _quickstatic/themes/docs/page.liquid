@@ -47,40 +47,47 @@
     <script defer src="/assets/deps/htmx/preload.js"></script>
     <script defer src="https://unpkg.com/hyperscript.org@0.9.12"></script>
     <style>
-      h1 {
-        font-variation-settings: 'wght' 700, 'mono' 1000;
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+      
+      body {
+        font-family: Inter, "Inter Fallback", sans-serif;
       }
-
-      h2 {
-        font-variation-settings: 'wght' 600, 'mono' 500;
+      
+      /* Table of Contents Active State */
+      #tableOfContents a.active {
+        color: var(--color-textBrand-strong);
+        border-left-color: var(--color-strokeBrand-strong);
+        font-weight: 500;
       }
-
-      h3,
-      h4,
-      h5 {
-        font-variation-settings: 'wght' 500, 'mono' 500;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+      
+      /* Only apply header styles within the article */
+      #mainArticle h1,
+      #mainArticle h2,
+      #mainArticle h3,
+      #mainArticle h4,
+      #mainArticle h5,
+      #mainArticle h6 {
         position: relative;
         cursor: pointer;
       }
 
       .header-link {
         position: absolute;
-        left: -20;
-        top: 5px;
+        left: -24px;
+        top: 50%;
+        transform: translateY(-50%);
         display: none;
         text-decoration: none;
-        color: #737373;
+        color: var(--color-textBrand-strong);
         cursor: pointer;
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding-right: 20px;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+      }
+
+      .header-link:hover {
+        opacity: 1;
       }
 
       h1:hover .header-link,
@@ -107,7 +114,7 @@
       }
 
       .docs-card:hover {
-        border-color: #377cfb;
+        border-color: var(--color-strokeBrand-strong);
         transform: translateY(-0.7rem);
         transition-duration: 300ms;
       }
@@ -125,17 +132,17 @@
       }
 
       .docs-card-2:hover {
-        border-color: #377cfb;
+        border-color: var(--color-strokeBrand-strong);
         transform: translateY(-0.5rem);
         transition-duration: 300ms;
       }
 
       .callout {
-        background-color: #f7f7f7;
-        border-left: 6px solid #377cfb;
-        padding: 16px;
-        margin: 16px 0;
-        border-radius: 4px;
+        background-color: var(--color-fillBrand-weak);
+        border-left: 4px solid var(--color-strokeBrand-strong);
+        padding: 20px;
+        margin: 24px 0;
+        border-radius: 8px;
       }
 
       .callout p:first-of-type {
@@ -154,32 +161,54 @@
         border-left: 6px solid #ff3131 !important;
       }
 
-      [data-theme='sunset'] .callout {
-        background-color: #c5c5c5;
-        color: #36454f;
+      [data-theme='dark'] .callout {
+        background-color: var(--color-fillAlternate);
+        color: var(--color-textStrong);
       }
 
-      [data-theme='sunset'] .callout code {
-        background: #282c34;
+      [data-theme='dark'] .callout code {
+        background: var(--color-fillRaised);
       }
 
       .docs-table table thead tr th {
-        font-weight: bold;
+        font-weight: 600;
         text-align: left;
-        padding: 0 10px 5px 10px;
+        padding: 12px;
+        color: var(--color-textStrong);
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .docs-table table {
+        border: 1px solid var(--color-strokeWeak);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .docs-table table thead {
+        background-color: var(--color-fillWeak);
       }
 
       .docs-table table thead tr th:first-child {
-        border-right: 1px solid #eeeeef;
+        border-right: 1px solid var(--color-strokeWeak);
       }
 
       .docs-table table tbody tr td:first-child {
-        border-right: 1px solid #eeeeef;
+        border-right: 1px solid var(--color-strokeWeak);
+        font-weight: 500;
+        color: var(--color-textStrong);
+      }
+
+      .docs-table table tbody tr:hover {
+        background-color: var(--color-fillWeak);
       }
 
       .docs-table table tbody tr td {
         vertical-align: middle !important;
-        padding: 10px;
+        padding: 12px;
+        color: var(--color-textWeak);
+        font-size: 1rem;
       }
 
       .btn {
@@ -209,27 +238,39 @@
 
       /* Styling for tabs component */
       .tab-button {
-        padding: 10px 20px;
+        padding: 12px 24px;
         cursor: pointer;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-strokeWeak);
         border-bottom: none;
-        border-radius: 5px 5px 0 0;
-        margin-right: 5px;
+        border-radius: 8px 8px 0 0;
+        margin-right: 8px;
+        background-color: var(--color-fillWeak);
+        color: var(--color-textWeak);
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .tab-button:hover {
+        background-color: var(--color-fillBrand-weak);
+        color: var(--color-textStrong);
       }
       .tab-button.active {
-        border-bottom: 2px solid #377cfb;
+        background-color: var(--color-bgBase);
+        border-bottom: 2px solid var(--color-bgBase);
+        color: var(--color-textBrand-strong);
+        font-weight: 600;
       }
       .tab-content {
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 0 5px 5px 5px;
+        padding: 24px;
+        border: 1px solid var(--color-strokeWeak);
+        border-radius: 0 8px 8px 8px;
+        background-color: var(--color-bgBase);
       }
       .tab-content.active {
         display: block;
       }
 
       .faq-answer a {
-        color: #ffffff;
+        color: var(--color-textBrand-strong);
         text-decoration: underline;
       }
     </style>
@@ -474,7 +515,7 @@
 
     <script>
       if (localStorage.getItem('darkMode') === 'true') {
-        document.body.setAttribute('data-theme', 'sunset');
+        document.body.setAttribute('data-theme', 'dark');
       }
     </script>
 
@@ -564,10 +605,10 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
     </noscript>
   </head>
 
-  <body data-theme="emerald" hx-boost="true" hx-ext="preload,head-support" class="" preload>
+<body data-theme="light" {% comment %}hx-boost="true"{% endcomment %} hx-ext="preload,head-support" class="" preload>
     <script>
       if (localStorage.getItem('darkMode') === 'true') {
-        document.body.setAttribute('data-theme', 'sunset');
+        document.body.setAttribute('data-theme', 'dark');
       }
     </script>
 
@@ -581,28 +622,28 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <section class="sticky top-0 w-full bg-base-100 z-10 border-b border-b-base-200">
-      <section class="text-center border-b border-b-base-200">
-        <div class="max-w-7xl w-full py-4 px-4 text-left inline-flex justify-between items-center">
+    <section class="sticky top-0 w-full bg-bgBase z-10 border-b border-b-strokeWeak">
+      <section class="w-full flex flex-col items-center border-b border-b-strokeWeak">
+        <div class="max-w-7xl w-full py-4 px-4 text-left flex justify-between items-center">
           <a href="/" class="px-1 py-1" aria-label="Back to homepage">
-            <img class="h-6 dark:hidden" src="/assets/brand/logo_full_color.svg" alt="APItoolkit full color logo">
+            <img class="h-7 dark:hidden" src="/assets/brand/logo_full_color.svg" alt="APItoolkit full color logo">
             <img
-              class="h-6 hidden dark:inline-block"
+              class="h-7 hidden dark:inline-block"
               src="/assets/brand/logo_full_white.svg"
               alt="APItoolkit white logo"
             >
           </a>
           <div class="flex gap-4 items-center">
-            <a href="/" class="hidden sm:inline-block text-sm text-secondary">↢&nbsp;Back to Website</a>
+            <a href="/" class="hidden sm:inline-block text-sm text-textBrand-strong whitespace-nowrap flex-shrink-0">↢&nbsp;Back to Website</a>
             <a class="cursor-pointer sm:hidden" onClick="search_modal.showModal()" aria-label="search" title="Search">
               <svg class="icon h-4 w-4 text-current fill-current stroke-current opacity-70">
                 <use xlink:href="/assets/deps/fontawesome/solid.svg#magnifying-glass"></use>
               </svg>
             </a>
-            <a href="https://app.apitoolkit.io?utm_source=docs" class="btn btn-sm btn-secondary">Sign Up</a>
+            <a href="https://app.apitoolkit.io?utm_source=docs" class="btn btn-sm bg-fillBrand-strong hover:bg-fillBrand-weak text-textInverse-strong border-0">Sign Up</a>
 
             <a
-              class="input input-sm bg-slate-50 dark:bg-base-200 input-bordered hidden sm:flex items-center gap-2"
+              class="input input-sm bg-fillWeak dark:bg-fillAlternate input-bordered hidden sm:flex items-center gap-2 flex-shrink min-w-0"
               onClick="search_modal.showModal()"
               aria-label="search"
               title="Search"
@@ -627,7 +668,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
                 value="sunset"
                 _="
                   on change localStorage.setItem('darkMode', me.checked)
-                  then if  me.checked set body's @data-theme to 'sunset' else set body's @data-theme to 'emerald'
+                  then if  me.checked set body's @data-theme to 'dark' else set body's @data-theme to 'light'
                 "
               >
               <svg class="swap-off icon h-5 w-5 text-current fill-current stroke-current opacity-70">
@@ -647,13 +688,13 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
       </section>
 
       <section class="text-center">
-        <div class="max-w-7xl w-full gap-4 text-md hidden sm:inline-flex sm:ml-8">
+        <div class="max-w-7xl w-full gap-4 text-md hidden sm:inline-flex sm:ml-8 a:no-underline">
           {% capture root_menu_items %}
         {% assign is_home = this.frontmatter.title | equals: "Home" %}
-        <a class="flex gap-3 sm:border-b-2 {{ is_home | ternary: 'sm:border-b-secondary text-secondary sm:text-current ', 'border-b-transparent' }} py-2 px-1 items-center"
+        <a class="flex gap-3 sm:border-b-2 {{ is_home | ternary: 'sm:border-b-strokeBrand-strong text-textBrand-strong sm:text-current ', 'border-b-transparent' }} py-2 px-1 items-center hover:text-textBrand-strong transition-colors"
           href="/docs/" preload="preload:init" title="Documentation Home" aria-label="Documentation Home">
           <svg
-            class="icon h-5 w-5 text-current fill-current stroke-current  {{ is_home | ternary: 'text-secondary', '' }}">
+            class="icon h-5 w-5 text-current fill-current stroke-current  {{ is_home | ternary: 'text-iconBrand', '' }}">
             <use xlink:href="/assets/deps/fontawesome/regular.svg#house"></use>
           </svg>
           <span>Home</span>
@@ -662,10 +703,10 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
         {% for page in pages %}
         {% assign parent_doc_prefix = page.file_path | remove: "index.md" | remove_first: "." %}
         {% assign is_active = this.permalink | starts_with: parent_doc_prefix %}
-        <a class="flex gap-3 sm:border-b-2 {{ is_active | ternary: 'sm:border-b-secondary text-secondary sm:text-current', 'border-b-transparent' }} py-2 px-1 items-center"
+        <a class="flex gap-3 sm:border-b-2 {{ is_active | ternary: 'sm:border-b-strokeBrand-strong text-textBrand-strong sm:text-current', 'border-b-transparent' }} py-2 px-1 items-center hover:text-textBrand-strong transition-colors"
           href="{{ page.permalink }}">
           <i
-            class="fa-regular fa-{% if page.frontmatter.faLogo %}{{ page.frontmatter.faLogo }}{%else%}star{%endif%} w-5 h-5 {{ is_active | ternary: 'text-secondary', '' }}"></i>
+            class="fa-regular fa-{% if page.frontmatter.faLogo %}{{ page.frontmatter.faLogo }}{%else%}star{%endif%} w-5 h-5 {{ is_active | ternary: 'text-iconBrand', '' }}"></i>
           <span>{{ page.frontmatter.title | default: 'Untitled' }}</span>
         </a>
         {% endfor %}
@@ -687,7 +728,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
       {% for page in pages %}
       <section class="pl-1">
       <!-- FILE TREE PARENT -->
-        <a class="block font-semibold pb-3" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
+        <a class="block font-semibold text-sm uppercase tracking-wider pb-2 text-textStrong hover:text-textBrand-strong transition-colors" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
         {% capture glob_pattern1 %}.{{ page.permalink }}*/index.md{% endcapture %}
         <!-- In an idea scenario, we will sort this automatically based on "frontmatter.title"
              but the dashboard guides page requires custom sorting and will conflict with the
@@ -696,22 +737,22 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
         {% assign subpages = file_list | where_glob: 'file_path', glob_pattern1 | sort: 'frontmatter.menuWeight' %}
         {% if subpages.size > 0 %}
         <!-- FILE TREE CHILDREN -->
-        <ul class="space-y-2">
+        <ul class="space-y-1">
           {% for subpage in subpages %}
           <li>
             {% assign is_active_page = subpage.permalink | equals: this.permalink %}
             <a href="{{ subpage.permalink }}"
-               class="hover:text-secondary {{ is_active_page | ternary: 'text-secondary', '' }}">{{
+               class="block py-1 px-3 rounded-md hover:bg-fillWeak hover:text-textBrand-strong transition-all duration-200 {{ is_active_page | ternary: 'text-textBrand-strong font-medium bg-fillBrand-weak', 'text-textWeak' }}">{{
                subpage.frontmatter.title }}</a>
             {% capture glob_pattern2 %}.{{ subpage.permalink }}*/index.md{% endcapture %}
             {% assign subsubpages = file_list | where_glob: 'file_path', glob_pattern2 | sort %}
             {% if subsubpages.size > 0 %}
-            <ul class="pl-5 space-y-2 pt-2">
+            <ul class="ml-3 mt-1 space-y-1 border-l border-strokeWeak">
               {% for subsubpage in subsubpages %}
               <li>
                 {% assign is_active_subpage = subsubpage.permalink | equals: this.permalink %}
                 <a href="{{ subsubpage.permalink }}"
-                  class="hover:text-secondary {{ is_active_subpage | ternary: 'text-secondary', '' }}">{{
+                  class="block py-1 pl-4 pr-3 text-sm hover:text-textBrand-strong transition-all duration-200 border-l-2 border-transparent hover:border-strokeBrand-strong -ml-px {{ is_active_subpage | ternary: 'text-textBrand-strong font-medium border-strokeBrand-strong', 'text-textWeak' }}">{{
                   subsubpage.frontmatter.title }}</a>
               </li>
               {% endfor %}
@@ -725,8 +766,8 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
       {% endfor %}
       {% endcapture %}
         {% unless this.frontmatter.hideFileTree %}
-          <div class="w-64 leading-relaxed border-r border-r-base-200 hidden sm:block ">
-            <nav class="h-full w-64 space-y-8 text-sm py-48 pr-5 fixed top-0 overflow-y-scroll">
+          <div class="w-64 leading-relaxed border-r border-r-strokeWeak hidden sm:block ">
+            <nav class="h-full w-64 space-y-6 text-sm py-32 pr-8 pl-4 fixed top-0 overflow-y-scroll">
               {{ main_menu_items }}
             </nav>
           </div>
@@ -736,9 +777,9 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
           <input id="mobile-menu-drawer" type="checkbox" class="drawer-toggle">
           <div class="drawer-side">
             <label for="mobile-menu-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-            <div class="p-5 w-80 min-h-full bg-base-100 text-base-content clear-both">
+            <div class="p-5 w-80 min-h-full bg-bgBase text-textStrong clear-both">
               <label for="mobile-menu-drawer" class="p-5 float-right">
-                <svg class="flex-shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70">
+                <svg class="shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70">
                   <use xlink:href="/assets/deps/fontawesome/regular.svg#xmark"></use>
                 </svg>
               </label>
@@ -755,42 +796,52 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
         </div>
 
         <div class="flex-1 grow flex relative min-h-screen">
-          <div class="text-center flex-1 grow p-5 pt-12 sm:p-20 sm:pb-28 pb-40 divide-y divide-y-base-200">
+          <div class="text-center flex-1 grow p-5 pt-12 sm:px-12 sm:py-20 sm:pb-28 pb-40 divide-y divide-y-strokeWeak">
             <article
               class="
-                text-left pb-12 prose prose-slate dark:prose-invert prose-headings:font-medium prose-a:text-secondary prose-a:underline prose-a:underline-offset-4
-                prose-img:w-full prose-img:rounded-md prose-img:drop-shadow-md prose-img:border prose-img:border-base-200  prose-p:leading-relaxed
-                prose-headings:scroll-mt-40 prose-pre:p-0
-                before:prose-li:bg-secondary before:prose-li:text-secondary
-                prose-strong:font-medium prose-secondary w-full {%if this.frontmatter.pageFullWidth%}max-w-none {%endif%}
+                text-left pb-12 prose prose-lg prose-slate dark:prose-invert 
+                prose-headings:font-normal prose-h1:text-4xl prose-h1:leading-tight prose-h2:text-3xl prose-h2:leading-tight 
+                prose-h3:text-2xl prose-h3:font-semibold prose-h4:text-xl prose-h5:text-lg prose-h6:text-base
+                prose-p:text-textWeak prose-p:leading-relaxed prose-p:text-base
+                prose-strong:text-textStrong prose-strong:font-semibold
+                prose-a:text-textBrand-strong prose-a:underline prose-a:underline-offset-4 hover:prose-a:text-textBrand-weak
+                prose-img:w-full prose-img:rounded-xl prose-img:drop-shadow-md prose-img:border prose-img:border-strokeWeak
+                prose-headings:scroll-mt-40 prose-pre:p-0 prose-pre:rounded-xl
+                prose-code:text-sm prose-code:bg-fillWeak prose-code:text-textStrong prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                prose-pre:bg-transparent prose-pre:code:bg-transparent prose-code:before:content-none prose-code:after:content-none
+                before:prose-li:bg-fillBrand-strong before:prose-li:text-textBrand-strong
+                prose-blockquote:border-l-4 prose-blockquote:border-fillBrand-strong prose-blockquote:text-textWeak prose-blockquote:italic prose-blockquote:pl-4
+                prose-ul:text-textWeak prose-ol:text-textWeak prose-li:mb-2
+                prose-headings:text-textStrong
+                w-full max-w-4xl mx-auto {%if this.frontmatter.pageFullWidth%}max-w-none {%endif%}
               "
               id="mainArticle"
             >
               {{ this.content }}
             </article>
-            <footer class="text-center py-12 space-y-2">
-              <h5 class="font-semibold">Need assistance or have some feedback for us? You can reach out to us at:</h5>
-              <p>
-                <i class="fa-regular fa-envelope"></i>
+            <footer class="text-center py-12 space-y-4">
+              <h5 class="font-medium text-lg text-textStrong">Need assistance or have some feedback for us? You can reach out to us at:</h5>
+              <p class="text-textWeak">
+                <i class="fa-regular fa-envelope text-textBrand"></i>
                 <a
-                  class="link"
+                  class="text-textBrand-strong hover:text-textBrand-weak underline underline-offset-4 transition-colors"
                   href="mailto:hello@apitoolkit.io"
                   >hello@apitoolkit.io</a
                 >
-                |
-                <i class="fa-brands fa-discord"></i>
+                <span class="px-2">|</span>
+                <i class="fa-brands fa-discord text-textBrand"></i>
                 <a
-                  class="link"
+                  class="text-textBrand-strong hover:text-textBrand-weak underline underline-offset-4 transition-colors"
                   href="https://apitoolkit.io/discord"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Discord Community Server</a
                 >
-                |
-                <i class="fa-brands fa-github"></i>
+                <span class="px-2">|</span>
+                <i class="fa-brands fa-github text-textBrand"></i>
                 <a
-                  class="link"
-                  href="https://github.com/monoscope-tech/apitoolkit-landing/issues/new/choose"
+                  class="text-textBrand-strong hover:text-textBrand-weak underline underline-offset-4 transition-colors"
+                  href="https://github.com/apitoolkit/apitoolkit-landing/issues/new/choose"
                   target="_blank"
                   rel="noopener noreferrer"
                   >GitHub Community Issues</a
@@ -800,16 +851,33 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
           </div>
         </div>
         {% unless this.frontmatter.hideToc %}
-          <section class="w-56 hidden sm:block">
-            <div class="w-56 my-48 fixed top-0 text-sm space-y-4">
-              <strong class="block font-medium">On this page:</strong>
-              <ul class="space-y-2 border-l overflow-y-auto max-h-[calc(100vh-8rem)]" id="tableOfContents">
-                {% for toc in this.toc %}
-                  <li class="hover:underline underline-offset-4 pl-{{toc.level | times: 3}}">
-                    <a href="#{{toc.id}}">{{ toc.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
+          <section class="w-64 hidden lg:block">
+            <div class="w-64 fixed top-32 pr-8">
+              <nav class="sticky top-0">
+                <h3 class="font-semibold text-sm uppercase tracking-wider text-textStrong mb-4">On this page</h3>
+                <ul class="space-y-1 text-sm overflow-y-auto max-h-[calc(100vh-12rem)]" id="tableOfContents">
+                  {% for toc in this.toc %}
+                    {% assign indent_class = "" %}
+                    {% if toc.level == 1 %}
+                      {% assign indent_class = "pl-0" %}
+                    {% elsif toc.level == 2 %}
+                      {% assign indent_class = "pl-4" %}
+                    {% elsif toc.level == 3 %}
+                      {% assign indent_class = "pl-8" %}
+                    {% elsif toc.level == 4 %}
+                      {% assign indent_class = "pl-12" %}
+                    {% else %}
+                      {% assign indent_class = "pl-16" %}
+                    {% endif %}
+                    <li class="{{indent_class}} relative">
+                      <a href="#{{toc.id}}" 
+                         class="block py-1 pr-3 text-textWeak hover:text-textBrand-strong transition-all duration-200 border-l-2 border-transparent hover:border-strokeBrand-strong -ml-px pl-4">
+                        {{ toc.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </nav>
             </div>
           </section>
         {% endunless %}
@@ -854,15 +922,15 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
                 document.querySelectorAll('#tableOfContents a').forEach((link) => {
                   if (link.getAttribute('href').substring(1) === entry.target.id) {
                     document.querySelectorAll('#tableOfContents a').forEach(function (element) {
-                      element.classList.remove('text-secondary');
+                      element.classList.remove('active');
                     });
-                    link.classList.add('text-secondary');
+                    link.classList.add('active');
                   }
                 });
               }
             });
           },
-          { rootMargin: '0px', threshold: 0.0001 }
+          { rootMargin: '-80px 0px -80% 0px', threshold: 0 }
         );
 
         // Observe all headings within the article

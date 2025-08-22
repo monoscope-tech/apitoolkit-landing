@@ -21,7 +21,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
             Watch errors, stack traces, real-time API requests, performance statistics, and other metrics that matter using APItoolkit's rich API log explorer and analytics graphs, so you can pinpoint API issues, understand the root cause(s), and fix them in real-time before they affect your users.
          <p>
          <div class="mt-[30px] flex items-center gap-4 text-center">
-            <a href="https://app.apitoolkit.io" class="btn btn-secondary sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
+            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
             <a href="/docs" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-neutral sm:w-56">READ THE DOCS</a>
          </div>
       </div>

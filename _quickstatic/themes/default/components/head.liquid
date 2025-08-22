@@ -361,7 +361,8 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
 
   <body
     data-theme="emerald"
-    hx-boost="true"
+    {% comment %} data-theme="dark" {% endcomment %}
+    {% comment %} hx-boost="true" {% endcomment %}
     hx-ext="preload,head-support"
     class="text-textStrong bg-bgBase"
     preload

@@ -12,7 +12,7 @@
 
 [Learn more ...](/features/error-tracking){.text-secondary}
 
-{% capture badgecheck %}<svg class="inline text-secondary flex-shrink-0 icon h-5 w-5 fill-secondary stroke-secondary"><use xlink:href="/assets/deps/fontawesome/solid.svg#badge-check"></use></svg>{% endcapture %}
+{% capture badgecheck %}<svg class="inline text-secondary shrink-0 icon h-5 w-5 fill-secondary stroke-secondary"><use xlink:href="/assets/deps/fontawesome/solid.svg#badge-check"></use></svg>{% endcapture %}
 
 {class="carousel-menu pt-3" scriptx="install CarouselSectionInit"}
 :::::
@@ -25,6 +25,6 @@
 :::::
 ::::
 {class="carousel-img-parent col-span-3 {{this.name}}-img"}
-{% for item in this.items %}![{{item.title}}]({{item.img}}){#{{item.title | slugify}}-c-img class="{% if forloop.first %}!block{% endif %}" }{% endfor %}
+{% for item in this.items %}![{{item.title}}]({{item.img}}){#{{item.title | slugify}}-c-img class="{% if forloop.first %}block!{% endif %}" }{% endfor %}
 :::
 

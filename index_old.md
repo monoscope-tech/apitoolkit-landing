@@ -118,8 +118,8 @@ faqs:
 <script type="text/hyperscript">
 behavior CarouselSection
     on every change if event.target.checked
-        then remove .{'!block'} from <.${@name}-img>img/>
-        then add .{'!block'} to <#${my.id}-img/>
+        then remove .{'block!'} from <.${@name}-img>img/>
+        then add .{'block!'} to <#${my.id}-img/>
     end
     on mouseenter from (next <label/>)
         set me.checked to true
@@ -273,7 +273,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
     </div>
 </section>
 
-<section class="bg-gradient-to-b from-slate-200 to-white">
+<section class="bg-linear-to-b from-slate-200 to-white">
     <div class="width-control px-3 mx-auto py-3">
         <h2 class="text-2xl font-extrabold text-center py-14">How APItoolkit can help your business?</h2>
         <div class="flex flex-col sm:grid sm:grid-cols-4 gap-5 items-center justify-center">
@@ -340,9 +340,9 @@ Or actively making healthcheck requests to API/web endpoints</p>
   <section class="py-10 my-16">
     <div class="width-control px-3 mx-auto">
       <div class="w-full border-t border-b grid md:grid-cols-2 relative">
-        <div class="h-[calc(100%+30px)] w-[1px] absolute border-l top-[-15px] left-[15px]"></div>
-        <div class="h-[calc(100%+30px)] w-[1px] absolute border-l top-[-15px] right-[15px]"></div>
-        <div class="hidden md:block h-[calc(100%+30px)] w-[1px] absolute border-l top-[-15px] left-[50%]"></div>
+        <div class="h-[calc(100%+30px)] w-px absolute border-l top-[-15px] left-[15px]"></div>
+        <div class="h-[calc(100%+30px)] w-px absolute border-l top-[-15px] right-[15px]"></div>
+        <div class="hidden md:block h-[calc(100%+30px)] w-px absolute border-l top-[-15px] left-[50%]"></div>
         <div class="px-6 sm:px-16 py-14">
           <h2 class="text-gray-800 font-bold text-4xl">
             Scale with <span class="text-gray-400">Security</span></h2>
@@ -361,7 +361,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
        white 0 calc((100% - 5*1px)/4),
        #e5e7eb 0 calc((100% - 5*1px)/4 + 1px));"></div>
           <div
-            class="border-t sm:w-[calc(100%-15px)] flex-grow border-b gap-2 sm:gap-10 flex flex-wrap justify-center items-center">
+            class="border-t sm:w-[calc(100%-15px)] grow border-b gap-2 sm:gap-10 flex flex-wrap justify-center items-center">
             <img src="./assets/img/gdpr.png" alt="CCPA" class="">
             <img src="./assets/img/security.png" alt="GDPR" class="">
 
@@ -424,7 +424,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
               <img src="./assets/img/integrations/nginx.png" alt="">
               <img src="./assets/img/integrations/caddy.png" alt="">
               <img src="./assets/img/integrations/go.svg" alt="">
-              <img src="./assets/img/integrations/php.svg" alt="" class="flex-grow-0">
+              <img src="./assets/img/integrations/php.svg" alt="" class="grow-0">
             </div>
             <a href="https://apitoolkit.io/docs/" class="text-sm text-gray-400 max-w-[300px] underline"> and
               many more...
@@ -441,7 +441,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
         <div class=" relative mt-24 p-1 overflow-hidden -mx-5 w-full">
             <iframe class="" id='testimonialto-apitoolkit-tag-all-light' src="https://embed-v2.testimonial.to/w/apitoolkit?theme=dark&card=base&loadMore=off&initialCount=9&randomize=on&hideDate=on&tag=all" frameborder="0" scrolling="no" width="100%" title="testimonial.to testimonials"></iframe>
         </div>
-        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-[#232529]"></div>
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-linear-to-b from-transparent to-[#232529]"></div>
       </div>
         {% endcomment %}
       </div>

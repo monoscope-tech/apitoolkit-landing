@@ -25,7 +25,7 @@ faqs:
 ```=html
 <section class="max-w-7xl px-3 w-full text-textWeak flex flex-col md:flex-row gap-8">
 
-    <div class="flex-grow mt-4">
+    <div class="grow mt-4">
         <p class="text-4xl font-bold mb-3">Frequently Asked <br/> Questions</p>
     </div>
 
@@ -33,7 +33,7 @@ faqs:
         {% for faq in this.frontmatter.faqs %}
         <div class="bg-secondary text-white px-6 py-3 shadow-sm">
             <button class="flex gap-4 items-center text-left" onclick="toggleFaq(event)">
-            <svg class="flex-shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70"><use xlink:href="/assets/deps/fontawesome/solid.svg#caret-right"></use></svg>
+            <svg class="shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70"><use xlink:href="/assets/deps/fontawesome/solid.svg#caret-right"></use></svg>
             {{faq.q}}
             </button>
             <div class="pl-4 py-4 hidden text-white dark:text-base-content faq-answer">{{faq.a}}</div>

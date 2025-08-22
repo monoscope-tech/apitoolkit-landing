@@ -14,7 +14,7 @@ testimonials:
     photo: larrison_morrison.jpeg
     name: Lazarus Morrison
     title: Founder of Community Fluency
-    logo_raw: <div class="inline-flex items-center text-lg gap-1"><img src="/assets/img/customers/community_fluency.png" alt="Community Fluency" class="logo1 logo2"/> <span class="hidden sm:inline-block">Community<strong class="!text-lg">Fluency</strong></span></div>
+    logo_raw: <div class="inline-flex items-center text-lg gap-1"><img src="/assets/img/customers/community_fluency.png" alt="Community Fluency" class="logo1 logo2"/> <span class="hidden sm:inline-block">Community<strong class="text-lg!">Fluency</strong></span></div>
   - quote: "The best observability tool we use today at Woodcore, APItoolkit notifies us about any slight change that happens on the system. <br/><br/>Most especially, for the features we utilise today on APItoolkit, would cost us a lot more elsewhere."
     photo: samuel_joseph.jpeg
     name: Samuel Joseph
@@ -54,16 +54,19 @@ features:
         title: Logs and Traces
         details: Query all your logs and correlate them with trace breakdowns or the requests which triggered the logs.
         learnmore: /features/api-logs-and-metrics
+        video: /assets/videos/see-everything.mp4
       - icon: activity
         id: errors
         title: Errors and Performance
         details: Monitor API errors and performance in real time. Detect issues instantly, analyze trends, and optimize response times with detailed insights. Improve reliability with automated tracking, alerting, and in-depth analytics to ensure a seamless user experience.
         learnmore: /features/error-tracking
+        video: /assets/videos/know-instantly.mp4
       - icon: bar-chart
         id: metrics
         title: Metrics and dashboards
         details: Define and track custom metrics tailored to your API needs. Gain actionable insights, monitor key performance indicators, and optimize efficiency with real-time data visualization and alerts. Make data-driven decisions to enhance your API’s performance and reliability.
         learnmore: /features/api-management
+        video: /assets/videos/measure-anything.mp4
   - title: API management
     links:
       - icon: layout
@@ -71,11 +74,13 @@ features:
         title: API Catalog and Docs
         details: Organize, manage, and document your APIs effortlessly with a dynamic API catalog. Provide clear, up-to-date documentation, improve discoverability, and streamline onboarding for developers with interactive guides, code samples, and real-time updates.
         learnmore: /features/api-management
+        video: /assets/videos/ask-like-colleague.mp4
       - icon: copy
         id: change
         title: Anomalies
         details: Detect API changes and anomalies in real time. Stay ahead of unexpected behavior with automated monitoring, instant alerts, and detailed insights. Ensure stability, prevent disruptions, and maintain seamless performance with proactive change detection.
         learnmore: /features/api-observability
+        video: /assets/videos/change-detection.mp4
   - title: Alerts and Monitors
     links:
       - icon: compass
@@ -83,60 +88,77 @@ features:
         title: Monitors and healthchecks
         details: Ensure API reliability with automated monitors and health checks. Continuously track uptime, detect failures early, and receive instant alerts. Keep your services running smoothly with real-time insights and proactive issue resolution.
         learnmore: /docs/monitors
+        video: /assets/videos/know-instantly.mp4
       - icon: radio
         id: alerts
         title: Alerts and notifications
         details: Stay informed with real-time alerts and comprehensive reports. Customize alert channels and receive detailed analytics to monitor your API's performance and reliability effectively.
         learnmore: /docs/alerts
+        video: /assets/videos/know-instantly.mp4
       - icon: calendar
         id: reports
         title: Daily or weekly reports
         details: Receive comprehensive daily or weekly reports summarizing API performance, errors, and key metrics. Get actionable insights delivered to your inbox to stay ahead of potential issues.
         learnmore: /docs/reports
+        video: /assets/videos/weekly-reports.mp4
 
 platforms:
-  - title: APIs
-    id: apis
-    icon: rss
+  - title: See Everything
+    id: see-everything
+    icon: eye
+    visual: /assets/videos/see-everything.mp4
     children:
-      - title: Catch breaking changes
-        details: Spot unexpected changes in API responses or data structures-your services or third-party calls-before they slip into production.
-        learnmore: /features/error-tracking
-      - title: Monitor request payloads
-        details: Create real-time alerts for critical API payloads-like third-party errors or large bank transactions-and get notified instantly.
-        learnmore: /features/api-observability
-      - title: Create multistep healthchecks
-        details: Run multistep checks for critical workflows—create an account, check balance, transfer funds, delete account-on a regular schedule.
-        learnmore: /features/api-management
-  - title: Backends
-    id: backend
-    icon: hard-drive
+      - title: See exactly what your users saw -- via screen replay
+        details: Watch the actual screen recording of user sessions that led to errors. No more guessing from bug reports—see every click, scroll, and action that triggered the issue.
+        learnmore: /features/correlation
+      - title: Unified logs and traces in one view
+        details: No more tab-switching between tools. See your entire request journey from frontend to database in a single timeline.
+        learnmore: /features/logs-traces
+      - title: Full-stack context for every issue
+        details: From user action to database query, see the complete story of what happened, when, and why.
+        learnmore: /features/full-stack
+  - title: Measure Anything
+    id: measure-anything
+    icon: bar-chart-2
+    visual: /assets/videos/measure-anything.mp4
     children:
-      - title: Endpoint Performance and Throughput
-        details: Spot unexpected changes in API responses or data structures-your services or third-party calls-before they slip into production.
-        learnmore: /
-      - title: Track Errors and Exceptions
-        details: Track all errors and exceptions generated by your application. Prioritize errors based on their frequency.
-        learnmore: /
-      - title: Background and cron jobs
-        details: See and track job runs and get alerted if an important job stops running.
-        learnmore: /
-      - title: Debug with logs and traces
-        details: When theres an issue, debug with all the related logs and traces automatically surfaced for you.
-        learnmore: /
-  - title: Databases
-    id: database
-    icon: database
+      - title: Custom metrics without the complexity
+        details: Track business KPIs, technical metrics, or anything in between. If it matters to you, we'll help you measure it.
+        learnmore: /features/custom-metrics
+      - title: Pre-built dashboards that actually work
+        details: Start with battle-tested templates for your stack, then customize them to match your exact needs.
+        learnmore: /features/dashboards
+      - title: Monitor performance and uptime of any service or process
+        details: Track response times, availability, and health of your APIs, databases, third-party services, and background jobs. Get alerted before users notice issues.
+        learnmore: /features/performance-monitoring
+  - title: Know Instantly
+    id: know-instantly
+    icon: bell
+    visual: /assets/videos/know-instantly.mp4
     children:
-      - title: Identify Slow Database Queries
-        details: Spot unexpected changes in API responses or data structures-your services or third-party calls-before they slip into production.
-        learnmore: /
-      - title: Query Analytics and Dashboards
-        details: Dashboard templates that visualize all the important metrics and datapoints for your database of choice.
-        learnmore: /
-      - title: Database Error tracking and anomaly detection
-        details: Don't let database emergencies sneak up on you. Automatically analyze query results and database logs for errors and anomalies.
-        learnmore: /
+      - title: Smart alerts that reduce noise
+        details: Set intelligent thresholds that adapt to your traffic patterns. Get notified about real issues, not false alarms.
+        learnmore: /features/smart-alerts
+      - title: Rich context in every notification
+        details: Alerts come with logs, traces, and trends attached. Know if it's critical before you even open your laptop.
+        learnmore: /features/alert-context
+      - title: Alert on anything, notify anywhere
+        details: From API response times to business metrics, create alerts on any data point and route to Slack, PagerDuty, email, or webhooks.
+        learnmore: /features/alert-routing
+  - title: From Anywhere
+    id: from-anywhere
+    icon: smartphone
+    visual: /assets/videos/from-anywhere.mp4
+    children:
+      - title: Debug directly from Slack, Whatsapp, Discord, etc
+        details: Ask your monitoring bot questions in plain English. "What's our p95 latency?" or "Show me errors in checkout" — get instant answers with charts and logs.
+        learnmore: /features/slack-integration
+      # - title: Mobile app for on-the-go monitoring
+      #   details: Check dashboards, acknowledge alerts, and dive into issues from your phone. Your ops command center, in your pocket.
+      #   learnmore: /features/mobile-app
+      - title: CLI for developers who live in the terminal
+        details: Query metrics, tail logs, and trace requests without leaving your development environment. Integrate monitoring into your workflow, not the other way around.
+        learnmore: /features/cli
   # - title: Infra
   # - title: Frontends
   # - title: Mobile
@@ -148,9 +170,9 @@ platforms:
   <section class="space-y-20 mt-8 sm:mt-32">
       <div class="flex flex-col md:flex-row max-w-7xl w-full gap-5 px-3">
         <div class="space-y-10 flex-1">
-          <h1 class="text-[2.8rem]  font-normal leading-tight sm:leading-none sm:space-y-3">
+          <h1 class="text-[3.0rem]  font-normal leading-tight sm:leading-none sm:space-y-3">
             <span class="block">Find and fix production issues<span class="text-textDisabled">,</span></span>
-            <span class="text-textDisabled block">before <span id="heading-typewriter">customers notice</span></span>
+            <span class="text-textDisabled dark:text-textWeak block">before <span id="heading-typewriter">customers notice</span></span>
           </h1>
           <script>
           new Typewriter('#heading-typewriter', {
@@ -161,20 +183,20 @@ platforms:
             loop: true,
           });
           </script>
-          <ul class="text-[1.25rem] space-y-4 leading-tight [&_svg]:!text-strokeBrand-strong">
-            <li class="flex gap-2 items-center"><svg class="h-5 w-5 flex-shrink-0">
+          <ul class="hidden text-[1.25rem] space-y-4 leading-tight [&_svg]:!text-strokeBrand-strong">
+            <li class="flex gap-2 items-center"><svg class="h-5 w-5 shrink-0">
               <use xlink:href="/assets/deps/sprite.svg#pie-chart"></use>
             </svg> Catch breaking changes and critical errors</li>
-            <li class="flex gap-2 items-center"><svg class="h-5 w-5 flex-shrink-0">
+            <li class="flex gap-2 items-center"><svg class="h-5 w-5 shrink-0">
               <use xlink:href="/assets/deps/sprite.svg#activity"></use>
             </svg> Analyze logs, metrics, traces and request payloads</li>
-            <li class="flex gap-2 items-center"><svg class="h-5 w-5 flex-shrink-0">
+            <li class="flex gap-2 items-center"><svg class="h-5 w-5 shrink-0">
               <use xlink:href="/assets/deps/sprite.svg#bar-chart-2"></use>
             </svg> Monitor performance and uptime of both APIs and external APIs</li>
           </ul>
           <div class="flex gap-2 sm:gap-4">
-            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Book a demo</a>
-            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Start 30 day free trial</a>
+            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
+            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
           </div>
           <div class="flex gap-4 items-center text-textWeak">
             <!-- TrustBox Rating -->
@@ -187,8 +209,9 @@ platforms:
             <span>|</span>
             <span>Built for security & compliance</span>
           </div>
+          <br/><br/>
         </div>
-        <div class="md:w-[45%] mt-[-3.7rem]">
+        <div class="hidden md:w-[45%] mt-[-3.7rem]">
             <!-- <img class="w-full" src="/assets/img/home/hero-dashscreen.svg"/> -->
             <!-- <img class="w-full" src="/assets/img/home/hero-img1.svg"/> -->
             <canvas id="rive-hero-canvas" xwidth="200" class="w-full aspect-square xobject-contain"></canvas>
@@ -224,7 +247,7 @@ platforms:
           </div>
           <div class="flex flex-col sm:flex-row text-textWeak gap-24 py-6">
             <div class="timeline-fade-in flex-1 border-l border-fillBrand-strong px-6 py-2 space-y-4">
-              <div class="flex gap-1"><div class="inline-flex space-x-1  w-[6rem]">
+              <div class="flex gap-1"><div class="inline-flex space-x-1  w-24">
                 {% for i in (1..5) %}<svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg>{% endfor %}
               </div></div>
               <p>"Easy onboarding and they added an integration just for our use case, thanks again! We didn't have insights into our api load before and this helps very much."</p>
@@ -238,7 +261,7 @@ platforms:
               <a class="text-textBrand underline underline-offset-2 block">Neorent case study</a>
             </div>
             <div class="timeline-fade-in flex-1 border-l border-fillBrand-strong px-6 py-2 space-y-4">
-              <div class="flex gap-1"><div class="inline-flex space-x-1  w-[6rem]">
+              <div class="flex gap-1"><div class="inline-flex space-x-1  w-24">
                 {% for i in (1..5) %}<svg class="icon h-5 inline-block"><use xlink:href="/assets/deps/sprite.svg#star"></use></svg>{% endfor %}
               </div></div>
               <p>"We had a major incident, and our tech support could see via APItookit which third-party integration partner was responsible, and could take action without needing the engineering team's help"</p>
@@ -256,7 +279,7 @@ platforms:
       </div>
     </section>
 
-    <div class="max-w-7xl px-3  py-24 w-full text-3xl leading-relaxed flex flex-col items-start justify-begin text-textWeak">
+    <div class="max-w-7xl px-3  py-24 w-full text-xl sm:text-3xl leading-relaxed flex flex-col items-start justify-begin text-textWeak">
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/split-type"></script>
@@ -274,8 +297,8 @@ platforms:
             gsap.from(text.chars, {
                 scrollTrigger: {
                     trigger: char,
-                    start: 'top 80%',
-                    end: 'bottom 20%',
+                    start: 'top 65%',  // Changed from 80% to 65% - text highlights when closer to center
+                    end: 'top 35%',    // Changed from 'bottom 20%' to 'top 35%' - completes near center
                     scrub: 1,
                     markers: false,
                 },
@@ -286,48 +309,58 @@ platforms:
         </script>
     </div>
 
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5 group/uc">
-      <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to understand your entire stack</span></h2>
+    <!-- Tailwind class generation helper -->
+    <div class="hidden group-has-[.uc-tab-0:checked]/uc:flex group-has-[.uc-tab-1:checked]/uc:flex group-has-[.uc-tab-2:checked]/uc:flex group-has-[.uc-tab-3:checked]/uc:flex group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none"></div>
+    <div id="monitoring-section" class="max-w-7xl px-3 w-full text-textWeak space-y-5 group/uc">
+      <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
       <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
 
-      <div class="flex justify-between py-8">
-        <div class="inline-flex justify-center bg-fillWeak border border-strokeWeak rounded-lg
-          *:px-4 *:py-3 *:inline-flex *:items-center *:gap-2
-          [&_svg]:h-5 [&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
+      <div class="flex flex-col md:flex-row md:justify-between py-8 gap-4">
+        <div class="grid grid-cols-2 md:flex bg-fillWeak border border-strokeWeak rounded-lg p-2 md:p-0
+          md:*:px-4 md:*:py-3 *:px-3 *:py-2.5 *:flex *:items-center *:gap-2
+          [&_svg]:h-4 [&_svg]:w-4 md:[&_svg]:h-5 md:[&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
+          *:text-sm md:*:text-base
           ">
          {% for platform in this.frontmatter.platforms %}
-         <label class="has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand"><svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#{{platform.icon}}"></use></svg> {{platform.title}}<input {% if forloop.first %}checked{% endif %} type="radio" class="hidden uc uc-{{platform.id}}" name="usecase" value="{{platform.id}}"/></label>
+         <label class="cursor-pointer has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
+           <input {% if forloop.first %}checked{% endif %} type="radio" class="hidden peer uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/>
+           <svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
+           <span>{{platform.title}}</span>
+         </label>
          {% endfor %}
         </div>
 
-        <div class="inline-flex gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-4 *:rounded-lg *:cursor-pointer select-none">
-          <a class="group-has-[.uc-apis:checked]/uc:!border-strokeDisabled group-has-[.uc-apis:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
-          <a class="group-has-[.uc-database:checked]/uc:!border-strokeDisabled group-has-[.uc-database:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
+        <div class="flex justify-center md:inline-flex gap-2 md:gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-3 md:*:p-4 *:rounded-lg *:cursor-pointer select-none">
+          <a class="group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
+          <a class="group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
         </div>
       </div>
 
       {% for platform in this.frontmatter.platforms %}
       <!-- {{platform.title}} -->
-      <div class="hidden group-has-[.uc-{{platform.id}}:checked]/uc:flex gap-5 flex-col md:flex-row">
+      <div class="hidden group-has-[.uc-tab-{{forloop.index0}}:checked]/uc:flex gap-5 flex-col md:flex-row">
         <div class="sm:w-1/3 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
          {% for c in platform.children %}
           <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
             <input type="radio" name="{{platform.id}}" {% if forloop.first %}checked{% endif %}  class="hidden" value="1"/>
-            <svg class="h-6 w-6 bg-fillBrand-weak !text-iconBrand p-0.5 mt-0.5 rounded-sm flex-shrink-0">
-              <use class="block group-has-[:checked]:hidden" xlink:href="/assets/deps/sprite.svg#plus-square"></use>
-              <use class="hidden group-has-[:checked]:block" xlink:href="/assets/deps/sprite.svg#minus-square"></use>
+            <svg class="h-6 w-6 bg-fillBrand-weak !text-iconBrand p-0.5 mt-0.5 rounded-sm shrink-0">
+              <use class="block group-has-checked:hidden" xlink:href="/assets/deps/sprite.svg#plus-square"></use>
+              <use class="hidden group-has-checked:block" xlink:href="/assets/deps/sprite.svg#minus-square"></use>
             </svg>
             <div class="flex-1 space-y-2">
                 <h5 class="text-xl font-semibold text-textStrong">{{c.title}}</h5>
-                <p class="text-lg hidden group-has-[:checked]:block">{{c.details}}</p>
-                <a class="text-lg hidden group-has-[:checked]:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
+                <p class="text-lg hidden group-has-checked:block">{{c.details}}</p>
+                <a class="text-lg hidden group-has-checked:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
             </div>
           </label>
           {% endfor %}
         </div>
 
         <div class="flex-1">
-            <img src="/assets/img/home/dashboard-012025.svg" class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong"/>
+            <!-- Visual: {{platform.visual}} -->
+            <video autoplay muted loop playsinline class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
+              <source src="{{platform.visual}}" type="video/mp4">
+            </video>
         </div>
       </div>
       <!-- end {{platform.title}} -->
@@ -335,35 +368,43 @@ platforms:
     </div>
 
     <!-- Powered by AI -->
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5">
-      <div class="flex justify-between">
+    <div class="w-full text-textWeak space-y-5">
+      <div class="max-w-7xl mx-auto px-3 flex justify-between">
         <div class="flex-1 space-y-5">
           <h2 class="text-4xl leading-tight font-normal text-textStrong">Put AI to work. <span class="text-textDisabled">seriously</span></h2>
           <p class="hidden max-w-prose text-2xl leading-normal">Generate queries, create visualizations, fix bugs, monitor logs, payloads, and kickstart whole analyses - all from a prompt.</p>
           <a href="/docs/features/" class="text-lg text-textBrand underline underline-offset-2 block ">Learn more</a>
         </div>
-        <div class="flex items-end">
+        <div class="hidden flex items-end">
           <div class="inline-flex gap-4  *:p-4  *:inline-flex *:items-center">
             <a class="border border-strokeDisabled p-4 rounded-lg"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
             <a class="border border-strokeStrong p-4 rounded-lg shadow"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
           </div>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row gap-12 pt-5 [&>div]:space-y-5 [&_h5]:text-textStrong [&_img]:border [&_img]:h-48 [&_img]:w-auto [&_img]:rounded-lg  [&_img]:border-strokeBrand-strong">
-        <div class="">
-          <img src="/assets/img/home/error-analytics.svg" class="bg-fillBrand-weak"/>
-          <h5 class="text-xl font-normal">Weekly reports that contain exactly what needs attention</h5>
-          <p>We tell you want errors popped up, which services or endpoints got slower, which weird log appeared, etc.</p>
-        </div>
-        <div class="">
-          <img src="/assets/img/home/specs.svg" class="bg-fillBrand-weak"/>
-          <h5 class="text-xl font-semibold">Query using natural language</h5>
-          <p>Ask questions about your data, your systems or logs without learning some strange query langauge.</p>
-        </div>
-        <div class="">
-          <img src="/assets/img/home/selfhost.svg" class="bg-fillBrand-weak"/>
-          <h5 class="text-xl font-semibold">Breaking and incremental change detection in APIs (yours or thirdparties)</h5>
-          <p>No need to stare at logs all day. See the errors, anomalies, etc which appeared in the last week.</p>
+      <div class="w-full">
+        <div class="flex flex-col md:flex-row gap-8 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-[4/3] [&_video]:object-contain [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/ask-like-colleague.mp4" type="video/mp4">
+            </video>
+            <h5 class="text-xl">Ask questions like you'd ask a colleague</h5>
+            <p>"Show me all 500 errors from the payments service yesterday" or "Why is the API slower than last week?"—get instant answers without learning query syntax.</p>
+          </div>
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/weekly-reports.mp4" type="video/mp4">
+            </video>
+            <h5 class="text-xl">Weekly reports that tell you what actually broke</h5>
+            <p>Stop hunting through dashboards. Every Monday, get a summary of new errors, performance regressions, and anomalies that appeared—with context on what caused them.</p>
+          </div>
+          <div class="">
+            <video autoplay muted loop playsinline class="bg-fillBrand-weak">
+              <source src="/assets/videos/change-detection.mp4" type="video/mp4">
+            </video>
+            <h5 class="text-xl">Breaking and incremental change detection in APIs (yours or thirdparties)</h5>
+            <p>No need to stare at logs all day. See the errors, anomalies, etc which appeared in the last week.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -387,9 +428,9 @@ platforms:
           {% endfor %}
 
           <div class="flex flex-col *:underline *:underline-offset-2 space-y-1 text-textBrand pl-2.5">
-            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/">Launch playground</a>
-            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank">Book a demo</a>
-            <a href="https://app.apitoolkit.io">Start free 30 day trial</a>
+            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
+            <a href="https://app.apitoolkit.io">Start free trial</a>
+            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
           </div>
 
         </div>
@@ -412,7 +453,13 @@ platforms:
             </div>
           </div>
           <div>
-            <img src="/assets/img/home/explore-012025.svg" class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong"/>
+            {% for feature in this.frontmatter.features %}
+            {% for f in feature.links %}
+            <video autoplay muted loop playsinline class="hidden group-has-[.ft-{{f.id}}:checked]/ft:block timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
+              <source src="{{f.video}}" type="video/mp4">
+            </video>
+            {% endfor %}
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -423,60 +470,90 @@ platforms:
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Flexible deployment options <span class="text-textDisabled">for every company</span></h2>
       <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, APItoolkit operates <br/>within your business and regulatory constraints.</p>
       <div>
-        <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Book a demo</a>
-        <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Start 30 day free trial</a>
+        <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
+        <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
       </div>
-      <div class="text-xl flex flex-col md:flex-row gap-10 pt-5 *:shadow *:flex-1 *:p-6 *:space-y-5 *:rounded-xl *:border [&_svg]:w-5 [&_svg]:h-5 [&_svg]:!text-iconBrand">
-        <div class="border-strokeBrand-weak ">
-          <div class="inline-block p-3 bg-fillBrand-weak rounded-full"><svg><use xlink:href="/assets/deps/sprite.svg#cloud"></use></svg></div>
-          <div class="flex flex-col">
-            <strong class="block font-normal text-sm">APITOOLKIT CLOUD</strong>
-            <h5 class="font-semibold text-2xl text-textStrong">Bring nothing</h5>
+      <div class="grid md:grid-cols-3 gap-8 pt-5">
+        <div class="rounded-xl border border-strokeBrand-weak p-8 flex flex-col">
+          <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#cloud"></use></svg></div>
+          <div class="mt-8 mb-6">
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD</p>
+            <h3 class="text-2xl font-semibold text-textStrong">Bring nothing</h3>
           </div>
-          <ul class="list-disc space-y-2 list-inside">
+
+          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Fully managed cloud service</li>
-            <li><strong>Predictable Usage-based</strong> pricing</li>
+            <li><strong>Predictable usage-based</strong> pricing</li>
             <li>Intelligent incident alerts</li>
             <li>Query your data in english</li>
+            <li><strong>30 days data retention</strong> included</li>
           </ul>
-          <!-- <p>Fully managed cloud service with <strong>usage-based pricing</strong> and automatic optimization.</p> -->
-          <!-- <p>Start for free, then scale seamlessly with <strong>predictable costs</strong> as your needs grow.</p> -->
-          <a href="https://app.apitoolkit.io" class="block underline underline-offset-2 text-textBrand">Start 30 day free trial</a>
+
+          <div class="border-t border-strokeWeak pt-6 space-y-4">
+            <div class="space-y-2">
+              <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+              <p class="text-2xl font-semibold text-textStrong">
+                Free <span class="text-base font-normal text-textWeak">up to 10k events/day</span>
+              </p>
+              <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+            </div>
+            <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+          </div>
         </div>
 
-        <div class="bg-fillBrand-weak border-strokeBrand-weak shadow-fillBrand-weak">
-          <div class="inline-block p-3 bg-fillBrand-weak rounded-full"><svg><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
-          <div class="flex flex-col">
-            <strong class="block font-normal text-sm">APITOOLKIT CLOUD</strong>
-            <h5 class="font-semibold text-2xl text-textStrong">Bring your own s3 storage</h5>
+        <div class="rounded-xl border-2 border-strokeBrand-strong bg-fillBrand-weak p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fillBrand-strong text-textInverse-strong px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
+          <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
+          <div class="mt-8 mb-6">
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD + Your S3</p>
+            <h3 class="text-2xl font-semibold text-textStrong">Bring your own storage</h3>
           </div>
-          <ul class="list-disc space-y-2 list-inside text-lg">
+
+          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Own and control all your data</li>
             <li>Save <strong>all your data</strong> to any S3-compatible bucket</li>
             <li><strong>Unlimited data retention</strong> period</li>
             <li>Query years of data via APItoolkit</li>
             <li><strong>No extra cost</strong> for data retention</li>
           </ul>
-          <!-- <p>Fully managed cloud service but <strong>all your data</strong> is stored in your own s3 compatible storage. </p> -->
-          <!-- <p>Keep your data for as long as you want, and freely <strong>query and visualize data from months or years ago</strong>. At no extra cost.</p> -->
-          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block underline underline-offset-2 text-textBrand">Book a demo</a>
+
+          <div class="border-t border-strokeBrand-weak pt-6 space-y-4">
+            <div class="space-y-2">
+              <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+              <p class="text-2xl font-semibold text-textStrong">
+                $199<span class="text-base font-normal text-textWeak">/month starting</span>
+              </p>
+              <p class="text-base text-textWeak">Includes up to 100M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+            </div>
+            <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+          </div>
         </div>
 
-        <div class="bg-fillWarning-weak border-strokeWarning-weak shadow-fillWarning-weak">
-          <div class="inline-block p-3 bg-fillBrand-weak rounded-full"><svg><use xlink:href="/assets/deps/sprite.svg#server"></use></svg></div>
-          <div class="flex flex-col">
-            <strong class="block font-normal text-sm">ON PREM</strong>
-            <h5 class="font-semibold text-2xl text-textStrong">Bring your own servers</h5>
+        <div class="rounded-xl border border-strokeWarning-weak bg-fillWarning-weak p-8 flex flex-col">
+          <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#server"></use></svg></div>
+          <div class="mt-8 mb-6">
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">SELF-HOSTED</p>
+            <h3 class="text-2xl font-semibold text-textStrong">Bring your own servers</h3>
           </div>
-          <ul class="list-disc space-y-2 list-inside">
+
+          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Deploy to your own servers</li>
-            <li>Managed by the APItoolkit team</li>
+            <li><strong>Open source</strong> community edition available</li>
+            <li>Enterprise edition with premium features</li>
             <li>Ideal for <strong>regulatory compliance</strong></li>
-            <li>Predictable custom annual pricing</li>
+            <li>Complete data control</li>
           </ul>
-          <!-- <p>Deploy in your own servers while APItoolkit handles operations.</p> -->
-          <!-- <p>Perfect for organizations seeking <strong>complete data control</strong> with <strong>predictable annual pricing</strong>.</p> -->
-          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block underline underline-offset-2 text-textBrand">Book a demo</a>
+
+          <div class="border-t border-strokeWeak pt-6 space-y-4">
+            <div class="space-y-2">
+              <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
+              <p class="text-2xl font-semibold text-textStrong">
+                Free <span class="text-base font-normal text-textWeak">community edition</span>
+              </p>
+              <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">Custom pricing</strong></p>
+            </div>
+            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block text-center py-3 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors">Talk to an engineer</a>
+          </div>
         </div>
 
       </div>
@@ -489,39 +566,39 @@ platforms:
         <a class="block text-textBrand underline underline-offset-2">View all integrations.</a>
       </div>
       <div class="space-y-5 pt-5 mask-edges">
-        <div class="flex w-full overflow-x-hidden gap-5  max-w-[100vw]
+        <div class="flex w-full overflow-x-hidden gap-5  max-w-screen
           [&_img]:w-full
           [&>div>*]:inline-block [&>div>*]:w-24 [&>div>*]:p-3 [&>div>*]:rounded-xl
           [&>div>*]:border [&>div>*]:border-strokeWeak">
           {% assign icons = "postgresql.png,cloudflare.png,mongodb.png,azure-1.png,mysql.png,nginx.png,redis.png,elasticsearch.png,google-cloud.png,apache-kafka.png,kubernetes.png,prometheus-app.png,haproxy-icon.svg,docker.png" | split: "," %}
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5">
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5">
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5" aria-hidden="true" >
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5" aria-hidden="true" >
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
         </div>
-        <div class="flex w-full overflow-x-hidden gap-5  max-w-[100vw]
+        <div class="flex w-full overflow-x-hidden gap-5  max-w-screen
           [&_img]:w-full
           [&>div>*]:inline-block [&>div>*]:w-24 [&>div>*]:p-3 [&>div>*]:rounded-xl
           [&>div>*]:border [&>div>*]:border-strokeWeak">
           {% assign icons = "statsd-receiver.png,solacereceiver.jpg,zipkin-logo.png,snowflake.png,skywalking.jpg,riak-logo.png,huawei-icon.svg,apache_zookeeper-icon.svg,rabbitmq-icon.svg,podmanio-icon.svg,apache_couchdb-icon.svg,influxdata-icon.svg,jaegertracingio-icon.svg,oracle-icon.svg,memcached-icon.svg,signalfx-icon.svg" | split: "," %}
-          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse  whitespace-nowrap flex w-[max-content] shrink-0 gap-5">
+          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse  whitespace-nowrap flex w-max shrink-0 gap-5">
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
-          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse whitespace-nowrap flex w-[max-content] shrink-0 gap-5" aria-hidden="true" >
+          <div class="animate-[scroll-x_60s_linear_infinite] animation-reverse whitespace-nowrap flex w-max shrink-0 gap-5" aria-hidden="true" >
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
         </div>
-        <div class=" flex w-full overflow-x-hidden gap-5  max-w-[100vw]
+        <div class=" flex w-full overflow-x-hidden gap-5  max-w-screen
           [&_img]:w-full
           [&>div>*]:inline-block [&>div>*]:w-24 [&>div>*]:p-3 [&>div>*]:rounded-xl
           [&>div>*]:border [&>div>*]:border-strokeWeak">
           {% assign icons = "splunk-icon.svg,alibabacloud-icon.svg,apache_cassandra-icon.svg,logicmonitor-icon.svg,sematext-icon.svg,sentryio-icon.svg,tencent-logo.png,pulsar-logo.png,clickhouse-logo.png,coralognix.png,statsd-receiver.png,solacereceiver.jpg,zipkin-logo.png" | split: "," %}
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5">
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5">
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
-          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-[max-content] shrink-0 gap-5" aria-hidden="true" >
+          <div class="animate-[scroll-x_60s_linear_infinite] whitespace-nowrap flex w-max shrink-0 gap-5" aria-hidden="true" >
             {% for ic in icons %}<div><img src="/assets/img/opentelemetry-contrib-logos/{{ic}}"/></div>{% endfor %}
           </div>
         </div>
@@ -541,7 +618,7 @@ platforms:
       </div>
       <div class="grid grid-cols-6 sm:grid-cols-10 gap-2 sm:gap-6 [&>div]:border [&>div]:rounded-lg  [&>div]:flex [&>div]:flex-col
             [&>div]:justify-between  [&>div]:items-start [&_.logo1]:my-2  [&_.logo1]:brightness-0 [&_.logo1]:dark:invert [&_.logo1]:opacity-50 [&_.logo1]:h-6
-            [&_strong]:text-5xl [&_small]:text-xl  [&_.logo2]:!my-0 [&_.quote]:text-2xl
+            [&_strong]:text-5xl [&_small]:text-xl  [&_.logo2]:my-0! [&_.quote]:text-2xl
             [&_.col-span-6]:gap-8 [&_.quote]:leading-normal
             ">
         {% for t in this.frontmatter.testimonials %}
@@ -569,4 +646,212 @@ platforms:
       </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const monitoringSection = document.getElementById('monitoring-section');
+  const tabs = document.querySelectorAll('input[name="usecase"]');
+  let sectionLocked = false;
+  let currentTab = 0;
+  let scrollAccumulator = 0;
+  let lastScrollTime = Date.now();
+  let edgeReleaseTimeout;
+
+  // Get current active tab
+  function getCurrentTab() {
+    for (let i = 0; i < tabs.length; i++) {
+      if (tabs[i].checked) return i;
+    }
+    return 0;
+  }
+
+  // Change to specific tab
+  function changeToTab(index) {
+    if (index >= 0 && index < tabs.length) {
+      tabs[index].checked = true;
+      currentTab = index;
+      scrollAccumulator = 0; // Reset accumulator after tab change
+    }
+  }
+
+  // Handle scroll events
+  function handleScroll(e) {
+    if (!sectionLocked) return;
+
+    const delta = e.deltaY || e.detail || e.wheelDelta;
+    const now = Date.now();
+
+    // Check if at edges
+    if ((delta > 0 && currentTab === tabs.length - 1) || (delta < 0 && currentTab === 0)) {
+      // At edge - accumulate scroll for release
+      if (!edgeReleaseTimeout) {
+        scrollAccumulator = 0;
+      }
+
+      scrollAccumulator += Math.abs(delta);
+
+      // Need significant scroll at edge to release (same threshold)
+      if (scrollAccumulator > 150) {
+        // Release immediately
+        sectionLocked = false;
+        scrollAccumulator = 0;
+        window.removeEventListener('wheel', handleScroll, { passive: false });
+        window.removeEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        return;
+      }
+
+      // Still prevent scroll until threshold met
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Set timeout to reset accumulator if user stops
+      clearTimeout(edgeReleaseTimeout);
+      edgeReleaseTimeout = setTimeout(() => {
+        scrollAccumulator = 0;
+      }, 500);
+
+      return;
+    }
+
+    // Not at edge - always prevent scroll
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Clear edge timeout if scrolling away from edge
+    clearTimeout(edgeReleaseTimeout);
+    edgeReleaseTimeout = null;
+
+    // Reset accumulator if too much time passed
+    if (now - lastScrollTime > 500) {
+      scrollAccumulator = 0;
+    }
+    lastScrollTime = now;
+
+    // Accumulate scroll
+    scrollAccumulator += Math.abs(delta);
+
+    // Need significant scroll to change tabs (threshold)
+    if (scrollAccumulator > 150) {
+      if (delta > 0 && currentTab < tabs.length - 1) {
+        // Scroll down - next tab
+        changeToTab(currentTab + 1);
+      } else if (delta < 0 && currentTab > 0) {
+        // Scroll up - previous tab
+        changeToTab(currentTab - 1);
+      }
+    }
+  }
+
+  // Get navbar height
+  function getNavbarHeight() {
+    const navbar = document.querySelector('nav') || document.querySelector('header');
+    return navbar ? navbar.offsetHeight : 80; // fallback to 80px if not found
+  }
+
+  // Check if section is fully in viewport (accounting for navbar)
+  function isSectionFullyVisible() {
+    const rect = monitoringSection.getBoundingClientRect();
+    const navHeight = getNavbarHeight();
+    return rect.top >= navHeight && rect.bottom <= window.innerHeight;
+  }
+
+  // Check if section is almost fully visible
+  function isSectionAlmostVisible() {
+    const rect = monitoringSection.getBoundingClientRect();
+    const navHeight = getNavbarHeight();
+    const threshold = 50; // pixels of tolerance
+    return rect.top >= navHeight - threshold && rect.bottom <= window.innerHeight + threshold;
+  }
+
+  let snapTimeout;
+  let hasSnapped = false;
+
+  // Gentle snap when almost there
+  function snapIfNeeded() {
+    if (!sectionLocked && !hasSnapped && isSectionAlmostVisible() && !isSectionFullyVisible()) {
+      const rect = monitoringSection.getBoundingClientRect();
+      const navHeight = getNavbarHeight();
+
+      // Only snap if we're really close (within 50px)
+      if (Math.abs(rect.top - navHeight) < 50 || Math.abs(rect.bottom - window.innerHeight) < 50) {
+        hasSnapped = true;
+
+        // Scroll to position that accounts for navbar
+        const scrollTop = window.pageYOffset + rect.top - navHeight - 10; // 10px padding
+        window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+
+        // Activate hijacking immediately
+        sectionLocked = true;
+        currentTab = getCurrentTab();
+        window.addEventListener('wheel', handleScroll, { passive: false });
+        window.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+      }
+    }
+  }
+
+  // Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Check for snap opportunity
+        snapIfNeeded();
+
+        // Also check if already fully visible
+        if (isSectionFullyVisible() && !sectionLocked) {
+          sectionLocked = true;
+          currentTab = getCurrentTab();
+          window.addEventListener('wheel', handleScroll, { passive: false });
+          window.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        }
+      } else {
+        // Reset when section leaves view
+        sectionLocked = false;
+        hasSnapped = false;
+        scrollAccumulator = 0;
+        clearTimeout(edgeReleaseTimeout);
+        clearTimeout(snapTimeout);
+        edgeReleaseTimeout = null;
+
+        // Remove scroll listeners
+        window.removeEventListener('wheel', handleScroll, { passive: false });
+        window.removeEventListener('DOMMouseScroll', handleScroll, { passive: false });
+      }
+    });
+  }, {
+    threshold: [0, 0.1, 0.5, 0.8, 0.9, 1.0],
+    rootMargin: '0px'
+  });
+
+  observer.observe(monitoringSection);
+
+  // Update current tab on manual click
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('change', () => {
+      if (tab.checked) {
+        currentTab = index;
+        scrollAccumulator = 0;
+      }
+    });
+  });
+
+  // Global scroll listener to catch fast scrolling
+  let scrollCheckTimeout;
+  window.addEventListener('scroll', () => {
+    if (!sectionLocked) {
+      clearTimeout(scrollCheckTimeout);
+      scrollCheckTimeout = setTimeout(() => {
+        // Check if section is now fully visible after scroll
+        if (isSectionFullyVisible()) {
+          sectionLocked = true;
+          currentTab = getCurrentTab();
+          window.addEventListener('wheel', handleScroll, { passive: false });
+          window.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        } else if (isSectionAlmostVisible() && !hasSnapped) {
+          snapIfNeeded();
+        }
+      }, 50); // Quick check after scroll stops
+    }
+  }, { passive: true });
+});
+</script>
 ```

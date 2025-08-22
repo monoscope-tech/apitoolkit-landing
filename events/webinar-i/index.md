@@ -32,7 +32,7 @@ In this webinar, Anthony Alaribe, Founder of APItoolkit, will delve into the com
 Don’t miss this opportunity to transform your backend operations and solve the challenges you face daily. Register Now to secure your spot and take the first step towards a more reliable and efficient backend infrastructure.
 
 ```=html
-        <a href="#" class="w-full btn btn-secondary bg-blue-600 text-white hover:bg-white hover:text-black" disabled>
+        <a href="#" class="w-full btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors bg-blue-600 text-white hover:bg-white hover:text-black" disabled>
             Register
             <i class="fa-regular fa-arrow-right mr-4"></i>
         </a>

@@ -46,7 +46,7 @@ pages:
             There are many monitoring and observability platforms in the market today, each with its unique offerings. Here’s what APItoolkit does better and offers differently compared to a few of the others.
          <p>
          <div class="mt-[30px] flex items-center gap-4 text-center">
-            <a href="https://app.apitoolkit.io" class="btn btn-secondary sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
+            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
             <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" class="btn btn-outline btn-neutral sm:w-56">BOOK A CALL <span class="text-xs">- for free</span></a>
          </div>
       </div>

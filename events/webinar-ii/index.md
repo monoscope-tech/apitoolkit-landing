@@ -24,7 +24,7 @@ Are you an engineer grappling with constant downtime, sluggish backend performan
 **Duration**: 1 Hour.
 
 ```=html
-    <a href="https://bit.ly/apitoolkit-webinarii" target="_blank" rel="noopener noreferrer" class="w-full btn btn-secondary bg-blue-600 text-white hover:bg-white hover:text-black">
+    <a href="https://bit.ly/apitoolkit-webinarii" target="_blank" rel="noopener noreferrer" class="w-full btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors bg-blue-600 text-white hover:bg-white hover:text-black">
         Watch Recording
         <i class="fa-regular fa-arrow-right mr-4"></i>
     </a>
@@ -79,7 +79,7 @@ Are you an engineer grappling with constant downtime, sluggish backend performan
 Don’t miss this opportunity to transform your backend operations and solve the challenges you face daily. Register now to secure your spot and take the first step towards a more reliable and efficient backend infrastructure.
 
 ```=html
-    <a href="https://bit.ly/apitoolkit-webinarii" target="_blank" rel="noopener noreferrer" class="w-full btn btn-secondary bg-blue-600 text-white hover:bg-white hover:text-black">
+    <a href="https://bit.ly/apitoolkit-webinarii" target="_blank" rel="noopener noreferrer" class="w-full btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors bg-blue-600 text-white hover:bg-white hover:text-black">
         Watch Recording
         <i class="fa-regular fa-arrow-right mr-4"></i>
     </a>

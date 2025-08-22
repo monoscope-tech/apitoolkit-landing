@@ -2,18 +2,18 @@
 {% render "default/components/nav", this:this, config:config %}
 
 <main class="text-center">
-  <section class="width-control mx-auto text-left w-full">
+  <section class="max-w-7xl px-3 mx-auto text-left">
     <div class="pt-16 pb-20 lg:pt-24 lg:pb-28">
       <div class="relative mx-auto divide-y-2 divide-gray-200 dark:divide-gray-700">
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-6xl">
-            The APItoolkit Blog
-          </h2>
-          <h5 class="pt-2 pb-5">Sharing knowledge about building and maintaining impeccable APIs.</h5>
+          <h1 class="text-4xl font-normal leading-tight text-textStrong sm:text-5xl lg:text-6xl">
+            The monoscope <span class="text-textDisabled">blog</span>
+          </h1>
+          <p class="pt-4 pb-5 text-2xl leading-normal text-textWeak">Sharing knowledge about building and maintaining impeccable systems.</p>
         </div>
         <div>
           <div class="mt-6 md:gap-4">
-            <p class="pl-2 sm:pl-3 pb-3 sm:text-lg text-base-content">
+            <p class="pl-2 sm:pl-3 pb-3 text-lg text-textWeak">
             Get articles and updates in your inbox on what we learn while building APItoolkit.
             </p>
             <div class="15d365ef1d">
@@ -23,37 +23,263 @@
         </div>
         <section class="mt-6 pt-10 ">
           {% if this.frontmatter.title != "Blog" and this.frontmatter.title != "" %}
-          <h3 class="font-black pb-3"> ❯ &nbsp; {{ this.frontmatter.title }}</h3>
+          <h2 class="text-2xl font-normal pb-3 text-textStrong"> ❯ &nbsp; {{ this.frontmatter.title }}</h2>
           {% endif %}
 
-          <div class="grid gap-1 sm:gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           {% assign blog_posts = file_list | where_glob: 'file_path', "./blog/*/index.md" | sort: "date" %}
-          {% for post in blog_posts %}
-            <div
-              class="overflow-hidden flex flex-col content-between justify-between border border-stone-200 dark:border-gray-700 p-1 sm:p-2 md:p-6 rounded-xl bg-base-100 hover:drop-shadow-2xl shadow-slate-200 transition duration-300 ease-in-out">
-              <div>
-
-                <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-[7/3] rounded-md object-cover border border-slate-100 dark:border-gray-700 mt-2 block" />
-
-                <p class="mt-4">{{ post.frontmatter.date | date: "%B %d, %Y"}}</p>
-
-                <a href="{{post.permalink}}" class="">
-                  <h6 class="text-lg sm:text-xl font-bold text-base-content pt-3">{{post.frontmatter.title }}</h6>
-                  <p class="mt-3 leading-relaxed">{{post.markdown_body | markdownify | strip_html | truncatewords: 30, "..."}}</p>
+          
+          <!-- Category menu -->
+          <div class="mb-8">
+            <!-- Mobile dropdown -->
+            <div class="md:hidden">
+              <div class="relative">
+                <button id="category-dropdown-btn" class="w-full bg-fillWeak border border-strokeWeak rounded-lg px-4 py-3 flex items-center justify-between hover:bg-fillBrand-weak transition-colors">
+                  <span id="selected-category">{% if this.frontmatter.title == 'Blog' or this.frontmatter.title == '' %}All Posts{% else %}{{ this.frontmatter.title }}{% endif %}</span>
+                  <svg class="w-5 h-5 ml-2 transition-transform" id="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div id="category-dropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-bgRaised border border-strokeWeak rounded-lg shadow-lg z-10 overflow-hidden">
+                  <a href="/blog/" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'Blog' or this.frontmatter.title == '' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    All Posts
+                  </a>
+                  <a href="/blog/categories/engineering" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'Engineering' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    Engineering
+                  </a>
+                  <a href="/blog/categories/api-design" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'API Design' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    API Design
+                  </a>
+                  <a href="/blog/categories/monitoring" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'Monitoring' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    Monitoring
+                  </a>
+                  <a href="/blog/categories/tutorials" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'Tutorials' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    Tutorials
+                  </a>
+                  <a href="/blog/categories/product-updates" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'Product Updates' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    Product Updates
+                  </a>
+                  <a href="/blog/categories/case-studies" class="block px-4 py-3 hover:bg-fillBrand-weak {% if this.frontmatter.title == 'Case Studies' %}bg-bgOverlay !text-textBrand{% endif %}">
+                    Case Studies
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Desktop inline menu -->
+            <div class="hidden md:block">
+              <div class="inline-flex justify-center bg-fillWeak border border-strokeWeak rounded-lg
+                *:px-4 *:py-3 *:inline-flex *:items-center *:gap-2">
+                <a href="/blog/" class="rounded-lg {% if this.frontmatter.title == 'Blog' or this.frontmatter.title == '' %}border border-strokeBrand-strong bg-bgOverlay shadow !text-textBrand{% else %}hover:bg-fillBrand-weak{% endif %}">
+                  All Posts
                 </a>
-
-                <a href="{{post.permalink}}"
-                  class="mt-2 inline-block text-sm font-medium text-blue-900 dark:text-info hover:text-indigo-900 dark:hover:text-info ">
+                <a href="/blog/categories/engineering" class="rounded-lg hover:bg-fillBrand-weak">
+                  Engineering
+                </a>
+                <a href="/blog/categories/api-design" class="rounded-lg hover:bg-fillBrand-weak">
+                  API Design
+                </a>
+                <a href="/blog/categories/monitoring" class="rounded-lg hover:bg-fillBrand-weak">
+                  Monitoring
+                </a>
+                <a href="/blog/categories/tutorials" class="rounded-lg hover:bg-fillBrand-weak">
+                  Tutorials
+                </a>
+                <a href="/blog/categories/product-updates" class="rounded-lg hover:bg-fillBrand-weak">
+                  Product Updates
+                </a>
+                <a href="/blog/categories/case-studies" class="rounded-lg hover:bg-fillBrand-weak">
+                  Case Studies
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            // Category dropdown functionality
+            document.addEventListener('DOMContentLoaded', function() {
+              const dropdownBtn = document.getElementById('category-dropdown-btn');
+              const dropdown = document.getElementById('category-dropdown');
+              const arrow = document.getElementById('dropdown-arrow');
+              
+              if (dropdownBtn && dropdown) {
+                dropdownBtn.addEventListener('click', function(e) {
+                  e.stopPropagation();
+                  dropdown.classList.toggle('hidden');
+                  arrow.classList.toggle('rotate-180');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function() {
+                  dropdown.classList.add('hidden');
+                  arrow.classList.remove('rotate-180');
+                });
+                
+                // Prevent dropdown from closing when clicking inside
+                dropdown.addEventListener('click', function(e) {
+                  e.stopPropagation();
+                });
+              }
+            });
+          </script>
+          
+          <!-- First 3 posts with special layout -->
+          {% if blog_posts.size > 0 %}
+          <div class="bg-fillWeak/30 rounded-xl p-4 md:p-6 mb-12">
+            <div class="grid gap-x-6 gap-y-12 grid-cols-1 lg:grid-cols-2">
+            <!-- First post takes half the row -->
+            {% assign first_post = blog_posts[0] %}
+            <div class="overflow-hidden flex flex-col content-between justify-between">
+              <div>
+                <img data-src="{% if first_post.frontmatter.featured_image %}{{first_post.permalink}}{{first_post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-strokeWeak block" />
+                <a href="{{first_post.permalink}}" class="">
+                  <h3 class="text-lg sm:text-xl font-normal text-textStrong pt-4">{{first_post.frontmatter.title }}</h3>
+                  <p class="mt-3 text-textWeak leading-relaxed">{{first_post.markdown_body | markdownify | strip_html | truncatewords: 16, "..."}}</p>
+                </a>
+                <a href="{{first_post.permalink}}"
+                  class="mt-2 inline-block text-sm font-medium text-textBrand hover:underline hover:underline-offset-2">
                   Read ❯
                 </a>
+                {% if first_post.frontmatter.author %}
+                  {% assign author = config.raw.authors[first_post.frontmatter.author] %}
+                  <div class="pt-6 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                      <img class="w-5 h-5 rounded-full" src='{{author.picture}}' />
+                      <span class="text-xs font-normal text-textWeak">By 
+                          <span class="underline">{{author.name}}</span>
+                      </span>
+                    </div>
+                    <span class="text-xs text-textDisabled">{{ first_post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                  </div>
+                {% else %}
+                  <div class="pt-6">
+                    <span class="text-xs text-textDisabled">{{ first_post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+            
+            <!-- Posts 2 and 3 stacked in the other half -->
+            <div class="flex flex-col gap-y-8">
+              {% if blog_posts.size > 1 %}
+                {% assign second_post = blog_posts[1] %}
+                <div class="overflow-hidden flex gap-4">
+                  <img data-src="{% if second_post.frontmatter.featured_image %}{{second_post.permalink}}{{second_post.frontmatter.featured_image}}{% endif %}" class="lazy w-1/3 h-32 rounded-md object-cover border border-strokeWeak flex-shrink-0" />
+                  <div class="flex-1 flex flex-col">
+                    <a href="{{second_post.permalink}}" class="">
+                      <h3 class="text-base font-normal text-textStrong">{{second_post.frontmatter.title }}</h3>
+                      <p class="mt-2 text-sm text-textWeak leading-relaxed line-clamp-2">{{second_post.markdown_body | markdownify | strip_html | truncatewords: 12, "..."}}</p>
+                    </a>
+                    <div class="mt-auto pt-3">
+                      <a href="{{second_post.permalink}}"
+                        class="text-xs font-medium text-textBrand hover:underline hover:underline-offset-2">
+                        Read ❯
+                      </a>
+                      {% if second_post.frontmatter.author %}
+                        {% assign author = config.raw.authors[second_post.frontmatter.author] %}
+                        <div class="mt-2 flex items-center justify-between">
+                          <div class="flex items-center space-x-2">
+                            <img class="w-4 h-4 rounded-full" src='{{author.picture}}' />
+                            <span class="text-xs font-normal text-textWeak">By 
+                                <span class="underline">{{author.name}}</span>
+                            </span>
+                          </div>
+                          <span class="text-xs text-textDisabled">{{ second_post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                        </div>
+                      {% else %}
+                        <div class="mt-2">
+                          <span class="text-xs text-textDisabled">{{ second_post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              
+              {% if blog_posts.size > 2 %}
+                {% assign third_post = blog_posts[2] %}
+                <div class="overflow-hidden flex gap-4">
+                  <img data-src="{% if third_post.frontmatter.featured_image %}{{third_post.permalink}}{{third_post.frontmatter.featured_image}}{% endif %}" class="lazy w-1/3 h-32 rounded-md object-cover border border-strokeWeak flex-shrink-0" />
+                  <div class="flex-1 flex flex-col">
+                    <a href="{{third_post.permalink}}" class="">
+                      <h3 class="text-base font-normal text-textStrong">{{third_post.frontmatter.title }}</h3>
+                      <p class="mt-2 text-sm text-textWeak leading-relaxed line-clamp-2">{{third_post.markdown_body | markdownify | strip_html | truncatewords: 12, "..."}}</p>
+                    </a>
+                    <div class="mt-auto pt-3">
+                      <a href="{{third_post.permalink}}"
+                        class="text-xs font-medium text-textBrand hover:underline hover:underline-offset-2">
+                        Read ❯
+                      </a>
+                      {% if third_post.frontmatter.author %}
+                        {% assign author = config.raw.authors[third_post.frontmatter.author] %}
+                        <div class="mt-2 flex items-center justify-between">
+                          <div class="flex items-center space-x-2">
+                            <img class="w-4 h-4 rounded-full" src='{{author.picture}}' />
+                            <span class="text-xs font-normal text-textWeak">By 
+                                <span class="underline">{{author.name}}</span>
+                            </span>
+                          </div>
+                          <span class="text-xs text-textDisabled">{{ third_post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                        </div>
+                      {% else %}
+                        <div class="mt-2">
+                          <span class="text-xs text-textDisabled">{{ third_post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+            </div>
+          </div>
+          {% endif %}
+          
+          <!-- Remaining posts in regular grid -->
+          <div class="grid gap-x-6 gap-y-12 grid-cols-1 md:grid-cols-3 lg:grid-cols-12">
+          {% for post in blog_posts offset:3 %}
+            {% assign adjusted_index = forloop.index | plus: 3 %}
+            <div
+              class="overflow-hidden flex flex-col content-between justify-between {% if adjusted_index <= 15 %}md:col-span-3 lg:col-span-4{% else %}md:col-span-3 lg:col-span-3{% endif %}">
+              <div>
 
-                {% if post.frontmatter.author %}
-                  {% assign author = config.raw.authors[post.frontmatter.author] %}
-                  <div class="pt-6 space-x-2 ">
-                    <img class="w-5 h-5 rounded-full inline-block" src='{{author.picture}}' />
-                    <span class="text-xs font-normal inline-block text-stone-700 dark:text-info">By 
-                        <span class="underline">{{author.name}}</span>
-                    <span>
+                {% if adjusted_index <= 15 %}
+                  <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-strokeWeak block" />
+                {% endif %}
+
+                <a href="{{post.permalink}}" class="">
+                  <h3 class="{% if adjusted_index <= 15 %}text-lg sm:text-xl{% else %}text-base{% endif %} font-normal text-textStrong {% if adjusted_index <= 15 %}pt-4{% else %}pt-2{% endif %}">{{post.frontmatter.title }}</h3>
+                  {% if adjusted_index <= 9 %}
+                    <p class="mt-3 text-textWeak leading-relaxed">{{post.markdown_body | markdownify | strip_html | truncatewords: 16, "..."}}</p>
+                  {% endif %}
+                </a>
+
+                {% if adjusted_index <= 9 %}
+                  <a href="{{post.permalink}}"
+                    class="mt-2 inline-block text-sm font-medium text-textBrand hover:underline hover:underline-offset-2">
+                    Read ❯
+                  </a>
+                {% endif %}
+
+                {% if adjusted_index <= 15 %}
+                  {% if post.frontmatter.author %}
+                    {% assign author = config.raw.authors[post.frontmatter.author] %}
+                    <div class="pt-6 flex items-center justify-between">
+                      <div class="flex items-center space-x-2">
+                        <img class="w-5 h-5 rounded-full" src='{{author.picture}}' />
+                        <span class="text-xs font-normal text-textWeak">By 
+                            <span class="underline">{{author.name}}</span>
+                        </span>
+                      </div>
+                      <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                    </div>
+                  {% else %}
+                    <div class="pt-6">
+                      <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                    </div>
+                  {% endif %}
+                {% else %}
+                  <div class="pt-6">
+                    <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
                   </div>
                 {% endif %}
 
