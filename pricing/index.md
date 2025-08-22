@@ -28,260 +28,254 @@ faqs:
     <div class="max-w-7xl  mx-auto px-2">
         <section class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-12 md:py-24">
 
+            <!-- MONOSCOPE CLOUD -->
             <div
                 class="group rounded-2xl border p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md">
                 <div class="flex flex-col gap-3 pb-1">
                 <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-xl md:text-[25px]">Free Plan</h3>
+                 <h3 class="font-medium text-xl md:text-[25px]">MONOSCOPE Cloud</h3>
                 </div>
                     <div>
                         <div class="flex flex-col items-start gap-8px">
-                            <span class="text-sm font-bold text-gray-400">Starts at ...</span>
+                            <span class="text-sm font-bold text-gray-400">FULLY MANAGED</span>
                             <div class="">
-                               <span class="font-bold text-4xl md:text-6xl" >$0</span>
-                               <span class="">/10k events per day</span>
+                               <span class="font-bold text-4xl md:text-6xl" >Free</span>
+                               <span class="text-base">/10k events per day</span>
                                <br>
+                               <small class="text-sm">Then <strong>$34/month</strong> + <strong>$2 per 1M events</strong></small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-gray-700 mt-auto">
-                    <p class="font-bold mb-3">For hobby projects</p>
+                    <p class="font-bold mb-3">Bring nothing</p>
                     <ul class="flex flex-col gap-3 text-sm font-medium">
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
-                            </div>One team member
+                            </div>Fully managed cloud service
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
-                            </div>10k events per day
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Opentelemetry Logs and Traces
+                            </div>Predictable usage-based pricing
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            API swagger/OpenAPI hosting
+                            Intelligent incident alerts
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            API metrics custom monitors
+                            Query your data in english
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Last 30 days data retention
+                            30 days data retention included
+                        </li>
+                        <li class="flex flex-row gap-2">
+                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
+                                ✓
+                            </div>
+                            Unlimited team members
                         </li>
                     </ul>
                 </div>
                 <a  href="https://app.apitoolkit.io/p/new"
                     class="mt-auto rounded-xl text-gray-700 flex flex-row justify-center px-4 py-[7px] border">
-                    Get Started
+                    Start free trial
                 </a>
             </div>
 
 
-           <!-- GRADUATED PLAN -->
+           <!-- CLOUD + S3 PLAN -->
             <div
-                class="group rounded-2xl border border-[#0068ff] p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md">
+                class="group rounded-2xl border-2 border-[#0068ff] bg-blue-50 p-4 md:p-6 flex duration-300 flex-col text-gray-700 justify-start gap-4 md:gap-6 text-left shadow-md relative">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0068ff] text-white px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
                 <div class="flex flex-col gap-3 pb-1">
                 <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-[25px]">Pay as you use</h3>
+                 <h3 class="font-medium text-[25px]">MONOSCOPE Cloud + Your S3</h3>
                 </div>
                     <div>
                         <div class="flex flex-col items-start gap-8px">
-                            <span class="text-sm font-bold text-gray-400" id="starts_at">Starts at ...</span>
+                            <span class="text-sm font-bold text-gray-400" id="starts_at">BRING YOUR OWN STORAGE</span>
                             <div class="">
-                               <span class="font-bold text-6xl" id="price">$34</span>
-                               <span class="" id="num_requests">/20m events per month</span>
+                               <span class="font-bold text-6xl" id="price">$200</span>
+                               <span class="" id="num_requests">/month starting</span>
                                <br>
-                               <small class="text-sm">then $2 per 1M events (logs, spans, metric samples, etc)</small>
+                               <small class="text-sm">+ $2 per 1M events (logs, spans, metric samples, etc)</small>
                                <span id="save_container" class="text-green-600 font-bold"></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                  <input type="range" min="20000000" max="495000000" step="10000000" value="20000000" class="range range-sm [--range-shdw:#0068ff]" style="--range-shdw:#0068ff" id="price_range">
+                  <input type="range" min="20000000" max="495000000" step="10000000" value="100000000" class="range range-sm [--range-shdw:#0068ff]" style="--range-shdw:#0068ff" id="price_range">
                 </div>
                 <div class="text-gray-700">
-                    <p class="font-bold mb-3">For Growing Companies</p>
+                    <p class="font-bold mb-3">Bring your own storage</p>
                     <ul class="flex flex-col gap-3 text-sm font-medium">
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
-                            </div>Unlimited team members
+                            </div>Own and control all your data
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Opentelemetry Logs and Traces
+                            Save all your data to any S3-compatible bucket
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            API testing pipelines
+                            Unlimited data retention period
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            API swagger/OpenAPI hosting
+                            Query years of data via APItoolkit
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            API metrics custom monitors
+                            No extra cost for data retention
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            API live traffic AI-based validations
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Last 30 days data retention
+                            All APItoolkit Cloud features included
                         </li>
                     </ul>
                 </div>
                 <a  href="https://app.apitoolkit.io/p/new"
-                    class="mt-auto rounded-xl text-gray-700 flex flex-row justify-center px-4 py-[7px] border">
-                    Get Started
+                    class="mt-auto rounded-xl bg-[#0068ff] text-white flex flex-row justify-center px-4 py-[7px]">
+                    Start free trial
                 </a>
             </div>
-            <!-- Critical Systems PLAN -->
+            <!-- SELF-HOSTED PLAN -->
             <div
-                class="group rounded-2xl border p-6 flex duration-300 flex-col text-gray-700 justify-start gap-6 text-lef shadow-md">
+                class="group rounded-2xl border border-orange-200 bg-orange-50 p-6 flex duration-300 flex-col text-gray-700 justify-start gap-6 text-lef shadow-md">
                 <div class="flex flex-col gap-3 pb-1">
                 <div class="flex justify-between items-center">
-                 <h3 class="font-medium text-[25px]">Critical Systems</h3>
+                 <h3 class="font-medium text-[25px]">Self-Hosted</h3>
                 </div>
                     <div>
                         <div class="flex flex-col items-start gap-8px">
-                            <span class="text-sm font-bold text-gray-400" id="starts_at">Starts at ...</span>
+                            <span class="text-sm font-bold text-gray-400">BRING YOUR OWN SERVERS</span>
                             <div class="">
-                               <span class="font-bold text-6xl" id="price">$199</span>
-                               <span class="" id="num_requests"> per month</span>
+                               <span class="font-bold text-6xl">Free</span>
+                               <span class="text-base">community edition</span>
                                <br>
-                               <small class="text-sm">continuous support for your engineering teams</small>
-                               <span id="save_container" class="text-green-600 font-bold"></span>
+                               <small class="text-sm">Enterprise: <strong>Custom pricing</strong></small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-gray-700">
-                    <p class="font-bold mb-3">For Companies building Critical Systems</p>
+                    <p class="font-bold mb-3">Bring your own servers</p>
                     <ul class="flex flex-col gap-3 text-sm font-medium">
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
-                            </div>Everything in "Pay as you use plan"
+                            </div>Deploy to your own servers
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
-                            </div>We help you setup observability and realtime monitors
-
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            We setup uptime checks and multistep api tests for you
+                            </div>Open source community edition available
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            We will be on call for your projects to catch and analyze issues.
+                            Enterprise edition with premium features
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Our Senior Engineers will jump on calls with your team to help them resolve issues
+                            Ideal for regulatory compliance
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Capped at 20 hours of support calls/sessions per month
+                            Complete data control
                         </li>
                         <li class="flex flex-row gap-2">
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Weekly reports about everything that went wrong or might be broken.
+                            Custom support available
                         </li>
                     </ul>
                 </div>
-                <a  href="https://apitoolkit.lemonsqueezy.com/buy/6d1d07b5-85ab-4440-8d6a-4dd57db852de"
-                    class="mt-auto rounded-xl text-gray-700 flex flex-row justify-center px-4 py-[7px] border">
-                    Get Started
+                <a  href="https://calendar.app.google/1a4HG5GZYv1sjjZG6"
+                    class="mt-auto rounded-xl text-gray-700 flex flex-row justify-center px-4 py-[7px] border border-gray-400">
+                    Talk to an engineer
                 </a>
             </div>
 
-            <!-- ENTERPRISE PLAN -->
-            <a href="mailto:hello@apitoolkit.io"
-                class="col-span-1 md:col-span-3 group rounded-2xl border p-4 md:p-6 flex duration-300 flex-col text-gray-50 justify-start gap-4 md:gap-6 text-left bg-slate-900 shadow-md hover:-translate-y-3">
-                <div class="flex flex-col gap-3 pb-1">
-                    <h3 class="font-medium text-2xl md:text-3xl">Enterprise</h3>
-                    <div>
-                        <div class="flex flex-row items-start gap-8px">
-                            <div class="font-bold text-4xl md:text-6xl">Contact us
+            <!-- CRITICAL SYSTEMS SUPPORT -->
+            <div class="col-span-1 md:col-span-3 mt-8">
+                <div class="rounded-2xl border-2 border-purple-200 bg-purple-50 p-6 md:p-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="flex flex-col gap-4">
+                            <h3 class="font-medium text-2xl text-gray-900">Critical Systems Support</h3>
+                            <p class="text-gray-700">Add continuous engineering support to any plan for companies building critical systems.</p>
+                            <div class="space-y-3">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="font-bold text-4xl">$199</span>
+                                    <span class="text-gray-600">per month</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Added to any deployment option above</p>
                             </div>
                         </div>
-                        <div class="text-sm leading-120 font-medium text-gray-200">
-                            Configure high-volume custom amounts based on demand.
+                        <div class="space-y-3">
+                            <p class="font-semibold text-gray-900">Includes:</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>We help you setup observability and realtime monitors</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>We setup uptime checks and multistep API tests for you</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>We'll be on call for your projects to catch and analyze issues</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Senior Engineers jump on calls with your team to resolve issues</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Weekly reports about everything that went wrong or might be broken</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Up to 20 hours of support calls/sessions per month</span>
+                                </li>
+                            </ul>
+                            <a href="https://apitoolkit.lemonsqueezy.com/buy/6d1d07b5-85ab-4440-8d6a-4dd57db852de" class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+                                Add Support Package
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="text-gray-50">
-                    <p class="font-bold mb-3">For Large Organizations</p>
-                    <ul class="flex flex-col gap-3 text-sm font-medium">
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-500 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>Custom team members
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-500 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            High volume discounts
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-500 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            On-prem or on your own infra
-                        </li>
-                        <li class="flex flex-row gap-2">
-                            <div class="text-center font-bold bg-gray-500 text-green-500 rounded-md w-5 h-5">
-                                ✓
-                            </div>
-                            Custom data retention
-                        </li>
-                    </ul>
-                </div>
-                <button as="button" class="mt-auto rounded-xl flex flex-row justify-center px-4 py-[7px] border">Contact Sales</button>
-            </a>
+            </div>
         </section>
 
         <div class="rounded-2xl grid grid-cols-1 md:grid-cols-2 border shadow-sm">

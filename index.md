@@ -100,12 +100,12 @@ platforms:
     icon: eye
     visual: Video showing unified logs and traces view, with smooth transitions between different data sources
     children:
+      - title: See exactly what your users saw -- via screen replay
+        details: Watch the actual screen recording of user sessions that led to errors. No more guessing from bug reports—see every click, scroll, and action that triggered the issue.
+        learnmore: /features/correlation
       - title: Unified logs and traces in one view
         details: No more tab-switching between tools. See your entire request journey from frontend to database in a single timeline.
         learnmore: /features/logs-traces
-      - title: Automatic correlation across services
-        details: We connect the dots for you—linking errors to their root cause across microservices, APIs, and databases instantly.
-        learnmore: /features/correlation
       - title: Full-stack context for every issue
         details: From user action to database query, see the complete story of what happened, when, and why.
         learnmore: /features/full-stack
@@ -459,10 +459,10 @@ platforms:
         <div class="rounded-xl border border-strokeBrand-weak p-8 flex flex-col">
           <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#cloud"></use></svg></div>
           <div class="mt-8 mb-6">
-            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">APITOOLKIT CLOUD</p>
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD</p>
             <h3 class="text-2xl font-semibold text-textStrong">Bring nothing</h3>
           </div>
-          
+
           <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Fully managed cloud service</li>
             <li><strong>Predictable usage-based</strong> pricing</li>
@@ -470,7 +470,7 @@ platforms:
             <li>Query your data in english</li>
             <li><strong>30 days data retention</strong> included</li>
           </ul>
-          
+
           <div class="border-t border-strokeWeak pt-6 space-y-4">
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
@@ -487,10 +487,10 @@ platforms:
           <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fillBrand-strong text-textInverse-strong px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
           <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
           <div class="mt-8 mb-6">
-            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">APITOOLKIT CLOUD + S3</p>
+            <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD + Your S3</p>
             <h3 class="text-2xl font-semibold text-textStrong">Bring your own storage</h3>
           </div>
-          
+
           <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Own and control all your data</li>
             <li>Save <strong>all your data</strong> to any S3-compatible bucket</li>
@@ -498,7 +498,7 @@ platforms:
             <li>Query years of data via APItoolkit</li>
             <li><strong>No extra cost</strong> for data retention</li>
           </ul>
-          
+
           <div class="border-t border-strokeBrand-weak pt-6 space-y-4">
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
@@ -517,7 +517,7 @@ platforms:
             <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">SELF-HOSTED</p>
             <h3 class="text-2xl font-semibold text-textStrong">Bring your own servers</h3>
           </div>
-          
+
           <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Deploy to your own servers</li>
             <li><strong>Open source</strong> community edition available</li>
@@ -525,7 +525,7 @@ platforms:
             <li>Ideal for <strong>regulatory compliance</strong></li>
             <li>Complete data control</li>
           </ul>
-          
+
           <div class="border-t border-strokeWeak pt-6 space-y-4">
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>

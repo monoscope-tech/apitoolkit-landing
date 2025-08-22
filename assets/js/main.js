@@ -5,16 +5,26 @@ const saveContainer = document.querySelector("#save_container");
 const startsAtContainer = document.querySelector("#starts_at");
 function priceChange() {
   const value = price_indicator.value;
-  if (value <= 20_000_000) {
-    startsAtContainer.innerText = "Starts at ...";
+  // For Cloud + S3 plan: $200 base + $2 per 1M events
+  const eventsInMillions = value / 1_000_000;
+  const eventsCost = eventsInMillions * 2;
+  const totalPrice = 200 + eventsCost;
+  
+  priceContainer.innerText = "$" + totalPrice.toFixed(0);
+  reqsContainer.innerText = "/" + eventsInMillions + "M events per month";
+  
+  // Show savings compared to just events cost
+  if (eventsInMillions > 100) {
+    const savingsPercent = Math.round((200 / totalPrice) * 100);
+    saveContainer.innerText = "(Base cost is only " + savingsPercent + "% of total)";
   } else {
-    startsAtContainer.innerText = "Starts at $34/20M events per month";
+    saveContainer.innerText = "";
   }
-  const price = (value - 20_000_000) / 500_000 + 34;
-  priceContainer.innerText = "$" + price;
-  reqsContainer.innerText = "/" + value / 1_000_000 + "M events per month";
 }
-price_indicator.addEventListener("input", priceChange);
+if (price_indicator) {
+  price_indicator.addEventListener("input", priceChange);
+  priceChange(); // Initialize on page load
+}
 
 function handlePlanToggle() {
   const radios = document.getElementsByName("plans");
