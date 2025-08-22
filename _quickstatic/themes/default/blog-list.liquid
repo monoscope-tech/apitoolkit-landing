@@ -23,39 +23,51 @@
         </div>
         <section class="mt-6 pt-10 ">
           {% if this.frontmatter.title != "Blog" and this.frontmatter.title != "" %}
-          <h2 class="text-2xl font-semibold pb-3 text-textStrong"> ❯ &nbsp; {{ this.frontmatter.title }}</h2>
+          <h2 class="text-2xl font-normal pb-3 text-textStrong"> ❯ &nbsp; {{ this.frontmatter.title }}</h2>
           {% endif %}
 
-          <div class="grid gap-x-6 gap-y-12 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+          <div class="grid gap-x-6 gap-y-12 grid-cols-1 md:grid-cols-3 lg:grid-cols-12">
           {% assign blog_posts = file_list | where_glob: 'file_path', "./blog/*/index.md" | sort: "date" %}
           {% for post in blog_posts %}
             <div
-              class="overflow-hidden flex flex-col content-between justify-between">
+              class="overflow-hidden flex flex-col content-between justify-between {% if forloop.index <= 15 %}md:col-span-3 lg:col-span-4{% else %}md:col-span-3 lg:col-span-3{% endif %}">
               <div>
 
-                <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-strokeWeak mt-2 block" />
+                {% if forloop.index <= 15 %}
+                  <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-strokeWeak mt-2 block" />
+                {% endif %}
 
                 <a href="{{post.permalink}}" class="">
-                  <h3 class="text-lg sm:text-xl font-semibold text-textStrong pt-4">{{post.frontmatter.title }}</h3>
-                  <p class="mt-3 text-textWeak leading-relaxed">{{post.markdown_body | markdownify | strip_html | truncatewords: 30, "..."}}</p>
+                  <h3 class="{% if forloop.index <= 15 %}text-lg sm:text-xl{% else %}text-base{% endif %} font-normal text-textStrong {% if forloop.index <= 15 %}pt-4{% else %}pt-2{% endif %}">{{post.frontmatter.title }}</h3>
+                  {% if forloop.index <= 9 %}
+                    <p class="mt-3 text-textWeak leading-relaxed">{{post.markdown_body | markdownify | strip_html | truncatewords: 16, "..."}}</p>
+                  {% endif %}
                 </a>
 
-                <a href="{{post.permalink}}"
-                  class="mt-2 inline-block text-sm font-medium text-textBrand hover:underline hover:underline-offset-2">
-                  Read ❯
-                </a>
+                {% if forloop.index <= 9 %}
+                  <a href="{{post.permalink}}"
+                    class="mt-2 inline-block text-sm font-medium text-textBrand hover:underline hover:underline-offset-2">
+                    Read ❯
+                  </a>
+                {% endif %}
 
-                {% if post.frontmatter.author %}
-                  {% assign author = config.raw.authors[post.frontmatter.author] %}
-                  <div class="pt-6 flex items-center justify-between">
-                    <div class="flex items-center space-x-2">
-                      <img class="w-5 h-5 rounded-full" src='{{author.picture}}' />
-                      <span class="text-xs font-normal text-textWeak">By 
-                          <span class="underline">{{author.name}}</span>
-                      </span>
+                {% if forloop.index <= 15 %}
+                  {% if post.frontmatter.author %}
+                    {% assign author = config.raw.authors[post.frontmatter.author] %}
+                    <div class="pt-6 flex items-center justify-between">
+                      <div class="flex items-center space-x-2">
+                        <img class="w-5 h-5 rounded-full" src='{{author.picture}}' />
+                        <span class="text-xs font-normal text-textWeak">By 
+                            <span class="underline">{{author.name}}</span>
+                        </span>
+                      </div>
+                      <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
                     </div>
-                    <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
-                  </div>
+                  {% else %}
+                    <div class="pt-6">
+                      <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                    </div>
+                  {% endif %}
                 {% else %}
                   <div class="pt-6">
                     <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
