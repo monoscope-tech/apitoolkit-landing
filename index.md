@@ -467,9 +467,9 @@ platforms:
             <li><strong>Predictable Usage-based</strong> pricing</li>
             <li>Intelligent incident alerts</li>
             <li>Query your data in english</li>
+            <li><strong>30 days data retention</strong> included</li>
           </ul>
-          <!-- <p>Fully managed cloud service with <strong>usage-based pricing</strong> and automatic optimization.</p> -->
-          <!-- <p>Start for free, then scale seamlessly with <strong>predictable costs</strong> as your needs grow.</p> -->
+          <p class="text-base pt-2"><strong>Pricing:</strong> Free plan with 10k events/day, paid plans start at <strong>$34/month</strong> then <strong>$2 per 1M events</strong></p>
           <a href="https://app.apitoolkit.io" class="block underline underline-offset-2 text-textBrand">Start 30 day free trial</a>
         </div>
 
@@ -486,8 +486,7 @@ platforms:
             <li>Query years of data via APItoolkit</li>
             <li><strong>No extra cost</strong> for data retention</li>
           </ul>
-          <!-- <p>Fully managed cloud service but <strong>all your data</strong> is stored in your own s3 compatible storage. </p> -->
-          <!-- <p>Keep your data for as long as you want, and freely <strong>query and visualize data from months or years ago</strong>. At no extra cost.</p> -->
+          <p class="text-base pt-2"><strong>Pricing:</strong> $200/month starting + <strong>$2 per 1M events</strong></p>
           <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block underline underline-offset-2 text-textBrand">Book a demo</a>
         </div>
 
@@ -499,12 +498,12 @@ platforms:
           </div>
           <ul class="list-disc space-y-2 list-inside">
             <li>Deploy to your own servers</li>
-            <li>Managed by the APItoolkit team</li>
+            <li><strong>Open source</strong> community edition available</li>
+            <li>Enterprise edition with premium features</li>
             <li>Ideal for <strong>regulatory compliance</strong></li>
-            <li>Predictable custom annual pricing</li>
+            <li>Complete data control</li>
           </ul>
-          <!-- <p>Deploy in your own servers while APItoolkit handles operations.</p> -->
-          <!-- <p>Perfect for organizations seeking <strong>complete data control</strong> with <strong>predictable annual pricing</strong>.</p> -->
+          <p class="text-base pt-2"><strong>Pricing:</strong> Community edition (free), Enterprise (custom pricing)</p>
           <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block underline underline-offset-2 text-textBrand">Book a demo</a>
         </div>
 

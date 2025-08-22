@@ -80,7 +80,7 @@ faqs:
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Last 3 days data retention
+                            Last 30 days data retention
                         </li>
                     </ul>
                 </div>
@@ -105,7 +105,7 @@ faqs:
                                <span class="font-bold text-6xl" id="price">$34</span>
                                <span class="" id="num_requests">/20m events per month</span>
                                <br>
-                               <small class="text-sm">then $1 per 500k events (logs, spans, metric samples, etc)</small>
+                               <small class="text-sm">then $2 per 1M events (logs, spans, metric samples, etc)</small>
                                <span id="save_container" class="text-green-600 font-bold"></span>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ faqs:
                             <div class="text-center font-bold bg-gray-200 text-green-500 rounded-md w-5 h-5">
                                 ✓
                             </div>
-                            Last 14 days data retention
+                            Last 30 days data retention
                         </li>
                     </ul>
                 </div>
