@@ -8,7 +8,7 @@ menuWeight: 2
 
 # Slim SDK Guide
 
-APIToolkit Slim Middleware allows you to monitor HTTP requests in your Slim applications. It builds upon OpenTelemetry instrumentation to create custom spans for each request, capturing key details such as request and response bodies, headers, and status codes. Additionally, it offers robust support for monitoring outgoing requests and reporting errors automatically.
+Monoscope Slim Middleware allows you to monitor HTTP requests in your Slim applications. It builds upon OpenTelemetry instrumentation to create custom spans for each request, capturing key details such as request and response bodies, headers, and status codes. Additionally, it offers robust support for monitoring outgoing requests and reporting errors automatically.
 
 To get started, you'll need the OpenTelemetry Node.js library and some basic configuration.
 
@@ -22,7 +22,7 @@ Ensure you have already completed the first three steps of the [onboarding guide
 
 ## Installation
 
-Kindly run the command below to install the apitoolkit-slim sdk and required opentelemetry packages:
+Kindly run the command below to install the monoscope slim sdk and required opentelemetry packages:
 
 ```sh
 composer require \
@@ -30,12 +30,12 @@ composer require \
     open-telemetry/exporter-otlp \
     open-telemetry/opentelemetry-auto-slim \
     open-telemetry/opentelemetry-auto-psr18 \
-    apitoolkit/apitoolkit-slim
+    monoscope/monoscope-slim
 ```
 
 ## Setup Open Telemetry
 
-Setting up open telemetry allows you to send traces, metrics and logs to the APIToolkit platform.
+Setting up open telemetry allows you to send traces, metrics and logs to the Monoscope platform.
 To setup open telemetry First install the open telemetry php extension:
 
 ```sh
@@ -64,32 +64,32 @@ export OTEL_PROPAGATORS=baggage,tracecontext
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the APItoolkit dashboard.</p>
+  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the Monoscope dashboard.</p>
 </div>
 ```
 
-## Setup APItoolkit Middleware
+## Setup Monoscope Middleware
 
-Next, create a new instance of the APIToolkitMiddleware class and register the middleware with the Slim Framework in the app/middleware.php file. This creates a customs spans which captures and sends http request info such as headers, requests and repsonse bodies, matched route etc. for each request
+Next, create a new instance of the MonoscopeMiddleware class and register the middleware with the Slim Framework in the app/middleware.php file. This creates a customs spans which captures and sends http request info such as headers, requests and repsonse bodies, matched route etc. for each request
 
 ```php
 use Slim\Factory\AppFactory;
-use APIToolkit\APIToolkitMiddleware;
+use Monoscope\MonoscopeMiddleware;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $app = AppFactory::create();
 
-// Initialize the APItoolkit client
-$apitoolkitMiddleware = new APIToolkitMiddleware([
+// Initialize the Monoscope client
+$monoscopeMiddleware = new MonoscopeMiddleware([
   'debug' => false,
   'tags' => ["environment: production", "region: us-east-1"],
   'captureRequestBody' => true,
   'serviceVersion' => "v2.0",
 ]);
 
-$app->add($apitoolkitMiddleware);
-// END Initialize the APItoolkit client
+$app->add($monoscopeMiddleware);
+// END Initialize the Monoscope client
 
 $app->get('/', function ($request, $response) {
   $response->getBody()->write('Hello, World!');
@@ -117,7 +117,7 @@ Middleware configuration options:
 
 ## Redacting Sensitive Data
 
-If you have fields that are sensitive and should not be sent to APItoolkit servers, you can mark those fields to be redacted (the fields will never leave your servers).
+If you have fields that are sensitive and should not be sent to Monoscope servers, you can mark those fields to be redacted (the fields will never leave your servers).
 
 To mark a field for redacting via this SDK, you need to add some additional arguments to the configuration object with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
 
@@ -165,15 +165,15 @@ Examples of valid JSONPath expressions would be:
 :::
 | JSONPath | Description |
 | -------- | ----------- |
-| `$.user.addresses[*].zip` | In this case, APItoolkit will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
-| `$.user.credit_card` | In this case, APItoolkit will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.addresses[*].zip` | In this case, Monoscope will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.credit_card` | In this case, Monoscope will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=apitoolkit" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
-  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to APItoolkit will look like, after redacting any given JSON object</b>.</p>
+  <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=monoscope" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
+  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to Monoscope will look like, after redacting any given JSON object</b>.</p>
 </div>
 <hr />
 ```
@@ -182,19 +182,19 @@ Here's what the configuration would look like with redacted fields:
 
 ```php
 use Slim\Factory\AppFactory;
-use APIToolkit\APIToolkitMiddleware;
+use Monoscope\MonoscopeMiddleware;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$apitoolkitMiddleware = new APIToolkitMiddleware([
+$monoscopeMiddleware = new MonoscopeMiddleware([
   'redactHeaders' => [],
   'redactRequestBody' => [],
   'redactResponseBody' => [],
 ]);
 
-$app->add($apitoolkitMiddleware);
+$app->add($monoscopeMiddleware);
 
 $app->get('/', function ($request, $response) {
   $response->getBody()->write('Hello, World!');
@@ -217,29 +217,29 @@ $app->run();
 
 ## Error Reporting
 
-With APItoolkit, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+With Monoscope, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
-To manually report specific errors at different parts of your application, use the `reportError` method of the `APIToolkitSlim` class, passing in the `error` and the `request` as arguments, like so:
+To manually report specific errors at different parts of your application, use the `reportError` method of the `MonoscopeSlim` class, passing in the `error` and the `request` as arguments, like so:
 
 ```php
 use Slim\Factory\AppFactory;
-use APIToolkit\APIToolkitMiddleware;
-use APIToolkit\APIToolkitSlim;
+use Monoscope\MonoscopeMiddleware;
+use Monoscope\MonoscopeSlim;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$apitoolkitMiddleware = new APIToolkitMiddleware([]);
-$app->add($apitoolkitMiddleware);
+$monoscopeMiddleware = new MonoscopeMiddleware([]);
+$app->add($monoscopeMiddleware);
 
 $app->get('/', function (Request $request, Response $response) {
   try {
     throw new Exception("Custom user error...");
     return $response;
   } catch (Exception $e) {
-    // Report the error to APItoolkit
-    APIToolkitSlim::reportError($e, $request);
+    // Report the error to Monoscope
+    MonoscopeSlim::reportError($e, $request);
     $response->getBody()->write($e->getMessage());
     return $response;
   }
@@ -250,21 +250,21 @@ $app->run();
 
 ## Monitoring Outgoing Requests
 
-Outgoing requests are external API calls you make from your API. By default, APItoolkit monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
+Outgoing requests are external API calls you make from your API. By default, Monoscope monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
 
-To monitor outgoing HTTP requests from your application, use the `observeGuzzle` method of the `APIToolkitSlim` class, passing in the `$request` and `$options` object, like so:
+To monitor outgoing HTTP requests from your application, use the `observeGuzzle` method of the `MonoscopeSlim` class, passing in the `$request` and `$options` object, like so:
 
 ```php
 use Slim\Factory\AppFactory;
-use APIToolkit\APIToolkitMiddleware;
-use APIToolkit\APIToolkitSlim;
+use Monoscope\MonoscopeMiddleware;
+use Monoscope\MonoscopeSlim;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$apitoolkitMiddleware = new APIToolkitMiddleware([]);
-$app->add($apitoolkitMiddleware);
+$monoscopeMiddleware = new MonoscopeMiddleware([]);
+$app->add($monoscopeMiddleware);
 
 $app->get('/user', function (Request $request, Response $response) {
   $options = [
@@ -274,8 +274,8 @@ $app->get('/user', function (Request $request, Response $response) {
     "redactResponseBody" => ["$.users[*].email", "$.users[*].credit_card"]
   ];
 
-  $guzzleClient = APIToolkitSlim::observeGuzzle($request, $options);
-  $responseFromGuzzle = $guzzleClient->request('GET', 'https://api.github.com/repos/apitoolkit/apitoolkit-slim?foobar=123');
+  $guzzleClient = MonoscopeSlim::observeGuzzle($request, $options);
+  $responseFromGuzzle = $guzzleClient->request('GET', 'https://api.github.com/repos/monoscope-tech/monoscope-slim?foobar=123');
   $response->getBody()->write($responseFromGuzzle->getBody()->getContents());
   return $response;
 });
@@ -297,7 +297,7 @@ The `$options` associative array accepts the following optional fields:
 
 ```=html
 <hr />
-<a href="https://github.com/apitoolkit/apitoolkit-slim" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
+<a href="https://github.com/monoscope-tech/monoscope-slim" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
     <i class="fa-brands fa-github"></i>
     Explore the Slim SDK
 </a>

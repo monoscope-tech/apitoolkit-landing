@@ -8,7 +8,7 @@ menuWeight: 2
 
 # NextJs Integration Guide
 
-APIToolkit Next.js Middleware allows you to monitor HTTP requests in your Next.js applications. It builds upon OpenTelemetry instrumentation to create custom spans for each request, capturing key details such as request and response bodies, headers, and status codes. Additionally, it offers robust support for monitoring outgoing requests and reporting errors automatically.
+Monoscope Next.js Middleware allows you to monitor HTTP requests in your Next.js applications. It builds upon OpenTelemetry instrumentation to create custom spans for each request, capturing key details such as request and response bodies, headers, and status codes. Additionally, it offers robust support for monitoring outgoing requests and reporting errors automatically.
 
 To get started, you'll need the OpenTelemetry Node.js library and some basic configuration.
 
@@ -22,15 +22,15 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 
 ## Installation
 
-Run the command below to install the APIToolkit nextJs sdk and Open telemetery API, SDK, and auto instrumentation tools.
+Run the command below to install the Monoscope nextJs sdk and Open telemetery API, SDK, and auto instrumentation tools.
 
 ```sh
-npm install --save apitoolkit-next @opentelemetry/api @vercel/otel
+npm install --save @monoscopetech/next @opentelemetry/api @vercel/otel
 ```
 
 ## Setup Open Telemetry
 
-Setting up open telemetry allows you to send traces, metrics and logs to the APIToolkit platform.
+Setting up open telemetry allows you to send traces, metrics and logs to the Monoscope platform.
 Add the following environment variables to your `.env` file:
 
 ```sh
@@ -54,14 +54,14 @@ export function register() {
 
 ### HTTP Requests Monitoring
 
-After setting up open telemetry. You can monitor http requests using APIToolkit's next middleware, this allows you to monitor all your http requests. including headers, response time, response status code, request body, response body, etc.
+After setting up open telemetry. You can monitor http requests using Monoscope's next middleware, this allows you to monitor all your http requests. including headers, response time, response status code, request body, response body, etc.
 
-To monitor http requests, wrap your routes with the `withAPItoolkitAppRouter` function if you're using the `app` router or `withAPItoolkitPagesRouter` if you're using the `pages` router.
+To monitor http requests, wrap your routes with the `withMonoscopeAppRouter` function if you're using the `app` router or `withMonoscopePagesRouter` if you're using the `pages` router.
 
 #### App Router Example
 
 ```js
-import { withAPItoolkitAppRouter } from "apitoolkit-next";
+import { withMonoscopeAppRouter } from "@monoscopetech/next";
 import { NextRequest, NextResponse } from "next/server";
 async function handleRequest(req: NextRequest) {
   return NextResponse.json({ message: "hello world" });
@@ -71,7 +71,7 @@ async function handleRequest(req: NextRequest) {
 const config = {
   captureResponseBody: true,
 }
-export const GET = withAPItoolkitAppRouter(handleRequest, config);
+export const GET = withMonoscopeAppRouter(handleRequest, config);
 
 ```
 
@@ -79,7 +79,7 @@ export const GET = withAPItoolkitAppRouter(handleRequest, config);
 
 ```js
 import type { NextApiRequest, NextApiResponse } from "next";
-import { withAPItoolkitPagesRouter } from "apitoolkit-next";
+import { withMonoscopePagesRouter } from "@monoscopetech/next";
 
 function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: "Hello from Next.js!" });
@@ -90,7 +90,7 @@ const config = {
   captureResponseBody: true,
 }
 
-export default withAPItoolkitPagesRouter(handler, config);
+export default withMonoscopePagesRouter(handler, config);
 ```
 
 #### Quick overview of the configuration parameters
@@ -112,38 +112,38 @@ An object with the following optional fields can be passed to the middleware to 
 | `captureResponseBody` | Default `false`, set to `true` if you want to capture the response body. |
 :::
 
-## Reporting errors to APIToolkit
+## Reporting errors to Monoscope
 
-APIToolkit detects a lot of API issues automatically, but it's also valuable to report and track errors. This helps you associate more details about the backend with a given failing request.
+Monoscope detects a lot of API issues automatically, but it's also valuable to report and track errors. This helps you associate more details about the backend with a given failing request.
 If you've used sentry, or rollback, or bugsnag, then you're likely aware of this functionality.
 
-To report errors to APIToolkit, you can use the `reportError` function.
+To report errors to Monoscope, you can use the `reportError` function.
 
 ```typescript
 import { NextRequest, NextResponse } from "next/server";
-import { withAPItoolkitAppRouter, reportError } from "apitoolkit-next";
+import { withMonoscopeAppRouter, reportError } from "@monoscopetech/next";
 async function handleRequest(req: NextRequest) {
   try {
     throw new Error("Something went wrong");
   } catch (e) {
-    // reportError will send the error to APIToolkit
+    // reportError will send the error to Monoscope
     reportError(e);
   }
 
   return NextResponse.json({ message: "hello world" });
 }
 
-export const GET = withAPItoolkitAppRouter(handler);
+export const GET = withMonoscopeAppRouter(handler);
 ```
 
 ## Monitoring Axios requests
 
-APIToolkit supports monitoring outgoing HTTP requests made using libraries like Axios.
+Monoscope supports monitoring outgoing HTTP requests made using libraries like Axios.
 To monitor a specific Axios request, you can use the `observeAxios` function provided by the SDK.
 
 ```typescript
 import { NextRequest, NextResponse } from "next/server";
-import { withAPItoolkitAppRouter, observeAxios } from "apitoolkit-next";
+import { withMonoscopeAppRouter, observeAxios } from "@monoscopetech/next";
 
 async function handleRequest(req: NextRequest) {
   // Observe an Axios request
@@ -154,10 +154,10 @@ async function handleRequest(req: NextRequest) {
   return NextResponse.json({ data: response.data });
 }
 
-export const GET = withAPItoolkitAppRouter(handler);
+export const GET = withMonoscopeAppRouter(handler);
 ```
 
-The `urlWildcard` parameter is used for urls that contain dynamic path parameters. This helps APIToolkit to identify request to the same endpoint but with different parameters.
+The `urlWildcard` parameter is used for urls that contain dynamic path parameters. This helps Monoscope to identify request to the same endpoint but with different parameters.
 
 #### All observeAxios options
 

@@ -299,7 +299,7 @@ public class DemoApplication {
 
 ```=html
 <hr />
-<a href="https://github.com/apitoolkit/apitoolkit-springboot" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
+<a href="https://github.com/monoscope-tech/apitoolkit-springboot" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
     <i class="fa-brands fa-github"></i>
     Explore the Springboot SDK
 </a>

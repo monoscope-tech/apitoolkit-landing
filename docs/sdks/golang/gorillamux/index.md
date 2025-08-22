@@ -13,7 +13,7 @@ menuWeight: 5
 Install the APIToolkit gorilla mux SDK using the following command `go get` command:
 
 ```sh
-go get github.com/apitoolkit/apitoolkit-go/gorilla
+go get github.com/monoscope-tech/monoscope-go/gorilla
 ```
 
 ## Configuration
@@ -21,8 +21,8 @@ go get github.com/apitoolkit/apitoolkit-go/gorilla
 Before configuration open telemetery and setting up the APItoolkit middleware, you need to configure a few environment variables. These variables provide essential information for setting up openTelemetry and APItoolkit.
 
 ```sh
-OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your apitoolkit API key
-OTEL_SERVICE_NAME="apitoolkit-otel-go-demo" # Service name for your the service you're integrating in
+OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your monoscope API key
+OTEL_SERVICE_NAME="monoscope-otel-go-demo" # Service name for your the service you're integrating in
 OTEL_SERVICE_VERSION="0.0.1" # Your application's service version
 ```
 
@@ -37,14 +37,14 @@ import (
 	"log"
 	"net/http"
 
-	apitoolkit "github.com/apitoolkit/apitoolkit-go/gorilla"
+	monoscope "github.com/monoscope-tech/monoscope-go/gorilla"
 	"github.com/gorilla/mux"
   _ "github.com/joho/godotenv/autoload" // autoload .env file for otel configuration
 
 )
 
 func main() {
-	shutdown, err := apitoolkit.ConfigureOpenTelemetry()
+	shutdown, err := monoscope.ConfigureOpenTelemetry()
 	if err != nil {
 		log.Printf("error configuring openTelemetry: %v", err)
 	}
@@ -52,8 +52,8 @@ func main() {
 
 	router := mux.NewRouter()
 	// Register APItoolkit's middleware
-	router.Use(apitoolkit.Middleware(
-		apitoolkit.Config{
+	router.Use(monoscope.Middleware(
+		monoscope.Config{
 			RedactHeaders:       []string{"Authorization", "X-Api-Key"},
 			RedactRequestBody:   []string{"password", "credit_card"},
 			RedactResponseBody:  []string{"password", "credit_card"},

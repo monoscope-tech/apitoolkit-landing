@@ -13,7 +13,7 @@ mainSections = ["blog"]
 intro = true
 headline = "APItoolkit"
 description = "Automatic API Monitoring and Documentation"
-github = "https://github.com/apitoolkit"
+github = "https://github.com/monoscope-tech"
 twitter = "@apitoolkithq"
 email = "hello@apitoolkit.io"
 opengraph = true
@@ -32,19 +32,19 @@ post = "/:filename/"
 [markup.goldmark.renderer]
 unsafehtml=true
 unsafe=true
-hardWraps = true 
+hardWraps = true
 
 [markup.goldmark.parser]
 autoHeadingID = true
 autoHeadingIDType = "github"
 wrapStandAloneImageWithinParagraph = true
 [markup.goldmark.parser.attribute]
-block = true 
+block = true
 title = true
 
 
 [sitemap]
-theme="apitoolkit" 
+theme="apitoolkit"
 
 [author]
   [author.anthony]

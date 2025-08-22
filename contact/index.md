@@ -14,8 +14,8 @@ To contact us with any inquiries, feedback, or support requests kindly click on 
 
 - [Book a Call With a Staff](https://calendar.app.google/1a4HG5GZYv1sjjZG6)
 - [Send us an Email](mailto:hello@apitoolkit.io)
-- [Join our Discord Community Server](https://discord.gg/dEB6EjQnKB) 
-- [Submit a New Issue on GitHub](https://github.com/apitoolkit/apitoolkit-landing/issues/new/choose)
+- [Join our Discord Community Server](https://discord.gg/dEB6EjQnKB)
+- [Submit a New Issue on GitHub](https://github.com/monoscope-tech/apitoolkit-landing/issues/new/choose)
 
 ```=html
 </section>

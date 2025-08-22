@@ -8,7 +8,7 @@ menuWeight: 2
 
 # AdonisJs Integration Guide
 
-You can integrate your AdonisJs application with APIToolkit using OpenTelemetry. This allows you to send logs, metrics, and traces to APIToolkit for monitoring and analytics.
+You can integrate your AdonisJs application with Monoscope using OpenTelemetry. This allows you to send logs, metrics, and traces to Monoscope for monitoring and analytics.
 
 To get started, you'll need the OpenTelemetry Node.js library and some basic configuration.
 
@@ -25,7 +25,7 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 Run the command below to install the API, SDK, and Instrumentation tools.
 
 ```sh
-npm install --save apitoolkit-adonis @opentelemetry/api  @opentelemetry/auto-instrumentations-node
+npm install --save @monoscopetech/adonis @opentelemetry/api  @opentelemetry/auto-instrumentations-node
 ```
 
 ## Open Telemetery Configuration
@@ -48,20 +48,20 @@ OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
 OTEL_NODE_DISABLED_INSTRUMENTATIONS=net,connect,dns,fs
 ```
 
-## Setup APIToolkit Adonis Middleware For HTTP Request Monitoring
+## Setup Monoscope Adonis Middleware For HTTP Request Monitoring
 
-APIToolkit Adonis Middleware is a middleware that can be used to monitor HTTP requests. It is a wrapper around the Express.js middleware and provides additional functionalities on top of the open telemetry instrumentation which creates a custom span for each request capturing details about the request including request and response bodies.
+Monoscope Adonis Middleware is a middleware that can be used to monitor HTTP requests. It is a wrapper around the Express.js middleware and provides additional functionalities on top of the open telemetry instrumentation which creates a custom span for each request capturing details about the request including request and response bodies.
 
-First configure the `apitoolkit-adonis` sdk by running the following command:
+First configure the `@monoscopetech/adonis` sdk by running the following command:
 
 ```sh
-node ace configure apitoolkit-adonis
+node ace configure @monoscopetech/adonis
 ```
 
-Then, create an `apitoolkit.js|ts` file in the `/conf` directory and export the `defineConfig` object with some properties like so:
+Then, create an `monoscope.js|ts` file in the `/conf` directory and export the `defineConfig` object with some properties like so:
 
 ```js
-import { defineConfig } from "apitoolkit-adonis";
+import { defineConfig } from "@monoscopetech/adonis";
 import axios from "axios";
 
 export default defineConfig({
@@ -71,15 +71,15 @@ export default defineConfig({
 });
 ```
 
-Then, register the middleware by adding the `apitoolkit-adonis` client to your global middleware list in the `start/kernel.js|ts` file like so:
+Then, register the middleware by adding the `@monoscopetech/adonis` client to your global middleware list in the `start/kernel.js|ts` file like so:
 
 ```js
 import "@opentelemetry/auto-instrumentations-node/register";
 
 import server from "@adonisjs/core/services/server";
-import APIToolkit from "apitoolkit-adonis";
+import Monoscope from "@monoscopetech/adonis";
 
-const client = new APIToolkit();
+const client = new Monoscope();
 
 server.use([
   () => import("#middleware/container_bindings_middleware"),
@@ -91,7 +91,7 @@ server.use([
 
 #### Quick overview of the configuration parameters
 
-An object with the following optional fields can be passed to the `defineConfig` function in `conf/apitoolkit.ts` to configure it:
+An object with the following optional fields can be passed to the `defineConfig` function in `conf/monoscope.ts` to configure it:
 
 {class="docs-table"}
 :::
@@ -111,7 +111,7 @@ An object with the following optional fields can be passed to the `defineConfig`
 
 ## Error Reporting
 
-With APItoolkit, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+With Monoscope, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
 To report errors, you need to first enable [asyncLocalStorage](https://docs.adonisjs.com/guides/concepts/async-local-storage){target="\_blank" rel="noopener noreferrer"} in your AdonisJS project by setting `useAsyncLocalStorage` to `true` in your `config/app.js|ts` file, like so:
 
@@ -126,7 +126,7 @@ Then, use the `reportError()` function in your application's exception handler, 
 
 ```js
 import { HttpContext, ExceptionHandler } from "@adonisjs/core/http";
-import { reportError } from "apitoolkit-adonis";
+import { reportError } from "@monoscopetech/adonis";
 
 export default class HttpExceptionHandler extends ExceptionHandler {
   async handle(error: unknown, ctx: HttpContext) {
@@ -134,7 +134,7 @@ export default class HttpExceptionHandler extends ExceptionHandler {
   }
 
   async report(error: unknown, ctx: HttpContext) {
-    // Automatically report all uncaught errors to APItoolkit
+    // Automatically report all uncaught errors to Monoscope
     reportError(error);
     return super.report(error, ctx);
   }
@@ -143,17 +143,17 @@ export default class HttpExceptionHandler extends ExceptionHandler {
 
 #### Manual Error Reporting
 
-You can also manually report errors to APIToolkit by calling the `reportError()` function, passing in the `error` argument, like so:
+You can also manually report errors to Monoscope by calling the `reportError()` function, passing in the `error` argument, like so:
 
 ```ts
 import router from "@adonisjs/core/services/router";
-import { reportError } from "apitoolkit-adonis";
+import { reportError } from "@monoscopetech/adonis";
 router.get("/", async () => {
   try {
     throw new Error("something went wrong");
     return res.data;
   } catch (error) {
-    // report the error to APIToolkit
+    // report the error to Monoscope
     reportError(error);
     return { message: "something went wrong" };
   }
@@ -162,14 +162,14 @@ router.get("/", async () => {
 
 ## Monitoring Axios requests
 
-APIToolkit supports monitoring outgoing HTTP requests made using libraries like Axios. This can be done either globally or on a per-request basis.
+Monoscope supports monitoring outgoing HTTP requests made using libraries like Axios. This can be done either globally or on a per-request basis.
 
 ### Global monitoring
 
-To monitor all outgoing Axios requests globally, you can use the `monitorAxios` option when initializing the APIToolkit client.
+To monitor all outgoing Axios requests globally, you can use the `monitorAxios` option when initializing the Monoscope client.
 
 ```typescript
-import { defineConfig } from "apitoolkit-adonis";
+import { defineConfig } from "@monoscopetech/adonis";
 import axios from "axios";
 
 export default defineConfig({
@@ -179,7 +179,7 @@ export default defineConfig({
 });
 ```
 
-By adding `monitorAxios` to config, all axios requests in your server will be monitored by APIToolkit.
+By adding `monitorAxios` to config, all axios requests in your server will be monitored by Monoscope.
 
 ### Per-request monitoring
 
@@ -187,7 +187,7 @@ To monitor a specific Axios request, you can use the `observeAxios` function pro
 
 ```typescript
 import router from "@adonisjs/core/services/router";
-import { observeAxios } from "apitoolkit-adonis";
+import { observeAxios } from "@monoscopetech/adonis";
 import axios from "axios";
 router.get("/", async () => {
   const res = await observeAxios({
@@ -197,7 +197,7 @@ router.get("/", async () => {
 });
 ```
 
-The `urlWildcard` parameter is used for urls that contain dynamic path parameters. This helps APIToolkit to identify request to the same endpoint but with different parameters.
+The `urlWildcard` parameter is used for urls that contain dynamic path parameters. This helps Monoscope to identify request to the same endpoint but with different parameters.
 
 #### All observeAxios options
 
@@ -217,7 +217,7 @@ Below is the full list of options for the `observeAxios` function:
 
 ```typescript
 import router from "@adonisjs/core/services/router";
-import { observeAxios } from "apitoolkit-adonis";
+import { observeAxios } from "@monoscopetech/adonis";
 import axios from "axios";
 router.get("/", async () => {
   const res = await observeAxios({

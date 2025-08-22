@@ -8,7 +8,7 @@ menuWeight: 2
 
 # ExpressJs Integration Guide
 
-APIToolkit Express Middleware allows you to monitor HTTP requests in your Express applications. It builds upon OpenTelemetry instrumentation to create custom spans for each request, capturing key details such as request and response bodies, headers, and status codes. Additionally, it offers robust support for monitoring outgoing requests and reporting errors automatically.
+Monoscope Express Middleware allows you to monitor HTTP requests in your Express applications. It builds upon OpenTelemetry instrumentation to create custom spans for each request, capturing key details such as request and response bodies, headers, and status codes. Additionally, it offers robust support for monitoring outgoing requests and reporting errors automatically.
 
 To get started, you'll need the OpenTelemetry Node.js library and some basic configuration.
 
@@ -22,10 +22,10 @@ Ensure you have completed the first three steps of the [onboarding guide](/docs/
 
 ## Installation
 
-Run the command below to install the APIToolkit express sdk and Open telemetery API, SDK, and auto instrumentation tools.
+Run the command below to install the Monoscope express sdk and Open telemetery API, SDK, and auto instrumentation tools.
 
 ```sh
-npm install --save apitoolkit-express @opentelemetry/api @opentelemetry/auto-instrumentations-node
+npm install --save @monoscopetech/express @opentelemetry/api @opentelemetry/auto-instrumentations-node
 ```
 
 ## OpenTelemetery Configuration
@@ -47,27 +47,27 @@ OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
 OTEL_NODE_DISABLED_INSTRUMENTATIONS=net,connect,dns,fs
 ```
 
-## Setup APIToolkit Express Middleware For HTTP Request Monitoring
+## Setup Monoscope Express Middleware For HTTP Request Monitoring
 
-APIToolkit Express Middleware is a middleware that can be used to monitor HTTP requests. It is a wrapper around the Express.js middleware and provides additional functionalities on top of the open telemetry instrumentation which creates a custom span for each request capturing details about the request including request and response bodies.
+Monoscope Express Middleware is a middleware that can be used to monitor HTTP requests. It is a wrapper around the Express.js middleware and provides additional functionalities on top of the open telemetry instrumentation which creates a custom span for each request capturing details about the request including request and response bodies.
 
 ```js
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { APIToolkit } from "apitoolkit-express";
+import { Monoscope } from "@monoscopetech/express";
 import axios from "axios";
 
 const app = express();
-const apitoolkitClient = APIToolkit.NewClient({
+const monoscopeClient = Monoscope.NewClient({
   monitorAxios: axios, // Optional: Use this to monitor Axios requests
 });
 
 // Add middleware for request monitoring
-app.use(apitoolkitClient.middleware);
+app.use(monoscopeClient.middleware);
 
 app.get("/", async (req, res) => {
-  // This axios request get's monitored and appears in the  APIToolkit explorer
+  // This axios request get's monitored and appears in the  Monoscope explorer
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/todos/1"
   );
@@ -75,7 +75,7 @@ app.get("/", async (req, res) => {
 });
 
 // automatically report unhandled errors along with the request data
-app.use(apitoolkitClient.errorMiddleware);
+app.use(monoscopeClient.errorMiddleware);
 
 app.listen(3000, () => {
   console.log("Example app listening on port 3000!");
@@ -102,32 +102,32 @@ An object with the following optional fields can be passed to the middleware fun
 | `monitorAxios` | Axios instance to monitor. |
 :::
 
-## Reporting errors to APIToolkit
+## Reporting errors to Monoscope
 
-APIToolkit detects a lot of API issues automatically, but it's also valuable to report and track errors. This helps you associate more details about the backend with a given failing request.
+Monoscope detects a lot of API issues automatically, but it's also valuable to report and track errors. This helps you associate more details about the backend with a given failing request.
 If you've used sentry, or rollback, or bugsnag, then you're likely aware of this functionality.
 
-To enable automatic error reporting, add the APIToolkit `errorMiddleware` function immediately after your app's controllers and APIToolkit will handle all uncaught errors that happened during a request and associate the error to that request.
+To enable automatic error reporting, add the Monoscope `errorMiddleware` function immediately after your app's controllers and Monoscope will handle all uncaught errors that happened during a request and associate the error to that request.
 
 ```typescript
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { APIToolkit } from "apitoolkit-express";
+import { Monoscope } from "@monoscopetech/express";
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const apitoolkitClient = APIToolkit.NewClient({});
+const monoscopeClient = Monoscope.NewClient({});
 
-app.use(apitoolkitClient.middleware);
+app.use(monoscopeClient.middleware);
 
 app.get("/", (req, res) => {});
 
 // The error handler must be before any other error middleware and after all controllers
-app.use(apitoolkitClient.errorMiddleware);
+app.use(monoscopeClient.errorMiddleware);
 
 app.listen(3000, () => {
   console.log("Example app listening on port 3000");
@@ -140,25 +140,25 @@ Or manually report errors within the context of a web request, by calling the Re
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { APIToolkit, reportError } from "apitoolkit-express";
+import { Monoscope, reportError } from "@monoscopetech/express";
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const apitoolkitClient = APIToolkit.NewClient({
+const monoscopeClient = Monoscope.NewClient({
   serviceName: "my-service",
 });
 
-app.use(apitoolkitClient.middleware);
+app.use(monoscopeClient.middleware);
 
 app.get("/", (req, res) => {
   try {
     throw new Error("Something went wrong");
     res.send("hello world");
   } catch (error) {
-    // Manually report the error to APIToolkit
+    // Manually report the error to Monoscope
     reportError(error);
     res.send("Something went wrong");
   }
@@ -171,26 +171,26 @@ app.listen(3000, () => {
 
 ## Monitoring Axios requests
 
-APIToolkit supports monitoring outgoing HTTP requests made using libraries like Axios. This can be done either globally or on a per-request basis.
+Monoscope supports monitoring outgoing HTTP requests made using libraries like Axios. This can be done either globally or on a per-request basis.
 
 ### Global monitoring
 
-To monitor all outgoing Axios requests globally, you can use the `monitorAxios` option when initializing the APIToolkit client.
+To monitor all outgoing Axios requests globally, you can use the `monitorAxios` option when initializing the Monoscope client.
 
 ```typescript
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { APIToolkit } from "apitoolkit-express";
+import { Monoscope } from "@monoscopetech/express";
 import axios from "axios";
 const app = express();
 
-const apitoolkitClient = APIToolkit.NewClient({
+const monoscopeClient = Monoscope.NewClient({
   monitorAxios: axios, // Optional: Use this to monitor Axios requests
 });
 ```
 
-By doing the above, all axios requests in your server will be monitored by APIToolkit.
+By doing the above, all axios requests in your server will be monitored by Monoscope.
 
 ### Per-request monitoring
 
@@ -200,12 +200,12 @@ To monitor a specific Axios request, you can use the `observeAxios` function pro
 import "dotenv/config";
 import "@opentelemetry/auto-instrumentations-node/register"; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { APIToolkit, observeAxios } from "apitoolkit-express";
+import { Monoscope, observeAxios } from "@monoscopetech/express";
 
 const app = express();
-const apitoolkitClient = APIToolkit.NewClient({ serviceName: "my-service" });
+const monoscopeClient = Monoscope.NewClient({ serviceName: "my-service" });
 
-app.use(apitoolkitClient.middleware);
+app.use(monoscopeClient.middleware);
 app.get("/", async (req, res) => {
   const response = await observeAxios({
     urlWildcard: "/todos/:id",
@@ -214,7 +214,7 @@ app.get("/", async (req, res) => {
 });
 ```
 
-The `urlWildcard` parameter is used for urls that contain dynamic path parameters. This helps APIToolkit to identify request to the same endpoint but with different parameters.
+The `urlWildcard` parameter is used for urls that contain dynamic path parameters. This helps Monoscope to identify request to the same endpoint but with different parameters.
 
 #### All observeAxios options
 
@@ -236,12 +236,12 @@ Below is the full list of options for the `observeAxios` function:
 import "dotenv/config";
 import '@opentelemetry/auto-instrumentations-node/register'; // IMPORTANT: Do this as early as possible in your server
 import express from "express";
-import { APIToolkit, observeAxios } from "apitoolkit-express";
+import { Monoscope, observeAxios } from "@monoscopetech/express";
 
 const app = express();
-const apitoolkitClient = APIToolkit.NewClient({serviceName: "my-service"});
+const monoscopeClient = Monoscope.NewClient({serviceName: "my-service"});
 
-app.use(apitoolkitClient.middleware);
+app.use(monoscopeClient.middleware);
 app.get("/", async (req, res) => {
   const response = await observeAxios({
     urlWildcard: "/todos/:id"

@@ -6,7 +6,7 @@ updatedDate: 2024-06-17
 menuWeight: 4
 ---
 
-In this guide, you’ll learn how to integrate OpenTelemetry into your Pyramid application and install the APItoolkit SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the APItoolkit SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
+In this guide, you’ll learn how to integrate OpenTelemetry into your Pyramid application and install the Monoscope SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the Monoscope SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
 
 ```=html
 <hr>
@@ -21,13 +21,13 @@ Ensure you have already completed the first three steps of the [onboarding guide
 Kindly run the command below to install the apitoolkit pyramid sdk and necessary opentelemetry packages:
 
 ```sh
-pip install apitoolkit-pyramid opentelemetry-distro opentelemetry-exporter-otlp
+pip install monoscope-pyramid opentelemetry-distro opentelemetry-exporter-otlp
 opentelemetry-bootstrap -a install
 ```
 
 ## Setup Open Telemetry
 
-Setting up open telemetry allows you to send traces, metrics and logs to the APIToolkit platform.
+Setting up open telemetry allows you to send traces, metrics and logs to the Monoscope platform.
 To setup open telemetry, you need to configure the following environment variables:
 
 ```sh
@@ -47,11 +47,11 @@ opentelemetry-instrument python3 myapp.py
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the APItoolkit dashboard.</p>
+  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the Monoscope dashboard.</p>
 </div>
 ```
 
-## APItoolkit Pyramid Configuration
+## Monoscope Pyramid Configuration
 
 After setting up open telemetry, you can now configure and start the apitoolkit pyramid middleware.
 
@@ -66,11 +66,11 @@ Next, add the configuration variables to your settings or `development.ini` or `
 
 ```python
 settings = {
-  "APITOOLKIT_DEBUG": False,
-  "APITOOLKIT_TAGS": ["environment: production", "region: us-east-1"],
-  "APITOOLKIT_SERVICE_VERSION": "v2.0",
-  "APITOOLKIT_ROUTES_WHITELIST": ["/api/first", "/api/second"],
-  "APITOOLKIT_IGNORE_HTTP_CODES": [404, 429]
+  "MONOSCOPE_DEBUG": False,
+  "MONOSCOPE_TAGS": ["environment: production", "region: us-east-1"],
+  "MONOSCOPE_SERVICE_VERSION": "v2.0",
+  "MONOSCOPE_ROUTES_WHITELIST": ["/api/first", "/api/second"],
+  "MONOSCOPE_IGNORE_HTTP_CODES": [404, 429]
 }
 ```
 
@@ -80,11 +80,11 @@ settings = {
 ```
 
 ```sh
-APITOOLKIT_DEBUG = False
-APITOOLKIT_TAGS = environment: production, region: us-east-1
-APITOOLKIT_SERVICE_VERSION = "v2.0"
-APITOOLKIT_ROUTES_WHITELIST = /api/first, /api/second
-APITOOLKIT_IGNORE_HTTP_CODES = 404, 429
+MONOSCOPE_DEBUG = False
+MONOSCOPE_TAGS = environment: production, region: us-east-1
+MONOSCOPE_SERVICE_VERSION = "v2.0"
+MONOSCOPE_ROUTES_WHITELIST = /api/first, /api/second
+MONOSCOPE_IGNORE_HTTP_CODES = 404, 429
 ```
 
 ```=html
@@ -92,7 +92,7 @@ APITOOLKIT_IGNORE_HTTP_CODES = 404, 429
 </section>
 ```
 
-Then, initialize APItoolkit in your application's entry point (e.g., `app.py`), like so:
+Then, initialize Monoscope in your application's entry point (e.g., `app.py`), like so:
 
 ```python
 from wsgiref.simple_server import make_server
@@ -106,12 +106,12 @@ def home(request):
 
 if __name__ == '__main__':
   settings = {
-    "APITOOLKIT_DEBUG": False,
+    "MONOSCOPE_DEBUG": False,
   }
   with Configurator(settings=settings) as config:
-    # Initialize APItoolkit
-    config.add_tween("apitoolkit_pyramid.APIToolkit")
-    # END Initialize APItoolkit
+    # Initialize Monoscope
+    config.add_tween("monoscope_pyramid.Monoscope")
+    # END Initialize Monoscope
     config.add_route('home', '/')
     config.scan()
     app = config.make_wsgi_app()
@@ -123,33 +123,33 @@ if __name__ == '__main__':
 :::
 | Option | Description |
 | ------ | ----------- |
-| `APITOOLKIT_SERVICE_NAME` | A defined string name of your application |
-| `APITOOLKIT_DEBUG` | Set to `true` to enable debug mode. |
-| `APITOOLKIT_TAGS` | A list of defined tags for your services (used for grouping and filtering data on the dashboard). |
-| `APITOOLKIT_SERVICE_VERSION` | A defined string version of your application (used for further debugging on the dashboard). |
-| `APITOOLKIT_REDACT_HEADERS` | A list of HTTP header keys to redact. |
-| `APITOOLKIT_REDACT_REQUEST_BODY` | A list of JSONPaths from the request body to redact. |
-| `APITOOLKIT_REDACT_RESPONSE_BODY` | A list of JSONPaths from the response body to redact. |
-| `APITOOLKIT_CAPTURE_REQUEST_BODY` | Set to `true` to capture the request body. |
-| `APITOOLKIT_CAPTURE_RESPONSE_BODY` | Set to `true` to capture the response body. |
+| `MONOSCOPE_SERVICE_NAME` | A defined string name of your application |
+| `MONOSCOPE_DEBUG` | Set to `true` to enable debug mode. |
+| `MONOSCOPE_TAGS` | A list of defined tags for your services (used for grouping and filtering data on the dashboard). |
+| `MONOSCOPE_SERVICE_VERSION` | A defined string version of your application (used for further debugging on the dashboard). |
+| `MONOSCOPE_REDACT_HEADERS` | A list of HTTP header keys to redact. |
+| `MONOSCOPE_REDACT_REQUEST_BODY` | A list of JSONPaths from the request body to redact. |
+| `MONOSCOPE_REDACT_RESPONSE_BODY` | A list of JSONPaths from the response body to redact. |
+| `MONOSCOPE_CAPTURE_REQUEST_BODY` | Set to `true` to capture the request body. |
+| `MONOSCOPE_CAPTURE_RESPONSE_BODY` | Set to `true` to capture the response body. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the APItoolkit dashboard.</p>
+  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the Monoscope dashboard.</p>
 </div>
 ```
 
 ## Redacting Sensitive Data
 
-If you have fields that are sensitive and should not be sent to APItoolkit servers, you can mark those fields to be redacted (the fields will never leave your servers).
+If you have fields that are sensitive and should not be sent to Monoscope servers, you can mark those fields to be redacted (the fields will never leave your servers).
 
 To mark a field for redacting via this SDK, you need to add some additional fields to your `development.ini` or `production.ini` file or settings with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
 
-1. `APITOOLKIT_REDACT_HEADERS`: A list of HTTP header keys.
-2. `APITOOLKIT_REDACT_REQUEST_BODY`: A list of JSONPaths from the request body.
-3. `APITOOLKIT_REDACT_RESPONSE_BODY`: A list of JSONPaths from the response body.
+1. `MONOSCOPE_REDACT_HEADERS`: A list of HTTP header keys.
+2. `MONOSCOPE_REDACT_REQUEST_BODY`: A list of JSONPaths from the request body.
+3. `MONOSCOPE_REDACT_RESPONSE_BODY`: A list of JSONPaths from the response body.
 
 ```=html
 <hr />
@@ -191,15 +191,15 @@ Examples of valid JSONPath expressions would be:
 :::
 | JSONPath | Description |
 | -------- | ----------- |
-| `$.user.addresses[*].zip` | In this case, APItoolkit will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
-| `$.user.credit_card` | In this case, APItoolkit will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.addresses[*].zip` | In this case, Monoscope will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.credit_card` | In this case, Monoscope will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
   <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=apitoolkit" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
-  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to APItoolkit will look like, after redacting any given JSON object</b>.</p>
+  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to Monoscope will look like, after redacting any given JSON object</b>.</p>
 </div>
 <hr />
 ```
@@ -215,9 +215,9 @@ Here's an example of what the configuration would look like with redacted fields
 
 ```python
 settings = {
-  "APITOOLKIT_REDACT_HEADERS": ["content-type", "Authorization", "HOST"],
-  "APITOOLKIT_REDACT_REQUEST_BODY": ["$.user.email", "$.user.addresses"],
-  "APITOOLKIT_REDACT_RESPONSE_BODY": ["$.users[*].email", "$.users[*].credit_card"]
+  "MONOSCOPE_REDACT_HEADERS": ["content-type", "Authorization", "HOST"],
+  "MONOSCOPE_REDACT_REQUEST_BODY": ["$.user.email", "$.user.addresses"],
+  "MONOSCOPE_REDACT_RESPONSE_BODY": ["$.users[*].email", "$.users[*].credit_card"]
 }
 ```
 
@@ -227,9 +227,9 @@ settings = {
 ```
 
 ```sh
-APITOOLKIT_REDACT_HEADERS: content-type, Authorization, HOST
-APITOOLKIT_REDACT_REQ_BODY: $.user.email, $.user.addresses
-APITOOLKIT_REDACT_RES_BODY: $.users[*].email, $.users[*].credit_card
+MONOSCOPE_REDACT_HEADERS: content-type, Authorization, HOST
+MONOSCOPE_REDACT_REQ_BODY: $.user.email, $.user.addresses
+MONOSCOPE_REDACT_RES_BODY: $.users[*].email, $.users[*].credit_card
 ```
 
 ```=html
@@ -241,8 +241,8 @@ APITOOLKIT_REDACT_RES_BODY: $.users[*].email, $.users[*].credit_card
 <div class="callout">
   <p><i class="fa-regular fa-circle-info"></i> <b>Note</b></p>
   <ul>
-    <li>The <code>APITOOLKIT_REDACT_HEADERS</code> variable expects a list of <b>case-insensitive headers as strings</b>.</li>
-    <li>The <code>APITOOLKIT_REDACT_REQ_BODY</code> and <code>APITOOLKIT_REDACT_RES_BODY</code> variables expect a list of <b>JSONPaths as strings</b>.</li>
+    <li>The <code>MONOSCOPE_REDACT_HEADERS</code> variable expects a list of <b>case-insensitive headers as strings</b>.</li>
+    <li>The <code>MONOSCOPE_REDACT_REQ_BODY</code> and <code>MONOSCOPE_REDACT_RES_BODY</code> variables expect a list of <b>JSONPaths as strings</b>.</li>
     <li>The list of items to be redacted will be applied to all endpoint requests and responses on your server.</li>
   </ul>
 </div>
@@ -250,14 +250,14 @@ APITOOLKIT_REDACT_RES_BODY: $.users[*].email, $.users[*].credit_card
 
 ## Error Reporting
 
-With APItoolkit, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+With Monoscope, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
-To manually report specific errors at different parts of your application, use the `report_error()` function from the `apitoolkit_pyramid` module, passing in the `request` and `error` arguments, like so:
+To manually report specific errors at different parts of your application, use the `report_error()` function from the `monoscope_pyramid` module, passing in the `request` and `error` arguments, like so:
 
 ```python
 from pyramid.response import Response
 from pyramid.view import view_config
-from apitoolkit_pyramid import observe_request, report_error
+from monoscope_pyramid import observe_request, report_error
 
 @view_config(route_name='home')
 def home(request):
@@ -272,14 +272,14 @@ def home(request):
 
 ## Monitoring Outgoing Requests
 
-Outgoing requests are external API calls you make from your API. By default, APItoolkit monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
+Outgoing requests are external API calls you make from your API. By default, Monoscope monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
 
-To monitor outgoing HTTP requests from your application, use the `observe_request()` function from the `apitoolkit_pyramid` module, passing in the `request` argument, like so:
+To monitor outgoing HTTP requests from your application, use the `observe_request()` function from the `monoscope_pyramid` module, passing in the `request` argument, like so:
 
 ```python
 from pyramid.response import Response
 from pyramid.view import view_config
-from apitoolkit_pyramid import observe_request
+from monoscope_pyramid import observe_request
 
 @view_config(route_name='home')
 def home(request):
@@ -303,7 +303,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The `observe_request()` function wraps an <a href="https://github.com/apitoolkit/apitoolkit-python/main/tree/pyramid" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
+  <p>The `observe_request()` function wraps an <a href="https://github.com/monoscope-tech/apitoolkit-python/main/tree/pyramid" target="_blank" rel="noopener noreferrer" class="">HTTPX</a>
 
  client and you can use it just like you would normally use HTTPX for any request.</p>
 </div>
@@ -311,7 +311,7 @@ The `observe_request()` function accepts a **required `request` argument**, and 
 
 ```=html
 <hr />
-<a href="https://github.com/apitoolkit/apitoolkit-pyramid" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
+<a href="https://github.com/monoscope-tech/monoscope-pyramid" target="_blank" rel="noopener noreferrer" class="w-full btn btn-outline link link-hover">
     <i class="fa-brands fa-github"></i>
     Explore the Pyramid SDK
 </a>
