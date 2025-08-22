@@ -6,14 +6,14 @@
     <div class="pt-16 pb-20 lg:pt-24 lg:pb-28">
       <div class="relative mx-auto divide-y-2 divide-gray-200 dark:divide-gray-700">
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-6xl">
-            The APItoolkit Blog
-          </h2>
-          <h5 class="pt-2 pb-5">Sharing knowledge about building and maintaining impeccable APIs.</h5>
+          <h1 class="text-4xl font-normal leading-tight text-textStrong sm:text-5xl lg:text-6xl">
+            The monoscope <span class="text-textDisabled">blog</span>
+          </h1>
+          <p class="pt-4 pb-5 text-2xl leading-normal text-textWeak">Sharing knowledge about building and maintaining impeccable APIs.</p>
         </div>
         <div>
           <div class="mt-6 md:gap-4">
-            <p class="pl-2 sm:pl-3 pb-3 sm:text-lg text-base-content">
+            <p class="pl-2 sm:pl-3 pb-3 text-lg text-textWeak">
             Get articles and updates in your inbox on what we learn while building APItoolkit.
             </p>
             <div class="15d365ef1d">
@@ -23,37 +23,42 @@
         </div>
         <section class="mt-6 pt-10 ">
           {% if this.frontmatter.title != "Blog" and this.frontmatter.title != "" %}
-          <h3 class="font-black pb-3"> ❯ &nbsp; {{ this.frontmatter.title }}</h3>
+          <h2 class="text-2xl font-semibold pb-3 text-textStrong"> ❯ &nbsp; {{ this.frontmatter.title }}</h2>
           {% endif %}
 
-          <div class="grid gap-1 sm:gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+          <div class="grid gap-x-6 gap-y-12 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           {% assign blog_posts = file_list | where_glob: 'file_path', "./blog/*/index.md" | sort: "date" %}
           {% for post in blog_posts %}
             <div
-              class="overflow-hidden flex flex-col content-between justify-between border border-stone-200 dark:border-gray-700 p-1 sm:p-2 md:p-6 rounded-xl bg-base-100 hover:drop-shadow-2xl shadow-slate-200 transition duration-300 ease-in-out">
+              class="overflow-hidden flex flex-col content-between justify-between">
               <div>
 
-                <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-slate-100 dark:border-gray-700 mt-2 block" />
-
-                <p class="mt-4">{{ post.frontmatter.date | date: "%B %d, %Y"}}</p>
+                <img data-src="{% if post.frontmatter.featured_image %}{{post.permalink}}{{post.frontmatter.featured_image}}{% endif %}" class="lazy aspect-7/3 rounded-md object-cover border border-strokeWeak mt-2 block" />
 
                 <a href="{{post.permalink}}" class="">
-                  <h6 class="text-lg sm:text-xl font-bold text-base-content pt-3">{{post.frontmatter.title }}</h6>
-                  <p class="mt-3 leading-relaxed">{{post.markdown_body | markdownify | strip_html | truncatewords: 30, "..."}}</p>
+                  <h3 class="text-lg sm:text-xl font-semibold text-textStrong pt-4">{{post.frontmatter.title }}</h3>
+                  <p class="mt-3 text-textWeak leading-relaxed">{{post.markdown_body | markdownify | strip_html | truncatewords: 30, "..."}}</p>
                 </a>
 
                 <a href="{{post.permalink}}"
-                  class="mt-2 inline-block text-sm font-medium text-blue-900 dark:text-info hover:text-indigo-900 dark:hover:text-info ">
+                  class="mt-2 inline-block text-sm font-medium text-textBrand hover:underline hover:underline-offset-2">
                   Read ❯
                 </a>
 
                 {% if post.frontmatter.author %}
                   {% assign author = config.raw.authors[post.frontmatter.author] %}
-                  <div class="pt-6 space-x-2 ">
-                    <img class="w-5 h-5 rounded-full inline-block" src='{{author.picture}}' />
-                    <span class="text-xs font-normal inline-block text-stone-700 dark:text-info">By 
-                        <span class="underline">{{author.name}}</span>
-                    <span>
+                  <div class="pt-6 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                      <img class="w-5 h-5 rounded-full" src='{{author.picture}}' />
+                      <span class="text-xs font-normal text-textWeak">By 
+                          <span class="underline">{{author.name}}</span>
+                      </span>
+                    </div>
+                    <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
+                  </div>
+                {% else %}
+                  <div class="pt-6">
+                    <span class="text-xs text-textDisabled">{{ post.frontmatter.date | date: "%B %d, %Y"}}</span>
                   </div>
                 {% endif %}
 
