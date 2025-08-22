@@ -53,6 +53,13 @@
         font-family: Inter, "Inter Fallback", sans-serif;
       }
       
+      /* Table of Contents Active State */
+      #tableOfContents a.active {
+        color: var(--color-textBrand-strong);
+        border-left-color: var(--color-strokeBrand-strong);
+        font-weight: 500;
+      }
+      
       /* Only apply header styles within the article */
       #mainArticle h1,
       #mainArticle h2,
@@ -713,7 +720,7 @@
       {% for page in pages %}
       <section class="pl-1">
       <!-- FILE TREE PARENT -->
-        <a class="block font-medium text-base pb-3 text-textStrong hover:text-textBrand-strong transition-colors" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
+        <a class="block font-semibold text-sm uppercase tracking-wider pb-2 text-textStrong hover:text-textBrand-strong transition-colors" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
         {% capture glob_pattern1 %}.{{ page.permalink }}*/index.md{% endcapture %}
         <!-- In an idea scenario, we will sort this automatically based on "frontmatter.title"
              but the dashboard guides page requires custom sorting and will conflict with the
@@ -722,22 +729,22 @@
         {% assign subpages = file_list | where_glob: 'file_path', glob_pattern1 | sort: 'frontmatter.menuWeight' %}
         {% if subpages.size > 0 %}
         <!-- FILE TREE CHILDREN -->
-        <ul class="space-y-2">
+        <ul class="space-y-1">
           {% for subpage in subpages %}
           <li>
             {% assign is_active_page = subpage.permalink | equals: this.permalink %}
             <a href="{{ subpage.permalink }}"
-               class="hover:text-textBrand-strong {{ is_active_page | ternary: 'text-textBrand-strong', '' }}">{{
+               class="block py-1 px-3 rounded-md hover:bg-fillWeak hover:text-textBrand-strong transition-all duration-200 {{ is_active_page | ternary: 'text-textBrand-strong font-medium bg-fillBrand-weak', 'text-textWeak' }}">{{
                subpage.frontmatter.title }}</a>
             {% capture glob_pattern2 %}.{{ subpage.permalink }}*/index.md{% endcapture %}
             {% assign subsubpages = file_list | where_glob: 'file_path', glob_pattern2 | sort %}
             {% if subsubpages.size > 0 %}
-            <ul class="pl-5 space-y-2 pt-2">
+            <ul class="ml-3 mt-1 space-y-1 border-l border-strokeWeak">
               {% for subsubpage in subsubpages %}
               <li>
                 {% assign is_active_subpage = subsubpage.permalink | equals: this.permalink %}
                 <a href="{{ subsubpage.permalink }}"
-                  class="hover:text-textBrand-strong {{ is_active_subpage | ternary: 'text-textBrand-strong', '' }}">{{
+                  class="block py-1 pl-4 pr-3 text-sm hover:text-textBrand-strong transition-all duration-200 border-l-2 border-transparent hover:border-strokeBrand-strong -ml-px {{ is_active_subpage | ternary: 'text-textBrand-strong font-medium border-strokeBrand-strong', 'text-textWeak' }}">{{
                   subsubpage.frontmatter.title }}</a>
               </li>
               {% endfor %}
@@ -752,7 +759,7 @@
       {% endcapture %}
         {% unless this.frontmatter.hideFileTree %}
           <div class="w-64 leading-relaxed border-r border-r-strokeWeak hidden sm:block ">
-            <nav class="h-full w-64 space-y-8 text-sm py-48 pr-5 fixed top-0 overflow-y-scroll">
+            <nav class="h-full w-64 space-y-6 text-sm py-32 pr-8 pl-4 fixed top-0 overflow-y-scroll">
               {{ main_menu_items }}
             </nav>
           </div>
@@ -836,16 +843,33 @@
           </div>
         </div>
         {% unless this.frontmatter.hideToc %}
-          <section class="w-56 hidden sm:block">
-            <div class="w-56 my-48 fixed top-0 text-sm space-y-4">
-              <strong class="block font-medium text-base text-textStrong">On this page:</strong>
-              <ul class="space-y-2 border-l border-strokeWeak overflow-y-auto max-h-[calc(100vh-8rem)]" id="tableOfContents">
-                {% for toc in this.toc %}
-                  <li class="hover:underline underline-offset-4 pl-{{toc.level | times: 3}}">
-                    <a href="#{{toc.id}}" class="text-textWeak hover:text-textBrand-strong transition-colors">{{ toc.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
+          <section class="w-64 hidden lg:block">
+            <div class="w-64 fixed top-32 pr-8">
+              <nav class="sticky top-0">
+                <h3 class="font-semibold text-sm uppercase tracking-wider text-textStrong mb-4">On this page</h3>
+                <ul class="space-y-1 text-sm overflow-y-auto max-h-[calc(100vh-12rem)]" id="tableOfContents">
+                  {% for toc in this.toc %}
+                    {% assign indent_class = "" %}
+                    {% if toc.level == 1 %}
+                      {% assign indent_class = "pl-0" %}
+                    {% elsif toc.level == 2 %}
+                      {% assign indent_class = "pl-4" %}
+                    {% elsif toc.level == 3 %}
+                      {% assign indent_class = "pl-8" %}
+                    {% elsif toc.level == 4 %}
+                      {% assign indent_class = "pl-12" %}
+                    {% else %}
+                      {% assign indent_class = "pl-16" %}
+                    {% endif %}
+                    <li class="{{indent_class}} relative">
+                      <a href="#{{toc.id}}" 
+                         class="block py-1 pr-3 text-textWeak hover:text-textBrand-strong transition-all duration-200 border-l-2 border-transparent hover:border-strokeBrand-strong -ml-px pl-4">
+                        {{ toc.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </nav>
             </div>
           </section>
         {% endunless %}
@@ -890,15 +914,15 @@
                 document.querySelectorAll('#tableOfContents a').forEach((link) => {
                   if (link.getAttribute('href').substring(1) === entry.target.id) {
                     document.querySelectorAll('#tableOfContents a').forEach(function (element) {
-                      element.classList.remove('text-textBrand-strong');
+                      element.classList.remove('active');
                     });
-                    link.classList.add('text-textBrand-strong');
+                    link.classList.add('active');
                   }
                 });
               }
             });
           },
-          { rootMargin: '0px', threshold: 0.0001 }
+          { rootMargin: '-80px 0px -80% 0px', threshold: 0 }
         );
 
         // Observe all headings within the article

@@ -2924,6 +2924,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-32 {
+    top: calc(var(--spacing) * 32);
+  }
   .top-\[-15px\] {
     top: -15px;
   }
@@ -4973,6 +4976,12 @@
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
+  .-ml-px {
+    margin-left: -1px;
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
@@ -5617,6 +5626,9 @@
   .max-h-\[calc\(100vh-8rem\)\] {
     max-height: calc(100vh - 8rem);
   }
+  .max-h-\[calc\(100vh-12rem\)\] {
+    max-height: calc(100vh - 12rem);
+  }
   .min-h-full {
     min-height: 100%;
   }
@@ -6111,6 +6123,13 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-2\.5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-3 {
@@ -7100,6 +7119,9 @@
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -7187,11 +7209,20 @@
   .pt-\[18px\] {
     padding-top: 18px;
   }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
   }
+  .pr-8 {
+    padding-right: calc(var(--spacing) * 8);
+  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
@@ -7217,6 +7248,9 @@
   .pb-\[6px\] {
     padding-bottom: 6px;
   }
+  .pl-0 {
+    padding-left: calc(var(--spacing) * 0);
+  }
   .pl-1 {
     padding-left: calc(var(--spacing) * 1);
   }
@@ -7232,8 +7266,17 @@
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
   }
+  .pl-8 {
+    padding-left: calc(var(--spacing) * 8);
+  }
   .pl-9 {
     padding-left: calc(var(--spacing) * 9);
+  }
+  .pl-12 {
+    padding-left: calc(var(--spacing) * 12);
+  }
+  .pl-16 {
+    padding-left: calc(var(--spacing) * 16);
   }
   .text-center {
     text-align: center;
@@ -10364,6 +10407,11 @@
   .lg\:col-span-4 {
     @media (width >= 64rem) {
       grid-column: span 4 / span 4;
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
     }
   }
   .lg\:h-96 {
