@@ -1,57 +1,307 @@
 {% render "default/components/head", this:this, config:config %}
 {% render "default/components/nav", this:this, config:config %}
-<main class="text-center">
-  <div class="our_container py-16 w-full relative overflow-hidden">
-    <article class="mt-6 prose prose-lg dark:prose-invert sm:prose-xl prose-indigo prose-base mx-auto prose-img:drop-shadow-md prose-img:rounded-md ">
-      <div class="flex gap-4 items-center">
-        <span class="font-bold">Share:</span>
-        <!-- X (Twitter) -->
-        <a href="https://www.twitter.com/share?url=https://apitoolkit.io{{ this.permalink }}&text={{ this.frontmatter.title }}" target="_blank"
-          title="Share on Twitter"
-          class="inline-block rounded px-6 py-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-          style="background-color: #1da1f2">
-          <svg class="icon h-5 w-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#x-twitter"></use></svg>
-        </a>
 
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://apitoolkit.io{{ this.permalink }}" target="_blank"
-          title="Share on Facebook"
-          class="inline-block rounded px-6 py-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-          style="background-color: #1877f2">
-          <svg  class="icon h-5 w-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#facebook-f"></use></svg>
-        </a>
+<main>
+  <!-- Hero Section -->
+  <div class="w-full bg-gradient-to-b from-fillWeak to-transparent">
+    <div class="max-w-4xl mx-auto px-3 pt-32 pb-16">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-sm text-textWeak mb-8">
+        <a href="/" class="hover:text-textBrand transition-colors">Home</a>
+        <svg class="w-4 h-4 opacity-50"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg>
+        <a href="/blog/" class="hover:text-textBrand transition-colors">Blog</a>
+        <svg class="w-4 h-4 opacity-50"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg>
+        <span class="text-textStrong">Article</span>
+      </nav>
 
-        <!-- Linkedin -->
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ this.permalink}}&title={{ this.frontmatter.title }}"
-          target="_blank" title="Share on LinkedIn"
-          class="inline-block rounded px-6 py-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-          style="background-color: #0077b5">
-          <svg  class="icon h-5 w-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#linkedin"></use></svg>
-        </a>
+      <!-- Article Header -->
+      <header class="space-y-6">
+        <!-- Category Badge -->
+        {% if this.frontmatter.categories %}
+          <div class="flex flex-wrap gap-2">
+            {% for category in this.frontmatter.categories %}
+              <a href="/blog/categories/{{ category | slugify }}" 
+                 class="inline-flex items-center px-3 py-1 bg-fillBrand-weak text-textBrand rounded-full text-sm font-medium hover:bg-fillBrand-strong hover:text-textInverse-strong transition-colors">
+                {{ category }}
+              </a>
+            {% endfor %}
+          </div>
+        {% elsif this.frontmatter.categoties %}
+          <div class="flex flex-wrap gap-2">
+            {% for category in this.frontmatter.categoties %}
+              <a href="/blog/categories/{{ category | slugify }}" 
+                 class="inline-flex items-center px-3 py-1 bg-fillBrand-weak text-textBrand rounded-full text-sm font-medium hover:bg-fillBrand-strong hover:text-textInverse-strong transition-colors">
+                {{ category }}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
 
-        <!-- Reddit -->
-        <a href="https://www.reddit.com/submit?url=https://apitoolkit.io{{ this.permalink }}&title={{ this.frontmatter.title }} || By APIToolkit" target="_blank"
-          title="Share on Reddit" style="background-color:  #ff4500"
-          class="inline-block rounded px-6 py-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-          <svg  class="icon h-5 w-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#reddit-alien"></use></svg>
-        </a>
+        <!-- Title -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight text-textStrong">
+          {{ this.frontmatter.title }}
+        </h1>
 
-        <!-- Discord -->
-        <a href="https://discord.com/share?url=https://apitoolkit.io{{ this.permalink }}&title={{ this.frontmatter.title }}" target="_blank"
-          title="Share on Discord"
-          class="inline-block rounded px-6 py-1 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-          style="background-color: #7289DA">
-          <svg class="icon h-5 w-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#discord"></use></svg>
-        </a>
-      </div>
-        <div class="mt-2 block text-base text-blue-600 dark:text-info font-semibold tracking-wide uppercase">
-          {{ this.frontmatter.date | date: "%B %d, %Y" }}
+        <!-- Meta Information -->
+        <div class="flex flex-wrap items-center gap-6 text-textWeak">
+          {% if this.frontmatter.author %}
+            {% assign author = config.raw.authors[this.frontmatter.author] %}
+            <div class="flex items-center gap-3">
+              <img class="w-12 h-12 rounded-full border-2 border-strokeWeak" 
+                   src="{{ author.picture }}" 
+                   alt="{{ author.name }}">
+              <div>
+                <p class="text-textStrong font-medium">{{ author.name }}</p>
+                {% if author.role %}
+                  <p class="text-sm">{{ author.role }}</p>
+                {% endif %}
+              </div>
+            </div>
+            <span class="hidden sm:block w-px h-8 bg-strokeWeak"></span>
+          {% endif %}
+          
+          <time class="text-sm font-medium" datetime="{{ this.frontmatter.date }}">
+            {{ this.frontmatter.date | date: "%B %d, %Y" }}
+          </time>
+          
+          {% if this.frontmatter.readingTime %}
+            <span class="hidden sm:block w-px h-8 bg-strokeWeak"></span>
+            <span class="text-sm font-medium">{{ this.frontmatter.readingTime }} min read</span>
+          {% endif %}
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Featured Image -->
+  {% if this.frontmatter.featured_image %}
+    <div class="max-w-6xl mx-auto px-3 -mt-8 mb-16">
+      <img src="{{ this.permalink }}{{ this.frontmatter.featured_image }}" 
+           alt="{{ this.frontmatter.title }}"
+           class="w-full aspect-video object-cover rounded-2xl shadow-xl border border-strokeWeak">
+    </div>
+  {% endif %}
+
+  <!-- Article Content -->
+  <article class="max-w-4xl mx-auto px-3">
+    <div class="prose prose-lg prose-gray dark:prose-invert mx-auto
+                prose-headings:font-normal prose-headings:text-textStrong
+                prose-h1:text-3xl prose-h1:sm:text-4xl prose-h1:mb-8 prose-h1:mt-12
+                prose-h2:text-2xl prose-h2:sm:text-3xl prose-h2:mb-6 prose-h2:mt-10
+                prose-h3:text-xl prose-h3:sm:text-2xl prose-h3:mb-4 prose-h3:mt-8
+                prose-p:text-textWeak prose-p:leading-relaxed prose-p:mb-6
+                prose-a:text-textBrand prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-fillBrand-strong
+                prose-strong:text-textStrong prose-strong:font-semibold
+                prose-code:text-textBrand prose-code:bg-fillBrand-weak prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-[''] prose-code:after:content-['']
+                prose-pre:bg-fillWeak prose-pre:border prose-pre:border-strokeWeak prose-pre:shadow-sm
+                prose-blockquote:border-l-4 prose-blockquote:border-strokeBrand-strong prose-blockquote:bg-fillBrand-weak prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:italic
+                prose-img:rounded-xl prose-img:shadow-lg prose-img:border prose-img:border-strokeWeak
+                prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2
+                prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-2
+                prose-li:text-textWeak prose-li:leading-relaxed
+                prose-table:border prose-table:border-strokeWeak prose-table:rounded-lg prose-table:overflow-hidden
+                prose-th:bg-fillWeak prose-th:font-semibold prose-th:text-textStrong
+                prose-td:border-t prose-td:border-strokeWeak">
+      
+      {{ this.content }}
+      
+    </div>
+  </article>
+
+  <!-- Share Section -->
+  <div class="max-w-4xl mx-auto px-3 mt-16 mb-8">
+    <div class="border-t border-strokeWeak pt-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <!-- Share Buttons -->
+        <div class="flex items-center gap-3">
+          <span class="text-sm font-medium text-textWeak">Share this article:</span>
+          <div class="flex items-center gap-2">
+            <!-- X/Twitter -->
+            <a href="https://www.twitter.com/share?url=https://apitoolkit.io{{ this.permalink }}&text={{ this.frontmatter.title }}" 
+               target="_blank" rel="noopener noreferrer"
+               title="Share on X"
+               class="group p-2 bg-fillWeak hover:bg-fillBrand-weak rounded-lg transition-all duration-200 hover:scale-110">
+              <svg class="w-5 h-5 text-textWeak group-hover:text-textBrand"><use xlink:href="/assets/deps/fontawesome/brands.svg#x-twitter"></use></svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://apitoolkit.io{{ this.permalink }}&title={{ this.frontmatter.title }}"
+               target="_blank" rel="noopener noreferrer"
+               title="Share on LinkedIn"
+               class="group p-2 bg-fillWeak hover:bg-fillBrand-weak rounded-lg transition-all duration-200 hover:scale-110">
+              <svg class="w-5 h-5 text-textWeak group-hover:text-textBrand"><use xlink:href="/assets/deps/fontawesome/brands.svg#linkedin"></use></svg>
+            </a>
+
+            <!-- Reddit -->
+            <a href="https://www.reddit.com/submit?url=https://apitoolkit.io{{ this.permalink }}&title={{ this.frontmatter.title }}" 
+               target="_blank" rel="noopener noreferrer"
+               title="Share on Reddit"
+               class="group p-2 bg-fillWeak hover:bg-fillBrand-weak rounded-lg transition-all duration-200 hover:scale-110">
+              <svg class="w-5 h-5 text-textWeak group-hover:text-textBrand"><use xlink:href="/assets/deps/fontawesome/brands.svg#reddit-alien"></use></svg>
+            </a>
+          </div>
         </div>
 
-      <section class="py-8">
-      {{ this.content }}
-      </section>
-    </article>
+        <!-- Copy Link Button -->
+        <button onclick="copyToClipboard('https://apitoolkit.io{{ this.permalink }}')" 
+                class="flex items-center gap-2 px-4 py-2 bg-fillWeak hover:bg-fillBrand-weak text-textWeak hover:text-textBrand rounded-lg transition-colors group">
+          <svg class="w-4 h-4"><use xlink:href="/assets/deps/sprite.svg#link"></use></svg>
+          <span class="text-sm font-medium">Copy link</span>
+        </button>
+      </div>
+    </div>
   </div>
+
+  <!-- Author Bio Section -->
+  {% if this.frontmatter.author %}
+    {% assign author = config.raw.authors[this.frontmatter.author] %}
+    <div class="max-w-4xl mx-auto px-3 mb-16">
+      <div class="bg-fillWeak rounded-2xl p-8 border border-strokeWeak">
+        <div class="flex flex-col sm:flex-row gap-6">
+          <img class="w-20 h-20 rounded-full border-2 border-strokeBrand-weak" 
+               src="{{ author.picture }}" 
+               alt="{{ author.name }}">
+          <div class="flex-1 space-y-3">
+            <div>
+              <h3 class="text-xl font-semibold text-textStrong">{{ author.name }}</h3>
+              {% if author.role %}
+                <p class="text-textWeak">{{ author.role }}</p>
+              {% endif %}
+            </div>
+            {% if author.bio %}
+              <p class="text-textWeak leading-relaxed">{{ author.bio }}</p>
+            {% endif %}
+            {% if author.social %}
+              <div class="flex items-center gap-3 pt-2">
+                {% if author.social.twitter %}
+                  <a href="{{ author.social.twitter }}" target="_blank" rel="noopener noreferrer" 
+                     class="text-textWeak hover:text-textBrand transition-colors">
+                    <svg class="w-5 h-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#x-twitter"></use></svg>
+                  </a>
+                {% endif %}
+                {% if author.social.linkedin %}
+                  <a href="{{ author.social.linkedin }}" target="_blank" rel="noopener noreferrer"
+                     class="text-textWeak hover:text-textBrand transition-colors">
+                    <svg class="w-5 h-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#linkedin"></use></svg>
+                  </a>
+                {% endif %}
+                {% if author.social.github %}
+                  <a href="{{ author.social.github }}" target="_blank" rel="noopener noreferrer"
+                     class="text-textWeak hover:text-textBrand transition-colors">
+                    <svg class="w-5 h-5"><use xlink:href="/assets/deps/fontawesome/brands.svg#github"></use></svg>
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- Related Articles -->
+  <section class="bg-fillWeak border-t border-strokeWeak">
+    <div class="max-w-7xl mx-auto px-3 py-16">
+      <h2 class="text-3xl font-normal text-textStrong mb-8">Related articles</h2>
+      
+      {% assign all_posts = file_list | where_glob: 'file_path', "./blog/*/index.md" | sort: "date" %}
+      {% assign related_posts = "" | split: "," %}
+      
+      {% if this.frontmatter.categories %}
+        {% assign current_categories = this.frontmatter.categories %}
+      {% elsif this.frontmatter.categoties %}
+        {% assign current_categories = this.frontmatter.categoties %}
+      {% else %}
+        {% assign current_categories = "" | split: "," %}
+      {% endif %}
+      
+      {% for post in all_posts %}
+        {% if post.permalink != this.permalink %}
+          {% assign has_common_category = false %}
+          
+          {% if post.frontmatter.categories %}
+            {% assign post_categories = post.frontmatter.categories %}
+          {% elsif post.frontmatter.categoties %}
+            {% assign post_categories = post.frontmatter.categoties %}
+          {% else %}
+            {% assign post_categories = "" | split: "," %}
+          {% endif %}
+          
+          {% for cat in current_categories %}
+            {% if post_categories contains cat %}
+              {% assign has_common_category = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          
+          {% if has_common_category %}
+            {% assign related_posts = related_posts | push: post %}
+          {% endif %}
+        {% endif %}
+        
+        {% if related_posts.size >= 3 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      <!-- If not enough related posts, just show recent posts -->
+      {% if related_posts.size < 3 %}
+        {% for post in all_posts limit: 3 %}
+          {% if post.permalink != this.permalink %}
+            {% assign related_posts = related_posts | push: post %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      
+      <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+        {% for post in related_posts limit: 3 %}
+          <article class="group">
+            <a href="{{ post.permalink }}" class="block space-y-3">
+              {% if post.frontmatter.featured_image %}
+                <img src="{{ post.permalink }}{{ post.frontmatter.featured_image }}" 
+                     alt="{{ post.frontmatter.title }}"
+                     class="w-full aspect-video object-cover rounded-xl border border-strokeWeak group-hover:shadow-lg transition-all duration-200">
+              {% else %}
+                <div class="w-full aspect-video bg-gradient-to-br from-fillBrand-weak to-fillWeak rounded-xl border border-strokeWeak group-hover:shadow-lg transition-all duration-200"></div>
+              {% endif %}
+              
+              <div class="space-y-2">
+                <h3 class="text-lg font-medium text-textStrong group-hover:text-textBrand transition-colors line-clamp-2">
+                  {{ post.frontmatter.title }}
+                </h3>
+                <p class="text-sm text-textWeak line-clamp-2">
+                  {{ post.markdown_body | markdownify | strip_html | truncatewords: 20, "..." }}
+                </p>
+                <div class="flex items-center justify-between pt-2">
+                  <time class="text-xs text-textDisabled">
+                    {{ post.frontmatter.date | date: "%B %d, %Y" }}
+                  </time>
+                  <span class="text-xs font-medium text-textBrand group-hover:underline">
+                    Read more →
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<!-- Copy to clipboard script -->
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const button = event.currentTarget;
+    const originalText = button.querySelector('span').textContent;
+    button.querySelector('span').textContent = 'Copied!';
+    setTimeout(() => {
+      button.querySelector('span').textContent = originalText;
+    }, 2000);
+  });
+}
+</script>
+
 {% render "default/components/foot", this:this %}
