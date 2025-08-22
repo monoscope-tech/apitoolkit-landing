@@ -53,40 +53,34 @@
         font-family: Inter, "Inter Fallback", sans-serif;
       }
       
-      h1 {
-        font-weight: 700;
-      }
-
-      h2 {
-        font-weight: 600;
-      }
-
-      h3,
-      h4,
-      h5 {
-        font-weight: 500;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+      /* Only apply header styles within the article */
+      #mainArticle h1,
+      #mainArticle h2,
+      #mainArticle h3,
+      #mainArticle h4,
+      #mainArticle h5,
+      #mainArticle h6 {
         position: relative;
         cursor: pointer;
       }
 
       .header-link {
         position: absolute;
-        left: -20px;
-        top: 5px;
+        left: -24px;
+        top: 50%;
+        transform: translateY(-50%);
         display: none;
         text-decoration: none;
-        color: #737373;
+        color: var(--color-textBrand-strong);
         cursor: pointer;
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding-right: 20px;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+      }
+
+      .header-link:hover {
+        opacity: 1;
       }
 
       h1:hover .header-link,
@@ -137,11 +131,11 @@
       }
 
       .callout {
-        background-color: var(--color-fillWeak);
-        border-left: 6px solid var(--color-strokeBrand-strong);
-        padding: 16px;
-        margin: 16px 0;
-        border-radius: 4px;
+        background-color: var(--color-fillBrand-weak);
+        border-left: 4px solid var(--color-strokeBrand-strong);
+        padding: 20px;
+        margin: 24px 0;
+        border-radius: 8px;
       }
 
       .callout p:first-of-type {
@@ -170,22 +164,44 @@
       }
 
       .docs-table table thead tr th {
-        font-weight: bold;
+        font-weight: 600;
         text-align: left;
-        padding: 0 10px 5px 10px;
+        padding: 12px;
+        color: var(--color-textStrong);
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .docs-table table {
+        border: 1px solid var(--color-strokeWeak);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .docs-table table thead {
+        background-color: var(--color-fillWeak);
       }
 
       .docs-table table thead tr th:first-child {
-        border-right: 1px solid #eeeeef;
+        border-right: 1px solid var(--color-strokeWeak);
       }
 
       .docs-table table tbody tr td:first-child {
-        border-right: 1px solid #eeeeef;
+        border-right: 1px solid var(--color-strokeWeak);
+        font-weight: 500;
+        color: var(--color-textStrong);
+      }
+
+      .docs-table table tbody tr:hover {
+        background-color: var(--color-fillWeak);
       }
 
       .docs-table table tbody tr td {
         vertical-align: middle !important;
-        padding: 10px;
+        padding: 12px;
+        color: var(--color-textWeak);
+        font-size: 1rem;
       }
 
       .btn {
@@ -215,20 +231,32 @@
 
       /* Styling for tabs component */
       .tab-button {
-        padding: 10px 20px;
+        padding: 12px 24px;
         cursor: pointer;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-strokeWeak);
         border-bottom: none;
-        border-radius: 5px 5px 0 0;
-        margin-right: 5px;
+        border-radius: 8px 8px 0 0;
+        margin-right: 8px;
+        background-color: var(--color-fillWeak);
+        color: var(--color-textWeak);
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .tab-button:hover {
+        background-color: var(--color-fillBrand-weak);
+        color: var(--color-textStrong);
       }
       .tab-button.active {
-        border-bottom: 2px solid var(--color-strokeBrand-strong);
+        background-color: var(--color-bgBase);
+        border-bottom: 2px solid var(--color-bgBase);
+        color: var(--color-textBrand-strong);
+        font-weight: 600;
       }
       .tab-content {
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 0 5px 5px 5px;
+        padding: 24px;
+        border: 1px solid var(--color-strokeWeak);
+        border-radius: 0 8px 8px 8px;
+        background-color: var(--color-bgBase);
       }
       .tab-content.active {
         display: block;
@@ -580,7 +608,7 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <section class="sticky top-0 w-full bg-bgBase z-10 border-b border-b-strokeWeak">
-      <section class="text-center border-b border-b-strokeWeak">
+      <section class="w-full flex flex-col items-center border-b border-b-strokeWeak">
         <div class="max-w-7xl w-full py-4 px-4 text-left flex justify-between items-center">
           <a href="/" class="px-1 py-1" aria-label="Back to homepage">
             <img class="h-7 dark:hidden" src="/assets/brand/logo_full_color.svg" alt="APItoolkit full color logo">
@@ -645,7 +673,7 @@
       </section>
 
       <section class="text-center">
-        <div class="max-w-7xl w-full gap-4 text-md hidden sm:inline-flex sm:ml-8">
+        <div class="max-w-7xl w-full gap-4 text-md hidden sm:inline-flex sm:ml-8 a:no-underline">
           {% capture root_menu_items %}
         {% assign is_home = this.frontmatter.title | equals: "Home" %}
         <a class="flex gap-3 sm:border-b-2 {{ is_home | ternary: 'sm:border-b-strokeBrand-strong text-textBrand-strong sm:text-current ', 'border-b-transparent' }} py-2 px-1 items-center hover:text-textBrand-strong transition-colors"
@@ -685,7 +713,7 @@
       {% for page in pages %}
       <section class="pl-1">
       <!-- FILE TREE PARENT -->
-        <a class="block font-semibold pb-3 text-textStrong hover:text-textBrand-strong transition-colors" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
+        <a class="block font-medium text-base pb-3 text-textStrong hover:text-textBrand-strong transition-colors" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
         {% capture glob_pattern1 %}.{{ page.permalink }}*/index.md{% endcapture %}
         <!-- In an idea scenario, we will sort this automatically based on "frontmatter.title"
              but the dashboard guides page requires custom sorting and will conflict with the
@@ -753,41 +781,51 @@
         </div>
 
         <div class="flex-1 grow flex relative min-h-screen">
-          <div class="text-center flex-1 grow p-5 pt-12 sm:p-20 sm:pb-28 pb-40 divide-y divide-y-strokeWeak">
+          <div class="text-center flex-1 grow p-5 pt-12 sm:px-12 sm:py-20 sm:pb-28 pb-40 divide-y divide-y-strokeWeak">
             <article
               class="
-                text-left pb-12 prose prose-slate dark:prose-invert prose-headings:font-medium prose-a:text-textBrand-strong prose-a:underline prose-a:underline-offset-4
-                prose-img:w-full prose-img:rounded-md prose-img:drop-shadow-md prose-img:border prose-img:border-strokeWeak  prose-p:leading-relaxed
-                prose-headings:scroll-mt-40 prose-pre:p-0
+                text-left pb-12 prose prose-lg prose-slate dark:prose-invert 
+                prose-headings:font-normal prose-h1:text-4xl prose-h1:leading-tight prose-h2:text-3xl prose-h2:leading-tight 
+                prose-h3:text-2xl prose-h3:font-semibold prose-h4:text-xl prose-h5:text-lg prose-h6:text-base
+                prose-p:text-textWeak prose-p:leading-relaxed prose-p:text-base
+                prose-strong:text-textStrong prose-strong:font-semibold
+                prose-a:text-textBrand-strong prose-a:underline prose-a:underline-offset-4 hover:prose-a:text-textBrand-weak
+                prose-img:w-full prose-img:rounded-xl prose-img:drop-shadow-md prose-img:border prose-img:border-strokeWeak
+                prose-headings:scroll-mt-40 prose-pre:p-0 prose-pre:rounded-xl
+                prose-code:text-sm prose-code:bg-fillWeak prose-code:text-textStrong prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                prose-pre:bg-transparent prose-pre:code:bg-transparent prose-code:before:content-none prose-code:after:content-none
                 before:prose-li:bg-fillBrand-strong before:prose-li:text-textBrand-strong
-                prose-strong:font-medium w-full {%if this.frontmatter.pageFullWidth%}max-w-none {%endif%}
+                prose-blockquote:border-l-4 prose-blockquote:border-fillBrand-strong prose-blockquote:text-textWeak prose-blockquote:italic prose-blockquote:pl-4
+                prose-ul:text-textWeak prose-ol:text-textWeak prose-li:mb-2
+                prose-headings:text-textStrong
+                w-full max-w-4xl mx-auto {%if this.frontmatter.pageFullWidth%}max-w-none {%endif%}
               "
               id="mainArticle"
             >
               {{ this.content }}
             </article>
-            <footer class="text-center py-12 space-y-2">
-              <h5 class="font-semibold">Need assistance or have some feedback for us? You can reach out to us at:</h5>
-              <p>
-                <i class="fa-regular fa-envelope"></i>
+            <footer class="text-center py-12 space-y-4">
+              <h5 class="font-medium text-lg text-textStrong">Need assistance or have some feedback for us? You can reach out to us at:</h5>
+              <p class="text-textWeak">
+                <i class="fa-regular fa-envelope text-textBrand"></i>
                 <a
-                  class="link"
+                  class="text-textBrand-strong hover:text-textBrand-weak underline underline-offset-4 transition-colors"
                   href="mailto:hello@apitoolkit.io"
                   >hello@apitoolkit.io</a
                 >
-                |
-                <i class="fa-brands fa-discord"></i>
+                <span class="px-2">|</span>
+                <i class="fa-brands fa-discord text-textBrand"></i>
                 <a
-                  class="link"
+                  class="text-textBrand-strong hover:text-textBrand-weak underline underline-offset-4 transition-colors"
                   href="https://apitoolkit.io/discord"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Discord Community Server</a
                 >
-                |
-                <i class="fa-brands fa-github"></i>
+                <span class="px-2">|</span>
+                <i class="fa-brands fa-github text-textBrand"></i>
                 <a
-                  class="link"
+                  class="text-textBrand-strong hover:text-textBrand-weak underline underline-offset-4 transition-colors"
                   href="https://github.com/apitoolkit/apitoolkit-landing/issues/new/choose"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -800,7 +838,7 @@
         {% unless this.frontmatter.hideToc %}
           <section class="w-56 hidden sm:block">
             <div class="w-56 my-48 fixed top-0 text-sm space-y-4">
-              <strong class="block font-medium text-textStrong">On this page:</strong>
+              <strong class="block font-medium text-base text-textStrong">On this page:</strong>
               <ul class="space-y-2 border-l border-strokeWeak overflow-y-auto max-h-[calc(100vh-8rem)]" id="tableOfContents">
                 {% for toc in this.toc %}
                   <li class="hover:underline underline-offset-4 pl-{{toc.level | times: 3}}">
