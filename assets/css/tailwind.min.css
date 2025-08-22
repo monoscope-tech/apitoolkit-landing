@@ -3723,6 +3723,9 @@
       }
     }
   }
+  .-mx-3 {
+    margin-inline: calc(var(--spacing) * -3);
+  }
   .-mx-5 {
     margin-inline: calc(var(--spacing) * -5);
   }
@@ -4982,6 +4985,9 @@
   .-ml-px {
     margin-left: -1px;
   }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
   }
@@ -5856,6 +5862,9 @@
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
   }
+  .min-w-full {
+    min-width: 100%;
+  }
   .flex-1 {
     flex: 1;
   }
@@ -5921,6 +5930,9 @@
   }
   .rotate-90 {
     rotate: 90deg;
+  }
+  .rotate-180 {
+    rotate: 180deg;
   }
   .swap-flip {
     transform-style: preserve-3d;
@@ -6697,6 +6709,9 @@
   }
   .bg-bgOverlay {
     background-color: var(--color-bgOverlay);
+  }
+  .bg-bgRaised {
+    background-color: var(--color-bgRaised);
   }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
@@ -8544,14 +8559,35 @@
       padding: calc(var(--spacing) * 6);
     }
   }
+  .\*\:px-3 {
+    :is(& > *) {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
   .\*\:px-4 {
     :is(& > *) {
       padding-inline: calc(var(--spacing) * 4);
     }
   }
+  .\*\:py-2\.5 {
+    :is(& > *) {
+      padding-block: calc(var(--spacing) * 2.5);
+    }
+  }
   .\*\:py-3 {
     :is(& > *) {
       padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .\*\:text-sm {
+    :is(& > *) {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .\*\:whitespace-nowrap {
+    :is(& > *) {
+      white-space: nowrap;
     }
   }
   .\*\:underline {
@@ -9626,6 +9662,12 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
+  .has-\[\:checked\]\:border {
+    &:has(*:is(:checked)) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .has-\[\:checked\]\:\!border-fillBrand-strong {
     &:has(*:is(:checked)) {
       border-color: var(--color-fillBrand-strong) !important;
@@ -9649,6 +9691,12 @@
   .has-\[\:checked\]\:\!text-textBrand {
     &:has(*:is(:checked)) {
       color: var(--color-textBrand) !important;
+    }
+  }
+  .has-\[\:checked\]\:shadow {
+    &:has(*:is(:checked)) {
+      --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .sm\:col-span-2 {
@@ -10311,6 +10359,11 @@
   .md\:max-w-\[800px\] {
     @media (width >= 48rem) {
       max-width: 800px;
+    }
+  }
+  .md\:min-w-0 {
+    @media (width >= 48rem) {
+      min-width: calc(var(--spacing) * 0);
     }
   }
   .md\:scale-95 {

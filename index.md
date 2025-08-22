@@ -271,7 +271,7 @@ platforms:
       </div>
     </section>
 
-    <div class="max-w-7xl px-3  py-24 w-full text-3xl leading-relaxed flex flex-col items-start justify-begin text-textWeak">
+    <div class="max-w-7xl px-3  py-24 w-full text-xl sm:text-3xl leading-relaxed flex flex-col items-start justify-begin text-textWeak">
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/split-type"></script>
@@ -307,7 +307,25 @@ platforms:
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
       <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
 
-      <div class="flex justify-between py-8">
+      <!-- Mobile layout -->
+      <div class="md:hidden py-8 space-y-4">
+        <div class="grid grid-cols-2 gap-2 bg-fillWeak border border-strokeWeak rounded-lg p-2">
+         {% for platform in this.frontmatter.platforms %}
+         <label class="cursor-pointer px-3 py-2.5 flex items-center gap-2 text-sm rounded-lg has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
+           <input {% if forloop.first %}checked{% endif %} type="radio" class="hidden peer uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/>
+           <svg class="h-4 w-4 shrink-0 peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg> 
+           <span>{{platform.title}}</span>
+         </label>
+         {% endfor %}
+        </div>
+        <div class="flex justify-center gap-2">
+          <a class="inline-flex items-center shadow border border-strokeStrong p-3 rounded-lg cursor-pointer select-none group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
+          <a class="inline-flex items-center shadow border border-strokeStrong p-3 rounded-lg cursor-pointer select-none group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
+        </div>
+      </div>
+
+      <!-- Desktop layout -->
+      <div class="hidden md:flex justify-between py-8">
         <div class="inline-flex justify-center bg-fillWeak border border-strokeWeak rounded-lg
           *:px-4 *:py-3 *:inline-flex *:items-center *:gap-2
           [&_svg]:h-5 [&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
