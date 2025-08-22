@@ -5596,6 +5596,9 @@
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-36 {
     height: calc(var(--spacing) * 36);
   }
@@ -5826,11 +5829,17 @@
   .max-w-xl {
     max-width: var(--container-xl);
   }
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
   .flex-1 {
     flex: 1;
   }
   .flex-shrink {
     flex-shrink: 1;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
   }
   .shrink-0 {
     flex-shrink: 0;
@@ -6215,6 +6224,9 @@
       margin-inline-end: calc(calc(var(--spacing) * 24) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
+  .gap-y-8 {
+    row-gap: calc(var(--spacing) * 8);
+  }
   .gap-y-10 {
     row-gap: calc(var(--spacing) * 10);
   }
@@ -6382,6 +6394,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -6401,6 +6417,10 @@
   .border-l {
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
+  }
+  .border-l-2 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 2px;
   }
   .border-l-8 {
     border-left-style: var(--tw-border-style);
@@ -6536,11 +6556,23 @@
   .border-r-base-200 {
     border-right-color: var(--color-base-200);
   }
+  .border-r-strokeWeak {
+    border-right-color: var(--color-strokeWeak);
+  }
   .border-b-base-200 {
     border-bottom-color: var(--color-base-200);
   }
+  .border-b-strokeWeak {
+    border-bottom-color: var(--color-strokeWeak);
+  }
   .border-b-transparent {
     border-bottom-color: transparent;
+  }
+  .border-l-strokeBrand-strong {
+    border-left-color: var(--color-strokeBrand-strong);
+  }
+  .border-l-strokeWeak {
+    border-left-color: var(--color-strokeWeak);
   }
   .border-l-transparent {
     border-left-color: transparent;
@@ -6670,6 +6702,12 @@
   }
   .bg-fillWeak {
     background-color: var(--color-fillWeak);
+  }
+  .bg-fillWeak\/30 {
+    background-color: color-mix(in srgb, rgba(0 21 128 / 0.04) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-fillWeak) 30%, transparent);
+    }
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -7696,6 +7734,9 @@
   }
   .\!text-iconBrand {
     color: var(--color-iconBrand) !important;
+  }
+  .\!text-textBrand {
+    color: var(--color-textBrand) !important;
   }
   .text-base-content {
     color: var(--color-base-content);
@@ -9309,6 +9350,13 @@
       }
     }
   }
+  .hover\:text-textBrand {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-textBrand);
+      }
+    }
+  }
   .hover\:text-textBrand\/80 {
     &:hover {
       @media (hover: hover) {
@@ -9837,6 +9885,11 @@
       border-bottom-color: var(--color-secondary);
     }
   }
+  .sm\:border-b-strokeBrand-strong {
+    @media (width >= 40rem) {
+      border-bottom-color: var(--color-strokeBrand-strong);
+    }
+  }
   .sm\:p-2 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 2);
@@ -10164,6 +10217,11 @@
   .md\:p-6 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:p-8 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8);
     }
   }
   .md\:p-12 {
@@ -10641,6 +10699,14 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .before\:prose-li\:bg-fillBrand-strong {
+    &::before {
+      content: var(--tw-content);
+      & :is(:where(li):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+        background-color: var(--color-fillBrand-strong);
+      }
+    }
+  }
   .before\:prose-li\:bg-secondary {
     &::before {
       content: var(--tw-content);
@@ -10676,6 +10742,11 @@
   .prose-img\:border-base-200 {
     & :is(:where(img):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
       border-color: var(--color-base-200);
+    }
+  }
+  .prose-img\:border-strokeWeak {
+    & :is(:where(img):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      border-color: var(--color-strokeWeak);
     }
   }
   .prose-img\:drop-shadow-md {

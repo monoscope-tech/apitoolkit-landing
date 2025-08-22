@@ -19,7 +19,7 @@ pageFullWidth: true
 <p class="text-lg items-center text-center justify-center mt-4">APItoolkit is an API-first monitoring and observability platform for engineering and customer support teams. We use AI to help engineering teams observe, debug, monitor, and test their backend systems and any external API they depend on.</p>
 
 <div class="items-center text-center justify-center mt-8">
-    <a href="/docs/onboarding/" class="btn btn-secondary t-white sm:w-56">Get Started</a>
+    <a href="/docs/onboarding/" class="py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56 text-center inline-block">Get Started</a>
     <p class="inline-block px-5">|</p>
     <a href="https://apitoolkit.io/demo" target="_blank" rel="noopener noreferrer" class="btn btn-outline sm:w-56">Get a Demo</a>
 </div>

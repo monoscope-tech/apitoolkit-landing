@@ -22,7 +22,7 @@ Anthony will be speaking on the topic "**You Can’t Build Interactive Web Apps 
 <hr />
 
 ```=html
-        <a href="https://bigskydevcon.com?ref=apitoolkit" target="_blank" rel="noreferrer noopener" class="w-full btn btn-secondary bg-blue-600 text-white hover:bg-white hover:text-black">
+        <a href="https://bigskydevcon.com?ref=apitoolkit" target="_blank" rel="noreferrer noopener" class="w-full btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors bg-blue-600 text-white hover:bg-white hover:text-black">
             Register
             <i class="fa-regular fa-arrow-right mr-4"></i>
         </a>

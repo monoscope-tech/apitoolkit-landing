@@ -117,7 +117,7 @@ hide_date: true
 $.store.book[*].*
 $.store.bicycle.color
 </textarea>
-        <button class="btn btn-secondary" onclick="redact()">Redact</button>
+        <button class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors" onclick="redact()">Redact</button>
         <code class="language-js block" id="redactedResultError"></code>
         <pre><code class="language-js" id="redactedResult"></code></pre>
     </div>

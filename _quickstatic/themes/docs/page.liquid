@@ -47,18 +47,24 @@
     <script defer src="/assets/deps/htmx/preload.js"></script>
     <script defer src="https://unpkg.com/hyperscript.org@0.9.12"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+      
+      body {
+        font-family: Inter, "Inter Fallback", sans-serif;
+      }
+      
       h1 {
-        font-variation-settings: 'wght' 700, 'mono' 1000;
+        font-weight: 700;
       }
 
       h2 {
-        font-variation-settings: 'wght' 600, 'mono' 500;
+        font-weight: 600;
       }
 
       h3,
       h4,
       h5 {
-        font-variation-settings: 'wght' 500, 'mono' 500;
+        font-weight: 500;
       }
 
       h1,
@@ -73,7 +79,7 @@
 
       .header-link {
         position: absolute;
-        left: -20;
+        left: -20px;
         top: 5px;
         display: none;
         text-decoration: none;
@@ -107,7 +113,7 @@
       }
 
       .docs-card:hover {
-        border-color: #377cfb;
+        border-color: var(--color-strokeBrand-strong);
         transform: translateY(-0.7rem);
         transition-duration: 300ms;
       }
@@ -125,14 +131,14 @@
       }
 
       .docs-card-2:hover {
-        border-color: #377cfb;
+        border-color: var(--color-strokeBrand-strong);
         transform: translateY(-0.5rem);
         transition-duration: 300ms;
       }
 
       .callout {
-        background-color: #f7f7f7;
-        border-left: 6px solid #377cfb;
+        background-color: var(--color-fillWeak);
+        border-left: 6px solid var(--color-strokeBrand-strong);
         padding: 16px;
         margin: 16px 0;
         border-radius: 4px;
@@ -154,13 +160,13 @@
         border-left: 6px solid #ff3131 !important;
       }
 
-      [data-theme='sunset'] .callout {
-        background-color: #c5c5c5;
-        color: #36454f;
+      [data-theme='dark'] .callout {
+        background-color: var(--color-fillAlternate);
+        color: var(--color-textStrong);
       }
 
-      [data-theme='sunset'] .callout code {
-        background: #282c34;
+      [data-theme='dark'] .callout code {
+        background: var(--color-fillRaised);
       }
 
       .docs-table table thead tr th {
@@ -217,7 +223,7 @@
         margin-right: 5px;
       }
       .tab-button.active {
-        border-bottom: 2px solid #377cfb;
+        border-bottom: 2px solid var(--color-strokeBrand-strong);
       }
       .tab-content {
         padding: 20px;
@@ -229,7 +235,7 @@
       }
 
       .faq-answer a {
-        color: #ffffff;
+        color: var(--color-textBrand-strong);
         text-decoration: underline;
       }
     </style>
@@ -474,7 +480,7 @@
 
     <script>
       if (localStorage.getItem('darkMode') === 'true') {
-        document.body.setAttribute('data-theme', 'sunset');
+        document.body.setAttribute('data-theme', 'dark');
       }
     </script>
 
@@ -556,10 +562,10 @@
     </noscript>
   </head>
 
-<body data-theme="emerald" {% comment %}hx-boost="true"{% endcomment %} hx-ext="preload,head-support" class="" preload>
+<body data-theme="light" {% comment %}hx-boost="true"{% endcomment %} hx-ext="preload,head-support" class="" preload>
     <script>
       if (localStorage.getItem('darkMode') === 'true') {
-        document.body.setAttribute('data-theme', 'sunset');
+        document.body.setAttribute('data-theme', 'dark');
       }
     </script>
 
@@ -573,9 +579,9 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <section class="sticky top-0 w-full bg-base-100 z-10 border-b border-b-base-200">
-      <section class="text-center border-b border-b-base-200">
-        <div class="max-w-7xl w-full py-4 px-4 text-left inline-flex justify-between items-center">
+    <section class="sticky top-0 w-full bg-bgBase z-10 border-b border-b-strokeWeak">
+      <section class="text-center border-b border-b-strokeWeak">
+        <div class="max-w-7xl w-full py-4 px-4 text-left flex justify-between items-center">
           <a href="/" class="px-1 py-1" aria-label="Back to homepage">
             <img class="h-7 dark:hidden" src="/assets/brand/logo_full_color.svg" alt="APItoolkit full color logo">
             <img
@@ -585,16 +591,16 @@
             >
           </a>
           <div class="flex gap-4 items-center">
-            <a href="/" class="hidden sm:inline-block text-sm text-secondary">↢&nbsp;Back to Website</a>
+            <a href="/" class="hidden sm:inline-block text-sm text-textBrand-strong whitespace-nowrap flex-shrink-0">↢&nbsp;Back to Website</a>
             <a class="cursor-pointer sm:hidden" onClick="search_modal.showModal()" aria-label="search" title="Search">
               <svg class="icon h-4 w-4 text-current fill-current stroke-current opacity-70">
                 <use xlink:href="/assets/deps/fontawesome/solid.svg#magnifying-glass"></use>
               </svg>
             </a>
-            <a href="https://app.apitoolkit.io?utm_source=docs" class="btn btn-sm btn-secondary">Sign Up</a>
+            <a href="https://app.apitoolkit.io?utm_source=docs" class="btn btn-sm bg-fillBrand-strong hover:bg-fillBrand-weak text-textInverse-strong border-0">Sign Up</a>
 
             <a
-              class="input input-sm bg-slate-50 dark:bg-base-200 input-bordered hidden sm:flex items-center gap-2"
+              class="input input-sm bg-fillWeak dark:bg-fillAlternate input-bordered hidden sm:flex items-center gap-2 flex-shrink min-w-0"
               onClick="search_modal.showModal()"
               aria-label="search"
               title="Search"
@@ -619,7 +625,7 @@
                 value="sunset"
                 _="
                   on change localStorage.setItem('darkMode', me.checked)
-                  then if  me.checked set body's @data-theme to 'sunset' else set body's @data-theme to 'emerald'
+                  then if  me.checked set body's @data-theme to 'dark' else set body's @data-theme to 'light'
                 "
               >
               <svg class="swap-off icon h-5 w-5 text-current fill-current stroke-current opacity-70">
@@ -642,10 +648,10 @@
         <div class="max-w-7xl w-full gap-4 text-md hidden sm:inline-flex sm:ml-8">
           {% capture root_menu_items %}
         {% assign is_home = this.frontmatter.title | equals: "Home" %}
-        <a class="flex gap-3 sm:border-b-2 {{ is_home | ternary: 'sm:border-b-secondary text-secondary sm:text-current ', 'border-b-transparent' }} py-2 px-1 items-center"
+        <a class="flex gap-3 sm:border-b-2 {{ is_home | ternary: 'sm:border-b-strokeBrand-strong text-textBrand-strong sm:text-current ', 'border-b-transparent' }} py-2 px-1 items-center hover:text-textBrand-strong transition-colors"
           href="/docs/" preload="preload:init" title="Documentation Home" aria-label="Documentation Home">
           <svg
-            class="icon h-5 w-5 text-current fill-current stroke-current  {{ is_home | ternary: 'text-secondary', '' }}">
+            class="icon h-5 w-5 text-current fill-current stroke-current  {{ is_home | ternary: 'text-iconBrand', '' }}">
             <use xlink:href="/assets/deps/fontawesome/regular.svg#house"></use>
           </svg>
           <span>Home</span>
@@ -654,10 +660,10 @@
         {% for page in pages %}
         {% assign parent_doc_prefix = page.file_path | remove: "index.md" | remove_first: "." %}
         {% assign is_active = this.permalink | starts_with: parent_doc_prefix %}
-        <a class="flex gap-3 sm:border-b-2 {{ is_active | ternary: 'sm:border-b-secondary text-secondary sm:text-current', 'border-b-transparent' }} py-2 px-1 items-center"
+        <a class="flex gap-3 sm:border-b-2 {{ is_active | ternary: 'sm:border-b-strokeBrand-strong text-textBrand-strong sm:text-current', 'border-b-transparent' }} py-2 px-1 items-center hover:text-textBrand-strong transition-colors"
           href="{{ page.permalink }}">
           <i
-            class="fa-regular fa-{% if page.frontmatter.faLogo %}{{ page.frontmatter.faLogo }}{%else%}star{%endif%} w-5 h-5 {{ is_active | ternary: 'text-secondary', '' }}"></i>
+            class="fa-regular fa-{% if page.frontmatter.faLogo %}{{ page.frontmatter.faLogo }}{%else%}star{%endif%} w-5 h-5 {{ is_active | ternary: 'text-iconBrand', '' }}"></i>
           <span>{{ page.frontmatter.title | default: 'Untitled' }}</span>
         </a>
         {% endfor %}
@@ -679,7 +685,7 @@
       {% for page in pages %}
       <section class="pl-1">
       <!-- FILE TREE PARENT -->
-        <a class="block font-semibold pb-3" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
+        <a class="block font-semibold pb-3 text-textStrong hover:text-textBrand-strong transition-colors" href="{{ page.permalink }}">{{ page.frontmatter.title }}</a>
         {% capture glob_pattern1 %}.{{ page.permalink }}*/index.md{% endcapture %}
         <!-- In an idea scenario, we will sort this automatically based on "frontmatter.title"
              but the dashboard guides page requires custom sorting and will conflict with the
@@ -693,7 +699,7 @@
           <li>
             {% assign is_active_page = subpage.permalink | equals: this.permalink %}
             <a href="{{ subpage.permalink }}"
-               class="hover:text-secondary {{ is_active_page | ternary: 'text-secondary', '' }}">{{
+               class="hover:text-textBrand-strong {{ is_active_page | ternary: 'text-textBrand-strong', '' }}">{{
                subpage.frontmatter.title }}</a>
             {% capture glob_pattern2 %}.{{ subpage.permalink }}*/index.md{% endcapture %}
             {% assign subsubpages = file_list | where_glob: 'file_path', glob_pattern2 | sort %}
@@ -703,7 +709,7 @@
               <li>
                 {% assign is_active_subpage = subsubpage.permalink | equals: this.permalink %}
                 <a href="{{ subsubpage.permalink }}"
-                  class="hover:text-secondary {{ is_active_subpage | ternary: 'text-secondary', '' }}">{{
+                  class="hover:text-textBrand-strong {{ is_active_subpage | ternary: 'text-textBrand-strong', '' }}">{{
                   subsubpage.frontmatter.title }}</a>
               </li>
               {% endfor %}
@@ -717,7 +723,7 @@
       {% endfor %}
       {% endcapture %}
         {% unless this.frontmatter.hideFileTree %}
-          <div class="w-64 leading-relaxed border-r border-r-base-200 hidden sm:block ">
+          <div class="w-64 leading-relaxed border-r border-r-strokeWeak hidden sm:block ">
             <nav class="h-full w-64 space-y-8 text-sm py-48 pr-5 fixed top-0 overflow-y-scroll">
               {{ main_menu_items }}
             </nav>
@@ -728,7 +734,7 @@
           <input id="mobile-menu-drawer" type="checkbox" class="drawer-toggle">
           <div class="drawer-side">
             <label for="mobile-menu-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-            <div class="p-5 w-80 min-h-full bg-base-100 text-base-content clear-both">
+            <div class="p-5 w-80 min-h-full bg-bgBase text-textStrong clear-both">
               <label for="mobile-menu-drawer" class="p-5 float-right">
                 <svg class="shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70">
                   <use xlink:href="/assets/deps/fontawesome/regular.svg#xmark"></use>
@@ -747,14 +753,14 @@
         </div>
 
         <div class="flex-1 grow flex relative min-h-screen">
-          <div class="text-center flex-1 grow p-5 pt-12 sm:p-20 sm:pb-28 pb-40 divide-y divide-y-base-200">
+          <div class="text-center flex-1 grow p-5 pt-12 sm:p-20 sm:pb-28 pb-40 divide-y divide-y-strokeWeak">
             <article
               class="
-                text-left pb-12 prose prose-slate dark:prose-invert prose-headings:font-medium prose-a:text-secondary prose-a:underline prose-a:underline-offset-4
-                prose-img:w-full prose-img:rounded-md prose-img:drop-shadow-md prose-img:border prose-img:border-base-200  prose-p:leading-relaxed
+                text-left pb-12 prose prose-slate dark:prose-invert prose-headings:font-medium prose-a:text-textBrand-strong prose-a:underline prose-a:underline-offset-4
+                prose-img:w-full prose-img:rounded-md prose-img:drop-shadow-md prose-img:border prose-img:border-strokeWeak  prose-p:leading-relaxed
                 prose-headings:scroll-mt-40 prose-pre:p-0
-                before:prose-li:bg-secondary before:prose-li:text-secondary
-                prose-strong:font-medium prose-secondary w-full {%if this.frontmatter.pageFullWidth%}max-w-none {%endif%}
+                before:prose-li:bg-fillBrand-strong before:prose-li:text-textBrand-strong
+                prose-strong:font-medium w-full {%if this.frontmatter.pageFullWidth%}max-w-none {%endif%}
               "
               id="mainArticle"
             >
@@ -794,11 +800,11 @@
         {% unless this.frontmatter.hideToc %}
           <section class="w-56 hidden sm:block">
             <div class="w-56 my-48 fixed top-0 text-sm space-y-4">
-              <strong class="block font-medium">On this page:</strong>
-              <ul class="space-y-2 border-l overflow-y-auto max-h-[calc(100vh-8rem)]" id="tableOfContents">
+              <strong class="block font-medium text-textStrong">On this page:</strong>
+              <ul class="space-y-2 border-l border-strokeWeak overflow-y-auto max-h-[calc(100vh-8rem)]" id="tableOfContents">
                 {% for toc in this.toc %}
                   <li class="hover:underline underline-offset-4 pl-{{toc.level | times: 3}}">
-                    <a href="#{{toc.id}}">{{ toc.title }}</a>
+                    <a href="#{{toc.id}}" class="text-textWeak hover:text-textBrand-strong transition-colors">{{ toc.title }}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -846,9 +852,9 @@
                 document.querySelectorAll('#tableOfContents a').forEach((link) => {
                   if (link.getAttribute('href').substring(1) === entry.target.id) {
                     document.querySelectorAll('#tableOfContents a').forEach(function (element) {
-                      element.classList.remove('text-secondary');
+                      element.classList.remove('text-textBrand-strong');
                     });
-                    link.classList.add('text-secondary');
+                    link.classList.add('text-textBrand-strong');
                   }
                 });
               }
