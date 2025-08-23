@@ -112,7 +112,7 @@ processors:
 
 exporters:
   otlp:
-    endpoint: "otelcol.apitoolkit.io:4317"
+    endpoint: "otelcol.monoscope.tech:4317"
     tls:
       insecure: true
 

@@ -70,7 +70,7 @@ However, if the documentation doesn't include this information, the developer ma
 
 Ensuring that your API documentation is well-detailed and easy to understand increases your patronage and revenue.
 
-Read: [How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+Read: [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
 ## Essential Elements of API Documentation
 
@@ -96,7 +96,7 @@ Creating highly useful API documentation requires intelligent effort and strateg
 
 API documentation plays a crucial role in the success of any API. It is the face of the API and the first point of contact between the API provider and its consumers. Taking a meticulous effort to write clean API documentation can make your API easy to understand and use, resulting in increased adoption and satisfaction among developers.
 
-Read: [Key Benefits of API Integration for Developers](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers](https://monoscope.tech/blog/benefits-of-api-integration/)
 
 ## API Monitoring and Documentation
 
@@ -108,7 +108,7 @@ Monitoring and observability play a crucial role in API documentation as it help
 
 In API documentation, monitoring and observability can be achieved through detailed descriptions of the API's endpoints, request and response structures, error codes, and response times. Additionally, monitoring and logging tools can be used to track the API's performance, availability, and usage patterns in real time.
 
-Read: [The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://apitoolkit.io/blog/api-as-a-product/)
+Read: [The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://monoscope.tech/blog/api-as-a-product/)
 
 ## API Monitoring and Observability in a Risky Ecosystem
 
@@ -120,19 +120,19 @@ According to a [Salt](https://salt.security/api-security-trends?) API security s
 
 In addition to API security, API monitoring and observability can serve as your API performance management agent, verifying that your payloads are returning the correct data and notifying you of any changes. It can also provide you with real-time analytics concerning user behavior.
 
-An efficient [API monitoring and observability tool](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) will help you build and maintain your APIs with less downtimes, spotting broken/slow API endpoints, missing/incorrect data, etc., before your customers. This helps you secure brand patronage and customer loyalty.
+An efficient [API monitoring and observability tool](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) will help you build and maintain your APIs with less downtimes, spotting broken/slow API endpoints, missing/incorrect data, etc., before your customers. This helps you secure brand patronage and customer loyalty.
 
 Also, not forgetting that a loyal customer keeps you on the job.
 
-According to [Gartner](https://blogs.gartner.com/andrew-lerner/2014/07/16/the-cost-of-downtime/), the average cost of IT downtime is $5,600 per minute, which extrapolates to well over $300,000 p/hour. It's hard to predict when and where APIs will fail. This was why we built [APIToolkit](apitoolkit.io) – to solve API downtime and security issues.
+According to [Gartner](https://blogs.gartner.com/andrew-lerner/2014/07/16/the-cost-of-downtime/), the average cost of IT downtime is $5,600 per minute, which extrapolates to well over $300,000 p/hour. It's hard to predict when and where APIs will fail. This was why we built [APIToolkit](monoscope.tech) – to solve API downtime and security issues.
 
-API-related downtimes have affected [big companies](https://www.insightsforprofessionals.com/it/leadership/famous-business-outages) as large as Amazon, Facebook, Discord, etc. No one is above API breakage. But you can definitely stay alert using [APIToolkit’s observability and monitoring tools](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/).
+API-related downtimes have affected [big companies](https://www.insightsforprofessionals.com/it/leadership/famous-business-outages) as large as Amazon, Facebook, Discord, etc. No one is above API breakage. But you can definitely stay alert using [APIToolkit’s observability and monitoring tools](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/).
 
-Read: [Top 7 Reasons Why Your Team Needs an API Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+Read: [Top 7 Reasons Why Your Team Needs an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 
 ## Major Causes of API Downtime
 
-Any company, big or small, may suffer [API downtime](https://apitoolkit.io/blog/api-downtime/) at some point, resulting in revenue loss and lost customer trust. This is generally bad for business. 
+Any company, big or small, may suffer [API downtime](https://monoscope.tech/blog/api-downtime/) at some point, resulting in revenue loss and lost customer trust. This is generally bad for business. 
 
 Discussed below are some of the major factors that cause API downtimes:
 
@@ -172,7 +172,7 @@ Moreover, API downtime can also have a negative impact on the development of new
 
 Additionally, API downtime can impact the reputation of the API provider. Let’s say an API provider experiences repeated downtime, it can damage its reputation and lead to loss of trust from its customers and partners.
 
-Read: [How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+Read: [How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
 ![The APIToolkit Triad](./apitoolkitinfographic3.png)
 
@@ -192,7 +192,7 @@ Hear him out:
 >
 > Years later, this is that tool (APIToolkit), and we would love to listen to similar stories you’ve experienced and help make such stories a thing of the past.
 
-[Try APIToolkit for Free](https://apitoolkit.io)
+[Try APIToolkit for Free](https://monoscope.tech)
 
 ### Benefits of an API Monitoring and Observability Tool
 
@@ -216,7 +216,7 @@ As more and more companies have recognized the importance of API monitoring and 
 
 **Better collaboration:** The tool can provide a centralized view of API performance, making it easier for teams to work together and resolve issues more quickly.
 
-Read: [Must-Know API Trends](https://apitoolkit.io/blog/api-trends/)
+Read: [Must-Know API Trends](https://monoscope.tech/blog/api-trends/)
 
 ### Companies that Use API Monitoring and Observability Tools
 
@@ -228,7 +228,7 @@ Read: [Must-Know API Trends](https://apitoolkit.io/blog/api-trends/)
 6. **[Uber](https://www.uber.com/)**
 7. **[Slack](https://slack.com/)**
    <br>
-[And more](https://apitoolkit.io/blog/api-trends/)
+[And more](https://monoscope.tech/blog/api-trends/)
 
 #### Conclusion
 
@@ -240,18 +240,18 @@ Also, API monitoring and observability will help your company stay on top of API
 
 Therefore, whether you are making an API connection, building a new API, or looking to improve an existing one, you should not overlook the importance of API documentation, monitoring, and observability.
 
-[Try APIToolkit for Free](apitoolkit.io)
+[Try APIToolkit for Free](monoscope.tech)
 
 **Also Read**
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation)
 
-[Fintech API: Unlocking the Secret to Its Rapid Growth in the Financial Sector](https://apitoolkit.io/blog/fintech-api/)
+[Fintech API: Unlocking the Secret to Its Rapid Growth in the Financial Sector](https://monoscope.tech/blog/fintech-api/)
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[API Observability and Monitoring: What's the Difference?](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
+[API Observability and Monitoring: What's the Difference?](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
 
-[API Documentation vs API Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+[API Documentation vs API Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)

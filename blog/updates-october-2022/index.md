@@ -14,7 +14,7 @@ Most of us learn the value of documentation the hard way by finding it to be lac
 
 <!-- We discovered the effectiveness of documentation in predicting teams' adoption of technical practices. The technological capabilities of the system, including observability, continuous testing, and deployment automation, are expected to advance as a result of these practices. -->
 
-!["Documentation screenshot"](https://apitoolkit.io/blog/updates-october-2022/docs-screenshot.png "APIToolkit documentation feature")
+!["Documentation screenshot"](https://monoscope.tech/blog/updates-october-2022/docs-screenshot.png "APIToolkit documentation feature")
 
 I had conversations with development teams from both small and large companies, about how they actually maintain their API documentations. Especially about their workflows, and processes, and the results were not so surprisingly actually. Out of almost 60 companies, it turns out that the processes were quite heavily dependent on their tech stacks and frameworks. 
 
@@ -41,7 +41,7 @@ The journey is a marathon and not a sprint, so while we have grander goals, we h
 
 ### 1. Derive Documentation from Production Traffic
 
-![Documentation screen](https://apitoolkit.io/field_documentation.png "Documentation screen")
+![Documentation screen](https://monoscope.tech/field_documentation.png "Documentation screen")
 
 When requests get to your servers, APItoolkit looks into these requests, checks their structure, and shape, checks the fields, their formats, etc, and uses this information to get an idea of what your API looks like. This information is what is used to generate API docs for you. And then this API Docs can then be downloaded as **Swagger**.
 
@@ -108,8 +108,8 @@ Now we have documentations and other information for each fields, but then we al
 Apitoolkit is on the journey of helping developers create amazing API documentation with very low effort. And even while some of these functionality are still in progress or in flux, we're constantly thinking about the bigger picture, and are confident that we will solve this problem of API documentation elegantly, with time.
 
 APIToolkit is committed to guiding you through managing quality documentation, and we have written some articles on this topic. Take a look:
-- [How to write API Docs; 6 API Documentation Best Practices](https://apitoolkit.io/blog/how-to-write-api-docs/)
-- [Writing API Documentation - Best Practices and Mistakes to Avoid](https://apitoolkit.io/blog/writing-api-documentation)
+- [How to write API Docs; 6 API Documentation Best Practices](https://monoscope.tech/blog/how-to-write-api-docs/)
+- [Writing API Documentation - Best Practices and Mistakes to Avoid](https://monoscope.tech/blog/writing-api-documentation)
 
 At APIToolkit, we care about our users and developers, we concentrated on making our documentation process straightforward and scalable, with the ability to add and remove content in the event that any step was overlooked or overly explained.
 

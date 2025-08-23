@@ -16,7 +16,7 @@ In recent years there has been a lot of hype around new technologies such as Gra
 
 ## Understanding REST APIs
 
-We've explored and described what REST is in previous articles, so I would point you [there](https://apitoolkit.io/blog/rest-api-scalability/) if you want to learn what REST is. 
+We've explored and described what REST is in previous articles, so I would point you [there](https://monoscope.tech/blog/rest-api-scalability/) if you want to learn what REST is. 
 But there are some benefits which we get out of the bat from using REST APIs:
 
 
@@ -35,7 +35,7 @@ You can accept or return JSON, XML, HTML, TEXT, files, etc from the same RESTFUL
 
 ## 3. Statelessness and hence Scalability
 
-REST APIs are inherently stateless, meaning that each request from a client to the server must contain all the information needed to understand and process the request. This statelessness allows for better [scalability](https://apitoolkit.io/blog/api-logs-and-metrics/), as servers do not need to retain session information between requests. This has mapped very nicely to the age of containers and Docker. And even PHP. Especially if you think about how PHP was unable to maintain any state between requests without passing it through a database.  
+REST APIs are inherently stateless, meaning that each request from a client to the server must contain all the information needed to understand and process the request. This statelessness allows for better [scalability](https://monoscope.tech/blog/api-logs-and-metrics/), as servers do not need to retain session information between requests. This has mapped very nicely to the age of containers and Docker. And even PHP. Especially if you think about how PHP was unable to maintain any state between requests without passing it through a database.  
 
 ## Comparison with RPC like GRPC and TRPC
 
@@ -168,13 +168,13 @@ Another interesting observation is that you could get some of the benefits of th
 
 In conclusion, REST APIs are undoubtedly the future of web development. Their simplicity, versatility, scalability, and standardization set them apart from other alternatives like RPC and GraphQL. While other approaches may have their use cases and merits, REST APIs' widespread adoption and continuous improvements make them the go-to choice for developers and companies alike.
 
-If you're building APIs, then you might appreciate the tools which [APIToolkit](https://apitoolkit.io/) offers, to help you with different tasks when working on your APIs. Namely, testing, [monitoring](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) and debugging APIs. Also Documentation. Check it out. 
+If you're building APIs, then you might appreciate the tools which [APIToolkit](https://monoscope.tech/) offers, to help you with different tasks when working on your APIs. Namely, testing, [monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) and debugging APIs. Also Documentation. Check it out. 
 
 **Keep Reading**
 
-[How to Generate utomated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation)
+[How to Generate utomated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[API Observability and Monitoring: What's the Difference](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
+[API Observability and Monitoring: What's the Difference](https://monoscope.tech/blog/api-observability-and-api-monitoring/)

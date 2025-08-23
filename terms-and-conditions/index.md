@@ -157,7 +157,7 @@ We reserve the right, at our sole discretion, to update, change or replace any p
 
 ### SECTION 20 - CONTACT INFORMATION
 
-Questions about the Terms of Service should be sent to us at <hello@apitoolkit.io>.
+Questions about the Terms of Service should be sent to us at <hello@monoscope.tech>.
 
 ```=html
 </section>

@@ -26,7 +26,7 @@ Set up OpenTelemetry environment variables in your application environment:
 
 ```bash
 # Specifies the endpoint URL for the OpenTelemetry collector
-export OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.apitoolkit.io:4317"
+export OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.monoscope.tech:4317"
 
 # Specifies the name of the service
 export OTEL_SERVICE_NAME="mongodb-service"
@@ -194,7 +194,7 @@ const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-proto'
 
 const sdk = new NodeSDK({
   traceExporter: new OTLPTraceExporter({
-    url: 'http://otelcol.apitoolkit.io:4317/v1/traces',
+    url: 'http://otelcol.monoscope.tech:4317/v1/traces',
   }),
   instrumentations: [getNodeAutoInstrumentations()],
   resourceAttributes: {
@@ -223,7 +223,7 @@ wget https://github.com/open-telemetry/opentelemetry-java-instrumentation/releas
 ```bash
 java -javaagent:path/to/opentelemetry-javaagent.jar \
      -Dotel.service.name=mongodb-service \
-     -Dotel.exporter.otlp.endpoint=http://otelcol.apitoolkit.io:4317 \
+     -Dotel.exporter.otlp.endpoint=http://otelcol.monoscope.tech:4317 \
      -Dotel.resource.attributes=at-project-key=YOUR_API_KEY \
      -jar your-application.jar
 ```

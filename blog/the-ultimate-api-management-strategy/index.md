@@ -15,7 +15,7 @@ categories:
 
 APIs are very significant tools for developers. Sadly, there are teams that just don’t know how to manage them. This leads to broken APIs, data losses, downtimes, etc.
 
-APIs are components that allow different applications to communicate with each other. What good are APIs if your team doesn’t know how to [manage this communication bridge](https://apitoolkit.io/blog/how-to-write-api-docs/)?
+APIs are components that allow different applications to communicate with each other. What good are APIs if your team doesn’t know how to [manage this communication bridge](https://monoscope.tech/blog/how-to-write-api-docs/)?
 
 To help, I’ve curated a step-by-step strategy for product managers, web developers, and website owners to follow, to ensure the smooth running of their applications and systems.
 
@@ -29,11 +29,11 @@ This lack of thoughtfulness results in disarray, with poor monitoring practices,
 
 A [recent study](https://www.devopsdigest.com/apis-are-critical-to-todays-digital-transformation-efforts) that examined the role of API adoption in digital transformation found that APIs are critical enablers of today’s digital transformation initiatives. According to the study, 71% of the surveyed organizations expect to see a rise in the volume of APIs calls by 2022
 
-Read: [Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+Read: [Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
 ### 1. Research
 
-As someone involved in developing digital products, it is crucial to understand the [rudiments of how APIs work](https://apitoolkit.io/blog/benefits-of-api-integration/) and the necessary tools and resources needed for developing them. 
+As someone involved in developing digital products, it is crucial to understand the [rudiments of how APIs work](https://monoscope.tech/blog/benefits-of-api-integration/) and the necessary tools and resources needed for developing them. 
 
 With a deep understanding of the subject, you can address issues more effectively. You can learn the basics from the following sources:
 
@@ -55,13 +55,13 @@ Next, establish the target audience for your APIs and ensure it will meet their 
 
 Lastly, assess your existing IT estate, such as systems and applications, so that you can know what you need to build on or create from scratch.
 
-Read: [Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
 ### 3. Use a Comprehensive API Platform
 
 You need a comprehensive API platform that allows you to manage and combine APIs at scale effectively. With a good API management platform, you can pinpoint the many day-to-day administrative pain points of consuming APIs and ensure their smooth adoption.
 
-Some of the benefits of using an [API management tool](http://apitoolkit.io) include having centralized visibility into the performance of APIs, assisting in [API analysis and monitoring](https://apitoolkit.io/blog/what-is-api-testing/), helping in publishing and discovery of APIs, improving API security, [enhancing API governance](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/), and more. It’s what you need to make the tasks of managing your APIs lean and efficient.
+Some of the benefits of using an [API management tool](http://monoscope.tech) include having centralized visibility into the performance of APIs, assisting in [API analysis and monitoring](https://monoscope.tech/blog/what-is-api-testing/), helping in publishing and discovery of APIs, improving API security, [enhancing API governance](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/), and more. It’s what you need to make the tasks of managing your APIs lean and efficient.
 
 ### 4. Allocate Resources
 
@@ -83,7 +83,7 @@ Here are a few examples of how incorporating API management can be beneficial:
 - **Procurement process**: Include API management criteria in quotes and contracts to notify suppliers of your needs.
 - **Quality assurance**: As part of the quality assurance cycle, track API issues in an issue tracking system and allocate resources.
 
-Read: [API Monitoring and Documentation: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Read: [API Monitoring and Documentation: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
 ### 6. Update Resources and API Docs to Adapt to Changes in Systems
 
@@ -95,7 +95,7 @@ Add updated browser support and API monitoring to the website development list. 
 
 Additionally, new versions of your authoring tools may provide additional API features you can use. For content authors to use new features, updated training or extra training may be needed.
 
-Read: [How to Generate AUtomated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+Read: [How to Generate AUtomated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
 ### 7. Maintenance
 
@@ -109,7 +109,7 @@ Comparing findings will help identify trends across websites or teams and assist
 - Training and knowledge sharing for staff
 - Understanding and implementing an organizational culture
 
-Read: [Top 7 Reasons Why Your Team Needs an API Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+Read: [Top 7 Reasons Why Your Team Needs an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 
 Lastly, consider these questions:
 
@@ -121,10 +121,10 @@ Lastly, consider these questions:
 
 API management should be a part of the process of developing digital products primarily because it is the right thing to do. Everyone deserves to have a seamless web experience and you shouldn’t deny them such with broken APIs. By integrating API checks into every step of your development process, you can deliver functioning products consistently.
 
-Recommended Post: [How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+Recommended Post: [How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-Recommended Post: [How to Tackle Anomalies in RESTful APIs](https://apitoolkit.io/blog/how-to-write-api-docs/)
+Recommended Post: [How to Tackle Anomalies in RESTful APIs](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-Recommended Post: [API Monitoring and Observability: What's the Difference](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
+Recommended Post: [API Monitoring and Observability: What's the Difference](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
 
-Recommended Post: [API Documentation vs API Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+Recommended Post: [API Documentation vs API Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)

@@ -103,7 +103,7 @@ xtweets:
   - - ppic:
 faqs:
   - q: What programming languages are supported?
-    a: We currently support 17+ web frameworks in different programming languages (Python, Golang, Javascript, PHP, C#, Java, etc.). If we don't support your framework, kindly email us at <a href="mailto:hello@apitoolkit.io">hello@apitoolkit.io</a> and we'll create an SDK for you ASAP!
+    a: We currently support 17+ web frameworks in different programming languages (Python, Golang, Javascript, PHP, C#, Java, etc.). If we don't support your framework, kindly email us at <a href="mailto:hello@monoscope.tech">hello@monoscope.tech</a> and we'll create an SDK for you ASAP!
   - q: Do my requests have to leave my server to APItoolkit servers?
     a: If you want to benefit from the API monitoring and the log explorer feature, yes. However, we offer an <a href="/pricing/">enterprise plan</a> that allows you to run APItoolkit on-prem (on your servers).
   - q: Will your SDKs slow down my backend?
@@ -349,7 +349,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
           <p class="mt-[6px] max-w-[438px]">
             Built for security and privacy. Use our managed service or host on your own infra.</p>
           <div class="mt-[20px] flex gap-4">
-            <a href="https://app.apitoolkit.io"
+            <a href="https://app.monoscope.tech"
               class="py-2 px-4 rounded-xl bg-[#2E3238] text-white hover:shadow-lg">Start for free</a>
             <a href="https://calendly.com/tonyalaribe/30min" class="py-2 px-4 rounded-xl border hover:border-black">Talk
               to sales</a>
@@ -407,7 +407,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
                 <span class="text-sm leading-tight">Join the <br><span class="font-bold text-md">Discord</span>
                 </span>
               </a>
-              <a href="https://app.apitoolkit.io"
+              <a href="https://app.monoscope.tech"
                 class="rounded-lg border flex justify-center items-center w-max px-5 text-sm py-2 border-gray-600 hover:border-gray-400">
                 Get started- it’s free
               </a>
@@ -426,7 +426,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
               <img src="./assets/img/integrations/go.svg" alt="">
               <img src="./assets/img/integrations/php.svg" alt="" class="grow-0">
             </div>
-            <a href="https://apitoolkit.io/docs/" class="text-sm text-gray-400 max-w-[300px] underline"> and
+            <a href="https://monoscope.tech/docs/" class="text-sm text-gray-400 max-w-[300px] underline"> and
               many more...
             </a>
           </div>
@@ -464,7 +464,7 @@ Or actively making healthcheck requests to API/web endpoints</p>
 We currently support 17+ web frameworks in different programming languages.
 
 {.mx-auto .text-md .font-semibold}
-If we don't support your framework, kindly email [hello@apitoolkit.io](mailto:hello@apitoolkit.io) and we'll create an SDK for you ASAP!
+If we don't support your framework, kindly email [hello@monoscope.tech](mailto:hello@monoscope.tech) and we'll create an SDK for you ASAP!
 
 {% render "default/markdown/integration-footer.liquid", config:config %}
 ::::

@@ -5,9 +5,9 @@
 
 ## Marketing Website and Developer Documentation
 
-[![QuickStatic](https://img.shields.io/badge/QuickStatic-Generator-f1541c?logo=rust)](https://github.com/topics/apitoolkit-sdk) [![APItoolkit SDK](https://img.shields.io/badge/APItoolkit-SDK-0068ff?logo=github)](https://github.com/topics/apitoolkit-sdk) [![Join Discord Server](https://img.shields.io/badge/Chat-Discord-7289da)](https://discord.gg/dEB6EjQnKB) [![APItoolkit Docs](https://img.shields.io/badge/Read-Docs-0068ff)](https://apitoolkit.io/docs?utm_source=github-sdks)
+[![QuickStatic](https://img.shields.io/badge/QuickStatic-Generator-f1541c?logo=rust)](https://github.com/topics/apitoolkit-sdk) [![APItoolkit SDK](https://img.shields.io/badge/APItoolkit-SDK-0068ff?logo=github)](https://github.com/topics/apitoolkit-sdk) [![Join Discord Server](https://img.shields.io/badge/Chat-Discord-7289da)](https://discord.gg/dEB6EjQnKB) [![APItoolkit Docs](https://img.shields.io/badge/Read-Docs-0068ff)](https://monoscope.tech/docs?utm_source=github-sdks)
 
-[APItoolkit](https://app.apitoolkit.io) is an end-to-end API and web services management toolkit for engineers and customer support teams. This repository houses our [marketing website](https://apitoolkit.io) and [developer documentation](https://apitoolkit.io/docs) built using our in-house [QuickStatic](https://github.com/tonyalaribe/quickstatic) static site generator.
+[APItoolkit](https://app.monoscope.tech) is an end-to-end API and web services management toolkit for engineers and customer support teams. This repository houses our [marketing website](https://monoscope.tech) and [developer documentation](https://monoscope.tech/docs) built using our in-house [QuickStatic](https://github.com/tonyalaribe/quickstatic) static site generator.
 
 </div>
 
@@ -116,7 +116,7 @@ Our documentation is a blooming garden and we will continue to prune and maintai
 Everything is written in Markdown/Djot and we have a few custom interactive components (some of which we will improve as time goes on). We're currently adapting the [Google Developer Documentation Style Guide](https://developers.google.com/style) and [Diátaxis Documentation System](https://diataxis.fr/), using some principles from both to structure and write our documentation. A few quick writing tips:
 
 - Create a new pull request for any docs changes (including team members and external contributors), so the docs maintainer can review to ensure everything aligns with existing principles and no inconsistency sneaks in.
-- Follow existing patterns for structure, writing flow, code snippets comments, interactive components, etc. based on the category of docs in context (we currently have the [onboarding](https://apitoolkit.io/docs/onboarding/), [SDK guides](https://apitoolkit.io/docs/sdks/), [dashboard guides](https://apitoolkit.io/docs/dashboard/), and [features](https://apitoolkit.io/docs/features/) pages —with more coming soon) to ensure consistency and sustainable docs.
+- Follow existing patterns for structure, writing flow, code snippets comments, interactive components, etc. based on the category of docs in context (we currently have the [onboarding](https://monoscope.tech/docs/onboarding/), [SDK guides](https://monoscope.tech/docs/sdks/), [dashboard guides](https://monoscope.tech/docs/dashboard/), and [features](https://monoscope.tech/docs/features/) pages —with more coming soon) to ensure consistency and sustainable docs.
 - Run your writing through grammar checkers (like Grammarly) to catch typos and other minor issues.
 - Use title case for headings.
 - DO NOT use tabs for code snippets but instead use two spaces.
@@ -208,6 +208,6 @@ This repository is published under the [MIT](LICENSE) license.
 
 <div align="center">
 
-<a href="https://apitoolkit.io?utm_source=github-sdks" target="_blank" rel="noopener noreferrer"><img src="https://github.com/monoscope-tech/.github/blob/main/images/icon.png?raw=true" width="40" /></a>
+<a href="https://monoscope.tech?utm_source=github-sdks" target="_blank" rel="noopener noreferrer"><img src="https://github.com/monoscope-tech/.github/blob/main/images/icon.png?raw=true" width="40" /></a>
 
 </div>

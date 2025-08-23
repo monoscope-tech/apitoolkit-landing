@@ -10,7 +10,7 @@ menuWeight: 2
 
 The **Monoscope Browser SDK** is a lightweight JavaScript library for adding **session replay**, **performance tracing**, and **frontend logging** to your web applications.
 
-When used together with the [Monoscope Server SDKs](https://apitoolkit.io/docs/sdks/), you gain **end-to-end observability** — seamlessly connecting user interactions in the browser to backend services, APIs, and databases.
+When used together with the [Monoscope Server SDKs](https://monoscope.tech/docs/sdks/), you gain **end-to-end observability** — seamlessly connecting user interactions in the browser to backend services, APIs, and databases.
 
 This means you can:
 

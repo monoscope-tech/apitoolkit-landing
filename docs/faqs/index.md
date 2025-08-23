@@ -9,7 +9,7 @@ hideToc: true
 pageFullWidth: true
 faqs:
   - q: What programming languages are supported?
-    a: We currently support 17+ web frameworks in different programming languages (Python, Golang, Javascript, PHP, C#, Java, etc.). If we don't support your framework, kindly email us at <a href="mailto:hello@apitoolkit.io">hello@apitoolkit.io</a> and we'll create an SDK for you ASAP!
+    a: We currently support 17+ web frameworks in different programming languages (Python, Golang, Javascript, PHP, C#, Java, etc.). If we don't support your framework, kindly email us at <a href="mailto:hello@monoscope.tech">hello@monoscope.tech</a> and we'll create an SDK for you ASAP!
   - q: Do my requests have to leave my server to APItoolkit servers?
     a: If you want to benefit from the API monitoring and the log explorer feature, yes. However, we offer an <a href="/pricing/">enterprise plan</a> that allows you to run APItoolkit on-prem (on your servers).
   - q: Will your SDKs slow down my backend?

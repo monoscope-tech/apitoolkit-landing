@@ -14,7 +14,7 @@ categories:
 
 ## Introduction
 
-Database [monitoring](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) is an essential aspect of database management that ensures optimal performance, reliability, and security of data. It involves collecting, analyzing, and reporting on various metrics and indicators that reflect the health and activity of a database system. By monitoring databases, database administrators (DBAs) and developers can gain valuable insights into the performance of their applications, identify and troubleshoot issues, and optimize their database operations.
+Database [monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) is an essential aspect of database management that ensures optimal performance, reliability, and security of data. It involves collecting, analyzing, and reporting on various metrics and indicators that reflect the health and activity of a database system. By monitoring databases, database administrators (DBAs) and developers can gain valuable insights into the performance of their applications, identify and troubleshoot issues, and optimize their database operations.
 
 The role of performance in database management is crucial, as it affects the user experience, the efficiency of business processes, and the profitability of organizations. Poor performance can result in slow response times, high error rates, low throughput, and data loss. These can have negative consequences such as customer dissatisfaction, reduced productivity, increased costs, and reputational damage. Therefore, it is imperative to monitor databases regularly and proactively to ensure high performance and availability.
 
@@ -30,7 +30,7 @@ Database monitoring consists of two main components: metrics and tools.
 
 1. **Metrics and KPIs**
 
-Metrics are quantitative measurements that indicate the performance and health of a database system. They can be categorized into different types, such as availability, utilization, throughput, [response time](https://apitoolkit.io/blog/api-logs-and-metrics/), [error rate](https://apitoolkit.io/blog/web-api-performance/), etc. Metrics can be further divided into key performance indicators (KPIs), which are the most important metrics that reflect the goals and objectives of the database system. For example, some common KPIs for database performance are:
+Metrics are quantitative measurements that indicate the performance and health of a database system. They can be categorized into different types, such as availability, utilization, throughput, [response time](https://monoscope.tech/blog/api-logs-and-metrics/), [error rate](https://monoscope.tech/blog/web-api-performance/), etc. Metrics can be further divided into key performance indicators (KPIs), which are the most important metrics that reflect the goals and objectives of the database system. For example, some common KPIs for database performance are:
 
 - **Availability**: The percentage of time that the database system is operational and accessible.
 - **Utilization**: The amount of resources (such as CPU, memory, disk space, etc.) that the database system consumes.
@@ -73,7 +73,7 @@ Response time is one of the most important metrics for measuring database perfor
 - Concurrency: The number of concurrent transactions or queries running on the database system.
 - Resource contention: The competition for resources (such as CPU, memory, disk, network, etc.) among transactions or queries.
 
-To [monitor response time](https://apitoolkit.io/api-performance-monitoring-and-compliance/), DBAs and developers can use tools such as query analyzers or performance analyzers that can capture and display the execution time of each query. They can also use tools such as alerting systems that can notify them when the response time exceeds a certain threshold.
+To [monitor response time](https://monoscope.tech/api-performance-monitoring-and-compliance/), DBAs and developers can use tools such as query analyzers or performance analyzers that can capture and display the execution time of each query. They can also use tools such as alerting systems that can notify them when the response time exceeds a certain threshold.
 
 ![APIToolkit Query Analyzer](./api-query.png) Image source: APIToolkit Query Analyzer
 
@@ -97,22 +97,22 @@ Error rate is another important metric for measuring database performance. It in
 - **Data security**: The protection and authorization of the data stored in the database system.
 - **Data availability**: The accessibility and recoverability of the data stored in the database system.
 
-To monitor error rate, DBAs and developers can use tools such as log analyzers or query analyzers that can capture and display the number and type of errors encountered by the database system. They can also use tools such as [alerting systems](https://apitoolkit.io/) that can notify them when the error rate exceeds a certain threshold.
+To monitor error rate, DBAs and developers can use tools such as log analyzers or query analyzers that can capture and display the number and type of errors encountered by the database system. They can also use tools such as [alerting systems](https://monoscope.tech/) that can notify them when the error rate exceeds a certain threshold.
 
 IV. Tools and Software for Database Monitoring
 
 There are many tools and software available for database monitoring, but some are more popular. Here are some of the widely-used database monitoring tools:
 
-- [**APIToolkit Monitoring**](https://apitoolkit.io): A cloud-based API management tool that provides end-to-end visibility into database performance, including metrics, traces, logs, events, etc. It supports various database platforms, such as MySQL, PostgreSQL, MongoDB, Redis, etc.
+- [**APIToolkit Monitoring**](https://monoscope.tech): A cloud-based API management tool that provides end-to-end visibility into database performance, including metrics, traces, logs, events, etc. It supports various database platforms, such as MySQL, PostgreSQL, MongoDB, Redis, etc.
 - **SolarWinds Database Performance Analyzer (DPA)**: A comprehensive tool that provides real-time and historical analysis of database performance, including response time, throughput, resource utilization, wait times, blocking, deadlocks, etc. It supports various database platforms, such as Oracle, SQL Server, MySQL, PostgreSQL, etc.
 - **Quest Foglight for Databases**: A holistic tool that provides cross-platform monitoring and optimization of database performance, including availability, workload, resource consumption, SQL tuning, etc. It supports various database platforms, such as Oracle, SQL Server, MySQL, PostgreSQL, etc.
 - **Redgate SQL Monitor**: A specialized tool that provides in-depth monitoring and alerting of SQL Server performance, including metrics, queries, waits, locks, errors, etc. It also provides recommendations and best practices for improving SQL Server performance.
 
-Read: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
-Read: [10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-Read: [API Monitoring and Documentation: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Read: [API Monitoring and Documentation: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
 ## Best Practices for Effective Database Monitoring
 
@@ -158,14 +158,14 @@ However, analyzing data can be challenging if you have too much or too little da
 
 Database monitoring is a crucial process that can help you unlock key insights into your database performance. By following the best practices discussed in this article, you can establish a monitoring strategy, set up alerts and notifications, analyze and act on data, and implement improvements based on your insights. This can then help you ensure the optimal performance, availability, and security of your APIs and databases and support your business goals and objectives.
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)

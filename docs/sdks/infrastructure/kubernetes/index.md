@@ -94,7 +94,7 @@ spec:
 
     exporters:
       otlp:
-        endpoint: "otelcol.apitoolkit.io:4317"
+        endpoint: "otelcol.monoscope.tech:4317"
         tls:
           insecure: true
 
@@ -181,7 +181,7 @@ config:
   
   exporters:
     otlp:
-      endpoint: "otelcol.apitoolkit.io:4317"
+      endpoint: "otelcol.monoscope.tech:4317"
       tls:
         insecure: true
   
@@ -369,7 +369,7 @@ data:
 
     exporters:
       otlp:
-        endpoint: "otelcol.apitoolkit.io:4317"
+        endpoint: "otelcol.monoscope.tech:4317"
         tls:
           insecure: true
 

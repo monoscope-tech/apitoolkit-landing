@@ -21,7 +21,7 @@ pageFullWidth: true
 <div class="items-center text-center justify-center mt-8">
     <a href="/docs/onboarding/" class="py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56 text-center inline-block">Get Started</a>
     <p class="inline-block px-5">|</p>
-    <a href="https://apitoolkit.io/demo" target="_blank" rel="noopener noreferrer" class="btn btn-outline sm:w-56">Get a Demo</a>
+    <a href="https://monoscope.tech/demo" target="_blank" rel="noopener noreferrer" class="btn btn-outline sm:w-56">Get a Demo</a>
 </div>
 ```
 
@@ -63,7 +63,7 @@ Explore our product and SDK documentation to get started with using APItoolkit.
 We currently support 17+ web frameworks in different programming languages.
 
 {.text-md .font-semibold}
-If we don't support your framework, kindly email [hello@apitoolkit.io](mailto:hello@apitoolkit.io) and we'll create an SDK for you ASAP!
+If we don't support your framework, kindly email [hello@monoscope.tech](mailto:hello@monoscope.tech) and we'll create an SDK for you ASAP!
 
 
 {% render "default/markdown/integration-footer.liquid", config:config %}

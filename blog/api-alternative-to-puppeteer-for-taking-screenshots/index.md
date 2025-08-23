@@ -12,7 +12,7 @@ categories:
 
 ![ScreenshotOne](screenshotone.png){class="block rounded-md border border-black"}
 
-The [API](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) market is booming. Every day you can see more and more APIs you can build your services upon. And many APIs have good open-source alternatives. You can host the alternative and have all control over it. But is it practical for you? Does it save time, money and energy? The most scarce resources we have. 
+The [API](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) market is booming. Every day you can see more and more APIs you can build your services upon. And many APIs have good open-source alternatives. You can host the alternative and have all control over it. But is it practical for you? Does it save time, money and energy? The most scarce resources we have. 
 
 Let's take a website screenshot taking automation as an example and evaluate what might fit better in which case and what not. 
 
@@ -52,7 +52,7 @@ You need to install the library:
 npm i puppeteer
 ```
 
-Then it is straightforward to take a simple screenshot of the [APItoolkit.io site for monitoring APIs](https://apitoolkit.io/): 
+Then it is straightforward to take a simple screenshot of the [APItoolkit.io site for monitoring APIs](https://monoscope.tech/): 
 
 ```javascript
 'use strict';
@@ -62,7 +62,7 @@ const puppeteer = require('puppeteer');
        const browser = await puppeteer.launch();
        try {
            const page = await browser.newPage();
-           await page.goto('https://apitoolkit.io/');
+           await page.goto('https://monoscope.tech/');
            await page.screenshot({ path: 'api_toolkit_rendered_by_puppeteer.jpg', format: 'jpeg' });
        } catch (e) {
            console.log(e)
@@ -94,7 +94,7 @@ const puppeteer = require('puppeteer');
 
        try {
            const page = await browser.newPage();
-           await page.goto('https://apitoolkit.io');
+           await page.goto('https://monoscope.tech');
            await page.screenshot({ path: 'full_page_by_puppeteer.jpg', fullPage: true, format: 'jpeg' });
        } catch (e) {
            console.log(e)
@@ -125,7 +125,7 @@ Let's take [the screenshot as a service](https://screenshotone.com/) I built, fo
 You need to sign up to get your API key. And then taking screenshots couldn't be easier: 
 
 ```
-https://api.screenshotone.com?url=https://apitoolkit.io&access_key=<you access key>
+https://api.screenshotone.com?url=https://monoscope.tech&access_key=<you access key>
 ```
 
 The result is: 
@@ -138,7 +138,7 @@ The result is:
 And for the full page screenshot:  
 
 ```
-https://api.screenshotone.com?url=https://apitoolkit.io&full_page=true&access_key=<you access key>
+https://api.screenshotone.com?url=https://monoscope.tech&full_page=true&access_key=<you access key>
 ```
 
 What is the result? 
@@ -154,8 +154,8 @@ If you need to take a few screenshots here and there, I will choose Puppeteer, o
 
 Have a nice day, and I hope I elaborated a bit on the programmatic screenshots topic for you.
 
-Recommended Post: [How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+Recommended Post: [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-Recommended Post: [API Monitoring and Documentation: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Recommended Post: [API Monitoring and Documentation: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-Recommended Post: [Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+Recommended Post: [Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)

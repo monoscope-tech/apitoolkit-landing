@@ -56,7 +56,7 @@ In this example, we initiate a SOAP client based upon the SOAP endpoint. Then we
 WS standard protocols & SOAP Extensibility
 SOAP provides essential structural elements of the message. Albeit, it doesn’t direct what goes into headers and bodies. So, anyone can customize the contents as needed.
 
-Due to the fact that [web applications](https://apitoolkit.io/blog/web-service-apis-structures-and-protocols/) typically solve common sets of problems after the SOAP release, the principal protocol has been augmented by a lot of standard protocols that specify how things work. All these protocols are usually marked WS-(protocol name), e.g. WS-Security, WS-ReliableMessaging. They were contributed by different organizations, including Microsoft, IBM, OASIS, and others.
+Due to the fact that [web applications](https://monoscope.tech/blog/web-service-apis-structures-and-protocols/) typically solve common sets of problems after the SOAP release, the principal protocol has been augmented by a lot of standard protocols that specify how things work. All these protocols are usually marked WS-(protocol name), e.g. WS-Security, WS-ReliableMessaging. They were contributed by different organizations, including Microsoft, IBM, OASIS, and others.
 
 Standard protocols cover multiple areas and facets of SOAP use:
 
@@ -91,9 +91,9 @@ As a beginner SOAP engineer, here are the main links you should check:
 
 ## Closing Thoughts
 
-There is still a need for SOAP as a standard for web services, and it is used in many internal systems all over the world. Organizations are moving toward microservices architecture using [REST APIs](http://apitoolkit.io/blog/everything-about-rest-apis) for new projects. Modern techniques do away with the completely standards-based approach of SOAP, but many prefer this more flexible and nimble approach.
+There is still a need for SOAP as a standard for web services, and it is used in many internal systems all over the world. Organizations are moving toward microservices architecture using [REST APIs](http://monoscope.tech/blog/everything-about-rest-apis) for new projects. Modern techniques do away with the completely standards-based approach of SOAP, but many prefer this more flexible and nimble approach.
 
-Check out our list of [best API monitoring tools](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) to help ensure the integrity of your APIs.
+Check out our list of [best API monitoring tools](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) to help ensure the integrity of your APIs.
 
 
 

@@ -19,22 +19,22 @@ The communication can be done via a rest API
 
 ## What Are REST APIs?
 
-[REST API](https://apitoolkit.io/blog/everything-about-rest-apis/) is an API that conforms to the design principles of the REST, or representational state transfer architectural style. Because of this, REST APIs are sometimes referred to RESTful APIs.
+[REST API](https://monoscope.tech/blog/everything-about-rest-apis/) is an API that conforms to the design principles of the REST, or representational state transfer architectural style. Because of this, REST APIs are sometimes referred to RESTful APIs.
 
-[REST APIs](https://apitoolkit.io/blog/what-are-rest-apis/) are all about Communication between client and server.
+[REST APIs](https://monoscope.tech/blog/what-are-rest-apis/) are all about Communication between client and server.
 
 ## What Are The Benefits of REST APIs?
 
 1. They are a simple and standardized approach to communication. You don’t have to worry about what data is being used or how to format your requests
 
-2. [They are scalable and stateless](https://apitoolkit.io/blog/rest-api-scalability/)
+2. [They are scalable and stateless](https://monoscope.tech/blog/rest-api-scalability/)
 As your service grows in complexity, you can easily make modifications. Also, you don’t have to concern yourself with what data is in which state and keep track of data across client and server.
 
 3. High performance. In large part due to the fact that they support caching. As your service gets more complex, your performance stays high.
 
 ## What Are REST Design Principles?
 
-The [framework for some APIs](https://apitoolkit.io/blog/web-service-apis-structures-and-protocols/), such as [SOAP](http://apitoolkit.io/blog/everything-about-soap-apis) and XML-RPC, is rigid. However, REST APIs can be developed using virtually any programming language and support a variety of data formats. All they need to do is adhere to the following six REST design principles - also known as architectural constraints:
+The [framework for some APIs](https://monoscope.tech/blog/web-service-apis-structures-and-protocols/), such as [SOAP](http://monoscope.tech/blog/everything-about-soap-apis) and XML-RPC, is rigid. However, REST APIs can be developed using virtually any programming language and support a variety of data formats. All they need to do is adhere to the following six REST design principles - also known as architectural constraints:
 
 **Layered system architecture**. In REST APIs, the calls and responses go through different layers. As a rule of thumb, don’t assume that the client and server applications connect directly to each other. There may be a number of different intermediaries in the communication loop. REST APIs need to be designed so that neither the client nor the server can tell whether it communicates with the end application or an intermediary.
 
@@ -44,7 +44,7 @@ The [framework for some APIs](https://apitoolkit.io/blog/web-service-apis-struct
 
 **Client-server decoupling**. In REST API design, client and server applications must be completely independent of each other. The only information the client application should know is the URI of the requested resource; it can't interact with the server application in any other way. Similarly, a server application shouldn't modify the client application other than passing it to the requested data via HTTP.
 
-**Cacheability**. When possible, resources should be cacheable on the client or server side. Server responses also need to contain information about whether caching is allowed for the delivered resource. The goal is to improve performance on the client side, while increasing [scalability](https://apitoolkit.io/blog/rest-api-scalability/) on the server side.
+**Cacheability**. When possible, resources should be cacheable on the client or server side. Server responses also need to contain information about whether caching is allowed for the delivered resource. The goal is to improve performance on the client side, while increasing [scalability](https://monoscope.tech/blog/rest-api-scalability/) on the server side.
 
 **Code on demand (optional)**. REST APIs usually send static resources, but in certain cases, responses can also contain executable code (such as Java applets). In these cases, the code should only run on-demand.
 
@@ -52,7 +52,7 @@ The [framework for some APIs](https://apitoolkit.io/blog/web-service-apis-struct
 
 REST APIs communicate using [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP) to perform standard database functions like creating, reading, updating, and deleting records (CRUD) within a resource. 
 
-For instance, a [REST API](https://apitoolkit.io/blog/what-are-rest-apis/) would use a GET request to retrieve a record, a POST request to create one, a PUT request to update a record, and a DELETE request to delete one. All HTTP methods can be used in API calls. A well-designed REST API is similar to a website running in a web browser with built-in HTTP functionality.
+For instance, a [REST API](https://monoscope.tech/blog/what-are-rest-apis/) would use a GET request to retrieve a record, a POST request to create one, a PUT request to update a record, and a DELETE request to delete one. All HTTP methods can be used in API calls. A well-designed REST API is similar to a website running in a web browser with built-in HTTP functionality.
 
 The state of a resource at any particular instant, or timestamp, is known as the resource representation. This information can be delivered to a client in virtually any format including JavaScript Object Notation (JSON), HTML, XLT, Python, PHP, or plain text.
 
@@ -72,4 +72,4 @@ JSON is popular because it’s readable by both humans and machines—and it is 
 
 Although flexibility is a big advantage of REST API design, that same flexibility makes it easy to design an API that’s broken or performs poorly. For this reason, professional developers have supportive communities where they share best practices for building with REST. 
 
-Finally, to be sure you’re building APIs that won’t break, you can compare [API observability tools here](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/).
+Finally, to be sure you’re building APIs that won’t break, you can compare [API observability tools here](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/).

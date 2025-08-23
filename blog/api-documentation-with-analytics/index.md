@@ -12,7 +12,7 @@ categories:
 
 ![API Documentation and Analytics](./api-documentation-analytics.png)
 
-[API documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/) is a crucial component of any software development project that involves using or creating APIs. APIs, or application programming interfaces, are sets of rules and protocols that allow different applications to communicate and exchange data. API documentation provides the necessary information for developers to understand how to use and integrate an API in their own projects.
+[API documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) is a crucial component of any software development project that involves using or creating APIs. APIs, or application programming interfaces, are sets of rules and protocols that allow different applications to communicate and exchange data. API documentation provides the necessary information for developers to understand how to use and integrate an API in their own projects.
 
 However, creating effective API documentation is not a simple task. It requires a clear understanding of the target audience, the purpose and functionality of the API, and the best practices for writing and presenting technical information. Moreover, it requires constant monitoring and evaluation to ensure that the documentation meets the needs and expectations of the developers who use it.
 
@@ -51,9 +51,9 @@ To achieve these qualities, there are some key elements that you should include 
 
 ## The Role of Analytics in Improving Documentation
 
-While these elements can help you create [effective API documentation](https://apitoolkit.io/blog/how-to-write-api-docs/), they are not enough to guarantee its success. You also need to [monitor](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) how your documentation is performing in terms of user engagement, content quality, and developer success. This is where analytics can help.
+While these elements can help you create [effective API documentation](https://monoscope.tech/blog/how-to-write-api-docs/), they are not enough to guarantee its success. You also need to [monitor](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) how your documentation is performing in terms of user engagement, content quality, and developer success. This is where analytics can help.
 
-Analytics can provide you with valuable insights into how your [developers](https://apitoolkit.io/blog/top-api-tools-for-developers/) are using your documentation, what they are looking for, what they are struggling with, and what they are satisfied with. By collecting and analyzing data from your documentation, you can:
+Analytics can provide you with valuable insights into how your [developers](https://monoscope.tech/blog/top-api-tools-for-developers/) are using your documentation, what they are looking for, what they are struggling with, and what they are satisfied with. By collecting and analyzing data from your documentation, you can:
 
 - **Understand your audience better**: You can learn more about who your developers are, what their goals are, what their preferences are, and what their pain points are.
 - **Evaluate your content quality**: You can measure how well your content matches your developers' needs and expectations, how accurate and complete it is, how clear and concise it is, how organized and accessible it is.
@@ -68,7 +68,7 @@ By using analytics to improve your documentation, you can also improve the exper
 - **It can enhance their productivity and efficiency**: If your documentation provides concise and relevant information about your API, your developers will be able to use and integrate it faster and easier.
 - **It can inspire their creativity and innovation**: If your documentation provides examples and best practices for using your API, your developers will be able to explore new possibilities and opportunities for using your API in their own projects.
 
-**Read**: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+**Read**: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
 ### Choosing the Right Analytics Tools
 
@@ -101,7 +101,7 @@ However, Google Analytics is not perfect. It has some limitations and drawbacks 
 - It does not comply with some privacy regulations or policies that may apply to your documentation
 - It may have some inaccuracies or discrepancies in the data due to sampling, caching, or filtering
   
-**Read**: [Top Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+**Read**: [Top Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
 ### Other Analytics Tools and Their Pros and Cons
 
@@ -135,7 +135,7 @@ Once you have defined the key metrics for your documentation, you need to set up
 
 ## Analyzing and Interpreting Data from Your Documentation
 
-After you have set up analytics tracking in your [documentation](https://apitoolkit.io/blog/how-to-write-api-docs/), you need to analyze and interpret data from your documentation. This basically means generating reports and insights that can help you understand how well your documentation is performing according to the metrics that you have defined. Depending on the features and functionalities of your analytics tool or platform, you may be able to create different types of reports and insights for your documentation, such as:
+After you have set up analytics tracking in your [documentation](https://monoscope.tech/blog/how-to-write-api-docs/), you need to analyze and interpret data from your documentation. This basically means generating reports and insights that can help you understand how well your documentation is performing according to the metrics that you have defined. Depending on the features and functionalities of your analytics tool or platform, you may be able to create different types of reports and insights for your documentation, such as:
 
 - **Overview reports**: These reports provide a summary and a snapshot of the overall performance of your documentation across all pages and sections. They show the aggregate values and trends of your metrics, such as the total number of page views, the average time on page, or the overall conversion rate.
 
@@ -159,19 +159,19 @@ Depending on the findings and conclusions that you have derived from your analyt
 
 Analytics can be a beacon of light in the often complex and dark realm of documentation. By understanding what makes your API documentation effective and leveraging the power of analytics tools like Google Analytics, you can measure, analyze, and improve your documentation.
 
-Remember, the pursuit of effective API documentation is a continuous process. The landscape shifts, technologies evolve, and developer needs change. Embrace the idea of ongoing [monitoring and optimization](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/), engage with your developer community, and stay attuned to [industry trends](https://apitoolkit.io/blog/api-trends/) and [best practices](https://apitoolkit.io/blog/web-api-performance/). Your API documentation will not only be functional but also a valuable asset that fosters developer success and strengthens your brand's reputation.
+Remember, the pursuit of effective API documentation is a continuous process. The landscape shifts, technologies evolve, and developer needs change. Embrace the idea of ongoing [monitoring and optimization](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/), engage with your developer community, and stay attuned to [industry trends](https://monoscope.tech/blog/api-trends/) and [best practices](https://monoscope.tech/blog/web-api-performance/). Your API documentation will not only be functional but also a valuable asset that fosters developer success and strengthens your brand's reputation.
 
 **Also Read**:
 
-[Generating Golang API Doc with Swagger](https://apitoolkit.io/blog/generating-golangdoc/)
+[Generating Golang API Doc with Swagger](https://monoscope.tech/blog/generating-golangdoc/)
 
-[Top 8 API Tools for Developers](https://apitoolkit.io/blog/top-8-api-documentation-tools-for-developers/)
+[Top 8 API Tools for Developers](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/)
 
-[How to Write API Documentation: 14 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 14 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[Web API Performance Best Practices: the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices: the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) 
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) 
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 

@@ -14,7 +14,7 @@ faqs:
   - q: What counts as an event?
     a: An event includes API requests, log entries, traces, spans, and metric data points. We count all telemetry data processed by Monoscope. Unlike competitors, we never sample or drop your data—every event is stored and searchable.
   - q: Do you offer volume discounts?
-    a: Yes, we offer custom pricing for high-volume usage (typically above 1 billion events/month). Contact our sales team at <a href="mailto:hello@apitoolkit.io" class="text-textBrand">hello@apitoolkit.io</a> to discuss your specific needs.
+    a: Yes, we offer custom pricing for high-volume usage (typically above 1 billion events/month). Contact our sales team at <a href="mailto:hello@monoscope.tech" class="text-textBrand">hello@monoscope.tech</a> to discuss your specific needs.
 ---
 
 ```=html
@@ -65,7 +65,7 @@ faqs:
                         </p>
                         <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
                     </div>
-                    <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+                    <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
                 </div>
             </div>
 
@@ -105,7 +105,7 @@ faqs:
                         </p>
                         <p class="text-base text-textWeak">Includes up to 100M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
                     </div>
-                    <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+                    <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
                 </div>
             </div>
             <!-- SELF-HOSTED PLAN -->

@@ -12,7 +12,7 @@ categories:
 
 ![Error Monitoring](./error-monitoring_png.png)
 
-One of the pet peeves of a software developer is having to deal with errors. They can be frustrating and costly. [Errors](https://apitoolkit.io/blog/api-downtime/) can affect the functionality, performance, and security of your application, as well as the satisfaction and loyalty of your users. That's why error monitoring is an essential practice for any application developer or owner.
+One of the pet peeves of a software developer is having to deal with errors. They can be frustrating and costly. [Errors](https://monoscope.tech/blog/api-downtime/) can affect the functionality, performance, and security of your application, as well as the satisfaction and loyalty of your users. That's why error monitoring is an essential practice for any application developer or owner.
 
 In this blog post, we will we will try to cover what error monitoring is, why it is important, and how it can help you identify and resolve the root cause of application errors. We will also cover the different types of application errors, the common causes and examples of them, and the tools and best practices for effective error monitoring.
 
@@ -61,7 +61,7 @@ As we mentioned earlier, there are many possible causes and examples of applicat
   - **404 Not Found Error**: This is a syntax error that occurs when you try to access a resource that does not exist on a server. This can happen if you misspell the URL, use a broken link, delete or move a file or folder, etc.
   - **Database Connection Errors**: These are logical errors that occur when you try to connect to a database that is unavailable or inaccessible. This can happen if you provide incorrect credentials, use an incompatible driver, exceed the connection limit, etc.
 
-- **Third-party dependencies**: These are external factors that affect your application, such as libraries, frameworks, [APIs](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/), services, etc. Third-party dependencies can introduce errors in your application if they are incompatible, outdated, buggy, or unavailable. For example:
+- **Third-party dependencies**: These are external factors that affect your application, such as libraries, frameworks, [APIs](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/), services, etc. Third-party dependencies can introduce errors in your application if they are incompatible, outdated, buggy, or unavailable. For example:
 
   - **Dependency Conflicts**: These are errors that occur when you use multiple dependencies that have conflicting or incompatible versions, features, or requirements. This can cause your application to fail or behave inconsistently.
   - **API Errors**: These are errors that occur when you use an API that is unreliable, unstable, or poorly documented. This can cause your application to receive incorrect or incomplete data, or no data at all.
@@ -77,19 +77,19 @@ As we mentioned earlier, there are many possible causes and examples of applicat
 
 There are many error monitoring tools available in the market, each with its own features and capabilities. Some of the popular error monitoring tools are:
 
-- **APIToolkit**: [APIToolkit](https://apitoolkit.io) is a cloud-based error monitoring tool that helps you track and fix errors in real-time. APIToolkit supports various languages and platforms, such as Python, Java, JavaScript, Ruby, PHP, etc. APIToolkit provides you with rich and detailed error reports, including stack traces, user feedback, breadcrumbs, tags, etc. APIToolkit also integrates with various tools and services, such as GitHub, Slack, Jira, etc.
+- **APIToolkit**: [APIToolkit](https://monoscope.tech) is a cloud-based error monitoring tool that helps you track and fix errors in real-time. APIToolkit supports various languages and platforms, such as Python, Java, JavaScript, Ruby, PHP, etc. APIToolkit provides you with rich and detailed error reports, including stack traces, user feedback, breadcrumbs, tags, etc. APIToolkit also integrates with various tools and services, such as GitHub, Slack, Jira, etc.
 - **Rollbar**: Rollbar is another cloud-based error monitoring tool that helps you identify and resolve errors quickly and efficiently. Rollbar supports various languages and frameworks, such as Node.js, React, Angular, Laravel, Django, etc. Rollbar provides you with comprehensive and actionable error insights, including error trends, root causes, impact analysis, etc. Rollbar also integrates with various tools and services, such as Bitbucket, Trello, PagerDuty, etc.
 - **Raygun**: Raygun is a cloud-based error monitoring tool that helps you improve the quality and performance of your application. Raygun supports various languages and technologies, such as .NET, Java, Ruby on Rails, iOS, Android, etc. Raygun provides you with powerful and intuitive error dashboards and charts that show you the frequency, severity, and distribution of errors in your application. Raygun also integrates with various tools and services, such as Azure DevOps, Asana, Twilio, etc.
 
 ![Error rates](./api-error-rates.png) Identifying errors on APIToolkit
 
-Read: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
-Read: [10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-Read: [API Monitoring and Documentation: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Read: [API Monitoring and Documentation: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-Read: [The Key Metrics toMeasiure Developer Success for Your API Platform](https://apitoolkit.io/blog/the-key-metrics/)
+Read: [The Key Metrics toMeasiure Developer Success for Your API Platform](https://monoscope.tech/blog/the-key-metrics/)
 
 How to choose the right error monitoring tool for your application depends on various factors,
 such as:
@@ -113,7 +113,7 @@ Once you have chosen an error monitoring tool for your application, you should i
 Some of the best practices for implementing error monitoring are:
 
 - **Setting up alerts and notifications**: You should configure your error monitoring tool to alert you when an error occurs in your application,
-so you can respond to it promptly. Also, set up notifications to inform you about the status and resolution of errors, so you can keep track of them. [APIToolkit](https://apitoolkit.io) integrates with various channels to serve you error alerts and notifications, such as email, Slack, Opsgenie, SMS, push notifications, etc.
+so you can respond to it promptly. Also, set up notifications to inform you about the status and resolution of errors, so you can keep track of them. [APIToolkit](https://monoscope.tech) integrates with various channels to serve you error alerts and notifications, such as email, Slack, Opsgenie, SMS, push notifications, etc.
 
 - **Integrating with development workflows**: You should integrate your error monitoring tool with your development tools and processes, such as code repositories, issue trackers, project management tools, etc. This way, you can streamline your error management workflow and collaborate with your team more effectively. You can also automate some tasks related to error management, such as creating tickets, assigning tasks, updating statuses, etc.
 
@@ -194,14 +194,14 @@ Application errors are inevitable, but they can be mitigated and resolved by fol
 
 **Also Read**:
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[How to Write API Documentation: 14 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 14 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)

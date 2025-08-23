@@ -20,7 +20,7 @@ API testing is a critical component in the digital realm, it ensures that APIs f
 
 Think of API testing like you trying out a new recipe. While you can follow the basic steps and get a decent dish, knowing some cooking techniques (or coding, in this case) can help you tweak the recipe, understand it better, and even come up with new variations. So, while you can test an API without coding knowledge, being able to code gives you more flexibility and depth in your testing.
 
-[API testing automation](https://apitoolkit.io/blog/api-testing-automation/) is like having kitchen gadgets that do some tasks for you, like a blender or a food processor. It speeds up the process and ensures consistency. Tools like [Testing,](https://usetestkit.com) [Postman,](https://www.postman.com/) and [Swagger](https://swagger.io/) are like these kitchen gadgets, helping you test APIs faster and more efficiently.
+[API testing automation](https://monoscope.tech/blog/api-testing-automation/) is like having kitchen gadgets that do some tasks for you, like a blender or a food processor. It speeds up the process and ensures consistency. Tools like [Testing,](https://usetestkit.com) [Postman,](https://www.postman.com/) and [Swagger](https://swagger.io/) are like these kitchen gadgets, helping you test APIs faster and more efficiently.
 In API testing, negative tests evaluate the API's resilience to unexpected scenarios, emphasizing the importance of thorough testing in today's software landscape.
 
 ![Why is API Testing Important](why-api-testing-is-important.png)
@@ -41,7 +41,7 @@ Security: Perhaps one of the most critical aspects of API testing is ensuring se
 
 API testing is a meticulous process that requires a deep understanding of various components to ensure its effectiveness. Here's a comprehensive breakdown of the essential elements:
 
-1. [API Documentation:](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) This is the starting point for a developer looking to test an API. The documentation serves as a guidebook, offering a detailed overview of how the API functions. It outlines the available endpoints, describes the expected request and response formats, and lists potential error codes that might be encountered. By thoroughly reviewing the API documentation, API testers can gain a clear understanding of the API's design and intended behavior, ensuring that they approach testing with a well-informed perspective.
+1. [API Documentation:](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) This is the starting point for a developer looking to test an API. The documentation serves as a guidebook, offering a detailed overview of how the API functions. It outlines the available endpoints, describes the expected request and response formats, and lists potential error codes that might be encountered. By thoroughly reviewing the API documentation, API testers can gain a clear understanding of the API's design and intended behavior, ensuring that they approach testing with a well-informed perspective.
 
 2. Endpoint URLs: In the realm of APIs, endpoints are akin to destinations. They are specific URLs to which API requests are directed. Each endpoint corresponds to a particular function or resource. Knowing the correct endpoints is crucial because directing a request to the wrong endpoint or an invalid URL can lead to errors or unintended outcomes. Therefore, API  testers must be well-acquainted with all the available endpoints to ensure comprehensive testing coverage.
 
@@ -60,7 +60,7 @@ API testing demands a unique blend of skills to ensure that APIs function as int
 
 1. Technical Proficiency: At its core, an API is a set of programming instructions and standards that allow applications to communicate with each other. Therefore, having a foundational understanding of the programming language in which the API is written becomes beneficial. This knowledge equips API testers to delve deeper into the API's code, identify potential issues at the source level, and understand the logic and flow of the API's operations. While you don’t need to be an expert coder, a basic grasp of the language can significantly enhance the testing process.
 
-2. Understanding of [REST](https://apitoolkit.io/blog/what-are-rest-apis/) and [SOAP APIs:](https://apitoolkit.io/blog/everything-about-soap-apis/) REST (Representational State Transfer) and SOAP (Simple Object Access Protocol) are two of the most widely adopted architectures for designing networked applications, especially APIs. While they both serve the purpose of communication, they have distinct methodologies and conventions.
+2. Understanding of [REST](https://monoscope.tech/blog/what-are-rest-apis/) and [SOAP APIs:](https://monoscope.tech/blog/everything-about-soap-apis/) REST (Representational State Transfer) and SOAP (Simple Object Access Protocol) are two of the most widely adopted architectures for designing networked applications, especially APIs. While they both serve the purpose of communication, they have distinct methodologies and conventions.
     a. REST is a set of architectural principles that use standard HTTP methods and status codes, URLs, and MIME types. It's known for its simplicity and scalability.
     b. SOAP, on the other hand, is a protocol that relies on XML-based messaging patterns. It's known for its robustness and is often used in enterprise settings.
 Having a clear understanding of these architectures is crucial for you as an API  tester because it allows you to design tests that align with the API's architectural standards, ensuring more accurate and relevant testing outcomes.
@@ -73,10 +73,10 @@ In summary, while API testing might seem daunting at first, equipping yourself w
 
 **Also Read**
 
-[Writing API Documentation - Best Practices and Mistakes to Avoid](https://apitoolkit.io/blog/writing-api-documentation/)
+[Writing API Documentation - Best Practices and Mistakes to Avoid](https://monoscope.tech/blog/writing-api-documentation/)
 	
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 	
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/writing-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/writing-api-documentation/)
 	
-[API Monitoring and Documentation: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Monitoring and Documentation: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)

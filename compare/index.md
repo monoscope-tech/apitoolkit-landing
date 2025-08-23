@@ -46,7 +46,7 @@ pages:
             There are many monitoring and observability platforms in the market today, each with its unique offerings. Here’s what APItoolkit does better and offers differently compared to a few of the others.
          <p>
          <div class="mt-[30px] flex items-center gap-4 text-center">
-            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
+            <a href="https://app.monoscope.tech" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
             <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" class="btn btn-outline btn-neutral sm:w-56">BOOK A CALL <span class="text-xs">- for free</span></a>
          </div>
       </div>
@@ -85,7 +85,7 @@ pages:
    <div class="w-full my-12 width-control mx-auto px-2">
       <div class="w-full flex flex-col items-center text-center bg-blue-500 py-16 rounded-3xl gap-8">
          <p class="font-medium text-3xl text-white px-16 leading-normal">If you’re building an API-driven application on the web, mobile, IoT, etc., and you need to observe the API usage data from live users’ payload for any reason, then you should consider using APItoolkit.</p>
-         <a href="https://app.apitoolkit.io" class="btn btn-neutral sm:w-56 text-white">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
+         <a href="https://app.monoscope.tech" class="btn btn-neutral sm:w-56 text-white">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
       </div>
    </div>
 ```

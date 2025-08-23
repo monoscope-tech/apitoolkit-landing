@@ -12,17 +12,17 @@ categories:
 
 ![API Data Retrieval and Filtering](./api-data-retrieval-filtering.png)
 
-Web APIs are interfaces that allow applications to communicate with each other over the internet. They enable data exchange, integration, and interoperability among different systems and platforms. However, web APIs also face challenges in terms of performance, scalability, and security. One of the key factors that affect [web API performance](https://apitoolkit.io/blog/web-api-performance/) is how data is retrieved and filtered from the data sources.
+Web APIs are interfaces that allow applications to communicate with each other over the internet. They enable data exchange, integration, and interoperability among different systems and platforms. However, web APIs also face challenges in terms of performance, scalability, and security. One of the key factors that affect [web API performance](https://monoscope.tech/blog/web-api-performance/) is how data is retrieved and filtered from the data sources.
 
 ## What is Data Retrieval and Filtering?
 
 Data retrieval and filtering are processes that involve querying, transforming, and selecting data from databases, files, or other sources. They are essential for web APIs to provide relevant and accurate information to the clients. However, they can also be costly and time-consuming, especially when dealing with large amounts of data or complex queries. Therefore, web API developers need to adopt efficient strategies and techniques to optimize data retrieval and filtering for web API performance.
 
-Indeed, one of the main challenges of web [API development](https://apitoolkit.io/blog/benefits-of-api-integration/) is ensuring that the data transfer between the client and the server is fast and efficient. This can have a significant impact on the user experience, as well as the scalability and reliability of the web service. If the data transfer is slow or unreliable, the client may experience delays, errors, or timeouts, which can frustrate the user and affect their satisfaction and retention.
+Indeed, one of the main challenges of web [API development](https://monoscope.tech/blog/benefits-of-api-integration/) is ensuring that the data transfer between the client and the server is fast and efficient. This can have a significant impact on the user experience, as well as the scalability and reliability of the web service. If the data transfer is slow or unreliable, the client may experience delays, errors, or timeouts, which can frustrate the user and affect their satisfaction and retention.
 
-To avoid these issues, [web API developers](https://apitoolkit.io/blog/top-api-tools-for-developers/) need to implement some strategies for efficient data retrieval and filtering. These strategies can help reduce the amount of data that needs to be transferred over the network, as well as optimize the processing of the data on both ends. In this post, we will explore some of the best practices for improving the performance of web APIs, especially when dealing with large and complex data sets.
+To avoid these issues, [web API developers](https://monoscope.tech/blog/top-api-tools-for-developers/) need to implement some strategies for efficient data retrieval and filtering. These strategies can help reduce the amount of data that needs to be transferred over the network, as well as optimize the processing of the data on both ends. In this post, we will explore some of the best practices for improving the performance of web APIs, especially when dealing with large and complex data sets.
 
-Read: [Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+Read: [Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
 ## Best Practices for Efficient Data Retrieval and Filtering
 
@@ -34,7 +34,7 @@ Pagination is a technique that involves breaking large result sets into smaller 
 
 Pagination can improve the performance of web APIs in several ways:
 
-- It reduces the network [bandwidth and latency](https://apitoolkit.io/api-performance-monitoring-and-compliance/) by transferring less data per request.
+- It reduces the network [bandwidth and latency](https://monoscope.tech/api-performance-monitoring-and-compliance/) by transferring less data per request.
 - It reduces the server load and memory consumption by processing less data per request.
 - It improves the user experience by providing faster and more responsive feedback.
 
@@ -46,7 +46,7 @@ Pagination can be implemented in different ways, depending on the data source an
 
 - **Keyset-based pagination**: This method uses one or more key parameters to specify the values of the fields that determine the order of the data, and returns the next page of data based on those values. For example, `GET /users?name=John&age=25` would return the next page of users after the user with the name `John` and the age `25`.
 
-Read: [How to Analyze API Logs and Metrics for Better Performance (Ultimate Guide)](https://apitoolkit.io/blog/api-logs-and-metrics/)
+Read: [How to Analyze API Logs and Metrics for Better Performance (Ultimate Guide)](https://monoscope.tech/blog/api-logs-and-metrics/)
 
 #### Providing Links and Metadata for Pagination Navigation
 
@@ -54,7 +54,7 @@ To enable pagination navigation for web APIs, it is important to provide links a
 
 Some of the common elements are:
 
-- **Next link**: A link that points to the next page of the result set, if it exists. The link should include all the necessary [query parameters](https://apitoolkit.io/api-logs-and-metrics/) to request the next page, such as the offset, cursor, keyset, or limit.
+- **Next link**: A link that points to the next page of the result set, if it exists. The link should include all the necessary [query parameters](https://monoscope.tech/api-logs-and-metrics/) to request the next page, such as the offset, cursor, keyset, or limit.
 - **Previous link**: A link that points to the previous page of the result set, if it exists. The link should include all the necessary query parameters to request the previous page, such as the offset, cursor, keyset, or limit.
 - **First link**: A link that points to the first page of the result set, if it exists. The link should include all the necessary query parameters to request the first page, such as the offset, cursor, keyset, or limit.
 - **Last link**: A link that points to the last page of the result set, if it exists. The link should include all the necessary query parameters to request the last page, such as the offset, cursor, keyset, or limit.
@@ -71,7 +71,7 @@ There are different ways to provide these elements for web APIs, depending on th
 - **Using response envelope**: This method uses a wrapper or envelope object that contains both the data and the links and metadata for pagination navigation in the response body. For example, the server can use a `data` field or object to provide the actual result set, and a `links` field or object to provide next, previous, first, and last links, and a `meta` field or object to provide total count, page number, and page size metadata. This method is more structured and organized for some clients or frameworks, but it may require additional parsing or processing
 of the response body.
 
-Read: [Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+Read: [Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
 ### B. Enable Filtering and Sorting Options
 
@@ -101,7 +101,7 @@ Regardless of how you design your web API to accept query parameters for filteri
 
 One of the most common challenges is how to handle full-text search, which allows clients to search for keywords or phrases in your data. Full-text search is not supported by all databases natively, and even if it is, it may not be optimized for performance or relevance. Therefore, you may need to use external tools or libraries that can provide full-text search capabilities for your database. For example, if you use MongoDB as your database, you can use [MongoDB Atlas Search](https://www.mongodb.com/atlas/search), which is a fully managed service that integrates with MongoDB Atlas and provides advanced full-text search features such as fuzzy matching, highlighting, synonyms, etc.
 
-Read: [API Management: How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+Read: [API Management: How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
 ### C. Use Caching
 
@@ -109,13 +109,13 @@ Caching is a technique that stores frequently accessed or expensive data in a fa
 
 ![API Caching Flow](./api-caching.png)
 
-Caching can be applied at different levels of [web API architecture](https://apitoolkit.io/api-documentation-and-developer-portals/), such as:
+Caching can be applied at different levels of [web API architecture](https://monoscope.tech/api-documentation-and-developer-portals/), such as:
 
 - **Client-side caching**: This level involves storing data in the client application (such as a web browser or a mobile app) using mechanisms such as local storage, cookies, or service workers. Client-side caching can reduce the number of requests to the API and provide offline access to data.
 - **Server-side caching**: This level involves storing data in the API server (such as a web server or an application server) using mechanisms such as in-memory caches, distributed caches, or reverse proxies. Server-side caching can reduce the latency and overhead of accessing the data source.
 - **Data source caching**: This level involves storing data in the data source (such as a database or a web service) using mechanisms such as query caches, materialized views, or cache servers. Data source caching can improve the performance and availability of the data source.
 
-Read: [How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+Read: [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
 ### D. Use Projection Parameters
 
@@ -132,12 +132,12 @@ Projection parameters can be implemented in different ways, depending on the dat
 Data retrieval and filtering are essential processes for web API performance. By applying the techniques and best practices discussed above, you can optimize your web API for efficient data retrieval and filtering, and provide a fast and satisfying experience to your users.
 
 ***
-Try [APIToolkit](https://apitoolkit.io) - a robust API management toolbox to build and manage the most reliable APIs.
+Try [APIToolkit](https://monoscope.tech) - a robust API management toolbox to build and manage the most reliable APIs.
 
 **Keep Reading**
 
-[API Monitoring and Documentation: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Monitoring and Documentation: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[Best API Monitoring and Observability Tool in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tool in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)

@@ -50,7 +50,7 @@ APIToolkit is a web service development platform that enables developers to desi
 Follow this instruction to generate swagger documentation from your live traffic using APItoolkit. In this article I will be using flask for the process
 ### Prerequisites
 
-1. Create an account with APItoolkit. If you do not have an account use [this link](https://app.apitoolkit.io/) to create or login into your account.
+1. Create an account with APItoolkit. If you do not have an account use [this link](https://app.monoscope.tech/) to create or login into your account.
 2. Connect your API to APItoolkit.
 
 ### General overview on how to generate swagger docs from live traffic using APItoolki.
@@ -171,10 +171,10 @@ Generating Swagger Docs from live traffic with APIToolkit offers a powerful and 
 
 **Also Read**
 
-[PHP Laravel Cache Setup for Apitoolkit to Avoid SDK Reinit](https://apitoolkit.io/blog/how-to-setup-php-laravel-cache-for-apitoolkit-to-avoid-sdk-reinitialization/)
+[PHP Laravel Cache Setup for Apitoolkit to Avoid SDK Reinit](https://monoscope.tech/blog/how-to-setup-php-laravel-cache-for-apitoolkit-to-avoid-sdk-reinitialization/)
 	
-[Generating Golang API Doc with Swagger](https://apitoolkit.io/blog/generating-golangdoc/)
+[Generating Golang API Doc with Swagger](https://monoscope.tech/blog/generating-golangdoc/)
 
-[Monitoring API Failures with APIToolkit: A Guide to Efficient Endpoint Troubleshooting](https://apitoolkit.io/blog/monitoring-api-failures-with-apitoolkit/)
+[Monitoring API Failures with APIToolkit: A Guide to Efficient Endpoint Troubleshooting](https://monoscope.tech/blog/monitoring-api-failures-with-apitoolkit/)
 
-[Unlocking the Advantages of OpenAPI (Swagger) Specification for API Development](https://apitoolkit.io/blog/open-api-swagger-specification-for-api-development/imdex/)
+[Unlocking the Advantages of OpenAPI (Swagger) Specification for API Development](https://monoscope.tech/blog/open-api-swagger-specification-for-api-development/imdex/)

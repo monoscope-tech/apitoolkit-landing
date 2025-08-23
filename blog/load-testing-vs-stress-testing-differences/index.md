@@ -57,7 +57,7 @@ The load testing process typically consists of three main steps:
 
 **Test planning and scenario creation**: This step involves defining the test objectives, scope, criteria, environment, tools, data, etc., and creating realistic load test scenarios that simulate the expected user load on the system.
 
-**Test execution and monitoring**: This involves executing the load test scenarios using appropriate tools and techniques, and [monitoring the system performance](https://apitoolkit.io/blog/web-api-performance/) using various metrics and indicators.
+**Test execution and monitoring**: This involves executing the load test scenarios using appropriate tools and techniques, and [monitoring the system performance](https://monoscope.tech/blog/web-api-performance/) using various metrics and indicators.
 
 **Data analysis and results interpretation**: This step concerns itself with analyzing the collected data and results to evaluate the system's performance under different load conditions, identify any performance issues or bottlenecks, and provide recommendations for improvement.
 
@@ -152,7 +152,7 @@ The difference between a load test and stress test would usually be in the detai
 
 | **Parameter**       | **Load Testing**                   | **Stress Testing**                   |
 |---------------------|-----------------------------------|-------------------------------------|
-| Goal                | [Assess performance under expected load](https://apitoolkit.io/blog/web-api-performance/) | Identify breaking points            |
+| Goal                | [Assess performance under expected load](https://monoscope.tech/blog/web-api-performance/) | Identify breaking points            |
 | Duration            | Short-term                        | Extended                            |
 | Real-world analogy  | Rehearsing for a show             | Balloon filling to burst            |
 
@@ -160,9 +160,9 @@ The difference between a load test and stress test would usually be in the detai
 
 Recognizing the differences ensures that you test your system's readiness and resilience effectively. Not doing so is akin to practicing for a sprint when you're actually running a marathon!
 
-Read: [10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-Read: [Key Benefits of API Integration for Developers - with Statistics](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers - with Statistics](https://monoscope.tech/blog/benefits-of-api-integration/)
 
 ## Real-World Examples and Case Studies
 
@@ -176,7 +176,7 @@ One of the key aspects of load testing e-commerce applications is simulating con
 
 Financial systems is one domain where stress testing is essential for ensuring the security, integrity and resilience of software systems. Stress testing helps evaluate how the system behaves under extreme conditions, such as high transaction volumes, peak market activity, cyberattacks, etc. For example, a bank may want to stress test their payment system before launching a new feature or service, such as mobile banking or instant transfers, to ensure that it can cope with the increased demand and complexity without compromising the data accuracy or availability.
 
-One of the main challenges of stress testing financial systems is emulating extreme transaction volumes. This means generating a very high number of transactions that exceed the normal or expected capacity of the system, such as thousands or millions of transactions per second. Tools like Testkit, Gatling or Tsung can help testers create these scenarios and [monitor the system behavior](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) under stress. This way, they can identify any system failures or vulnerabilities that may pose a risk to the business continuity and reputation.
+One of the main challenges of stress testing financial systems is emulating extreme transaction volumes. This means generating a very high number of transactions that exceed the normal or expected capacity of the system, such as thousands or millions of transactions per second. Tools like Testkit, Gatling or Tsung can help testers create these scenarios and [monitor the system behavior](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) under stress. This way, they can identify any system failures or vulnerabilities that may pose a risk to the business continuity and reputation.
 
 ---
 
@@ -198,11 +198,11 @@ One of the main challenges of stress testing financial systems is emulating extr
 
 **Myth 1: Load Testing and Stress Testing Serve the Same Purpose**
 
-While both tests fall under the [performance testing](https://apitoolkit.io/blog/web-api-performance/) umbrella, their objectives differ. Load testing evaluates system behavior under anticipated load, while stress testing observes the system's reaction to extreme conditions.
+While both tests fall under the [performance testing](https://monoscope.tech/blog/web-api-performance/) umbrella, their objectives differ. Load testing evaluates system behavior under anticipated load, while stress testing observes the system's reaction to extreme conditions.
 
 **Myth 2: If Your System Passes Load Testing, It Will Sail Through Stress Testing**
 
-Load testing checks the system's [performance](https://apitoolkit.io/blog/web-api-performance/) under expected conditions. Just because it performs well there doesn't mean it's ready for the harshest scenarios stress testing introduces.
+Load testing checks the system's [performance](https://monoscope.tech/blog/web-api-performance/) under expected conditions. Just because it performs well there doesn't mean it's ready for the harshest scenarios stress testing introduces.
 
 **Myth 3: Load and Stress Tests Are Only for High-Traffic Sites**
 
@@ -272,9 +272,9 @@ Understanding the distinctions between Load Testing and Stress Testing isn't jus
 They're essential tools in a developer's arsenal to ensure the software or application’s smooth operation. By actively engaging in these tests, you not only fortify your systems but also gain peace of mind in a digital age filled with uncertainties.
 
 ---
-- [Learn about testing automation in general](https://apitoolkit.io/blog/api-testing-automation/) 
+- [Learn about testing automation in general](https://monoscope.tech/blog/api-testing-automation/) 
 - [Learn more about these tests on Wikipedia](https://en.wikipedia.org/wiki/Software_performance_testing)
-- [Check out the apitoolkit testing offerings](https://apitoolkit.io/api-testing)
+- [Check out the apitoolkit testing offerings](https://monoscope.tech/api-testing)
 - [Check out the testkit low code DSL for api testing and load+performance testing](https://usetestkit.com)
 
 ---
@@ -293,12 +293,12 @@ Looking to delve deeper? Join our next session on **'Performance Testing: Beyond
 
 **Keep Reading**
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)

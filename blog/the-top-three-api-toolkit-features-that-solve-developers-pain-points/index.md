@@ -12,12 +12,12 @@ categories:
 
 ![top-3-api-toolkit-features](./top-3-api-toolkit-features.png)
 
-Although APIs are essential to contemporary applications, effectively managing them can be daunting. Debugging API requests, maintaining security compliance, and performance monitoring are among the problems that developers frequently face. API ToolKit, which gives developers strong tools to improve their workflow, is intended to mitigate these difficulties. In this post, we will explore three [API ToolKit](https://apitoolkit.io/) features that address common developer pain points.
+Although APIs are essential to contemporary applications, effectively managing them can be daunting. Debugging API requests, maintaining security compliance, and performance monitoring are among the problems that developers frequently face. API ToolKit, which gives developers strong tools to improve their workflow, is intended to mitigate these difficulties. In this post, we will explore three [API ToolKit](https://monoscope.tech/) features that address common developer pain points.
 
 
 ## 1. Real-time API Monitoring and Alerts
 
-Troubleshooting API failures without the right insights is one of the most annoying things for developers. Using API Toolkit's [real-time monitoring feature](https://apitoolkit.io/features/api-observability/), developers can monitor API performance, watch errors and any numbers that matter over time.
+Troubleshooting API failures without the right insights is one of the most annoying things for developers. Using API Toolkit's [real-time monitoring feature](https://monoscope.tech/features/api-observability/), developers can monitor API performance, watch errors and any numbers that matter over time.
 
 ![monitors-and-alerts](./monitors-and-alerts.png)
 
@@ -33,7 +33,7 @@ With these features, developers can proactively address problems and ensure API 
 
 ## 2. Error Tracking and Breaking Change Detection
 
-Developers struggle with unexpected errors and silent-breaking changes that can disrupt integrations and make debugging a long and frustrating process. However, using API Toolkit's [error tracking](https://apitoolkit.io/features/error-tracking/) feature, developers can catch breaking changes in their APIs and third-party integrations with enough context to reproduce the issues and narrow down the root cause.
+Developers struggle with unexpected errors and silent-breaking changes that can disrupt integrations and make debugging a long and frustrating process. However, using API Toolkit's [error tracking](https://monoscope.tech/features/error-tracking/) feature, developers can catch breaking changes in their APIs and third-party integrations with enough context to reproduce the issues and narrow down the root cause.
 
 ![changes-and-errors](./changes-and-errors.png)
 
@@ -50,7 +50,7 @@ Developers struggle with unexpected errors and silent-breaking changes that can 
 
 ## 3. API Management
 
-Being the most feature-rich solution available, [API ToolKit](https://apitoolkit.io/) offers everything you need to manage your APIs effectively. It's a centralized command centre for all API-related operations, from design and deployment to monitoring and troubleshooting.
+Being the most feature-rich solution available, [API ToolKit](https://monoscope.tech/) offers everything you need to manage your APIs effectively. It's a centralized command centre for all API-related operations, from design and deployment to monitoring and troubleshooting.
 
 ### Key Capabilities:
 
@@ -64,7 +64,7 @@ Being the most feature-rich solution available, [API ToolKit](https://apitoolkit
 
 Here, I’ll show you a step-by-step guide on getting started with APIToolKit
 
-- Navigate to [app.apitoolkit.io](https://app.apitoolkit.io/) and sign up with email or GitHub. 
+- Navigate to [app.monoscope.tech](https://app.monoscope.tech/) and sign up with email or GitHub. 
 
 ![login](./login.png)
 
@@ -95,7 +95,7 @@ Here, I’ll show you a step-by-step guide on getting started with APIToolKit
 
 ![integration-with-SDK](./integrate-express.png)
 
-{=Note=}: We have indepth [documentation](https://apitoolkit.io/docs/sdks/) for integrating all your favourite frameworks. If you can’t find a specific SDK, you can request for one from the [APIToolKit team](https://discord.gg/BHQh5JzjPX).
+{=Note=}: We have indepth [documentation](https://monoscope.tech/docs/sdks/) for integrating all your favourite frameworks. If you can’t find a specific SDK, you can request for one from the [APIToolKit team](https://discord.gg/BHQh5JzjPX).
 
 - Select your desired plan:
 
@@ -105,16 +105,16 @@ As you can see, following the above steps will get you up and running with API T
 
 **Keep Reading**
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[How to Write API Documentation: 14 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 14 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/)
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[Mastering API Debugging and Monitoring: Best Practices for Seamless Integration](https://apitoolkit.io/blog/mastering-api-debugging/)
+[Mastering API Debugging and Monitoring: Best Practices for Seamless Integration](https://monoscope.tech/blog/mastering-api-debugging/)

@@ -12,13 +12,13 @@ categories:
 
 ![How to get in insights](how-to-gain-insights.png)
 
-In today's complex tech ecosystem, [APIs](https://apitoolkit.io/blog/api-as-a-product/) work as essential intermediaries, facilitating the exchange of features and data among disparate systems. Often operating behind the scenes, they support a range of technologies, from web-based platforms to Internet of Things devices. Yet, as the world of APIs expands, keeping them functional is not so easy, hence the need for monitoring. Monitoring API usage, evaluating their effectiveness, and identifying security risks are crucial steps makes the role of API observability a necessity.
+In today's complex tech ecosystem, [APIs](https://monoscope.tech/blog/api-as-a-product/) work as essential intermediaries, facilitating the exchange of features and data among disparate systems. Often operating behind the scenes, they support a range of technologies, from web-based platforms to Internet of Things devices. Yet, as the world of APIs expands, keeping them functional is not so easy, hence the need for monitoring. Monitoring API usage, evaluating their effectiveness, and identifying security risks are crucial steps makes the role of API observability a necessity.
 
-[API observability](https://apitoolkit.io/blog/api-observability-software-development-/) isn't just about knowing whether your API is up or down; it's about gaining a 360-degree view of its operations. It's about understanding the nuances of each API call, tracing data paths, and being alerted to anomalies before they become issues. In essence, API observability gives you the "eyes" to see the intricate workings of your API landscape.
+[API observability](https://monoscope.tech/blog/api-observability-software-development-/) isn't just about knowing whether your API is up or down; it's about gaining a 360-degree view of its operations. It's about understanding the nuances of each API call, tracing data paths, and being alerted to anomalies before they become issues. In essence, API observability gives you the "eyes" to see the intricate workings of your API landscape.
 
-Now, you might be wondering, "How do I achieve this level of insight?" The answer is specialized tools designed for API observability, and one such tool that stands out is [APIToolkit](https://apitoolkit.io/). This article aims to guide you through the capabilities of APIToolkit in enhancing your API observability, providing you with actionable insights that can be a game-changer for your business.
+Now, you might be wondering, "How do I achieve this level of insight?" The answer is specialized tools designed for API observability, and one such tool that stands out is [APIToolkit](https://monoscope.tech/). This article aims to guide you through the capabilities of APIToolkit in enhancing your API observability, providing you with actionable insights that can be a game-changer for your business.
 
-If you're new to this topic, we've already written articles that cover the basics of [API observability](https://apitoolkit.io/blog/api-observability-software-development-/) and the key  [APIToolkit features](https://apitoolkit.io/blog/how-to-troubleshoot-and-debug-your-apis/). These articles are a great starting point to quickly get you familiar with the subject.
+If you're new to this topic, we've already written articles that cover the basics of [API observability](https://monoscope.tech/blog/api-observability-software-development-/) and the key  [APIToolkit features](https://monoscope.tech/blog/how-to-troubleshoot-and-debug-your-apis/). These articles are a great starting point to quickly get you familiar with the subject.
 
 ## The Need for Specialized Tools in API Observability
 
@@ -60,10 +60,10 @@ While general monitoring tools offer a bird's-eye view, specialized tools like A
 
 ## How APIToolkit Enhances API Observability
 
-[API observability](https://apitoolkit.io/blog/api-observability-best-practices/) is not a one-size-fits-all concept; it's a multifaceted discipline that requires specialized tools to address its complexities. APIToolkit is designed with this in mind, offering a range of features that go beyond the capabilities of general monitoring tools. Let's explore some of these features and understand how they solve real-world problems.
+[API observability](https://monoscope.tech/blog/api-observability-best-practices/) is not a one-size-fits-all concept; it's a multifaceted discipline that requires specialized tools to address its complexities. APIToolkit is designed with this in mind, offering a range of features that go beyond the capabilities of general monitoring tools. Let's explore some of these features and understand how they solve real-world problems.
 
 ### 1. Real-Time Monitoring and Analytics
-Feature: [APIToolkit](https://apitoolkit.io/) provides real-time monitoring and analytics, allowing you to track API calls, response times, and error rates as they happen.
+Feature: [APIToolkit](https://monoscope.tech/) provides real-time monitoring and analytics, allowing you to track API calls, response times, and error rates as they happen.
 
 Real-World Scenario: Imagine you're running an e-commerce platform. During a flash sale, you notice that the checkout API is experiencing delays. Real-time monitoring allows you to pinpoint the issue immediately, ensuring a smooth experience for your customers and preventing potential revenue loss.
 
@@ -82,11 +82,11 @@ Feature: APIToolkit uses machine learning algorithms to understand the normal be
 
 Real-World Scenario: In a financial trading platform, sudden spikes in API calls could indicate fraudulent activity. Intelligent anomaly detection can alert you in real time, allowing you to take immediate action.
 
-[APIToolkit](https://apitoolkit.io/) offers a comprehensive suite of features tailored for API observability, addressing the unique challenges that APIs present. By solving real-world problems, it not only enhances the performance and reliability of your APIs but also contributes to better business outcomes.
+[APIToolkit](https://monoscope.tech/) offers a comprehensive suite of features tailored for API observability, addressing the unique challenges that APIs present. By solving real-world problems, it not only enhances the performance and reliability of your APIs but also contributes to better business outcomes.
 
 ## Setting Up APIToolkit for API Observability
 
-[API observability](https://apitoolkit.io/blog/api-observability-best-practices/) is crucial for understanding the behaviour and performance of your APIs. With APIToolkit, setting up observability is straightforward. Let's walk through the steps:
+[API observability](https://monoscope.tech/blog/api-observability-best-practices/) is crucial for understanding the behaviour and performance of your APIs. With APIToolkit, setting up observability is straightforward. Let's walk through the steps:
 
 1. Start by signing up for an APIToolkit
 ![signin page](signin-page.png)
@@ -99,21 +99,21 @@ Real-World Scenario: In a financial trading platform, sudden spikes in API calls
 6. Voila! You are as good as ready and here is what a fully integrated dashboard with data should look like
 ![APIToolkit dashboard](apitoolkit-dashboard.png)
 
-Note: On [APIToolkit](https://apitoolkit.io/) your page is automatically configured with specific endpoints, setting rate limits, and more. All incoming requests are monitored for anomalies, new endpoints, slow endpoints and more. no rate limiting.  
+Note: On [APIToolkit](https://monoscope.tech/) your page is automatically configured with specific endpoints, setting rate limits, and more. All incoming requests are monitored for anomalies, new endpoints, slow endpoints and more. no rate limiting.  
 
 We also do field redaction. If a user doesn't want APIToolkit to record sensitive fields, like passwords, credit cards, etc., they can specify them so APIToolkit won't record them.
 
 ## Conclusion
 
-[API observability](https://apitoolkit.io/blog/api-observability-best-practices/) is not just a trend; it's a necessity in today's complex digital ecosystems. As we've seen, general monitoring tools can only take you so far. Specialized tools like APIToolkit offer features that are tailor-made for the unique challenges of API observability, providing actionable insights that can significantly improve performance and security.
+[API observability](https://monoscope.tech/blog/api-observability-best-practices/) is not just a trend; it's a necessity in today's complex digital ecosystems. As we've seen, general monitoring tools can only take you so far. Specialized tools like APIToolkit offer features that are tailor-made for the unique challenges of API observability, providing actionable insights that can significantly improve performance and security.
 
-The future of [API observability](https://apitoolkit.io/blog/api-observability-best-practices/) is promising, with advancements in machine learning and AI expected to bring even more intelligent features. Tools like APIToolkit are at the forefront of this evolution, shaping the way businesses monitor, analyze, and optimize their APIs.
+The future of [API observability](https://monoscope.tech/blog/api-observability-best-practices/) is promising, with advancements in machine learning and AI expected to bring even more intelligent features. Tools like APIToolkit are at the forefront of this evolution, shaping the way businesses monitor, analyze, and optimize their APIs.
 
 - - -
 
 ## Keep Reading
 
-- [How to Troubleshoot and Debug Your APIs with API Observability Tools](https://apitoolkit.io/blog/how-to-troubleshoot-and-debug-your-apis/)
-- [API Observability Best Practices: How to Collect, Analyze, and Visualize Your API Telemetry Data](https://apitoolkit.io/blog/api-observability-best-practices/)
-- [Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
-- [The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://apitoolkit.io/blog/api-as-a-product/)
+- [How to Troubleshoot and Debug Your APIs with API Observability Tools](https://monoscope.tech/blog/how-to-troubleshoot-and-debug-your-apis/)
+- [API Observability Best Practices: How to Collect, Analyze, and Visualize Your API Telemetry Data](https://monoscope.tech/blog/api-observability-best-practices/)
+- [Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
+- [The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://monoscope.tech/blog/api-as-a-product/)

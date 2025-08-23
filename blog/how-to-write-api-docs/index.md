@@ -34,17 +34,17 @@ To start, let's understand some key statistics on API documentation:
 * Software engineers who participated [in a study](https://www.researchgate.net/publication/335456576_How_developers_use_API_documentation_an_observation_study) said they spend approximately 40% of their time reading documentation.
 
 ![APIToolkit's Documentation Heatmap](./apitoolkit-docs-heatmap.jpg)
-Image source: A heatmap showing site visitors to [APIToolkit](https://apitoolkit.io) (an API management toolkit) spent more time reading the documentation.
+Image source: A heatmap showing site visitors to [APIToolkit](https://monoscope.tech) (an API management toolkit) spent more time reading the documentation.
 
 ## Importance of API Documentation
 
-From a developer's perspective, [good documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/) is a time-saver. Instead of spending hours deciphering and experimenting with an API's functionalities, developers can refer to comprehensive documentation that provides clear instructions, examples, and troubleshooting tips. This saves valuable development time and accelerates the integration process, allowing developers to focus on building innovative applications.
+From a developer's perspective, [good documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) is a time-saver. Instead of spending hours deciphering and experimenting with an API's functionalities, developers can refer to comprehensive documentation that provides clear instructions, examples, and troubleshooting tips. This saves valuable development time and accelerates the integration process, allowing developers to focus on building innovative applications.
 
 In addition, effective API documentation improves collaboration between API providers and developers. It acts as a common language, facilitating communication and ensuring that both parties are on the same page. Developers can easily understand the expected behavior of the API, the available endpoints, and the required parameters, enabling them to integrate the API seamlessly into their applications.
 
 ## Who Benefits From API Documentation?
 
-Your [API documentation](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) audience is segmented. As such, it’s important to identify the different groups of people who benefit from your documentation. This will give you insights into serving their needs.
+Your [API documentation](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) audience is segmented. As such, it’s important to identify the different groups of people who benefit from your documentation. This will give you insights into serving their needs.
 
 ### Developers
 Developers are the people who directly use your APIs. In order to use your APIs effectively, they need to understand how it applies to their use case.  Additionally, if they need to run QA tests on the APIs, they require as much information as possible about the APIs. They may need to learn how to access and integrate with dozens, or even hundreds, of the resources you expose.
@@ -120,7 +120,7 @@ Be instructional: Let your users know where to begin and where to end. Detail co
 
 ![APIToolkit installation doc](./apitoolkitdoc2.png)
 
-Read: [Top 7 Reasons Why Your Team should Use an API Monitoring and Observability Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+Read: [Top 7 Reasons Why Your Team should Use an API Monitoring and Observability Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 
 ### 9. Point to Relevant Supporting Resources
 
@@ -133,7 +133,7 @@ A console helps your audience to test your APIs and see results in real time. It
 
 Libraries: Code libraries enable developers to easily call different resources. Access to methods in different languages to work with your API helps developers feel more comfortable working with the API.
 
-Read: [Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
 ### 10. Utilize Industry Standards
 
@@ -146,7 +146,7 @@ Use a dynamic layout: These days, layouts must be easy to bookmark. The use of P
 
 Navigation bar: Your navigation bar should stick to the screen. Make it easy for users to switch between pages.
 
-Read: [How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+Read: [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
 ### 11. Describe Your Request-response Cycles in Detail
 
@@ -170,17 +170,17 @@ Use as many code samples as necessary. Developers appreciate this a lot. Don’r
 
 Lastly, optimize it for search engines. Your docs are no good if they can’t be found with a simple Google search. Ensure the page is indexed, titled properly, and well described.
 
-Read: [How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+Read: [How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
 ### 14. Update Your Docs Regularly
 
-No one likes an outdated document. Stay on top of this. [Update your API docs regularly](https://apitoolkit.io/api-documentation-and-developer-portals/). Here are some recommendations:
+No one likes an outdated document. Stay on top of this. [Update your API docs regularly](https://monoscope.tech/api-documentation-and-developer-portals/). Here are some recommendations:
 
 Have a standard process/framework for updates: Incorporate your docs into your API update process. This ensures that as you roll out new features, your docs are ready to be published as well.
 
 Review often: Frequent review of your docs will expose outdated areas. Schedule your reviews to keep your processes streamlined.
 
-Use analytics: Good API analytics will show what endpoints are used most frequently. This will inform your API doc review process, helping you focus your updates on the most used portions. [APIToolkit](https://apitoolkit.io) provides detailed analytics and much more. It’s a one-stop solution for API observability and monitoring.
+Use analytics: Good API analytics will show what endpoints are used most frequently. This will inform your API doc review process, helping you focus your updates on the most used portions. [APIToolkit](https://monoscope.tech) provides detailed analytics and much more. It’s a one-stop solution for API observability and monitoring.
 
 ## Common Challenges in API Documentation
 
@@ -188,23 +188,23 @@ While API documentation is essential, it can present its own set of challenges. 
 
 - **Striking the right balance**: One of the primary challenges is striking the right balance between technical accuracy and user-friendly language. Developers require accurate technical details, but presenting them in a way that is easily understandable can be a challenge. To overcome this, consider using clear and concise language, avoiding jargon whenever possible, and providing relevant examples and explanations.
 
-- **Maintaning up-to-date documentation**: Another challenge is maintaining up-to-date documentation. APIs evolve over time, with new features, endpoints, and parameters being added or modified. It is crucial to keep the documentation in sync with the API itself. Regularly review and update your documentation to ensure accuracy and relevancy. Consider integrating [APIToolkit](https://apitoolkit.io) into your backend services. Our API management tool auto-generates API documentation for you by studying the live traffic to and from your endpoints. You immediately get a notification once changes have been made. Read more about this [here](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/).
+- **Maintaning up-to-date documentation**: Another challenge is maintaining up-to-date documentation. APIs evolve over time, with new features, endpoints, and parameters being added or modified. It is crucial to keep the documentation in sync with the API itself. Regularly review and update your documentation to ensure accuracy and relevancy. Consider integrating [APIToolkit](https://monoscope.tech) into your backend services. Our API management tool auto-generates API documentation for you by studying the live traffic to and from your endpoints. You immediately get a notification once changes have been made. Read more about this [here](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/).
 
 ### Final Thoughts 
-Documenting your [APIs](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) is just as important as building them. It’s essential to have frameworks and processes that make your API documentation seamless and scalable.
+Documenting your [APIs](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is just as important as building them. It’s essential to have frameworks and processes that make your API documentation seamless and scalable.
 
 You will have different audiences. Be sure to cater to all their varying needs when developing your API docs.
 
-[APIToolkit](https://apitoolkit.io) gives you comprehensive analyses of your API docs to ensure you’re constantly up to date with the information you serve your community.
+[APIToolkit](https://monoscope.tech) gives you comprehensive analyses of your API docs to ensure you’re constantly up to date with the information you serve your community.
 
 **Also Read**:
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[Key Benefits of API Integration for Developers](https://apitoolkit.io/blog/benefits-of-api-integration/)
+[Key Benefits of API Integration for Developers](https://monoscope.tech/blog/benefits-of-api-integration/)
 
-[API Documentation vs API Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+[API Documentation vs API Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 
-[API Observability and Monitoring: What's the Difference?](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
+[API Observability and Monitoring: What's the Difference?](https://monoscope.tech/blog/api-observability-and-api-monitoring/)

@@ -18,7 +18,7 @@ Addressing these challenges is crucial, and custom alerts emerge as a key soluti
 
 ## Custom Alerts
 
-[Custom alerts](https://apitoolkit.io/blog/best-practices-for-implementing-custom-alerts/) revolutionize [API performance monitoring](https://apitoolkit.io/blog/how-to-perform-an-api-health-check/) by offering a unique level of granularity. Unlike generic monitoring tools, custom alerts allow users to set [specific criteria for monitoring](https://apitoolkit.io/blog/stay-ahead-of-the-curve/), ensuring a more accurate and targeted approach to performance monitoring.
+[Custom alerts](https://monoscope.tech/blog/best-practices-for-implementing-custom-alerts/) revolutionize [API performance monitoring](https://monoscope.tech/blog/how-to-perform-an-api-health-check/) by offering a unique level of granularity. Unlike generic monitoring tools, custom alerts allow users to set [specific criteria for monitoring](https://monoscope.tech/blog/stay-ahead-of-the-curve/), ensuring a more accurate and targeted approach to performance monitoring.
 
 ### Key Features of Custom Alerts:
 
@@ -106,14 +106,14 @@ In the ever-evolving digital landscape, API performance is critical for the succ
 
 **Keep Reading**
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[ A Guide to Embedded API Logs and Metrics ](https://apitoolkit.io/blog/embedded-apis-and-metrics/)
+[ A Guide to Embedded API Logs and Metrics ](https://monoscope.tech/blog/embedded-apis-and-metrics/)
 
-[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
 

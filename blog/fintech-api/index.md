@@ -24,13 +24,13 @@ Also, financial institutions had limited collaboration with each other, making i
 
 ## What really is an API?
 
-API (Application Programming Interface) is a software intermediary, a set of guidelines and standards that enables different software applications to communicate and interact with each other. An [API](https://apitoolkit.io/blog/api-trends/) defines how software components should interact and what data they can exchange, providing a standardized way for developers to create software that can be easily integrated with other systems. In simple terms, an API can be thought of as a messenger that takes a request from one software application, carries it to another application, and then returns a response.
+API (Application Programming Interface) is a software intermediary, a set of guidelines and standards that enables different software applications to communicate and interact with each other. An [API](https://monoscope.tech/blog/api-trends/) defines how software components should interact and what data they can exchange, providing a standardized way for developers to create software that can be easily integrated with other systems. In simple terms, an API can be thought of as a messenger that takes a request from one software application, carries it to another application, and then returns a response.
 
 ![How API Works](./apiinfographic.jpg)
 
 ## Introduction to Fintech API
 
-Fintech [API](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) is an application programming interface that enables financial institutions to access data and functionality from third-party providers. It is a set of protocols, routines, and tools for building software applications that enable different systems to communicate with each other. It allows financial institutions to integrate new technology and services into their existing systems and applications.
+Fintech [API](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is an application programming interface that enables financial institutions to access data and functionality from third-party providers. It is a set of protocols, routines, and tools for building software applications that enable different systems to communicate with each other. It allows financial institutions to integrate new technology and services into their existing systems and applications.
 
 Fintech API is designed to be secure, reliable, and scalable, making it a valuable tool for financial institutions.
 
@@ -40,7 +40,7 @@ The rise of Fintech API can be attributed to the need for financial institutions
 
 Fintech API provides financial institutions with access to vast amounts of data that can be used to improve decision-making processes and provide better customer experiences. Undoubtedly, this has made Fintech APIs valuable tools for financial institutions looking to gain a competitive advantage in the market.
 
-Read: [API Monitoring and Documentation: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Read: [API Monitoring and Documentation: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
 ## Statistics on the Growth of Fintech APIs
 
@@ -62,7 +62,7 @@ Financial institutions stand to greatly benefit from Fintech API. Let's observe 
 
 3. **Lower Costs.** APIs can reduce the cost of developing new products and services, enabling financial institutions to offer these products and services at a lower cost to their customers.
 
-Read: [10 API Tools for Developers](https://apitoolkit.io/blog/top-api-tools-for-developers/)
+Read: [10 API Tools for Developers](https://monoscope.tech/blog/top-api-tools-for-developers/)
 
 ## The Role of Open Banking in Fintech API Development
 
@@ -77,7 +77,7 @@ It has also enabled financial institutions to collaborate with Fintech startups 
 
 In the words of Christian Faes, co-founder and CEO of LendInvest,
 
-> “Open banking and [API technology](https://apitoolkit.io/blog/the-ultimate-api-management-strategy/) have the potential to completely change the financial landscape as we know it today, by enabling faster, more efficient transactions and greater innovation in financial services.”
+> “Open banking and [API technology](https://monoscope.tech/blog/the-ultimate-api-management-strategy/) have the potential to completely change the financial landscape as we know it today, by enabling faster, more efficient transactions and greater innovation in financial services.”
 
 The era of open banking and fintech API has led to the emergence of several digital financial platforms turned behemoths, like the Y-Combinator-backed [Stripe](https://stripe.com), [Paypal](https://www.paypal.com), [Revolut](https://www.revolut.com), etc., with mainstream banks open to exchanging data.
 
@@ -87,7 +87,7 @@ In a news report by [Business Day](https://businessday.ng/financial-inclusion/ar
 
 In Nigeria, solid API-reliant fintech companies like [Paystack](https://paystack.com/), [Flutterwave](https://flutterwave.com/us), [Kuda](https://kuda.com/), [Paga](https://www.mypaga.com/), etc., have gone mainstream and received global acceptance. In Kenya, there is [ChipperCash](https://chippercash.com/), and in Rwanda, [Payday](https://www.usepayday.com/), etc.
 
-Read: [How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+Read: [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
 ## The Future of Fintech API
 
@@ -113,7 +113,7 @@ Fintech API has several use cases. Let's consider some below:
 
 - **Risk Management**: APIs can be used to manage financial risk by providing real-time data analysis and reporting. A company like Riskalyze uses its API to provide financial advisors with a risk assessment tool that uses customer data to provide personalized risk management recommendations.
 
-Read: [How to Use Notion for Documentation](https://apitoolkit.io/blog/using-notion-for-documentation/)
+Read: [How to Use Notion for Documentation](https://monoscope.tech/blog/using-notion-for-documentation/)
 
 ## Banking-as-a-Service (BaaS) and Fintech API
 
@@ -131,7 +131,7 @@ BaaS has several benefits, including increased efficiency, reduced costs, and im
 
 There are several top Fintech API providers, including [Plaid](https://plaid.com/), Stripe, [Dwolla](https://www.dwolla.com/), etc. Plaid is a Fintech API provider that specializes in payment processing and data aggregation. Stripe is another Fintech API provider that specializes in payment processing. Dwolla is a Fintech API provider that specializes in bank transfers and payment processing.
 
-Read: [How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+Read: [How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
 ## Conclusion
 
@@ -143,6 +143,6 @@ The development of Fintech API has been significantly influenced by open banking
 
 Our API monitoring and observability software (APIToolkit) guarantees the uninterrupted performance of your APIs. It was built by developers for developers. Our suite of features includes anomaly detection, logs and metrics explorer, automated API documentation, mission controls, etc. 
 
-[Check it out here](https://apitoolkit.io).
+[Check it out here](https://monoscope.tech).
 
-Read: [Top 7 Reasons Why Your Team Should Use A Plug-and-play API Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+Read: [Top 7 Reasons Why Your Team Should Use A Plug-and-play API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)

@@ -41,7 +41,7 @@ There are five steps required to get started with APItoolkit and begin exploring
 
 ## ① Create an Account
 
-Kindly visit [this page](https://app.apitoolkit.io?utm_source=docs_onboarding) to create a new account. When you are there, you can choose to sign up with either your **Google** or **GitHub** account or your **email address**. If you choose to sign up with Google or GitHub, you will be redirected to the respective authentication page to authorize APItoolkit. If you choose to sign up with your email address, you will need to provide your email address and a strong password in the input fields as seen in the screenshot below.
+Kindly visit [this page](https://app.monoscope.tech?utm_source=docs_onboarding) to create a new account. When you are there, you can choose to sign up with either your **Google** or **GitHub** account or your **email address**. If you choose to sign up with Google or GitHub, you will be redirected to the respective authentication page to authorize APItoolkit. If you choose to sign up with your email address, you will need to provide your email address and a strong password in the input fields as seen in the screenshot below.
 
 ![Screenshot of APItoolkit's signup page](/docs/onboarding/new-signup-page.png)
 
@@ -104,7 +104,7 @@ Once your project is created, an API key is automatically generated for you (whi
 
 ## ④ Integrate SDK
 
-To allow APItoolkit to begin monitoring your API and for you to start exploring your data through our platform, you need to integrate one of our SDKs into your application. We currently support 17+ web frameworks in different programming languages (**if we do not support your framework, kindly [send us an email](mailto:hello@apitoolkit.io) and we will create a new SDK for you!)**.
+To allow APItoolkit to begin monitoring your API and for you to start exploring your data through our platform, you need to integrate one of our SDKs into your application. We currently support 17+ web frameworks in different programming languages (**if we do not support your framework, kindly [send us an email](mailto:hello@monoscope.tech) and we will create a new SDK for you!)**.
 
 To integrate with your preferred framework, kindly follow the quick guidelines below for some of the popular SDKs.
 

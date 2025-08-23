@@ -14,11 +14,11 @@ categories:
 
 Laravel caching can significantly boost performance for Apitoolkit projects by eliminating repetitive and costly SDK reinitialization. Without caching, the SDK connects from scratch on every request - an inefficient process that hampers speed. Implementing caching allows you to store and reuse SDK connections, circumventing reinitialization entirely.
 
-Apitoolkit relies on establishing an [**SDK connection**](https://apitoolkit.io/docs/get-started/quickstarts/php/laravel/) to interface with backend services. Creating this connection is an intensive process that validates credentials, authorizes access, configures settings, and more. Once initialized, the SDK can fulfill frontend requests rapidly. However, Apitoolkit re-establishes the connection redundantly, redoing time-consuming validation and configuration tasks on every request.
+Apitoolkit relies on establishing an [**SDK connection**](https://monoscope.tech/docs/get-started/quickstarts/php/laravel/) to interface with backend services. Creating this connection is an intensive process that validates credentials, authorizes access, configures settings, and more. Once initialized, the SDK can fulfill frontend requests rapidly. However, Apitoolkit re-establishes the connection redundantly, redoing time-consuming validation and configuration tasks on every request.
 
 This repetitive initialization creates an enormous bottleneck, forcing users to wait while each connection sets up. Performance suffers drastically, with initiatives like lazy loading defeated by the delays. 
 
-The redundancy also wastes [**API resources**](https://apitoolkit.io/docs/get-started/) on duplicative authentication and configuration queries that provide no new value. As traffic grows, the multiplied strain can overload backends and degrade reliability.
+The redundancy also wastes [**API resources**](https://monoscope.tech/docs/get-started/) on duplicative authentication and configuration queries that provide no new value. As traffic grows, the multiplied strain can overload backends and degrade reliability.
 
 Luckily, Laravel’s caching capabilities can break this inefficient cycle by storing initialized SDK connections for reuse. Instead of reinitializing every time, the application caches and retrieves active, validated connections. 
 
@@ -40,7 +40,7 @@ Apitoolkit streamlines working with third-party APIs by providing a simple inter
 
 Laravel supports various high-speed caching backends to store data for reuse. Memcached and Redis are two popular options, offering blazing fast lookup compared to the file system. The key idea is to cache Apitoolkit’s initialized SDKs using a time-to-live value. 
 
-Now instead of reinitializing every time, the cached SDK is retrieved, eliminating redundant connections. Keys uniquely identify cache records, while time-to-live values indicate when stale records should be purged. Together, [**Apitoolkit and Laravel**](https://apitoolkit.io/docs/get-started/quickstarts/php/laravel/) caching provide a streamlined yet speedy API access pattern, leveraging simplicity without sacrificing performance.
+Now instead of reinitializing every time, the cached SDK is retrieved, eliminating redundant connections. Keys uniquely identify cache records, while time-to-live values indicate when stale records should be purged. Together, [**Apitoolkit and Laravel**](https://monoscope.tech/docs/get-started/quickstarts/php/laravel/) caching provide a streamlined yet speedy API access pattern, leveraging simplicity without sacrificing performance.
 
 ## Consider this when Implementing Laravel Caching for Apitoolkit
 
@@ -197,7 +197,7 @@ A: It is recommended to use Memcached and Redis for high-performance caching, wh
 For detailed implementation guides and API references, refer to:
 
 - [Laravel Cache Documentation](https://laravel.com/docs/10.x/cache)
-- [Apitoolkit Documentation](https://apitoolkit.io/docs/)
+- [Apitoolkit Documentation](https://monoscope.tech/docs/)
 - [Apitoolkit Discord channel](https://discord.com/channels/904634773329297429/904634774134611989)
 
 
@@ -213,12 +213,12 @@ If you are looking for ways to improve the performance of your Laravel applicati
 
 **Also Read**
 
-[Writing API Documentation - Best Practices and Mistakes to Avoid](https://apitoolkit.io/blog/writing-api-documentation/)
+[Writing API Documentation - Best Practices and Mistakes to Avoid](https://monoscope.tech/blog/writing-api-documentation/)
 	
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 	
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/writing-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/writing-api-documentation/)
 	
-[API Monitoring and Documentation: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Monitoring and Documentation: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 	
 

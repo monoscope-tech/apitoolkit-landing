@@ -12,9 +12,9 @@ categories:
 
 ![two computer screens adjacent to each other displaying lines of code](./image6.jpg)
 
-With [API observability](https://apitoolkit.io/blog/what-is-api-testing/), out of sight shouldn’t mean out of mind. APIs work in the background using simple commands to move requests back and forth. Perhaps because they do a lot of background work, QA teams tend to neglect them.
+With [API observability](https://monoscope.tech/blog/what-is-api-testing/), out of sight shouldn’t mean out of mind. APIs work in the background using simple commands to move requests back and forth. Perhaps because they do a lot of background work, QA teams tend to neglect them.
 
-API observability is an underrated yet hugely important aspect of [quality assurance testing](https://apitoolkit.io/blog/api-testing-automation). One shouldn’t wait until a downtime occurs before jumping to fix broken or missing APIs.
+API observability is an underrated yet hugely important aspect of [quality assurance testing](https://monoscope.tech/blog/api-testing-automation). One shouldn’t wait until a downtime occurs before jumping to fix broken or missing APIs.
 
 ## What is an API?
 
@@ -26,23 +26,23 @@ For instance, if you use a weather app, it might use an API to ask a web server 
 
 ## What is API Observability?
 
-API observability is a comprehensive practice that revolves around the systematic gathering, processing, and interpretation of data emanating from an Application Programming Interface (API). The primary aim of API observability is to acquire valuable insights into the API's [performance metrics](https://apitoolkit.io/blog/web-api-performance/), availability, and overall usage patterns. Diligently monitoring and scrutinizing this data ensures that developers and system administrators can effectively identify, diagnose, and rectify various issues and anomalies that may arise during the API's lifecycle.
+API observability is a comprehensive practice that revolves around the systematic gathering, processing, and interpretation of data emanating from an Application Programming Interface (API). The primary aim of API observability is to acquire valuable insights into the API's [performance metrics](https://monoscope.tech/blog/web-api-performance/), availability, and overall usage patterns. Diligently monitoring and scrutinizing this data ensures that developers and system administrators can effectively identify, diagnose, and rectify various issues and anomalies that may arise during the API's lifecycle.
 
 ![Components of API Observability](./observability-api.png)
 
-API observability is a more comprehensive approach to monitoring than [traditional API monitoring](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/). Traditional monitoring typically focuses on [collecting metrics](https://apitoolkit.io/blog/api-logs-and-metrics/) such as request latency, error rate, and throughput. API observability, on the other hand, collects a wider range of data, including logs, traces, and metrics. This data can be used to gain a deeper understanding of how an API is performing and how it is being used.
+API observability is a more comprehensive approach to monitoring than [traditional API monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/). Traditional monitoring typically focuses on [collecting metrics](https://monoscope.tech/blog/api-logs-and-metrics/) such as request latency, error rate, and throughput. API observability, on the other hand, collects a wider range of data, including logs, traces, and metrics. This data can be used to gain a deeper understanding of how an API is performing and how it is being used.
 
 Moreover, API observability paves the way for real-time monitoring and alerting mechanisms, ensuring that any deviations from expected behavior are promptly flagged, enabling proactive responses to potential issues before they escalate. This proactive approach significantly reduces downtime and improves overall system reliability.
 
 By using advanced data visualization techniques, such as dashboards and analytics tools, API observability empowers dev teams to interpret complex datasets effectively. This in turn helps them make data-driven decisions and devise strategies for enhancing the API's performance, bolstering its scalability, and fine-tuning its overall behavior.
 
-Read: [Must-Know API Trends in 2024](https://apitoolkit.io/blog/api-trends/)
+Read: [Must-Know API Trends in 2024](https://monoscope.tech/blog/api-trends/)
 
 ### Best API Monitoring and Observability Tools
 
-We’ve curated a list of the best API observability and monitoring tools to help make your QA processes seamless and improve your [API documentation](http://apitoolkit.io/blog/how-to-write-api-docs).
+We’ve curated a list of the best API observability and monitoring tools to help make your QA processes seamless and improve your [API documentation](http://monoscope.tech/blog/how-to-write-api-docs).
 
-## 1. [APIToolkit](http://www.apitoolkit.io)
+## 1. [APIToolkit](http://www.monoscope.tech)
 
 ![APIToolkit User Dashboard](./apitoolkit-user-dashboard.png)
 
@@ -57,7 +57,7 @@ APIToolkit spots broken APIs, changed fields, etc., before your customers.
 - **View your API analytics in one place:** Response times, latency, etc. Run queries on your live api requests and responses.
 - **API Testing**: Our API testing tool is designed to help you ensure the quality, functionality, and reliability of your APIs. It allows you to thoroughly test and validate various aspects of your APIs, including endpoints, request and response data, authentication mechanisms, error handling, and performance metrics.
 
-Read: [Top 7 Reasons Why Your Team Needs an API Observability and Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+Read: [Top 7 Reasons Why Your Team Needs an API Observability and Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 
 ## 2. [Postman](http://www.postman.com)
 
@@ -70,7 +70,7 @@ Features:
 - **Offers custom domain.**
 - **Offers training and onboarding.**
 
-Read: [API Observability and Monitoring: What's the Difference?](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
+Read: [API Observability and Monitoring: What's the Difference?](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
 
 ## 3. [Saucelabs](https://saucelabs.com/platform)
 
@@ -94,7 +94,7 @@ Better Uptime offers an API monitoring solution as a part of its complex Uptime 
 - **30s multi-location checks:** Each HTTP and ping-based incident is verified from at least 3 locations before alerting users.
 - **Incident management built-in:** This alerts the right person on your team with Better Uptime’s on-call scheduling & plug in the services.
 
-Read: [API Documentation vs API Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+Read: [API Documentation vs API Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 
 ## 5. [Moesif](https://www.moesif.com/) 
 
@@ -120,7 +120,7 @@ RapidAPI is a platform that helps users find, connect to, and manage their APIs.
 - **Solutions for an Integrated Developer Experience:** Improves developers’ experience with integrated tools for design, testing, monitoring, and more.
 - **RapidAPI Enterprise Hub:** Your development teams, partners and customers can discover and connect to your APIs — all from a single, next-generation API Platform.
 
-Read: [Key Benefits of API Integration for Developers](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers](https://monoscope.tech/blog/benefits-of-api-integration/)
 
 ## 7. [Datadog](https://www.datadoghq.com/)
 
@@ -156,13 +156,13 @@ The right tool can not only prevent downtime and quickly resolve issues but also
 
 **Also Read**
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
 ***
-Try APIToolkit [here](https://apitoolkit.io).
+Try APIToolkit [here](https://monoscope.tech).

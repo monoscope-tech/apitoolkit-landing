@@ -12,9 +12,9 @@ categories:
 
 ![API Observability and Business Performance](./api-observability-boost-business-performance.png)
 
-Practically every modern business in the tech industry is using [APIs](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) to connect applications, services, and data. APIs have become the building blocks of digital transformation, enabling us to create innovative products, streamline workflows, and integrate with third-party platforms. However, as APIs become more complex, distributed, and dynamic, they also become harder to monitor and manage. This can lead to performance issues, errors, security breaches, and poor user experiences that can negatively impact your business outcomes and customer satisfaction.
+Practically every modern business in the tech industry is using [APIs](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) to connect applications, services, and data. APIs have become the building blocks of digital transformation, enabling us to create innovative products, streamline workflows, and integrate with third-party platforms. However, as APIs become more complex, distributed, and dynamic, they also become harder to monitor and manage. This can lead to performance issues, errors, security breaches, and poor user experiences that can negatively impact your business outcomes and customer satisfaction.
 
-To overcome these challenges, you need to adopt a data-driven approach to understand the internal state and behavior of your APIs. This is where [API observability](https://apitoolkit.io/blog/api-observability-software-development-/) comes in. 
+To overcome these challenges, you need to adopt a data-driven approach to understand the internal state and behavior of your APIs. This is where [API observability](https://monoscope.tech/blog/api-observability-software-development-/) comes in. 
 
 ## What is API Observability and Why Does It Matter?
 
@@ -39,11 +39,11 @@ Let's look at some of the core reasons why API observability matters:
 
 In the tech ecosystem, API observability can help you improve your business performance and customer satisfaction in several ways:
 
-**Reduce downtime**: When APIs are down, customers are unable to use the services that they rely on. That's why identifying and fixing API problems quickly can help businesses [reduce downtime](https://apitoolkit.io/blog/api-downtime/) and keep customers happy.
+**Reduce downtime**: When APIs are down, customers are unable to use the services that they rely on. That's why identifying and fixing API problems quickly can help businesses [reduce downtime](https://monoscope.tech/blog/api-downtime/) and keep customers happy.
 
-**Improve API quality and reliability**: By observing your [API’s metrics](https://apitoolkit.io/blog/api-logs-and-metrics/), such as request latency, error rate, throughput, and availability, you can identify and troubleshoot issues before they affect your end users. You can also set up alerts and notifications to proactively detect anomalies and incidents that may require immediate attention. Additionally, you can use API traces to track the flow of requests across multiple services and pinpoint the root cause of errors or bottlenecks.
+**Improve API quality and reliability**: By observing your [API’s metrics](https://monoscope.tech/blog/api-logs-and-metrics/), such as request latency, error rate, throughput, and availability, you can identify and troubleshoot issues before they affect your end users. You can also set up alerts and notifications to proactively detect anomalies and incidents that may require immediate attention. Additionally, you can use API traces to track the flow of requests across multiple services and pinpoint the root cause of errors or bottlenecks.
 
-**Optimize API performance and efficiency**: API observability can help you monitor your API’s events, such as code deployments, configuration changes, feature toggles, and scaling actions. This can help you understand how they affect your [API’s performance](https://apitoolkit.io/blog/web-api-performance/) and behavior. You can also use API logs to get more granular information about the internal state and activity of your API components.
+**Optimize API performance and efficiency**: API observability can help you monitor your API’s events, such as code deployments, configuration changes, feature toggles, and scaling actions. This can help you understand how they affect your [API’s performance](https://monoscope.tech/blog/web-api-performance/) and behavior. You can also use API logs to get more granular information about the internal state and activity of your API components.
 
 **Enhance API security and compliance**: When you monitor your API’s logs and traces, you can detect and prevent unauthorized or malicious access to your API resources. You can also use API analytics to monitor and audit the usage and behavior of your API consumers.
 
@@ -78,11 +78,11 @@ Let's take a look at each of them in more detail.
 
 ## Difference Between API Monitoring and API Observability
 
-[API monitoring](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) and API observability are two important practices for ensuring the quality and reliability of APIs. However, they have different goals and scopes. Let's take a look at the differentiating factors:
+[API monitoring](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) and API observability are two important practices for ensuring the quality and reliability of APIs. However, they have different goals and scopes. Let's take a look at the differentiating factors:
 
 API monitoring is the process of collecting and analyzing data relating to the performance of an API. It involves measuring key metrics such as request latency, error rate, throughput, availability, and uptime. API monitoring helps businesses detect and resolve issues with their APIs in real time, as well as optimize their performance and efficiency. API monitoring is typically done by sending synthetic requests to the API endpoints and checking the responses against predefined expectations. This is also known as black-box testing, as it does not require access to the internal workings of the API.
 
-[API observability](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/), on the other hand, is a more comprehensive approach to understanding the behavior and health of an API. It involves collecting and analyzing a wider range of data, including logs, traces, events, metadata, and context. API observability helps businesses gain deeper insights into how their APIs function and interact with other components of the system, as well as troubleshoot complex issues and improve their design and development. API observability is typically done by instrumenting the API code or using an agent or SDK to passively log the API traffic. This is also known as white-box testing, as it requires access to the internal workings of the API.
+[API observability](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/), on the other hand, is a more comprehensive approach to understanding the behavior and health of an API. It involves collecting and analyzing a wider range of data, including logs, traces, events, metadata, and context. API observability helps businesses gain deeper insights into how their APIs function and interact with other components of the system, as well as troubleshoot complex issues and improve their design and development. API observability is typically done by instrumenting the API code or using an agent or SDK to passively log the API traffic. This is also known as white-box testing, as it requires access to the internal workings of the API.
 
 The main difference between API monitoring and API observability is the level of detail and granularity they provide. API monitoring focuses on tracking known metrics and alerting on predefined thresholds, while API observability focuses on exploring unknown metrics and discovering unknown unknowns.
 
@@ -111,11 +111,11 @@ By incorporating API observability into your workflow and business management pr
 
 ## Implementing API Observability
 
-Now that you understand the importance and benefits of API observability, you may wonder how to implement it effectively. The easiest way to implement API observability is by choosing the [right observability tools](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/).
+Now that you understand the importance and benefits of API observability, you may wonder how to implement it effectively. The easiest way to implement API observability is by choosing the [right observability tools](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/).
 
 The following tools can get the job done:
 
-[APIToolkit](https://apitoolkit.io): An automated observability tool for API contract monitoring and [documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/). It helps teams ensure that their APIs are compliant with their specifications and standards, and provides clear and up-to-date documentation for internal and external consumers.
+[APIToolkit](https://monoscope.tech): An automated observability tool for API contract monitoring and [documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/). It helps teams ensure that their APIs are compliant with their specifications and standards, and provides clear and up-to-date documentation for internal and external consumers.
 
 Postman: A comprehensive API testing tool that allows teams to design, develop, test, document, and monitor their APIs.
 
@@ -133,9 +133,9 @@ However, your preferred tool should be able to provide you with the following fe
 
 **User-friendly interface and visualization**: Your go-to observability tool should provide you with a user-friendly interface and visualization that can help you easily access, understand, and act on your API performance data. The tools should also allow you to customize your dashboards, charts, graphs, alerts, etc., according to your preferences and goals.
 
-**Actionable insights and recommendations**: The tools should not only provide you with raw data but also with actionable insights and recommendations that can help you improve your API performance and quality. It should also enable you to automate your observability [workflows](https://apitoolkit.io/blog/rest-api-workflow/) and tasks, such as alerting, reporting, troubleshooting, etc.
+**Actionable insights and recommendations**: The tools should not only provide you with raw data but also with actionable insights and recommendations that can help you improve your API performance and quality. It should also enable you to automate your observability [workflows](https://monoscope.tech/blog/rest-api-workflow/) and tasks, such as alerting, reporting, troubleshooting, etc.
 
-Now, investing in observability tools is essential, but you must understand that this technology, in itself, will not address all the problems. Your tech team, from the design phase to the deployment phase, should have the mindset to make your systems observable. An [observability tool](https://apitoolkit.io) should serve as a support system.
+Now, investing in observability tools is essential, but you must understand that this technology, in itself, will not address all the problems. Your tech team, from the design phase to the deployment phase, should have the mindset to make your systems observable. An [observability tool](https://monoscope.tech) should serve as a support system.
 
 In conclusion, API observability is a crucial aspect of your business's performance and customer satisfaction. As you push towards achieving your set business objectives, you must prioritize customer service-level agreements. And the most effective way to achieve your SLAs is to imbibe the culture of API observability. 
 
@@ -143,13 +143,13 @@ Here's the secret: examine observability from the perspective of the user. A hap
 
 **Keep reading**
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) 
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) 
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 

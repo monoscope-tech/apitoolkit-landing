@@ -23,7 +23,7 @@ Before we dive into the implementation, let’s first understand our monitoring 
 
 - Express.js: [Express](https://expressjs.com/) is a Node.js web application framework that provides a wide range of features for mobile and web applications.
 
-- APIToolkit: [APIToolkit](https://apitoolkit.io/) is the observability platform that will store and visualizes our telemetry data.
+- APIToolkit: [APIToolkit](https://monoscope.tech/) is the observability platform that will store and visualizes our telemetry data.
 
 - OpenTelemetry: We will use [OpenTelemetry](https://opentelemetry.io/) to collect telemetry data.
 
@@ -31,7 +31,7 @@ Before we dive into the implementation, let’s first understand our monitoring 
 
 ### Creating an APIToolkit Account
 
-- Sign up for free [here](http://app.apitoolkit.io/).
+- Sign up for free [here](http://app.monoscope.tech/).
 
 ![Sign-up](./sign-up-for-free.png)
 
@@ -100,7 +100,7 @@ We must now export the necessary environment variables to configure OpenTelemetr
 
 ```javascript
   //Specifies the endpoint URL for the OpenTelemetry collector.
-  export OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.apitoolkit.io:4317"
+  export OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.monoscope.tech:4317"
 
   //Specifies the name of the service.
   export OTEL_SERVICE_NAME="{YOUR_SERVICE_NAME}"
@@ -167,20 +167,20 @@ Refresh your browser a couple of times (you can hit some other routes too) so we
 
 ![traces](./traces.jpeg)
 
-As you can see, we are monitoring our express application in real-time. There’s a lot of data to visualize and work with. Refer to this documention for indepth guide on using [APIToolkit Express SDK](https://apitoolkit.io/docs/sdks/nodejs/expressjs/). 
+As you can see, we are monitoring our express application in real-time. There’s a lot of data to visualize and work with. Refer to this documention for indepth guide on using [APIToolkit Express SDK](https://monoscope.tech/docs/sdks/nodejs/expressjs/). 
 
 In conclusion, using APIToolkit with OpenTelemetry for your Express.js application lets you easily monitor performance, detect issues, and track errors with detailed backend insights. This approach simplifies debugging and helps maintain a stable, efficient web service.
 
 **Keep Reading**
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)

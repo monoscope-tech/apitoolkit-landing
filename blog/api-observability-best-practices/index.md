@@ -18,7 +18,7 @@ API observability is a critical component of managing and maintaining successful
 
 API observability refers to the ability to gain insights into the behavior of your APIs by collecting and analyzing telemetry data. It involves monitoring key API metrics, such as response times, error rates, and throughput, to ensure the smooth operation of your APIs.
 
-When it comes to [building and maintaining APIs](https://apitoolkit.io/blog/how-apitoolkit-can-help-you-achieve-api-observability/), observability plays a crucial role in ensuring their reliability and performance. By implementing a comprehensive [observability strategy](https://apitoolkit.io/blog/how-api-observability-can-boost-your-business-performance/), you can effectively monitor and analyze the behavior of your APIs, enabling you to proactively identify and address any issues or anomalies before they impact your users.
+When it comes to [building and maintaining APIs](https://monoscope.tech/blog/how-apitoolkit-can-help-you-achieve-api-observability/), observability plays a crucial role in ensuring their reliability and performance. By implementing a comprehensive [observability strategy](https://monoscope.tech/blog/how-api-observability-can-boost-your-business-performance/), you can effectively monitor and analyze the behavior of your APIs, enabling you to proactively identify and address any issues or anomalies before they impact your users.
 
 But why is API observability so important? Let's delve deeper into its significance.
 
@@ -56,13 +56,13 @@ Additionally, setting up alerts based on predefined thresholds will enable you t
 
 ### Troubleshooting and Debugging
 
-Even with a well-monitored API, issues can arise. When problems occur, having the [right tools](https://apitoolkit.io) and processes in place to troubleshoot and debug them is essential. This includes logging relevant data, leveraging distributed tracing to understand the flow of requests across services, and using diagnostic tools to investigate and resolve issues efficiently.
+Even with a well-monitored API, issues can arise. When problems occur, having the [right tools](https://monoscope.tech) and processes in place to troubleshoot and debug them is essential. This includes logging relevant data, leveraging distributed tracing to understand the flow of requests across services, and using diagnostic tools to investigate and resolve issues efficiently.
 
 Logging relevant data is crucial for understanding what happened leading up to an issue. Capturing detailed logs can help you trace the sequence of events and identify any potential causes of the problem. Additionally, leveraging distributed tracing allows you to visualize the flow of requests across different services and identify any bottlenecks or latency issues.
 
-Using [diagnostic tools](https://apitoolkit.io), such as API testing frameworks or debugging proxies, can also help in investigating and resolving issues efficiently. These tools provide insights into the behavior of your APIs and can help you pinpoint the root cause of any problems.
+Using [diagnostic tools](https://monoscope.tech), such as API testing frameworks or debugging proxies, can also help in investigating and resolving issues efficiently. These tools provide insights into the behavior of your APIs and can help you pinpoint the root cause of any problems.
 
-[APIToolkit](https://apitoolkit.io) is one such tool—a robust API management software that ensures that your APIs are performant and reliable.
+[APIToolkit](https://monoscope.tech) is one such tool—a robust API management software that ensures that your APIs are performant and reliable.
 
 ![API Throughput](./api-throughput.png)
 
@@ -70,7 +70,7 @@ Image Source: APIToolkit's dashboard displaying throughput by status code.
 
 ## Collecting API Telemetry Data
 
-When it comes to collecting API telemetry data, there are various types of [metrics and logs](https://apitoolkit.io/blog/api-logs-and-metrics/) that can provide valuable insights into the [performance and behavior](https://apitoolkit.io/blog/web-api-performance/) of your API. These metrics and logs can help you identify bottlenecks, track usage patterns, and troubleshoot issues in real time.
+When it comes to collecting API telemetry data, there are various types of [metrics and logs](https://monoscope.tech/blog/api-logs-and-metrics/) that can provide valuable insights into the [performance and behavior](https://monoscope.tech/blog/web-api-performance/) of your API. These metrics and logs can help you identify bottlenecks, track usage patterns, and troubleshoot issues in real time.
 
 ### Types of API Telemetry Data
 
@@ -88,7 +88,7 @@ In addition to these metrics, logging events can also provide crucial informatio
 
 There are several tools available for collecting API telemetry data, each offering different features and capabilities. Some popular choices include:
 
-* **[APIToolkit](https://apitoolkit.io):** APIToolkit is a powerful API monitoring and observability platform that can help you collect and analyze telemetry data from your API. It offers advanced search and visualization capabilities to help you gain actionable insights.
+* **[APIToolkit](https://monoscope.tech):** APIToolkit is a powerful API monitoring and observability platform that can help you collect and analyze telemetry data from your API. It offers advanced search and visualization capabilities to help you gain actionable insights.
 
 ![API Latency](./api-latency.png)
 Image Source: APIToolkit's dashboard displaying latency distribution
@@ -112,13 +112,13 @@ When analyzing API telemetry data, it is important to focus on key metrics that 
 - Throughput, and 
 - Latency. 
 
-By effectively [monitoring these metrics](https://apitoolkit.io/api-performance-monitoring-and-compliance/), you can detect trends, identify bottlenecks, and take proactive steps to optimize your API performance.
+By effectively [monitoring these metrics](https://monoscope.tech/api-performance-monitoring-and-compliance/), you can detect trends, identify bottlenecks, and take proactive steps to optimize your API performance.
 
-Read: [10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-Read: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
-Read: [How Good is Your REST API Workflow?](https://apitoolkit.io/blog/rest-api-workflow/)
+Read: [How Good is Your REST API Workflow?](https://monoscope.tech/blog/rest-api-workflow/)
 
 ### Data Analysis Techniques
 
@@ -150,13 +150,13 @@ Incorporating alerts and notifications into your visualizations can give you rea
 
 ### Tools for Visualizing API Telemetry Data
 
-To create effective visualizations of your API telemetry data, you need to choose the right tools that offer the features and functionalities you require. Some of the popular visualization tools are [APIToolkit](https://apitoolkit.io), Grafana, Kibana, Splunk, etc.
+To create effective visualizations of your API telemetry data, you need to choose the right tools that offer the features and functionalities you require. Some of the popular visualization tools are [APIToolkit](https://monoscope.tech), Grafana, Kibana, Splunk, etc.
 
 These tools can help you create dashboards and charts that display various aspects of your API telemetry data, such as request rate, latency distribution, error rate, availability percentage, etc.
 
 ## Conclusion
 
-The power of predictive analytics and [real-time anomaly detection](https://apitoolkit.io/api-anomalies-validation-and-checks/) has empowered developers to pre-empt disruptions and proactively optimize performance, ensuring that APIs not only meet but exceed user expectations.
+The power of predictive analytics and [real-time anomaly detection](https://monoscope.tech/api-anomalies-validation-and-checks/) has empowered developers to pre-empt disruptions and proactively optimize performance, ensuring that APIs not only meet but exceed user expectations.
 
 Visualizations and dashboards, akin to windows into your API's inner workings, enable you to share the story of your API's journey with different stakeholders. From developers to management teams making strategic decisions, the visual representation of telemetry data paints a vivid picture that fosters alignment and informed decision-making.
 
@@ -164,10 +164,10 @@ Take advantage of observability in microservices architecture to ensure that you
 
 **Keep reading**
 
-[Web API Performance Best Practices: the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices: the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/)

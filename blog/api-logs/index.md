@@ -12,15 +12,15 @@ categories:
 
 ![API Logs](./api-a-logs.png)
 
-[APIs](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) (Application Programming Interfaces) play a vital role in modern software development. They facilitate communication and data exchange between different applications. APIs have become the backbone of many digital services, enabling seamless integration and enhancing the functionality of various software systems.
+[APIs](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) (Application Programming Interfaces) play a vital role in modern software development. They facilitate communication and data exchange between different applications. APIs have become the backbone of many digital services, enabling seamless integration and enhancing the functionality of various software systems.
 
-As an [API developer](https://apitoolkit.io/blog/top-8-api-documentation-tools-for-developers/) or provider, it is crucial to gain meaningful insights from [API logs](https://apitoolkit.io/blog/api-logs-and-metrics/) to optimize performance, identify issues, and enhance user experience. API logs contain a wealth of information about the requests and responses exchanged between clients and servers.
+As an [API developer](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/) or provider, it is crucial to gain meaningful insights from [API logs](https://monoscope.tech/blog/api-logs-and-metrics/) to optimize performance, identify issues, and enhance user experience. API logs contain a wealth of information about the requests and responses exchanged between clients and servers.
 
 By analyzing these logs, you can gain valuable insights into the behavior of your APIs and make data-driven decisions to improve their performance and reliability.
 
 ### Analyzing Customer Journeys with APIToolkit
 
-[APIToolkit](https://apitoolkit.io) is a powerful API analytics platform that allows you to gather and analyze data from your API logs. With APIToolkit, you can unlock the full potential of your API logs and gain a deeper understanding of how users interact with your APIs.
+[APIToolkit](https://monoscope.tech) is a powerful API analytics platform that allows you to gather and analyze data from your API logs. With APIToolkit, you can unlock the full potential of your API logs and gain a deeper understanding of how users interact with your APIs.
 
 ![APIToolkit dashboard](./apitoolkit-dashboard.png)
 
@@ -28,7 +28,7 @@ One of the key features of APIToolkit is its ability to analyze customer journey
 
 For example, let's say you have an e-commerce application with an API that allows users to browse products, add items to their cart, and make purchases. By analyzing the customer journeys of your users, you may discover that a significant number of users abandon their carts at a specific step in the checkout process. Armed with this insight, you can investigate the issue further and identify potential reasons for cart abandonment, such as a confusing user interface or a slow API response time. This can then help you make targeted improvements to your API and enhance the user experience, ultimately increasing conversion rates and driving more sales.
 
-In addition to analyzing customer journeys, APIToolkit offers a wide range of other analytics features. You can track [API performance metrics](https://apitoolkit.io/api-logs-and-metrics/), such as response times and error rates, to identify bottlenecks and optimize your API infrastructure.
+In addition to analyzing customer journeys, APIToolkit offers a wide range of other analytics features. You can track [API performance metrics](https://monoscope.tech/api-logs-and-metrics/), such as response times and error rates, to identify bottlenecks and optimize your API infrastructure.
 
 ![API Query](./api-query.png)
 
@@ -50,7 +50,7 @@ API logs contain a wealth of information that can be valuable for troubleshootin
 
 ## Exploring Alternatives to Kibana for API Logs
 
-While Kibana is a popular tool for log analysis, there are alternative solutions like [APIToolkit](https://apitoolkit.io) that offer unique advantages for API log analysis.
+While Kibana is a popular tool for log analysis, there are alternative solutions like [APIToolkit](https://monoscope.tech) that offer unique advantages for API log analysis.
 
 ### The Benefits of Using APIToolkit for API Log Analysis
 
@@ -78,18 +78,18 @@ Remember, the process begins with effective log collection and storage, followed
 
 Harness the power of APIToolkit to understand your API logs.
 
-[Get started here](https://apitoolkit.io).
+[Get started here](https://monoscope.tech).
 
 **Also read**:
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)

@@ -21,7 +21,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
             Watch errors, stack traces, real-time API requests, performance statistics, and other metrics that matter using APItoolkit's rich API log explorer and analytics graphs, so you can pinpoint API issues, understand the root cause(s), and fix them in real-time before they affect your users.
          <p>
          <div class="mt-[30px] flex items-center gap-4 text-center">
-            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
+            <a href="https://app.monoscope.tech" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
             <a href="/docs" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-neutral sm:w-56">READ THE DOCS</a>
          </div>
       </div>
@@ -175,7 +175,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
             <td class="border border-blue-500 bg-slate-50 dark:bg-inherit prose text-sm md:text-base lg:text-base leading-relaxed text-center">
                 <img class="h-6 mt-2 mb-4 block mx-auto" src="/assets/img/compare-logos/check.svg" alt="Icon that indicates this feature is supported." />
 
-                Currently supports <a href="/docs/sdks" target="_blank" rel="noopener noreferrer" class="text-slate-500">20+ web frameworks</a> in different programming languages with features like redacting sensitive data, routes whitelist/blacklist, etc. If we don't support your framework, you can <a href="mailto:hello@apitoolkit.io" class="text-slate-500">email us</a> and we will specially create a new SDK for you.
+                Currently supports <a href="/docs/sdks" target="_blank" rel="noopener noreferrer" class="text-slate-500">20+ web frameworks</a> in different programming languages with features like redacting sensitive data, routes whitelist/blacklist, etc. If we don't support your framework, you can <a href="mailto:hello@monoscope.tech" class="text-slate-500">email us</a> and we will specially create a new SDK for you.
             </td>
             <td class="border prose text-sm md:text-base lg:text-base leading-relaxed text-center">
                 <img class="h-6 mt-2 mb-4 block mx-auto" src="/assets/img/compare-logos/check2.svg" alt="Icon that indicates this feature is supported." />
@@ -184,7 +184,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
          <tr>
             <td class="font-bold text-base md:text-lg lg:text-lg text-center">Customer Support</td>
             <td class="border border-blue-500 bg-slate-50 dark:bg-inherit prose text-sm md:text-base lg:text-base leading-relaxed text-center">
-                Users on any plan can <a href="https://apitoolkit.io/demo" target="_blank" rel="noopener noreferrer" class="text-slate-500">schedule a call</a> with an engineer on the team, join the community <a href="https://apitoolkit.io/discord" target="_blank" rel="noopener noreferrer" class="text-slate-500">Discord server</a>, write via email, or submit issues on <a href="https://github.com/monoscope-tech" target="_blank" rel="noopener noreferrer" class="text-slate-500">GitHub</a>. Our support team is always ready to help, swiftly!
+                Users on any plan can <a href="https://monoscope.tech/demo" target="_blank" rel="noopener noreferrer" class="text-slate-500">schedule a call</a> with an engineer on the team, join the community <a href="https://monoscope.tech/discord" target="_blank" rel="noopener noreferrer" class="text-slate-500">Discord server</a>, write via email, or submit issues on <a href="https://github.com/monoscope-tech" target="_blank" rel="noopener noreferrer" class="text-slate-500">GitHub</a>. Our support team is always ready to help, swiftly!
             </td>
             <td class="border prose text-sm md:text-base lg:text-base leading-relaxed text-center">
                 Users get support via email and only the paid users get priority support.
@@ -198,7 +198,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
    <div class="w-full my-12 width-control mx-auto px-2">
       <div class="w-full flex flex-col items-center text-center bg-blue-500 py-16 rounded-3xl gap-8">
          <p class="font-medium text-3xl text-white px-16 leading-normal">If you’re building an API-driven application on the web, mobile, IoT, etc., and you need to observe the API usage data from live users’ payload for any reason, then you should consider using APItoolkit.</p>
-         <a href="https://app.apitoolkit.io" class="btn btn-neutral sm:w-56 text-white">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
+         <a href="https://app.monoscope.tech" class="btn btn-neutral sm:w-56 text-white">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
       </div>
    </div>
 ```

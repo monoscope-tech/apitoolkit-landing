@@ -16,9 +16,9 @@ Imagine you're hosting a grand party at your home. You've invited friends, famil
 
 This is very much like the world of APIs. Think of the party as your software application, and the various systems – the lights, music, and food – as the different parts of your API. When everything's running smoothly, it's a blast. But when something goes wrong, it can be a real mood killer. And just like you'd wish for a magical tool to instantly tell you what's wrong at your party, developers dream of a tool that can quickly pinpoint where an issue lies within their API.
 
-[API Observability Tools](https://apitoolkit.io/blog/api-observability-software-development-/) are the superheroes of the API world, ensuring that your 'party' goes on without a hitch. In this article, we'll dive deep into these tools, helping you understand how they can save your 'party' from turning into a dud.
+[API Observability Tools](https://monoscope.tech/blog/api-observability-software-development-/) are the superheroes of the API world, ensuring that your 'party' goes on without a hitch. In this article, we'll dive deep into these tools, helping you understand how they can save your 'party' from turning into a dud.
 
-## What is [API Observability?](https://apitoolkit.io/blog/api-observability-software-development-/)
+## What is [API Observability?](https://monoscope.tech/blog/api-observability-software-development-/)
 
 In the simplest terms, observability is the ability to understand the internal state of a system from its external outputs. If you've ever tried to figure out why your car is making a weird noise by just listening to it, you're essentially using observability. When applied to APIs, observability is about understanding the behaviour of your API by examining its data outputs.
 
@@ -62,12 +62,12 @@ Using the ice cream shop as an analogy, we see the myriad challenges both face i
 
 ## How to Use Observability Tools for API Troubleshooting with APIToolkit
 
-In the world of digital transformation, APIs power a significant chunk of the modern web. But with great power comes great responsibility, especially when things go haywire and  observability tools like [APIToolkit](https://apitoolkit.io/) makes the difference. In this guide, we'll walk through how you can harness APIToolkit to troubleshoot and ensure your APIs run as smoothly as silk.
+In the world of digital transformation, APIs power a significant chunk of the modern web. But with great power comes great responsibility, especially when things go haywire and  observability tools like [APIToolkit](https://monoscope.tech/) makes the difference. In this guide, we'll walk through how you can harness APIToolkit to troubleshoot and ensure your APIs run as smoothly as silk.
 
-1. Sign in to the [APIToolkit](https://app.apitoolkit.io/) dashboard.
+1. Sign in to the [APIToolkit](https://app.monoscope.tech/) dashboard.
 2. Click on 'Sign Up' and enter your details.
    ![Sign in page](signin-page.png)
-3. Once logged in, go ahead and integrate your APIs into APIToolkit using these [docs](https://apitoolkit.io/docs/get-started/quickstarts/)
+3. Once logged in, go ahead and integrate your APIs into APIToolkit using these [docs](https://monoscope.tech/docs/get-started/quickstarts/)
 4. Follow the prompts to connect your API to APIToolkit.
    ![Dashboard](dashboard.png)
 5. Now your page is automatically configured with specific endpoints, setting rate limits, and more. All incoming requests are monitored for anomalies, new endpoints, slow end points and more.
@@ -93,15 +93,15 @@ As requests navigate through your system, consistent tracing ensures you have a 
 Feedback Loops: Using Observability Insights to Improve the API's Design and Performance
 Observability isn't just about identifying problems; it's about continuous improvement. Think of it as customer feedback in a restaurant. By listening and making changes, the restaurant continually improves its service. Regularly review the insights gained from your observability tools. Use this data to refine your API's design, optimize performance, and enhance the overall user experience.
 
-API observability isn't a luxury, it's a necessity. It provides the flashlight in the dark alleyways of system breakdowns, guiding us towards swift resolutions and ensuring the digital experiences we offer remain seamless. As we've explored, it's not just about having tools but using them wisely. So, as you venture into the world of APIs, arm yourself with the right observability practices and tools, like [APIToolkit](https://apitoolkit.io/), to ensure your APIs not only run smoothly but also mature and improve over time.
+API observability isn't a luxury, it's a necessity. It provides the flashlight in the dark alleyways of system breakdowns, guiding us towards swift resolutions and ensuring the digital experiences we offer remain seamless. As we've explored, it's not just about having tools but using them wisely. So, as you venture into the world of APIs, arm yourself with the right observability practices and tools, like [APIToolkit](https://monoscope.tech/), to ensure your APIs not only run smoothly but also mature and improve over time.
 
 Conclusion
-APIs are the lifeblood of many digital platforms. Ensuring their smooth operation is crucial. With [APIToolkit](https://apitoolkit.io/), you're equipped with a robust toolset to monitor, trace, and analyze your APIs, ensuring optimal performance and swift troubleshooting. Keep this guide handy, and may your APIs always be in top form!
+APIs are the lifeblood of many digital platforms. Ensuring their smooth operation is crucial. With [APIToolkit](https://monoscope.tech/), you're equipped with a robust toolset to monitor, trace, and analyze your APIs, ensuring optimal performance and swift troubleshooting. Keep this guide handy, and may your APIs always be in top form!
 
 ---
 
 Keep Reading
-[Web API Performance Best Practices: the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
-[API Testing Requirements: What You Need to Know Before You Start](https://apitoolkit.io/blog/api-testing-requirements/)
-[The Importance of API Observability in Software Development](https://apitoolkit.io/blog/api-observability-software-development-/)
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/)
+[Web API Performance Best Practices: the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
+[API Testing Requirements: What You Need to Know Before You Start](https://monoscope.tech/blog/api-testing-requirements/)
+[The Importance of API Observability in Software Development](https://monoscope.tech/blog/api-observability-software-development-/)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/)

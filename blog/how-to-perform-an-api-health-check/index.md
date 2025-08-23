@@ -47,7 +47,7 @@ An API health check is a test that evaluates the current functionality and perfo
 
 The main purpose of API health checks is to ensure the reliability, stability, and robustness of APIs. Comprehensive health monitoring exposes any weaknesses before they turn into real problems for end users.API health checks achieve this by proactively identifying issues like performance degradation, downtimes, error rates and more. Automated checks at frequent intervals quickly detect anomalies.
 
-API developers can then diagnose root causes and implement fixes and optimizations to restore full health. For example, a daily API health check by [APIToolkit](https://apitoolkit.io/) will  reveal response times creeping upwards over the past week. This performance degradation could indicate impending infrastructure issues. 
+API developers can then diagnose root causes and implement fixes and optimizations to restore full health. For example, a daily API health check by [APIToolkit](https://monoscope.tech/) will  reveal response times creeping upwards over the past week. This performance degradation could indicate impending infrastructure issues. 
 
 Fixing the bottleneck before a total outage provides a smoother user experience. Regular health checks shift troubleshooting left, finding weaknesses in the staging environment instead of when they directly impact customers.
 
@@ -104,7 +104,7 @@ Data Integrity — Comparing the format, schema, and values of API responses aga
 
 
 ## Tools and Resources for API Health Checks
-[Apitoolkit](https://apitoolkit.io/)- An advanced API monitoring,teasting, and observability platform providing debugging, [automated testing](https://apitoolkit.io/blog/api-testing-automation/), [performance monitoring](https://apitoolkit.io/blog/api-logs-and-metrics/), and more. APIToolkit act as a quality assurance for your API lifecycle. With the engaging community, developers get help easily whenever they get stack.
+[Apitoolkit](https://monoscope.tech/)- An advanced API monitoring,teasting, and observability platform providing debugging, [automated testing](https://monoscope.tech/blog/api-testing-automation/), [performance monitoring](https://monoscope.tech/blog/api-logs-and-metrics/), and more. APIToolkit act as a quality assurance for your API lifecycle. With the engaging community, developers get help easily whenever they get stack.
 
 [Postman](https://www.postman.com/) - A powerful tool that allows you to interact with APIs from the comfort of your own workspace, making it easier to design, share, test, and
 
@@ -133,7 +133,7 @@ Data Integrity — Comparing the format, schema, and values of API responses aga
 ## Frequently Asked Questions
 
 **Why is an API Health Check Necessary?** 
-**A:** API health checks are essential for quickly detecting issues before they cascade into outages. Unhealthy APIs directly impact user experiences and business operations. Proactively monitoring API health with [APIToolkit](https://apitoolkit.io/) minimizes disruptions and provides warnings to address degradations.
+**A:** API health checks are essential for quickly detecting issues before they cascade into outages. Unhealthy APIs directly impact user experiences and business operations. Proactively monitoring API health with [APIToolkit](https://monoscope.tech/) minimizes disruptions and provides warnings to address degradations.
 
 **When is the Best Time to Get an API Health Check?** 
 **A:** Ideally health checks should be implemented early during API development and expanded throughout the API lifecycle. Checking health frequently during initial development catches bugs. Ongoing production monitoring surfaces emergent issues over time and use. 
@@ -153,13 +153,13 @@ As APIs continue to proliferate as the technical backbone of applications, prior
 
 **Keep Reading**
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[ A Guide to Embedded API Logs and Metrics ](https://apitoolkit.io/blog/embedded-apis-and-metrics/)
+[ A Guide to Embedded API Logs and Metrics ](https://monoscope.tech/blog/embedded-apis-and-metrics/)
 
-[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 

@@ -11,11 +11,11 @@ categories:
 
 ![Guide](guide.png)
 
-Each login to a favorite website using a Google account is an interaction made possible by a [web API](https://apitoolkit.io/blog/web-api-performance/). But beyond this surface-level interaction lies the intricate world of web service APIs, crucial for developers and tech enthusiasts to understand. Before delving into what web service APIs are, perhaps I should define what an [API](https://apitoolkit.io/blog/unlocking-the-full-potential-of-api-gateways/) is. An API is a component that enables communication between two systems or applications. 
+Each login to a favorite website using a Google account is an interaction made possible by a [web API](https://monoscope.tech/blog/web-api-performance/). But beyond this surface-level interaction lies the intricate world of web service APIs, crucial for developers and tech enthusiasts to understand. Before delving into what web service APIs are, perhaps I should define what an [API](https://monoscope.tech/blog/unlocking-the-full-potential-of-api-gateways/) is. An API is a component that enables communication between two systems or applications. 
 
 Web service APIs are subsets of APIs that depend on a networks, predominantly the internet, to enable this cross-communication. The [World Wide Web Consortium](http://www.w3.org/2005/Talks/01-ws-plh/?n=1) (W3C) defined web services thus: “A web service is a software system designed to support interoperable machine-to-machine interaction over a network. It has an interface described in a machine-processable format (specifically WSDL). Other systems interact with the web service in a manner prescribed by its description using SOAP-messages, typically conveyed using HTTP with an XML serialization in conjunction with other web-related standards”.
 
-Developers interact with web services on a daily basis. This is why an in-depth understanding of these important components is necessary. I cover the differences and similarities between APIs and web services in [another article](http://apitoolkit.io/blog/apis-and-web-services).
+Developers interact with web services on a daily basis. This is why an in-depth understanding of these important components is necessary. I cover the differences and similarities between APIs and web services in [another article](http://monoscope.tech/blog/apis-and-web-services).
 
 ## What Are the Types of Web Services?
 
@@ -23,7 +23,7 @@ There are 4 main types of web service APIs, namely:
 
 **XML-RPC (Extensible Markup Language-Remote Procedure Call)**: This is the most basic XML protocol. This protocol allows data exchange between a variety of devices on a given network. It facilitates the transfer of data and other information between clients and servers using HTTP. 
 
-**REST**: [REST](https://apitoolkit.io/blog/rest-api-is-the-future/) is an acronym for Representational State Transfer. REST services use HTTP and support a range of HTTP methods such as GET, POST, PUT, and DELETE. It allows for communication and connectivity between API-based devices and the internet. 
+**REST**: [REST](https://monoscope.tech/blog/rest-api-is-the-future/) is an acronym for Representational State Transfer. REST services use HTTP and support a range of HTTP methods such as GET, POST, PUT, and DELETE. It allows for communication and connectivity between API-based devices and the internet. 
 
 **SOAP**: SOAP stands for Simple Object Access Protocol. A Web service protocol that uses XML to facilitate transferring data and documents over HTTP or SMTP (Simple Mail Transfer Protocol). It uses XML to enable communication between independent processes running on different platforms.
 
@@ -60,10 +60,10 @@ A web service is deployed over the internet using standard Apache, Axis2 to gene
 
 Data transmitted over the internet has to be structured in some way. The two most popular data formats are XML and JSON.
 
-XML (or Extensible Markup Language) is the text format that [SOAP](https://apitoolkit.io/blog/everything-about-soap-apis/) uses. It establishes a set of rules to structure messages as both human and machine-readable records. Albeit, XML is quite verbose as it aims to create a web document with all its formality.
+XML (or Extensible Markup Language) is the text format that [SOAP](https://monoscope.tech/blog/everything-about-soap-apis/) uses. It establishes a set of rules to structure messages as both human and machine-readable records. Albeit, XML is quite verbose as it aims to create a web document with all its formality.
 
 ### The Message Structure of SOAP
-Standard [SOAP](https://apitoolkit.io/blog/everything-about-soap-apis/) requests appear as an enveloped messages consisiting of four elemetns, each with their unique funveloped message consisting of four unique parts, each with its own function.
+Standard [SOAP](https://monoscope.tech/blog/everything-about-soap-apis/) requests appear as an enveloped messages consisiting of four elemetns, each with their unique funveloped message consisting of four unique parts, each with its own function.
 
 **Envelope**: the core and essential component of every message. It starts and concludes messages with its tags, enveloping them, hence the name.
 
@@ -77,22 +77,22 @@ Standard [SOAP](https://apitoolkit.io/blog/everything-about-soap-apis/) requests
 
 ## How REST Works: Understanding Through a Facebook Graph API Example
 
-Let's dive straight into an example to understand how [REST](https://apitoolkit.io/blog/rest-api-is-the-future/) operates. Consider how you typically access a Facebook page, like the YouTube page. You would enter www.facebook.com/youtube in your browser, which sends a request to Facebook's servers. In response, you receive the HTML-rendered page of YouTube’s Facebook profile.
+Let's dive straight into an example to understand how [REST](https://monoscope.tech/blog/rest-api-is-the-future/) operates. Consider how you typically access a Facebook page, like the YouTube page. You would enter www.facebook.com/youtube in your browser, which sends a request to Facebook's servers. In response, you receive the HTML-rendered page of YouTube’s Facebook profile.
 
-However, if you're a developer and you want to access specific data from this page using the [REST](https://apitoolkit.io/blog/rest-api-is-the-future/) architectural style, the approach changes. Instead of the regular URL, you would use the Graph API endpoint: graph.facebook.com/youtube. This is still a request made over HTTP, but here's where things get interesting.
+However, if you're a developer and you want to access specific data from this page using the [REST](https://monoscope.tech/blog/rest-api-is-the-future/) architectural style, the approach changes. Instead of the regular URL, you would use the Graph API endpoint: graph.facebook.com/youtube. This is still a request made over HTTP, but here's where things get interesting.
 
 When you make this request, instead of receiving a fully rendered webpage, you get a structured JSON response. This response contains key-value pairs detailing specific information about the YouTube page. For instance, you might see data on the number of likes, the amount of followers, recent activity, and other metadata. This data is structured, precise, and easily parsable, making it ideal for programmatic access.
 
-This example showcases the essence of REST: a stateless, client-server communication where the server replies with structured, predictable responses to HTTP requests. By using [REST](https://apitoolkit.io/blog/rest-api-is-the-future/), developers can efficiently extract and manipulate data, integrate it with other applications, or use it to inform user interfaces, making it a powerful tool in modern web development.
+This example showcases the essence of REST: a stateless, client-server communication where the server replies with structured, predictable responses to HTTP requests. By using [REST](https://monoscope.tech/blog/rest-api-is-the-future/), developers can efficiently extract and manipulate data, integrate it with other applications, or use it to inform user interfaces, making it a powerful tool in modern web development.
 
 ## Structure of a REST Request
 **The Endpoint**: This is a unique URL that represents an object or group of objects of data. Each API request has its own endpoint, which is what the HTTP client is directed at in order to interact with data resources.
 
 **The Method**: HTTP methods (which will be explained in further detail below) are an integral part of a RESTful API request. These methods – GET, POST, PUSH, PATCH, and DELETE – correspond to create, read, update, and delete resources.
 
-**The Headers**: REST headers contain information that represents metadata associated with every single [REST API](https://apitoolkit.io/blog/rest-api-scalability/) request. A REST header indicates the format of the request and response. This provides information about the status of the request.
+**The Headers**: REST headers contain information that represents metadata associated with every single [REST API](https://monoscope.tech/blog/rest-api-scalability/) request. A REST header indicates the format of the request and response. This provides information about the status of the request.
 
-**The Data**: A [REST API](https://apitoolkit.io/blog/rest-api-scalability/) request also consists of data (also referred to as a “body”) that usually works with the POST, PUT, and PATCH HTTP commands and contains the information and representation of the resource that will be created.
+**The Data**: A [REST API](https://monoscope.tech/blog/rest-api-scalability/) request also consists of data (also referred to as a “body”) that usually works with the POST, PUT, and PATCH HTTP commands and contains the information and representation of the resource that will be created.
 
 ## Major Differences Between SOAP and REST
 | | |
@@ -112,14 +112,14 @@ Ultimately, the information I’ve provided here should help you make a good cho
 
 ## Keep Reading
 
-[Web API Performance Best Practices: the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices: the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[10 Must-Know API trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[How to Tackle Anomalies in RESTful APIs](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+[Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)

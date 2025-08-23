@@ -12,17 +12,17 @@ categories:
 
 ![Man coding](image1.jpg)
 
-The primary objective of tools developers use is to make life easier and enhance work processes. With APIs, the story is pretty much the same. Developers use [a ton of tools](https://apitoolkit.io/blog/api-trends/) to keep sane, [manage APIs](https://apitoolkit.io/blog/the-ultimate-api-management-strategy/) and churn out quality API products.
+The primary objective of tools developers use is to make life easier and enhance work processes. With APIs, the story is pretty much the same. Developers use [a ton of tools](https://monoscope.tech/blog/api-trends/) to keep sane, [manage APIs](https://monoscope.tech/blog/the-ultimate-api-management-strategy/) and churn out quality API products.
 
 To help you choose the diamonds in the rough, here’s a list of the top 10 API tools for developers in 2022.
 
 ## Observability Tools
 
-[API observability](https://apitoolkit.io/blog/api-observability-and-api-monitoring/) is a way of keeping track of APIs that uses an agent or SDK to passively log API traffic to an observability service.
+[API observability](https://monoscope.tech/blog/api-observability-and-api-monitoring/) is a way of keeping track of APIs that uses an agent or SDK to passively log API traffic to an observability service.
 
-### 1. [APIToolkit](https://apitoolkit.io)
+### 1. [APIToolkit](https://monoscope.tech)
 
-[APIToolkit](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) is an automated comprehensive API observability and monitoring platform for API contract monitoring and documentation. It was built by software engineers to help solve problems that could potentially cause lots of losses (data, revenue, customers, etc). 
+[APIToolkit](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is an automated comprehensive API observability and monitoring platform for API contract monitoring and documentation. It was built by software engineers to help solve problems that could potentially cause lots of losses (data, revenue, customers, etc). 
 
 Using the best-in-class technology, APIToolkit leverages a highly specialized and powerful platform to provide a secure environment for developers to build and maintain APIs with enhanced analytics.
 
@@ -72,7 +72,7 @@ With Apigee, you can also view insights across the API value chain. Apigee offer
 
 SoapUI is a highly efficient cross-platform testing API tool that offers a GI (Graphical Interface) to its users and lets you make and execute automated functional, compliance, and regression tests.
 
-With it, you can easily manage tests on [REST](https://apitoolkit.io/blog/everything-about-rest-apis/), GraphQL APIs, JMS, [SOAP](https://apitoolkit.io/blog/everything-about-soap-apis/), JDBC, and multiple other web services. 
+With it, you can easily manage tests on [REST](https://monoscope.tech/blog/everything-about-rest-apis/), GraphQL APIs, JMS, [SOAP](https://monoscope.tech/blog/everything-about-soap-apis/), JDBC, and multiple other web services. 
 
 **Price**: SoapUI does offer a free trial period, but its pricing is based on the features you include in your plan. The pricing plans start at $599 per year.
 
@@ -106,7 +106,7 @@ Swagger allows its users to write API documentation, plan and report new APIs, a
 
 ## Conclusion
 
-Whatever your API tool stack is, you definitely cannot afford to do without [real-time monitoring](https://apitoolkit.io/blog/what-is-api-testing/) and observability from APIToolkit.
+Whatever your API tool stack is, you definitely cannot afford to do without [real-time monitoring](https://monoscope.tech/blog/what-is-api-testing/) and observability from APIToolkit.
 
-If you still aren’t convinced, you should [check this out](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/).
+If you still aren’t convinced, you should [check this out](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/).
 

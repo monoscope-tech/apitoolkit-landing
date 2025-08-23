@@ -16,17 +16,17 @@ Hey there! Let's talk about API documentation.
 
 ## How Does API Documentation Work?
 
-Imagine purchasing a smart device without a manual. You can’t use it. This is how essential documentation is in the [API developer's toolkit](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/). API documentation simply provides information about how to use a particular API. Think of it as a user manual for developers - it tells them everything they need to know about how to interact with the API and what they can expect to receive in response.
+Imagine purchasing a smart device without a manual. You can’t use it. This is how essential documentation is in the [API developer's toolkit](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/). API documentation simply provides information about how to use a particular API. Think of it as a user manual for developers - it tells them everything they need to know about how to interact with the API and what they can expect to receive in response.
 
 As a general rule of thumb, good API documentation should be clear, concise, and easy to follow. It should provide examples of how to use the API in different scenarios, along with any relevant code snippets or explanations. The documentation should also include information about any limitations or restrictions of the API, such as rate limits or authentication requirements.
 
 ## Key Elements of API Documentation
 
-**Structure.** One of the key elements of [good API documentation](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) is a well-organized structure. Developers should be able to quickly find the information they need, whether they're looking for an overview of the API or specific details about a particular endpoint.
+**Structure.** One of the key elements of [good API documentation](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) is a well-organized structure. Developers should be able to quickly find the information they need, whether they're looking for an overview of the API or specific details about a particular endpoint.
 
 **Update.** Another important aspect of API documentation is keeping it up-to-date. APIs can change over time, so it's crucial to ensure that the documentation reflects the latest version of the API. This means updating the documentation whenever changes are made to the API, and ideally providing a changelog to inform developers of any new features or changes.
 
-Read: [How to Use Notion for API Documentation](https://apitoolkit.io/blog/using-notion-for-documentation/)
+Read: [How to Use Notion for API Documentation](https://monoscope.tech/blog/using-notion-for-documentation/)
 
 ## Generating Automated AI Documnentation
 
@@ -50,7 +50,7 @@ Therefore, the question is:
 
 The journey is a marathon and not a sprint. So, while we have grander goals, at the moment we’re exploring specific solutions to these 3 questions.
 
-Read: [How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+Read: [How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
 ### Derive Documentation from Production Traffic
 
@@ -88,7 +88,7 @@ To help you build a model about how this works, let’s look at some example GET
 	
 	--- Etc
 
-[APItoolkit](https://apitoolkit.io/) would process these requests and learn that the endpoint has a structure that looks similar to:
+[APItoolkit](https://monoscope.tech/) would process these requests and learn that the endpoint has a structure that looks similar to:
 
 Endpoint: /user/{arg: integer}/
 
@@ -126,18 +126,18 @@ Now we have documentations and other information for each fields, but then we al
 
 Apitoolkit is on the journey of helping developers create amazing API documentation with very low effort. And even while some of these functionality are still in progress or in flux, we’re constantly thinking about the bigger picture, and are confident that we will solve this problem of API documentation elegantly, with time.
 
-Check out the [AIToolkit features](https://apitoolkit.io/).
+Check out the [AIToolkit features](https://monoscope.tech/).
 
 APIToolkit is committed to guiding you through managing quality documentation, and we have written some articles on this topic. Take a look:
 
 **Also Read**
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[API Documentation and Observability: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Observability: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[Top 8 API Documentation Tools for Developers](https://apitoolkit.io/blog/top-8-api-documentation-tools-for-developers/)
+[Top 8 API Documentation Tools for Developers](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/)
 
-[Key Benefits of API Integration for Developers](https://apitoolkit.io/blog/benefits-of-api-integration/)
+[Key Benefits of API Integration for Developers](https://monoscope.tech/blog/benefits-of-api-integration/)

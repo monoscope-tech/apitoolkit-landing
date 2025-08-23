@@ -14,7 +14,7 @@ categories:
 
 If you are developing a web application that relies on APIs to fetch data from the backend, you may encounter performance issues that affect the user experience. For example, your app may take too long to load, display outdated or inconsistent data, or fail to handle errors gracefully. These are frontend API Performance Problems.
 
-Your frontend performance plays a crucial role in delivering a smooth and efficient user experience. Slow-loading pages, unresponsive interfaces, and excessive network requests can all contribute to a subpar user experience. By [actively monitoring](https://apitoolkit.io/api-performance-monitoring-and-compliance/) frontend performance and addressing any issues promptly, website owners can ensure that users have a seamless and enjoyable experience.
+Your frontend performance plays a crucial role in delivering a smooth and efficient user experience. Slow-loading pages, unresponsive interfaces, and excessive network requests can all contribute to a subpar user experience. By [actively monitoring](https://monoscope.tech/api-performance-monitoring-and-compliance/) frontend performance and addressing any issues promptly, website owners can ensure that users have a seamless and enjoyable experience.
 
 In this guide, we will explore some common causes of frontend API performance problems, and how to analyze and address them using various tools and techniques.
 
@@ -31,7 +31,7 @@ Frontend API performance problems are issues that affect the speed, reliability,
 
 ## How to analyze frontend API performance problems?
 
-To analyze frontend [API performance](https://apitoolkit.io/blog/web-api-performance/) problems, you need to measure and monitor various metrics and indicators that reflect how your app interacts with the backend APIs. Some of these metrics and indicators are:
+To analyze frontend [API performance](https://monoscope.tech/blog/web-api-performance/) problems, you need to measure and monitor various metrics and indicators that reflect how your app interacts with the backend APIs. Some of these metrics and indicators are:
 
 - **API response time**: The time it takes for the backend to process the request and send back the response.
 - **API latency**: The time it takes for the request and response to travel between the frontend and the backend.
@@ -42,9 +42,9 @@ To analyze frontend [API performance](https://apitoolkit.io/blog/web-api-perform
 There are various tools and techniques that can help you measure and monitor these metrics and indicators, such as:
 
 - Browser DevTools: The built-in tools in your web browser that allow you to inspect and debug your web app, including its network activity, performance, and errors.
-- API testing tools: Tools that allow you to simulate and [test your API](https://apitoolkit.io/blog/api-testing-automation/) requests and responses, such as APIToolkit, Postman, Insomnia, or curl.
-- API monitoring tools: Tools that allow you to track and analyze your API performance over time, such as [APIToolkit](https://apitoolkit.io), New Relic, Datadog, or Apigee.
-- API documentation tools: Tools that allow you to generate and maintain documentation for your APIs, such as Swagger, OpenAPI, [APITookit](https://apitoolkit.io), or RAML.
+- API testing tools: Tools that allow you to simulate and [test your API](https://monoscope.tech/blog/api-testing-automation/) requests and responses, such as APIToolkit, Postman, Insomnia, or curl.
+- API monitoring tools: Tools that allow you to track and analyze your API performance over time, such as [APIToolkit](https://monoscope.tech), New Relic, Datadog, or Apigee.
+- API documentation tools: Tools that allow you to generate and maintain documentation for your APIs, such as Swagger, OpenAPI, [APITookit](https://monoscope.tech), or RAML.
 
 ## How to address Frontend API Performance Problems?
 
@@ -57,7 +57,7 @@ To address frontend API performance problems, you need to identify and fix the r
 - **Avoid API overfetching**: Review and improve your data fetching logic on the frontend. For example, you can use GraphQL (Graph Query Language), RESTful (Representational State Transfer) principles, or custom endpoints to request only the data you need from the backend.
 - **Avoid API underfetching**: Review and improve your data fetching logic on the frontend. For example, you can use GraphQL (Graph Query Language), RESTful (Representational State Transfer) principles, or custom endpoints to request all the data you need from the backend in one go.
 - **Use a load balancer**: A load balancer can distribute traffic across multiple servers, which can help to improve performance and reliability.
-- **Monitor your performance**: It is important to [monitor](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) your frontend API performance on an ongoing basis so that you can identify and address any issues early on. You can use a variety of tools and techniques to monitor performance, and [APIToolkit](https://apitoolkit.io) provides an all-round solution for [API monitoring and observability](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/).
+- **Monitor your performance**: It is important to [monitor](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) your frontend API performance on an ongoing basis so that you can identify and address any issues early on. You can use a variety of tools and techniques to monitor performance, and [APIToolkit](https://monoscope.tech) provides an all-round solution for [API monitoring and observability](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/).
 
 ## Conclusion
 
@@ -65,14 +65,14 @@ Frontend API performance problems can have a negative impact on your web app's u
 
 **Also read**
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)

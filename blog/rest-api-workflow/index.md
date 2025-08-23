@@ -12,7 +12,7 @@ categories:
 
 ![API Workflow](./api-workflow_png.png)
 
-As a developer who works with web applications, chances are you have encountered [REST APIs](https://apitoolkit.io/blog/what-are-rest-apis/). REST stands for Representational State Transfer, and it is a software architectural style that defines how web services communicate with each other. A REST API is an application programming interface that follows the REST principles and allows clients to access and manipulate data on a server.
+As a developer who works with web applications, chances are you have encountered [REST APIs](https://monoscope.tech/blog/what-are-rest-apis/). REST stands for Representational State Transfer, and it is a software architectural style that defines how web services communicate with each other. A REST API is an application programming interface that follows the REST principles and allows clients to access and manipulate data on a server.
 
 A well-optimized REST API workflow can make your development process more efficient, reliable, and scalable. It can also improve the user experience and satisfaction of your web application. However, creating and maintaining a good REST API workflow is not a trivial task. It requires careful planning, design, documentation, testing, and maintenance.
 
@@ -35,7 +35,7 @@ The core principles of a RESTful API are:
 
 ![Principles of a RESTful API](./rest-api_png.png)
 
-A REST API workflow is the process of designing, developing, testing, deploying, and maintaining a [RESTful API](https://apitoolkit.io/blog/anomalies-in-restful-apis/). It involves various steps, such as:
+A REST API workflow is the process of designing, developing, testing, deploying, and maintaining a [RESTful API](https://monoscope.tech/blog/anomalies-in-restful-apis/). It involves various steps, such as:
 
 - Defining the requirements and scope of the API
 - Designing the API structure, resources, methods, parameters, responses, etc.
@@ -61,9 +61,9 @@ Some of the common challenges that developers face when working with APIs are:
 - Difficulty in testing or debugging APIs
 - Breaking changes or compatibility issues in API versions
 
-To overcome these challenges, you need to establish some [metrics](https://apitoolkit.io/blog/api-logs-and-metrics/) to measure your API workflow performance. Some of these metrics are:
+To overcome these challenges, you need to establish some [metrics](https://monoscope.tech/blog/api-logs-and-metrics/) to measure your API workflow performance. Some of these metrics are:
 
-- **Time-to-market**: How long does it take to design, develop, [test](https://apitoolkit.io/blog/api-testing-automation), and deploy your API? How often do you update or release new versions of your API?
+- **Time-to-market**: How long does it take to design, develop, [test](https://monoscope.tech/blog/api-testing-automation), and deploy your API? How often do you update or release new versions of your API?
 - **User satisfaction**: How satisfied are your users with your API? How easy is it for them to use your API? How well does your API meet their expectations and needs?
 - **Error rate**: How often does your API encounter errors or failures? How severe are these errors or failures? How quickly do you resolve them?
 - **Availability**: How available is your API? How often does it experience downtime or interruptions? How resilient is it to handle high traffic or load?
@@ -105,7 +105,7 @@ But with APIToolkit, you can:
 - Test and validate your API functionality and performance.
 - Maintain a bird’s eye view of your entire API.
 
-Get started [here](https://apitoolkit.io).
+Get started [here](https://monoscope.tech).
 
 ## Key Elements of a Good REST API Workflow
 
@@ -115,7 +115,7 @@ These elements are:
 
 ### API Design and Documentation
 
-One of the most important aspects of a good REST API workflow is the [design and documentation](https://apitoolkit.io/blog/how-to-write-api-docs/) of the API. A clear and consistent API design can make your API easy to understand, use, and maintain. A descriptive and helpful API documentation can make your API accessible, discoverable, and trustworthy.
+One of the most important aspects of a good REST API workflow is the [design and documentation](https://monoscope.tech/blog/how-to-write-api-docs/) of the API. A clear and consistent API design can make your API easy to understand, use, and maintain. A descriptive and helpful API documentation can make your API accessible, discoverable, and trustworthy.
 
 Some of the best practices for API design and documentation are:
 
@@ -123,7 +123,7 @@ Some of the best practices for API design and documentation are:
 - Use HTTP verbs to indicate the actions or operations on your resources. For example, GET /users to retrieve a list of users, POST /users to create a new user, PUT /users/{id} to update an existing user, DELETE /users/{id} to delete an existing user.
 - Use query parameters to filter, sort, paginate, or search your resources. For example, GET /users?name=John&age=25&sort=asc&page=2&limit=10.
 - Use path parameters to identify specific resources or sub-resources. For example, GET /users/{id} to retrieve a specific user by id, GET /users/{id}/posts to retrieve the posts of a specific user by id.
-- Use status codes to indicate the outcome of the request. For example, 200 OK for successful requests, 201 Created for resource creation requests, 400 Bad Request for invalid requests, 401 Unauthorized for authentication failures, 404 Not Found for non-existing resources, 500 Internal Server Error for [server errors](https://apitoolkit.io/blog/api-downtime/).
+- Use status codes to indicate the outcome of the request. For example, 200 OK for successful requests, 201 Created for resource creation requests, 400 Bad Request for invalid requests, 401 Unauthorized for authentication failures, 404 Not Found for non-existing resources, 500 Internal Server Error for [server errors](https://monoscope.tech/blog/api-downtime/).
 - Use descriptive and consistent error messages to provide more information about the error. For example,
 
 ```json
@@ -145,7 +145,7 @@ Some of the best practices for API design and documentation are:
 }
 ```
 
-- Use OpenAPI [specifications](https://apitoolkit.io/blog/api-documentation-vs-api-specification/) to define your API structure, resources, methods, parameters,
+- Use OpenAPI [specifications](https://monoscope.tech/blog/api-documentation-vs-api-specification/) to define your API structure, resources, methods, parameters,
 responses, etc. in a machine-readable and human-readable format (such as YAML or JSON). For example,
 
 ```yaml
@@ -176,17 +176,17 @@ schema:
 
 **Read**: 
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[AP Documentation and Observability: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[AP Documentation and Observability: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
 ### Versioning and Stability
 
 Another important element of a good REST API workflow is versioning. Versioning is the process of managing changes to your APIs over time. Versioning can help you:
 
-- Introduce new features, enhancements, or [bug fixes](https://apitoolkit.io/api-anomalies-validation-and-checks/) to your APIs
+- Introduce new features, enhancements, or [bug fixes](https://monoscope.tech/api-anomalies-validation-and-checks/) to your APIs
 - Communicate changes to your users and stakeholders
 - Maintain backward compatibility with older versions of your APIs
 
@@ -217,10 +217,10 @@ Using headers or query parameters can help you:
 
 Other key elements of a good REST API workflow include:
 
-- [Monitoring and observability](https://apitoolkit.io/blog/api-downtime/)
-- [Error handling and status codes](https://apitoolkit.io/blog/api-logs-and-metrics/)
-- [Authentication and security](https://apitoolkit.io/blog/api-security/)
-- [Performance and optimization](https://apitoolkit.io/blog/web-api-performance/)
+- [Monitoring and observability](https://monoscope.tech/blog/api-downtime/)
+- [Error handling and status codes](https://monoscope.tech/blog/api-logs-and-metrics/)
+- [Authentication and security](https://monoscope.tech/blog/api-security/)
+- [Performance and optimization](https://monoscope.tech/blog/web-api-performance/)
 
 ## Evolving Your Workflow to Align with Future Requirements
 
@@ -228,9 +228,9 @@ As your business requirements change and new features or functionalities are add
 
 - **Follow a versioning strategy for your APIs**. Versioning allows you to introduce changes or updates to your APIs without breaking the existing clients or consumers. You can use different methods for versioning, such as using URL parameters, headers, media types, etc. You should also document and communicate your versioning policy and changes clearly and transparently to your clients or consumers.
 
-- **Implement a testing strategy for your APIs**. [Testing](https://apitoolkit.io/blog/api-testing-automation) ensures that your APIs function correctly and meet the expected quality standards. You can use different types of testing, such as unit testing, integration testing, functional testing, performance testing, security testing, etc. You should also automate your testing process using tools and frameworks that support REST API testing.
+- **Implement a testing strategy for your APIs**. [Testing](https://monoscope.tech/blog/api-testing-automation) ensures that your APIs function correctly and meet the expected quality standards. You can use different types of testing, such as unit testing, integration testing, functional testing, performance testing, security testing, etc. You should also automate your testing process using tools and frameworks that support REST API testing.
 
-- **Adopt a documentation strategy for your APIs**. Documentation provides a clear and comprehensive description of your APIs' features, functionalities, parameters, responses, errors, etc. Documentation helps your clients or consumers understand and use your APIs effectively and efficiently. You can use different formats and tools for documentation, such as Swagger, [APIToolkit](https://apitoolkit.io), Postman, Markdown, etc. You should also update your documentation regularly and consistently with your API changes or updates.
+- **Adopt a documentation strategy for your APIs**. Documentation provides a clear and comprehensive description of your APIs' features, functionalities, parameters, responses, errors, etc. Documentation helps your clients or consumers understand and use your APIs effectively and efficiently. You can use different formats and tools for documentation, such as Swagger, [APIToolkit](https://monoscope.tech), Postman, Markdown, etc. You should also update your documentation regularly and consistently with your API changes or updates.
 
 ## Conclusion
 
@@ -238,10 +238,10 @@ By following a good REST API workflow, you can create RESTful APIs that are reli
 
 **Keep Reading**
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[API Observability and Monitoring: What's the Difference](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
+[API Observability and Monitoring: What's the Difference](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
 
-[Key Benefits of API Integration for Developers](https://apitoolkit.io/blog/benefits-of-api-integration/)
+[Key Benefits of API Integration for Developers](https://monoscope.tech/blog/benefits-of-api-integration/)

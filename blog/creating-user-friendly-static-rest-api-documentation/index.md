@@ -12,13 +12,13 @@ categories:
 
 ![REST API Documentation](./rest-api-documentation_png.png)
 
-In the world of software development, creating user-friendly documentation is crucial for the success of any product or service. This is especially true when it comes to [REST API documentation](https://apitoolkit.io/blog/how-to-write-api-docs/), as it serves as a guide for developers to understand and integrate with your API. In this article, we will explore seven tips for creating user-friendly static REST API documentation that will streamline navigation, enhance user accessibility, maximize the potential of your documentation, and ultimately enhance the overall user experience.## Streamlining Navigation for a Better User Experience
+In the world of software development, creating user-friendly documentation is crucial for the success of any product or service. This is especially true when it comes to [REST API documentation](https://monoscope.tech/blog/how-to-write-api-docs/), as it serves as a guide for developers to understand and integrate with your API. In this article, we will explore seven tips for creating user-friendly static REST API documentation that will streamline navigation, enhance user accessibility, maximize the potential of your documentation, and ultimately enhance the overall user experience.## Streamlining Navigation for a Better User Experience
 
 One of the most important aspects of creating user-friendly static REST API documentation is ensuring that the navigation is intuitive and easy to use. By streamlining navigation, you can help users find the information they need quickly and efficiently. One way to achieve this is by organizing your documentation into logical sections and providing a clear table of contents at the beginning of your documentation. This will allow users to easily navigate to the topics that interest them without having to scroll through lengthy pages of content.
 
 When organizing your documentation, it's important to consider the user's perspective. Think about the different types of users who will be accessing your API documentation and what information they may be looking for. By understanding your users' needs, you can structure your documentation in a way that makes sense to them.
 
-Another helpful technique for streamlining navigation is to provide links within the content that allow users to jump to relevant sections. For example, if you mention a specific endpoint or parameter, you can link directly to the [documentation](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) for that item. This saves users from having to search for the information and allows them to quickly access the details they need.
+Another helpful technique for streamlining navigation is to provide links within the content that allow users to jump to relevant sections. For example, if you mention a specific endpoint or parameter, you can link directly to the [documentation](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) for that item. This saves users from having to search for the information and allows them to quickly access the details they need.
 
 ### Enhancing User Accessibility with Skip Links
 
@@ -40,13 +40,13 @@ Finally, don't forget to include a search functionality in your documentation. T
 
 **Related**:
 
-[Detecting API Documentation Errors: What You Should Know](https://apitoolkit.io/blog/detecting-api-documentation-errors/)
+[Detecting API Documentation Errors: What You Should Know](https://monoscope.tech/blog/detecting-api-documentation-errors/)
 
-[API Monitoring and Documentation: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Monitoring and Documentation: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[API Documentation vs Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+[API Documentation vs Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 
-[API Management: How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[API Management: How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
 ## Maximizing the Potential of Your Documentation
 
@@ -104,12 +104,12 @@ Get started today and create documentation that developers will appreciate!
 
 **Also Read**:
 
-[Generating Golang API Doc with Swagger](https://apitoolkit.io/blog/generating-golangdoc/)
+[Generating Golang API Doc with Swagger](https://monoscope.tech/blog/generating-golangdoc/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[Top 8 API Documentation Tools for Debvelopers (2023)](https://apitoolkit.io/blog/top-8-api-documentation-tools-for-developers/)
+[Top 8 API Documentation Tools for Debvelopers (2023)](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/)
 
-[API Documentation Trends to Watch: What's New and Exciting](https://apitoolkit.io/blog/api-documentation-trends-to-watch/)
+[API Documentation Trends to Watch: What's New and Exciting](https://monoscope.tech/blog/api-documentation-trends-to-watch/)
 
-[How to Measure the Effectiveness of Your API Documentation with Analytics](https://apitoolkit.io/blog/api-documentation-with-analytics/)
+[How to Measure the Effectiveness of Your API Documentation with Analytics](https://monoscope.tech/blog/api-documentation-with-analytics/)

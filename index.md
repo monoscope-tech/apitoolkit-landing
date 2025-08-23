@@ -195,12 +195,12 @@ platforms:
             </svg> Monitor performance and uptime of both APIs and external APIs</li>
           </ul>
           <div class="flex gap-2 sm:gap-4">
-            <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
-            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
+            <a href="https://app.monoscope.tech" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
+            <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
           </div>
           <div class="flex gap-4 items-center text-textWeak">
             <!-- TrustBox Rating -->
-            <a class="flex items-center gap-3" href="https://trustpilot.com/review/apitoolkit.io" target="_blank" rel="noopener noreferrer">
+            <a class="flex items-center gap-3" href="https://trustpilot.com/review/monoscope.tech" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/img/trustpilot-stars-4.5.svg" class="w-28" alt="APItoolkit Trustpilot Rating" />
                 <img class="w-20 dark:hidden" src="/assets/img/trustpilot-black.svg" alt="Trustpilot Logo" />
                 <img class="w-20 hidden dark:inline-block" src="/assets/img/trustpilot-white.svg" alt="Trustpilot Logo" />
@@ -428,9 +428,9 @@ platforms:
           {% endfor %}
 
           <div class="flex flex-col *:underline *:underline-offset-2 space-y-1 text-textBrand pl-2.5">
-            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
-            <a href="https://app.apitoolkit.io">Start free trial</a>
-            <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
+            <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
+            <a href="https://app.monoscope.tech">Start free trial</a>
+            <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
           </div>
 
         </div>
@@ -470,8 +470,8 @@ platforms:
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Flexible deployment options <span class="text-textDisabled">for every company</span></h2>
       <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, APItoolkit operates <br/>within your business and regulatory constraints.</p>
       <div>
-        <a href="https://app.apitoolkit.io" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
-        <a href="https://app.apitoolkit.io/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
+        <a href="https://app.monoscope.tech" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow ">Start free trial</a>
+        <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow " >Launch playground</a>
       </div>
       <div class="grid md:grid-cols-3 gap-8 pt-5">
         <div class="rounded-xl border border-strokeBrand-weak p-8 flex flex-col">
@@ -497,7 +497,7 @@ platforms:
               </p>
               <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
             </div>
-            <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+            <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
           </div>
         </div>
 
@@ -525,7 +525,7 @@ platforms:
               </p>
               <p class="text-base text-textWeak">Includes up to 100M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
             </div>
-            <a href="https://app.apitoolkit.io" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
+            <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
           </div>
         </div>
 

@@ -12,9 +12,9 @@ categories:
 ![API Uptime for API monitoring and incident management](./API%20Uptime%20for%20API%20monitoring%20and%20incident%20management.png)
 Uptime is everything when it comes to APIs. Just ask the developers who rely on accessing and integrating with them seamlessly. Or the businesses who depend on those flawless APIs to serve their customers and drive revenue. An outage means angry users, lost sales, and damage to your reputation.
 
-Yet, traditional [API monitoring](https://apitoolkit.io/blog/error-monitoring-best-practices/) and incident response tools can be inadequate for the modern tech stack. Inflexible, complex and pricey. There has to be a better way.
+Yet, traditional [API monitoring](https://monoscope.tech/blog/error-monitoring-best-practices/) and incident response tools can be inadequate for the modern tech stack. Inflexible, complex and pricey. There has to be a better way.
 
-The good news is, there are hundreds of [API tools](https://apitoolkit.io/blog/50-ap-tools-for-every-budget-and-requirement/) on the market now and today. Whether it's AI-powered monitoring that knows your APIs inside out, or automated incident response that fixes errors in minutes, these tools are game-changers. We'll look at slick new platforms that consolidate all your [API management](https://apitoolkit.io/blog/optimizing-api-management/) into one place. And nimble SaaS products that deliver enterprise-grade capabilities at startup prices.
+The good news is, there are hundreds of [API tools](https://monoscope.tech/blog/50-ap-tools-for-every-budget-and-requirement/) on the market now and today. Whether it's AI-powered monitoring that knows your APIs inside out, or automated incident response that fixes errors in minutes, these tools are game-changers. We'll look at slick new platforms that consolidate all your [API management](https://monoscope.tech/blog/optimizing-api-management/) into one place. And nimble SaaS products that deliver enterprise-grade capabilities at startup prices.
 
 ## What is Uptime in API 
 
@@ -95,12 +95,12 @@ Achieving better uptime for API monitoring and incident management is paramount 
 
 **Keep Reading**
 
-[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+[Incident Management: How to Resolve API Downtime Issues Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[ A Guide to Embedded API Logs and Metrics ](https://apitoolkit.io/blog/embedded-apis-and-metrics/)
+[ A Guide to Embedded API Logs and Metrics ](https://monoscope.tech/blog/embedded-apis-and-metrics/)
 
-[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)

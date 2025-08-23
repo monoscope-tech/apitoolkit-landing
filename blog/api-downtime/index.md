@@ -22,7 +22,7 @@ Technical factors heavily influence API performance, necessitating tools to ensu
 
 ## Understanding API Downtime
 
-While APIs remain the backbone of [modern digital businesses](https://apitoolkit.io/blog/api-as-a-product/), they are susceptible to downtime. Downtime is the period when an API is unavailable or unresponsive due to technical issues, network failures, security threats, human errors, or malicious attacks. Downtime can have serious consequences for businesses and users who rely on APIs for their daily operations and interactions. These server issues like hardware failures or bandwidth limitations, application bugs, cyberattacks like DDoS, or simple human errors like accidental deletion can disrupt API functionality. This disruption can result in direct financial losses or indirect damages such as reduced customer satisfaction.
+While APIs remain the backbone of [modern digital businesses](https://monoscope.tech/blog/api-as-a-product/), they are susceptible to downtime. Downtime is the period when an API is unavailable or unresponsive due to technical issues, network failures, security threats, human errors, or malicious attacks. Downtime can have serious consequences for businesses and users who rely on APIs for their daily operations and interactions. These server issues like hardware failures or bandwidth limitations, application bugs, cyberattacks like DDoS, or simple human errors like accidental deletion can disrupt API functionality. This disruption can result in direct financial losses or indirect damages such as reduced customer satisfaction.
 
 ## Causes of API Downtime
 
@@ -64,11 +64,11 @@ A [report by the IDC](https://www.devopsdigest.com/idc-survey-appdynamics-devops
 
 According to some incident management estimates, the average cost of API downtime for a large enterprise can range from $5,600 to $11,600 per minute, depending on the industry and the scenario. This translates to $336,000 to $696,000 per hour, or $8.06 million to $16.7 million per day. For some high-profile cases, the cost of API downtime can be even higher. For example, in 2017, Amazon's S3 cloud storage service [experienced a four-hour outage](https://www.datacenterknowledge.com/archives/2017/03/02/aws-outage-that-broke-the-internet-caused-by-mistyped-command/) that affected many websites and services that relied on it. The outage was estimated to have cost Amazon and its customers around $150 million in lost revenue.
 
-Read: [API Management: How to Tackles Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+Read: [API Management: How to Tackles Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
 ## Proactive Approach to API Downtime Prevention
 
-The best way to minimize the cost and impact of API downtime is to [prevent it from happening in the first place](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/). This is proper incident management. And it requires a proactive approach that involves:
+The best way to minimize the cost and impact of API downtime is to [prevent it from happening in the first place](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/). This is proper incident management. And it requires a proactive approach that involves:
 
 - Implementing robust monitoring and alert systems
 - Conducting regular performance and stress testing, and 
@@ -76,7 +76,7 @@ The best way to minimize the cost and impact of API downtime is to [prevent it f
 
 ### Implementing Robust Monitoring and Alert Systems
 
-Monitoring and alert systems are [essential tools for detecting and diagnosing API issues](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) before they escalate into downtime incidents. They help businesses measure and track the health and performance of their APIs, identify and isolate the root causes of problems, and notify and alert the relevant stakeholders and teams when issues occur.
+Monitoring and alert systems are [essential tools for detecting and diagnosing API issues](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) before they escalate into downtime incidents. They help businesses measure and track the health and performance of their APIs, identify and isolate the root causes of problems, and notify and alert the relevant stakeholders and teams when issues occur.
 
 Some of the key components of a robust monitoring and alert system are:
 
@@ -84,7 +84,7 @@ Some of the key components of a robust monitoring and alert system are:
 
 - **Proactive alert mechanisms**: These are software applications or services that send notifications or warnings to the appropriate parties when certain conditions or thresholds are met or exceeded. They can use various channels such as email, SMS, phone call, or push notifications. They can also trigger automated actions such as restarting a server, scaling up a resource, or launching a backup system.
 
-[Try APIToolkit - an Advanced API Monitoring and Observability Tool](https://apitoolkit.io)
+[Try APIToolkit - an Advanced API Monitoring and Observability Tool](https://monoscope.tech)
 
 ### Conducting Regular Performance and Stress Testing
 
@@ -100,15 +100,15 @@ Some of the key aspects of performance and stress testing are:
 
 Redundancy is the practice of having multiple copies or backups of an API or its components in case one fails or becomes unavailable. Redundancy helps businesses achieve high availability (HA), which is the ability of an API to remain operational and accessible at all times. HA is often measured by uptime percentage, which is the ratio of the time that an API is available to the total time that it is expected to be available.
 
-Read: [Must-Know API Trends for Developers](https://apitoolkit.io/blog/api-trends/)
+Read: [Must-Know API Trends for Developers](https://monoscope.tech/blog/api-trends/)
 
 ### Real-Time Monitoring and Alerting
 
-[API monitoring](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/) and alerting are essential for ensuring the availability, performance, and security of your APIs. They can help detect issues and notify stakeholders, proactively addressing problems before they escalate.
+[API monitoring](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) and alerting are essential for ensuring the availability, performance, and security of your APIs. They can help detect issues and notify stakeholders, proactively addressing problems before they escalate.
 
 Efficient API monitoring tools serve as the first line of defence, resolving issues before they affect your customers and users.
 
-In addition, API monitoring can help you collect and analyze data from your servers, applications, and APIs. It can help you [measure various metrics](https://apitoolkit.io/api-logs-and-metrics/), such as response time, error rate, throughput, availability, and more. It can also help you [identify anomalies](https://apitoolkit.io/api-anomalies-validation-and-checks/), trends, and patterns in your data.
+In addition, API monitoring can help you collect and analyze data from your servers, applications, and APIs. It can help you [measure various metrics](https://monoscope.tech/api-logs-and-metrics/), such as response time, error rate, throughput, availability, and more. It can also help you [identify anomalies](https://monoscope.tech/api-anomalies-validation-and-checks/), trends, and patterns in your data.
 
 There are different types of monitoring tools that you can use for your APIs, such as:
 
@@ -124,7 +124,7 @@ API-specific monitoring tools help you monitor the functionality, performance, a
 
 API-specific monitoring tools can help you ensure that your APIs are meeting your service level agreements (SLAs), delivering a consistent user experience, and complying with industry standards and best practices.
 
-[Try APIToolkit - an Advanced Monitoring Solution](https://apitoolkit.io)
+[Try APIToolkit - an Advanced Monitoring Solution](https://monoscope.tech)
 
 ## Analyzing the Root Cause of Downtime Incidents
 
@@ -141,11 +141,11 @@ Error logs are records of events that occur when an API fails or behaves unexpec
 
 ![APIToolkit's Anomaly Detection](./api_monitoring_anomalies.gif)
 
-APIToolkit's [anomaly detection tool](https://apitoolkit.io/api-anomalies-validation-and-checks/).
+APIToolkit's [anomaly detection tool](https://monoscope.tech/api-anomalies-validation-and-checks/).
 
 Sometimes, API downtime incidents are not isolated events, but symptoms of underlying problems that affect your system as a whole. By looking for common patterns or recurring issues in your error logs and performance metrics, you can identify the root causes of your API downtime and address them at their source. For example, you might notice that your API experiences frequent timeouts during peak hours, indicating a scalability issue. Or you might find that your API returns invalid data for certain requests, suggesting a data quality issue.
 
-Read: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
 ### Troubleshooting and remediation steps
 
@@ -178,7 +178,7 @@ Depending on the nature and severity of your API downtime incident, you might ne
 
 When applying fixes and optimizations, you should always test them in a staging environment before deploying them to production. You should also document them in a changelog or release notes for future reference.
 
-Read: [API Documentation vs API Specification - What it means for you](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+Read: [API Documentation vs API Specification - What it means for you](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 
 ## Preventing Future Downtime Incidents
 
@@ -187,7 +187,7 @@ The final step in resolving any API downtime incident is to prevent it from happ
 1. **Implement proactive monitoring and alerting tools**
 
 ![APIToolkit's endpoint explorer](./api-endpoints.gif)
-APIToolkit's [endpoint explorer](https://apitoolkit.io/api-performance-monitoring-and-compliance/).
+APIToolkit's [endpoint explorer](https://monoscope.tech/api-performance-monitoring-and-compliance/).
 
 Proactive monitoring and alerting tools are essential for detecting and preventing API downtime incidents before they escalate or affect your users. They can help you track and measure your API performance metrics, identify and diagnose errors or anomalies, notify and escalate issues to relevant stakeholders, and automate actions or workflows based on predefined rules or triggers.
 
@@ -209,13 +209,13 @@ Some examples of best practices and standards for API design and development are
 - **OpenAPI**: A specification that defines a standard, language-agnostic format for describing the structure and behavior of RESTful APIs.
 - **JSON**: A lightweight, human-readable, and widely used data format for exchanging information between APIs and clients.
 
-Read: [How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+Read: [How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
 ## The APIToolkit Solution
 
 ![APIToolkit's landing page](./apitoolkit-landing.png)
 
-[APIToolkit](https://apitoolkit.io) is a toolbox that contains all the tools you need to design, test and monitor the most reliable APIs.
+[APIToolkit](https://monoscope.tech) is a toolbox that contains all the tools you need to design, test and monitor the most reliable APIs.
 
 What You Get:
 
@@ -227,7 +227,7 @@ What You Get:
 - Dedicated technical support
 - Bird’s eye view over your entire API
 
-Get started for free [here](https://apitoolkit.io).
+Get started for free [here](https://monoscope.tech).
 
 Or [book a call](https://calendly.com/tonyalaribe/30min) with our technical team for a free consultation about your APIs and backend services.
 
@@ -237,10 +237,10 @@ In incident management, API downtime is inevitable, but it doesn't have to be di
 
 ## Keep Reading
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[Comprehensive API Management Strategies for Businesses](https://apitoolkit.io/blog/the-ultimate-api-management-strategy/)
+[Comprehensive API Management Strategies for Businesses](https://monoscope.tech/blog/the-ultimate-api-management-strategy/)
 
-[Top 8 Documentation Tools for Developers](https://apitoolkit.io/blog/top-8-api-documentation-tools-for-developers/)
+[Top 8 Documentation Tools for Developers](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/)
 
-[Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://apitoolkit.io/blog/why-you-need-an-api-monitoring-tool/)
+[Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)

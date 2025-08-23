@@ -12,21 +12,21 @@ categories:
 
 ![goswagger](generating-golang-api-with-go-swagger.png)
 
-Imagine you're a skilled developer who's just put the final touches on an API – a tool that lets different software talk to each other. This is a big deal because it opens up new possibilities for how programs can work together. But here's the thing: you can't just stop here. You now have to help other developers understand how to use your API to build their own software. This is where documentation comes in – it's like a guidebook that explains how everything works. As you dive deep down, you start thinking about different ways to make this documentation process smoother. There are tools like [APIToolkit](https://apitoolkit.io), Go-Swagger, Docusaurus, and Postman that promise to make things easier by organizing and explaining all the technical details.
+Imagine you're a skilled developer who's just put the final touches on an API – a tool that lets different software talk to each other. This is a big deal because it opens up new possibilities for how programs can work together. But here's the thing: you can't just stop here. You now have to help other developers understand how to use your API to build their own software. This is where documentation comes in – it's like a guidebook that explains how everything works. As you dive deep down, you start thinking about different ways to make this documentation process smoother. There are tools like [APIToolkit](https://monoscope.tech), Go-Swagger, Docusaurus, and Postman that promise to make things easier by organizing and explaining all the technical details.
 
-However, you also remember the challenges you've faced in the past when dealing with API documentation. You wonder if there's a way to speed things up without losing the important details. After all, even the most amazing software is useless if nobody can figure out how to use it. This leads you to realize that no matter how complex or amazing your [API](https://apitoolkit.io) is, it's only truly valuable when people can actually understand and use it.
+However, you also remember the challenges you've faced in the past when dealing with API documentation. You wonder if there's a way to speed things up without losing the important details. After all, even the most amazing software is useless if nobody can figure out how to use it. This leads you to realize that no matter how complex or amazing your [API](https://monoscope.tech) is, it's only truly valuable when people can actually understand and use it.
 
-The truth is no matter how impressive your API is, its true potential remains untapped without clear [documentation](https://apitoolkit.io/blog/api-documentation-vs-api-specification/). This is where your journey takes an interesting turn. As a developer, you understand the importance of documenting and organizing APIs, even if not all developers share the same enthusiasm for this task. This is where specialized tools come into play, making API documentation simpler and more approachable. In the world of software development, [API documentation](https://apitoolkit.io/blog/api-documentation-vs-api-specification) is both crucial and often underestimated. It's the bridge that connects the intricacies of your API with its practical application. This guide delves into this vital aspect and spotlights Swagger as a game-changing tool to simplify the documentation process.
+The truth is no matter how impressive your API is, its true potential remains untapped without clear [documentation](https://monoscope.tech/blog/api-documentation-vs-api-specification/). This is where your journey takes an interesting turn. As a developer, you understand the importance of documenting and organizing APIs, even if not all developers share the same enthusiasm for this task. This is where specialized tools come into play, making API documentation simpler and more approachable. In the world of software development, [API documentation](https://monoscope.tech/blog/api-documentation-vs-api-specification) is both crucial and often underestimated. It's the bridge that connects the intricacies of your API with its practical application. This guide delves into this vital aspect and spotlights Swagger as a game-changing tool to simplify the documentation process.
 
-Whether you're someone who loves writing documentation or someone who finds it a bit of a challenge, this guide is for you. It's filled with tips and tricks that go beyond personal preferences, helping you find faster and smarter ways to create [documentation](https://apitoolkit.io/blog/api-documentation-vs-api-specification). So, embrace this phase of your journey as a developer. Remember, your software might be super cool, but it only truly shines when others can understand and use it.
+Whether you're someone who loves writing documentation or someone who finds it a bit of a challenge, this guide is for you. It's filled with tips and tricks that go beyond personal preferences, helping you find faster and smarter ways to create [documentation](https://monoscope.tech/blog/api-documentation-vs-api-specification). So, embrace this phase of your journey as a developer. Remember, your software might be super cool, but it only truly shines when others can understand and use it.
 
 ## What is Swagger?
 
-Swagger, now known as OpenAPI, is an open-source toolkit designed to simplify the process of creating [REST-based APIs](https://apitoolkit.io/blog/anomalies-in-restful-apis/). It offers a standardized way to describe API endpoints, request parameters, response formats, authentication methods, and more. This description is machine-readable and can be used to generate interactive documentation, client SDKs, and server stubs in various programming languages. In the context of Golang, Swagger simplifies the process of generating API documentation, enhancing the developer experience. With its suite of tools and standardized approach, it accelerates the development of scalable APIs. Beyond just development, it offers a seamless method to produce, manage, and present API documentation.
+Swagger, now known as OpenAPI, is an open-source toolkit designed to simplify the process of creating [REST-based APIs](https://monoscope.tech/blog/anomalies-in-restful-apis/). It offers a standardized way to describe API endpoints, request parameters, response formats, authentication methods, and more. This description is machine-readable and can be used to generate interactive documentation, client SDKs, and server stubs in various programming languages. In the context of Golang, Swagger simplifies the process of generating API documentation, enhancing the developer experience. With its suite of tools and standardized approach, it accelerates the development of scalable APIs. Beyond just development, it offers a seamless method to produce, manage, and present API documentation.
 
 ### Key Features of Swagger
 
-- Ease of Use: Provides tools for quick and efficient creation, maintenance, and publication of [API documentation](https://apitoolkit.io/blog/api-documentation-vs-api-specification/).
+- Ease of Use: Provides tools for quick and efficient creation, maintenance, and publication of [API documentation](https://monoscope.tech/blog/api-documentation-vs-api-specification/).
 - Interactive Documentation: Offers visually appealing documentation with built-in capabilities to test API endpoints directly from a browser.
 - Universal Understanding: Designed to be easily comprehensible for both developers and non-developers.
 - Client Library Generation: Allows direct generation of API client libraries for a variety of languages and frameworks from an OpenAPI specification.
@@ -34,7 +34,7 @@ With Swagger, not only do you get a tool for documentation but also a comprehens
 
 ### Here are some of the advantages of using Swagger in your next project
 
-- Allowing you to rapidly and easily write, maintain, and publish [API documentation](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+- Allowing you to rapidly and easily write, maintain, and publish [API documentation](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 - Creating visually appealing interactive documentation that allows you to validate and test API endpoints directly from your browser without the use of third-party applications.
 - Developers and non-developers alike will find it simple to understand.
 - The ability to directly produce API client libraries (SDKs) for numerous languages and frameworks from an OpenAPI specification.
@@ -342,18 +342,18 @@ It will generate services files for all of the APIs that will be referenced in t
 
 ## Conclusion
 
-In [API development](https://apitoolkit.io), comprehensive documentation is a necessity. Swagger emerges as a powerful tool that simplifies the process of generating API documentation. It transforms code into an understandable guide, accelerates the development process, and fosters a community of developers who can effectively utilize your API. So, whether you're a seasoned Golang developer or just embarking on your coding journey, integrating Swagger into your workflow can bring your API documentation to the forefront, making your product more accessible, understandable, and impactful.
+In [API development](https://monoscope.tech), comprehensive documentation is a necessity. Swagger emerges as a powerful tool that simplifies the process of generating API documentation. It transforms code into an understandable guide, accelerates the development process, and fosters a community of developers who can effectively utilize your API. So, whether you're a seasoned Golang developer or just embarking on your coding journey, integrating Swagger into your workflow can bring your API documentation to the forefront, making your product more accessible, understandable, and impactful.
 
 - - -
 
 ### **Keep Reading**
 
-[API observability and testing as a service](https://apitoolkit.io)
+[API observability and testing as a service](https://monoscope.tech)
 
-[How to Tackle ANomalies in RESTful APIs the Right Way](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle ANomalies in RESTful APIs the Right Way](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[API Documentation vs Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+[API Documentation vs Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 
-[A Comprehensive API Management Strategy for Businesses](https://apitoolkit.io/blog/the-ultimate-api-management-strategy/)
+[A Comprehensive API Management Strategy for Businesses](https://monoscope.tech/blog/the-ultimate-api-management-strategy/)
 
-[The Rise of API-as-a-Product (2023)](https://apitoolkit.io/blog/api-as-a-product/)
+[The Rise of API-as-a-Product (2023)](https://monoscope.tech/blog/api-as-a-product/)

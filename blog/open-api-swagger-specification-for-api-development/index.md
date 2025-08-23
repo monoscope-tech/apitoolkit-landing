@@ -14,7 +14,7 @@ categories:
 
 As a developer who works with APIs, you must be familiar with OpenAPI (Swagger) Specification. But what is it exactly, and why should you use it in your API development? In this blog, we will answer these questions and show you how OpenAPI can help you create better APIs faster and easier.
 
-OpenAPI (Swagger) [Specification](https://apitoolkit.io/blog/api-documentation-vs-api-specification/) is a standard format for describing [RESTful APIs](https://apitoolkit.io/blog/everything-about-rest-apis/) ina YAML or JSON file. It allows you to define the structure, parameters, responses, and security of your API in a human- and machine-readable way. By using OpenAPI, you can benefit from various tools and features that can improve your API development process.
+OpenAPI (Swagger) [Specification](https://monoscope.tech/blog/api-documentation-vs-api-specification/) is a standard format for describing [RESTful APIs](https://monoscope.tech/blog/everything-about-rest-apis/) ina YAML or JSON file. It allows you to define the structure, parameters, responses, and security of your API in a human- and machine-readable way. By using OpenAPI, you can benefit from various tools and features that can improve your API development process.
 
 ## Understanding OpenAPI Specification
 
@@ -51,9 +51,9 @@ Now that we have a basic understanding of what OpenAPI Specification is and how 
 
 ### 1. Improved API Documentation
 
-One of the main advantages of using OpenAPI is that it enables you to generate [high-quality documentation](https://apitoolkit.io/blog/how-to-write-api-docs/) for your API automatically from your specification file. This means that you don't have to write or maintain separate documentation for your API manually, which can be time-consuming and error-prone.
+One of the main advantages of using OpenAPI is that it enables you to generate [high-quality documentation](https://monoscope.tech/blog/how-to-write-api-docs/) for your API automatically from your specification file. This means that you don't have to write or maintain separate documentation for your API manually, which can be time-consuming and error-prone.
 
-By using tools like Swagger UI or Swagger Hub, you can convert your OpenAPI specification into user-friendly documentation that developers can easily access and interact with. Your documentation will always be [up-to-date](https://apitoolkit.io/api-documentation-and-developer-portals/) with your API changes, and will provide clear and accurate information about your API endpoints, parameters, responses, and security.
+By using tools like Swagger UI or Swagger Hub, you can convert your OpenAPI specification into user-friendly documentation that developers can easily access and interact with. Your documentation will always be [up-to-date](https://monoscope.tech/api-documentation-and-developer-portals/) with your API changes, and will provide clear and accurate information about your API endpoints, parameters, responses, and security.
 
 Moreover, your documentation will be enhanced by features like:
 
@@ -67,7 +67,7 @@ Another benefit of using OpenAPI is that it fosters collaboration among developm
 
 OpenAPI also facilitates communication and feedback among different parties, such as:
 
-- **Developers**: Developers can collaborate on designing, developing, [testing](https://apitoolkit.io/blog/api-testing-automation/), and debugging your API using tools like Swagger Editor or Swagger Hub, which allow them to edit, validate, and share your OpenAPI specification online.
+- **Developers**: Developers can collaborate on designing, developing, [testing](https://monoscope.tech/blog/api-testing-automation/), and debugging your API using tools like Swagger Editor or Swagger Hub, which allow them to edit, validate, and share your OpenAPI specification online.
 - **Clients**: Clients can easily discover, explore, and consume your API using tools like Swagger UI or Swagger Hub, which provide them with interactive documentation and code samples for your API.
 - **Managers**: Managers can monitor and manage your API lifecycle using tools like Swagger Hub, which provide them with features like version control, team collaboration, API analytics, and governance.
 
@@ -95,11 +95,11 @@ Testing and validation can help you with tasks like:
 - **Compliance**: You can ensure that your API meets the requirements and expectations of your clients or stakeholders by testing and validating it against your OpenAPI specification, which can help you avoid conflicts or disputes.
 - **Security**: You can verify that your API implements the security mechanisms defined in your OpenAPI specification by testing and validating it against it, which can help you protect your API from unauthorized access or attacks.
 
-Read: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
-Read: [10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-Read: [API Monitoring and Documentation: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Read: [API Monitoring and Documentation: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
 ## Steps to Implement OpenAPI Specification
 
@@ -111,19 +111,19 @@ The first step to implement OpenAPI Specification is to design your API with it.
 
 You can use tools like Swagger Editor or Swagger Hub to write and edit your OpenAPI specification file online. These tools provide features like syntax highlighting, auto-completion, validation, previewing, etc., that can help you create a valid and complete specification file.
 
-Alternatively, you can use other tools or libraries that support OpenAPI Specification in various languages or frameworks. For example, you can use [APIToolkit](https://apitoolkit.io), Springdoc for Java Spring Boot applications, FastAPI for Python applications, Swashbuckle for .NET applications, etc.
+Alternatively, you can use other tools or libraries that support OpenAPI Specification in various languages or frameworks. For example, you can use [APIToolkit](https://monoscope.tech), Springdoc for Java Spring Boot applications, FastAPI for Python applications, Swashbuckle for .NET applications, etc.
 
 ### Validating Your API
 
 The second step is to validate your API against your OpenAPI Specification file. This can help you ensure that your API conforms to the specification and follows the best practices. Validation can also help you identify and fix errors, inconsistencies, or missing information in your OAS file.
 
-There are different tools and methods for validating your API. One option is to use the Swagger UI, an online tool that displays your OAS file as an interactive documentation and allows you to test your API endpoints. You can also use other tools such as validators, linters, or testing frameworks that support the OAS. [APIToolkit](https://apitoolkit.io) is one of such tools.
+There are different tools and methods for validating your API. One option is to use the Swagger UI, an online tool that displays your OAS file as an interactive documentation and allows you to test your API endpoints. You can also use other tools such as validators, linters, or testing frameworks that support the OAS. [APIToolkit](https://monoscope.tech) is one of such tools.
 
 ### Generating Documentation
 
-The third step is to [generate documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/) for your API based on your OAS file. Documentation can help you communicate the features and functionality of your API to your users and stakeholders. Documentation can also help you increase the usability and adoption of your API.
+The third step is to [generate documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) for your API based on your OAS file. Documentation can help you communicate the features and functionality of your API to your users and stakeholders. Documentation can also help you increase the usability and adoption of your API.
 
-There are different tools and formats for generating documentation from your OAS file. One option is to use [APIToolkit](apitoolkit.io), an API management software that automatically generates and hosts documentation for your OAS file. You can also use other tools such as the Swagger Hub, converters, generators, or templates that support the OAS.
+There are different tools and formats for generating documentation from your OAS file. One option is to use [APIToolkit](monoscope.tech), an API management software that automatically generates and hosts documentation for your OAS file. You can also use other tools such as the Swagger Hub, converters, generators, or templates that support the OAS.
 
 ## Best practices for OpenAPI specification
 
@@ -159,7 +159,7 @@ If there is any additional documentation that is relevant to the API, such as a 
 
 ### 8. Use a validation tool
 
-There are a number of tools available that can be used to validate OpenAPI specifications. Using a [validation tool](https://apitoolkit.io) can help to ensure that the specification is complete and accurate.
+There are a number of tools available that can be used to validate OpenAPI specifications. Using a [validation tool](https://monoscope.tech) can help to ensure that the specification is complete and accurate.
 
 ### 9. Use a design-first approach
 
@@ -172,10 +172,10 @@ The OpenAPI Specification is a powerful and versatile way to describe your API i
 
 **Also read**:
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) 
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) 
 
-[Generate Swagger Docs Easily with Apitoolkit's Live Traffic](https://apitoolkit.io/blog/how-to-generate-swagger-docs-from-your-live-traffic-with-apitoolkit/)
+[Generate Swagger Docs Easily with Apitoolkit's Live Traffic](https://monoscope.tech/blog/how-to-generate-swagger-docs-from-your-live-traffic-with-apitoolkit/)
 
-[Generating Golang API Doc with Swagger](https://apitoolkit.io/blog/generating-golangdoc/)
+[Generating Golang API Doc with Swagger](https://monoscope.tech/blog/generating-golangdoc/)
 
 

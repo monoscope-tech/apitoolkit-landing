@@ -56,11 +56,11 @@ Unlike traditional OpenTelemetry setups, APItoolkit eliminates the need for manu
 This approach streamlines the process of implementing [OpenTelemetry](https://opentelemetry.io/), making it more accessible and efficient for users.
 
 ## Implementing Tracing in your APIs
-- Create an [APItookit](https://apitoolkit.io/) account.
+- Create an [APItookit](https://monoscope.tech/) account.
 
 ![Create APItoolkit account](./create-acount.png)
 
-- Install APItoolkit [SDK](https://apitoolkit.io/docs/sdks/) to your project. APItoolkit has over 17 SDKs for different frameworks. Install the relevant [SDK](https://apitoolkit.io/docs/sdks/) for your project and follow the documentation to set it up.
+- Install APItoolkit [SDK](https://monoscope.tech/docs/sdks/) to your project. APItoolkit has over 17 SDKs for different frameworks. Install the relevant [SDK](https://monoscope.tech/docs/sdks/) for your project and follow the documentation to set it up.
 ![Install APItoolkit SDK](./sdk.png).
 
 
@@ -86,17 +86,17 @@ You can even click on each request to see the traces' spans. This contains detai
 
 Implementing tracing doesn't need to be complex. APItoolkit simplifies the process, providing more than just data collection. It offers clear, practical insights into API behavior in real-world scenarios. This visibility into every request is extremely essential when resolving elusive bugs, enhancing performance, or maintaining system stability.
 
-Interested in testing it out? Visit [APItoolkit](https://apitoolkit.io/) to create a free account and begin monitoring with assurance.
+Interested in testing it out? Visit [APItoolkit](https://monoscope.tech/) to create a free account and begin monitoring with assurance.
 
 **Keep Reading**
 
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[API Monitoring and Documentation: The Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Monitoring and Documentation: The Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
-[Mastering API Debugging and Monitoring: Best Practices for Seamless Integration](https://apitoolkit.io/blog/mastering-api-debugging/)
+[Mastering API Debugging and Monitoring: Best Practices for Seamless Integration](https://monoscope.tech/blog/mastering-api-debugging/)

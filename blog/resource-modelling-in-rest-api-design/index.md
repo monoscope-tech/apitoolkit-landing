@@ -12,11 +12,11 @@ categories:
 
 ![Resource-modeling](./api-modeling.jpg)
 
-In the world of API development, effective management and organization of resources are paramount. Resource modeling serves as the architectural backbone of [REST APIs](https://apitoolkit.io/blog/rest-api-is-the-future/), offering a framework for visualizing and planning your API data. This comprehensive guide aims to demystify the complexities of resource modeling in REST APIs, providing actionable insights for designing robust, readable, and efficient resource models.
+In the world of API development, effective management and organization of resources are paramount. Resource modeling serves as the architectural backbone of [REST APIs](https://monoscope.tech/blog/rest-api-is-the-future/), offering a framework for visualizing and planning your API data. This comprehensive guide aims to demystify the complexities of resource modeling in REST APIs, providing actionable insights for designing robust, readable, and efficient resource models.
 
 ## What is a Resource in REST API?
 
-In a [RESTful API](https://apitoolkit.io/blog/rest-api-is-the-future/), the term "resource" refers to any identifiable entity that can be manipulated via HTTP methods (GET, POST, PUT, DELETE, etc.). A resource can represent a single data entity or a collection of data entities, as well as more abstract concepts like services and transformations. The resource serves as a key conceptual entity that client applications interact with, and it is identified via URIs (Uniform Resource Identifiers).
+In a [RESTful API](https://monoscope.tech/blog/rest-api-is-the-future/), the term "resource" refers to any identifiable entity that can be manipulated via HTTP methods (GET, POST, PUT, DELETE, etc.). A resource can represent a single data entity or a collection of data entities, as well as more abstract concepts like services and transformations. The resource serves as a key conceptual entity that client applications interact with, and it is identified via URIs (Uniform Resource Identifiers).
 
 - **Singleton Resources** - A Singleton resource is a unique instance of a resource type, typically identified by a specific ID or name. When you interact with a Singleton resource, you're interacting with a single, specific entity. In API design, Singleton resources usually correspond to endpoints with unique identifiers. For example, GET /users/:id could be an endpoint to retrieve a Singleton resource representing a use
 
@@ -51,20 +51,20 @@ Naming is more than just a label; it's an integral part of the API's usability. 
 Resource schemas define the structure and type of data that resources will hold. They set the contract between the API and the client, specifying what information can be provided or requested. If you have a Books resource in a library API, the schema might specify fields like Title, ISBN, AuthorID, and AvailabilityStatus.
 
 4. Limit the Number of Methods
-While [RESTful APIs](https://apitoolkit.io/blog/rest-api-is-the-future/) use HTTP methods like GET, POST, PUT, and DELETE, not every resource needs to support all these methods. Be selective and offer only those methods that make sense for the resource. For example, it might not make sense to allow the DELETE method on a Members resource in a library API if your business logic requires archival rather than deletion.
+While [RESTful APIs](https://monoscope.tech/blog/rest-api-is-the-future/) use HTTP methods like GET, POST, PUT, and DELETE, not every resource needs to support all these methods. Be selective and offer only those methods that make sense for the resource. For example, it might not make sense to allow the DELETE method on a Members resource in a library API if your business logic requires archival rather than deletion.
 
 By adhering to these guidelines, you can design a resource model that is robust, user-friendly, and above all, efficient in meeting both developer and client needs.
 
 ## Conclusion
-Resource modeling is an indispensable aspect of [REST API](https://apitoolkit.io/blog/rest-api-is-the-future/) development, serving as both a strategic exercise and a technical blueprint. It ensures that your API is not just functional but also efficient, scalable, and user-friendly. The guidelines and insights provided in this guide aim to equip you with the necessary knowledge and tools to design a robust resource model.
+Resource modeling is an indispensable aspect of [REST API](https://monoscope.tech/blog/rest-api-is-the-future/) development, serving as both a strategic exercise and a technical blueprint. It ensures that your API is not just functional but also efficient, scalable, and user-friendly. The guidelines and insights provided in this guide aim to equip you with the necessary knowledge and tools to design a robust resource model.
 
 From identifying key resources to establishing their schemas and restricting methods, each step contributes to an API that is easy to navigate, understand, and integrate into various applications. By investing in thorough resource modeling, you're not just building an API—you're crafting an experience.
 
 ---
 
 Keep reading
-[The Importance of API Observability in Software Development](https://apitoolkit.io/blog/api-observability-software-development-/)
-[REST APIs are the Future: Compared to RPC, GraphQL, etc](https://apitoolkit.io/blog/rest-api-is-the-future/)
-[The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://apitoolkit.io/blog/api-as-a-product/)
-[API Observability and Monitoring: What’s the Difference?](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/)
+[The Importance of API Observability in Software Development](https://monoscope.tech/blog/api-observability-software-development-/)
+[REST APIs are the Future: Compared to RPC, GraphQL, etc](https://monoscope.tech/blog/rest-api-is-the-future/)
+[The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://monoscope.tech/blog/api-as-a-product/)
+[API Observability and Monitoring: What’s the Difference?](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/)

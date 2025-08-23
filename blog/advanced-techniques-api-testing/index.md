@@ -12,11 +12,11 @@ categories:
 
 ![Advanced Techniques in API Testing Automation](./api-testing-techniques.png)
 
-Application Programming Interfaces (APIs) are the building blocks of [modern software development](https://www.amazon.com/Modern-Software-Engineering-Discipline-Development/dp/0137314914). They enable communication and data exchange between different applications, systems, and devices. However, testing APIs can be challenging, especially when it comes to automation. In this article, we will explore some advanced techniques for [API testing automation](https://apitoolkit.io/blog/api-testing-automation/) that can help you improve the quality and reliability of your APIs.
+Application Programming Interfaces (APIs) are the building blocks of [modern software development](https://www.amazon.com/Modern-Software-Engineering-Discipline-Development/dp/0137314914). They enable communication and data exchange between different applications, systems, and devices. However, testing APIs can be challenging, especially when it comes to automation. In this article, we will explore some advanced techniques for [API testing automation](https://monoscope.tech/blog/api-testing-automation/) that can help you improve the quality and reliability of your APIs.
 
 ## API Test Data Management
 
-One of the key aspects of API testing is managing the test data that is used to validate the functionality, [performance](https://apitoolkit.io/blog/web-api-performance/), and [security](https://apitoolkit.io/blog/api-security/) of the APIs. Test data management involves creating, storing, updating, and deleting test data in a consistent and efficient way. Test data management can be done manually or using tools that automate the process.
+One of the key aspects of API testing is managing the test data that is used to validate the functionality, [performance](https://monoscope.tech/blog/web-api-performance/), and [security](https://monoscope.tech/blog/api-security/) of the APIs. Test data management involves creating, storing, updating, and deleting test data in a consistent and efficient way. Test data management can be done manually or using tools that automate the process.
 
 ### Strategies for Managing Test Data
 
@@ -46,7 +46,7 @@ Mock data can be created using different techniques, such as:
 
 **Stubbing**: This is a technique where the API responses are hardcoded or predefined based on certain criteria or conditions. Stubbing can be done at the code level or using tools that identify and modify API requests and responses which are in flight.
 
-**Mocking**: This is a technique where the [API responses](https://apitoolkit.io/blog/web-api-performance/) are dynamically generated or customized based on certain rules or logic. Mocking can be done using frameworks or tools that create and run mock servers that mimic the real APIs.
+**Mocking**: This is a technique where the [API responses](https://monoscope.tech/blog/web-api-performance/) are dynamically generated or customized based on certain rules or logic. Mocking can be done using frameworks or tools that create and run mock servers that mimic the real APIs.
 
 **Virtualization**: This is a technique where the entire API environment is simulated or emulated using software components that replicate the functionality and behavior of real services or systems. Virtualization can be done using platforms or tools that provide features for creating, configuring, and managing virtual services.
 
@@ -108,10 +108,10 @@ APIs play a pivotal role in our rapidly changing digital landscape. Therefore, t
 
 **Keep Reading**
 
-[Best API Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) 
+[Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) 
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/) 
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/) 
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+[Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)

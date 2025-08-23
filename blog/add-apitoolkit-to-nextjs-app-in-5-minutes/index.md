@@ -12,7 +12,7 @@ categories:
 
 ![Add APIToolkit To Your Next.js Application In 5 Minutes](./apitoolkit-in-5-minutes.png)
 
-In this article, we will learn to integrate [APIToolkit](https://apitoolkit.io/) into our [Next.js](https://nextjs.org/) application in just a few simple steps. For this to work, we need OpenTelemetry. [OpenTelemetry](https://opentelemetry.io/) will help us gather traces about our application and send this information to APIToolkit. APIToolkit provides you with a variety of features out-of-the-box, including, but not limited to, API Observability and Monitoring, API Testing, Error Tracking, API Analytics, API Log Explorer, and a lot more.
+In this article, we will learn to integrate [APIToolkit](https://monoscope.tech/) into our [Next.js](https://nextjs.org/) application in just a few simple steps. For this to work, we need OpenTelemetry. [OpenTelemetry](https://opentelemetry.io/) will help us gather traces about our application and send this information to APIToolkit. APIToolkit provides you with a variety of features out-of-the-box, including, but not limited to, API Observability and Monitoring, API Testing, Error Tracking, API Analytics, API Log Explorer, and a lot more.
 
 ## Setting Up Your Next.js Project
 
@@ -42,9 +42,9 @@ If you did everything correctly, when you visit `http:localhost:3000` on your br
 
 ## Adding APIToolKit to your application
 
-{=Note:=} To add APIToolkit, you need to create an account [here](app.apitoolkit.io). This onboarding [video](https://www.youtube.com/watch?v=_uqxNTpcEOI&pp=ygUVYXBpdG9vbGtpdCBvbmJvYXJkaW5n) will walk you through the process. 
+{=Note:=} To add APIToolkit, you need to create an account [here](app.monoscope.tech). This onboarding [video](https://www.youtube.com/watch?v=_uqxNTpcEOI&pp=ygUVYXBpdG9vbGtpdCBvbmJvYXJkaW5n) will walk you through the process. 
 
-Let's install APIToolKit's [Next.js SDK](https://apitoolkit.io/docs/sdks/nodejs/nextjs/) with the following command. This command adds the core OpenTelemetry API and also includes Vercel's OpenTelemetry integration.
+Let's install APIToolKit's [Next.js SDK](https://monoscope.tech/docs/sdks/nodejs/nextjs/) with the following command. This command adds the core OpenTelemetry API and also includes Vercel's OpenTelemetry integration.
 
 ```javascript
   npm install --save apitoolkit-next @opentelemetry/api @vercel/otel
@@ -56,7 +56,7 @@ Let's install APIToolKit's [Next.js SDK](https://apitoolkit.io/docs/sdks/nodejs/
 Create a `.env` file with the following configuration. Replace the `service name` and `API key` with your actual API and service name.
 
 ```javascript
-  OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.apitoolkit.io:4318"
+  OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.monoscope.tech:4318"
   OTEL_SERVICE_NAME="my-service" # Specifies the name of the service.
   OTEL_RESOURCE_ATTRIBUTES="at-project-key={YOUR_API_KEY}" # Adds your API KEY to the resource.
   OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf" #Specifies the protocol to use for the OpenTelemetry exporter.
@@ -155,11 +155,11 @@ As you can see below, the error we simulated has been reported to APIToolkit.
 
 ## Conclusion
 
-We just set up [APIToolkit](https://apitoolkit.io/) in our Next.js app in just 5 minutes. With [OpenTelemetry](https://opentelemetry.io/), we quickly collected essential data about our API's performance. Now, we can easily monitor our API, track errors, and view simple analytics to keep our app running smoothly.
+We just set up [APIToolkit](https://monoscope.tech/) in our Next.js app in just 5 minutes. With [OpenTelemetry](https://opentelemetry.io/), we quickly collected essential data about our API's performance. Now, we can easily monitor our API, track errors, and view simple analytics to keep our app running smoothly.
 
 **Relavant resources**
 
-[APIToolkit Next.js SDK](https://apitoolkit.io/docs/sdks/nodejs/nextjs/)
+[APIToolkit Next.js SDK](https://monoscope.tech/docs/sdks/nodejs/nextjs/)
 
 [OpenTelemetry](https://opentelemetry.io/)
 
@@ -167,16 +167,16 @@ We just set up [APIToolkit](https://apitoolkit.io/) in our Next.js app in just 5
 
 **Keep Reading**
 
-[Monitoring your Express.js application using OpenTelemetry with APIToolkit](https://apitoolkit.io/blog/monitoring-your-express-application-using-opentelemetry-with-apitoolkit/)
+[Monitoring your Express.js application using OpenTelemetry with APIToolkit](https://monoscope.tech/blog/monitoring-your-express-application-using-opentelemetry-with-apitoolkit/)
 
-[The Top 3 API ToolKit Features That Solve Developer's Pain Points](https://apitoolkit.io/blog/the-top-three-api-toolkit-features-that-solve-developers-pain-points/)
+[The Top 3 API ToolKit Features That Solve Developer's Pain Points](https://monoscope.tech/blog/the-top-three-api-toolkit-features-that-solve-developers-pain-points/)
 
-[Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/)
+[Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/)
 
-[Web API Performance Best Practices - the Ultimate Guide](https://apitoolkit.io/blog/web-api-performance/)
+[Web API Performance Best Practices - the Ultimate Guide](https://monoscope.tech/blog/web-api-performance/)
 
-[How to Analyze API Logs and Metrics for Better Performance](https://apitoolkit.io/blog/api-logs-and-metrics/)
+[How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-[API Documentation and Monitoring: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+[API Documentation and Monitoring: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
-[Mastering API Debugging and Monitoring: Best Practices for Seamless Integration](https://apitoolkit.io/blog/mastering-api-debugging/)
+[Mastering API Debugging and Monitoring: Best Practices for Seamless Integration](https://monoscope.tech/blog/mastering-api-debugging/)

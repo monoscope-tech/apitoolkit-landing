@@ -149,5 +149,5 @@ This approach empowers us to precisely define which fields within our responses 
 
 It's worth noting that the list of items designated for redaction will be consistently applied across all endpoint requests and responses within our server, promoting a uniform and comprehensive approach to data privacy.
 
-We will go deep into this in our subsequent post. Having any questions? Contact our [support engineers.](hello@apitoolkit.io)
+We will go deep into this in our subsequent post. Having any questions? Contact our [support engineers.](hello@monoscope.tech)
 

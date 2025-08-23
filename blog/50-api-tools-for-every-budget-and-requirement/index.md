@@ -116,7 +116,7 @@ Redocly provides tools for OpenAPI spec-based API development.
 3. Support: Email, chat, phone, 24/5 technical support
 4. Community: Forum, Slack channel, events and webinars
 
-**Read More**[ 7 Tips for Creating User-Friendly Static REST API Documentation ](https://apitoolkit.io/blog/creating-user-friendly-static-rest-api-documentation/)
+**Read More**[ 7 Tips for Creating User-Friendly Static REST API Documentation ](https://monoscope.tech/blog/creating-user-friendly-static-rest-api-documentation/)
 
 ## 2. API Client Libraries & SDKs
 
@@ -190,7 +190,7 @@ Redocly provides tools for OpenAPI spec-based API development.
 3. Support: Documentation, GitHub issues
 4. Requirements: Node.js services needing payments
 
-**Read More**[ Writing API Documentation - Best Practices and Mistakes to Avoid ](https://apitoolkit.io/blog/writing-api-documentation/)
+**Read More**[ Writing API Documentation - Best Practices and Mistakes to Avoid ](https://monoscope.tech/blog/writing-api-documentation/)
 
 ### 3. API Testing & Monitoring Tools: Unmasking Your Options
 
@@ -274,7 +274,7 @@ Redocly provides tools for OpenAPI spec-based API development.
 4. Requirements: Advanced technical expertise for building and maintaining custom tools.
 5. Budget: Free (no ongoing costs).
 
-**Read More**[ Top 10 API Tools for Developers](https://apitoolkit.io/blog/top-api-tools-for-developers/)
+**Read More**[ Top 10 API Tools for Developers](https://monoscope.tech/blog/top-api-tools-for-developers/)
 
 ### 4. API Gateways & Management Platforms
 
@@ -461,8 +461,8 @@ Redocly provides tools for OpenAPI spec-based API development.
 Remember, the perfect API tool doesn't exist; it's about finding the perfect fit for your project. Consider your goals, technical expertise, and financial constraints when evaluating options. Don't hesitate to experiment with free trials and explore open-source options before committing to a paid plan.
 
 **Keep Reading**
-[ A Guide to Embedded API Logs and Metrics ](https://apitoolkit.io/blog/embedded-apis-and-metrics/)
-[ Generate Swagger Docs Easily with Apitoolkit's Live Traffic ](https://apitoolkit.io/blog/how-to-generate-swagger-docs-from-your-live-traffic-with-apitoolkit/)
-[ Bridging the Gap Between API Logs and User Behavior Tracking ](https://apitoolkit.io/blog/api-logs-and-user-behaviour-tracking/)
-[ How to Resolve API Downtime Issues Before It Escalates ](https://apitoolkit.io/blog/api-downtime/)
+[ A Guide to Embedded API Logs and Metrics ](https://monoscope.tech/blog/embedded-apis-and-metrics/)
+[ Generate Swagger Docs Easily with Apitoolkit's Live Traffic ](https://monoscope.tech/blog/how-to-generate-swagger-docs-from-your-live-traffic-with-apitoolkit/)
+[ Bridging the Gap Between API Logs and User Behavior Tracking ](https://monoscope.tech/blog/api-logs-and-user-behaviour-tracking/)
+[ How to Resolve API Downtime Issues Before It Escalates ](https://monoscope.tech/blog/api-downtime/)
 

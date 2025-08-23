@@ -15,7 +15,7 @@ categories:
 
 ---
 
-In an age where information is abundant and projects are increasingly complex, effective [documentation ](https://apitoolkit.io/blog/how-to-write-api-docs/)has become a cornerstone of successful ventures. Whether you're a software developer jotting down lines of code, a project manager outlining workflows, or a content creator organizing your thoughts, having a reliable and efficient system for documentation is essential. This is where Notion comes in.
+In an age where information is abundant and projects are increasingly complex, effective [documentation ](https://monoscope.tech/blog/how-to-write-api-docs/)has become a cornerstone of successful ventures. Whether you're a software developer jotting down lines of code, a project manager outlining workflows, or a content creator organizing your thoughts, having a reliable and efficient system for documentation is essential. This is where Notion comes in.
 
 Notion is more than just a note-taking app; it's a powerful all-in-one workspace designed to improve productivity and collaboration. With its versatile features, you can create anything from simple to-do lists to comprehensive project boards. But one of its most compelling uses is for documentation.
 
@@ -29,7 +29,7 @@ Giving appropriate documentation on how to use a product, in my opinion, is a bi
 
 ## Why Notion?
 
-When it comes to [documentation](https://apitoolkit.io/blog/how-to-write-api-docs/), there are numerous tools available, each with its own set of features and limitations. So, why choose Notion? The answer lies in its unique blend of versatility, ease of use, and collaborative capabilities. Here are some key reasons why Notion stands out as an excellent choice for documentation:
+When it comes to [documentation](https://monoscope.tech/blog/how-to-write-api-docs/), there are numerous tools available, each with its own set of features and limitations. So, why choose Notion? The answer lies in its unique blend of versatility, ease of use, and collaborative capabilities. Here are some key reasons why Notion stands out as an excellent choice for documentation:
 
 ### Flexibility and Versatility
 
@@ -103,10 +103,10 @@ Whether you're new to Notion or a seasoned user, its array of features caters to
 
 ## Keep Reading
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+[How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-[A Comprehensive API Management Strategy for Businesses](https://apitoolkit.io/blog/the-ultimate-api-management-strategy/)
+[A Comprehensive API Management Strategy for Businesses](https://monoscope.tech/blog/the-ultimate-api-management-strategy/)

@@ -16,7 +16,7 @@ categories:
 
 Have you ever felt that understanding Application Programming Interfaces (APIs) goes beyond just technical knowledge and becomes an art? Indeed, the intricacies of APIs go far beyond mere lines of code and technical specifications. More like a painter discerning the right shade or a musician hitting the perfect note, mastering APIs requires an understanding of the health and performance of the APIs to transform good software into great software. This artistic dimension is often overlooked, but it's what sets apart truly exceptional developers and tech teams. API observability allows teams to craft better experiences, design efficient systems, and ensure reliability. 
 
-[API observability](https://apitoolkit.io/blog/api-observability-software-development-/) is the practice of collecting and analyzing data about an API in order to understand its health, performance, and usage. This data can be used to identify and troubleshoot problems, optimize performance, and improve security. [API observability](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) is important because it allows you to gain a deeper understanding of how your APIs are being used and how they are performing. When considering API observability, there are four fundamental pillars that should guide your approach:
+[API observability](https://monoscope.tech/blog/api-observability-software-development-/) is the practice of collecting and analyzing data about an API in order to understand its health, performance, and usage. This data can be used to identify and troubleshoot problems, optimize performance, and improve security. [API observability](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is important because it allows you to gain a deeper understanding of how your APIs are being used and how they are performing. When considering API observability, there are four fundamental pillars that should guide your approach:
 
 1. Logs
 2. Metrics
@@ -64,7 +64,7 @@ APIs are the bridges connecting different software components. As these bridges 
 2. Capacity Planning: Metrics offer foresight. By analyzing trends, such as steadily increasing request rates, you can anticipate when you might need to scale up resources or optimize your infrastructure to handle the growing traffic.
 3. Alerting: Metrics serve as sentinels. By setting thresholds on specific metrics, you can receive instant notifications if something goes amiss. For instance, if the error rate for an API suddenly spikes, an alert can notify you to investigate immediately.
 
-Given the importance of metrics, a tool like [APIToolkit](https://apitoolkit.io/) has been developed to capture, store, and visualize them efficiently.
+Given the importance of metrics, a tool like [APIToolkit](https://monoscope.tech/) has been developed to capture, store, and visualize them efficiently.
 
 ## 3. Tracing
 
@@ -102,8 +102,8 @@ In summary, the four pillars of API observability - logs, metrics, tracing, and 
 
 ### Keep reading
 
-- [The Importance of API Observability in Software Development](https://apitoolkit.io/blog/api-observability-software-development-/)
-- [How to Optimize Security for Web API Performance in 2023](https://apitoolkit.io/blog/api-security/)
-- [The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://apitoolkit.io/blog/api-as-a-product/)
-- [API Observability and Monitoring: What’s the Difference?](https://apitoolkit.io/blog/api-observability-and-api-monitoring/)
-- [Ultimate Guide to API Testing Automation](https://apitoolkit.io/blog/api-testing-automation/)
+- [The Importance of API Observability in Software Development](https://monoscope.tech/blog/api-observability-software-development-/)
+- [How to Optimize Security for Web API Performance in 2023](https://monoscope.tech/blog/api-security/)
+- [The Rise of API-as-a-Product: How Companies are Leveraging APIs to Drive Revenue](https://monoscope.tech/blog/api-as-a-product/)
+- [API Observability and Monitoring: What’s the Difference?](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
+- [Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation/)

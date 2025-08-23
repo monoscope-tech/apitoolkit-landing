@@ -12,7 +12,7 @@ categories:
 
 ![API Testing Automation](./api-test-automation_png.png)
 
-API testing automation is a crucial aspect of software development that ensures the quality, performance, and reliability of APIs. The number of [APIs](https://apitoolkit.io/blog/the-ultimate-api-management-strategy/) are expanding exponentially on a yearly basis. Therefore, directing automated tests on the APIs has turned into a pivotal step in the software development process. This is because malfunctioning or [ineffective APIs](https://apitoolkit.io/blog/anomalies-in-restful-apis/) can result in lower product acquisition and ultimately a loss in revenue.
+API testing automation is a crucial aspect of software development that ensures the quality, performance, and reliability of APIs. The number of [APIs](https://monoscope.tech/blog/the-ultimate-api-management-strategy/) are expanding exponentially on a yearly basis. Therefore, directing automated tests on the APIs has turned into a pivotal step in the software development process. This is because malfunctioning or [ineffective APIs](https://monoscope.tech/blog/anomalies-in-restful-apis/) can result in lower product acquisition and ultimately a loss in revenue.
 
 In this comprehensive guide, you will learn everything you need about API testing automation, from its definition and importance to the tools and frameworks that can help you achieve it. You will also gain a deeper understanding of APIs and their functionality, as well as the steps and best practices for preparing for API testing automation.
 
@@ -48,7 +48,7 @@ Regression API testing checks if the API still works correctly after any changes
 
 ### Stress testing
 
-With stress testing, you can check how the [API performs](https://apitoolkit.io/blog/web-api-performance/) under extreme conditions, such as high load, high concurrency, or limited resources. It helps identify the breaking point, the maximum capacity, and the scalability of the API. Stress testing helps ensure that the API can handle peak traffic and unexpected situations.
+With stress testing, you can check how the [API performs](https://monoscope.tech/blog/web-api-performance/) under extreme conditions, such as high load, high concurrency, or limited resources. It helps identify the breaking point, the maximum capacity, and the scalability of the API. Stress testing helps ensure that the API can handle peak traffic and unexpected situations.
 
 ### Exception or negative testing
 
@@ -62,17 +62,17 @@ This type of testing checks how fast and efficient the API is in delivering its 
 
 This type of testing checks how the API performs under normal or expected conditions, such as moderate load, average concurrency, or sufficient resources. It helps evaluate the stability, consistency, and reliability of the API. Load testing helps ensure that the API can deliver its functionality without compromising its quality.
 
-Read: [Load Testing vs Stress Testing: What's the Difference and Why It Matters](https://apitoolkit.io/blog/load-testing-vs-stress-testing-differences/)
+Read: [Load Testing vs Stress Testing: What's the Difference and Why It Matters](https://monoscope.tech/blog/load-testing-vs-stress-testing-differences/)
 
 ## Why API Testing Automation is Important
 
 Automated API testing is important because:
 
-1. APIs are the backbone of many [software applications](https://apitoolkit.io/blog/api-as-a-product/), especially those that use microservice architecture or web services. APIs enable communication and integration between different modules, components, applications, and systems.
+1. APIs are the backbone of many [software applications](https://monoscope.tech/blog/api-as-a-product/), especially those that use microservice architecture or web services. APIs enable communication and integration between different modules, components, applications, and systems.
 
 2. APIs are often complex and involve multiple parameters, headers, endpoints, requests, and responses. Manual testing of APIs can be tedious, time-consuming, and prone to human errors.
 
-3. APIs are dynamic and frequently change or evolve. Manual testing of APIs can be difficult to maintain and update as the [API specifications](https://apitoolkit.io/blog/api-documentation-vs-api-specification/) change.
+3. APIs are dynamic and frequently change or evolve. Manual testing of APIs can be difficult to maintain and update as the [API specifications](https://monoscope.tech/blog/api-documentation-vs-api-specification/) change.
 
 4. APIs need to be tested at different levels, such as unit testing, functional testing, integration testing, performance testing, security testing, and compliance testing. Manual testing of APIs can be insufficient to cover all these aspects and scenarios.
 
@@ -138,13 +138,13 @@ Some factors to consider when choosing an API testing automation tool are:
 
 3. **Develop the test scripts or scenarios for API automation testing.** This may involve defining the test objectives, test cases, test steps, expected results, etc. Also, you may need to use variables, loops, conditions, functions, etc. to make the test scripts more dynamic and reusable.
 
-4. **Execute the test scripts or scenarios for API automation testing.** This may involve running the test scripts individually or in batches, scheduling the test runs, [monitoring](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/) the test progress, etc. In addition, you may need to use different modes or options to run the test scripts, such as debug mode, headless mode, parallel mode, etc.
+4. **Execute the test scripts or scenarios for API automation testing.** This may involve running the test scripts individually or in batches, scheduling the test runs, [monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) the test progress, etc. In addition, you may need to use different modes or options to run the test scripts, such as debug mode, headless mode, parallel mode, etc.
 
-5. **Analyze the test results or reports for API automation testing.** This may involve reviewing the test outcomes, verifying the actual results against the expected results, identifying the test failures or errors, generating the test [reports or logs](https://apitoolkit.io/blog/api-logs-and-metrics/), etc. You can likewise use different formats or tools to view or share the test results or reports, such as HTML, XML, JSON, CSV, etc.
+5. **Analyze the test results or reports for API automation testing.** This may involve reviewing the test outcomes, verifying the actual results against the expected results, identifying the test failures or errors, generating the test [reports or logs](https://monoscope.tech/blog/api-logs-and-metrics/), etc. You can likewise use different formats or tools to view or share the test results or reports, such as HTML, XML, JSON, CSV, etc.
 
-Read: [Key Benefits of API Integration for Developers (with Statistics)](https://apitoolkit.io/blog/benefits-of-api-integration/)
+Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
-Read: [10 Must-Know API Trends in 2023](https://apitoolkit.io/blog/api-trends/)
+Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
 ## Handling Data Validation and Assertions
 
@@ -176,7 +176,7 @@ HTTP status codes are numerical codes that indicate the status of an HTTP reques
 
 Testing HTTP status codes is essential for verifying the functionality and behavior of your API under different situations. You should write test cases that check whether your API returns the appropriate status codes for various requests and responses.
 
-You should also test how your API [handles errors](https://apitoolkit.io/blog/api-downtime/) and exceptions that may occur during the execution of your tests. You should write test cases that simulate different error scenarios, such as invalid input parameters, missing authentication tokens, network failures, server timeouts, etc. You should check whether your API returns meaningful and consistent error messages and codes that help you identify and troubleshoot the root cause of the problem.
+You should also test how your API [handles errors](https://monoscope.tech/blog/api-downtime/) and exceptions that may occur during the execution of your tests. You should write test cases that simulate different error scenarios, such as invalid input parameters, missing authentication tokens, network failures, server timeouts, etc. You should check whether your API returns meaningful and consistent error messages and codes that help you identify and troubleshoot the root cause of the problem.
 
 ## Testing API Response Time and Performance
 
@@ -186,10 +186,10 @@ Testing API response time and performance can help you:
 
 - Measure and monitor the speed and throughput of your API
 - Identify and optimize any performance bottlenecks or issues in your API
-- Ensure that your API meets the [performance expectations](https://apitoolkit.io/blog/web-api-performance/) and requirements of your users and stakeholders
+- Ensure that your API meets the [performance expectations](https://monoscope.tech/blog/web-api-performance/) and requirements of your users and stakeholders
 - Evaluate the scalability and reliability of your API under different load conditions
 
-To test API response time and performance, you should use an [API testing tool](https://usetestkit.com) that can generate and simulate a realistic load on your API, such as concurrent users, requests per second, etc. You should also use an API testing tool that can measure and report various performance metrics and KPIs, such as average response time, maximum response time, minimum response time, standard deviation, error rate, [throughput](https://apitoolkit.io/api-performance-monitoring-and-compliance/), etc.
+To test API response time and performance, you should use an [API testing tool](https://usetestkit.com) that can generate and simulate a realistic load on your API, such as concurrent users, requests per second, etc. You should also use an API testing tool that can measure and report various performance metrics and KPIs, such as average response time, maximum response time, minimum response time, standard deviation, error rate, [throughput](https://monoscope.tech/api-performance-monitoring-and-compliance/), etc.
 
 ## Executing API Tests with Automation
 
@@ -217,9 +217,9 @@ Handling test dependencies and ordering can help you ensure the correctness and 
 
 To handle test dependencies and ordering, you need to use an API testing tool that supports dependency management, such as Teskit, Postman Collection Runner, SoapUI Pro Test Case Runner, TestNG Annotations, etc. You also need to define the dependencies and ordering of your test cases using variables, assertions, annotations, etc. You can then execute your test suite according to the defined dependencies and ordering.
 
-Read: [Best Monitoring and Observability Tools in 2023](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/)
+Read: [Best Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
-Read: [API Monitoring and Documentation: the Truth You Must Know](https://apitoolkit.io/blog/api-documentation-and-observability-the-truth-you-must-know/)
+Read: [API Monitoring and Documentation: the Truth You Must Know](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/)
 
 ## API Test Reporting and Metrics
 
@@ -262,12 +262,12 @@ Performance metrics are quantitative measures that evaluate how well the APIs pe
 
 - **Response time**: The time elapsed between sending a request to an API endpoint and receiving a response from it.
 - **Throughput**: The rate at which an API endpoint can process requests and responses per unit of time.
-- **Latency**: The delay or lag between sending a request to an [API endpoint](https://apitoolkit.io/api-anomalies-validation-and-checks/) and receiving a response from it.
+- **Latency**: The delay or lag between sending a request to an [API endpoint](https://monoscope.tech/api-anomalies-validation-and-checks/) and receiving a response from it.
 - **Error rate**: The percentage or ratio of requests that result in errors or failures from an API endpoint.
 - **Availability**: The percentage or ratio of time that an API endpoint is operational and accessible.
-- **Scalability**: The ability of an API endpoint to handle increasing or decreasing loads without compromising [performance](https://apitoolkit.io/blog/web-api-performance/) or quality.
+- **Scalability**: The ability of an API endpoint to handle increasing or decreasing loads without compromising [performance](https://monoscope.tech/blog/web-api-performance/) or quality.
 
-Performance metrics should be collected and [monitored continuously](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) by using performance testing tools or frameworks that simulate realistic loads and scenarios on the APIs. They should also be compared and benchmarked against predefined thresholds or standards that represent the expected or acceptable levels of performance.
+Performance metrics should be collected and [monitored continuously](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) by using performance testing tools or frameworks that simulate realistic loads and scenarios on the APIs. They should also be compared and benchmarked against predefined thresholds or standards that represent the expected or acceptable levels of performance.
 
 Key performance indicators (KPIs) are strategic metrics that align with the business goals and user expectations of the APIs. KPIs contain the following information:
 
@@ -279,7 +279,7 @@ Key performance indicators (KPIs) are strategic metrics that align with the busi
 
 ![API Performance and KPIs](performance-tracking_png.png)
 
-KPIs should be defined and measured periodically by using user feedback tools or methods that collect and [analyze user data](https://apitoolkit.io/blog/data-retrieval-and-filtering-for-web-api-performance/) and behavior on the APIs. They should also be evaluated and optimized based on the feedback and insights that users provide about the APIs.
+KPIs should be defined and measured periodically by using user feedback tools or methods that collect and [analyze user data](https://monoscope.tech/blog/data-retrieval-and-filtering-for-web-api-performance/) and behavior on the APIs. They should also be evaluated and optimized based on the feedback and insights that users provide about the APIs.
 
 ## Example of API Testing Automation
 
@@ -347,9 +347,9 @@ Another challenge of API testing automation is maintaining the test suite as the
 - Use a test automation framework or a tool that supports keyword-driven testing, which is the technique of using predefined keywords or commands to define the actions and steps for each test case.
 - Use a test automation framework or a tool that supports behavior-driven testing (BDD), which is the technique of using natural language (such as Gherkin) to write the test scenarios in a given-when-then format, and align them with the user stories and acceptance criteria.
 
-Read: [API Management: How to Tackle Anomalies in RESTful API (the Right Way)](https://apitoolkit.io/blog/anomalies-in-restful-apis/)
+Read: [API Management: How to Tackle Anomalies in RESTful API (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
-Read: [Incident Management: How to Resolve API Downtime Before It Escalates](https://apitoolkit.io/blog/api-downtime/)
+Read: [Incident Management: How to Resolve API Downtime Before It Escalates](https://monoscope.tech/blog/api-downtime/)
 
 ### Dealing with Rate-Limited APIs
 
@@ -373,9 +373,9 @@ Another challenge of API testing automation is testing third-party APIs, which a
 
 To overcome these challenges and ensure that your application works well with third-party APIs, you need to adopt some strategies and best practices for testing them. Some of the strategies for testing third-party APIs are:
 
-- Use a test contract technique to define and agree on the expectations and requirements of the third-party API with its provider. A test contract is a document that specifies the inputs, outputs, behaviors, and scenarios of the API that need to be tested and verified. You can use various formats to write your test contract, such as [Swagger](https://apitoolkit.io/blog/generating-golangdoc/), OpenAPI, RAML, etc.
+- Use a test contract technique to define and agree on the expectations and requirements of the third-party API with its provider. A test contract is a document that specifies the inputs, outputs, behaviors, and scenarios of the API that need to be tested and verified. You can use various formats to write your test contract, such as [Swagger](https://monoscope.tech/blog/generating-golangdoc/), OpenAPI, RAML, etc.
 - Use a test sandbox technique to create and use a separate environment or instance of the third-party API for testing purposes. A test sandbox is an isolated and controlled environment that mimics the production environment of the API but allows you to modify and manipulate its settings and data without affecting its real users or operations.
-- Use a test [monitoring technique](https://apitoolkit.io/blog/best-api-monitoring-and-observability-tools/) to track and measure the performance, availability, and functionality of the third-party API over time. A test monitoring tool or service can help you collect and analyze various metrics and indicators of the API's health and quality, such as response time, error rate, throughput, etc.
+- Use a test [monitoring technique](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) to track and measure the performance, availability, and functionality of the third-party API over time. A test monitoring tool or service can help you collect and analyze various metrics and indicators of the API's health and quality, such as response time, error rate, throughput, etc.
 
 ### Continuous Improvement and Iterative Testing
 
@@ -386,7 +386,7 @@ Continuous improvement and iterative testing involve several steps:
 - Define your testing goals and objectives: You need to establish what you want to achieve with your testing process (such as coverage, accuracy, speed) and how you will measure it (such as metrics, criteria).
 - Plan your testing strategy: You need to decide how you will conduct your testing process (such as tools, frameworks) and what you will test (such as scenarios, cases).
 - Execute your testing process: You need to run your tests according to your plan (such as schedule) and collect your results (such as reports).
-- Analyze your testing results: You need to review your results (such as errors) and identify any issues or gaps (such as [bugs](https://apitoolkit.io/api-anomalies-validation-and-checks/)) in your testing process or application.
+- Analyze your testing results: You need to review your results (such as errors) and identify any issues or gaps (such as [bugs](https://monoscope.tech/api-anomalies-validation-and-checks/)) in your testing process or application.
 - Improve your testing process: You need to fix any issues or gaps (such as code) in your testing process or application based on your analysis (such as root cause) and implement any changes or enhancements (such as features) that can improve your testing process or application.
 - Repeat: You need to repeat these steps regularly (such as daily) and continuously (such as indefinitely) until you reach your desired level of quality assurance.
 
@@ -398,8 +398,8 @@ Of course, testing your API ensures that your organization can save time, reduce
 
 **Keep Reading**
 
-[How to Generate Automated API Documentation](https://apitoolkit.io/blog/how-to-generate-automated-api-documentation/)
+[How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[API Documentation vs Specification: What It Means for You](https://apitoolkit.io/blog/api-documentation-vs-api-specification/)
+[API Documentation vs Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 
-[How to Write API Documentation: 10 Essential Guidelines](https://apitoolkit.io/blog/how-to-write-api-docs/)
+[How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
