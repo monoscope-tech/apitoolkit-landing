@@ -1,6 +1,6 @@
-base_url: "https://apitoolkit.io"
-title: APItoolkit
-description: AI tools for automatic API monitoring, documentation and more.
+base_url: "https://monoscope.tech"
+title: monoscope
+description: Monitoring and Observability Platform.
 
 layouts:
   "./blog/**/index.md": default/blog-single.liquid
@@ -136,11 +136,10 @@ docs_main_pages:
     slug: /docs/features
     icon: folder-tree
 
-
 main_nav:
-  - title: Documentation 
-    dropdown: 
-      - title: Get Started 
+  - title: Documentation
+    dropdown:
+      - title: Get Started
         url: /docs/onboarding
         icon: #nav-item
         description: All you need to start using APItoolkit
@@ -151,25 +150,25 @@ main_nav:
       - title: Platform Guides
         url: /docs/dashboard
         description: Learn everything you need to navigate the platform
-  - title: Features 
+  - title: Features
     dropdown:
-      - title: Error tracking 
-        url: /features/error-tracking 
+      - title: Error tracking
+        url: /features/error-tracking
         icon: #features-svg
         description: Find and fix errors and breaking changes in real time
-      - title: API analytics 
+      - title: API analytics
         url: /features/api-analytics
         icon: #features-svg
         description: Easily identify trends and optimize what truly matters to your business.
-      - title: API management 
+      - title: API management
         url: /features/api-management
         icon: #features-svg
         description: Everything you need to manage your APIs effectively.
-      - title: API Observability 
+      - title: API Observability
         url: /features/api-observability
         icon: #features-svg
         description: Achieve real-time Observability to pinpoint issues, understand root causes, and fix problems
-  - title: Blog 
+  - title: Blog
     url: /blog
   - title: Pricing
     url: /pricing
