@@ -1,5 +1,5 @@
-baseurl = "https://apitoolkit.io/"
-title = "APItoolkit: Stay on top of your APIs!"
+baseurl = "https://monoscope.tech/"
+title = "monoscope: Find and fix issues before customers notice!"
 theme = "apitoolkit"
 languageCode = 'en-us'
 enableEmoji = true
@@ -11,11 +11,11 @@ summarylength = 30
 [Params]
 mainSections = ["blog"]
 intro = true
-headline = "APItoolkit"
-description = "Automatic API Monitoring and Documentation"
+headline = "monoscope"
+description = "Monitoring and Observability Platform"
 github = "https://github.com/monoscope-tech"
 twitter = "@apitoolkithq"
-email = "hello@apitoolkit.io"
+email = "hello@monoscope.tech"
 opengraph = true
 shareTwitter = true
 dateFormat = "Mon, Jan 2, 2006"
@@ -30,8 +30,8 @@ showSummary = true
 post = "/:filename/"
 
 [markup.goldmark.renderer]
-unsafehtml=true
-unsafe=true
+unsafehtml = true
+unsafe = true
 hardWraps = true
 
 [markup.goldmark.parser]
@@ -44,27 +44,27 @@ title = true
 
 
 [sitemap]
-theme="apitoolkit"
+theme = "apitoolkit"
 
 [author]
-  [author.anthony]
-    name = "Anthony Alaribe"
-    picture = "https://avatars.githubusercontent.com/u/6564482?v=4"
-  [author.irhose]
-    name = "Irhose Apori"
-    picture = "https://pbs.twimg.com/profile_images/1656791975088013312/W3q8KAJE_400x400.jpg"
-  [author.jessica]
-    name = "Jessica Ofem"
-    picture = "https://avatars.githubusercontent.com/u/42941436?v=4"
-  [author.dmytro]
-    name = "Dmytro Krasun"
-    picture = "https://pbs.twimg.com/profile_images/1678311781280759808/mDjAfPfC_400x400.jpg"
-  [author.collins]
-    name = "Collins Offiong"
-    picture = "https://avatars.githubusercontent.com/u/93836558?v=4"
-  [author.elliot]
-    name = "Elliot Brenya Sarfo"
-    picture = "https://avatars.githubusercontent.com/u/66503402?v=4"
-  [author.patrick]
-    name = "Patrick Odey"
-    picture = "https://avatars.githubusercontent.com/u/44481680?s=96&v=4"
+[author.anthony]
+name = "Anthony Alaribe"
+picture = "https://avatars.githubusercontent.com/u/6564482?v=4"
+[author.irhose]
+name = "Irhose Apori"
+picture = "https://pbs.twimg.com/profile_images/1656791975088013312/W3q8KAJE_400x400.jpg"
+[author.jessica]
+name = "Jessica Ofem"
+picture = "https://avatars.githubusercontent.com/u/42941436?v=4"
+[author.dmytro]
+name = "Dmytro Krasun"
+picture = "https://pbs.twimg.com/profile_images/1678311781280759808/mDjAfPfC_400x400.jpg"
+[author.collins]
+name = "Collins Offiong"
+picture = "https://avatars.githubusercontent.com/u/93836558?v=4"
+[author.elliot]
+name = "Elliot Brenya Sarfo"
+picture = "https://avatars.githubusercontent.com/u/66503402?v=4"
+[author.patrick]
+name = "Patrick Odey"
+picture = "https://avatars.githubusercontent.com/u/44481680?s=96&v=4"
