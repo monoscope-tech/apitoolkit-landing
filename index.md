@@ -311,60 +311,62 @@ platforms:
 
     <!-- Tailwind class generation helper -->
     <div class="hidden group-has-[.uc-tab-0:checked]/uc:flex group-has-[.uc-tab-1:checked]/uc:flex group-has-[.uc-tab-2:checked]/uc:flex group-has-[.uc-tab-3:checked]/uc:flex group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none"></div>
-    <div id="monitoring-section" class="max-w-7xl px-3 w-full text-textWeak space-y-5 group/uc">
-      <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
-      <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
+    <div id="monitoring-section" class="w-full">
+      <div class="max-w-7xl mx-auto px-3 text-textWeak space-y-5 group/uc">
+        <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
+        <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
 
-      <div class="flex flex-col md:flex-row md:justify-between py-8 gap-4">
-        <div class="grid grid-cols-2 md:flex bg-fillWeak border border-strokeWeak rounded-lg p-2 md:p-0
-          md:*:px-4 md:*:py-3 *:px-3 *:py-2.5 *:flex *:items-center *:gap-2
-          [&_svg]:h-4 [&_svg]:w-4 md:[&_svg]:h-5 md:[&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
-          *:text-sm md:*:text-base
-          ">
-         {% for platform in this.frontmatter.platforms %}
-         <label class="cursor-pointer has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
-           <input {% if forloop.first %}checked{% endif %} type="radio" class="hidden peer uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/>
-           <svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
-           <span>{{platform.title}}</span>
-         </label>
-         {% endfor %}
+        <div class="flex flex-col md:flex-row md:justify-between py-8 gap-4">
+          <div class="grid grid-cols-2 md:flex bg-fillWeak border border-strokeWeak rounded-lg p-2 md:p-0
+            md:*:px-4 md:*:py-3 *:px-3 *:py-2.5 *:flex *:items-center *:gap-2
+            [&_svg]:h-4 [&_svg]:w-4 md:[&_svg]:h-5 md:[&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
+            *:text-sm md:*:text-base
+            ">
+           {% for platform in this.frontmatter.platforms %}
+           <label class="cursor-pointer has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
+             <input {% if forloop.first %}checked{% endif %} type="radio" class="hidden peer uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/>
+             <svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
+             <span>{{platform.title}}</span>
+           </label>
+           {% endfor %}
+          </div>
+
+          <div class="flex justify-center md:inline-flex gap-2 md:gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-3 md:*:p-4 *:rounded-lg *:cursor-pointer select-none">
+            <a class="group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
+            <a class="group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
+          </div>
         </div>
 
-        <div class="flex justify-center md:inline-flex gap-2 md:gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-3 md:*:p-4 *:rounded-lg *:cursor-pointer select-none">
-          <a class="group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
-          <a class="group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
+        {% for platform in this.frontmatter.platforms %}
+        <!-- {{platform.title}} -->
+        <div class="hidden group-has-[.uc-tab-{{forloop.index0}}:checked]/uc:flex gap-5 flex-col md:flex-row">
+          <div class="sm:w-1/3 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
+           {% for c in platform.children %}
+            <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
+              <input type="radio" name="{{platform.id}}" {% if forloop.first %}checked{% endif %}  class="hidden" value="1"/>
+              <svg class="h-6 w-6 bg-fillBrand-weak !text-iconBrand p-0.5 mt-0.5 rounded-sm shrink-0">
+                <use class="block group-has-checked:hidden" xlink:href="/assets/deps/sprite.svg#plus-square"></use>
+                <use class="hidden group-has-checked:block" xlink:href="/assets/deps/sprite.svg#minus-square"></use>
+              </svg>
+              <div class="flex-1 space-y-2">
+                  <h5 class="text-xl font-semibold text-textStrong">{{c.title}}</h5>
+                  <p class="text-lg hidden group-has-checked:block">{{c.details}}</p>
+                  <a class="text-lg hidden group-has-checked:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
+              </div>
+            </label>
+            {% endfor %}
+          </div>
+
+          <div class="flex-1">
+              <!-- Visual: {{platform.visual}} -->
+              <video autoplay muted loop playsinline class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
+                <source src="{{platform.visual}}" type="video/mp4">
+              </video>
+          </div>
         </div>
+        <!-- end {{platform.title}} -->
+        {% endfor %}
       </div>
-
-      {% for platform in this.frontmatter.platforms %}
-      <!-- {{platform.title}} -->
-      <div class="hidden group-has-[.uc-tab-{{forloop.index0}}:checked]/uc:flex gap-5 flex-col md:flex-row">
-        <div class="sm:w-1/3 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
-         {% for c in platform.children %}
-          <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
-            <input type="radio" name="{{platform.id}}" {% if forloop.first %}checked{% endif %}  class="hidden" value="1"/>
-            <svg class="h-6 w-6 bg-fillBrand-weak !text-iconBrand p-0.5 mt-0.5 rounded-sm shrink-0">
-              <use class="block group-has-checked:hidden" xlink:href="/assets/deps/sprite.svg#plus-square"></use>
-              <use class="hidden group-has-checked:block" xlink:href="/assets/deps/sprite.svg#minus-square"></use>
-            </svg>
-            <div class="flex-1 space-y-2">
-                <h5 class="text-xl font-semibold text-textStrong">{{c.title}}</h5>
-                <p class="text-lg hidden group-has-checked:block">{{c.details}}</p>
-                <a class="text-lg hidden group-has-checked:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
-            </div>
-          </label>
-          {% endfor %}
-        </div>
-
-        <div class="flex-1">
-            <!-- Visual: {{platform.visual}} -->
-            <video autoplay muted loop playsinline class="timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
-              <source src="{{platform.visual}}" type="video/mp4">
-            </video>
-        </div>
-      </div>
-      <!-- end {{platform.title}} -->
-      {% endfor %}
     </div>
 
     <!-- Powered by AI -->
