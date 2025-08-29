@@ -8,7 +8,7 @@ faqs:
   - q: How does pricing scale with usage?
     a: After the free tier, you pay $34/month for up to 20M events, then $2 per million events after that. For example, 50M events/month costs $94 ($34 base + $60 for 30M extra events). With Cloud + S3, it's $199/month for up to 100M events, then $2 per million events after that, plus you get unlimited data retention.
   - q: What's the difference between deployment options?
-    a: <strong>Cloud:</strong> Fully managed, 30-day retention, starts free. <strong>Cloud + S3:</strong> Your data in your S3 bucket, unlimited retention, starts at $199/month. <strong>Self-hosted:</strong> Run on your servers, complete control, free community edition or custom enterprise pricing.
+    a: <strong>Cloud:</strong> Fully managed, 30-day retention, starts free. <strong>Cloud + S3:</strong> Your data in your own S3 bucket, unlimited retention, starts at $199/month. <strong>Self-hosted:</strong> Run on your servers, complete control, free community edition or custom enterprise pricing.
   - q: Can I switch between plans?
     a: Yes! You can upgrade or switch deployment options anytime. Moving from Cloud to Cloud + S3 is seamless—we'll help migrate your historical data. For self-hosted, our team provides migration assistance.
   - q: What counts as an event?
@@ -75,7 +75,7 @@ faqs:
                 <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fillBrand-strong text-textInverse-strong px-4 py-1 rounded-full text-sm font-medium">POPULAR</div>
                 <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#database"></use></svg></div>
                 <div class="mt-8 mb-6">
-                    <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD + Your S3</p>
+                    <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">MONOSCOPE CLOUD + Your own S3</p>
                     <h3 class="text-2xl font-semibold text-textStrong">Bring your own storage</h3>
                 </div>
 
@@ -148,7 +148,7 @@ faqs:
                             <tr>
                                 <th class="text-left p-4 font-semibold text-textStrong">Features</th>
                                 <th class="text-center p-4 font-semibold text-textStrong">Monoscope Cloud</th>
-                                <th class="text-center p-4 font-semibold text-textStrong bg-fillBrand-weak">Cloud + Your S3</th>
+                                <th class="text-center p-4 font-semibold text-textStrong bg-fillBrand-weak">Cloud + Your own S3</th>
                                 <th class="text-center p-4 font-semibold text-textStrong">Self-Hosted</th>
                             </tr>
                         </thead>
@@ -174,7 +174,7 @@ faqs:
                             <tr class="hover:bg-fillWeak">
                                 <td class="p-4 text-textWeak">Data ownership</td>
                                 <td class="p-4 text-center">Monoscope managed</td>
-                                <td class="p-4 text-center bg-fillBrand-weak font-semibold text-textStrong">Your S3 bucket</td>
+                                <td class="p-4 text-center bg-fillBrand-weak font-semibold text-textStrong">Your own S3 bucket</td>
                                 <td class="p-4 text-center font-semibold text-textStrong">Complete control</td>
                             </tr>
                             <tr class="hover:bg-fillWeak">
