@@ -1,4 +1,5 @@
 ---
+enableFreeTier: false
 testimonials:
   - stat: 20x
     desc: faster <span class="underline underline-offset-4 decoration-dotted tooltip tooltip-right" data-tip="mean time to resolution">MTTR</span>
@@ -494,10 +495,14 @@ platforms:
           <div class="border-t border-strokeWeak pt-6 space-y-4">
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
-              <p class="text-2xl font-semibold text-textStrong">
-                Free <span class="text-base font-normal text-textWeak">up to 10k events/day</span>
-              </p>
-              <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                {% if this.frontmatter.enableFreeTier %}
+                      <p class="text-2xl font-semibold text-textStrong">
+                       <span id="cloud_price">Free</span> <span class="text-base font-normal text-textWeak" id="cloud_price_desc">up to 10k events/day</span>
+                      </p>
+                      <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                 {% else %}
+                      <p class="text-base text-textWeak"><strong class="text-textStrong text-2xl">$34</strong>/month for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                 {% endif %}
             </div>
             <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
           </div>

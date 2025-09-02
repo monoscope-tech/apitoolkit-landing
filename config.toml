@@ -8,6 +8,7 @@ enableRobotsTXT = true
 canonifyURLs = true
 summarylength = 30
 
+
 [Params]
 mainSections = ["blog"]
 intro = true
@@ -20,6 +21,7 @@ opengraph = true
 shareTwitter = true
 dateFormat = "Mon, Jan 2, 2006"
 ogimage = "/main-og.png"
+enableFreeTier = true 
 
 [taxonomies]
 

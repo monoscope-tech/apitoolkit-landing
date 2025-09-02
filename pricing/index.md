@@ -2,6 +2,7 @@
 title: Pricing
 date: 2022-03-23
 updatedDate: 2024-06-15
+enableFreeTier: false
 faqs:
   - q: What's included in the free tier?
     a: The free tier includes 10,000 events per day, unlimited team members, 30 days data retention, and access to all core features including logs, traces, API documentation, and custom monitors. Perfect for hobby projects and getting started.
@@ -60,10 +61,15 @@ faqs:
                 <div class="border-t border-strokeWeak pt-6 space-y-4">
                     <div class="space-y-2">
                         <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
-                        <p class="text-2xl font-semibold text-textStrong">
+                         {% if this.frontmatter.enableFreeTier %}
+                             <p class="text-2xl font-semibold text-textStrong">
                             <span id="cloud_price">Free</span> <span class="text-base font-normal text-textWeak" id="cloud_price_desc">up to 10k events/day</span>
-                        </p>
-                        <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                            </p>
+                              <p class="text-base text-textWeak">Then <strong class="text-textStrong">$34/month</strong> for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                         {% else %}
+                            <p class="text-base text-textWeak"><strong class="text-textStrong text-2xl">$34</strong>/month for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
+                        {% endif %}
+                      
                     </div>
                     <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
                 </div>
@@ -141,7 +147,7 @@ faqs:
         <!-- Feature Comparison Table -->
         <section class="w-full py-12 text-textWeak">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-2xl font-semibold text-center mb-8 text-textStrong">Compare Features Across Plans</h2>
+                <h2 class="text-2xl font-semibold text-center mb-8 text-textStrong">Compare Features Across Plans.</h2>
                 <div class="overflow-x-auto">
                     <table class="w-full border border-gray-200 rounded-lg overflow-hidden">
                         <thead class="bg-fillWeak">
@@ -155,7 +161,13 @@ faqs:
                         <tbody class="divide-y divide-gray-200">
                             <tr class="hover:bg-fillWeak">
                                 <td class="p-4 text-textWeak">Events per month</td>
-                                <td class="p-4 text-center">10k/day free, then unlimited</td>
+                                <td class="p-4 text-center">
+                                  {% if this.frontmatter.enableFreeTier %}
+                                    10k/day free, then unlimited
+                                  {% else %}
+                                    Unlimited
+                                  {% endif %}
+                                </td>
                                 <td class="p-4 text-center bg-fillBrand-weak">Unlimited</td>
                                 <td class="p-4 text-center">Unlimited</td>
                             </tr>
@@ -358,7 +370,10 @@ faqs:
               </div>
 
               <div class="md:w-2/3 space-y-3">
-                  {% for faq in this.frontmatter.faqs %}
+                {% for faq in this.frontmatter.faqs %}
+                  {% if faq.q == "What's included in the free tier?" and this.frontmatter.enableFreeTier == false %}
+                    {% continue %}
+                  {% endif %}
                   <div class="border border-strokeWeak rounded-lg p-6 bg-fillWeak hover:bg-fillBrand-weak transition-colors">
                       <button class="cursor-pointer flex gap-4 items-center text-left w-full hover:text-textStrong" onclick="toggleFaq(event)">
                           <svg class="shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70 transition-transform"><use xlink:href="/assets/deps/fontawesome/solid.svg#caret-right"></use></svg>
@@ -366,7 +381,7 @@ faqs:
                       </button>
                       <div class="pl-9 pt-4 hidden text-textWeak">{{faq.a}}</div>
                   </div>
-                  {% endfor %}
+                {% endfor %}
               </div>
           </div>
         </section>
