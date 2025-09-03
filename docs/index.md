@@ -33,22 +33,22 @@ pageFullWidth: true
 Explore our product and SDK documentation to get started with using monoscope.
 
 ```=html
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-12">
-    <a href="/docs/onboarding" class="docs-card rounded-md">
-        <p><i class="fa-regular fa-circle-play h-5 w-5 mr-2"></i><span class="text-xl font-bold text-black dark:text-white">Quickstart</span></p>
-        <span class="px-8 font-normal text-gray-600 dark:text-white">Get started with using monoscope in a few steps.</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+    <a href="/docs/onboarding" class="docs-card rounded-lg">
+        <p><i class="fa-solid fa-rocket"></i><span class="text-xl font-semibold">Quickstart</span></p>
+        <span>Get started with monoscope in just a few steps. Follow our simple setup guide.</span>
     </a>
-    <a href="/docs/features" class="docs-card rounded-md">
-        <p><i class="fa-regular fa-folder-tree h-5 w-5 mr-2"></i><span class="text-xl font-bold text-black dark:text-white">Features</span></p>
-        <span class="px-8 font-normal text-gray-600 dark:text-white">Explore all monoscope key features in detail.</span>
+    <a href="/docs/features" class="docs-card rounded-lg">
+        <p><i class="fa-solid fa-layer-group"></i><span class="text-xl font-semibold">Features</span></p>
+        <span>Explore all monoscope key features - monitoring, testing, error tracking, and more.</span>
     </a>
-    <a href="/docs/sdks" class="docs-card rounded-md">
-        <p><i class="fa-regular fa-plug h-5 w-5 mr-2"></i><span class="text-xl font-bold text-black dark:text-white">SDK Guides</span></p>
-        <span class="px-8 font-normal text-gray-600 dark:text-white">Learn how to integrate monoscope using any of our SDKs for different programming languages and frameworks.</span>
+    <a href="/docs/sdks" class="docs-card rounded-lg">
+        <p><i class="fa-solid fa-code"></i><span class="text-xl font-semibold">SDK Guides</span></p>
+        <span>Integrate monoscope using our SDKs for Node.js, Python, Go, and 14+ other frameworks.</span>
     </a>
-    <a href="/docs/dashboard" class="docs-card rounded-md">
-        <p><i class="fa-regular fa-chart-line h-5 w-5 mr-2"></i><span class="text-xl font-bold text-black dark:text-white">Dashboard Guides</span></p>
-        <span class="px-8 font-normal text-gray-600 dark:text-white">Explore monoscope's dashboard and learn how to navigate through all the available features and settings.</span>
+    <a href="/docs/dashboard" class="docs-card rounded-lg">
+        <p><i class="fa-solid fa-chart-line"></i><span class="text-xl font-semibold">Dashboard Guides</span></p>
+        <span>Navigate through monoscope's dashboard features, settings, and analytics tools.</span>
     </a>
 </div>
 ```

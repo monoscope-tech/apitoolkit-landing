@@ -44,11 +44,11 @@ Kindly select your preferred programming language below to get started.
 ```
 
 ```=html
-<div id="sdk-images" class="mt-8 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 text-center items-center align-center">
+<div id="sdk-images" class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
   {% for page in this.frontmatter.pages %}
-    <a href="{{ page.slug }}" class="docs-card-2 rounded-md">
-      <img src={{ page.icon }} alt={{ page.title }} class="h-16 w-16 not-prose" />
-      <p class="text-sm font-bold text-black dark:text-white">{{ page.title }}</p>
+    <a href="{{ page.slug }}" class="docs-card-2 rounded-lg">
+      <img src="{{ page.icon }}" alt="{{ page.title }}" class="h-12 w-12 not-prose" />
+      <p class="text-sm font-semibold">{{ page.title }}</p>
     </a>
   {% endfor %}
 </div>

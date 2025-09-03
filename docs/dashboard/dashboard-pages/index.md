@@ -38,11 +38,11 @@ pages:
 # Dashboard Pages
 
 ```=html
-<div class="mt-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 text-center">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 {% for page in this.frontmatter.pages %}
-  <a href="{{ page.slug }}" class="docs-card-2 rounded-md">
-    <i class="fa-regular fa-{{ page.icon }} h-5 w-5 mr-2"></i>
-    <p class="text-sm font-bold text-black dark:text-white">{{ page.title }}</p>
+  <a href="{{ page.slug }}" class="docs-card-2 rounded-lg">
+    <i class="fa-solid fa-{{ page.icon }}"></i>
+    <p class="text-sm font-semibold">{{ page.title }}</p>
   </a>
 {% endfor %}
 </div>

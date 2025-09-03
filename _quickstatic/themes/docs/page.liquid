@@ -103,20 +103,70 @@
       .docs-card {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 100%;
-        height: 16rem;
+        padding: 1.5rem;
         text-decoration: none;
-        border-width: 2px;
-        border-color: #b3b3b3;
-        filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+        border-width: 1px;
+        border-color: var(--color-strokeWeak);
+        background-color: var(--color-bgRaised);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        transition: all 300ms ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .docs-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 0;
+        background-color: var(--color-fillBrand-strong);
+        transition: height 300ms ease;
       }
 
       .docs-card:hover {
-        border-color: var(--color-strokeBrand-strong);
-        transform: translateY(-0.7rem);
-        transition-duration: 300ms;
+        border-color: var(--color-strokeBrand-weak);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px var(--color-strokeBrand-weak);
+      }
+
+      .docs-card:hover::before {
+        height: 100%;
+      }
+
+      .docs-card p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .docs-card i {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, var(--color-fillBrand-strong), var(--color-fillInformation-strong));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+        transition: transform 300ms ease;
+      }
+
+      .docs-card:hover i {
+        transform: scale(1.1);
+      }
+
+      .docs-card span:not(.text-xl) {
+        margin-top: 0.5rem;
+        color: var(--color-textWeak);
+        line-height: 1.5;
+        padding-left: 0;
+        text-align: left;
+        display: block;
+        font-weight: normal;
       }
 
       .docs-card-2 {
@@ -125,16 +175,79 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 12rem;
+        min-height: 9rem;
+        padding: 1.5rem;
         text-decoration: none;
-        border-width: 2px;
-        border-color: #b3b3b3;
+        border-width: 1px;
+        border-color: var(--color-strokeWeak);
+        background-color: var(--color-bgRaised);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        transition: all 300ms ease;
+        gap: 0.75rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .docs-card-2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, var(--color-fillBrand-weak) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 300ms ease;
+        z-index: 0;
       }
 
       .docs-card-2:hover {
-        border-color: var(--color-strokeBrand-strong);
-        transform: translateY(-0.5rem);
-        transition-duration: 300ms;
+        border-color: var(--color-strokeBrand-weak);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px var(--color-strokeBrand-weak);
+      }
+
+      .docs-card-2:hover::before {
+        opacity: 1;
+      }
+
+      .docs-card-2 i {
+        font-size: 4.5rem;
+        background: linear-gradient(135deg, var(--color-fillBrand-strong), var(--color-fillInformation-strong));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 0.75rem;
+        position: relative;
+        z-index: 1;
+        transition: all 300ms ease;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+      }
+
+      .docs-card-2:hover i {
+        transform: scale(1.15) translateY(-2px);
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+      }
+
+      .docs-card-2 img {
+        transition: transform 300ms ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .docs-card-2:hover img {
+        transform: scale(1.05);
+      }
+
+      .docs-card-2 p {
+        font-weight: normal;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .docs-card-2 p.font-semibold {
+        font-weight: 600;
       }
 
       .callout {
