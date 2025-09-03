@@ -31,7 +31,7 @@ In these guides, you will learn more about all monoscope key features in detail.
 {% for page in this.frontmatter.pages %}
   <a href="{{ page.slug }}" class="docs-card-2 rounded-lg">
     <i class="fa-solid fa-{{ page.icon }}"></i>
-    <p class="text-base font-semibold">{{ page.title }}</p>
+    <p class="text-lg">{{ page.title }}</p>
   </a>
 {% endfor %}
 </div>

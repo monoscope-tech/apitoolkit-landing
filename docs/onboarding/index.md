@@ -186,11 +186,11 @@ Now that you have set up your new project with monoscope, you should explore the
 ```=html
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
     <a href="/docs/sdks" class="docs-card rounded-lg">
-        <p><i class="fa-solid fa-code"></i><span class="text-xl font-semibold">SDK Guides</span></p>
+        <p><i class="fa-solid fa-code"></i><span class="text-2xl">SDK Guides</span></p>
         <span>Integrate monoscope using our SDKs for Node.js, Python, Go, and 14+ other frameworks.</span>
     </a>
     <a href="/docs/dashboard" class="docs-card rounded-lg">
-        <p><i class="fa-solid fa-chart-line"></i><span class="text-xl font-semibold">Dashboard Guides</span></p>
+        <p><i class="fa-solid fa-chart-line"></i><span class="text-2xl">Dashboard Guides</span></p>
         <span>Navigate through monoscope's dashboard features, settings, and analytics tools.</span>
     </a>
 </div>

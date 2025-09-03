@@ -58,7 +58,7 @@ In these guides, you will learn how to effectively navigate through the monoscop
 {% for page in this.frontmatter.pages %}
   <a href="{{ page.slug }}" class="docs-card-2 rounded-lg">
     <i class="fa-solid fa-{{ page.icon }}"></i>
-    <p class="text-sm font-semibold text-center">{{ page.title }}</p>
+    <p class="text-base text-center">{{ page.title }}</p>
   </a>
 {% endfor %}
 </div>

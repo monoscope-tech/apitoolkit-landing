@@ -48,7 +48,7 @@ Kindly select your preferred programming language below to get started.
   {% for page in this.frontmatter.pages %}
     <a href="{{ page.slug }}" class="docs-card-2 rounded-lg">
       <img src="{{ page.icon }}" alt="{{ page.title }}" class="h-12 w-12 not-prose" />
-      <p class="text-sm font-semibold">{{ page.title }}</p>
+      <p class="text-base">{{ page.title }}</p>
     </a>
   {% endfor %}
 </div>

@@ -22,23 +22,34 @@ faqs:
     a: For a start, monoscope is an API-first monitoring and observability platform. We track all the live users' requests that come in and out of your application (for both internal and external APIs in use) and analyze the requests to catch bugs and breaking changes, while also tracking all the errors and exceptions that happen while we are processing the requests. Kindly explore our <a href="/compare/">comparison pages</a> to see how we stand out compared to different platforms.
 ---
 
+# Frequently Asked Questions
+
 ```=html
-<section class="max-w-7xl px-3 w-full text-textWeak flex flex-col md:flex-row gap-8">
-
-    <div class="grow mt-4">
-        <p class="text-4xl font-bold mb-3">Frequently Asked <br/> Questions</p>
-    </div>
-
-    <div class="flex w-full md:w-[40%] flex-col gap-4 text-gray-700 dark:text-base-content">
+<section class="max-w-4xl">
+    <div class="flex flex-col gap-4">
         {% for faq in this.frontmatter.faqs %}
-        <div class="bg-secondary text-white px-6 py-3 shadow-sm">
-            <button class="flex gap-4 items-center text-left" onclick="toggleFaq(event)">
-            <svg class="shrink-0 icon h-5 w-5 text-current fill-current stroke-current opacity-70"><use xlink:href="/assets/deps/fontawesome/solid.svg#caret-right"></use></svg>
-            {{faq.q}}
+        <div class="border border-strokeWeak bg-bgRaised rounded-lg overflow-hidden">
+            <button class="flex gap-3 items-center text-left w-full px-6 py-4 hover:bg-fillWeak transition-colors" onclick="toggleFaq(event)">
+                <i class="fa-solid fa-chevron-right text-iconNeutral text-sm transition-transform"></i>
+                <span class="font-medium text-textStrong">{{faq.q}}</span>
             </button>
-            <div class="pl-4 py-4 hidden text-white dark:text-base-content faq-answer">{{faq.a}}</div>
+            <div class="px-6 pb-4 pl-12 hidden faq-answer text-textWeak">
+                {{faq.a}}
+            </div>
         </div>
         {% endfor %}
-        </div>
+    </div>
 </section>
+
+<script>
+function toggleFaq(event) {
+    const button = event.currentTarget;
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector('i');
+    
+    answer.classList.toggle('hidden');
+    icon.classList.toggle('fa-chevron-right');
+    icon.classList.toggle('fa-chevron-down');
+}
+</script>
 ```

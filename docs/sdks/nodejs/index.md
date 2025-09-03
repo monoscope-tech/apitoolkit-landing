@@ -30,7 +30,7 @@ pages:
 {% for page in this.frontmatter.pages %}
   <a href="{{ page.slug }}" class="docs-card-2 rounded-md">
     <img src={{ page.icon }} alt={{ page.title }} class="h-16 w-16 not-prose" />
-    <p class="text-sm font-bold text-black dark:text-white">{{ page.title }}</p>
+    <p class="text-base text-black dark:text-white">{{ page.title }}</p>
   </a>
 {% endfor %}
 </div>
