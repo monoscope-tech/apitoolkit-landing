@@ -107,8 +107,8 @@ Choosing the right error monitoring software for your small business can be daun
 
 ### Apitoolkit
 
-![apitookit](./APIToolkit.png)
- APItoolkit is ideal for businesses heavily reliant on APIs, APItoolkit monitors for API issues like latency, timeouts, and response errors. Its free plan covers numerous API calls per month, making it perfect for startups and small teams.
+![apitookit](./monoscope.png)
+ monoscope is ideal for businesses heavily reliant on APIs, monoscope monitors for API issues like latency, timeouts, and response errors. Its free plan covers numerous API calls per month, making it perfect for startups and small teams.
 
  **Features**
 * Real-Time Monitoring and Analytics
@@ -236,7 +236,7 @@ This modern error monitoring tool emphasizes distributed tracing and root cause 
 
 ## Conclusion
 
-As small business grows, having visibility into application errors and crashes becomes crucial for maintaining reliability and user experience. However, many robust error monitoring solutions carry a high price tag that puts them out of reach for bootstrapped startups and small teams. The good news is there are plenty of affordable options like APItoolkit to consider that provide basic error aggregation, alerting, and diagnostics capabilities.
+As small business grows, having visibility into application errors and crashes becomes crucial for maintaining reliability and user experience. However, many robust error monitoring solutions carry a high price tag that puts them out of reach for bootstrapped startups and small teams. The good news is there are plenty of affordable options like monoscope to consider that provide basic error aggregation, alerting, and diagnostics capabilities.
 
 **Keep Reading**
 [Understanding the Distinction: Synthetic API Monitoring vs API Real User Monitoring ](https://monoscope.tech/blog/understanding-the-distinction/)

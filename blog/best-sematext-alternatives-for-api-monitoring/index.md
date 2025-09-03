@@ -1,6 +1,6 @@
 ---
 title: Best Sematext alternatives for API monitoring
-featured_image: APIToolkit.png
+featured_image: monoscope.png
 date: 2024-01-20T06:44:56+02:00
 description: "In fact almost every  up and running system make use of APIs on way or another. APIs act as the silent workhorses,"
 author: elliot
@@ -57,10 +57,10 @@ And let's not forget the UI slowdown under data pressure and the Logsene search 
 
 ## 7 Best Sematext alternatives for API monitoring
 
-### 1. APItoolkit
+### 1. monoscope
 
-![APItoolkit](./APIToolkit.png)
-[APItoolkit](https://monoscope.tech/) provides monitoring,observability, and analytics capabilities similar to those offered by RapidAPI. It offers real-time logs, request/response details, error tracking, and customizable alerts.
+![monoscope](./monoscope.png)
+[monoscope](https://monoscope.tech/) provides monitoring,observability, and analytics capabilities similar to those offered by RapidAPI. It offers real-time logs, request/response details, error tracking, and customizable alerts.
 
 #### **Features**
 

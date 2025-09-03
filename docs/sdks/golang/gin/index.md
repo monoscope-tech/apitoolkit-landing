@@ -10,7 +10,7 @@ menuWeight: 4
 
 ## Installation
 
-Install the APIToolkit gin SDK using the following command `go get` command:
+Install the monoscope gin SDK using the following command `go get` command:
 
 ```sh
 go get github.com/monoscope-tech/monoscope-go/gin
@@ -312,7 +312,7 @@ func main() {
 }
 ```
 
-All redis operations will be monitored by the OpenTelemetry SDK and can be viewed in you APIToolkit log explorer.
+All redis operations will be monitored by the OpenTelemetry SDK and can be viewed in you monoscope log explorer.
 
 ## All Environment Variables
 

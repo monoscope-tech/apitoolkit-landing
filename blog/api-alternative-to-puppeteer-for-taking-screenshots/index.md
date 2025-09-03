@@ -52,7 +52,7 @@ You need to install the library:
 npm i puppeteer
 ```
 
-Then it is straightforward to take a simple screenshot of the [APItoolkit.io site for monitoring APIs](https://monoscope.tech/): 
+Then it is straightforward to take a simple screenshot of the [monoscope.io site for monitoring APIs](https://monoscope.tech/): 
 
 ```javascript
 'use strict';

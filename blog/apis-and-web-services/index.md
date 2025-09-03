@@ -93,7 +93,7 @@ Read: [How to Generate Automated API Documentation](https://monoscope.tech/blog/
 
 To wrap up, understanding APIs and Web Services is more than a technical distinction; it's about grasping how modern software applications interact and operate efficiently. APIs are application interfaces, meaning that one application is able to interact with another application in a standardized way, while Web Services, particularly RESTful ones, are a type of API, which must be accessed through a network connection. REST APIs are a standardized architecture for building web APIs using HTTP methods. Grasping these concepts not only clarifies software development but also opens doors to creating more robust, flexible, and interconnected applications
 
-Lastly, [APIToolkit](https://monoscope.tech) is one platform where you can [monitor your APIs and web services](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/). [Click here to find out how](https://monoscope.tech).
+Lastly, [monoscope](https://monoscope.tech) is one platform where you can [monitor your APIs and web services](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/). [Click here to find out how](https://monoscope.tech).
 
 **Also Read**
 

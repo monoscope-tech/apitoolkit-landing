@@ -7,7 +7,7 @@ menuWeight: 5
 
 # Changes & Errors Page
 
-In this guide, you will learn how to effectively navigate through the **Changes & Errors** page on the APItoolkit dashboard and maximize all the powerful features accessible in it.
+In this guide, you will learn how to effectively navigate through the **Changes & Errors** page on the monoscope dashboard and maximize all the powerful features accessible in it.
 
 ```=html
 <hr />
@@ -15,7 +15,7 @@ In this guide, you will learn how to effectively navigate through the **Changes 
 
 On this page, you will find a list of all ongoing **anomalies** (new **Request Shapes**, **Field Formats**, or **Endpoints**) detected from different request types on your API, including the endpoints they were detected on, and the new, updated, or deleted fields detected. You can **sort** the list based on the first/last time the anomaly was seen or the number of associated events, **acknowledge** or **archive** each anomaly, and click on each list item to explore them in more detail.
 
-![Screenshot of APItoolkit's changes & errors page](/docs/dashboard/dashboard-pages/changes-errors/changes-errors.png)
+![Screenshot of monoscope's changes & errors page](/docs/dashboard/dashboard-pages/changes-errors/changes-errors.png)
 
 ```=html
 <div class="callout">
@@ -27,7 +27,7 @@ On this page, you will find a list of all ongoing **anomalies** (new **Request S
 ```=html
 <div class="callout">
   <i class="fa-regular fa-lightbulb"></i>
-  <p>When you acknowledge an anomaly, APItoolkit understands the shape of the endpoints on your API and uses that information for future anomaly detections. As a side effect, we then use that to trigger the <a href="/docs/dashboard/documentation/">OpenAPI spec generation</a> feature we offer and send you daily/weekly reports. Hence, <b>you should acknowledge all important detected anomalies</b>.</p>
+  <p>When you acknowledge an anomaly, monoscope understands the shape of the endpoints on your API and uses that information for future anomaly detections. As a side effect, we then use that to trigger the <a href="/docs/dashboard/documentation/">OpenAPI spec generation</a> feature we offer and send you daily/weekly reports. Hence, <b>you should acknowledge all important detected anomalies</b>.</p>
 </div>
 ```
 
@@ -41,7 +41,7 @@ Here's a quick video overview for a visual walkthrough of this page:
 <iframe
   class="w-full h-48 md:h-96 lg:h-96 xl:h-96"
   src="https://www.youtube.com/embed/4F4l-hjpUfs?si=prafvDIDS2IPwWsT"
-  title="YouTube Video Player: APItoolkit Error Tracking & Breaking Change Detection"
+  title="YouTube Video Player: monoscope Error Tracking & Breaking Change Detection"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
   allowfullscreen

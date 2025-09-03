@@ -141,7 +141,7 @@ The development of Fintech API has been significantly influenced by open banking
 
 ***
 
-Our API monitoring and observability software (APIToolkit) guarantees the uninterrupted performance of your APIs. It was built by developers for developers. Our suite of features includes anomaly detection, logs and metrics explorer, automated API documentation, mission controls, etc. 
+Our API monitoring and observability software (monoscope) guarantees the uninterrupted performance of your APIs. It was built by developers for developers. Our suite of features includes anomaly detection, logs and metrics explorer, automated API documentation, mission controls, etc. 
 
 [Check it out here](https://monoscope.tech).
 

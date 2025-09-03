@@ -11,12 +11,12 @@ testimonials:
     logo: sameday.svg
     theme: Brand
     color: d3e5f0
-  - quote: "We had a major upgrade planned for our iOS/Android app... After adding APItoolkit to our laravel app, we could see every new route and request. It gave me and the dev team complete confidence that our users weren't being affected by our changes. <br/><br/>... became the smoothest and LEAST STRESSFUL rollouts we have ever done. Really an amazing tool and now a permanent part of our workflow. Thank you!!"
+  - quote: "We had a major upgrade planned for our iOS/Android app... After adding monoscope to our laravel app, we could see every new route and request. It gave me and the dev team complete confidence that our users weren't being affected by our changes. <br/><br/>... became the smoothest and LEAST STRESSFUL rollouts we have ever done. Really an amazing tool and now a permanent part of our workflow. Thank you!!"
     photo: larrison_morrison.jpeg
     name: Lazarus Morrison
     title: Founder of Community Fluency
     logo_raw: <div class="inline-flex items-center text-lg gap-1"><img src="/assets/img/customers/community_fluency.png" alt="Community Fluency" class="logo1 logo2"/> <span class="hidden sm:inline-block">Community<strong class="text-lg!">Fluency</strong></span></div>
-  - quote: "The best observability tool we use today at Woodcore, APItoolkit notifies us about any slight change that happens on the system. <br/><br/>Most especially, for the features we utilise today on APItoolkit, would cost us a lot more elsewhere."
+  - quote: "The best observability tool we use today at Woodcore, monoscope notifies us about any slight change that happens on the system. <br/><br/>Most especially, for the features we utilise today on monoscope, would cost us a lot more elsewhere."
     photo: samuel_joseph.jpeg
     name: Samuel Joseph
     title: CEO of Woodcore
@@ -41,7 +41,7 @@ testimonials:
     logo: payfonte.svg
     theme: Brand
     color: e6fae3
-  - quote: "I fell for ApitoolKit because it integrated effortlessly with my application and provided valuable API insights. Whenever I needed help, the team was always ready to listen and resolve any issues. That's why we pay for their service."
+  - quote: "I fell for monoscope because it integrated effortlessly with my application and provided valuable API insights. Whenever I needed help, the team was always ready to listen and resolve any issues. That's why we pay for their service."
     photo: david_odohi.jpeg
     name: Odohi David
     title: CTO of Grovepay

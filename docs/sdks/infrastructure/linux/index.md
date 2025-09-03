@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit on Linux
-ogTitle: How to Integrate APItoolkit on Linux Systems using OpenTelemetry Collector
+title: Integrating monoscope on Linux
+ogTitle: How to Integrate monoscope on Linux Systems using OpenTelemetry Collector
 faLogo: linux
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,9 +8,9 @@ linkTitle: "Linux"
 menuWeight: 30
 ---
 
-# Integrating APItoolkit on Linux
+# Integrating monoscope on Linux
 
-This guide covers how to integrate APItoolkit with applications running on Linux systems using the OpenTelemetry Collector for infrastructure-level monitoring without requiring code changes.
+This guide covers how to integrate monoscope with applications running on Linux systems using the OpenTelemetry Collector for infrastructure-level monitoring without requiring code changes.
 
 ```=html
 <hr>
@@ -20,7 +20,7 @@ This guide covers how to integrate APItoolkit with applications running on Linux
 
 - Linux server (Ubuntu, Debian, CentOS, etc.)
 - Root or sudo access
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Installing the OpenTelemetry Collector
 
@@ -132,7 +132,7 @@ service:
       exporters: [otlp]
 ```
 
-Replace `YOUR_API_KEY` with your actual APItoolkit project key.
+Replace `YOUR_API_KEY` with your actual monoscope project key.
 
 3. Create a systemd service for the collector:
 
@@ -400,11 +400,11 @@ After setting up the OpenTelemetry Collector:
    sudo journalctl -u otel-collector
    ```
 
-3. Verify in your APItoolkit dashboard that telemetry data is being received
+3. Verify in your monoscope dashboard that telemetry data is being received
 
 ## Next Steps
 
-- Configure alerts in APItoolkit based on system metrics and API performance
+- Configure alerts in monoscope based on system metrics and API performance
 - Set up custom dashboards for correlating system metrics with API performance
 - Deploy the collector to multiple servers for cluster-wide monitoring
-- Use the insights from APItoolkit to optimize your server and API performance
+- Use the insights from monoscope to optimize your server and API performance

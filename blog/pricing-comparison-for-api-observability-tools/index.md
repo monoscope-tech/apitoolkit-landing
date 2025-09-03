@@ -48,11 +48,11 @@ Cons: Requires careful monitoring of data volume to avoid overages.
 
 ![al](./price%20comparison.png)
 
-## Why Choose APItoolkit
+## Why Choose monoscope
 
-Now that we've dissected the competitive landscape, it's time to introduce APItoolkit as the value leader
+Now that we've dissected the competitive landscape, it's time to introduce monoscope as the value leader
 
-APItoolkit is built with focus on efficiency and affordability, APItoolkit enables you to gain deep insights into your APIs.
+monoscope is built with focus on efficiency and affordability, monoscope enables you to gain deep insights into your APIs.
 
 We provide a comprehensive suite of observability features, including real-time monitoring of API performance metrics, detailed tracing for pinpointing bottlenecks, and robust error management for proactive issue identification.
 

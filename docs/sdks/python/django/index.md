@@ -29,7 +29,7 @@ opentelemetry-bootstrap -a install
 
 ## Setup Open Telemetry
 
-Setting up open telemetry allows you to send traces, metrics and logs to the APIToolkit platform.
+Setting up open telemetry allows you to send traces, metrics and logs to the monoscope platform.
 To setup open telemetry, you need to configure the following environment variables:
 
 ```sh

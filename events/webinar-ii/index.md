@@ -1,5 +1,5 @@
 ---
-title: "Webinar II: Backend Performance and Error Monitoring with APItoolkit"
+title: "Webinar II: Backend Performance and Error Monitoring with monoscope"
 date: 2024-06-06
 ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/webinar-ii.png
 ---
@@ -11,11 +11,11 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/webina
 
 ### Webinar II
 
-# Backend Performance and Error Monitoring with APItoolkit
+# Backend Performance and Error Monitoring with monoscope
 
 ![Webinar II Banner](./banner.png)
 
-Are you an engineer grappling with constant downtime, sluggish backend performance, frequent code breaks, and persistent API and third-party integration issues? Join us for an insightful webinar, "**Backend Performance and Error Monitoring with APItoolkit**," where we'll delve into these challenges and explore practical solutions to overcome them.
+Are you an engineer grappling with constant downtime, sluggish backend performance, frequent code breaks, and persistent API and third-party integration issues? Join us for an insightful webinar, "**Backend Performance and Error Monitoring with monoscope**," where we'll delve into these challenges and explore practical solutions to overcome them.
 
 **Date**: 28th, June 2024.
 

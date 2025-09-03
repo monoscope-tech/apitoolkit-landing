@@ -3,7 +3,7 @@ title: "How to Troubleshoot and Debug Your APIs with API Observability Tools"
 featured_image: how-to-troubleshoot-and-debug-with-api-observability-tools.png
 date: 2023-08-18T18:36:58+02:00
 author: jessica
-description: "Here is how to Troubleshoot and Debug Your APIs using APIToolkit"
+description: "Here is how to Troubleshoot and Debug Your APIs using monoscope"
 categories:
   - API Observability
 --- 
@@ -60,19 +60,19 @@ API Perspective: Many APIs rely on other services to function. If a dependent se
 
 Using the ice cream shop as an analogy, we see the myriad challenges both face in ensuring smooth operations. Whether it's scooping ice cream or processing data, timely and accurate delivery is key to keeping everyone happy.
 
-## How to Use Observability Tools for API Troubleshooting with APIToolkit
+## How to Use Observability Tools for API Troubleshooting with monoscope
 
-In the world of digital transformation, APIs power a significant chunk of the modern web. But with great power comes great responsibility, especially when things go haywire and  observability tools like [APIToolkit](https://monoscope.tech/) makes the difference. In this guide, we'll walk through how you can harness APIToolkit to troubleshoot and ensure your APIs run as smoothly as silk.
+In the world of digital transformation, APIs power a significant chunk of the modern web. But with great power comes great responsibility, especially when things go haywire and  observability tools like [monoscope](https://monoscope.tech/) makes the difference. In this guide, we'll walk through how you can harness monoscope to troubleshoot and ensure your APIs run as smoothly as silk.
 
-1. Sign in to the [APIToolkit](https://app.monoscope.tech/) dashboard.
+1. Sign in to the [monoscope](https://app.monoscope.tech/) dashboard.
 2. Click on 'Sign Up' and enter your details.
    ![Sign in page](signin-page.png)
-3. Once logged in, go ahead and integrate your APIs into APIToolkit using these [docs](https://monoscope.tech/docs/get-started/quickstarts/)
-4. Follow the prompts to connect your API to APIToolkit.
+3. Once logged in, go ahead and integrate your APIs into monoscope using these [docs](https://monoscope.tech/docs/get-started/quickstarts/)
+4. Follow the prompts to connect your API to monoscope.
    ![Dashboard](dashboard.png)
 5. Now your page is automatically configured with specific endpoints, setting rate limits, and more. All incoming requests are monitored for anomalies, new endpoints, slow end points and more.
 6. Your main dashboard will display key metrics, including requests, anomalies, endpoints, error rates, signatures, fields and latency percentiles.
-   ![APIToolkit Dashboard](apitoolkit-dashboard.png)
+   ![monoscope Dashboard](apitoolkit-dashboard.png)
 7. Now navigate to the 'API Log Explorer' section from your main dashboard.
 8. Here, you'll see a chronological record of all API activity.
    ![LOg explorer](api-log-explorer.jpeg)
@@ -93,10 +93,10 @@ As requests navigate through your system, consistent tracing ensures you have a 
 Feedback Loops: Using Observability Insights to Improve the API's Design and Performance
 Observability isn't just about identifying problems; it's about continuous improvement. Think of it as customer feedback in a restaurant. By listening and making changes, the restaurant continually improves its service. Regularly review the insights gained from your observability tools. Use this data to refine your API's design, optimize performance, and enhance the overall user experience.
 
-API observability isn't a luxury, it's a necessity. It provides the flashlight in the dark alleyways of system breakdowns, guiding us towards swift resolutions and ensuring the digital experiences we offer remain seamless. As we've explored, it's not just about having tools but using them wisely. So, as you venture into the world of APIs, arm yourself with the right observability practices and tools, like [APIToolkit](https://monoscope.tech/), to ensure your APIs not only run smoothly but also mature and improve over time.
+API observability isn't a luxury, it's a necessity. It provides the flashlight in the dark alleyways of system breakdowns, guiding us towards swift resolutions and ensuring the digital experiences we offer remain seamless. As we've explored, it's not just about having tools but using them wisely. So, as you venture into the world of APIs, arm yourself with the right observability practices and tools, like [monoscope](https://monoscope.tech/), to ensure your APIs not only run smoothly but also mature and improve over time.
 
 Conclusion
-APIs are the lifeblood of many digital platforms. Ensuring their smooth operation is crucial. With [APIToolkit](https://monoscope.tech/), you're equipped with a robust toolset to monitor, trace, and analyze your APIs, ensuring optimal performance and swift troubleshooting. Keep this guide handy, and may your APIs always be in top form!
+APIs are the lifeblood of many digital platforms. Ensuring their smooth operation is crucial. With [monoscope](https://monoscope.tech/), you're equipped with a robust toolset to monitor, trace, and analyze your APIs, ensuring optimal performance and swift troubleshooting. Keep this guide handy, and may your APIs always be in top form!
 
 ---
 

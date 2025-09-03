@@ -77,11 +77,11 @@ As we mentioned earlier, there are many possible causes and examples of applicat
 
 There are many error monitoring tools available in the market, each with its own features and capabilities. Some of the popular error monitoring tools are:
 
-- **APIToolkit**: [APIToolkit](https://monoscope.tech) is a cloud-based error monitoring tool that helps you track and fix errors in real-time. APIToolkit supports various languages and platforms, such as Python, Java, JavaScript, Ruby, PHP, etc. APIToolkit provides you with rich and detailed error reports, including stack traces, user feedback, breadcrumbs, tags, etc. APIToolkit also integrates with various tools and services, such as GitHub, Slack, Jira, etc.
+- **monoscope**: [monoscope](https://monoscope.tech) is a cloud-based error monitoring tool that helps you track and fix errors in real-time. monoscope supports various languages and platforms, such as Python, Java, JavaScript, Ruby, PHP, etc. monoscope provides you with rich and detailed error reports, including stack traces, user feedback, breadcrumbs, tags, etc. monoscope also integrates with various tools and services, such as GitHub, Slack, Jira, etc.
 - **Rollbar**: Rollbar is another cloud-based error monitoring tool that helps you identify and resolve errors quickly and efficiently. Rollbar supports various languages and frameworks, such as Node.js, React, Angular, Laravel, Django, etc. Rollbar provides you with comprehensive and actionable error insights, including error trends, root causes, impact analysis, etc. Rollbar also integrates with various tools and services, such as Bitbucket, Trello, PagerDuty, etc.
 - **Raygun**: Raygun is a cloud-based error monitoring tool that helps you improve the quality and performance of your application. Raygun supports various languages and technologies, such as .NET, Java, Ruby on Rails, iOS, Android, etc. Raygun provides you with powerful and intuitive error dashboards and charts that show you the frequency, severity, and distribution of errors in your application. Raygun also integrates with various tools and services, such as Azure DevOps, Asana, Twilio, etc.
 
-![Error rates](./api-error-rates.png) Identifying errors on APIToolkit
+![Error rates](./api-error-rates.png) Identifying errors on monoscope
 
 Read: [Key Benefits of API Integration for Developers (with Statistics)](https://monoscope.tech/blog/benefits-of-api-integration/)
 
@@ -113,7 +113,7 @@ Once you have chosen an error monitoring tool for your application, you should i
 Some of the best practices for implementing error monitoring are:
 
 - **Setting up alerts and notifications**: You should configure your error monitoring tool to alert you when an error occurs in your application,
-so you can respond to it promptly. Also, set up notifications to inform you about the status and resolution of errors, so you can keep track of them. [APIToolkit](https://monoscope.tech) integrates with various channels to serve you error alerts and notifications, such as email, Slack, Opsgenie, SMS, push notifications, etc.
+so you can respond to it promptly. Also, set up notifications to inform you about the status and resolution of errors, so you can keep track of them. [monoscope](https://monoscope.tech) integrates with various channels to serve you error alerts and notifications, such as email, Slack, Opsgenie, SMS, push notifications, etc.
 
 - **Integrating with development workflows**: You should integrate your error monitoring tool with your development tools and processes, such as code repositories, issue trackers, project management tools, etc. This way, you can streamline your error management workflow and collaborate with your team more effectively. You can also automate some tasks related to error management, such as creating tickets, assigning tasks, updating statuses, etc.
 

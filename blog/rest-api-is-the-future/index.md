@@ -168,7 +168,7 @@ Another interesting observation is that you could get some of the benefits of th
 
 In conclusion, REST APIs are undoubtedly the future of web development. Their simplicity, versatility, scalability, and standardization set them apart from other alternatives like RPC and GraphQL. While other approaches may have their use cases and merits, REST APIs' widespread adoption and continuous improvements make them the go-to choice for developers and companies alike.
 
-If you're building APIs, then you might appreciate the tools which [APIToolkit](https://monoscope.tech/) offers, to help you with different tasks when working on your APIs. Namely, testing, [monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) and debugging APIs. Also Documentation. Check it out. 
+If you're building APIs, then you might appreciate the tools which [monoscope](https://monoscope.tech/) offers, to help you with different tasks when working on your APIs. Namely, testing, [monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) and debugging APIs. Also Documentation. Check it out. 
 
 **Keep Reading**
 

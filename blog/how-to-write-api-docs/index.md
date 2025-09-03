@@ -33,8 +33,8 @@ To start, let's understand some key statistics on API documentation:
 
 * Software engineers who participated [in a study](https://www.researchgate.net/publication/335456576_How_developers_use_API_documentation_an_observation_study) said they spend approximately 40% of their time reading documentation.
 
-![APIToolkit's Documentation Heatmap](./apitoolkit-docs-heatmap.jpg)
-Image source: A heatmap showing site visitors to [APIToolkit](https://monoscope.tech) (an API management toolkit) spent more time reading the documentation.
+![monoscope's Documentation Heatmap](./apitoolkit-docs-heatmap.jpg)
+Image source: A heatmap showing site visitors to [monoscope](https://monoscope.tech) (an API management toolkit) spent more time reading the documentation.
 
 ## Importance of API Documentation
 
@@ -49,7 +49,7 @@ Your [API documentation](https://monoscope.tech/blog/api-documentation-and-obser
 ### Developers
 Developers are the people who directly use your APIs. In order to use your APIs effectively, they need to understand how it applies to their use case.  Additionally, if they need to run QA tests on the APIs, they require as much information as possible about the APIs. They may need to learn how to access and integrate with dozens, or even hundreds, of the resources you expose.
 
-![APIToolkit installation documentation](./apitoolkitdoc1.png)
+![monoscope installation documentation](./apitoolkitdoc1.png)
 
 Studies show that [developers have become more confident in API documentation](https://swagger.io/blog/5-key-trends-fintech-api-development/) over the years. With the numbers rising, it only makes sense if you provide the relevant technical docs to accompany your APIs.
 
@@ -86,7 +86,7 @@ Security is paramount in API interactions. Document the authentication and autho
 
 Explain the different authentication mechanisms, such as API keys, OAuth, or JWT, and provide clear instructions on how to obtain and use the necessary credentials. Include examples of API requests with authentication headers or tokens for better understanding.
 
-![APIToolkit documentation snippet](./apitoolkitdoc3.png)
+![monoscope documentation snippet](./apitoolkitdoc3.png)
 
 Ensure that developers understand the authorization scopes and permissions associated with each authentication method. Document any access control rules or roles that determine the level of access granted to different users.
 
@@ -118,7 +118,7 @@ Be detailed: It’s important to put in all the important bits of information bu
 
 Be instructional: Let your users know where to begin and where to end. Detail complex pieces of information in clearly outlined steps. Give examples where necessary.
 
-![APIToolkit installation doc](./apitoolkitdoc2.png)
+![monoscope installation doc](./apitoolkitdoc2.png)
 
 Read: [Top 7 Reasons Why Your Team should Use an API Monitoring and Observability Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 
@@ -180,7 +180,7 @@ Have a standard process/framework for updates: Incorporate your docs into your A
 
 Review often: Frequent review of your docs will expose outdated areas. Schedule your reviews to keep your processes streamlined.
 
-Use analytics: Good API analytics will show what endpoints are used most frequently. This will inform your API doc review process, helping you focus your updates on the most used portions. [APIToolkit](https://monoscope.tech) provides detailed analytics and much more. It’s a one-stop solution for API observability and monitoring.
+Use analytics: Good API analytics will show what endpoints are used most frequently. This will inform your API doc review process, helping you focus your updates on the most used portions. [monoscope](https://monoscope.tech) provides detailed analytics and much more. It’s a one-stop solution for API observability and monitoring.
 
 ## Common Challenges in API Documentation
 
@@ -188,14 +188,14 @@ While API documentation is essential, it can present its own set of challenges. 
 
 - **Striking the right balance**: One of the primary challenges is striking the right balance between technical accuracy and user-friendly language. Developers require accurate technical details, but presenting them in a way that is easily understandable can be a challenge. To overcome this, consider using clear and concise language, avoiding jargon whenever possible, and providing relevant examples and explanations.
 
-- **Maintaning up-to-date documentation**: Another challenge is maintaining up-to-date documentation. APIs evolve over time, with new features, endpoints, and parameters being added or modified. It is crucial to keep the documentation in sync with the API itself. Regularly review and update your documentation to ensure accuracy and relevancy. Consider integrating [APIToolkit](https://monoscope.tech) into your backend services. Our API management tool auto-generates API documentation for you by studying the live traffic to and from your endpoints. You immediately get a notification once changes have been made. Read more about this [here](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/).
+- **Maintaning up-to-date documentation**: Another challenge is maintaining up-to-date documentation. APIs evolve over time, with new features, endpoints, and parameters being added or modified. It is crucial to keep the documentation in sync with the API itself. Regularly review and update your documentation to ensure accuracy and relevancy. Consider integrating [monoscope](https://monoscope.tech) into your backend services. Our API management tool auto-generates API documentation for you by studying the live traffic to and from your endpoints. You immediately get a notification once changes have been made. Read more about this [here](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/).
 
 ### Final Thoughts 
 Documenting your [APIs](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is just as important as building them. It’s essential to have frameworks and processes that make your API documentation seamless and scalable.
 
 You will have different audiences. Be sure to cater to all their varying needs when developing your API docs.
 
-[APIToolkit](https://monoscope.tech) gives you comprehensive analyses of your API docs to ensure you’re constantly up to date with the information you serve your community.
+[monoscope](https://monoscope.tech) gives you comprehensive analyses of your API docs to ensure you’re constantly up to date with the information you serve your community.
 
 **Also Read**:
 

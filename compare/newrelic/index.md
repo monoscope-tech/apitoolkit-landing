@@ -1,7 +1,7 @@
 ---
 date: 2024-17-07
-title: APItoolkit vs New Relic
-description: There are many monitoring and observability platforms in the market today, each with its unique offerings. Here’s what APItoolkit does better and offers differently compared to New Relic.
+title: monoscope vs New Relic
+description: There are many monitoring and observability platforms in the market today, each with its unique offerings. Here’s what monoscope does better and offers differently compared to New Relic.
 ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compare-og.png
 ---
 
@@ -14,11 +14,11 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
       <div class="width-control px-2 mx-auto flex flex-col items-center bg-[url('/assets/img/svgs/grid.svg')] dark:bg-none">
          <h1
             class="text-center mt-[20px] text-4xl md:text-6xl font-bold dark:text-white">
-            <span class="text-blue-500">APItoolkit</span> vs. New Relic
+            <span class="text-blue-500">monoscope</span> vs. New Relic
          </h1>
          <p
             class="mt-8 text-gray-700 dark:text-inherit text-lg tracking-tight leading-relaxed max-w-[800px]  text-center">
-            Watch errors, stack traces, real-time API requests, performance statistics, and other metrics that matter using APItoolkit's rich API log explorer and analytics graphs, so you can pinpoint API issues, understand the root cause(s), and fix them in real-time before they affect your users.
+            Watch errors, stack traces, real-time API requests, performance statistics, and other metrics that matter using monoscope's rich API log explorer and analytics graphs, so you can pinpoint API issues, understand the root cause(s), and fix them in real-time before they affect your users.
          <p>
          <div class="mt-[30px] flex items-center gap-4 text-center">
             <a href="https://app.monoscope.tech" class="btn py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors sm:w-56">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
@@ -34,7 +34,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
       <table class="table table-fixed">
         <tr>
             <th class="py-6 font-bold"></th>
-            <th class="py-6 font-bold text-lg border border-blue-500 bg-slate-50 dark:bg-inherit text-center">APItoolkit</th>
+            <th class="py-6 font-bold text-lg border border-blue-500 bg-slate-50 dark:bg-inherit text-center">monoscope</th>
             <th class="py-6 font-bold text-lg border text-center">New Relic</th>
         </tr>
 
@@ -199,7 +199,7 @@ ogImage: https://raw.githubusercontent.com/apitoolkit/.github/main/images/compar
 ```=html
    <div class="w-full my-12 width-control mx-auto px-2">
       <div class="w-full flex flex-col items-center text-center bg-blue-500 py-16 rounded-3xl gap-8">
-         <p class="font-medium text-3xl text-white px-16 leading-normal">If you’re building an API-driven application on the web, mobile, IoT, etc., and you need to observe the API usage data from live users’ payload for any reason, then you should consider using APItoolkit.</p>
+         <p class="font-medium text-3xl text-white px-16 leading-normal">If you’re building an API-driven application on the web, mobile, IoT, etc., and you need to observe the API usage data from live users’ payload for any reason, then you should consider using monoscope.</p>
          <a href="https://app.monoscope.tech" class="btn btn-neutral sm:w-56 text-white">GET STARTED <i class="fa-solid fa-angle-right ml-5"></i></a>
       </div>
    </div>

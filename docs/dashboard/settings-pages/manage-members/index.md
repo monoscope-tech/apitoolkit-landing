@@ -7,7 +7,7 @@ menuWeight: 2
 
 # Manage Members
 
-In this guide, you will learn how to effectively navigate through the **Manage Members** page on the APItoolkit dashboard and maximize all the powerful features accessible in it.
+In this guide, you will learn how to effectively navigate through the **Manage Members** page on the monoscope dashboard and maximize all the powerful features accessible in it.
 
 ```=html
 <hr />
@@ -17,9 +17,9 @@ On this page, you can add new members, remove existing members, or update the pe
 
 To get to this page, kindly click on **`Settings`** at the bottom-left section of the page and then click on **`Manage members`** tab. You will then be redirected to another page where you can make the changes.
 
-![Screenshot of APItoolkit's manage members page](/docs/dashboard/settings-pages/manage-members/manage-members-1.png)
+![Screenshot of monoscope's manage members page](/docs/dashboard/settings-pages/manage-members/manage-members-1.png)
 
-![Screenshot of APItoolkit's manage members page](/docs/dashboard/settings-pages/manage-members/manage-members-2.png)
+![Screenshot of monoscope's manage members page](/docs/dashboard/settings-pages/manage-members/manage-members-2.png)
 
 Video guide:
 
@@ -27,7 +27,7 @@ Video guide:
 <iframe
   class="w-full h-48 md:h-96 lg:h-96 xl:h-96"
   src="https://www.youtube.com/embed/SCl-QipFQpk?si=MnHmWt5yO6rK-eFT"
-  title="How to Manage Team Members in APItoolkit | Add, Remove, and Set Permissions Easily"
+  title="How to Manage Team Members in monoscope | Add, Remove, and Set Permissions Easily"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
   allowfullscreen

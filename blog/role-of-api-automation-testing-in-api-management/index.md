@@ -97,8 +97,8 @@ Automating API penetration testing and scanning for vulnerabilities aids in iden
 
 Instead of time-intensive manual load tests, automating tests across simulated loads exposes how APIs respond under varied real-world conditions.
 
-## Why Choose APItoolkit for API  Test Automation
-APItoolkit offers the following advantages over other test automation platforms:
+## Why Choose monoscope for API  Test Automation
+monoscope offers the following advantages over other test automation platforms:
 
 **Intuitive Interface for All Levels**
 

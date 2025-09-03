@@ -1,20 +1,20 @@
 ---
-title: "Deep Dive into API Traces: How APItoolkit Captures and Displays Them."
+title: "Deep Dive into API Traces: How monoscope Captures and Displays Them."
 featured_image: deep-dive-into-traces.jpeg
 date: 2025-09-17T04:36:58+02:00
 author: patrick
-description: Explore how APItoolkit records and displays API traces in real time, assisting you in quicker troubleshooting and effortless performance enhancement.
+description: Explore how monoscope records and displays API traces in real time, assisting you in quicker troubleshooting and effortless performance enhancement.
 categories:
   - API Management
 ---
 
-# Deep Dive into API Traces: How APItoolkit Captures and Displays Them.
+# Deep Dive into API Traces: How monoscope Captures and Displays Them.
 
-![How APItoolkit captures and displays traces](./deep-dive-into-traces.jpeg)
+![How monoscope captures and displays traces](./deep-dive-into-traces.jpeg)
 
 Have you ever launched an API that performed perfectly during development but experienced delays or unexpected behavior in the production environment? You're not the only one facing this challenge. Identifying and resolving issues in live APIs, particularly in a microservices setup, can be a complex task. This is where tracing becomes curcial.
 
-Fortunately, you don't need to invest significant time setting up intricate tools. This guide will demonstrate how to track API requests using APItoolkit, allowing you to visualize your requests' actions and identify areas of concern.
+Fortunately, you don't need to invest significant time setting up intricate tools. This guide will demonstrate how to track API requests using monoscope, allowing you to visualize your requests' actions and identify areas of concern.
 
 ## API Traces
 
@@ -39,15 +39,15 @@ Traces give us a unique way to see how systems work and perform. They show exact
 ### System Reliability
 Traces play a key role in keeping systems running smoothly. They act as tools to find problems and help plan for the future. These traces can spot early signs of issues before users face any downtime. They also show how different parts of a system depend on each other, which helps prevent problems from spreading. By giving a full picture of the system, traces allow teams to build stronger systems, check if backup plans work, and make smart choices about how much capacity they need. Traces turn complex system behaviors into clear, useful information. This helps tech teams create systems that are more stable, work better, and are more reliable.
 
-## OpenTelemetry And APIToolkit
+## OpenTelemetry And monoscope
 
-![Create APItoolkit account](./opentelemetry.png)
+![Create monoscope account](./opentelemetry.png)
 
-To successfully implement tracing into our APIs, we need to first understand Opentelemetry and how it works with APItoolkit to enable us in visualizing traces.
+To successfully implement tracing into our APIs, we need to first understand Opentelemetry and how it works with monoscope to enable us in visualizing traces.
 
 [OpenTelemetry](https://opentelemetry.io/) comprises a set of tools, SDKs, and APIs. It is designed to enable the instrumentation, creation, gathering, and exportation of telemetry data, including metrics, logs, and traces. This data is crucial for analyzing the performance and behavior of your software applications.
 
-Unlike traditional OpenTelemetry setups, APItoolkit eliminates the need for manual management of collectors, exporters, and visualization. Once the middleware and API key are added, APItoolkit:
+Unlike traditional OpenTelemetry setups, monoscope eliminates the need for manual management of collectors, exporters, and visualization. Once the middleware and API key are added, monoscope:
 
 - Exports traces using the OTLP protocol
 - Securely transmits data to its hosted platform
@@ -58,35 +58,35 @@ This approach streamlines the process of implementing [OpenTelemetry](https://op
 ## Implementing Tracing in your APIs
 - Create an [APItookit](https://monoscope.tech/) account.
 
-![Create APItoolkit account](./create-acount.png)
+![Create monoscope account](./create-acount.png)
 
-- Install APItoolkit [SDK](https://monoscope.tech/docs/sdks/) to your project. APItoolkit has over 17 SDKs for different frameworks. Install the relevant [SDK](https://monoscope.tech/docs/sdks/) for your project and follow the documentation to set it up.
-![Install APItoolkit SDK](./sdk.png).
+- Install monoscope [SDK](https://monoscope.tech/docs/sdks/) to your project. monoscope has over 17 SDKs for different frameworks. Install the relevant [SDK](https://monoscope.tech/docs/sdks/) for your project and follow the documentation to set it up.
+![Install monoscope SDK](./sdk.png).
 
 
-- Visualize Traces on APItoolkit Dashboard
+- Visualize Traces on monoscope Dashboard
 
-Once you have connected APItoolkit to your project and monitoring is enabled, we can now visualize all traces. Head over to your APItoolkit dashboard, navigate the explorer tab on the sidebar then click on traces.
+Once you have connected monoscope to your project and monitoring is enabled, we can now visualize all traces. Head over to your monoscope dashboard, navigate the explorer tab on the sidebar then click on traces.
 
-![Create APItoolkit account](./traces.gif)
+![Create monoscope account](./traces.gif)
 
 Here, you can see every single traces in your application.
 
-APItoolkit also shows you the entire lifecycle of every single request. Cool right? Let me show you. 
+monoscope also shows you the entire lifecycle of every single request. Cool right? Let me show you. 
 
 Click the plus (+) sign on the summary of any request. The dropdown shows you the request lifecycle.
 
-![Create APItoolkit account](./expand-traces.gif)
+![Create monoscope account](./expand-traces.gif)
 
 You can even click on each request to see the traces' spans. This contains details like latency, request body, headers e.t.c. 
 
-![Create APItoolkit account](./span-traces.gif)
+![Create monoscope account](./span-traces.gif)
 
 ## Conclusion
 
-Implementing tracing doesn't need to be complex. APItoolkit simplifies the process, providing more than just data collection. It offers clear, practical insights into API behavior in real-world scenarios. This visibility into every request is extremely essential when resolving elusive bugs, enhancing performance, or maintaining system stability.
+Implementing tracing doesn't need to be complex. monoscope simplifies the process, providing more than just data collection. It offers clear, practical insights into API behavior in real-world scenarios. This visibility into every request is extremely essential when resolving elusive bugs, enhancing performance, or maintaining system stability.
 
-Interested in testing it out? Visit [APItoolkit](https://monoscope.tech/) to create a free account and begin monitoring with assurance.
+Interested in testing it out? Visit [monoscope](https://monoscope.tech/) to create a free account and begin monitoring with assurance.
 
 **Keep Reading**
 

@@ -142,7 +142,7 @@ main_nav:
       - title: Get Started
         url: /docs/onboarding
         icon: #nav-item
-        description: All you need to start using APItoolkit
+        description: All you need to start using monoscope
       - title: SDK Guides
         url: /docs/sdks
         icon: #nav-item

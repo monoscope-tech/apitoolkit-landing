@@ -63,7 +63,7 @@ The unsung superheroes who ventured into the development of [API analytics and m
 
 The significance of API analytics and [monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/) extends beyond mere operational efficiency; it's a critical factor for business success. Poorly performing APIs can lead to slow application load times, timeouts, and even system failures, all of which can result in customer attrition and revenue loss. As businesses increasingly rely on APIs for diverse functions ranging from payment processing to data analytics, the demand for sophisticated monitoring platforms is expected to rise. The future likely holds the integration of machine learning algorithms for predictive analytics, anomaly detection, and automated troubleshooting, setting the stage for the next wave of advancements in API technology.
 
-APIToolkit.io is a one stop solution for [API observability and monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/). You really should [check us out](https://monoscope.tech).
+monoscope.io is a one stop solution for [API observability and monitoring](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/). You really should [check us out](https://monoscope.tech).
 
 ## 2. The Rise of API-as-a-Product
 

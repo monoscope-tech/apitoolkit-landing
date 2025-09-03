@@ -42,8 +42,8 @@ To analyze frontend [API performance](https://monoscope.tech/blog/web-api-perfor
 There are various tools and techniques that can help you measure and monitor these metrics and indicators, such as:
 
 - Browser DevTools: The built-in tools in your web browser that allow you to inspect and debug your web app, including its network activity, performance, and errors.
-- API testing tools: Tools that allow you to simulate and [test your API](https://monoscope.tech/blog/api-testing-automation/) requests and responses, such as APIToolkit, Postman, Insomnia, or curl.
-- API monitoring tools: Tools that allow you to track and analyze your API performance over time, such as [APIToolkit](https://monoscope.tech), New Relic, Datadog, or Apigee.
+- API testing tools: Tools that allow you to simulate and [test your API](https://monoscope.tech/blog/api-testing-automation/) requests and responses, such as monoscope, Postman, Insomnia, or curl.
+- API monitoring tools: Tools that allow you to track and analyze your API performance over time, such as [monoscope](https://monoscope.tech), New Relic, Datadog, or Apigee.
 - API documentation tools: Tools that allow you to generate and maintain documentation for your APIs, such as Swagger, OpenAPI, [APITookit](https://monoscope.tech), or RAML.
 
 ## How to address Frontend API Performance Problems?
@@ -57,7 +57,7 @@ To address frontend API performance problems, you need to identify and fix the r
 - **Avoid API overfetching**: Review and improve your data fetching logic on the frontend. For example, you can use GraphQL (Graph Query Language), RESTful (Representational State Transfer) principles, or custom endpoints to request only the data you need from the backend.
 - **Avoid API underfetching**: Review and improve your data fetching logic on the frontend. For example, you can use GraphQL (Graph Query Language), RESTful (Representational State Transfer) principles, or custom endpoints to request all the data you need from the backend in one go.
 - **Use a load balancer**: A load balancer can distribute traffic across multiple servers, which can help to improve performance and reliability.
-- **Monitor your performance**: It is important to [monitor](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) your frontend API performance on an ongoing basis so that you can identify and address any issues early on. You can use a variety of tools and techniques to monitor performance, and [APIToolkit](https://monoscope.tech) provides an all-round solution for [API monitoring and observability](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/).
+- **Monitor your performance**: It is important to [monitor](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) your frontend API performance on an ongoing basis so that you can identify and address any issues early on. You can use a variety of tools and techniques to monitor performance, and [monoscope](https://monoscope.tech) provides an all-round solution for [API monitoring and observability](https://monoscope.tech/blog/api-documentation-and-observability-the-truth-you-must-know/).
 
 ## Conclusion
 

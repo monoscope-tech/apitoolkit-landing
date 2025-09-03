@@ -7,7 +7,7 @@ menuWeight: 7
 
 # API Tests Page
 
-In this guide, you will learn how to effectively navigate through the **API Tests** page on the APItoolkit dashboard and maximize all the powerful features accessible in it. 
+In this guide, you will learn how to effectively navigate through the **API Tests** page on the monoscope dashboard and maximize all the powerful features accessible in it. 
 
 ```=html
 <hr />
@@ -15,9 +15,9 @@ In this guide, you will learn how to effectively navigate through the **API Test
 
 On this page, you can define and run different API tests (synthetic monitors) with multiple steps to monitor endpoints from your API at scheduled intervals.
 
-![Screenshot of APItoolkit's API Tests page](/docs/dashboard/dashboard-pages/api-tests/testing-ui.png)
+![Screenshot of monoscope's API Tests page](/docs/dashboard/dashboard-pages/api-tests/testing-ui.png)
 
-![Screenshot of APItoolkit's API Tests page](/docs/dashboard/dashboard-pages/api-tests/testing-code.png)
+![Screenshot of monoscope's API Tests page](/docs/dashboard/dashboard-pages/api-tests/testing-code.png)
 
 ## Get Started
 

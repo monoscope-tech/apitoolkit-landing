@@ -61,9 +61,9 @@ When it comes to keeping your API in prime condition, there are a few vital sign
 
 Selecting the right tools for [API monitoring](https://monoscope.tech/blog/treblle-alternative/) is like gearing up for a major league game. You want the best equipment in your corner to ensure you're not just playing, but also winning. With the right set of tools, you can keep a close eye on those key metrics we talked about, from response times to error rates. Here's a rundown of some top tools that can help you stay on top of your API's game:
 
-![APIToolkit](apitoolkit.png)
+![monoscope](apitoolkit.png)
 
-1. **[APIToolkit](https://monoscope.tech/):** APIToolkit stands out in the API monitoring field by offering comprehensive oversight. This tool goes beyond mere monitoring; it acts as both a guide and a strategist for your API, tracking its performance, detecting errors as they occur, and shedding light on usage patterns. Its strength lies in providing actionable insights that help you understand the root causes of issues and how to prevent them, ensuring your API operates smoothly.
+1. **[monoscope](https://monoscope.tech/):** monoscope stands out in the API monitoring field by offering comprehensive oversight. This tool goes beyond mere monitoring; it acts as both a guide and a strategist for your API, tracking its performance, detecting errors as they occur, and shedding light on usage patterns. Its strength lies in providing actionable insights that help you understand the root causes of issues and how to prevent them, ensuring your API operates smoothly.
 
 ![Postman](postman.png)
 
@@ -129,7 +129,7 @@ All in all, [API monitoring](https://monoscope.tech/blog/top-7-better-stack-alte
 
 ## Keep Reading
 
-[APIToolkit: Best Moesif Alternative for API Monitoring and Observability](https://monoscope.tech/blog/moesif-alternative-for-monitoring-and-observability/)
+[monoscope: Best Moesif Alternative for API Monitoring and Observability](https://monoscope.tech/blog/moesif-alternative-for-monitoring-and-observability/)
 [Error Monitoring for Startups: Why it's Essential for Early-stage Companies](https://monoscope.tech/blog/error-monitoring-for-startups/)
 [Top 7 Better Stack Alternatives for Api Monitoring and Observability](https://monoscope.tech/blog/top-7-better-stack-alternative-for-api-monitoring-and-observability./)
 [50 APi tools for Every Budget and Requirement](https://monoscope.tech/blog/50-ap-tools-for-every-budget-and-requirement/)

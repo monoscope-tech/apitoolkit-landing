@@ -40,26 +40,26 @@ Numerous tools and platforms are available to help development teams effectively
 
 Establishing clear alert thresholds for critical performance metrics is crucial. This allows teams to be promptly notified of any potential issues that could impact user experience or application stability. Regular reporting on API performance metrics facilitates informed decision-making and helps identify areas for further optimization.
 
-## How APItoolkit handles API Metrics
-While APIToolkit itself isn't designed solely for handling metrics, it excels in facilitating the collection, analysis, and visualization of API metrics. 
+## How monoscope handles API Metrics
+While monoscope itself isn't designed solely for handling metrics, it excels in facilitating the collection, analysis, and visualization of API metrics. 
 
 ### Metric Gathering
 
-APIToolkit integrates with various monitoring tools and parses API logs, centralizing data collection for crucial metrics like latency, throughput, and error rates.
+monoscope integrates with various monitoring tools and parses API logs, centralizing data collection for crucial metrics like latency, throughput, and error rates.
 
 ### Real-time Monitoring
 
 It provides a comprehensive dashboard displaying real-time metrics, enabling developers to monitor API health and identify performance issues promptly.
 
 ### In-depth Analysis
-APIToolkit goes beyond just displaying raw data. It offers insightful visualizations and tools to analyze trends, pinpoint bottlenecks, and understand user experience.
+monoscope goes beyond just displaying raw data. It offers insightful visualizations and tools to analyze trends, pinpoint bottlenecks, and understand user experience.
 
 ### Actionable Insights
-By analyzing metrics like Apdex score, which considers user perception of performance, APIToolkit helps developers prioritize optimizations that directly improve the user experience.
+By analyzing metrics like Apdex score, which considers user perception of performance, monoscope helps developers prioritize optimizations that directly improve the user experience.
 
-### Try APItoolkit 
+### Try monoscope 
 
-Stop wasting time and get a key insight on your API's performance. Take control with a free trial of APIToolkit.io today!
+Stop wasting time and get a key insight on your API's performance. Take control with a free trial of monoscope.io today!
 
 Experience the power of real-time monitoring, insightful analytics, and actionable insights to optimize your APIs and deliver an exceptional user experience.
 

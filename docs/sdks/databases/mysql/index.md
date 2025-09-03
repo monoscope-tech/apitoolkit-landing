@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit with MySQL
-ogTitle: How to Monitor MySQL Database Operations with APItoolkit using OpenTelemetry
+title: Integrating monoscope with MySQL
+ogTitle: How to Monitor MySQL Database Operations with monoscope using OpenTelemetry
 faLogo: database
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,9 +8,9 @@ linkTitle: "MySQL"
 menuWeight: 30
 ---
 
-# Integrating APItoolkit with MySQL
+# Integrating monoscope with MySQL
 
-This guide demonstrates how to integrate APItoolkit with MySQL database operations using OpenTelemetry to monitor query performance and identify issues.
+This guide demonstrates how to integrate monoscope with MySQL database operations using OpenTelemetry to monitor query performance and identify issues.
 
 ```=html
 <hr>
@@ -20,7 +20,7 @@ This guide demonstrates how to integrate APItoolkit with MySQL database operatio
 
 - MySQL database server
 - Database client application
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Setting Up OpenTelemetry for MySQL
 
@@ -42,7 +42,7 @@ export OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY"
 export OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
 ```
 
-Replace `YOUR_API_KEY` with your actual APItoolkit project key.
+Replace `YOUR_API_KEY` with your actual monoscope project key.
 
 ### 2. Instrument MySQL Database Client
 
@@ -399,7 +399,7 @@ After setting up OpenTelemetry with your MySQL application:
 
 1. Run your application and perform several database operations
 
-2. Check your APItoolkit dashboard to see the incoming telemetry data
+2. Check your monoscope dashboard to see the incoming telemetry data
 
 3. Look for metrics such as:
    - Query execution time
@@ -409,6 +409,6 @@ After setting up OpenTelemetry with your MySQL application:
 
 ## Next Steps
 
-- Set up alerting in APItoolkit for slow MySQL queries
+- Set up alerting in monoscope for slow MySQL queries
 - Create custom dashboards for MySQL performance monitoring
 - Correlate database operations with API endpoints to identify bottlenecks

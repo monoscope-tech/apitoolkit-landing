@@ -124,9 +124,9 @@ An efficient [API monitoring and observability tool](https://monoscope.tech/blog
 
 Also, not forgetting that a loyal customer keeps you on the job.
 
-According to [Gartner](https://blogs.gartner.com/andrew-lerner/2014/07/16/the-cost-of-downtime/), the average cost of IT downtime is $5,600 per minute, which extrapolates to well over $300,000 p/hour. It's hard to predict when and where APIs will fail. This was why we built [APIToolkit](monoscope.tech) – to solve API downtime and security issues.
+According to [Gartner](https://blogs.gartner.com/andrew-lerner/2014/07/16/the-cost-of-downtime/), the average cost of IT downtime is $5,600 per minute, which extrapolates to well over $300,000 p/hour. It's hard to predict when and where APIs will fail. This was why we built [monoscope](monoscope.tech) – to solve API downtime and security issues.
 
-API-related downtimes have affected [big companies](https://www.insightsforprofessionals.com/it/leadership/famous-business-outages) as large as Amazon, Facebook, Discord, etc. No one is above API breakage. But you can definitely stay alert using [APIToolkit’s observability and monitoring tools](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/).
+API-related downtimes have affected [big companies](https://www.insightsforprofessionals.com/it/leadership/famous-business-outages) as large as Amazon, Facebook, Discord, etc. No one is above API breakage. But you can definitely stay alert using [monoscope’s observability and monitoring tools](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/).
 
 Read: [Top 7 Reasons Why Your Team Needs an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 
@@ -174,11 +174,11 @@ Additionally, API downtime can impact the reputation of the API provider. Let’
 
 Read: [How to Analyze API Logs and Metrics for Better Performance](https://monoscope.tech/blog/api-logs-and-metrics/)
 
-![The APIToolkit Triad](./apitoolkitinfographic3.png)
+![The monoscope Triad](./apitoolkitinfographic3.png)
 
 ### Our Founder’s API Downtime Story
 
-Our founder, [Anthony Alaribe](https://twitter.com/tonialaribe), once had an excruciating experience with API downtime. This, eventually, led to the birth of APIToolkit.
+Our founder, [Anthony Alaribe](https://twitter.com/tonialaribe), once had an excruciating experience with API downtime. This, eventually, led to the birth of monoscope.
 
 Hear him out:
 
@@ -190,9 +190,9 @@ Hear him out:
 >
 > We rolled back and fixed the issue, but I was sad that there was no tool that could have detected this issue faster.
 >
-> Years later, this is that tool (APIToolkit), and we would love to listen to similar stories you’ve experienced and help make such stories a thing of the past.
+> Years later, this is that tool (monoscope), and we would love to listen to similar stories you’ve experienced and help make such stories a thing of the past.
 
-[Try APIToolkit for Free](https://monoscope.tech)
+[Try monoscope for Free](https://monoscope.tech)
 
 ### Benefits of an API Monitoring and Observability Tool
 
@@ -240,7 +240,7 @@ Also, API monitoring and observability will help your company stay on top of API
 
 Therefore, whether you are making an API connection, building a new API, or looking to improve an existing one, you should not overlook the importance of API documentation, monitoring, and observability.
 
-[Try APIToolkit for Free](monoscope.tech)
+[Try monoscope for Free](monoscope.tech)
 
 **Also Read**
 

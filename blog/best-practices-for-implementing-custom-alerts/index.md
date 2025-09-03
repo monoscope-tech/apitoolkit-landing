@@ -107,9 +107,9 @@ For more advanced or customized alerting needs, integrating webhooks and externa
 
 1. **Webhooks for Real-Time Notifications**: Configure webhooks to send real-time alerts to external systems or applications. This can trigger automated workflows, such as scaling operations, or send notifications to communication channels like Slack or email.
 
-2. **Integration with External Monitoring Services**: Services like [APIToolkit](https://monoscope.tech/), Datadog, or Prometheus can offer more detailed monitoring and sophisticated alerting mechanisms. Integrate these services to gain deeper insights into your API's performance and security posture.
+2. **Integration with External Monitoring Services**: Services like [monoscope](https://monoscope.tech/), Datadog, or Prometheus can offer more detailed monitoring and sophisticated alerting mechanisms. Integrate these services to gain deeper insights into your API's performance and security posture.
 
-3. **Automated Incident Management**: Tools like [APIToolkit](https://monoscope.tech/)can be integrated via webhooks to automate the incident management process. This ensures that alerts are promptly routed to the right team members and tracked through resolution.
+3. **Automated Incident Management**: Tools like [monoscope](https://monoscope.tech/)can be integrated via webhooks to automate the incident management process. This ensures that alerts are promptly routed to the right team members and tracked through resolution.
 
 4. **Custom Alert Handlers**: Develop custom applications or microservices that can consume webhook payloads and perform specific actions, such as logging alerts for analysis, executing recovery procedures, or aggregating alerts for reporting.
 
@@ -156,13 +156,13 @@ In conclusion, implementing and maintaining an effective custom alert system wit
 
 Regular reviews and adjustments of alert parameters, guided by best practices in alert management, are essential to keep pace with the dynamic nature of API ecosystems and the evolving needs of your organization. Prioritizing alerts, ensuring they are clear and actionable, avoiding alert fatigue, automating responses, and fostering a culture of continuous improvement are all critical components of a successful alert management strategy.
 
-Implementing custom alerts is key to a strong API management system, ensuring security and efficiency. APIToolkit's new custom alert feature offers enhanced monitoring and proactive management. Get started with [APIToolkit](https://monoscope.tech/) to improve your API infrastructure and user experience.
+Implementing custom alerts is key to a strong API management system, ensuring security and efficiency. monoscope's new custom alert feature offers enhanced monitoring and proactive management. Get started with [monoscope](https://monoscope.tech/) to improve your API infrastructure and user experience.
 
 ## Keep Reading
 
 [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 
-[APIToolkit: Top Atatus Alternative for API Monitoring](https://monoscope.tech/blog/apitoolkit-top-atatus-alternative/)
+[monoscope: Top Atatus Alternative for API Monitoring](https://monoscope.tech/blog/apitoolkit-top-atatus-alternative/)
 
 [API Documentation vs Specification: What It Means for You](https://monoscope.tech/blog/api-documentation-vs-api-specification/)
 

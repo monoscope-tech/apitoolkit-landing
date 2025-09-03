@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit with Docker
-ogTitle: How to Integrate APItoolkit with Docker using OpenTelemetry Collector
+title: Integrating monoscope with Docker
+ogTitle: How to Integrate monoscope with Docker using OpenTelemetry Collector
 faLogo: docker
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,9 +8,9 @@ linkTitle: "Docker"
 menuWeight: 20
 ---
 
-# Integrating APItoolkit with Docker
+# Integrating monoscope with Docker
 
-This guide explains how to integrate APItoolkit with Docker containers using the OpenTelemetry Collector for infrastructure-level API monitoring and observability.
+This guide explains how to integrate monoscope with Docker containers using the OpenTelemetry Collector for infrastructure-level API monitoring and observability.
 
 ```=html
 <hr>
@@ -20,7 +20,7 @@ This guide explains how to integrate APItoolkit with Docker containers using the
 
 - Docker installed on your system
 - Docker Compose
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Integration with OpenTelemetry Collector in Docker
 
@@ -221,11 +221,11 @@ After starting your Docker Compose stack:
 
 2. Send some test traffic to your applications
 
-3. Verify in your APItoolkit dashboard that telemetry data is being received
+3. Verify in your monoscope dashboard that telemetry data is being received
 
 ## Next Steps
 
-- Configure alerting in APItoolkit based on infrastructure metrics
+- Configure alerting in monoscope based on infrastructure metrics
 - Set up additional receivers in the collector for other data sources
 - Use Docker labels to organize and categorize your services for better visibility
 - Explore OpenTelemetry Collector processors for filtering and enriching telemetry data

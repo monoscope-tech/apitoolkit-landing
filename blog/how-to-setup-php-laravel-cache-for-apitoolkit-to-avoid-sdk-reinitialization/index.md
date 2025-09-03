@@ -24,7 +24,7 @@ Luckily, Laravel’s caching capabilities can break this inefficient cycle by st
 
 Removing roundtrips to reinitialize unlocks huge performance wins, accelerating response times. Frontend requests no longer waste cycles establishing credentials or configuring settings, accessing ready connections from the cache instead.
 
-## Benefits of Caching SDK Connections when using APItoolkit
+## Benefits of Caching SDK Connections when using monoscope
 
 1. **Improved Speed:** By eliminating redundant initialization, requests complete faster, with wait times slashed by up to 80-90%. Lazy loading and other initiatives function optimally.
 
@@ -151,7 +151,7 @@ php artisan cache:clear
 ```````
 
 
-## How to Test and Optimize Laravel Caching When using APItoolkit
+## How to Test and Optimize Laravel Caching When using monoscope
 
 A. Benchmarking Performance
 

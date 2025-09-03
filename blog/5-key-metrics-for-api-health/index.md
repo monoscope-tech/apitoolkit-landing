@@ -71,13 +71,13 @@ Ideally, strive for an average latency below 100 milliseconds for optimal user e
 
 A high error rate indicates potential issues with the API's functionality. This metric reflects the number of API requests that result in errors per minute (Errors Per Minute - EPM). To minimize errors and ensure API stability, implement error logging.
 
-By analyzing error codes, you can diagnose the root cause of issues and take corrective actions. APIToolkit.io offers advanced error monitoring capabilities, enabling you to identify and troubleshoot errors efficiently, ensuring a frustration-free experience for your users. A well-functioning API should have an EPM close to zero.
+By analyzing error codes, you can diagnose the root cause of issues and take corrective actions. monoscope.io offers advanced error monitoring capabilities, enabling you to identify and troubleshoot errors efficiently, ensuring a frustration-free experience for your users. A well-functioning API should have an EPM close to zero.
 
 ### Uptime
 
 Uptime, measured as the percentage of time the API is accessible and operational, is paramount. Strive for an uptime target exceeding 99.9%. To achieve this gold standard, robust monitoring tools are essential.
 
-APIToolkit.io provides comprehensive solutions for monitoring API uptime, allowing you to promptly detect and rectify outages, ensuring minimal disruption to your users.
+monoscope.io provides comprehensive solutions for monitoring API uptime, allowing you to promptly detect and rectify outages, ensuring minimal disruption to your users.
 
 Aim for a minimum uptime of 99.5%, with the ultimate goal exceeding 99.9%. Leading tech companies strive for even higher uptime targets (e.g., Google: 99.99%).
 

@@ -84,7 +84,7 @@ Some of the key components of a robust monitoring and alert system are:
 
 - **Proactive alert mechanisms**: These are software applications or services that send notifications or warnings to the appropriate parties when certain conditions or thresholds are met or exceeded. They can use various channels such as email, SMS, phone call, or push notifications. They can also trigger automated actions such as restarting a server, scaling up a resource, or launching a backup system.
 
-[Try APIToolkit - an Advanced API Monitoring and Observability Tool](https://monoscope.tech)
+[Try monoscope - an Advanced API Monitoring and Observability Tool](https://monoscope.tech)
 
 ### Conducting Regular Performance and Stress Testing
 
@@ -124,7 +124,7 @@ API-specific monitoring tools help you monitor the functionality, performance, a
 
 API-specific monitoring tools can help you ensure that your APIs are meeting your service level agreements (SLAs), delivering a consistent user experience, and complying with industry standards and best practices.
 
-[Try APIToolkit - an Advanced Monitoring Solution](https://monoscope.tech)
+[Try monoscope - an Advanced Monitoring Solution](https://monoscope.tech)
 
 ## Analyzing the Root Cause of Downtime Incidents
 
@@ -132,16 +132,16 @@ The first step in resolving any API downtime incident is to understand what caus
 
 1. **Investigate error logs and performance metrics**
 
-![APIToolkit's Logs and Metrics Explorer](./log_explorer2.png)
-APIToolkit's metrics and log explorer
+![monoscope's Logs and Metrics Explorer](./log_explorer2.png)
+monoscope's metrics and log explorer
 
 Error logs are records of events that occur when an API fails or behaves unexpectedly. They can provide valuable information about the error message, the timestamp, the request parameters, the response code, and the stack trace. Performance metrics are measurements of how well an API performs under different conditions. They can include indicators such as response time, throughput, availability, latency, and error rate. By examining error logs and performance metrics, you can pinpoint where and when the problem occurred, how severe it was, and how it affected your users.
 
 2. **Identify common patterns or recurring issues**
 
-![APIToolkit's Anomaly Detection](./api_monitoring_anomalies.gif)
+![monoscope's Anomaly Detection](./api_monitoring_anomalies.gif)
 
-APIToolkit's [anomaly detection tool](https://monoscope.tech/api-anomalies-validation-and-checks/).
+monoscope's [anomaly detection tool](https://monoscope.tech/api-anomalies-validation-and-checks/).
 
 Sometimes, API downtime incidents are not isolated events, but symptoms of underlying problems that affect your system as a whole. By looking for common patterns or recurring issues in your error logs and performance metrics, you can identify the root causes of your API downtime and address them at their source. For example, you might notice that your API experiences frequent timeouts during peak hours, indicating a scalability issue. Or you might find that your API returns invalid data for certain requests, suggesting a data quality issue.
 
@@ -186,8 +186,8 @@ The final step in resolving any API downtime incident is to prevent it from happ
 
 1. **Implement proactive monitoring and alerting tools**
 
-![APIToolkit's endpoint explorer](./api-endpoints.gif)
-APIToolkit's [endpoint explorer](https://monoscope.tech/api-performance-monitoring-and-compliance/).
+![monoscope's endpoint explorer](./api-endpoints.gif)
+monoscope's [endpoint explorer](https://monoscope.tech/api-performance-monitoring-and-compliance/).
 
 Proactive monitoring and alerting tools are essential for detecting and preventing API downtime incidents before they escalate or affect your users. They can help you track and measure your API performance metrics, identify and diagnose errors or anomalies, notify and escalate issues to relevant stakeholders, and automate actions or workflows based on predefined rules or triggers.
 
@@ -211,11 +211,11 @@ Some examples of best practices and standards for API design and development are
 
 Read: [How to Write API Documentation: 10 Essential Guidelines](https://monoscope.tech/blog/how-to-write-api-docs/)
 
-## The APIToolkit Solution
+## The monoscope Solution
 
-![APIToolkit's landing page](./apitoolkit-landing.png)
+![monoscope's landing page](./apitoolkit-landing.png)
 
-[APIToolkit](https://monoscope.tech) is a toolbox that contains all the tools you need to design, test and monitor the most reliable APIs.
+[monoscope](https://monoscope.tech) is a toolbox that contains all the tools you need to design, test and monitor the most reliable APIs.
 
 What You Get:
 
@@ -233,7 +233,7 @@ Or [book a call](https://calendly.com/tonyalaribe/30min) with our technical team
 
 ## Conclusion
 
-In incident management, API downtime is inevitable, but it doesn't have to be disastrous. By following the steps outlined in this post (and using APIToolkit), you can analyze the root cause of downtime incidents, troubleshoot and remediate them, and prevent them from happening again. This will help you improve your API reliability and availability, as well as your user satisfaction and loyalty.
+In incident management, API downtime is inevitable, but it doesn't have to be disastrous. By following the steps outlined in this post (and using monoscope), you can analyze the root cause of downtime incidents, troubleshoot and remediate them, and prevent them from happening again. This will help you improve your API reliability and availability, as well as your user satisfaction and loyalty.
 
 ## Keep Reading
 

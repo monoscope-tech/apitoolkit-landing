@@ -62,11 +62,11 @@ Logging relevant data is crucial for understanding what happened leading up to a
 
 Using [diagnostic tools](https://monoscope.tech), such as API testing frameworks or debugging proxies, can also help in investigating and resolving issues efficiently. These tools provide insights into the behavior of your APIs and can help you pinpoint the root cause of any problems.
 
-[APIToolkit](https://monoscope.tech) is one such tool—a robust API management software that ensures that your APIs are performant and reliable.
+[monoscope](https://monoscope.tech) is one such tool—a robust API management software that ensures that your APIs are performant and reliable.
 
 ![API Throughput](./api-throughput.png)
 
-Image Source: APIToolkit's dashboard displaying throughput by status code.
+Image Source: monoscope's dashboard displaying throughput by status code.
 
 ## Collecting API Telemetry Data
 
@@ -88,16 +88,16 @@ In addition to these metrics, logging events can also provide crucial informatio
 
 There are several tools available for collecting API telemetry data, each offering different features and capabilities. Some popular choices include:
 
-* **[APIToolkit](https://monoscope.tech):** APIToolkit is a powerful API monitoring and observability platform that can help you collect and analyze telemetry data from your API. It offers advanced search and visualization capabilities to help you gain actionable insights.
+* **[monoscope](https://monoscope.tech):** monoscope is a powerful API monitoring and observability platform that can help you collect and analyze telemetry data from your API. It offers advanced search and visualization capabilities to help you gain actionable insights.
 
 ![API Latency](./api-latency.png)
-Image Source: APIToolkit's dashboard displaying latency distribution
+Image Source: monoscope's dashboard displaying latency distribution
 
 * **Datadog:** Datadog is a log management and analysis tool that provides monitoring and logging capabilities. It allows you to collect, analyze, and visualize telemetry data from your API in real time.
 
 * **New Relic:** New Relic offers a range of monitoring and observability solutions, including tools specifically designed for API telemetry data collection. It provides detailed insights into the performance and behavior of your API.
 
-In addition to these observability platforms, cloud service providers like AWS and Google Cloud also offer services that enable you to collect and analyze telemetry data within their respective environments. For example, AWS CloudWatch and Google Cloud's Stackdriver provide monitoring and logging capabilities that integrate seamlessly with their cloud infrastructure. However, a tool like [APIToolkit](https://apitoolkit,io) gives you more granular insight into your APIs and backend services.
+In addition to these observability platforms, cloud service providers like AWS and Google Cloud also offer services that enable you to collect and analyze telemetry data within their respective environments. For example, AWS CloudWatch and Google Cloud's Stackdriver provide monitoring and logging capabilities that integrate seamlessly with their cloud infrastructure. However, a tool like [monoscope](https://apitoolkit,io) gives you more granular insight into your APIs and backend services.
 
 By leveraging these tools and services, you can gain valuable insights into the performance, behavior, and usage of your API. This data can help you make informed decisions, optimize your API's performance, and ensure a seamless experience for your users.
 
@@ -150,7 +150,7 @@ Incorporating alerts and notifications into your visualizations can give you rea
 
 ### Tools for Visualizing API Telemetry Data
 
-To create effective visualizations of your API telemetry data, you need to choose the right tools that offer the features and functionalities you require. Some of the popular visualization tools are [APIToolkit](https://monoscope.tech), Grafana, Kibana, Splunk, etc.
+To create effective visualizations of your API telemetry data, you need to choose the right tools that offer the features and functionalities you require. Some of the popular visualization tools are [monoscope](https://monoscope.tech), Grafana, Kibana, Splunk, etc.
 
 These tools can help you create dashboards and charts that display various aspects of your API telemetry data, such as request rate, latency distribution, error rate, availability percentage, etc.
 

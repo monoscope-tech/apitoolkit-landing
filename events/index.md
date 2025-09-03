@@ -8,7 +8,7 @@ pages:
     date: 20th July, 2024
     location: Lagos, Nigeria
     upcoming: true
-  - title: Backend Performance and Error Monitoring with APItoolkit
+  - title: Backend Performance and Error Monitoring with monoscope
     slug: /events/webinar-ii
     date: 28th June, 2024
     location: Virtual Webinar
@@ -30,7 +30,7 @@ pages:
     <header class="w-full mt-32">
         <div class="width-control mx-auto px-2">
             <div class="w-full flex flex-col items-center text-center gap-4">
-                <h1 class="font-bold text-4xl text-[50px] dark:text-white">APItoolkit Events & Webinars</h1>
+                <h1 class="font-bold text-4xl text-[50px] dark:text-white">monoscope Events & Webinars</h1>
                 <p class="max-w-[300px] md:max-w-[800px] lg:max-w-[800px] text-base-content font-medium text-base md:text-lg">Explore or come say hi at all events and webinars we're organizing or attending across the world.</p>
             </div>
         </div>

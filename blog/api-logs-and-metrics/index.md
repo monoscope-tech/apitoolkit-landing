@@ -31,7 +31,7 @@ Therefore, it is essential to monitor and analyze an API’s performance regular
 ## Understanding API Logs and Metrics
 
 ![APIToolit dashboard](./apitoolkit-dashboard.png)
-Image source: APIToolkit's dashboard
+Image source: monoscope's dashboard
 
 API logs and metrics are two types of data that can help developers and operators understand the behavior and performance of an API. They are complementary sources of information that can provide different perspectives and levels of detail on how the API is functioning.
 
@@ -105,13 +105,13 @@ Read: [API Documentation and Observability: the Truth You Must now](https://mono
 Response time is a metric that measures how long it takes for an API to process a request and return a response. It is also known as latency.
 
 ![Latency distribution card](./api-latency.png)
-Image source: Latency distribution on APIToolkit
+Image source: Latency distribution on monoscope
 
 Response time is one of the most important indicators of API performance, as it directly affects the user experience and satisfaction. Users and clients expect APIs to respond quickly and consistently without causing delays or timeouts.
 
 ### Measuring and interpreting response time
 
-To measure response time, developers and operators need to use a [monitoring tool](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) or service that can track and record the duration of each request and response processed by an API. For example, [APIToolkit](https://monoscope.tech/) is a core API monitoring tool, a solution that monitors and analyzes the performance of an application and its components, including APIs, databases, servers, etc.
+To measure response time, developers and operators need to use a [monitoring tool](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) or service that can track and record the duration of each request and response processed by an API. For example, [monoscope](https://monoscope.tech/) is a core API monitoring tool, a solution that monitors and analyzes the performance of an application and its components, including APIs, databases, servers, etc.
 
 To interpret response time, developers and operators need to use a that can visualize and summarize the response time data collected by the monitoring tool or service. For example, some common ways to visualize and summarize response time are:
 
@@ -126,7 +126,7 @@ Read: [Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 ### Identifying bottlenecks in API logs and metrics
 
 ![API requests grouped by endpoints](./api-requests.png)
-Image source: API requests grouped by endpoints on APIToolkit
+Image source: API requests grouped by endpoints on monoscope
 
 A bottleneck is a situation where a component or a process in an API slows down the overall performance of the API. For example, some common causes of bottlenecks are:
 
@@ -134,9 +134,9 @@ A bottleneck is a situation where a component or a process in an API slows down 
 - **Slow dependency**: When an API depends on another system or service that is slow or unreliable, it may cause delays or failures in the API request or response.
 - **Inefficient code**: When an API has code that is poorly written, unoptimized, or buggy, it may cause unnecessary computation or memory usage in the API server.
 
-To identify bottlenecks, developers and operators can use an API log and metrics explorer tool like [APIToolkit](https://monoscope.tech/).
+To identify bottlenecks, developers and operators can use an API log and metrics explorer tool like [monoscope](https://monoscope.tech/).
 
-You can use APIToolkit to view detailed API logs about your request/response cycle. You can also use our console tab to see the time taken by each request, the size of the response, and any errors or warnings. Also, APIToolkit can present your API performance data in charts and graphs. It can help set up an alert and notification system to get you notified when your app's performance degrades.
+You can use monoscope to view detailed API logs about your request/response cycle. You can also use our console tab to see the time taken by each request, the size of the response, and any errors or warnings. Also, monoscope can present your API performance data in charts and graphs. It can help set up an alert and notification system to get you notified when your app's performance degrades.
 
 ### B. Throughput
 
@@ -146,10 +146,10 @@ Throughput is the amount of data or requests that your API can process in a give
 
 To calculate the throughput of your API, you need to divide the total number of requests or data processed by your API by the time interval in which they were processed. For example, if your API processed 10,000 requests in 10 seconds, then its throughput is 1,000 RPS.
 
-To monitor the throughput of your API, you need to use a tool or service that can collect and visualize your API logs and metrics in real time. Use [APIToolkit](https://monoscope.tech/). We can help you track the throughput of your API over time and alert you when it deviates from a normal range or exceeds a predefined threshold.
+To monitor the throughput of your API, you need to use a tool or service that can collect and visualize your API logs and metrics in real time. Use [monoscope](https://monoscope.tech/). We can help you track the throughput of your API over time and alert you when it deviates from a normal range or exceeds a predefined threshold.
 
-![Calculating throughput on APIToolkit](./api-throughput.png)
-Image source: Calculating throughput on APIToolkit
+![Calculating throughput on monoscope](./api-throughput.png)
+Image source: Calculating throughput on monoscope
 
 #### Evaluating API capacity
 
@@ -182,10 +182,10 @@ Error rate is the percentage of requests that result in an error when processed 
 
 To track the error rate of your API, you need to log and classify every request that results in an error. An error is any response that has a status code other than 2xx (success) or 3xx (redirection). The most common types of errors are 4xx (client errors) and 5xx (server errors). You need to assign a category and a message to each error to identify its type and cause. For example, a 404 error can be categorized as "Not Found" and have a message like "The requested resource does not exist".
 
-To analyze the error rate of your API, you need to use a tool or service that can aggregate and visualize your API logs and metrics in real time. Try [APIToolkit](https://monoscope.tech/). We can help you calculate the error rate of your API over time and alert you when it deviates from a normal range or exceeds a predefined threshold.
+To analyze the error rate of your API, you need to use a tool or service that can aggregate and visualize your API logs and metrics in real time. Try [monoscope](https://monoscope.tech/). We can help you calculate the error rate of your API over time and alert you when it deviates from a normal range or exceeds a predefined threshold.
 
 ![Error rates](./api-error-rates.png)
-Image source: Tracing and analyzing error rates on APIToolkit
+Image source: Tracing and analyzing error rates on monoscope
 
 ### Identifying recurring issues
 
@@ -205,7 +205,7 @@ Read: [How to Resolve API Downtime Issues Before It Escalates](https://monoscope
 1. **Regular monitoring and analysis**
 
 ![API logs and metrics explorer APIToolit](./api-query.png)
-Image source: API query explorer on APIToolkit
+Image source: API query explorer on monoscope
 
 One of the key aspects of API log and metrics analysis is to establish a routine of checking and reviewing the data generated by your APIs. This can help you understand how your APIs are performing, how they are being used, and how they are impacting your content. Some of the benefits of regular monitoring and analysis are:
 
@@ -213,7 +213,7 @@ One of the key aspects of API log and metrics analysis is to establish a routine
 - You can detect anomalies and outliers in your API behavior, such as spikes, drops, or deviations from normal values.
 - You can identify potential issues or risks in your API performance, such as slow response times, high error rates, or resource bottlenecks.
 
-To establish a monitoring routine, you need to define what metrics and logs you want to collect from your APIs, how often you want to collect them, and how you want to visualize and analyze them. You can use [APIToolkit](https://monoscope.tech/) to help you with this process. You also need to set up alerts and notifications that can inform you of any significant changes or problems in your API data.
+To establish a monitoring routine, you need to define what metrics and logs you want to collect from your APIs, how often you want to collect them, and how you want to visualize and analyze them. You can use [monoscope](https://monoscope.tech/) to help you with this process. You also need to set up alerts and notifications that can inform you of any significant changes or problems in your API data.
 
 2. **Collaborative analysis and troubleshooting**
 
@@ -233,7 +233,7 @@ The final best practice for API log and metric analysis is to react promptly and
 - You can investigate and resolve the root cause of the issue or error, preventing recurrence or escalation.
 - You can communicate transparently and proactively with your users or customers about the issue or error, maintaining trust and satisfaction.
 
-To implement incident response and remediation, you need a clear plan and procedure that can guide you through the steps of detection, diagnosis, resolution, recovery, and prevention. You can use tools like [APIToolkit](https://monoscope.tech/), PagerDuty or Opsgenie to help you with this process. You also need to review and evaluate your incident response and remediation performance and outcomes for continuous improvement.
+To implement incident response and remediation, you need a clear plan and procedure that can guide you through the steps of detection, diagnosis, resolution, recovery, and prevention. You can use tools like [monoscope](https://monoscope.tech/), PagerDuty or Opsgenie to help you with this process. You also need to review and evaluate your incident response and remediation performance and outcomes for continuous improvement.
 
 Read: [Top 7 Reasons Why Your Team Needs an API Monitoring Tool](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/)
 

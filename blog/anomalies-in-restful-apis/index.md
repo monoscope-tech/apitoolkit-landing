@@ -77,7 +77,7 @@ Read: [What You Need to Know About REST APIs](https://monoscope.tech/blog/everyt
 API anomalies are bad for business; they cause downtime and latency degradation, which can not only affect the performance of your APIs, but also the reputation of your company. Tackling API anomalies is a mandatory activity for every API developer and tech company. We cannot tell when APIs will fail, and [Gartner](https://blogs.gartner.com/andrew-lerner/2014/07/16/the-cost-of-downtime/) posits that the average cost of IT downtime is $5,600 per minute, which extrapolates to well over $300,000 p/hour.
 
 ![API Anomaly Dashboard on APIToolit](./api-anomalies.png)
-Image source: API anomaly dashboard on APIToolkit
+Image source: API anomaly dashboard on monoscope
 
 Here are key strategies you can use to tackle API anomalies in RESTful APIs:
 
@@ -87,19 +87,19 @@ Before you can detect API anomalies, you need to define what constitutes normal 
 
 #### **Monitor APIs**
 
-Effective [API monitoring](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/) is key to detecting anomalies before they cause significant disruptions. Use a tool like [APIToolkit](https://monoscope.tech/) to track key metrics such as response times, latency distribution, error rates, and throughput. Receive alerts that notify you when these metrics deviate from normal behavior. This can help you catch API anomalies early and address them before they become major problems. APIToolkit uses machine learning algorithms to detect anomalies in real-time, such as unusual traffic patterns or abnormal usage behavior.
+Effective [API monitoring](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/) is key to detecting anomalies before they cause significant disruptions. Use a tool like [monoscope](https://monoscope.tech/) to track key metrics such as response times, latency distribution, error rates, and throughput. Receive alerts that notify you when these metrics deviate from normal behavior. This can help you catch API anomalies early and address them before they become major problems. monoscope uses machine learning algorithms to detect anomalies in real-time, such as unusual traffic patterns or abnormal usage behavior.
 
-![APIToolkit Anomaly Detection Dashboard](./apitoolkit-anomaly-dashboard.gif)
-Source: APIToolkit's app interface.
+![monoscope Anomaly Detection Dashboard](./apitoolkit-anomaly-dashboard.gif)
+Source: monoscope's app interface.
 
 Read: [Best API Monitoring and Observability Tools in 2023](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/)
 
 #### **Investigate Anomalies**
 
-When you [detect an API anomaly](https://monoscope.tech/api-anomalies-validation-and-checks/), investigate it promptly. Look for potential causes, such as changes to APIs, network issues, or server issues. APIToolkit can help you with API tracing to pinpoint the source of the issue. This can help you address the issue quickly and minimize its impact on your system.
+When you [detect an API anomaly](https://monoscope.tech/api-anomalies-validation-and-checks/), investigate it promptly. Look for potential causes, such as changes to APIs, network issues, or server issues. monoscope can help you with API tracing to pinpoint the source of the issue. This can help you address the issue quickly and minimize its impact on your system.
 
-[APIToolkit Logs and Metrics Explorer](./apitoolkit-gif-query.gif)
-Source: APIToolkit's query explorer.
+[monoscope Logs and Metrics Explorer](./apitoolkit-gif-query.gif)
+Source: monoscope's query explorer.
 
 #### **Implement Safeguards**
 
@@ -111,9 +111,9 @@ Read: [Top 7 Reasons Why Your Team Should Use an API Monitoring Tool](https://mo
 
 To tackle API anomalies effectively, you need to continuously improve your monitoring and observability processes. Regularly review your baseline metrics to ensure they are up to date and accurately reflect normal API behavior. Evaluate your monitoring tools to ensure they are effective in detecting anomalies. Seek feedback from your API users to understand their experiences and identify areas for improvement.
 
-APIToolkit uses best-in-class technology to detect and resolve anomalies in RESTful APIs. We utilize advanced AI and machine learning algorithms to perform thorough API anomaly detection.
+monoscope uses best-in-class technology to detect and resolve anomalies in RESTful APIs. We utilize advanced AI and machine learning algorithms to perform thorough API anomaly detection.
 
-[Get started with APIToolkit](https://monoscope.tech).
+[Get started with monoscope](https://monoscope.tech).
 
 Recommended Post: [How to Generate Automated API Documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/)
 

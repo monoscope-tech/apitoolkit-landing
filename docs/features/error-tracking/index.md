@@ -8,7 +8,7 @@ menuWeight: 2
 
 # Error Tracking
 
-APItoolkit allows you to find and fix errors and breaking changes affecting your users in real-time. With this, you can catch changes in your APIs (incoming requests) and third-party integrations (outgoing requests) with enough context to reproduce the issues and narrow down the root cause.
+monoscope allows you to find and fix errors and breaking changes affecting your users in real-time. With this, you can catch changes in your APIs (incoming requests) and third-party integrations (outgoing requests) with enough context to reproduce the issues and narrow down the root cause.
 
 ```=html
 <hr />
@@ -22,11 +22,11 @@ Some **key benefits** and popular **use cases** include the ability to:
 - Set alerts to track certain requests when they cross certain thresholds and notify relevant members of your team via email or Slack when the alert is triggered.
 - And a lot more!
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/changes-errors/changes-errors-new.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/changes-errors/changes-errors-new.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/screen-2.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/screen-2.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/monitors-and-alerts.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/monitors-and-alerts.png)
 
 ```=html
 <hr />

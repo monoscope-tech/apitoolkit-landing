@@ -118,7 +118,7 @@ By incorporating API log explorers into their [monitoring](https://monoscope.tec
 
 API log explorers have emerged as a critical component in the modern technology stack, providing unparalleled visibility into the complex interactions between various services and users. By facilitating [real-time monitoring](https://monoscope.tech/blog/mastering-api-debugging/) and detailed analytics, these tools enable organizations to swiftly diagnose issues, understand user behavior, and optimize performance, ensuring that APIs—the lifeblood of digital systems—function seamlessly and efficiently.
 
-[Try APIToolkit for Free](monoscope.tech)
+[Try monoscope for Free](monoscope.tech)
 
 ## Keep Reading
 

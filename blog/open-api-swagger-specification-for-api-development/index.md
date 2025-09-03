@@ -111,19 +111,19 @@ The first step to implement OpenAPI Specification is to design your API with it.
 
 You can use tools like Swagger Editor or Swagger Hub to write and edit your OpenAPI specification file online. These tools provide features like syntax highlighting, auto-completion, validation, previewing, etc., that can help you create a valid and complete specification file.
 
-Alternatively, you can use other tools or libraries that support OpenAPI Specification in various languages or frameworks. For example, you can use [APIToolkit](https://monoscope.tech), Springdoc for Java Spring Boot applications, FastAPI for Python applications, Swashbuckle for .NET applications, etc.
+Alternatively, you can use other tools or libraries that support OpenAPI Specification in various languages or frameworks. For example, you can use [monoscope](https://monoscope.tech), Springdoc for Java Spring Boot applications, FastAPI for Python applications, Swashbuckle for .NET applications, etc.
 
 ### Validating Your API
 
 The second step is to validate your API against your OpenAPI Specification file. This can help you ensure that your API conforms to the specification and follows the best practices. Validation can also help you identify and fix errors, inconsistencies, or missing information in your OAS file.
 
-There are different tools and methods for validating your API. One option is to use the Swagger UI, an online tool that displays your OAS file as an interactive documentation and allows you to test your API endpoints. You can also use other tools such as validators, linters, or testing frameworks that support the OAS. [APIToolkit](https://monoscope.tech) is one of such tools.
+There are different tools and methods for validating your API. One option is to use the Swagger UI, an online tool that displays your OAS file as an interactive documentation and allows you to test your API endpoints. You can also use other tools such as validators, linters, or testing frameworks that support the OAS. [monoscope](https://monoscope.tech) is one of such tools.
 
 ### Generating Documentation
 
 The third step is to [generate documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) for your API based on your OAS file. Documentation can help you communicate the features and functionality of your API to your users and stakeholders. Documentation can also help you increase the usability and adoption of your API.
 
-There are different tools and formats for generating documentation from your OAS file. One option is to use [APIToolkit](monoscope.tech), an API management software that automatically generates and hosts documentation for your OAS file. You can also use other tools such as the Swagger Hub, converters, generators, or templates that support the OAS.
+There are different tools and formats for generating documentation from your OAS file. One option is to use [monoscope](monoscope.tech), an API management software that automatically generates and hosts documentation for your OAS file. You can also use other tools such as the Swagger Hub, converters, generators, or templates that support the OAS.
 
 ## Best practices for OpenAPI specification
 
@@ -139,7 +139,7 @@ The OpenAPI specification should be complete and should describe all of the reso
 
 ### 3. Be accurate
 
-The OpenAPI specification should be accurate and should reflect the current state of the API. If the API changes, the specification should be updated accordingly. APIToolkit can keep your specififcations updated with auto-generated documentation based off your live traffic.
+The OpenAPI specification should be accurate and should reflect the current state of the API. If the API changes, the specification should be updated accordingly. monoscope can keep your specififcations updated with auto-generated documentation based off your live traffic.
 
 ### 4. Be consistent
 

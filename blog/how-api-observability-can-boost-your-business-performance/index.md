@@ -115,7 +115,7 @@ Now that you understand the importance and benefits of API observability, you ma
 
 The following tools can get the job done:
 
-[APIToolkit](https://monoscope.tech): An automated observability tool for API contract monitoring and [documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/). It helps teams ensure that their APIs are compliant with their specifications and standards, and provides clear and up-to-date documentation for internal and external consumers.
+[monoscope](https://monoscope.tech): An automated observability tool for API contract monitoring and [documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/). It helps teams ensure that their APIs are compliant with their specifications and standards, and provides clear and up-to-date documentation for internal and external consumers.
 
 Postman: A comprehensive API testing tool that allows teams to design, develop, test, document, and monitor their APIs.
 

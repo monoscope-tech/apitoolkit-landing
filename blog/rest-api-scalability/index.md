@@ -63,7 +63,7 @@ However, scaling doesn't happen automatically. There are certain practices that 
 
 Remember, building a scalable REST API is a continuous process. As your application grows, you need to constantly monitor, analyze, and adapt your API to meet evolving demands. By following these practices and avoiding potential pitfalls, you can ensure your REST API remains scalable and robust, no matter how much it grows.
 
-When you build your APIs, explore using [APIToolkit](https://monoscope.tech) to monitor and test them to ensure they reach your scalability requirements, and stay safe from bugs which your customers might dislike.
+When you build your APIs, explore using [monoscope](https://monoscope.tech) to monitor and test them to ensure they reach your scalability requirements, and stay safe from bugs which your customers might dislike.
 
 **Keep Reading**
 

@@ -8,7 +8,7 @@ menuWeight: 3
 
 # Symfony SDK Guide
 
-To integrate your Symfony application with APItoolkit, you need to use this SDK to monitor incoming traffic, aggregate the requests, and then send them to APItoolkit's servers. Kindly follow this guide to get started and learn about all the supported features of APItoolkit's **Symfony SDK**.
+To integrate your Symfony application with monoscope, you need to use this SDK to monitor incoming traffic, aggregate the requests, and then send them to monoscope's servers. Kindly follow this guide to get started and learn about all the supported features of monoscope's **Symfony SDK**.
 
 ```=html
 
@@ -35,7 +35,7 @@ First, add the `APITOOLKIT_KEY` environment variable to your `.env` file, like s
 APITOOLKIT_KEY={ENTER_YOUR_API_KEY_HERE}
 ```
 
-Then, add the `APIToolkit\EventSubscriber\APIToolkitService` listener and API Key to your `config/service.yaml` file, like so:
+Then, add the `monoscope\EventSubscriber\monoscopeService` listener and API Key to your `config/service.yaml` file, like so:
 
 ```yaml
 # This file is the entry point to configure your own services.
@@ -51,11 +51,11 @@ services:
     autowire: true # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-  # Initialize the APItoolkit client
-  APIToolkit\EventSubscriber\APIToolkitService:
+  # Initialize the monoscope client
+  monoscope\EventSubscriber\monoscopeService:
     arguments:
       $apiKey: "%env(APITOOLKIT_KEY)%"
-  # END Initialize the APItoolkit client
+  # END Initialize the monoscope client
 
   # makes classes in src/ available to be used as services
   # this creates a service per class whose id is the fully-qualified class name
@@ -73,13 +73,13 @@ services:
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
-  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the APItoolkit dashboard.</p>
+  <p>The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced with the API key generated from the monoscope dashboard.</p>
 </div>
 ```
 
 ## Redacting Sensitive Data
 
-If you have fields that are sensitive and should not be sent to APItoolkit servers, you can mark those fields to be redacted (the fields will never leave your servers).
+If you have fields that are sensitive and should not be sent to monoscope servers, you can mark those fields to be redacted (the fields will never leave your servers).
 
 To mark a field for redacting via this SDK, you need to add some additional arguments to the configuration with paths to the fields that should be redacted. There are three variables you can provide to configure what gets redacted, namely:
 
@@ -127,15 +127,15 @@ Examples of valid JSONPath expressions would be:
 :::
 | JSONPath | Description |
 | -------- | ----------- |
-| `$.user.addresses[*].zip` | In this case, APItoolkit will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
-| `$.user.credit_card` | In this case, APItoolkit will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.addresses[*].zip` | In this case, monoscope will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.credit_card` | In this case, monoscope will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
   <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=apitoolkit" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
-  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to APItoolkit will look like, after redacting any given JSON object</b>.</p>
+  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to monoscope will look like, after redacting any given JSON object</b>.</p>
 </div>
 <hr />
 ```
@@ -144,7 +144,7 @@ Here's what the configuration would look like with redacted fields in the `confi
 
 ```yaml
 services:
-  APIToolkit\EventSubscriber\APIToolkitService:
+  monoscope\EventSubscriber\monoscopeService:
     arguments:
       $apiKey: "%env(APITOOLKIT_KEY)%"
       $redactedHeaders:

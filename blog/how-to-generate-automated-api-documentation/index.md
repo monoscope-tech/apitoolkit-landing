@@ -3,7 +3,7 @@ title: "How to Generate Automated API Documentation"
 featured_image: latop-and-notebook.jpg
 date: 2023-03-17T18:36:58+02:00
 author: collins
-description: "Find Out how to Generate Automated API Documentation with APIToolkit"
+description: "Find Out how to Generate Automated API Documentation with monoscope"
 categories:
   - API Documentation
 --- 
@@ -36,7 +36,7 @@ For example, while 70% of the companies had some form of API documentation, only
 
 Another chunk of developers managed hand-rolled swagger files, but these swagger files were almost always out of date with the actual in-production APIs, because it was common that small changes happened to the APIs but the developer never remembered to also update the swagger files.
 
-## What is APIToolkit doing about Automated Documentation?
+## What is monoscope doing about Automated Documentation?
 
 Documentation simply can’t be a manual process. Developers rarely remember to update it. Moreover, even with the teams we interviewed who automated the documentation generation, the documentation quality was usually skeletal at best. Basically, only a few teams went the extra step of including field-level documentation where they explain what different fields meant.
 
@@ -56,7 +56,7 @@ Read: [How to Analyze API Logs and Metrics for Better Performance](https://monos
 
 ![Field documentation](./field_documentation.png)
 
-When requests get to your servers, APItoolkit looks into these requests, checks their structure, and shape, checks the fields, their formats, etc, and uses this information to get an idea of what your API looks like. This information is what is used to generate API docs for you. And then this API Docs can then be downloaded as Swagger.
+When requests get to your servers, monoscope looks into these requests, checks their structure, and shape, checks the fields, their formats, etc, and uses this information to get an idea of what your API looks like. This information is what is used to generate API docs for you. And then this API Docs can then be downloaded as Swagger.
 
 To help you build a model about how this works, let’s look at some example GET request.
 
@@ -88,7 +88,7 @@ To help you build a model about how this works, let’s look at some example GET
 	
 	--- Etc
 
-[APItoolkit](https://monoscope.tech/) would process these requests and learn that the endpoint has a structure that looks similar to:
+[monoscope](https://monoscope.tech/) would process these requests and learn that the endpoint has a structure that looks similar to:
 
 Endpoint: /user/{arg: integer}/
 
@@ -128,7 +128,7 @@ Apitoolkit is on the journey of helping developers create amazing API documentat
 
 Check out the [AIToolkit features](https://monoscope.tech/).
 
-APIToolkit is committed to guiding you through managing quality documentation, and we have written some articles on this topic. Take a look:
+monoscope is committed to guiding you through managing quality documentation, and we have written some articles on this topic. Take a look:
 
 **Also Read**
 

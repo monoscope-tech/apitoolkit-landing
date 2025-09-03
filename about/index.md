@@ -8,7 +8,7 @@ hide_date: true
 <section class="our_container w-full px-6 md:px-0 lg:px-0">
 ```
 
-## Why APItoolkit?
+## Why monoscope?
 
 A few years ago, I was a new hire at a food delivery company,
 migrating a legacy service from PHP to Golang. We implemented the
@@ -45,21 +45,21 @@ thing of the past.
   </p>
 ```
 
-## APItoolkit is built by real engineers to solve problems that have cost them a lot in the past
+## monoscope is built by real engineers to solve problems that have cost them a lot in the past
 
 We’re engineers at our core, who are very close to the problems we are
 solving. So, we encourage our users to be a part of this community,
 evolving solutions to solve API documentation, management and observability.
 
 You can do this by joining our Discord channel to join others who are
-part of our journey in evolving APItoolkit or book a slot to have an
+part of our journey in evolving monoscope or book a slot to have an
 open conversation with us. We’re always open to have a chat with
 everyone and learn about their experiences around API documentation and
 observability.
 
 ## Business Contact
 
-APItoolkit is a product of Past 3 Technologies, a software consulting firm based out of Berlin, Germany.
+monoscope is a product of Past 3 Technologies, a software consulting firm based out of Berlin, Germany.
 
 [hello@past3.tech](mailto:hello@past3.tech)
 

@@ -8,7 +8,7 @@ menuWeight: 1
 
 # Springboot SDK Guide
 
-In this guide, you’ll learn how to integrate OpenTelemetry into your Java application and install the APItoolkit Springboot SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the APItoolkit SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
+In this guide, you’ll learn how to integrate OpenTelemetry into your Java application and install the monoscope Springboot SDK to enhance its functionalities. By combining OpenTelemetry’s robust tracing and metrics capabilities with the monoscope SDK, you’ll be able to monitor incoming and outgoing requests, report errors, and gain deeper insights into your application’s performance. This setup provides comprehensive observability, helping you track requests and troubleshoot issues effectively.
 
 ```=html
 
@@ -33,7 +33,7 @@ To install the SDK, kindly add the following dependency to your `pom.xml` file w
 
 ## Open Telemetry Setup
 
-Setting up open telemetry allows you to send traces, metrics and logs to the APIToolkit platform.
+Setting up open telemetry allows you to send traces, metrics and logs to the monoscope platform.
 To setup open telemetry, you need to install the opentelemetry-javaagent.jar file.
 
 ```sh
@@ -42,7 +42,7 @@ curl -L -O https://github.com/open-telemetry/opentelemetry-java-instrumentation/
 
 ### Setup Open Telemetry Variables
 
-The environment variables include your API key and the endpoint to send the data to, this allows you to send data to the APIToolkit platform.
+The environment variables include your API key and the endpoint to send the data to, this allows you to send data to the monoscope platform.
 
 ```sh
 export OTEL_EXPORTER_OTLP_ENDPOINT="http://otelcol.monoscope.tech:4317"
@@ -56,7 +56,7 @@ export OTEL_EXPORTER_OTLP_PROTOCOL="grpc" #Specifies the protocol to use for the
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
   <p>
     The <code>{ENTER_YOUR_API_KEY_HERE}</code> demo string should be replaced
-    with the API key generated from the APItoolkit dashboard.
+    with the API key generated from the monoscope dashboard.
   </p>
 </div>
 ```
@@ -73,7 +73,7 @@ or using maven
 mvn spring-boot:run -Dspring-boot.run.jvmArguments="-javaagent:<PATH-TO>/opentelemetry-javaagent.jar"
 ```
 
-## APItoolkit SDK Configuration
+## monoscope SDK Configuration
 
 The apitoolkit sdk can be configured using the following optional properties in your `resource/application.properties` file:
 
@@ -97,15 +97,15 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-// Import APItoolkit annotation
-import io.apitoolkit.springboot.annotations.EnableAPIToolkit;
-// END Import APItoolkit annotation
+// Import monoscope annotation
+import io.apitoolkit.springboot.annotations.Enablemonoscope;
+// END Import monoscope annotation
 import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
-// Add APIToolkit custom annotation
-@EnableAPIToolkit
-// END Add APIToolkit custom annotation
+// Add monoscope custom annotation
+@Enablemonoscope
+// END Add monoscope custom annotation
 @RestController
 public class DemoApplication {
 
@@ -122,7 +122,7 @@ public class DemoApplication {
 
 ## Redacting Sensitive Data
 
-If you have fields that are sensitive and should not be sent to APItoolkit servers, you can mark those fields to be redacted (the fields will never leave your servers).
+If you have fields that are sensitive and should not be sent to monoscope servers, you can mark those fields to be redacted (the fields will never leave your servers).
 
 To mark a field for redacting via this SDK, you need to provide additional configuration options to the `application.properties` file with paths to the fields that should be redacted. There are three arguments you can provide to configure what gets redacted, namely:
 
@@ -170,15 +170,15 @@ Examples of valid JSONPath expressions would be:
 :::
 | JSONPath | Description |
 | -------- | ----------- |
-| `$.user.addresses[*].zip` | In this case, APItoolkit will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
-| `$.user.credit_card` | In this case, APItoolkit will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.addresses[*].zip` | In this case, monoscope will replace the `zip` field in all the objects of the `addresses` list inside the `user` object with the string `[CLIENT_REDACTED]`. |
+| `$.user.credit_card` | In this case, monoscope will replace the entire `credit_card` object inside the `user` object with the string `[CLIENT_REDACTED]`. |
 :::
 
 ```=html
 <div class="callout">
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tip</b></p>
   <p>To learn more about JSONPaths, please take a look at the <a href="https://github.com/json-path/JsonPath/blob/master/README.md" target="_blank">official docs</a> or use this <a href="https://jsonpath.com?ref=apitoolkit" target="_blank">JSONPath Evaluator</a> to validate your JSONPath expressions. </p>
-  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to APItoolkit will look like, after redacting any given JSON object</b>.</p>
+  <p><b>You can also use our <a href="/tools/json-redacter/">JSON Redaction Tool</a> <i class="fa-regular fa-screwdriver-wrench"></i> to preview what the final data sent from your API to monoscope will look like, after redacting any given JSON object</b>.</p>
 </div>
 <hr />
 ```
@@ -204,7 +204,7 @@ apitoolkit.redactResponseBody=$.users[*].email,$.users[*].credit_card
 
 ## Error Reporting
 
-With APItoolkit, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
+With monoscope, you can track and report different unhandled or uncaught errors, API issues, and anomalies at different parts of your application. This will help you associate more detail and context from your backend with any failing customer request.
 
 To manually report specific errors at different parts of your application, use the `reportError()` method, passing in the `request` and `exception` parameters, like so:
 
@@ -217,9 +217,9 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
 
 import io.apitoolkit.springboot.APErrors;
-import io.apitoolkit.springboot.annotations.EnableAPIToolkit;
+import io.apitoolkit.springboot.annotations.Enablemonoscope;
 
-@EnableAPIToolkit
+@Enablemonoscope
 @SpringBootApplication
 public class DemoApplication {
 
@@ -232,7 +232,7 @@ public class DemoApplication {
     try {
       System.out.print(1 / 0); // This will throw an ArithmeticException
     } catch (Exception e) {
-      // Report the error to APItoolkit
+      // Report the error to monoscope
       APErrors.reportError(request, e);
     }
     return String.format("Hello %s!", name);
@@ -242,7 +242,7 @@ public class DemoApplication {
 
 ## Monitoring Outgoing Requests
 
-Outgoing requests are external API calls you make from your API. By default, APItoolkit monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
+Outgoing requests are external API calls you make from your API. By default, monoscope monitors all requests users make from your application and they will all appear in the [API Log Explorer](/docs/dashboard/dashboard-pages/api-log-explorer/){target="\_blank"} page. However, you can separate outgoing requests from others and explore them in the [Outgoing Integrations](/docs/dashboard/dashboard-pages/outgoing-integrations/){target="\_blank"} page, alongside the incoming request that triggered them.
 
 The Springboot SDK provides the `ObserveRequest` class for monitoring outgoing requests using the Apache HTTP client. First, you will create an instance of the class, then use the instance to create a new HTTP client, passing in the current `request` context and an optional `url_path` string (for URLs with path parameters), like so:
 
@@ -257,14 +257,14 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import io.apitoolkit.springboot.annotations.EnableAPIToolkit;
+import io.apitoolkit.springboot.annotations.Enablemonoscope;
 import io.apitoolkit.springboot.integrations.ObserveRequest;
 import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
-@EnableAPIToolkit
+@Enablemonoscope
 @RestController
 public class DemoApplication {
 

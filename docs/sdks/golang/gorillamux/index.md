@@ -10,7 +10,7 @@ menuWeight: 5
 
 ## Installation
 
-Install the APIToolkit gorilla mux SDK using the following command `go get` command:
+Install the monoscope gorilla mux SDK using the following command `go get` command:
 
 ```sh
 go get github.com/monoscope-tech/monoscope-go/gorilla
@@ -18,7 +18,7 @@ go get github.com/monoscope-tech/monoscope-go/gorilla
 
 ## Configuration
 
-Before configuration open telemetery and setting up the APItoolkit middleware, you need to configure a few environment variables. These variables provide essential information for setting up openTelemetry and APItoolkit.
+Before configuration open telemetery and setting up the monoscope middleware, you need to configure a few environment variables. These variables provide essential information for setting up openTelemetry and monoscope.
 
 ```sh
 OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY" # Your monoscope API key
@@ -28,7 +28,7 @@ OTEL_SERVICE_VERSION="0.0.1" # Your application's service version
 
 ## Usage
 
-After setting up the environment variables, you can configure the OpenTelemetry SDK and APItoolkit middleware like so:
+After setting up the environment variables, you can configure the OpenTelemetry SDK and monoscope middleware like so:
 
 ```go
 package main
@@ -51,7 +51,7 @@ func main() {
 	defer shutdown()
 
 	router := mux.NewRouter()
-	// Register APItoolkit's middleware
+	// Register monoscope's middleware
 	router.Use(monoscope.Middleware(
 		monoscope.Config{
 			RedactHeaders:       []string{"Authorization", "X-Api-Key"},
@@ -77,7 +77,7 @@ Set the following environment variables in your application to enable the SDK:
 :::
 | Variable Name | Description | Required | Example |
 | ----------------------------------- | ------------------------------------------------------------- | -------- | ---------------------------- |
-| `OTEL_RESOURCE_ATTRIBUTES` | APItoolkit project key (`at-project-key=<YOUR_API_KEY>`) | Yes | `at-project-key=my-api-key` |
+| `OTEL_RESOURCE_ATTRIBUTES` | monoscope project key (`at-project-key=<YOUR_API_KEY>`) | Yes | `at-project-key=my-api-key` |
 | `OTEL_SERVICE_NAME` | The name of the service being monitored | No | `example-chi-server` |
 | `OTEL_SERVICE_VERSION` | The version of your application or service | No | `0.0.1` |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | The grpc endpoint for the OpenTelemetry collector. | No | `otelcol.monoscope.tech:4317` |
@@ -90,7 +90,7 @@ Set the following environment variables in your application to enable the SDK:
 
 ### All Middleware Configuration Fields
 
-The middleware configuration specifies how the APItoolkit SDK should handle requests and responses. Below are the available fields:
+The middleware configuration specifies how the monoscope SDK should handle requests and responses. Below are the available fields:
 
 {class="docs-table"}
 :::
@@ -112,7 +112,7 @@ The middleware configuration specifies how the APItoolkit SDK should handle requ
   <p><i class="fa-regular fa-lightbulb"></i> <b>Tips</b></p>
   <ol>
   <li>
-  Remember to keep your APIToolkit project key (`at-project-key`) secure and not expose it in public repositories or logs.
+  Remember to keep your monoscope project key (`at-project-key`) secure and not expose it in public repositories or logs.
   </li>
   </ul>
 </div>

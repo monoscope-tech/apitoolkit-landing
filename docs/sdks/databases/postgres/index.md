@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit with PostgreSQL
-ogTitle: How to Monitor PostgreSQL Database Operations with APItoolkit using OpenTelemetry Collector
+title: Integrating monoscope with PostgreSQL
+ogTitle: How to Monitor PostgreSQL Database Operations with monoscope using OpenTelemetry Collector
 faLogo: database
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,9 +8,9 @@ linkTitle: "PostgreSQL"
 menuWeight: 10
 ---
 
-# Integrating APItoolkit with PostgreSQL
+# Integrating monoscope with PostgreSQL
 
-This guide demonstrates how to integrate APItoolkit with PostgreSQL databases using the OpenTelemetry Collector for infrastructure-level monitoring without requiring code changes to your applications.
+This guide demonstrates how to integrate monoscope with PostgreSQL databases using the OpenTelemetry Collector for infrastructure-level monitoring without requiring code changes to your applications.
 
 ```=html
 <hr>
@@ -20,7 +20,7 @@ This guide demonstrates how to integrate APItoolkit with PostgreSQL databases us
 
 - PostgreSQL database server
 - OpenTelemetry Collector
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Monitoring PostgreSQL with OpenTelemetry Collector
 
@@ -332,7 +332,7 @@ After setting up the OpenTelemetry Collector with PostgreSQL:
    docker logs otel-collector
    ```
 
-3. View your APItoolkit dashboard to see PostgreSQL metrics, including:
+3. View your monoscope dashboard to see PostgreSQL metrics, including:
    - Query execution time
    - Connection counts
    - Transaction rates
@@ -353,7 +353,7 @@ The OpenTelemetry Collector will capture these important PostgreSQL metrics:
 
 ## Next Steps
 
-- Configure alerting in APItoolkit for critical PostgreSQL metrics
+- Configure alerting in monoscope for critical PostgreSQL metrics
 - Create custom dashboards for database performance monitoring
 - Correlate database operations with API endpoints to identify bottlenecks
 - Set up collection of additional PostgreSQL-specific metrics

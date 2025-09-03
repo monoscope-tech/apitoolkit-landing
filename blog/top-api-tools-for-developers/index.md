@@ -20,13 +20,13 @@ To help you choose the diamonds in the rough, here’s a list of the top 10 API 
 
 [API observability](https://monoscope.tech/blog/api-observability-and-api-monitoring/) is a way of keeping track of APIs that uses an agent or SDK to passively log API traffic to an observability service.
 
-### 1. [APIToolkit](https://monoscope.tech)
+### 1. [monoscope](https://monoscope.tech)
 
-[APIToolkit](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is an automated comprehensive API observability and monitoring platform for API contract monitoring and documentation. It was built by software engineers to help solve problems that could potentially cause lots of losses (data, revenue, customers, etc). 
+[monoscope](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) is an automated comprehensive API observability and monitoring platform for API contract monitoring and documentation. It was built by software engineers to help solve problems that could potentially cause lots of losses (data, revenue, customers, etc). 
 
-Using the best-in-class technology, APIToolkit leverages a highly specialized and powerful platform to provide a secure environment for developers to build and maintain APIs with enhanced analytics.
+Using the best-in-class technology, monoscope leverages a highly specialized and powerful platform to provide a secure environment for developers to build and maintain APIs with enhanced analytics.
 
-APIToolkit spots broken apis, changed fields, etc., before your customers.
+monoscope spots broken apis, changed fields, etc., before your customers.
 
 ### 2. Moesif
 
@@ -106,7 +106,7 @@ Swagger allows its users to write API documentation, plan and report new APIs, a
 
 ## Conclusion
 
-Whatever your API tool stack is, you definitely cannot afford to do without [real-time monitoring](https://monoscope.tech/blog/what-is-api-testing/) and observability from APIToolkit.
+Whatever your API tool stack is, you definitely cannot afford to do without [real-time monitoring](https://monoscope.tech/blog/what-is-api-testing/) and observability from monoscope.
 
 If you still aren’t convinced, you should [check this out](https://monoscope.tech/blog/why-you-need-an-api-monitoring-tool/).
 

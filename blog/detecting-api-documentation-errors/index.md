@@ -68,7 +68,7 @@ Addressing these errors is vital for maintaining the usefulness of API documenta
 Ensuring the accuracy and reliability of API documentation is an ongoing task. Luckily, there are several tools and methods available to help pinpoint and fix errors. Here are some of the most effective:
 
 ### Automated Testing Tools
-These tools are invaluable for maintaining top-notch API documentation. They automatically verify code snippets, parameter types, and response formats against the actual API. Popular options include APIToolkit, Postman, and Swagger Inspector. Benefits include:
+These tools are invaluable for maintaining top-notch API documentation. They automatically verify code snippets, parameter types, and response formats against the actual API. Popular options include monoscope, Postman, and Swagger Inspector. Benefits include:
 
 - Continuous Validation: Tests can run regularly to keep documentation in sync with the API.
 - Time-Saving: Automated tests cover a wide range of scenarios quickly, freeing up human resources.
@@ -102,7 +102,7 @@ Maintaining an error-free API documentation is not a one-time effort but an ongo
 
 The responsibility for maintaining accurate and reliable API documentation is a shared one, which falls on both developers and technical writers. Here's what you can do:
 
-Developers: Invest time in learning and using automated testing tools that can validate your [API documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) like [APIToolkit](https://monoscope.tech/). Your expertise in the API's functionality is invaluable for creating accurate examples and troubleshooting guides.
+Developers: Invest time in learning and using automated testing tools that can validate your [API documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) like [monoscope](https://monoscope.tech/). Your expertise in the API's functionality is invaluable for creating accurate examples and troubleshooting guides.
 
 Technical Writers: Focus on clarity, completeness, and consistency. Your skills in conveying complex technical information in an accessible manner are crucial for the documentation's effectiveness.
 

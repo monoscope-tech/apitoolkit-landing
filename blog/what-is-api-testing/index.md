@@ -35,7 +35,7 @@ API testing is crucial now more than ever because APIs serve as the primary link
 
 Such a break could have catastrophic results for web apps that rely on those APIs.
 
-On the other hand, [API observability](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) like what we do at [APItoolkit](https://monoscope.tech) can help you detect breaks in API interfaces that your web app relies on.
+On the other hand, [API observability](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) like what we do at [monoscope](https://monoscope.tech) can help you detect breaks in API interfaces that your web app relies on.
 For more context, here’s a list of the types of bugs that can be detected by API tests
 
 - Duplicate functionality
@@ -114,8 +114,8 @@ Read: [Top 7 Reasons Why Your Team Needs an API Monitoring ](https://monoscope.t
 
 API testing can be done with a variety of automated tools.
 
-- **APIToolkit**: APIToolkit possesses all the tool you need to design, TEST, and monitor your APIs. It's the one-stop toolbox for [API developers](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/) utilizing a variety of tech stack.
-  ![APIToolkit app user dashboard](./apitoolkit1.jpg)
+- **monoscope**: monoscope possesses all the tool you need to design, TEST, and monitor your APIs. It's the one-stop toolbox for [API developers](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/) utilizing a variety of tech stack.
+  ![monoscope app user dashboard](./apitoolkit1.jpg)
 - **Rapid API testing**: Over 1 million developers and 10,000 APIs are available on Rapid API testing. It’s an API testing solution for managing complex API tests throughout the development process. You can run tests for any type of API (including REST, SOAP, and GraphQL).
   ![Rapid API Testing](./image4.png "<a href='https://docs.rapidapi.com/docs/rapidapi-testing-overview'>Image source</a>")
 - **SOAPUI test**: Mainly used for REST, SOAP, and other mainstream API and IoT systems.

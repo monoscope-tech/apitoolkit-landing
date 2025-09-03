@@ -118,7 +118,7 @@ Integrate Alerts into your current workflow through Slack, email, teams, pagerdu
 
 {class="text-center"}
 ::::
-### Integrate APItoolkit
+### Integrate monoscope
 
 ```=html
 <hr />

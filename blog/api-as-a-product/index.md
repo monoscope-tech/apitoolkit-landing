@@ -200,13 +200,13 @@ By making APIs a central part of their business strategy, API-first companies wi
 
 Building and managing APIs, whether as API-as-a-Product or as an API-first company, is not complete if API monitoring and observability are not added to the equation. Every day, millions of API requests are sent, making it difficult to monitor the integrity of every call. Hence, frequent cases of API downtime.
 
-This is why we built [APIToolkit](https://monoscope.tech), an API monitoring and observability tool that gives you a bird's eye view over your entire API. APIToolkit tracks anomalies and ensures that your payloads are returning accurate data, notifying you of any changes in real time.
+This is why we built [monoscope](https://monoscope.tech), an API monitoring and observability tool that gives you a bird's eye view over your entire API. monoscope tracks anomalies and ensures that your payloads are returning accurate data, notifying you of any changes in real time.
 
 In addition, the tool ensures that your API documentation is up-to-date, by automatically generating documentation for you based on your API traffic.
 
-APIToolkit is featured on TechCrunch and the GoLang Podcast in Berlin, Germany.
+monoscope is featured on TechCrunch and the GoLang Podcast in Berlin, Germany.
 
-[Try APIToolkit It Here](https://monoscope.tech)
+[Try monoscope It Here](https://monoscope.tech)
 
 **Also Read**
 

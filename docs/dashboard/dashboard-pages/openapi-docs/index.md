@@ -7,7 +7,7 @@ menuWeight: 8
 
 # OpenAPI/Swagger Page
 
-In this guide, you will learn how to effectively navigate through the **OpenAPI/Swagger** page on the APItoolkit dashboard and maximize all the powerful features accessible in it.
+In this guide, you will learn how to effectively navigate through the **OpenAPI/Swagger** page on the monoscope dashboard and maximize all the powerful features accessible in it.
 
 ```=html
 <hr />
@@ -15,7 +15,7 @@ In this guide, you will learn how to effectively navigate through the **OpenAPI/
 
 On this page, you will find an auto-generated **OpenAPI specification** (swagger docs) for endpoints in your API using all the shapes detected from requests on your API. You can search, copy the raw specification, preview it, save different versions, and view all saved versions.
 
-![Screenshot of APItoolkit's OpenAPI/Swagger page](/docs/dashboard/dashboard-pages/openapi-docs/screen.png)
+![Screenshot of monoscope's OpenAPI/Swagger page](/docs/dashboard/dashboard-pages/openapi-docs/screen.png)
 
 ```=html
 <div class="callout">
@@ -41,7 +41,7 @@ Here's a quick video overview for a visual walkthrough of this page:
 <iframe
   class="w-full h-48 md:h-96 lg:h-96 xl:h-96"
   src="https://www.youtube.com/embed/uUtk79W_Q6c?si=JBgiJg3rLiOTmbjf"
-  title="YouTube Video Player: APItoolkit OpenAPI Spec Documentation"
+  title="YouTube Video Player: monoscope OpenAPI Spec Documentation"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
   allowfullscreen

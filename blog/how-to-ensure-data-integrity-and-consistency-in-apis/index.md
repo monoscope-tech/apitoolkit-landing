@@ -97,7 +97,7 @@ The journey to ensuring data integrity and consistency in APIs is multifaceted. 
 
 For those eager to delve deeper into the realm of data integrity in APIs, the following resources provide valuable insights and tools for further exploration:
 
-- [APItoolkit documentation](https://monoscope.tech/docs/glossary/)
+- [monoscope documentation](https://monoscope.tech/docs/glossary/)
 - [JSON Schema Documentation](https://json-schema.org/documentation.html)
 - [OpenAPI Specification](https://www.openapis.org/)
 - [Data Profiling Techniques](https://towardsdatascience.com/data-profiling-techniques-4c6748f7026)

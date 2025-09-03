@@ -7,7 +7,7 @@ menuWeight: 9
 
 # Reports Page
 
-In this guide, you will learn how to effectively navigate through the **Reports** page on the APItoolkit dashboard and maximize all the powerful features accessible in it.
+In this guide, you will learn how to effectively navigate through the **Reports** page on the monoscope dashboard and maximize all the powerful features accessible in it.
 
 ```=html
 <hr />
@@ -15,12 +15,12 @@ In this guide, you will learn how to effectively navigate through the **Reports*
 
 On this page, you will find a history of all the email notification reports sent to members of the project. These reports will include a summary of detected anomalies and some performance details. You can choose to receive these reports daily or weekly by selecting any of the options at the top-left section of the page.
 
-![Screenshot of APItoolkit's report page](/docs/dashboard/dashboard-pages/reports/screen.png)
+![Screenshot of monoscope's report page](/docs/dashboard/dashboard-pages/reports/screen.png)
 
 ```=html
 <div class="callout">
   <i class="fa-regular fa-lightbulb"></i>
-  <p>Aside from the general reports, APItoolkit will also send you transactional emails for when you create a new project, when a new member is added to a project, when you delete a project, and when a new anomaly is detected.</p>
+  <p>Aside from the general reports, monoscope will also send you transactional emails for when you create a new project, when a new member is added to a project, when you delete a project, and when a new anomaly is detected.</p>
 </div>
 ```
 

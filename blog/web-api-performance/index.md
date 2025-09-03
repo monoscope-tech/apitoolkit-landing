@@ -122,8 +122,8 @@ Read: [10 Must-Know API Trends in 2023](https://monoscope.tech/blog/api-trends/)
 
 ## 3. Monitor and Analyze API Performance
 
-![APIToolkit's Throughput Tab](./api-throughput.png)
-Image source: APIToolkit's throughputput tab
+![monoscope's Throughput Tab](./api-throughput.png)
+Image source: monoscope's throughputput tab
 
 One of the key aspects of web API performance is [monitoring and analyzing](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) how the API behaves in different scenarios and environments. This can help you identify and resolve any issues that may affect the API performance, such as errors, bugs, slow responses, or high resource consumption.
 
@@ -173,7 +173,7 @@ Read: [How to Write API Documentation: 10 Essential Guidelines](https://monoscop
 ### 2. Implement Performance Metrics and Monitoring
 
 ![API Request Monitoring](./api-requests.png)
-Image source: APIToolkit dashboard
+Image source: monoscope dashboard
 
 Performance metrics and monitoring are crucial for measuring and evaluating web API performance. They can help you quantify how fast and reliable your web API is in terms of response times, latency, throughput, availability, and scalability.
 
@@ -191,7 +191,7 @@ You should implement the following performance metrics and monitoring techniques
 
 ![API Latency Distribution](./api-latency.png)
 
-Performance metrics tools or services that can measure and report these metrics for your web API. For example, you should use [APIToolkit](https://monoscope.tech) to monitor real user traffic and generate load test. APIToolkit is an API management toolbox with all the tools you need to design, test, and monitor the most reliable APIs. 
+Performance metrics tools or services that can measure and report these metrics for your web API. For example, you should use [monoscope](https://monoscope.tech) to monitor real user traffic and generate load test. monoscope is an API management toolbox with all the tools you need to design, test, and monitor the most reliable APIs. 
 
   - Set performance goals or benchmarks for your web API based on your business requirements, user expectations, or industry standards. For example, you can set a goal to have an average response time of less than 500 milliseconds, a latency of less than 100 milliseconds, or a throughput of more than 1000 RPS.
 
@@ -199,18 +199,18 @@ Performance metrics tools or services that can measure and report these metrics 
 
   - Utilizing Performance Monitoring Tools and Dashboards
   
-  ![APIToolkit Dashboard](./apitoolkit-dashboard.png)
-  Image source: APIToolkit dashboard.
+  ![monoscope Dashboard](./apitoolkit-dashboard.png)
+  Image source: monoscope dashboard.
 
-  - Use performance [monitoring tools](https://monoscope.tech/api-performance-monitoring-and-compliance/) or services that can continuously collect, aggregate, and visualize your web API performance metrics. For example, [APIToolkit](https://monoscope.tech) can display your web API performance metrics in real-time, and provide comprehensive and integrated performance monitoring solutions.
+  - Use performance [monitoring tools](https://monoscope.tech/api-performance-monitoring-and-compliance/) or services that can continuously collect, aggregate, and visualize your web API performance metrics. For example, [monoscope](https://monoscope.tech) can display your web API performance metrics in real-time, and provide comprehensive and integrated performance monitoring solutions.
   
-  - Use performance monitoring tools or services that can alert you of any performance issues or [anomalies](https://monoscope.tech/api-anomalies-validation-and-checks/) that may occur in your web API. For example, APIToolkit can detect and help you troubleshoot bugs or anomalies before they affect your customers. Also, APIToolkit integrates with PagerDuty, OpsGenie, Slack, and email to create powerful alerting systems and notify you of any incidents or emergencies in real-time.
+  - Use performance monitoring tools or services that can alert you of any performance issues or [anomalies](https://monoscope.tech/api-anomalies-validation-and-checks/) that may occur in your web API. For example, monoscope can detect and help you troubleshoot bugs or anomalies before they affect your customers. Also, monoscope integrates with PagerDuty, OpsGenie, Slack, and email to create powerful alerting systems and notify you of any incidents or emergencies in real-time.
 
 Read: [API Observability and Monitoring: What’s the Difference?](https://monoscope.tech/blog/api-observability-and-api-monitoring/)
 
 ### C. Conduct Regular Performance Testing
 
-Once proper monitoring has been achieved and a bug is fixed, you can now you utiilize the API workflows and a tester tool to write test cases for this scenario, so it never happens again. Use the [APItoolkit test workflow UI builder](https://monoscope.tech/blog/api-testing-automation) to easily run these tests. Your tests can be scheduled to run against production at any interval you prefer.
+Once proper monitoring has been achieved and a bug is fixed, you can now you utiilize the API workflows and a tester tool to write test cases for this scenario, so it never happens again. Use the [monoscope test workflow UI builder](https://monoscope.tech/blog/api-testing-automation) to easily run these tests. Your tests can be scheduled to run against production at any interval you prefer.
 
 Read: [Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api-testing-automation)
 
@@ -218,7 +218,7 @@ Read: [Ultimate Guide to API Testing Automation](https://monoscope.tech/blog/api
 
 Optimizing web API performance is crucial for ensuring a seamless user experience and driving the success of your application or service. By following best practices in three key areas - API design, request handling, and performance monitoring - you can greatly enhance the efficiency and responsiveness of your APIs.
 
-Get started on APIToolkit for free. Click [here](https://monoscope.tech).
+Get started on monoscope for free. Click [here](https://monoscope.tech).
 
 **Keep Reading**
 

@@ -33,7 +33,7 @@ Answer critical business and engineering questions about your APIs needed to dri
 {class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
 :::
 {.order-last .md:order-first .col-span-3}
-![APItoolkit Dashboard image](/assets/img/screenshots/analytics_zoomed.png){ class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
+![monoscope Dashboard image](/assets/img/screenshots/analytics_zoomed.png){ class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
 
 {.space-y-3 .col-span-2}
 ::::
@@ -69,13 +69,13 @@ View the problematic endpoints, their performance and latency distributions, and
 ::::
 
 {.col-span-3}
-![APItoolkit endpoints](/assets/img/screenshots/endpointlist_zoomed.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
+![monoscope endpoints](/assets/img/screenshots/endpointlist_zoomed.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
 :::
 
 {class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
 :::
 {.col-span-3 .order-last .md:order-first}
-![APItoolkit Realtime logs](./realtime-logs.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
+![monoscope Realtime logs](./realtime-logs.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
 
 { .space-y-3 .col-span-2}
 ::::
@@ -97,7 +97,7 @@ You can even see the locations a request was made from and the latency of that s
 
 {class="text-center"}
 ::::
-### Integrate APItoolkit
+### Integrate monoscope
 
 ```=html
 <hr />

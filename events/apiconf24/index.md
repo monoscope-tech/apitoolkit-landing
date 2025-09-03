@@ -18,7 +18,7 @@ It's a common tale amongst software engineers today about how the smallest techn
 
 In this talk, Bolaji will discuss the rapid evolution of observability in API-driven applications and how engineers can more easily than before, monitor and observe the APIs and external APIs they depend on, allowing them to swiftly identify, reproduce, and fix different kinds of errors or performance issues as they happen, thereby improving customer support resolution, preserving revenue, and maximizing shareholder value.
 
-If you're in Lagos, 🇳🇬, make sure to attend the event to listen to this talk or find Bolaji who will be happy to talk to you about **how [APItoolkit](/) can help your company or side-project solve many of the API challenges you're facing** and **anything API monitoring and observability** ;).
+If you're in Lagos, 🇳🇬, make sure to attend the event to listen to this talk or find Bolaji who will be happy to talk to you about **how [monoscope](/) can help your company or side-project solve many of the API challenges you're facing** and **anything API monitoring and observability** ;).
 
 <hr />
 

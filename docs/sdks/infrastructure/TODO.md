@@ -1,6 +1,6 @@
-# APItoolkit Infrastructure Integration Todo List
+# monoscope Infrastructure Integration Todo List
 
-This document outlines the planned infrastructure and database integration guides for APItoolkit using OpenTelemetry.
+This document outlines the planned infrastructure and database integration guides for monoscope using OpenTelemetry.
 
 ## Infrastructure Integration Guides
 

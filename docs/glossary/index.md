@@ -10,7 +10,7 @@ pageFullWidth: true
 
 # Glossary
 
-The following terms are used in [APItoolkit's documentation](/docs/) to describe different API monitoring and observability concepts.
+The following terms are used in [monoscope's documentation](/docs/) to describe different API monitoring and observability concepts.
 
 ```=html
 <hr />

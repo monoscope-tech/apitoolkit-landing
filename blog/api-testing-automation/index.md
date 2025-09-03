@@ -120,7 +120,7 @@ To write effective test cases for API testing automation, you should follow thes
 
 To automate API testing, you need to follow some steps:
 
-1. **Choose an API testing automation tool that suits the needs and preferences of the project.** There are many tools available for API testing automation, such as [APIToolkit Tester](https://usetestkit.com/), ZAPTEST1, Assertible2, Postman3, SoapUI4, and more.
+1. **Choose an API testing automation tool that suits the needs and preferences of the project.** There are many tools available for API testing automation, such as [monoscope Tester](https://usetestkit.com/), ZAPTEST1, Assertible2, Postman3, SoapUI4, and more.
 
 Some factors to consider when choosing an API testing automation tool are:
 

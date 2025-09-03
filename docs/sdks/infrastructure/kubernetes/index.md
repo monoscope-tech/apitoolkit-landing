@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit with Kubernetes
-ogTitle: How to Integrate APItoolkit with Kubernetes using OpenTelemetry Collector
+title: Integrating monoscope with Kubernetes
+ogTitle: How to Integrate monoscope with Kubernetes using OpenTelemetry Collector
 faLogo: cube
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,9 +8,9 @@ linkTitle: "Kubernetes"
 menuWeight: 10
 ---
 
-# Integrating APItoolkit with Kubernetes
+# Integrating monoscope with Kubernetes
 
-This guide demonstrates how to integrate APItoolkit with Kubernetes using the OpenTelemetry Collector for infrastructure-level API monitoring and observability without requiring code changes to your applications.
+This guide demonstrates how to integrate monoscope with Kubernetes using the OpenTelemetry Collector for infrastructure-level API monitoring and observability without requiring code changes to your applications.
 
 ```=html
 <hr>
@@ -21,7 +21,7 @@ This guide demonstrates how to integrate APItoolkit with Kubernetes using the Op
 - A Kubernetes cluster
 - `kubectl` CLI tool installed
 - Helm (optional, but recommended)
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Deploying the OpenTelemetry Collector
 
@@ -114,7 +114,7 @@ spec:
           exporters: [otlp]
 ```
 
-Replace `YOUR_API_KEY` with your actual APItoolkit project key.
+Replace `YOUR_API_KEY` with your actual monoscope project key.
 
 3. Apply the collector configuration:
 
@@ -441,7 +441,7 @@ kubectl apply -f otel-collector-rbac.yaml
 kubectl apply -f otel-daemonset.yaml
 ```
 
-Create a secret for the APItoolkit API key:
+Create a secret for the monoscope API key:
 
 ```bash
 kubectl create secret generic apitoolkit-secrets --from-literal=api-key=YOUR_API_KEY
@@ -482,11 +482,11 @@ After deploying the OpenTelemetry Collector:
    kubectl logs -l app=otel-collector
    ```
 
-3. Verify in your APItoolkit dashboard that telemetry data is being received
+3. Verify in your monoscope dashboard that telemetry data is being received
 
 ## Next Steps
 
-- Configure alerts in APItoolkit based on Kubernetes API metrics
+- Configure alerts in monoscope based on Kubernetes API metrics
 - Set up custom dashboards to monitor your Kubernetes cluster health
 - Correlate API performance issues with container resource usage
-- Use APItoolkit insights to optimize your Kubernetes deployments and resource allocation
+- Use monoscope insights to optimize your Kubernetes deployments and resource allocation

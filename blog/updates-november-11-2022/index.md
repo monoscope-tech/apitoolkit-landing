@@ -33,17 +33,17 @@ Although data is useful, the actual value lies in actionable data. When relying 
 
 ## To Ensure Peak Performance, Use API Monitoring Tools
 
-If you don’t have the proper tools, managing and monitoring them could be challenging. The performance of APIs may be negatively impacted by any of these. But most of the time, if you have a little foresight, you may simply avoid such problems. This is where API monitoring solutions like APIToolkit are useful. By locating and correcting the problems before they affect your users, they will assist you in catching errors and developing trustworthy APIs. Examine the advantages for yourself by using APIToolkit.
+If you don’t have the proper tools, managing and monitoring them could be challenging. The performance of APIs may be negatively impacted by any of these. But most of the time, if you have a little foresight, you may simply avoid such problems. This is where API monitoring solutions like monoscope are useful. By locating and correcting the problems before they affect your users, they will assist you in catching errors and developing trustworthy APIs. Examine the advantages for yourself by using monoscope.
 
 ![wondering men](./wondering-men.jpeg)
 
-## Still, wondering why you should trust APIToolkit with your API Metrics?
+## Still, wondering why you should trust monoscope with your API Metrics?
 
-APIToolkit is focused on security and compliance We focus on determining problems before they affect customers The integration process is simple, to use, and maintain without sacrificing security.
+monoscope is focused on security and compliance We focus on determining problems before they affect customers The integration process is simple, to use, and maintain without sacrificing security.
 
-Anticipate our launch  this November, as we are finally stepping out of the Beta. If you’ll like to get onboarded into APItoolkit before then (and benefit from our early user advantages), please feel free to reach out.
-I bring you greetings from Kigali (Rwanda), It was a great experience collaborating with founders and possible APIToolkit users. We get into more details when the outcome of our collaboration becomes evident
+Anticipate our launch  this November, as we are finally stepping out of the Beta. If you’ll like to get onboarded into monoscope before then (and benefit from our early user advantages), please feel free to reach out.
+I bring you greetings from Kigali (Rwanda), It was a great experience collaborating with founders and possible monoscope users. We get into more details when the outcome of our collaboration becomes evident
 Do have a lovely weekend where ever you are, and stay happy.
 
 Anthony Alaribe
-Co-founder APItoolkit
+Co-founder monoscope

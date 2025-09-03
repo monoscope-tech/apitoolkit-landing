@@ -93,7 +93,7 @@ Catch errors from any source, whether it's the API itself, a dependent service, 
 
 {class="text-center"}
 ::::
-### Integrate APItoolkit
+### Integrate monoscope
 
 ```=html
 <hr />

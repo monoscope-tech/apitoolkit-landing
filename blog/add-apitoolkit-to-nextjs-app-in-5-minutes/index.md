@@ -1,18 +1,18 @@
 ---
-title: "Add APIToolkit To Your Next.js Application In 5 Minutes"
+title: "Add monoscope To Your Next.js Application In 5 Minutes"
 featured_image: apitoolkit-in-5-minutes.png
 date: 2025-03-06T04:03:05+02:00
 author: patrick
-description: Quickly enhance your Next.js API with APIToolkit in just 5 minutes using OpenTelemetry to capture performance data, monitor errors, and gain easy insights for smoother operations.
+description: Quickly enhance your Next.js API with monoscope in just 5 minutes using OpenTelemetry to capture performance data, monitor errors, and gain easy insights for smoother operations.
 categories:
   - API Management
 ---
 
-# Add APIToolkit To Your Next.js Application In 5 Minutes
+# Add monoscope To Your Next.js Application In 5 Minutes
 
-![Add APIToolkit To Your Next.js Application In 5 Minutes](./apitoolkit-in-5-minutes.png)
+![Add monoscope To Your Next.js Application In 5 Minutes](./apitoolkit-in-5-minutes.png)
 
-In this article, we will learn to integrate [APIToolkit](https://monoscope.tech/) into our [Next.js](https://nextjs.org/) application in just a few simple steps. For this to work, we need OpenTelemetry. [OpenTelemetry](https://opentelemetry.io/) will help us gather traces about our application and send this information to APIToolkit. APIToolkit provides you with a variety of features out-of-the-box, including, but not limited to, API Observability and Monitoring, API Testing, Error Tracking, API Analytics, API Log Explorer, and a lot more.
+In this article, we will learn to integrate [monoscope](https://monoscope.tech/) into our [Next.js](https://nextjs.org/) application in just a few simple steps. For this to work, we need OpenTelemetry. [OpenTelemetry](https://opentelemetry.io/) will help us gather traces about our application and send this information to monoscope. monoscope provides you with a variety of features out-of-the-box, including, but not limited to, API Observability and Monitoring, API Testing, Error Tracking, API Analytics, API Log Explorer, and a lot more.
 
 ## Setting Up Your Next.js Project
 
@@ -42,7 +42,7 @@ If you did everything correctly, when you visit `http:localhost:3000` on your br
 
 ## Adding APIToolKit to your application
 
-{=Note:=} To add APIToolkit, you need to create an account [here](app.monoscope.tech). This onboarding [video](https://www.youtube.com/watch?v=_uqxNTpcEOI&pp=ygUVYXBpdG9vbGtpdCBvbmJvYXJkaW5n) will walk you through the process. 
+{=Note:=} To add monoscope, you need to create an account [here](app.monoscope.tech). This onboarding [video](https://www.youtube.com/watch?v=_uqxNTpcEOI&pp=ygUVYXBpdG9vbGtpdCBvbmJvYXJkaW5n) will walk you through the process. 
 
 Let's install APIToolKit's [Next.js SDK](https://monoscope.tech/docs/sdks/nodejs/nextjs/) with the following command. This command adds the core OpenTelemetry API and also includes Vercel's OpenTelemetry integration.
 
@@ -83,7 +83,7 @@ This code initializes [OpenTelemetry](https://opentelemetry.io/) with your proje
 Create an API route `/app/api/hello/route.js` and update it with the following code:
 
 ```javascript
-  import { withAPItoolkitAppRouter } from "apitoolkit-next";
+  import { withmonoscopeAppRouter } from "apitoolkit-next";
   import { NextResponse } from "next/server";
 
   async function handleRequest(request) {
@@ -95,13 +95,13 @@ Create an API route `/app/api/hello/route.js` and update it with the following c
     captureResponseBody: true,
   }
 
-  export const GET = withAPItoolkitAppRouter(handleRequest, config);
+  export const GET = withmonoscopeAppRouter(handleRequest, config);
 ```
 
 {=Note:=} If you are using `Pages Router`, use the code below:
 
 ```javascript
-  import { withAPItoolkitPagesRouter } from "apitoolkit-next";
+  import { withmonoscopePagesRouter } from "apitoolkit-next";
 
   function handler(req, res) {
     res.status(200).json({ message: "Hello from Next.js!" });
@@ -112,7 +112,7 @@ Create an API route `/app/api/hello/route.js` and update it with the following c
     captureResponseBody: true,
   };
 
-  export default withAPItoolkitPagesRouter(handler, config);
+  export default withmonoscopePagesRouter(handler, config);
 ```
 
 On your browser, navigate to `http://localhost:3000/api/hello`. You should get a response like the one below: 
@@ -125,14 +125,14 @@ On your browser, navigate to `http://localhost:3000/api/hello`. You should get a
 
 Now, let's check if the route is monitored in APIToolKit. Navigate to your project dashboard, on the `Explorer` tab, you should see the API route we visited.
 
-![APIToolkit Explorer](./api-route.png)
+![monoscope Explorer](./api-route.png)
 
-## Tracking Errors on APIToolkit
+## Tracking Errors on monoscope
 
-We are going to simulate some errors on our Next.js app and then track them on APIToolkit. To report errors, we are going to use the `reportError` function. Update your `/app/api/hello/route.js` api route with the following code:
+We are going to simulate some errors on our Next.js app and then track them on monoscope. To report errors, we are going to use the `reportError` function. Update your `/app/api/hello/route.js` api route with the following code:
 
 ```javascript
-  import { withAPItoolkitAppRouter, reportError } from "apitoolkit-next";
+  import { withmonoscopeAppRouter, reportError } from "apitoolkit-next";
   import { NextRequest, NextResponse } from "next/server";
   const config = {
     captureResponseBody: "true",
@@ -141,25 +141,25 @@ We are going to simulate some errors on our Next.js app and then track them on A
     try {
       throw new Error("This is an error");
     } catch (error) {
-      reportError(error); //this will send the error to APIToolkit
+      reportError(error); //this will send the error to monoscope
     } 
     return NextResponse.json({ message: "hello world" });
   }
 
-  export const GET = withAPItoolkitAppRouter(handleRequest, config);
+  export const GET = withmonoscopeAppRouter(handleRequest, config);
 ```
 
-As you can see below, the error we simulated has been reported to APIToolkit.
+As you can see below, the error we simulated has been reported to monoscope.
 
 ![Errors](./error.png)
 
 ## Conclusion
 
-We just set up [APIToolkit](https://monoscope.tech/) in our Next.js app in just 5 minutes. With [OpenTelemetry](https://opentelemetry.io/), we quickly collected essential data about our API's performance. Now, we can easily monitor our API, track errors, and view simple analytics to keep our app running smoothly.
+We just set up [monoscope](https://monoscope.tech/) in our Next.js app in just 5 minutes. With [OpenTelemetry](https://opentelemetry.io/), we quickly collected essential data about our API's performance. Now, we can easily monitor our API, track errors, and view simple analytics to keep our app running smoothly.
 
 **Relavant resources**
 
-[APIToolkit Next.js SDK](https://monoscope.tech/docs/sdks/nodejs/nextjs/)
+[monoscope Next.js SDK](https://monoscope.tech/docs/sdks/nodejs/nextjs/)
 
 [OpenTelemetry](https://opentelemetry.io/)
 
@@ -167,7 +167,7 @@ We just set up [APIToolkit](https://monoscope.tech/) in our Next.js app in just 
 
 **Keep Reading**
 
-[Monitoring your Express.js application using OpenTelemetry with APIToolkit](https://monoscope.tech/blog/monitoring-your-express-application-using-opentelemetry-with-apitoolkit/)
+[Monitoring your Express.js application using OpenTelemetry with monoscope](https://monoscope.tech/blog/monitoring-your-express-application-using-opentelemetry-with-apitoolkit/)
 
 [The Top 3 API ToolKit Features That Solve Developer's Pain Points](https://monoscope.tech/blog/the-top-three-api-toolkit-features-that-solve-developers-pain-points/)
 

@@ -18,9 +18,9 @@ pages:
     slug: /docs/features/openapi-spec-documentation
 ---
 
-# APItoolkit Features
+# monoscope Features
 
-In these guides, you will learn more about all APItoolkit key features in detail.
+In these guides, you will learn more about all monoscope key features in detail.
 
 ```=html
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-center">

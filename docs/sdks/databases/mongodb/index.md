@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit with MongoDB
-ogTitle: How to Monitor MongoDB Database Operations with APItoolkit using OpenTelemetry
+title: Integrating monoscope with MongoDB
+ogTitle: How to Monitor MongoDB Database Operations with monoscope using OpenTelemetry
 faLogo: database
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,15 +8,15 @@ linkTitle: "MongoDB"
 menuWeight: 20
 ---
 
-# Integrating APItoolkit with MongoDB
+# Integrating monoscope with MongoDB
 
-This guide demonstrates how to integrate APItoolkit with MongoDB database operations using OpenTelemetry to monitor performance and identify issues.
+This guide demonstrates how to integrate monoscope with MongoDB database operations using OpenTelemetry to monitor performance and identify issues.
 
 ## Prerequisites
 
 - MongoDB database (local or Atlas)
 - MongoDB client application
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Setting Up OpenTelemetry for MongoDB
 
@@ -38,7 +38,7 @@ export OTEL_RESOURCE_ATTRIBUTES="at-project-key=YOUR_API_KEY"
 export OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
 ```
 
-Replace `YOUR_API_KEY` with your actual APItoolkit project key.
+Replace `YOUR_API_KEY` with your actual monoscope project key.
 
 ### 2. Instrument MongoDB Client
 
@@ -316,7 +316,7 @@ After setting up OpenTelemetry with your MongoDB application:
 
 1. Run your application and perform several database operations
 
-2. Check your APItoolkit dashboard to see the incoming telemetry data
+2. Check your monoscope dashboard to see the incoming telemetry data
 
 3. Look for metrics such as:
    - Query execution time
@@ -326,6 +326,6 @@ After setting up OpenTelemetry with your MongoDB application:
 
 ## Next Steps
 
-- Set up alerting in APItoolkit for slow MongoDB queries
+- Set up alerting in monoscope for slow MongoDB queries
 - Create custom dashboards for MongoDB performance monitoring
 - Correlate database operations with API endpoints to identify bottlenecks

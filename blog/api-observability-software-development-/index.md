@@ -54,7 +54,7 @@ API observability is not a single tool or technique, but rather a combination of
 ### Monitoring
 
 ![API Monitoring](./api-throughput.png)
-Image source: APIToolkit dashboard
+Image source: monoscope dashboard
 
 [Monitoring](https://monoscope.tech/api-performance-monitoring-and-compliance/) is the process of collecting and analyzing data about an API's operational status and performance over time. It helps teams ensure that their APIs are functioning correctly and meeting their expected service level objectives (SLOs) or agreements (SLAs).
 
@@ -81,7 +81,7 @@ Alerting can also be integrated with other tools or platforms, such as incident 
 ### Logging
 
 ![API Logging](./api-query.png)
-Image source: APIToolkit logs and metric explorer
+Image source: monoscope logs and metric explorer
 
 Logging is the process of recording and storing data about an API's events or activities. It helps teams troubleshoot and debug issues by providing detailed information about what happened and why.
 
@@ -150,7 +150,7 @@ Moreover, API observability enhances collaboration between development and opera
 
 ***
 
-Try [APIToolkit](https://monoscope.tech), a robust API management toolbox with all the tools you need to build and manage the most reliable APIs.
+Try [monoscope](https://monoscope.tech), a robust API management toolbox with all the tools you need to build and manage the most reliable APIs.
 
 ***
 

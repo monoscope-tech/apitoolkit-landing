@@ -15,7 +15,7 @@ hide-date: true
 ### API Management
 
 {class="py-5"}
-APItoolkit isn’t just another API management tool. It’s the most feature-rich solution available, offering everything you need to manage your APIs effectively.
+monoscope isn’t just another API management tool. It’s the most feature-rich solution available, offering everything you need to manage your APIs effectively.
 
 {class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
 [Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
@@ -32,7 +32,7 @@ APItoolkit isn’t just another API management tool. It’s the most feature-ric
 {class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
 :::
 {.order-last .md:order-first .col-span-3}
-![APIToolkit Dashboard image](/assets/img/screenshots/analytics_zoomed.png){ class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
+![monoscope Dashboard image](/assets/img/screenshots/analytics_zoomed.png){ class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
 
 {.space-y-3 .col-span-2}
 ::::
@@ -66,7 +66,7 @@ By leveraging API documentation tools for clear instructions, API testing tools 
 ::::
 
 {.col-span-3}
-![APItoolkit anomalies](/assets/img/screenshots/errors_zoomed.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
+![monoscope anomalies](/assets/img/screenshots/errors_zoomed.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
 :::
 
 {class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
@@ -113,7 +113,7 @@ Monitor and pinpoint every single error. Understand the “Why,” “How,” an
 
 {class="text-center"}
 ::::
-### Integrate APItoolkit
+### Integrate monoscope
 
 ```=html
 <hr />

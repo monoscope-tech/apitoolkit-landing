@@ -60,7 +60,7 @@ The distinction between [API documentation](https://monoscope.tech/blog/usercent
 
 ## Examples of Popular API Documentation and Specification Tools
 
-There are many [tools](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/) available for creating API documentation and specification. Some popular options for API documentation include [APIToolkit](https://monoscope.tech), [Swagger](https://swagger.io/), [Postman](https://www.postman.com/), and [Apiary](https://apiary.io/). These tools allow developers to easily create and share documentation for their APIs. For API specification, popular tools include OpenAPI (formerly known as Swagger), RAML, and API Blueprint. These tools allow developers to define the structure and behavior of their APIs in a standardized way, making it easier for other developers to understand and use the API.
+There are many [tools](https://monoscope.tech/blog/top-8-api-documentation-tools-for-developers/) available for creating API documentation and specification. Some popular options for API documentation include [monoscope](https://monoscope.tech), [Swagger](https://swagger.io/), [Postman](https://www.postman.com/), and [Apiary](https://apiary.io/). These tools allow developers to easily create and share documentation for their APIs. For API specification, popular tools include OpenAPI (formerly known as Swagger), RAML, and API Blueprint. These tools allow developers to define the structure and behavior of their APIs in a standardized way, making it easier for other developers to understand and use the API.
 
 **Keep Reading**
 

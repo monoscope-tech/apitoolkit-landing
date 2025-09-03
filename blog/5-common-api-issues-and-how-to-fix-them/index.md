@@ -10,7 +10,7 @@ categories:
 
 # 5 Common API Issues (and How to Fix Them)
 
-![APIToolkit](./5-common-api-issues-and-how-to-fix-them.jpeg)
+![monoscope](./5-common-api-issues-and-how-to-fix-them.jpeg)
 
 Modern software relies heavily on APIs for efficient communication between applications. Despite their importance, APIs frequently face challenges resulting in service interruptions, reduced efficiency, or potential security risks. This article will examine five prevalent API problems and their respective solutions.
 
@@ -44,7 +44,7 @@ Ambiguous or inconsistent error notifications can hinder developers' progress an
 
 #### Fix:
 
-- Employ applications such as [OpenTelemetry](https://opentelemetry.io/) and [APItoolkit](https://monoscope.tech/) to monitor and display errors in real-time. APItoolkit offers functionality beyond error tracking; it allows for the creation of customized monitors and provides notifications for any issues before users become aware of them.
+- Employ applications such as [OpenTelemetry](https://opentelemetry.io/) and [monoscope](https://monoscope.tech/) to monitor and display errors in real-time. monoscope offers functionality beyond error tracking; it allows for the creation of customized monitors and provides notifications for any issues before users become aware of them.
 
 - Craft informative error notifications that include specific error codes, detailed explanations, and potential resolutions. Ensure these messages are clear and helpful, guiding users towards understanding and addressing the issue effectively.
 

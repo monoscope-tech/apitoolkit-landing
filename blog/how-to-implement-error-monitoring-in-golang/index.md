@@ -90,7 +90,7 @@ We've discussed Go's error handling, but the real world throws curveballs. So ho
 
 Think of Apitoolkit as a centralized hub for all your Go application's errors. It meticulously gathers them, sorts them out, and presents them in a way that's both technical and approachable.
 
-## How to setup error reporting in Golang with APItoolkit
+## How to setup error reporting in Golang with monoscope
 
 1. Install the apitoolkit package: go get -u github.com/apitoolkit/apitoolkit-go
 2. Import the package in your Golang file: import apitoolkit "github.com/apitoolkit/apitoolkit-go"
@@ -123,9 +123,9 @@ if err := http.ListenAndServe(":8089", nil); err != nil {
     fmt.Println("Server error:", err)
 }
 ``````
-To check the reported errors, log in to your APItoolkit.io account and navigate to the 'Errors' section. You can filter the errors by environment, date, or error type.
+To check the reported errors, log in to your monoscope.io account and navigate to the 'Errors' section. You can filter the errors by environment, date, or error type.
 
-Here is how APItoolkit present your errors;
+Here is how monoscope present your errors;
 
 **Crystal-Clear Stack Traces:** No more cryptic error messages. Apitoolkit dissects each error, pinpointing the exact line of code where it originated. 
 ![error monitoring](./error-monitoring.png)

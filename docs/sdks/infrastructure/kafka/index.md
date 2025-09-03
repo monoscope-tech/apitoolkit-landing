@@ -1,6 +1,6 @@
 ---
-title: Integrating APItoolkit with Kafka
-ogTitle: How to Monitor Kafka Producers and Consumers with APItoolkit using OpenTelemetry Collector
+title: Integrating monoscope with Kafka
+ogTitle: How to Monitor Kafka Producers and Consumers with monoscope using OpenTelemetry Collector
 faLogo: message-lines
 date: 2024-06-14
 updatedDate: 2024-06-14
@@ -8,9 +8,9 @@ linkTitle: "Kafka"
 menuWeight: 40
 ---
 
-# Integrating APItoolkit with Kafka
+# Integrating monoscope with Kafka
 
-This guide demonstrates how to integrate APItoolkit with Kafka using the OpenTelemetry Collector for infrastructure-level monitoring without requiring code changes to your Kafka producers and consumers.
+This guide demonstrates how to integrate monoscope with Kafka using the OpenTelemetry Collector for infrastructure-level monitoring without requiring code changes to your Kafka producers and consumers.
 
 ```=html
 <hr>
@@ -20,7 +20,7 @@ This guide demonstrates how to integrate APItoolkit with Kafka using the OpenTel
 
 - Apache Kafka cluster
 - OpenTelemetry Collector
-- APItoolkit account with an API key
+- monoscope account with an API key
 
 ## Monitoring Kafka with OpenTelemetry Collector
 
@@ -204,7 +204,7 @@ service:
       exporters: [otlp]
 ```
 
-Replace `YOUR_API_KEY` with your actual APItoolkit project key.
+Replace `YOUR_API_KEY` with your actual monoscope project key.
 
 ### 3. Configuring Kafka for JMX Monitoring
 
@@ -325,7 +325,7 @@ After setting up the OpenTelemetry Collector with your Kafka infrastructure:
    curl http://localhost:8888/metrics
    ```
 
-3. View your APItoolkit dashboard to see Kafka metrics and logs, including:
+3. View your monoscope dashboard to see Kafka metrics and logs, including:
    - Broker metrics (message rates, bytes in/out, partition counts)
    - Consumer lag metrics
    - Replication status
@@ -343,7 +343,7 @@ The OpenTelemetry Collector will capture these important Kafka metrics:
 
 ## Next Steps
 
-- Configure alerts in APItoolkit based on Kafka performance thresholds
+- Configure alerts in monoscope based on Kafka performance thresholds
 - Create custom dashboards for monitoring your Kafka cluster health
 - Correlate Kafka performance issues with application API performance
 - Set up monitoring for additional Kafka ecosystem components

@@ -56,7 +56,7 @@ API management platforms allow developers and organizations with the tools and r
 
 ![alt](./API%20Management.png)
 
-APIToolkit is a prime example of an API MaaS platform, offering a comprehensive suite of features to streamline API management:
+monoscope is a prime example of an API MaaS platform, offering a comprehensive suite of features to streamline API management:
 
 **Secure and Scalable API Gateway:** Implement robust security measures like authentication, authorization, and rate limiting to safeguard your APIs.
 
@@ -68,9 +68,9 @@ APIToolkit is a prime example of an API MaaS platform, offering a comprehensive 
 
 **Streamlined API Lifecycle Management:** Simplify API versioning, deprecation, and other lifecycle management tasks with ease.
 
-**Seamless DevOps Integration:** Integrate APIToolkit seamlessly into your existing CI/CD pipelines for automated API deployments and management.
+**Seamless DevOps Integration:** Integrate monoscope seamlessly into your existing CI/CD pipelines for automated API deployments and management.
 
-By leveraging API MaaS solutions like APIToolkit, developers can significantly reduce the burden of API management, freeing up valuable time and resources to focus on innovation and building exceptional applications.
+By leveraging API MaaS solutions like monoscope, developers can significantly reduce the burden of API management, freeing up valuable time and resources to focus on innovation and building exceptional applications.
 
 
 ### Trend 3: Serverless Architecture

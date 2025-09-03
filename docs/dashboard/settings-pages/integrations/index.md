@@ -7,7 +7,7 @@ menuWeight: 4
 
 # Integrations
 
-In this guide, you will learn how to effectively navigate through the **Integrations** page on the APItoolkit dashboard and maximize all the powerful features accessible in it.
+In this guide, you will learn how to effectively navigate through the **Integrations** page on the monoscope dashboard and maximize all the powerful features accessible in it.
 
 ```=html
 <hr />
@@ -15,11 +15,11 @@ In this guide, you will learn how to effectively navigate through the **Integrat
 
 On this page, you can configure your email or Slack workspace for receiving project notifications. To get to this page, kindly click on the project name at the top-left section of the dashboard and then click on the **Integrations** tab. You will then be redirected to another page where you can make the changes.
 
-![Screenshot of APItoolkit's integrations page](/docs/dashboard/settings-pages/integrations/screen-1.png)
+![Screenshot of monoscope's integrations page](/docs/dashboard/settings-pages/integrations/screen-1.png)
 
-![Screenshot of APItoolkit's integrations page](/docs/dashboard/settings-pages/integrations/screen-2.png)
+![Screenshot of monoscope's integrations page](/docs/dashboard/settings-pages/integrations/screen-2.png)
 
-![Screenshot of APItoolkit's integrations page](/docs/dashboard/settings-pages/integrations/screen-3.png)
+![Screenshot of monoscope's integrations page](/docs/dashboard/settings-pages/integrations/screen-3.png)
 
 <!-- ```=html
 <hr />

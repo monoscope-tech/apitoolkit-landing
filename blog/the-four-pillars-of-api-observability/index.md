@@ -64,7 +64,7 @@ APIs are the bridges connecting different software components. As these bridges 
 2. Capacity Planning: Metrics offer foresight. By analyzing trends, such as steadily increasing request rates, you can anticipate when you might need to scale up resources or optimize your infrastructure to handle the growing traffic.
 3. Alerting: Metrics serve as sentinels. By setting thresholds on specific metrics, you can receive instant notifications if something goes amiss. For instance, if the error rate for an API suddenly spikes, an alert can notify you to investigate immediately.
 
-Given the importance of metrics, a tool like [APIToolkit](https://monoscope.tech/) has been developed to capture, store, and visualize them efficiently.
+Given the importance of metrics, a tool like [monoscope](https://monoscope.tech/) has been developed to capture, store, and visualize them efficiently.
 
 ## 3. Tracing
 

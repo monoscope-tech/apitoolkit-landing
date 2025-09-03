@@ -47,7 +47,7 @@ pages:
 
 # Dashboard Guides
 
-In these guides, you will learn how to effectively navigate through the APItoolkit dashboard and maximize all the powerful features accessible on different pages of the dashboard. Kindly click on any of the cards below to get started.
+In these guides, you will learn how to effectively navigate through the monoscope dashboard and maximize all the powerful features accessible on different pages of the dashboard. Kindly click on any of the cards below to get started.
 
 ```=html
 <hr />

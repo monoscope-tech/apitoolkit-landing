@@ -76,11 +76,11 @@ To compare your workflow against industry best practices, you can use some of th
 
 - **Swagger**: A set of tools and frameworks for designing, building, documenting, and testing RESTful APIs. It is based on the OpenAPI specification and provides various features such as Swagger Editor, Swagger UI, Swagger Codegen, Swagger Hub, etc.
 
-- **APIToolkit**: A popular tool for designing, monitoring, testing, and debugging RESTful APIs. It allows you to create, send, and analyze HTTP requests and responses, and automate your testing workflows using collections, scripts, variables, etc. It also integrates with OpenAPI and other tools for documentation, collaboration, monitoring, etc.
+- **monoscope**: A popular tool for designing, monitoring, testing, and debugging RESTful APIs. It allows you to create, send, and analyze HTTP requests and responses, and automate your testing workflows using collections, scripts, variables, etc. It also integrates with OpenAPI and other tools for documentation, collaboration, monitoring, etc.
 
-## Your Possible API Workflow Before APIToolkit
+## Your Possible API Workflow Before monoscope
 
-Like many API developers out there, before APIToolkit you were probably in that tiresome cycle that leaves you with barely enough information to discover issues, investigate anomalies, and perform thorough testing to ensure that bugs don’t get reintroduced into your APIs.
+Like many API developers out there, before monoscope you were probably in that tiresome cycle that leaves you with barely enough information to discover issues, investigate anomalies, and perform thorough testing to ensure that bugs don’t get reintroduced into your APIs.
 
 A cycle that looks like this:
 
@@ -95,7 +95,7 @@ A cycle that looks like this:
 
 You will agree with me that this can be insufferably tiresome!
 
-But with APIToolkit, you can:
+But with monoscope, you can:
 
 - Swiftly detect and fix API anomalies and bugs before they affect your users.
 - Automatically generate and update your API documentation.
@@ -230,7 +230,7 @@ As your business requirements change and new features or functionalities are add
 
 - **Implement a testing strategy for your APIs**. [Testing](https://monoscope.tech/blog/api-testing-automation) ensures that your APIs function correctly and meet the expected quality standards. You can use different types of testing, such as unit testing, integration testing, functional testing, performance testing, security testing, etc. You should also automate your testing process using tools and frameworks that support REST API testing.
 
-- **Adopt a documentation strategy for your APIs**. Documentation provides a clear and comprehensive description of your APIs' features, functionalities, parameters, responses, errors, etc. Documentation helps your clients or consumers understand and use your APIs effectively and efficiently. You can use different formats and tools for documentation, such as Swagger, [APIToolkit](https://monoscope.tech), Postman, Markdown, etc. You should also update your documentation regularly and consistently with your API changes or updates.
+- **Adopt a documentation strategy for your APIs**. Documentation provides a clear and comprehensive description of your APIs' features, functionalities, parameters, responses, errors, etc. Documentation helps your clients or consumers understand and use your APIs effectively and efficiently. You can use different formats and tools for documentation, such as Swagger, [monoscope](https://monoscope.tech), Postman, Markdown, etc. You should also update your documentation regularly and consistently with your API changes or updates.
 
 ## Conclusion
 

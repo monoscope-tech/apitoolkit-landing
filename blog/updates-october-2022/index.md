@@ -14,7 +14,7 @@ Most of us learn the value of documentation the hard way by finding it to be lac
 
 <!-- We discovered the effectiveness of documentation in predicting teams' adoption of technical practices. The technological capabilities of the system, including observability, continuous testing, and deployment automation, are expected to advance as a result of these practices. -->
 
-!["Documentation screenshot"](https://monoscope.tech/blog/updates-october-2022/docs-screenshot.png "APIToolkit documentation feature")
+!["Documentation screenshot"](https://monoscope.tech/blog/updates-october-2022/docs-screenshot.png "monoscope documentation feature")
 
 I had conversations with development teams from both small and large companies, about how they actually maintain their API documentations. Especially about their workflows, and processes, and the results were not so surprisingly actually. Out of almost 60 companies, it turns out that the processes were quite heavily dependent on their tech stacks and frameworks. 
 
@@ -25,7 +25,7 @@ Another chunk of developers managed hand rolled swagger files, but these swagger
 Now I mentioned that the tech stack was an important predictor of whether a team generated their API docs automatically or not, and that is because teams that used strongly typed languages were more likely to have some scripts in their codebases that would go through their code, read through annotations in their code and spit out this swagger files. Especially teams who used Java or Go, tended to have such a process. While the teams who used NodeJS almost never had automatically generated swagger docs, and this was surprising to me. And even with the teams who annotated their codes and generated swagger docs, it was still common to speak with teams who simply went months without rerunning these scripts to update their swagger docs. Usually due to not integrating the process into their CI, and relying only on remembering to rerun their swagger generation scripts.
 
 
-## What APIToolkit is doing about Documentation?
+## What monoscope is doing about Documentation?
 
 These conversations, alongside our own personal experiences convince us that documentation simply can't be a manual process. Developers simply rarely remember to update it. But also, even with teams who automate the documentation generation, their documentation quality was usually skeletal at best. Basically few teams went the extra step of including field level documentation where they explain what different fields meant. 
 
@@ -43,7 +43,7 @@ The journey is a marathon and not a sprint, so while we have grander goals, we h
 
 ![Documentation screen](https://monoscope.tech/field_documentation.png "Documentation screen")
 
-When requests get to your servers, APItoolkit looks into these requests, checks their structure, and shape, checks the fields, their formats, etc, and uses this information to get an idea of what your API looks like. This information is what is used to generate API docs for you. And then this API Docs can then be downloaded as **Swagger**.
+When requests get to your servers, monoscope looks into these requests, checks their structure, and shape, checks the fields, their formats, etc, and uses this information to get an idea of what your API looks like. This information is what is used to generate API docs for you. And then this API Docs can then be downloaded as **Swagger**.
 
 To help you build a model about how this works, let's look at some example GET request.
 
@@ -77,7 +77,7 @@ GET /user/3
 --- Etc
 ```
 
-APItoolkit would process these requests and learn that the endpoint has a structure that looks similar to:
+monoscope would process these requests and learn that the endpoint has a structure that looks similar to:
 
 Endpoint: `/user/{arg: integer}/`
 
@@ -107,22 +107,22 @@ Now we have documentations and other information for each fields, but then we al
 
 Apitoolkit is on the journey of helping developers create amazing API documentation with very low effort. And even while some of these functionality are still in progress or in flux, we're constantly thinking about the bigger picture, and are confident that we will solve this problem of API documentation elegantly, with time.
 
-APIToolkit is committed to guiding you through managing quality documentation, and we have written some articles on this topic. Take a look:
+monoscope is committed to guiding you through managing quality documentation, and we have written some articles on this topic. Take a look:
 - [How to write API Docs; 6 API Documentation Best Practices](https://monoscope.tech/blog/how-to-write-api-docs/)
 - [Writing API Documentation - Best Practices and Mistakes to Avoid](https://monoscope.tech/blog/writing-api-documentation)
 
-At APIToolkit, we care about our users and developers, we concentrated on making our documentation process straightforward and scalable, with the ability to add and remove content in the event that any step was overlooked or overly explained.
+At monoscope, we care about our users and developers, we concentrated on making our documentation process straightforward and scalable, with the ability to add and remove content in the event that any step was overlooked or overly explained.
 
 
-## What else is going on at the moment with APIToolkit?
+## What else is going on at the moment with monoscope?
 
 A lot actually. We're currently working a lot on our data visualization approach and charts, as well as how we express and present API anomalies. But more on this in the next weeks. 
 
-We're also going to launch APItoolkit this November, and finally step out of the Beta. If you'll like to get onboarded into APItoolkit before then (and benefit from our early user advantages), please feel free to reach out.
+We're also going to launch monoscope this November, and finally step out of the Beta. If you'll like to get onboarded into monoscope before then (and benefit from our early user advantages), please feel free to reach out.
 
 We will be spending some time in Kigali (Rwanda) this November, with plans to connect in person with other founders and especially some of our users. So, say hi if you're around.
 
 Have a lovely weekend where ever you are, and stay happy
 
 Anthony Alaribe<br/> 
-Co-founder APItoolkit
+Co-founder monoscope

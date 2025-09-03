@@ -33,7 +33,7 @@ Armed with this complete picture, your term can diagnose and fix the issue much 
 
 A well-functioning API is crucial for modern applications. However, maintaining optimal performance and identifying issues require proper observability tools. Here's a breakdown of our top 7 options:
 
-### 1. APItoolkit
+### 1. monoscope
 
 A comprehensive API management platform offering testing, monitoring, and documentation tools.	
 
@@ -51,7 +51,7 @@ A comprehensive API management platform offering testing, monitoring, and docume
 
 - Generates reports on errors and application performance.
 
-### How APItoolkit can help your developer team
+### How monoscope can help your developer team
     	
 - Collaborative testing environment for efficient API development.
 
@@ -61,7 +61,7 @@ A comprehensive API management platform offering testing, monitoring, and docume
 
 - Code-level profiling for identifying performance issues within API code.	
 
-### How APItoolkit can help your Business 
+### How monoscope can help your Business 
     	
 - Improved API quality and reduced release time.
     	
@@ -266,7 +266,7 @@ Larger budgets: Commercial options like Datadog and New Relic provide a wider ra
 
 ## Our take
 
-For small teams with basic monitoring needs and limited budget, explore user-friendly options like APItoolkit (freemium) or open-source solutions like Prometheus.
+For small teams with basic monitoring needs and limited budget, explore user-friendly options like monoscope (freemium) or open-source solutions like Prometheus.
 
 For larger teams with complex API architectures and advanced requirements, consider feature-rich commercial tools like Dynatrace or Datadog (paid plans).
 

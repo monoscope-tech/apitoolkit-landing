@@ -97,4 +97,4 @@ Some alternatives to REST APIs include GraphQL for more efficient data retrieval
 
 As we've discovered in this journey, REST APIs are a cornerstone of modern software development. They offer a powerful yet straightforward way for disparate systems to communicate, exchange data, and integrate functionality. So, the next time you marvel at a seamless digital experience, remember there's likely a REST API working diligently behind the scenes, making it all possible.
 
-When you build your APIs, explore using [APIToolkit](https://monoscope.tech) to monitor and test them to ensure they reach your scalability requirements, and stay safe from bugs which your customers might dislike.
+When you build your APIs, explore using [monoscope](https://monoscope.tech) to monitor and test them to ensure they reach your scalability requirements, and stay safe from bugs which your customers might dislike.

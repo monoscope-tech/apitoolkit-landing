@@ -1,5 +1,5 @@
 ---
-title: "Monitoring your Express.js application using OpenTelemetry with APIToolkit"
+title: "Monitoring your Express.js application using OpenTelemetry with monoscope"
 featured_image: monitoring-your-express-app-with-opentelemetry-and-apitoolkit.jpeg
 date: 2025-02-27T04:08:58+02:00
 author: patrick
@@ -8,9 +8,9 @@ categories:
   - API Management
 ---
 
-# Monitoring your Express.js application using OpenTelemetry with APIToolkit
+# Monitoring your Express.js application using OpenTelemetry with monoscope
 
-![APIToolkit](./monitoring-your-express-app-with-opentelemetry-and-apitoolkit.jpeg)
+![monoscope](./monitoring-your-express-app-with-opentelemetry-and-apitoolkit.jpeg)
 
 The complexity of modern microservices requires a thorough understanding of your application's production behaviour. [OpenTelemetry](https://opentelemetry.io/) provides a universal framework that enables code instrumentation to gather telemetry data through collection, processing, and exporting metrics, logs, and traces. In this article, we'll explore how to implement [OpenTelemetry](https://opentelemetry.io/) in an Express.js application to gain valuable insights into its performance and behaviour.
 
@@ -23,13 +23,13 @@ Before we dive into the implementation, let’s first understand our monitoring 
 
 - Express.js: [Express](https://expressjs.com/) is a Node.js web application framework that provides a wide range of features for mobile and web applications.
 
-- APIToolkit: [APIToolkit](https://monoscope.tech/) is the observability platform that will store and visualizes our telemetry data.
+- monoscope: [monoscope](https://monoscope.tech/) is the observability platform that will store and visualizes our telemetry data.
 
 - OpenTelemetry: We will use [OpenTelemetry](https://opentelemetry.io/) to collect telemetry data.
 
 ## Getting Started
 
-### Creating an APIToolkit Account
+### Creating an monoscope Account
 
 - Sign up for free [here](http://app.monoscope.tech/).
 
@@ -47,7 +47,7 @@ Before we dive into the implementation, let’s first understand our monitoring 
 
 ![Notification-method](./choose-notification-method.png)
 
-- Integrate Express.js app with APIToolkit’s Express SDK (This step is optional. We will cover the integration in the next steps below).
+- Integrate Express.js app with monoscope’s Express SDK (This step is optional. We will cover the integration in the next steps below).
 
 ![Integrate-express-express](./integrate-express.png)
 
@@ -88,7 +88,7 @@ Navigate to http://localhost:3000, and you should see the “Hello World” mess
 
 ### Installation
 
-Run the following code to install the APIToolkit express SDK and OpenTelemetry API, SDK, and auto instrumentation tools.
+Run the following code to install the monoscope express SDK and OpenTelemetry API, SDK, and auto instrumentation tools.
 
 ```javascript
   npm install --save apitoolkit-express @opentelemetry/api @opentelemetry/auto-instrumentations-node
@@ -116,23 +116,23 @@ We must now export the necessary environment variables to configure OpenTelemetr
   node server.js
 ```
 
-{=NOTE:=} You can grab your API key from your APIToolkit dashboard as shown in the image below:
+{=NOTE:=} You can grab your API key from your monoscope dashboard as shown in the image below:
 
 ![Api-key](./api-key.png)
 
-## Setting up APIToolkit Express Middleware For HTTP Request Monitoring
+## Setting up monoscope Express Middleware For HTTP Request Monitoring
 
-APIToolkit Express Middleware is a tool for monitoring HTTP requests in Express.js. It wraps the Express middleware and adds extra features using OpenTelemetry, creating a custom span for each request to capture details like request and response bodies. Update server.js with the following code:
+monoscope Express Middleware is a tool for monitoring HTTP requests in Express.js. It wraps the Express middleware and adds extra features using OpenTelemetry, creating a custom span for each request to capture details like request and response bodies. Update server.js with the following code:
 
 ```javascript
   import * as express from "express";
-  import { APIToolkit } from "apitoolkit-express";
+  import { monoscope } from "apitoolkit-express";
   import axios from "axios";
 
   const port = 3000;
 
   const app = express();
-  const apitoolkitClient = APIToolkit.NewClient({
+  const apitoolkitClient = monoscope.NewClient({
     monitorAxios: axios, // Optional: Use this to monitor Axios requests
   });
 
@@ -140,7 +140,7 @@ APIToolkit Express Middleware is a tool for monitoring HTTP requests in Express.
   app.use(apitoolkitClient.middleware);
 
   app.get("/", async (req, res) => {
-    // This axios request get's monitored and appears in the  APIToolkit explorer
+    // This axios request get's monitored and appears in the  monoscope explorer
     const response = await axios.get(
       "https://jsonplaceholder.typicode.com/todos/1"
     );
@@ -155,7 +155,7 @@ APIToolkit Express Middleware is a tool for monitoring HTTP requests in Express.
   });
 ```
 
-Refresh your browser a couple of times (you can hit some other routes too) so we can gather telemetry data and visualize it on our APIToolkit Dashboard:
+Refresh your browser a couple of times (you can hit some other routes too) so we can gather telemetry data and visualize it on our monoscope Dashboard:
 
 ![Dashboard-explorer](./apitoolkit-dashboard.png)
 
@@ -167,9 +167,9 @@ Refresh your browser a couple of times (you can hit some other routes too) so we
 
 ![traces](./traces.jpeg)
 
-As you can see, we are monitoring our express application in real-time. There’s a lot of data to visualize and work with. Refer to this documention for indepth guide on using [APIToolkit Express SDK](https://monoscope.tech/docs/sdks/nodejs/expressjs/). 
+As you can see, we are monitoring our express application in real-time. There’s a lot of data to visualize and work with. Refer to this documention for indepth guide on using [monoscope Express SDK](https://monoscope.tech/docs/sdks/nodejs/expressjs/). 
 
-In conclusion, using APIToolkit with OpenTelemetry for your Express.js application lets you easily monitor performance, detect issues, and track errors with detailed backend insights. This approach simplifies debugging and helps maintain a stable, efficient web service.
+In conclusion, using monoscope with OpenTelemetry for your Express.js application lets you easily monitor performance, detect issues, and track errors with detailed backend insights. This approach simplifies debugging and helps maintain a stable, efficient web service.
 
 **Keep Reading**
 

@@ -8,7 +8,7 @@ menuWeight: 1
 
 # API Monitoring and Observability
 
-APItoolkit allows you to track all user requests from your API so you can observe and quickly fix any API or performance issues in real-time. With this, you can track and trace incoming and outgoing requests with enough context about where each request was made from and full details of that request using our rich data visualization graphs and requests query builder.
+monoscope allows you to track all user requests from your API so you can observe and quickly fix any API or performance issues in real-time. With this, you can track and trace incoming and outgoing requests with enough context about where each request was made from and full details of that request using our rich data visualization graphs and requests query builder.
 
 ```=html
 <hr />
@@ -23,17 +23,17 @@ Some **key benefits** and popular **use cases** include the ability to:
 - Identify and fix different kinds of errors or performance issues as they happen or even before they happen, ensuring a seamless user experience, reduced downtimes, happy users, and in turn more revenue.
 - And a lot more!
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/dashboard/dashboard-page-new.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/dashboard/dashboard-page-new.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/explorer-new.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/explorer-new.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/endpoints/api-catalog.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/endpoints/api-catalog.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/screen-3.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/screen-3.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/log-explorer-span.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/log-explorer-span.png)
 
-![Screenshot of APItoolkit dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/shared-event.png)
+![Screenshot of monoscope dashboard](/docs/dashboard/dashboard-pages/api-log-explorer/shared-event.png)
 
 ```=html
 <hr />

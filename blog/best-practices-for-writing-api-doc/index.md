@@ -102,7 +102,7 @@ Here's how to make your documentation accessible to all:
 
 - **Follow Web Accessibility Standards:** Adhere to established web accessibility guidelines, such as the Web Content Accessibility Guidelines (WCAG). It's like following building codes to ensure everyone can enter and use the space safely and comfortably.
 
-Bonus tip: You can make things even easier with an automated documentation tool like [APIToolkit](https://monoscope.tech/)? It's a tool that does the hard work for you, keeping your documentation up-to-date automatically. It's like having a smart assistant that makes sure your API guide is always helpful and clear, making it easier for everyone to jump in and start creating cool stuff with your API.
+Bonus tip: You can make things even easier with an automated documentation tool like [monoscope](https://monoscope.tech/)? It's a tool that does the hard work for you, keeping your documentation up-to-date automatically. It's like having a smart assistant that makes sure your API guide is always helpful and clear, making it easier for everyone to jump in and start creating cool stuff with your API.
 
 ## Conclusion
 
@@ -120,6 +120,6 @@ So, grab these tips and get to work on your API docs. Make them so good that [de
 
 [Managing Custom Alerts and Notifications Using the API](https://monoscope.tech/blog/mastering-custom-alerts/)
 
-[How to Prevent Sending sensitive Data to APItoolkit during integration](https://monoscope.tech/blog/how-to-prevent-sending-sensitive-data-to-apitoolkit-during-integration/)
+[How to Prevent Sending sensitive Data to monoscope during integration](https://monoscope.tech/blog/how-to-prevent-sending-sensitive-data-to-apitoolkit-during-integration/)
 
 [Best Practices for Implementing Custom Alerts in API Management](https://monoscope.tech/blog/best-practices-for-implementing-custom-alerts/)

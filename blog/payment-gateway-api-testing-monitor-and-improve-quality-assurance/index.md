@@ -67,7 +67,7 @@ Here are some of those strategies:
 
 **Keep your test data up to date**: The credit card numbers and other test data that you use should be up to date. This will help you ensure that your tests are accurate.
 
-**Use a testing tool**: There are a variety of testing tools available that can be used to test payment gateway APIs. Choose the tools that are right for your needs. We recommend [Testkit](https://usetestkit.com) by APIToolkit. It's a powerful and reliable testing tool that guarantees quality assurance at scale.
+**Use a testing tool**: There are a variety of testing tools available that can be used to test payment gateway APIs. Choose the tools that are right for your needs. We recommend [Testkit](https://usetestkit.com) by monoscope. It's a powerful and reliable testing tool that guarantees quality assurance at scale.
 
 **Train your team on payment gateway security**: Your team should be trained on the security risks associated with payment gateways. This will help them identify and prevent security breaches.
 

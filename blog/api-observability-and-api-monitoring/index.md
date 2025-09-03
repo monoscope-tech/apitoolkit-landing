@@ -40,7 +40,7 @@ There a certain pillars that make API observability what it is, viz:
 
 ### 1. API Logs
 
-An API observability platform such as [APIToolkit](https://monoscope.tech) has the ability to inspect API calls in real-time for debugging and auditing. API logs show you the exact calls that your APIs make in an instant in time. 
+An API observability platform such as [monoscope](https://monoscope.tech) has the ability to inspect API calls in real-time for debugging and auditing. API logs show you the exact calls that your APIs make in an instant in time. 
 
 An API is intrinsically structured unlike traditional logging, this means that API logs can also be used for generating aggregations and metrics while maintaining context. Albeit, API calls can have a large number of HTTP headers, body keys, and attributes. Therefore your API observability tool should be capable of filtering and aggregating them without relying on a full scan of your data store.
 

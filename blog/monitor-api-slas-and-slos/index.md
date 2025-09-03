@@ -84,7 +84,7 @@ There are many tools and technologies available for monitoring SLAs/SLOs for API
 
 Some examples of popular monitoring tools for APIs are:
 
-- [APIToolkit](https://monoscope.tech): A comprehensive tool for designing, testing, documenting, and [monitoring](https://monoscope.tech/blog/api-error-monitoring/) APIs. It allows you to create requests, run tests, generate reports, set up alerts, etc.
+- [monoscope](https://monoscope.tech): A comprehensive tool for designing, testing, documenting, and [monitoring](https://monoscope.tech/blog/api-error-monitoring/) APIs. It allows you to create requests, run tests, generate reports, set up alerts, etc.
 - Prometheus: An open-source tool for monitoring and alerting systems. It collects metrics from various sources using a pull model. It also provides a powerful query language and visualization features.
 - Grafana: An open-source tool for data visualization and analysis. It connects to various data sources and allows you to create dashboards with graphs, charts, tables, etc. It also supports alerting and notification features.
 - New Relic: A cloud-based platform for observability and analytics. It monitors various aspects of your system performance, such as infrastructure, applications, [APIs](https://monoscope.tech/blog/api-logs/), etc. It also provides insights and recommendations for optimization and improvement.

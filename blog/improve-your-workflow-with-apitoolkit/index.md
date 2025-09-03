@@ -1,5 +1,5 @@
 ---
-title: "Improve Your Workflow with APItoolkit"
+title: "Improve Your Workflow with monoscope"
 date: 2024-03-01T11:10:00+00:00
 featured_image: improve%20workflow%20apitoolkit.gif
 description: "Bugs are an inevitable part of the software development lifecycle, no matter how rigorous your testing processes are. When a new exception rears its ugly head and starts impacting your users, it's crucial that you have systems in place that are able to quickly identify and resolve the issue."
@@ -8,7 +8,7 @@ categories:
   - API
 --- 
 
-# Improve Your Workflow with APItoolkit
+# Improve Your Workflow with monoscope
 
 ![alt](./improve%20workflow%20apitoolkit.gif)
 
@@ -27,27 +27,27 @@ Take a minute to answer these questions
 
 Bugs are an inevitable part of the software development lifecycle, no matter how rigorous your testing processes are. When a new exception rears its ugly head and starts impacting your users, it's crucial that you have systems in place that are able to quickly identify and resolve the issue.
 
-Take this `IndexOutOfBoundsException` for example. A fairly common culprit, but one that can have wide-ranging effects depending on where it occurs in the codebase. With APItoolkit's error monitoring capabilities into your workflow. As soon as that exception started firing, the alert feature automatically notified through your configured channels - be it Slack, Email, or others.
+Take this `IndexOutOfBoundsException` for example. A fairly common culprit, but one that can have wide-ranging effects depending on where it occurs in the codebase. With monoscope's error monitoring capabilities into your workflow. As soon as that exception started firing, the alert feature automatically notified through your configured channels - be it Slack, Email, or others.
 
-The notification from APItoolkit takes you to a centralized dashboard that provides all the context you need to quickly resolve and prioritize the issue.
+The notification from monoscope takes you to a centralized dashboard that provides all the context you need to quickly resolve and prioritize the issue.
 
-APItoolkit provides detailed metrics on frequency, user impact, and the specific area of the codebase involved.
+monoscope provides detailed metrics on frequency, user impact, and the specific area of the codebase involved.
 
 But the real value lies in the debugging details it provides.
 
 Having this level of diagnostic information readily available is a huge time-saver compared to having to manually instrument logging or orchestrate legacy debuggers.
 
-Integrating APItoolkit into your existing workflow can be as easy as you can imagine.
+Integrating monoscope into your existing workflow can be as easy as you can imagine.
 
 With a couple of clicks, you can automatically generate your API key and then integrate it into your application.
 
-Once you have identified the root cause, you can commit your fix directly to the code repository. From that point, you don't need to constantly monitor for deployment. APItoolkit keeps watching and will automatically alert you if there's a need to resolve the issue once it detects it. If the same exception unexpectedly reappears later, it resurfaces the issue as a regression so we're promptly made aware.
+Once you have identified the root cause, you can commit your fix directly to the code repository. From that point, you don't need to constantly monitor for deployment. monoscope keeps watching and will automatically alert you if there's a need to resolve the issue once it detects it. If the same exception unexpectedly reappears later, it resurfaces the issue as a regression so we're promptly made aware.
 
-APItoolkit accounts for the user experience. We are more than just a developer tool; we provide a clean and intuitive interface for end users to submit any additional diagnostic data about the issue they encountered. No more vague "something is broken" messages - they can easily furnish any extra context that might help us resolve things even faster.
+monoscope accounts for the user experience. We are more than just a developer tool; we provide a clean and intuitive interface for end users to submit any additional diagnostic data about the issue they encountered. No more vague "something is broken" messages - they can easily furnish any extra context that might help us resolve things even faster.
 
-Of course, every organization is a bit different in its processes and tech stack. But APItoolkit is built with that flexibility in mind. You can customize and tweak virtually every aspect of the tooling to mesh seamlessly with your unique environment and workflow requirements.
+Of course, every organization is a bit different in its processes and tech stack. But monoscope is built with that flexibility in mind. You can customize and tweak virtually every aspect of the tooling to mesh seamlessly with your unique environment and workflow requirements.
 
-## How to Get Started with APItoolkit
+## How to Get Started with monoscope
 
 ### Step 1 - Create an account or Sign into your already account
 
@@ -57,13 +57,13 @@ To do this use this link to create or sign into your account. Follow the subsequ
 
 ### Step 2 - Generating your API KEY
 
-After creating your account, the next thing is to generate your API KEY. This key creates the connection between your application and APItoolkit’s servers. 
+After creating your account, the next thing is to generate your API KEY. This key creates the connection between your application and monoscope’s servers. 
 
 ![generate api key](./api-key.png)
 
 ### Step 3 - SDK Integrations
 
-APIToolkit is a client-server model. Integrating the APIToolkit SDK into your application is quite easy. Immediately after integration, your application starts communicating with APIToolkit servers.
+monoscope is a client-server model. Integrating the monoscope SDK into your application is quite easy. Immediately after integration, your application starts communicating with monoscope servers.
 
 But note, make sure your chosen language matches your existing tech stack. For example, if your existing tech stack is in JavaScript, you can go for JavaScript SDKs.
 
@@ -74,20 +74,20 @@ Run this to install the needed packages
 ```js
   npm install express apitoolkit-express
 ```
-Run this to initialize APItoolkit into your existing application
+Run this to initialize monoscope into your existing application
 
 ```js
-import { APIToolkit } from 'apitoolkit-express';
-const apitoolkitClient = APIToolkit.NewClient({ apiKey: '<API-KEY>' });
+import { monoscope } from 'apitoolkit-express';
+const apitoolkitClient = monoscope.NewClient({ apiKey: '<API-KEY>' });
 ```
 Once everything works you should get a complete code like this if you use common js
 
 ```js
-const { APIToolkit } = require('apitoolkit-express');
+const { monoscope } = require('apitoolkit-express');
 const express = require('express');
 const app = express();
 const port = 3000;
-const apitoolkit = APIToolkit.NewClient({
+const apitoolkit = monoscope.NewClient({
   apiKey: '<API-KEY>', // Required: API Key generated from apitoolkit dashboard
 });
 app.use(express.json());
@@ -101,12 +101,12 @@ app.listen(port, () => {
  console.log(`Example app listening on port ${port}`);
 });
 ```
-At this point, APItoolkit has already started to capture the necessary changes in your applications.
+At this point, monoscope has already started to capture the necessary changes in your applications.
 
 ![alt](./chnages%20and%20errors.png)
 
 
-Notice how each change is recorded and grouped. If APIToolkit detects any change, you have to explicitly acknowledge the change or the error. Since APIToolkit allows teams to work on one project, if a change is not acknowledged, it may be seen as non-acknowledged error by other team members.
+Notice how each change is recorded and grouped. If monoscope detects any change, you have to explicitly acknowledge the change or the error. Since monoscope allows teams to work on one project, if a change is not acknowledged, it may be seen as non-acknowledged error by other team members.
 
 After a successful integration you should see this.
 
@@ -120,7 +120,7 @@ This example is for our initial Express.js project
 
 ```js
 const express = require('express');
-import APIToolkit from 'apitoolkit-express';
+import monoscope from 'apitoolkit-express';
 
 const app = express();
 const port = 3000;
@@ -128,7 +128,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const apitoolkitClient = APIToolkit.NewClient({
+const apitoolkitClient = monoscope.NewClient({
   apiKey: '<API-KEY>',
   redactHeaders: ['Content-Type', 'Authorization', 'Cookies'], // Specified headers will be redacted
   redactRequestBody: ['$.credit-card.cvv', '$.credit-card.name'], // Specified request bodies fields will be redacted

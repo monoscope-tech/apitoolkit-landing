@@ -42,13 +42,13 @@ Read: [Must-Know API Trends in 2024](https://monoscope.tech/blog/api-trends/)
 
 We’ve curated a list of the best API observability and monitoring tools to help make your QA processes seamless and improve your [API documentation](http://monoscope.tech/blog/how-to-write-api-docs).
 
-## 1. [APIToolkit](http://www.monoscope.tech)
+## 1. [monoscope](http://www.monoscope.tech)
 
-![APIToolkit User Dashboard](./apitoolkit-user-dashboard.png)
+![monoscope User Dashboard](./apitoolkit-user-dashboard.png)
 
-Built by expert software engineers to solve problems that have cost their employers lots of money in the past, APIToolkit is an automated tool for API contract monitoring and documentation. Using best-in-class technology, APIToolkit leverages a highly specialized and powerful platform to provide a secure environment for developers to build and maintain APIs with enhanced analytics.
+Built by expert software engineers to solve problems that have cost their employers lots of money in the past, monoscope is an automated tool for API contract monitoring and documentation. Using best-in-class technology, monoscope leverages a highly specialized and powerful platform to provide a secure environment for developers to build and maintain APIs with enhanced analytics.
 
-APIToolkit spots broken APIs, changed fields, etc., before your customers.
+monoscope spots broken APIs, changed fields, etc., before your customers.
 
 **Features:**
 - **Real time updates to API docs (auto-generated):** View your live API shapes, fields, etc and generate swagger docs at anytime via your live taffic. Say goodbye to tedious manual documentation.
@@ -150,7 +150,7 @@ Treblle is a lightweight SDK designed for rapid API development, offering real-t
 
 ## Conclusion
 
-In conclusion, the landscape of API monitoring and observability in 2024 is rich with innovative tools, each offering unique features to enhance the performance and reliability of APIs. From APIToolkit's comprehensive contract monitoring and automated documentation to Postman's extensive testing capabilities and Saucelabs' continuous testing platform, these tools are designed to address a wide array of needs in API management. Whether it’s ensuring robust security with Better Uptime, gaining in-depth API insights with Moesif, or enjoying the integrated developer experience offered by RapidAPI, there’s a solution tailored for every requirement. Datadog and Treblle further round out this list by providing specialized monitoring and development support.
+In conclusion, the landscape of API monitoring and observability in 2024 is rich with innovative tools, each offering unique features to enhance the performance and reliability of APIs. From monoscope's comprehensive contract monitoring and automated documentation to Postman's extensive testing capabilities and Saucelabs' continuous testing platform, these tools are designed to address a wide array of needs in API management. Whether it’s ensuring robust security with Better Uptime, gaining in-depth API insights with Moesif, or enjoying the integrated developer experience offered by RapidAPI, there’s a solution tailored for every requirement. Datadog and Treblle further round out this list by providing specialized monitoring and development support.
 
 The right tool can not only prevent downtime and quickly resolve issues but also empower teams to make informed, data-driven decisions that propel API ecosystems forward. As APIs continue to be integral in connecting and automating our digital world, staying updated with the latest trends and tools in API observability will be key to maintaining seamless, efficient, and effective digital operations. Choosing the right tool from this curated list could be the first step towards transforming your API management strategy and ensuring your APIs are not just operational, but optimal.
 
@@ -165,4 +165,4 @@ The right tool can not only prevent downtime and quickly resolve issues but also
 [How to Tackle Anomalies in RESTful APIs (the Right Way)](https://monoscope.tech/blog/anomalies-in-restful-apis/)
 
 ***
-Try APIToolkit [here](https://monoscope.tech).
+Try monoscope [here](https://monoscope.tech).

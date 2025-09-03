@@ -65,10 +65,10 @@ When it comes to debugging APIs, following these best practices can significantl
 
 Developers have access to a wide range of tools and techniques to aid the debugging process. Here are a few essential tools and techniques that can simplify API debugging:
 
-* **API testing tools:** Use tools such as [APIToolkit](https://monoscope.tech/) to send requests, analyze responses, and troubleshoot issues.
+* **API testing tools:** Use tools such as [monoscope](https://monoscope.tech/) to send requests, analyze responses, and troubleshoot issues.
 * **Logging libraries:** Incorporate logging libraries, such as log4j or Winston, to generate detailed logs and track the flow of your API code.
 * **Debugging proxies:** Debugging proxies like Charles or Fiddler allow you to intercept [API](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/) requests and responses, analyze them, and pinpoint potential problems.
-* **API documentation tools:** Utilize tools like APIToolkit to generate and visualize [automated API documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/), making it easier to understand and debug.
+* **API documentation tools:** Utilize tools like monoscope to generate and visualize [automated API documentation](https://monoscope.tech/blog/how-to-generate-automated-api-documentation/), making it easier to understand and debug.
 
 ## Avoiding Common Debugging Mistakes
 
@@ -116,7 +116,7 @@ Advanced debugging tools and techniques offer additional capabilities for tackli
 * **Performance profilers:** Profiling tools such as VisualVM or Google Chrome Performance Tab analyze application performance, identifying bottlenecks and areas for optimization.
 * **Remote debugging with breakpoints:** Debug code running on remote servers or devices by setting breakpoints using tools like PyCharm Debugger or Chrome DevTools.
 * **Dynamic code analysis:** Tools like SonarQube perform static code analysis to detect potential issues, security vulnerabilities, and code smells during the development process.
-* **Real-time log monitoring:** Tools [APIToolkit](https://monoscope.tech/) provide real-time log analysis and [monitoring](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) , enabling swift detection of anomalies or errors.
+* **Real-time log monitoring:** Tools [monoscope](https://monoscope.tech/) provide real-time log analysis and [monitoring](https://monoscope.tech/blog/best-api-monitoring-and-observability-tools/) , enabling swift detection of anomalies or errors.
 
 ## Conclusion
 

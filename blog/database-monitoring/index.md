@@ -75,7 +75,7 @@ Response time is one of the most important metrics for measuring database perfor
 
 To [monitor response time](https://monoscope.tech/api-performance-monitoring-and-compliance/), DBAs and developers can use tools such as query analyzers or performance analyzers that can capture and display the execution time of each query. They can also use tools such as alerting systems that can notify them when the response time exceeds a certain threshold.
 
-![APIToolkit Query Analyzer](./api-query.png) Image source: APIToolkit Query Analyzer
+![monoscope Query Analyzer](./api-query.png) Image source: monoscope Query Analyzer
 
 ### Throughput
 
@@ -103,7 +103,7 @@ IV. Tools and Software for Database Monitoring
 
 There are many tools and software available for database monitoring, but some are more popular. Here are some of the widely-used database monitoring tools:
 
-- [**APIToolkit Monitoring**](https://monoscope.tech): A cloud-based API management tool that provides end-to-end visibility into database performance, including metrics, traces, logs, events, etc. It supports various database platforms, such as MySQL, PostgreSQL, MongoDB, Redis, etc.
+- [**monoscope Monitoring**](https://monoscope.tech): A cloud-based API management tool that provides end-to-end visibility into database performance, including metrics, traces, logs, events, etc. It supports various database platforms, such as MySQL, PostgreSQL, MongoDB, Redis, etc.
 - **SolarWinds Database Performance Analyzer (DPA)**: A comprehensive tool that provides real-time and historical analysis of database performance, including response time, throughput, resource utilization, wait times, blocking, deadlocks, etc. It supports various database platforms, such as Oracle, SQL Server, MySQL, PostgreSQL, etc.
 - **Quest Foglight for Databases**: A holistic tool that provides cross-platform monitoring and optimization of database performance, including availability, workload, resource consumption, SQL tuning, etc. It supports various database platforms, such as Oracle, SQL Server, MySQL, PostgreSQL, etc.
 - **Redgate SQL Monitor**: A specialized tool that provides in-depth monitoring and alerting of SQL Server performance, including metrics, queries, waits, locks, errors, etc. It also provides recommendations and best practices for improving SQL Server performance.
