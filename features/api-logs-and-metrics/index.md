@@ -5,104 +5,85 @@ hide-date: true
 ---
 
 ```=html
-<section  class="mt-28 text-center home-feature-image-div w-full max-w-full aspect-auto" >
-    <div class="max-w-4xl inline-block text-left  text-xl sm:text-2xl">
+<section class="flex flex-col items-center mt-8 sm:mt-32 px-3">
+  <div class="max-w-7xl w-full space-y-10">
+    <div class="space-y-10">
+      <span class="inline-block text-textWeak uppercase tracking-wide text-xs font-semibold">API Logs and Metrics</span>
+      <h1 class="text-[3.0rem] font-normal leading-tight sm:leading-none">
+        <span class="block">See Clearly<span class="text-textDisabled">,</span></span>
+        <span class="text-textDisabled dark:text-textWeak block">Fix Quickly</span>
+      </h1>
+      <p class="text-[1.25rem] text-textWeak max-w-3xl">
+        Observe and fix any API from API integrations or your services. Get in-depth overview of your server-side API calls, including events, pageviews, clicks, and variation calls. Verify API calls are correct and identify implementation issues instantly.
+      </p>
+      <div class="flex gap-2 sm:gap-4">
+        <a href="https://app.monoscope.tech" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow">Start free trial</a>
+        <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow">Get a demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+```
+<section class="flex flex-col items-center py-20">
+    <div class="max-w-7xl w-full px-3 space-y-20">
 ```
 
-###### [*API Logs and Metrics*{.drop-shadow-md}]{class="bg-amber-300 px-2 rounded-md dark:text-black"}
+```=html
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-last md:order-first">
+          <img src="/assets/img/screenshots/log_explorer_zoom.png" alt="Log Explorer" class="w-full rounded-xl shadow-lg" />
+        </div>
+        <div class="space-y-6">
+          <h2 class="text-3xl font-normal">Real-time Insights, Real-time Fixes via the Log Explorer</h2>
+          <p class="text-lg text-textWeak">
+            No more waiting for problems to snowball. Identify and fix issues as they happen, ensuring flawless performance and a seamless user experience.
+          </p>
+          <div class="flex gap-2 sm:gap-4">
+            <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+          </div>
+        </div>
+      </div>
+```
 
-{class="mt-2 mb-3 dark:text-white "}
-### See Clearly, Fix Quickly. Observe and Fix any API from API Integrations or Your Services
+```=html
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl font-normal">Trace Every Request with Outgoing Requests Monitoring</h2>
+          <p class="text-lg text-textWeak">
+            Effortlessly capture the entire request-response chain, allowing you to reproduce complex issues with ease and get to the bottom of them fast.
+          </p>
+          <div class="flex gap-2 sm:gap-4">
+            <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+          </div>
+        </div>
+        <div>
+          <img src="/features/error-tracking/log_explorer_error.png" alt="Outgoing Requests" class="w-full rounded-xl shadow-lg" />
+        </div>
+      </div>
+```
 
-{class="py-5"}
-These logs give you an in-depth overview of your server-side API calls, including events, pageviews, clicks, and choose variation calls. They enable you to verify that your API calls are correct and identify implementation issues. You can also use logs to troubleshoot unexpected behavior and find the root cause
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="\_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
+```=html
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-last md:order-first">
+          <img src="/assets/img/screenshots/errors_zoomed.png" alt="Error Tracking" class="w-full rounded-xl shadow-lg" />
+        </div>
+        <div class="space-y-6">
+          <h2 class="text-3xl font-normal">Error Tracking and Logging for Your APIs</h2>
+          <p class="text-lg text-textWeak">
+            Catch errors from any source, whether it's the API itself, a dependent service, or an underlying infrastructure component. Track them back to the specific request that triggered the issue.
+          </p>
+          <div class="flex gap-2 sm:gap-4">
+            <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+          </div>
+        </div>
+      </div>
+```
 
 ```=html
     </div>
 </section>
-<section  class="py-28 text-center w-full max-w-full aspect-auto" >
-    <div class="max-w-6xl inline-block text-left  text-xl sm:text-2xl prose prose-lg prose-pre:p-0 space-y-16">
 ```
 
-{class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
-:::
-{.order-last .md:order-first .col-span-3}
-![](/assets/img/screenshots/log_explorer_zoom.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
-
-{class="space-y-3 col-span-2"}
-::::
-{.leading-tight}
-### Real-time Insights, Real-time Fixes via the Log Explorer
-
-{.text-lg}
-No more waiting for problems to snowball. Identify and fix issues as they happen, ensuring flawless performance and a seamless user experience.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="\_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-:::
-
-{class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
-:::
-{class="space-y-3 col-span-2"}
-::::
-{.leading-tight}
-### Trace Every Request with Outgoing Requests Monitoring
-
-{.text-lg}
-Effortlessly capture the entire request-response chain, allowing you to reproduce complex issues with ease and get to the bottom of them fast.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="\_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-{.col-span-3}
-![](/features/error-tracking/log_explorer_error.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
-:::
-
-{class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
-:::
-{.col-span-3}
-![](/assets/img/screenshots/errors_zoomed.png){class="w-full order-last md:order-first drop-shadow-lg border border-gray-200 rounded-md"}
-
-{class="space-y-3 col-span-2"}
-::::
-
-{.leading-tight}
-### Error Tracking and Logging for Your APIs
-
-{.text-lg}
-Catch errors from any source, whether it's the API itself, a dependent service, or an underlying infrastructure component. Track them back to the specific request that triggered the issue.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="\_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-:::
-
-{% render "default/markdown/feature-overview.liquid", this:this %}
-
-{class="text-center"}
-::::
-### Integrate monoscope
-
-```=html
-<hr />
-```
-
-{% render "default/markdown/integration-footer.liquid", config:config %}
-::::
-
-```=html
-</div>
-</section>
-```

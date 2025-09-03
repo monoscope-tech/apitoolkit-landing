@@ -104,11 +104,25 @@ Once your project is created, an API key is automatically generated for you (whi
 
 ## ④ Integrate SDK
 
-To allow monoscope to begin monitoring your API and for you to start exploring your data through our platform, you need to integrate one of our SDKs into your application. We currently support 17+ web frameworks in different programming languages (**if we do not support your framework, kindly [send us an email](mailto:hello@monoscope.tech) and we will create a new SDK for you!)**.
+To allow monoscope to begin monitoring your API and for you to start exploring your data through our platform, you need to integrate one of our SDKs into your application. We support OpenTelemetry and have native SDKs for 17+ web frameworks in different programming languages.
 
-To integrate with your preferred framework, kindly follow the quick guidelines below for some of the popular SDKs.
+```=html
+<div class="callout">
+  <i class="fa-solid fa-code"></i>
+  <p>To integrate monoscope with your preferred framework, please visit our <a href="/docs/sdks" class="font-semibold underline">SDK Guides</a> section where you'll find detailed integration instructions for each language and framework we support, including:</p>
+  <ul class="list-disc list-inside mt-2">
+    <li>JavaScript/Node.js (Express, Fastify, NestJS, etc.)</li>
+    <li>Python (Django, FastAPI, Flask, etc.)</li>
+    <li>Go (Gin, Echo, Fiber, etc.)</li>
+    <li>PHP (Laravel, Symfony, Slim)</li>
+    <li>.NET Core</li>
+    <li>Java (Spring Boot)</li>
+    <li>And more...</li>
+  </ul>
+</div>
+```
 
-{% render "default/markdown/integration-footer.liquid", config:config %}
+If we don't support your framework yet, kindly [send us an email](mailto:hello@monoscope.tech) and we'll help you get started!
 
 ## ⑤ Acknowledge Endpoints or Anomalies
 

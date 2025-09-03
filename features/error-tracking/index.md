@@ -5,129 +5,91 @@ hide-date: true
 ---
 
 ```=html
-<section  class="mt-28 home-feature-image-div text-center w-full max-w-full aspect-auto" >
-    <div class="max-w-4xl inline-block text-left  text-xl sm:text-2xl">
-```
-
-###### [*Error Tracking and Breaking Change Detection*{.drop-shadow-md}]{class="bg-amber-300 px-2 rounded-md dark:text-black"}
-
-{class="mt-2 mb-3 dark:text-white "}
-### Find and Fix Errors and Breaking Changes in Real-time
-
-{class="py-5"}
-Error monitoring is not enough. Catch breaking changes in your APIs and third-party integrations with enough context to reproduce the issues, and narrow down the root cause.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-
-
-
-```=html
-    <iframe width="100%" height="650" class="max-w-4xl mt-12 rounded-xl overflow-hidden drop-shadow-lg" src="https://www.youtube.com/embed/4F4l-hjpUfs?si=u3wPO62k38pc-L0q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section class="flex flex-col items-center mt-8 sm:mt-32 px-3">
+  <div class="max-w-7xl w-full space-y-10">
+    <div class="space-y-10">
+      <span class="inline-block text-textWeak uppercase tracking-wide text-xs font-semibold">Error Tracking</span>
+      <h1 class="text-[3.0rem] font-normal leading-tight sm:leading-none">
+        <span class="block">Find and Fix Errors<span class="text-textDisabled">,</span></span>
+        <span class="text-textDisabled dark:text-textWeak block">Detect Breaking Changes</span>
+      </h1>
+      <p class="text-[1.25rem] text-textWeak max-w-3xl">
+        Error monitoring is not enough. Catch breaking changes in your APIs and third-party integrations with enough context to reproduce the issues, and narrow down the root cause.
+      </p>
+      <div class="flex gap-2 sm:gap-4">
+        <a href="https://app.monoscope.tech" class="btn py-3 px-6 rounded-xl bg-fillBrand-strong text-textInverse-strong shadow">Start free trial</a>
+        <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-3 px-6 rounded-xl bg-transparent border border-fillBrand-strong text-fillBrand-strong shadow">Get a demo</a>
+      </div>
     </div>
+    <iframe width="100%" height="650" class="max-w-4xl mt-12 rounded-xl overflow-hidden shadow-lg" src="https://www.youtube.com/embed/4F4l-hjpUfs?si=u3wPO62k38pc-L0q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 </section>
-<section  class="py-28  text-center w-full max-w-full aspect-auto" >
-    <div class="max-w-6xl inline-block text-left  text-xl sm:text-2xl prose prose-lg prose-pre:p-0 space-y-16">
-```
+<section class="flex flex-col items-center py-20">
+  <div class="max-w-7xl w-full px-3 space-y-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <h2 class="text-3xl font-normal">See All Errors and API Changelog at a Glance</h2>
+        <p class="text-lg text-textWeak">
+          Seeing all changes and issues at a glance to help you prioritize what issues need to be fixed, and what changes are benign and can be safely acknowledged.
+        </p>
+        <div class="flex gap-2 sm:gap-4">
+          <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+        </div>
+      </div>
+      <div>
+        <img src="/assets/img/screenshots/errors_zoomed.png" alt="monoscope Error Dashboard" class="w-full rounded-xl shadow-lg" />
+      </div>
+    </div>
 
-{class="grid grid-cols-1 px-6 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
-:::
-{class="space-y-3 col-span-2"}
-::::
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="order-last md:order-first">
+        <img src="log_explorer_error.png" alt="monoscope Error Explorer" class="w-full rounded-xl shadow-lg" />
+      </div>
+      <div class="space-y-6">
+        <h2 class="text-3xl font-normal">Trace Errors back to the Root Cause</h2>
+        <p class="text-lg text-textWeak">
+          Don't just track errors and stack traces, but also record the incoming and outgoing requests that triggered the error. Good for customer support or reproducing the bug.
+        </p>
+        <div class="flex gap-2 sm:gap-4">
+          <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+        </div>
+      </div>
+    </div>
 
-{.leading-tight}
-### See All Errors and API Changelog (Breaking and Safe Changes) at a Glance
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <h2 class="text-3xl font-normal">Track Breaking Changes in Your APIs</h2>
+        <p class="text-lg text-textWeak">
+          Catch breaking changes in your APIs and in any third-party APIs you depend on. No other platform can detect arbitrary breaking changes in your APIs or any APIs you call.
+        </p>
+        <div class="flex gap-2 sm:gap-4">
+          <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+        </div>
+      </div>
+      <div>
+        <img src="changes_details.png" alt="monoscope Breaking Changes" class="w-full rounded-xl shadow-lg" />
+      </div>
+    </div>
 
-{.text-lg}
-Seeing all changes and issues at a glance to help you prioritize what issues need to be fixed, and what changes are benign and can be safely acknowledged.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-
-{.col-span-3}
-![](/assets/img/screenshots/errors_zoomed.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
-:::
-
-{class="grid grid-cols-1 md:grid-cols-5 gap-8 px-6 md:px-2 justify-center items-center"}
-:::
-{class="order-last md:order-first col-span-3"}
-![](log_explorer_error.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
-
-{class="space-y-3 col-span-2 order-first md:order-last"}
-::::
-{.leading-tight}
-### Trace Errors back to the Root Cause
-
-{.text-lg}
-Don't just track errors and stack traces, but also record the incoming and outgoing requests that triggered the error. Good for customer support or reproducing the bug.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-:::
-
-{class="grid grid-cols-1 px-6 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
-:::
-{class="space-y-3 col-span-2"}
-::::
-
-{.leading-tight}
-### Track breaking changes in Your APIs & Third-Party Integrations
-
-{.text-lg}
-Catch breaking changes in your APIs and in any third-party APIs you depend on. No other platform can detect arbitrary breaking changes in your APIs or any APIs you call.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-
-{.col-span-3}
-![](changes_details.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
-:::
-
-{class="grid px-6 grid-cols-1 md:px-2 md:grid-cols-5 gap-8 justify-center items-center"}
-:::
-{.col-span-3}
-![](apitoolkit_slack.png){class="w-full drop-shadow-lg border border-gray-200 rounded-md"}
-
-{class="space-y-3 col-span-2 order-first md:order-last"}
-::::
-{.leading-tight}
-### Get instant Alert and Notifications on the Go
-
-{.text-lg}
-Integrate Alerts into your current workflow through Slack, email, teams, pagerduty, opsgenie, or any preferred alerting or incident management integration.
-
-{class="space-y-2 text-sm sm:pt-1 not-prose" id="waitlist-form-1"}
-[Start for free](https://app.monoscope.tech){class="drop-shadow hover:drop-shadow-lg transition-all rounded-md hover:bg-yellow-300 bg-amber-300 text-black border border-amber-400 font-semibold inline-block px-4 py-2 mt-2 sm:mt-0 hs-init hs-inview"}
-[OR]{.inline-block .px-5}
-[Get a Demo](https://calendar.app.google/1a4HG5GZYv1sjjZG6){target="_blank" class="drop-shadow rounded-md border border-gray-200 bg-gray-100 hover:bg-gray-200 text-xs text-gray-900 inline-block px-4 py-2 sm:ml-1 mt-2 sm:mt-0 hs-init hs-inview"}
-::::
-:::
-
-{% render "default/markdown/feature-overview.liquid", this:this %}
-
-{class="text-center"}
-::::
-### Integrate monoscope
-
-```=html
-<hr />
-```
-
-{% render "default/markdown/integration-footer.liquid", config:config %}
-::::
-
-```=html
-</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="order-last md:order-first">
+        <img src="apitoolkit_slack.png" alt="monoscope Slack Integration" class="w-full rounded-xl shadow-lg" />
+      </div>
+      <div class="space-y-6">
+        <h2 class="text-3xl font-normal">Get Instant Alerts and Notifications</h2>
+        <p class="text-lg text-textWeak">
+          Integrate Alerts into your current workflow through Slack, email, teams, pagerduty, opsgenie, or any preferred alerting or incident management integration.
+        </p>
+        <div class="flex gap-2 sm:gap-4">
+          <a href="https://app.monoscope.tech" class="btn py-2 px-4 rounded-lg bg-fillBrand-strong text-textInverse-strong shadow text-sm">Start for free</a>
+          <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="btn py-2 px-4 rounded-lg bg-transparent border border-strokeBorder-weak text-textWeak shadow text-sm">Get a demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 ```
+
