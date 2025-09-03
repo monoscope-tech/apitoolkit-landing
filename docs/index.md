@@ -57,16 +57,14 @@ Explore our product and SDK documentation to get started with using monoscope.
 <hr />
 ```
 
-## Integrate monoscope
+## Ready to ship? Pick your flavor 🚀
 
 {.text-lg}
-We currently support 17+ web frameworks in different programming languages.
+We've got you covered with OpenTelemetry support and native SDKs for 17+ frameworks. Whether you're building with Node.js, Python, Go, or something else entirely, integration takes just a few minutes.
 
-{.text-md .font-semibold}
-If we don't support your framework, kindly email [hello@monoscope.tech](mailto:hello@monoscope.tech) and we'll create an SDK for you ASAP!
-
-
+```=html
 {% render "default/markdown/integration-footer.liquid", config:config %}
+```
 
 ```=html
 </section>

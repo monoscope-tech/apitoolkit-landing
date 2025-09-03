@@ -5412,6 +5412,15 @@
   .h-full {
     height: 100%;
   }
+  .max-h-8 {
+    max-height: calc(var(--spacing) * 8);
+  }
+  .max-h-10 {
+    max-height: calc(var(--spacing) * 10);
+  }
+  .max-h-12 {
+    max-height: calc(var(--spacing) * 12);
+  }
   .max-h-\[calc\(100vh-12rem\)\] {
     max-height: calc(100vh - 12rem);
   }
@@ -5545,6 +5554,9 @@
   }
   .w-\[calc\(100\%-\(calc\(100\%-15px\)\)\/5\)\] {
     width: calc(100% - (calc(100% - 15px)) / 5);
+  }
+  .w-auto {
+    width: auto;
   }
   .w-fit {
     width: fit-content;
