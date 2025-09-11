@@ -341,7 +341,7 @@ platforms:
         {% for platform in this.frontmatter.platforms %}
         <!-- {{platform.title}} -->
         <div class="hidden group-has-[.uc-tab-{{forloop.index0}}:checked]/uc:flex gap-5 flex-col md:flex-row">
-          <div class="sm:w-1/3 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
+          <div class="sm:w-1/4 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
            {% for c in platform.children %}
             <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
               <input type="radio" name="{{platform.id}}" {% if forloop.first %}checked{% endif %}  class="hidden" value="1"/>
@@ -351,8 +351,8 @@ platforms:
               </svg>
               <div class="flex-1 space-y-2">
                   <h5 class="text-xl font-semibold text-textStrong">{{c.title}}</h5>
-                  <p class="text-lg hidden group-has-checked:block">{{c.details}}</p>
-                  <a class="text-lg hidden group-has-checked:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
+                  <p class="text-base hidden group-has-checked:block">{{c.details}}</p>
+                  <a class="text-base hidden group-has-checked:block text-textBrand underline block" href="{{c.learnmore}}">Learn more</a>
               </div>
             </label>
             {% endfor %}
