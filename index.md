@@ -110,13 +110,13 @@ platforms:
     visual: /assets/videos/see-everything.mp4
     children:
       - title: See exactly what your users saw -- via screen replay
-        details: Watch the actual screen recording of user sessions that led to errors. No more guessing from bug reports—see every click, scroll, and action that triggered the issue.
+        details: Watch screen recordings of user sessions that triggered errors—see every click and action.
         learnmore: /features/correlation
       - title: Unified logs and traces in one view
-        details: No more tab-switching between tools. See your entire request journey from frontend to database in a single timeline.
+        details: View your entire request journey from frontend to database in one unified timeline.
         learnmore: /features/logs-traces
       - title: Full-stack context for every issue
-        details: From user action to database query, see the complete story of what happened, when, and why.
+        details: See the complete story from user action to database query with full context.
         learnmore: /features/full-stack
   - title: Measure Anything
     id: measure-anything
@@ -124,13 +124,13 @@ platforms:
     visual: /assets/videos/measure-anything.mp4
     children:
       - title: Custom metrics without the complexity
-        details: Track business KPIs, technical metrics, or anything in between. If it matters to you, we'll help you measure it.
+        details: Track business KPIs and technical metrics—if it matters, we'll help you measure it.
         learnmore: /features/custom-metrics
       - title: Pre-built dashboards that actually work
-        details: Start with battle-tested templates for your stack, then customize them to match your exact needs.
+        details: Start with proven templates for your stack and customize to your exact needs.
         learnmore: /features/dashboards
       - title: Monitor performance and uptime of any service or process
-        details: Track response times, availability, and health of your APIs, databases, third-party services, and background jobs. Get alerted before users notice issues.
+        details: Monitor APIs, databases, and services—get alerts before users notice issues.
         learnmore: /features/performance-monitoring
   - title: Know Instantly
     id: know-instantly
@@ -138,13 +138,13 @@ platforms:
     visual: /assets/videos/know-instantly.mp4
     children:
       - title: Smart alerts that reduce noise
-        details: Set intelligent thresholds that adapt to your traffic patterns. Get notified about real issues, not false alarms.
+        details: Intelligent alerts that adapt to your traffic—only real issues, no false alarms.
         learnmore: /features/smart-alerts
       - title: Rich context in every notification
-        details: Alerts come with logs, traces, and trends attached. Know if it's critical before you even open your laptop.
+        details: Alerts include logs, traces, and trends—know severity before opening your laptop.
         learnmore: /features/alert-context
       - title: Alert on anything, notify anywhere
-        details: From API response times to business metrics, create alerts on any data point and route to Slack, PagerDuty, email, or webhooks.
+        details: Alert on any metric and route to Slack, PagerDuty, email, or webhooks.
         learnmore: /features/alert-routing
   - title: From Anywhere
     id: from-anywhere
@@ -152,13 +152,13 @@ platforms:
     visual: /assets/videos/from-anywhere.mp4
     children:
       - title: Debug directly from Slack, Whatsapp, Discord, etc
-        details: Ask your monitoring bot questions in plain English. "What's our p95 latency?" or "Show me errors in checkout" — get instant answers with charts and logs.
+        details: Ask questions in plain English—get instant answers with charts and logs.
         learnmore: /features/slack-integration
       # - title: Mobile app for on-the-go monitoring
       #   details: Check dashboards, acknowledge alerts, and dive into issues from your phone. Your ops command center, in your pocket.
       #   learnmore: /features/mobile-app
       - title: CLI for developers who live in the terminal
-        details: Query metrics, tail logs, and trace requests without leaving your development environment. Integrate monitoring into your workflow, not the other way around.
+        details: Query metrics, tail logs, and trace requests directly from your terminal.
         learnmore: /features/cli
   # - title: Infra
   # - title: Frontends
@@ -386,7 +386,7 @@ platforms:
         </div>
       </div>
       <div class="w-full">
-        <div class="flex flex-col md:flex-row gap-8 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-[4/3] [&_video]:object-contain [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
+        <div class="flex flex-col md:flex-row gap-2 pt-5 px-6 md:px-16 lg:px-24 [&>div]:flex-1 [&>div]:space-y-5 [&_h5]:text-textStrong [&_h5]:font-normal [&_h5]:max-w-md [&_p]:max-w-md [&_video]:border [&_video]:w-full [&_video]:h-auto [&_video]:aspect-[4/3] [&_video]:object-contain [&_video]:rounded-lg [&_video]:border-strokeBrand-strong">
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/ask-like-colleague.mp4" type="video/mp4">
