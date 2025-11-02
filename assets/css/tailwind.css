@@ -631,14 +631,15 @@
     ):hover {
     @apply border border-strokeStrong shadow-sm text-textStrong;
   }
-  .tabs-outline .tab {
-    @apply !text-textStrong;
+  & .tab {
+    @apply text-textStrong;
   }
 }
 
 @utility tabs-box {
   height: fit-content;
   min-height: auto;
+  background-color: var(--color-fillWeaker);
 }
 
 @utility tab {
