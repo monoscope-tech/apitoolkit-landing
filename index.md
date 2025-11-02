@@ -201,7 +201,7 @@ platforms:
           </div>
           <div class="flex gap-4 items-center text-textWeak">
             <!-- TrustBox Rating -->
-            <a class="flex items-center gap-3" href="https://trustpilot.com/review/monoscope.tech" target="_blank" rel="noopener noreferrer">
+            <a class="flex items-center gap-3" href="https://www.trustpilot.com/review/apitoolkit.io" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/img/trustpilot-stars-4.5.svg" class="w-28" alt="APItoolkit Trustpilot Rating" />
                 <img class="w-20 dark:hidden" src="/assets/img/trustpilot-black.svg" alt="Trustpilot Logo" />
                 <img class="w-20 hidden dark:inline-block" src="/assets/img/trustpilot-white.svg" alt="Trustpilot Logo" />
