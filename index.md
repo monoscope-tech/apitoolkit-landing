@@ -479,21 +479,21 @@ platforms:
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/ask-like-colleague.mp4" type="video/mp4">
             </video>
-            <h5 class="text-xl">Ask questions like you'd ask a colleague</h5>
+            <h5 class="text-xl inline-flex items-start gap-2"><svg class="inline-block w-6 h-6 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" fill="#E0BBE4" opacity="0.4"/><path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="#9B59B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Ask questions like you'd ask a colleague</span></h5>
             <p>"Show me all 500 errors from the payments service yesterday" or "Why is the API slower than last week?"—get instant answers without learning query syntax.</p>
           </div>
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/weekly-reports.mp4" type="video/mp4">
             </video>
-            <h5 class="text-xl">Weekly reports that tell you what actually broke</h5>
+            <h5 class="text-xl inline-flex items-start gap-2"><svg class="inline-block w-6 h-6 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" fill="#B5E7A0" opacity="0.4"/><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2V8H20" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 13H16M8 17H16" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/></svg> <span>Weekly reports that tell you what actually broke</span></h5>
             <p>Stop hunting through dashboards. Every Monday, get a summary of new errors, performance regressions, and anomalies that appeared—with context on what caused them.</p>
           </div>
           <div class="">
             <video autoplay muted loop playsinline class="bg-fillBrand-weak">
               <source src="/assets/videos/change-detection.mp4" type="video/mp4">
             </video>
-            <h5 class="text-xl">Breaking and incremental change detection in APIs (yours or thirdparties)</h5>
+            <h5 class="text-xl inline-flex items-start gap-2"><svg class="inline-block w-6 h-6 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 6L13.5 15.5L8.5 10.5L1 18" fill="#FFE0B2" opacity="0.3"/><path d="M23 6L13.5 15.5L8.5 10.5L1 18" stroke="#FF9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6H23V12" stroke="#FF9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Breaking and incremental change detection in APIs (yours or thirdparties)</span></h5>
             <p>No need to stare at logs all day. See the errors, anomalies, etc which appeared in the last week.</p>
           </div>
         </div>
