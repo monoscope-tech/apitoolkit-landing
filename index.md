@@ -314,7 +314,7 @@ platforms:
       <!-- Sticky header and tabs wrapper -->
       <div class="sticky top-10 md:top-16 z-10 bg-bgBase pt-5 pb-1">
         <div class="max-w-7xl mx-auto px-3 text-textWeak space-y-5">
-          <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
+          <h2 class="text-2xl md:text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
 
           <div role="tablist" class="tabs tabs-box tabs-outline inline-flex">
             {% for platform in this.frontmatter.platforms %}
@@ -501,58 +501,119 @@ platforms:
     </div>
 
     <!-- FEATURES -->
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5 group/ft">
+    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5">
       <h2 class="text-[2rem] leading-tight font-normal text-textStrong">Built with features that matter to engineers like us</h2>
       <p class="text-xl leading-normal">Collect, store, and analyze every single log or event <br/>without limits on a platform that gives you complete control.</p>
-      <div class="flex gap-16 pt-5">
-        <div class="hidden sm:block text-textStrong space-y-8 [&_input]:hidden [&_label]:inline-flex [&_label]:px-2  [&_label]:items-center [&_label]:gap-2
-            [&_label]:border-l-2 [&_label]:border-transparent [&_svg]:h-4 [&_svg]:w-4
-            ">
-          {% for feature in this.frontmatter.features %}
-          {% assign ischecked = forloop.first %}
-          <div class="flex flex-col *:flex *:gap-2 [&>label]:text-lg [&>label]:p-1">
-            <h4 class="text-sm font-semibold pb-3 pl-2.5">{{feature.title}}</h4>
-            {% for f in feature.links %}
-            <label class="cursor-pointer has-[:checked]:!border-fillBrand-strong has-[:checked]:bg-fillBrand-weak"><svg><use xlink:href="/assets/deps/sprite.svg#{{f.icon}}"></use></svg>{{f.title}}<input {% if ischecked and forloop.first %}checked{% endif %}  type="radio" class="hidden ft ft-{{f.id}}" name="features"/></label>
-            {% endfor %}
-          </div>
-          {% endfor %}
 
-          <div class="flex flex-col *:underline *:underline-offset-2 space-y-1 text-textBrand pl-2.5">
-            <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
-            <a href="https://app.monoscope.tech">Start free trial</a>
-            <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer">Launch playground</a>
+      <!-- Bento Box Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-3 pt-5 auto-rows-[minmax(200px,auto)]">
+        {% for feature in this.frontmatter.features %}
+          {% for f in feature.links %}
+        <!-- {{f.title}} -->
+        <div class="group relative border border-strokeDisabled rounded-2xl p-6 bg-fillWeaker hover:border-strokeBrand-strong hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col
+          {% if f.id == 'logs' %}md:col-span-4 md:row-span-2{% endif %}
+          {% if f.id == 'errors' %}md:col-span-2 md:row-span-1{% endif %}
+          {% if f.id == 'metrics' %}md:col-span-2 md:row-span-1{% endif %}
+          {% if f.id == 'apis' %}md:col-span-2 md:row-span-2{% endif %}
+          {% if f.id == 'change' %}md:col-span-2 md:row-span-1{% endif %}
+          {% if f.id == 'monitors' %}md:col-span-2 md:row-span-1{% endif %}
+          {% if f.id == 'alerts' %}md:col-span-2 md:row-span-1{% endif %}
+          {% if f.id == 'reports' %}md:col-span-2 md:row-span-1{% endif %}
+        ">
+          <!-- Icon -->
+          <div class="mb-4">
+            {% if f.id == 'logs' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <rect x="3" y="4" width="18" height="16" rx="2" fill="#B5E7FF" opacity="0.4"/>
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="#0288D1" stroke-width="2"/>
+              <line x1="6" y1="8" x2="18" y2="8" stroke="#0288D1" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="12" x2="15" y2="12" stroke="#0288D1" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="16" x2="12" y2="16" stroke="#0288D1" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {% elsif f.id == 'errors' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <circle cx="12" cy="12" r="9" fill="#FFE0B2" opacity="0.4"/>
+              <circle cx="12" cy="12" r="9" stroke="#FF9800" stroke-width="2"/>
+              <path d="M12 7V13M12 16V17" stroke="#FF9800" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {% elsif f.id == 'metrics' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#C5E1A5" opacity="0.4"/>
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="#7CB342" stroke-width="2"/>
+              <path d="M7 8L7 16M11 10L11 16M15 6L15 16M19 12L19 16" stroke="#558B2F" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {% elsif f.id == 'apis' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <rect x="3" y="3" width="8" height="8" rx="1.5" fill="#E1BEE7" opacity="0.4"/>
+              <rect x="3" y="13" width="8" height="8" rx="1.5" fill="#E1BEE7" opacity="0.4"/>
+              <rect x="13" y="3" width="8" height="8" rx="1.5" fill="#E1BEE7" opacity="0.4"/>
+              <rect x="13" y="13" width="8" height="8" rx="1.5" fill="#E1BEE7" opacity="0.4"/>
+              <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#9C27B0" stroke-width="2"/>
+              <rect x="3" y="13" width="8" height="8" rx="1.5" stroke="#9C27B0" stroke-width="2"/>
+              <rect x="13" y="3" width="8" height="8" rx="1.5" stroke="#9C27B0" stroke-width="2"/>
+              <rect x="13" y="13" width="8" height="8" rx="1.5" stroke="#9C27B0" stroke-width="2"/>
+            </svg>
+            {% elsif f.id == 'change' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <path d="M4 4L12 12L4 20" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round" fill="#B5E7FF" opacity="0.4"/>
+              <path d="M12 4L20 12L12 20" stroke="#0288D1" stroke-width="2" stroke-linecap="round" fill="#B5E7FF" opacity="0.4"/>
+            </svg>
+            {% elsif f.id == 'monitors' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <circle cx="12" cy="12" r="9" fill="#C5E1A5" opacity="0.4"/>
+              <circle cx="12" cy="12" r="9" stroke="#7CB342" stroke-width="2"/>
+              <path d="M12 6V12L16 14" stroke="#558B2F" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {% elsif f.id == 'alerts' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" fill="#FFE0B2" opacity="0.4"/>
+              <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="#FF9800" stroke-width="2"/>
+              <circle cx="12" cy="19" r="1.5" fill="#FF9800"/>
+            </svg>
+            {% elsif f.id == 'reports' %}
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+              <rect x="4" y="3" width="16" height="18" rx="2" fill="#E1BEE7" opacity="0.4"/>
+              <rect x="4" y="3" width="16" height="18" rx="2" stroke="#9C27B0" stroke-width="2"/>
+              <line x1="8" y1="8" x2="16" y2="8" stroke="#9C27B0" stroke-width="2" stroke-linecap="round"/>
+              <line x1="8" y1="12" x2="14" y2="12" stroke="#9C27B0" stroke-width="2" stroke-linecap="round"/>
+              <line x1="8" y1="16" x2="12" y2="16" stroke="#9C27B0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {% endif %}
           </div>
 
-        </div>
-        <div class="flex-1 space-y-8">
-          <div class="flex-col-reverse flex sm:flex-row sm:items-end gap-5">
-            {% for feature in this.frontmatter.features %}
-            {% for f in feature.links %}
-            <!-- {{feature.title}} -->
-            <div class="hidden group-has-[.ft-{{f.id}}:checked]/ft:block space-y-3 flex-1">
-              <h5 class="text-xl font-semibold text-textStrong">{{f.title}}</h5>
-              <p class="max-w-xl leading-normal">{{f.details}}</p>
-              <a href="{{f.learnmore}}" class="block underline underline-offset-2 text-textBrand">Learn more</a>
-            </div>
-            <!-- end {{feature.title}} -->
-            {% endfor %}
-            {% endfor %}
-            <div class="inline-flex gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-4 *:rounded-lg *:cursor-pointer select-none">
-              <a class="group-has-[.ft-logs:checked]/ft:!border-strokeDisabled group-has-[.ft-logs:checked]/ft:shadow-none" onclick="cycleRadioButtons('features', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
-              <a class="group-has-[.ft-reports:checked]/ft:!border-strokeDisabled group-has-[.ft-reports:checked]/ft:shadow-none" onclick="cycleRadioButtons('features', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
-            </div>
+          <!-- Title and Category -->
+          <div class="mb-3">
+            <p class="text-xs uppercase tracking-wider text-textWeak mb-1">{{feature.title}}</p>
+            <h5 class="text-lg font-semibold text-textStrong">{{f.title}}</h5>
           </div>
-          <div>
-            {% for feature in this.frontmatter.features %}
-            {% for f in feature.links %}
-            <video autoplay muted loop playsinline class="hidden group-has-[.ft-{{f.id}}:checked]/ft:block timeline-fade-in w-full shadow rounded-lg border border-strokeBrand-strong bg-fillBrand-weak">
+
+          <!-- Description -->
+          <p class="text-sm leading-relaxed mb-4 flex-grow">{{f.details}}</p>
+
+          <!-- Video Preview for featured items -->
+          {% if f.id == 'logs' or f.id == 'apis' %}
+          <div class="mb-4 rounded-lg overflow-hidden border border-strokeBrand-strong bg-fillBrand-weak">
+            <video autoplay muted loop playsinline class="w-full h-auto">
               <source src="{{f.video}}" type="video/mp4">
             </video>
-            {% endfor %}
-            {% endfor %}
           </div>
+          {% endif %}
+
+          <!-- Learn More Link -->
+          <a href="{{f.learnmore}}" class="inline-flex items-center gap-1.5 text-textBrand hover:gap-2.5 transition-all text-sm font-medium mt-auto group-hover:underline underline-offset-2">
+            Learn more
+            <svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#arrow-right"></use></svg>
+          </a>
         </div>
+        <!-- end {{f.title}} -->
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+      <!-- CTA Links -->
+      <div class="flex flex-wrap gap-6 pt-5 text-textBrand">
+        <a href="https://app.monoscope.tech/p/00000000-0000-0000-0000-000000000000/log_explorer" class="underline underline-offset-2 hover:text-textBrand-strong">Launch playground</a>
+        <a href="https://app.monoscope.tech" class="underline underline-offset-2 hover:text-textBrand-strong">Start free trial</a>
       </div>
     </div>
 
