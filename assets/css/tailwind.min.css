@@ -10094,6 +10094,11 @@
       height: calc(var(--spacing) * 8);
     }
   }
+  .sm\:h-10 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .sm\:h-\[200px\] {
     @media (width >= 40rem) {
       height: 200px;
@@ -10102,6 +10107,11 @@
   .sm\:w-1\/4 {
     @media (width >= 40rem) {
       width: calc(1/4 * 100%);
+    }
+  }
+  .sm\:w-10 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 10);
     }
   }
   .sm\:w-56 {
