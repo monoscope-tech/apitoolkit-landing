@@ -310,37 +310,28 @@ platforms:
         </script>
     </div>
 
-    <!-- Tailwind class generation helper -->
-    <div class="hidden group-has-[.uc-tab-0:checked]/uc:flex group-has-[.uc-tab-1:checked]/uc:flex group-has-[.uc-tab-2:checked]/uc:flex group-has-[.uc-tab-3:checked]/uc:flex group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none"></div>
     <div id="monitoring-section" class="w-full">
-      <div class="max-w-7xl mx-auto px-3 text-textWeak space-y-5 group/uc">
-        <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
-        <p class="hidden text-2xl leading-normal">Just because you don't see an error, doesn't mean it's not happening. That's why we built both active <br/>and passive monitoring--<span class="text-textBrand">to keep you informed of the different systems you maintain.<span></p>
+      <!-- Sticky header and tabs wrapper -->
+      <div class="sticky top-10 md:top-16 z-10 bg-bgBase pt-5 pb-1">
+        <div class="max-w-7xl mx-auto px-3 text-textWeak space-y-5">
+          <h2 class="text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
 
-        <div class="flex flex-col md:flex-row md:justify-between py-8 gap-4">
-          <div class="grid grid-cols-2 md:flex bg-fillWeak border border-strokeWeak rounded-lg p-2 md:p-0
-            md:*:px-4 md:*:py-3 *:px-3 *:py-2.5 *:flex *:items-center *:gap-2
-            [&_svg]:h-4 [&_svg]:w-4 md:[&_svg]:h-5 md:[&_svg]:w-5 [&>label]:rounded-lg [&>label]:border-strokeStrong
-            *:text-sm md:*:text-base
-            ">
-           {% for platform in this.frontmatter.platforms %}
-           <label class="cursor-pointer has-[:checked]:border has-[:checked]:border-strokeBrand-strong has-[:checked]:bg-bgOverlay has-[:checked]:shadow has-[:checked]:!text-textBrand">
-             <input {% if forloop.first %}checked{% endif %} type="radio" class="hidden peer uc-tab-{{forloop.index0}}" name="usecase" value="{{forloop.index0}}"/>
-             <svg class="peer-checked:text-iconBrand"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
-             <span>{{platform.title}}</span>
-           </label>
-           {% endfor %}
-          </div>
-
-          <div class="flex justify-center md:inline-flex gap-2 md:gap-4 *:inline-flex *:items-center *:shadow *:border *:border-strokeStrong *:p-3 md:*:p-4 *:rounded-lg *:cursor-pointer select-none">
-            <a class="group-has-[.uc-tab-0:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-0:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', -1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-left"></use></svg></a>
-            <a class="group-has-[.uc-tab-3:checked]/uc:!border-strokeDisabled group-has-[.uc-tab-3:checked]/uc:shadow-none" onclick="cycleRadioButtons('usecase', +1)"><svg class="h-3 w-3"><use xlink:href="/assets/deps/sprite.svg#chevron-right"></use></svg></a>
+          <div role="tablist" class="tabs tabs-box tabs-outline inline-flex">
+            {% for platform in this.frontmatter.platforms %}
+            <a href="#{{platform.id}}" role="tab" class="tab scroll-tab-link gap-2" data-target="{{platform.id}}">
+              <svg class="h-4 w-4 md:h-5 md:w-5"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
+              <span>{{platform.title}}</span>
+            </a>
+            {% endfor %}
           </div>
         </div>
+      </div>
 
+      <!-- Scrollable content sections -->
+      <div class="max-w-7xl mx-auto px-3 text-textWeak pt-4">
         {% for platform in this.frontmatter.platforms %}
         <!-- {{platform.title}} -->
-        <div class="hidden group-has-[.uc-tab-{{forloop.index0}}:checked]/uc:flex gap-5 flex-col md:flex-row">
+        <div id="{{platform.id}}" class="scroll-section min-h-screen py-16 flex gap-5 flex-col md:flex-row" data-section-id="{{platform.id}}">
           <div class="sm:w-1/4 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
            {% for c in platform.children %}
             <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
@@ -369,6 +360,103 @@ platforms:
         {% endfor %}
       </div>
     </div>
+
+    <!-- Scroll-based tab activation script -->
+    <script>
+      (function() {
+        const sections = document.querySelectorAll('.scroll-section');
+        const tabLinks = document.querySelectorAll('.scroll-tab-link');
+        let currentActiveId = null;
+
+        function updateActiveTab() {
+          // Find the section with the highest intersection ratio
+          let maxRatio = 0;
+          let mostVisibleSection = null;
+
+          sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Calculate what percentage of the section is visible
+            const visibleTop = Math.max(0, rect.top);
+            const visibleBottom = Math.min(viewportHeight, rect.bottom);
+            const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+            const ratio = visibleHeight / viewportHeight;
+
+            if (ratio > maxRatio) {
+              maxRatio = ratio;
+              mostVisibleSection = section;
+            }
+          });
+
+          // Only update if we have a clear winner and it's different from current
+          if (mostVisibleSection && maxRatio > 0.2) {
+            const sectionId = mostVisibleSection.dataset.sectionId;
+
+            if (sectionId !== currentActiveId) {
+              currentActiveId = sectionId;
+
+              // Remove active state from all tabs
+              tabLinks.forEach(link => {
+                link.classList.remove('tab-active');
+              });
+
+              // Add active state to current tab
+              const activeLink = document.querySelector(`[data-target="${sectionId}"]`);
+              if (activeLink) {
+                activeLink.classList.add('tab-active');
+              }
+            }
+          }
+        }
+
+        // Use scroll event with requestAnimationFrame for smooth updates
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              updateActiveTab();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+
+        // Smooth scroll to section when tab is clicked
+        tabLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.dataset.target;
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              // Get the sticky header height
+              const stickyHeader = document.querySelector('#monitoring-section .sticky');
+              const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
+              const navHeight = 80; // Approximate page nav height
+              const offset = (headerHeight + navHeight + 20) * 0.7; // Reduce by 40%
+
+              // Calculate position and scroll
+              const elementPosition = targetSection.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Initialize first tab as active
+        if (tabLinks.length > 0) {
+          tabLinks[0].classList.add('tab-active');
+          currentActiveId = tabLinks[0].dataset.target;
+        }
+
+        // Run once on load
+        updateActiveTab();
+      })();
+    </script>
 
     <!-- Powered by AI -->
     <div class="w-full text-textWeak space-y-5">
