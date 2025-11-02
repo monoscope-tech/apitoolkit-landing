@@ -7,5 +7,5 @@ css:
 		-o assets/css/tailwind.min.css  --watch
 
 css-prod:
-	NODE_ENV=production npx tailwindcss -i assets/css/tailwind.css \
+	NODE_ENV=production npx @tailwindcss/cli -i assets/css/tailwind.css \
 	-c tailwind.config.js -o assets/css/tailwind.min.css --minify
