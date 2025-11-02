@@ -106,7 +106,7 @@ features:
 platforms:
   - title: See Everything
     id: see-everything
-    icon: eye
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7 5 2.73 8.11 1 12.5C2.73 16.89 7 20 12 20C17 20 21.27 16.89 23 12.5C21.27 8.11 17 5 12 5Z" fill="#B5E7FF" opacity="0.4"/><circle cx="12" cy="12.5" r="3.5" fill="#4FC3F7" opacity="0.6"/><path d="M12 5C7 5 2.73 8.11 1 12.5C2.73 16.89 7 20 12 20C17 20 21.27 16.89 23 12.5C21.27 8.11 17 5 12 5Z" stroke="#0288D1" stroke-width="2"/><circle cx="12" cy="12.5" r="3.5" stroke="#0288D1" stroke-width="2"/></svg>'
     visual: /assets/videos/see-everything.mp4
     children:
       - title: See exactly what your users saw -- via screen replay
@@ -120,7 +120,7 @@ platforms:
         learnmore: /features/full-stack
   - title: Measure Anything
     id: measure-anything
-    icon: bar-chart-2
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" fill="#C5E1A5" opacity="0.4"/><rect x="3" y="3" width="18" height="18" rx="2" stroke="#7CB342" stroke-width="2"/><path d="M7 8L7 16M11 10L11 16M15 6L15 16M19 12L19 16" stroke="#558B2F" stroke-width="2" stroke-linecap="round"/></svg>'
     visual: /assets/videos/measure-anything.mp4
     children:
       - title: Custom metrics without the complexity
@@ -134,7 +134,7 @@ platforms:
         learnmore: /features/performance-monitoring
   - title: Know Instantly
     id: know-instantly
-    icon: bell
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" fill="#FFE0B2" opacity="0.4"/><path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="#FF9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="#FF9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     visual: /assets/videos/know-instantly.mp4
     children:
       - title: Smart alerts that reduce noise
@@ -148,7 +148,7 @@ platforms:
         learnmore: /features/alert-routing
   - title: From Anywhere
     id: from-anywhere
-    icon: smartphone
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="2" width="12" height="20" rx="2" fill="#E1BEE7" opacity="0.4"/><rect x="6" y="2" width="12" height="20" rx="2" stroke="#9C27B0" stroke-width="2"/><line x1="6" y1="18" x2="18" y2="18" stroke="#9C27B0" stroke-width="2"/><circle cx="12" cy="20" r="0.5" fill="#9C27B0"/></svg>'
     visual: /assets/videos/from-anywhere.mp4
     children:
       - title: Debug directly from Slack, Whatsapp, Discord, etc
@@ -319,7 +319,7 @@ platforms:
           <div role="tablist" class="tabs tabs-box tabs-outline inline-flex">
             {% for platform in this.frontmatter.platforms %}
             <a href="#{{platform.id}}" role="tab" class="tab scroll-tab-link gap-2" data-target="{{platform.id}}">
-              <svg class="h-4 w-4 md:h-5 md:w-5"><use xlink:href="/assets/deps/{% if platform.icon == 'eye' or platform.icon == 'bell' %}fontawesome/regular.svg{% else %}sprite.svg{% endif %}#{{platform.icon}}"></use></svg>
+              <span class="h-5 w-5 md:h-6 md:w-6 inline-flex items-center justify-center">{{platform.icon}}</span>
               <span>{{platform.title}}</span>
             </a>
             {% endfor %}
