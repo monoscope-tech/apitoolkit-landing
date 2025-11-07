@@ -212,6 +212,11 @@
 }
 
 /* Dark mode overrides */
+body[data-theme="dark"],
+html:has(body[data-theme="dark"]) {
+  background-color: oklch(16.4% 0.012 263);
+}
+
 [data-theme="dark"] {
   /* Background colors - Dark theme */
   --color-bgAlternate: oklch(20.1% 0.015 263);
@@ -439,6 +444,7 @@
   html,
   body {
     font-size: 14px;
+    background-color: var(--color-bgBase);
   }
 
   :root {

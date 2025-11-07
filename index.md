@@ -777,11 +777,11 @@ platforms:
             ">
         {% for t in this.frontmatter.testimonials %}
             {% if t.stat %}
-            <div class="border-stroke{{t.theme}}-weak bg-fill{{t.theme}}-weak dark:text-textInverse-strong col-span-3 sm:col-span-2 gap-2 p-3 sm:p-5" style="background-color:#{{t.color}}">
+            <div class="border-stroke{{t.theme}}-weak bg-fill{{t.theme}}-weak dark:text-textInverse-strong col-span-3 sm:col-span-2 gap-2 p-3 sm:p-5" style="background-color:#{{t.color}}BF">
               <div class="space-y-3 flex flex-col gap-2 justify-self-center">
                 <strong>{{t.stat}}</strong><small>{{t.desc}}</small>
               </div>
-              <div><img class="h-8 logo1" src="/assets/img/customers/{{t.logo}}"/></div>
+              <div><img class="h-8 logo1 dark:!invert-0 dark:!opacity-100" src="/assets/img/customers/{{t.logo}}"/></div>
             </div>
             {% else %}
             <div class="border-strokeBrand-weak col-span-6 p-5 sm:p-8">
