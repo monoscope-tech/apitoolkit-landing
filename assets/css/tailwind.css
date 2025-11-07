@@ -211,6 +211,92 @@
   --tw-prose-body: var(--color-textStrong) !important;
 }
 
+/* Dark mode overrides */
+[data-theme="dark"] {
+  /* Background colors - Dark theme */
+  --color-bgAlternate: oklch(20.1% 0.015 263);
+  --color-bgBase: oklch(16.4% 0.012 263);
+  --color-bgInverse: rgb(255 255 255);
+  --color-bgOverlay: oklch(26.4% 0.012 263);
+  --color-bgRaised: oklch(22.0% 0.010 263);
+  --color-bgSunken: rgb(0 0 0);
+  --color-bgBrand: rgb(59 130 246);
+
+  /* Fill colors - Dark theme */
+  --color-fillBrand-strong: rgb(59 130 246);
+  --color-fillBrand-weak: rgba(59 130 246 / 0.15);
+  --color-fillDisabled: rgba(255 255 255 / 0.12);
+  --color-fillStrong: rgb(255 255 255);
+  --color-fillError-strong: oklch(77.2% 0.126 21);
+  --color-fillError-weak: rgba(255 156 156 / 0.08);
+  --color-fillHover: rgba(255 255 255 / 0.06);
+  --color-fillInformation-strong: oklch(75.5% 0.098 241);
+  --color-fillInformation-weak: rgba(126 192 229 / 0.08);
+  --color-fillInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-fillInverse-hover: rgba(0 21 128 / 0.04);
+  --color-fillInverse-press: rgba(0 17 102 / 0.1);
+  --color-fillInverse-strong: oklch(16.4% 0.012 263);
+  --color-fillInverse-weak: rgba(0 21 128 / 0.04);
+  --color-fillOverlay: rgba(0 6 38 / 0.9);
+  --color-fillPress: rgba(255 255 255 / 0.12);
+  --color-fillSelected: rgb(59 130 246);
+  --color-fillSuccess-strong: oklch(75.3% 0.092 162);
+  --color-fillSuccess-weak: rgba(119 199 175 / 0.08);
+  --color-fillWarning-strong: oklch(79.5% 0.106 92);
+  --color-fillWarning-weak: rgba(224 190 112 / 0.08);
+  --color-fillWeak: rgba(255 255 255 / 0.06);
+  --color-fillWeaker: rgba(255 255 255 / 0.03);
+  --color-fillWhite: rgb(255 255 255);
+  --color-fillYellow: oklch(85.8% 0.179 92);
+
+  /* Icon colors - Dark theme */
+  --color-iconBrand: rgba(96 165 250 / 0.9);
+  --color-iconDisabled: rgba(255 255 255 / 0.12);
+  --color-iconError: rgba(255 156 156 / 0.8);
+  --color-iconInformation: rgba(126 192 229 / 0.8);
+  --color-iconInverse: rgba(0 13 77 / 0.45);
+  --color-iconInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-iconInverse-strong: rgba(0 6 38 / 0.9);
+  --color-iconNeutral: rgba(255 255 255 / 0.6);
+  --color-iconSuccess: rgba(119 199 175 / 0.8);
+  --color-iconWarning: rgba(224 190 112 / 0.8);
+
+  /* Stroke colors - Dark theme */
+  --color-strokeBrand-strong: rgba(96 165 250 / 0.5);
+  --color-strokeBrand-weak: rgba(96 165 250 / 0.15);
+  --color-strokeDisabled: rgba(255 255 255 / 0.12);
+  --color-strokeError-strong: rgba(248 113 113 / 0.5);
+  --color-strokeError-weak: rgba(248 113 113 / 0.15);
+  --color-strokeFocus: rgb(96 165 250);
+  --color-strokeInformation-strong: rgba(147 197 253 / 0.5);
+  --color-strokeInformation-weak: rgba(147 197 253 / 0.15);
+  --color-strokeInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-strokeInverse-strong: rgba(0 13 77 / 0.45);
+  --color-strokeInverse-weak: rgba(0 17 102 / 0.1);
+  --color-strokeSelected: rgb(59 130 246);
+  --color-strokeStrong: rgba(255 255 255 / 0.3);
+  --color-strokeSuccess-strong: rgba(134 239 172 / 0.5);
+  --color-strokeSuccess-weak: rgba(134 239 172 / 0.15);
+  --color-strokeWarning-strong: rgba(251 191 36 / 0.5);
+  --color-strokeWarning-weak: rgba(251 191 36 / 0.15);
+  --color-strokeWeak: rgba(255 255 255 / 0.08);
+
+  /* Text colors - Dark theme */
+  --color-textBrand: oklch(70% 0.15 241);
+  --color-textDisabled: rgba(255 255 255 / 0.20);
+  --color-textError: oklch(77.2% 0.126 21);
+  --color-textInformation: oklch(75.5% 0.098 241);
+  --color-textInverseDisabled: rgba(0 17 102 / 0.1);
+  --color-textInverse-strong: rgba(0 6 38 / 0.9);
+  --color-textInverse-weak: rgba(0 8 51 / 0.65);
+  --color-textStrong: oklch(85% 0 0);
+  --color-textSuccess: oklch(75.3% 0.092 162);
+  --color-textWarning: oklch(79.5% 0.106 92);
+  --color-textWeak: oklch(70% 0 0);
+
+  --backgroundPrimary: oklch(16.4% 0.012 263);
+}
+
 .btn-primary {
   @apply bg-fillBrand-strong hover:bg-fillBrand-strong text-textInverse-strong;
 }

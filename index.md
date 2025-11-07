@@ -695,7 +695,7 @@ platforms:
           <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
             <li>Deploy to your own servers</li>
             <li><strong>Open source</strong> community edition available</li>
-            <li>Enterprise edition with premium features</li>
+            <li>Enterprise edition with premium features & Support</li>
             <li>Ideal for <strong>regulatory compliance</strong></li>
             <li>Complete data control</li>
           </ul>
@@ -703,10 +703,8 @@ platforms:
           <div class="border-t border-strokeWeak pt-6 space-y-4">
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
-              <p class="text-2xl font-semibold text-textStrong">
-                Free <span class="text-base font-normal text-textWeak">community edition</span>
-              </p>
-              <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">Custom pricing</strong></p>
+              <p class="text-base text-textWeak">Community Edition: <strong class="text-textStrong text-2xl">Free</strong></p>
+              <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">starts at $500/month</strong></p>
             </div>
             <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block text-center py-3 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors">Talk to an engineer</a>
           </div>
@@ -779,7 +777,7 @@ platforms:
             ">
         {% for t in this.frontmatter.testimonials %}
             {% if t.stat %}
-            <div class="border-stroke{{t.theme}}-weak bg-fill{{t.theme}}-weak  col-span-3 sm:col-span-2 gap-2 p-3 sm:p-5" style="background-color:#{{t.color}}">
+            <div class="border-stroke{{t.theme}}-weak bg-fill{{t.theme}}-weak dark:text-textInverse-strong col-span-3 sm:col-span-2 gap-2 p-3 sm:p-5" style="background-color:#{{t.color}}">
               <div class="space-y-3 flex flex-col gap-2 justify-self-center">
                 <strong>{{t.stat}}</strong><small>{{t.desc}}</small>
               </div>
