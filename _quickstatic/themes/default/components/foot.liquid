@@ -123,20 +123,40 @@
 
         <hr/>
         <!-- Bottom Bar -->
-        <div class="mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-gray-600 mb-4 md:mb-0">
-              Copyrights (c) <span id="currentYear">2025</span> - Past 3 technologies UG. Gruntaler str. 18, 13357 Berlin, Germany
+        <div class="mt-12 pt-8 flex flex-col gap-6">
+            <!-- Top row -->
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="text-gray-600 dark:text-gray-400">
+                  Copyrights (c) <span id="currentYear">2025</span> - Past 3 technologies UG. Gruntaler str. 18, 13357 Berlin, Germany
+                </div>
+                <!-- Theme Selector -->
+                <div role="tablist" class="tabs tabs-boxed tabs-outline inline-flex self-start">
+                  <button role="tab" class="tab" data-theme-option="system" title="System theme">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </button>
+                  <button role="tab" class="tab" data-theme-option="light" title="Light theme">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </button>
+                  <button role="tab" class="tab" data-theme-option="dark" title="Dark theme">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                  </button>
+                </div>
             </div>
-            <div class="flex items-center space-x-6">
-                <a href="https://discord.gg/BHQh5JzjPX" target="_blank" class="flex items-center text-gray-600 hover:text-gray-900">
+            <!-- Bottom row -->
+            <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
+                <a href="https://discord.gg/BHQh5JzjPX" target="_blank" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200">
                     <svg class="h-5 w-5 mr-2"><use xlink:href="/assets/deps/sprite.svg#discord"></use></svg>
                     Join our discord community
                 </a>
-                <div class="flex items-center text-gray-600">
-                    <div class="flex items-center">
-                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                        Status All systems operational
-                    </div>
+                <div class="flex items-center text-gray-600 dark:text-gray-400">
+                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Status All systems operational
                 </div>
             </div>
         </div>
@@ -144,8 +164,32 @@
   </section>
 
 <script>
-  const year = new Date().getFullYear();
-  document.getElementById("currentYear").textContent = year;
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  // Theme tabs
+  const getSystemTheme = () => matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const applyTheme = (theme) => document.body.setAttribute('data-theme', theme === 'system' ? getSystemTheme() : theme);
+  const updateTabs = (theme) => {
+    document.querySelectorAll('[data-theme-option]').forEach(btn =>
+      btn.classList.toggle('tab-active', btn.dataset.themeOption === theme)
+    );
+  };
+
+  const currentTheme = localStorage.getItem('theme') || 'system';
+  updateTabs(currentTheme);
+
+  document.querySelectorAll('[data-theme-option]').forEach(btn => {
+    btn.onclick = () => {
+      const theme = btn.dataset.themeOption;
+      localStorage.setItem('theme', theme);
+      applyTheme(theme);
+      updateTabs(theme);
+    };
+  });
+
+  matchMedia('(prefers-color-scheme: dark)').onchange = () => {
+    if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system');
+  };
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -69,7 +69,7 @@ faqs:
                          {% else %}
                             <p class="text-base text-textWeak"><strong class="text-textStrong text-2xl">$34</strong>/month for up to 20M events, + <strong class="text-textStrong">$2 per 1M events</strong> after</p>
                         {% endif %}
-                      
+
                     </div>
                     <a href="https://app.monoscope.tech" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">Start free trial</a>
                 </div>
@@ -125,7 +125,7 @@ faqs:
                 <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
                     <li>Deploy to your own servers</li>
                     <li><strong>Open source</strong> community edition available</li>
-                    <li>Enterprise edition with premium features</li>
+                    <li>Enterprise edition with premium features & Support</li>
                     <li>Ideal for <strong>regulatory compliance</strong></li>
                     <li>Complete data control</li>
                 </ul>
@@ -133,10 +133,8 @@ faqs:
                 <div class="border-t border-strokeWeak pt-6 space-y-4">
                     <div class="space-y-2">
                         <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
-                        <p class="text-2xl font-semibold text-textStrong">
-                            Free <span class="text-base font-normal text-textWeak">community edition</span>
-                        </p>
-                        <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">Custom pricing</strong></p>
+                        <p class="text-base text-textWeak">Community Edition: <strong class="text-textStrong text-2xl">Free</strong></p>
+                        <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">starts at $500/month</strong></p>
                     </div>
                     <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block text-center py-3 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors">Talk to an engineer</a>
                 </div>
@@ -260,7 +258,7 @@ faqs:
                                 <div class="p-8 md:p-12 bg-gradient-to-br from-fillBrand-weak/50 to-transparent">
                                     <p class="text-sm font-medium text-textWeak uppercase tracking-wide mb-6">You qualify if you have:</p>
                                     <div class="grid grid-cols-2 gap-3">
-                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                        <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
                                             <div class="flex items-start gap-3">
                                                 <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                                                     <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#calendar"></use></svg>
@@ -272,7 +270,7 @@ faqs:
                                             </div>
                                         </div>
 
-                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                        <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
                                             <div class="flex items-start gap-3">
                                                 <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                                                     <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#users"></use></svg>
@@ -284,7 +282,7 @@ faqs:
                                             </div>
                                         </div>
 
-                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                        <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
                                             <div class="flex items-start gap-3">
                                                 <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                                                     <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#dollar-sign"></use></svg>
@@ -296,7 +294,7 @@ faqs:
                                             </div>
                                         </div>
 
-                                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
+                                        <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-5 border border-strokeBrand-weak hover:border-strokeBrand-strong transition-colors group">
                                             <div class="flex items-start gap-3">
                                                 <div class="w-8 h-8 rounded-lg bg-fillBrand-weak flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                                                     <svg class="w-4 h-4 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#code"></use></svg>

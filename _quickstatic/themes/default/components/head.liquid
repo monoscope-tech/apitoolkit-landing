@@ -360,15 +360,34 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
   </head>
 
   <body
-    data-theme="emerald"
-    {% comment %} data-theme="dark" {% endcomment %}
+    data-theme="light"
     {% comment %} hx-boost="true" {% endcomment %}
     hx-ext="preload,head-support"
     class="text-textStrong bg-bgBase"
     preload
   >
-    <script style="display:none">
-      if (localStorage.getItem('darkMode') === 'true') {
-        // document.body.setAttribute('data-theme', 'sunset');
-      }
+    <script>
+      // Theme initialization - must run immediately to prevent flash
+      (function() {
+        function getSystemTheme() {
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+          const effectiveTheme = theme === 'system' ? getSystemTheme() : theme;
+          document.body.setAttribute('data-theme', effectiveTheme);
+        }
+
+        // Get theme from localStorage or default to 'system'
+        const savedTheme = localStorage.getItem('theme') || 'system';
+        applyTheme(savedTheme);
+
+        // Listen for system theme changes when in system mode
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+          const currentTheme = localStorage.getItem('theme') || 'system';
+          if (currentTheme === 'system') {
+            applyTheme('system');
+          }
+        });
+      })();
     </script>
