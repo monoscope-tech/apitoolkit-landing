@@ -734,27 +734,32 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
                 <button>close</button>
               </form>
             </dialog>
-            <button id="theme-btn" class="relative group p-2 hover:bg-fillWeak rounded-lg transition-colors" title="">
-              <svg class="icon h-5 w-5 opacity-70"><use id="theme-icon" xlink:href=""></use></svg>
+            <button id="theme-btn" class="relative group p-2 hover:bg-fillWeak rounded-lg transition-colors cursor-pointer" title="">
+              <svg id="theme-icon-light" class="h-5 w-5 opacity-70 fill-current stroke-current"><use xlink:href="/assets/deps/fontawesome/light.svg#sun-bright"></use></svg>
+              <svg id="theme-icon-dark" class="hidden h-5 w-5 opacity-70 fill-current stroke-current"><use xlink:href="/assets/deps/fontawesome/light.svg#moon-stars"></use></svg>
+              <svg id="theme-icon-system" class="hidden h-5 w-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
               <div class="hidden group-hover:block absolute right-0 top-full mt-2 px-3 py-2 bg-fillStrong text-textInverse-strong text-sm rounded-lg whitespace-nowrap shadow-lg">
-                Switch to <span id="theme-next"></span>
+                <span id="theme-tooltip"></span>
               </div>
             </button>
             <script>
               (function() {
                 const modes = ['light', 'dark', 'system'];
-                const icons = {light: '/assets/deps/fontawesome/light.svg#sun-bright', dark: '/assets/deps/fontawesome/light.svg#moon-stars', system: '/assets/deps/fontawesome/light.svg#circle-half-stroke'};
+                const icons = {light: document.getElementById('theme-icon-light'), dark: document.getElementById('theme-icon-dark'), system: document.getElementById('theme-icon-system')};
                 const btn = document.getElementById('theme-btn');
-                const icon = document.getElementById('theme-icon');
-                const next = document.getElementById('theme-next');
+                const tooltip = document.getElementById('theme-tooltip');
 
                 function getMode() { return localStorage.getItem('themeMode') || 'light'; }
                 function getTheme(m) { return m === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : m; }
+                function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
                 function update(m) {
-                  icon.setAttributeNS('http://www.w3.org/1999/xlink', 'href', icons[m]);
+                  Object.values(icons).forEach(i => i.classList.add('hidden'));
+                  icons[m].classList.remove('hidden');
                   const n = modes[(modes.indexOf(m) + 1) % 3];
-                  next.textContent = n.charAt(0).toUpperCase() + n.slice(1);
-                  btn.title = 'Switch to ' + n;
+                  tooltip.textContent = cap(m) + ' → ' + cap(n);
+                  btn.title = cap(m) + ' → ' + cap(n);
                   const t = getTheme(m);
                   document.body.setAttribute('data-theme', t);
                   localStorage.setItem('darkMode', t === 'dark' ? 'true' : 'false');
