@@ -192,14 +192,13 @@
       .docs-card-2::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at center, var(--color-fillBrand-weak) 0%, transparent 70%);
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, var(--color-fillBrand-weak) 0%, transparent 70%);
         opacity: 0;
         transition: opacity 300ms ease;
         z-index: 0;
+        pointer-events: none;
       }
 
       .docs-card-2:hover {
@@ -245,6 +244,13 @@
         margin: 0;
         position: relative;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .docs-card-2 > span {
+        color: var(--color-textWeak) !important;
       }
 
       .callout {
@@ -1034,6 +1040,24 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
         e.currentTarget.nextElementSibling.classList.toggle('hidden');
         e.currentTarget.firstElementChild.classList.toggle('rotate-90');
       }
+
+      const style = document.createElement('style');
+      style.textContent = '.docs-card-2::before { left: var(--mouse-x, 50%); top: var(--mouse-y, 50%); transition: none; }';
+      document.head.appendChild(style);
+
+      document.querySelectorAll('.docs-card-2').forEach(card => {
+        let rafId;
+        card.addEventListener('mousemove', e => {
+          if (rafId) return;
+          rafId = requestAnimationFrame(() => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', (e.clientX - rect.left - 150) + 'px');
+            card.style.setProperty('--mouse-y', (e.clientY - rect.top - 150) + 'px');
+            rafId = null;
+          });
+        });
+      });
+
       init();
 
       document.body.addEventListener('htmx:afterSwap', function (event) {
