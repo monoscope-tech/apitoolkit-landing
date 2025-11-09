@@ -170,6 +170,31 @@
         font-size: 0.875rem;
       }
 
+      .mouse-gradient {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mouse-gradient::before {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, var(--color-fillBrand-weak) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 50ms ease;
+        z-index: 0;
+        pointer-events: none;
+        left: var(--mouse-x, 50%);
+        top: var(--mouse-y, 50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .mouse-gradient:hover::before {
+        opacity: 1;
+        transform: none;
+      }
+
       .docs-card-2 {
         display: flex;
         flex-direction: column;
@@ -185,30 +210,12 @@
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
         transition: all 300ms ease;
         gap: 0.75rem;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .docs-card-2::before {
-        content: '';
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(circle, var(--color-fillBrand-weak) 0%, transparent 70%);
-        opacity: 0;
-        transition: opacity 300ms ease;
-        z-index: 0;
-        pointer-events: none;
       }
 
       .docs-card-2:hover {
         border-color: var(--color-strokeBrand-weak);
         transform: translateY(-2px);
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px var(--color-strokeBrand-weak);
-      }
-
-      .docs-card-2:hover::before {
-        opacity: 1;
       }
 
       .docs-card-2 i {
@@ -1041,11 +1048,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
         e.currentTarget.firstElementChild.classList.toggle('rotate-90');
       }
 
-      const style = document.createElement('style');
-      style.textContent = '.docs-card-2::before { left: var(--mouse-x, 50%); top: var(--mouse-y, 50%); transition: none; }';
-      document.head.appendChild(style);
-
-      document.querySelectorAll('.docs-card-2').forEach(card => {
+      document.querySelectorAll('.mouse-gradient').forEach(card => {
         let rafId;
         card.addEventListener('mousemove', e => {
           if (rafId) return;

@@ -348,6 +348,31 @@ html:has(body[data-theme="dark"]) {
          active:shadow-[0px_1px_1px_rgba(0,0,0,0.15),0px_0px_0px_1px_rgba(96,165,250,0.2)];
 }
 
+.mouse-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse-gradient::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--color-fillBrand-weak) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 50ms ease;
+  z-index: 0;
+  pointer-events: none;
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 50%);
+  transform: translate(-50%, -50%);
+}
+
+.mouse-gradient:hover::before {
+  opacity: 1;
+  transform: none;
+}
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

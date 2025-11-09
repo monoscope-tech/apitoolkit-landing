@@ -324,6 +324,20 @@
         loadConvertKitForm("15d365ef1d");
       })
     });
+
+    // Mouse gradient effect
+    document.querySelectorAll('.mouse-gradient').forEach(card => {
+      let rafId;
+      card.addEventListener('mousemove', e => {
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mouse-x', (e.clientX - rect.left - 150) + 'px');
+          card.style.setProperty('--mouse-y', (e.clientY - rect.top - 150) + 'px');
+          rafId = null;
+        });
+      });
+    });
 </script>
 
 
