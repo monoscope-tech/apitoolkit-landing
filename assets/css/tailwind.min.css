@@ -12,9 +12,11 @@
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -29,6 +31,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
@@ -6920,6 +6923,9 @@
   .bg-fillBrand-weak {
     background-color: var(--color-fillBrand-weak);
   }
+  .bg-fillStrong {
+    background-color: var(--color-fillStrong);
+  }
   .bg-fillWarning-weak {
     background-color: var(--color-fillWarning-weak);
   }
@@ -8910,6 +8916,13 @@
     :is(& > *) {
       --tw-brightness: brightness(0%);
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    }
+  }
+  .group-hover\:block {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        display: block;
+      }
     }
   }
   .group-hover\:h-72 {
@@ -11120,7 +11133,6 @@
   font-weight: var(--font-weight-normal);
 }
 :root, [data-theme] {
-  --backgroundPrimary: rgb(255 255 255);
   --rounded-btn: 0.5rem;
   --tw-prose-body: var(--color-textStrong) !important;
 }

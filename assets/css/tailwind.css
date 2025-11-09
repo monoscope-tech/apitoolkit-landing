@@ -205,9 +205,7 @@
 
 :root,
 [data-theme] {
-  --backgroundPrimary: rgb(255 255 255);
   --rounded-btn: 0.5rem;
-
   --tw-prose-body: var(--color-textStrong) !important;
 }
 

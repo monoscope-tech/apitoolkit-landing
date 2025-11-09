@@ -734,28 +734,36 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
                 <button>close</button>
               </form>
             </dialog>
-            <label class="swap swap-rotate" for="theme-control">
-              <input
-                type="checkbox"
-                id="theme-control"
-                class="theme-controller"
-                value="sunset"
-                _="
-                  on change localStorage.setItem('darkMode', me.checked)
-                  then if  me.checked set body's @data-theme to 'dark' else set body's @data-theme to 'light'
-                "
-              >
-              <svg class="swap-off icon h-5 w-5 text-current fill-current stroke-current opacity-70">
-                <use xlink:href="/assets/deps/fontawesome/light.svg#moon-stars"></use>
-              </svg>
-              <svg class="swap-on icon h-5 w-5 text-current fill-current stroke-current opacity-70">
-                <use xlink:href="/assets/deps/fontawesome/light.svg#sun-bright"></use>
-              </svg>
-            </label>
+            <button id="theme-btn" class="relative group p-2 hover:bg-fillWeak rounded-lg transition-colors" title="">
+              <svg class="icon h-5 w-5 opacity-70"><use id="theme-icon" xlink:href=""></use></svg>
+              <div class="hidden group-hover:block absolute right-0 top-full mt-2 px-3 py-2 bg-fillStrong text-textInverse-strong text-sm rounded-lg whitespace-nowrap shadow-lg">
+                Switch to <span id="theme-next"></span>
+              </div>
+            </button>
             <script>
-              if (localStorage.getItem('darkMode') === 'true') {
-                document.getElementById('theme-controller').checked = true;
-              }
+              (function() {
+                const modes = ['light', 'dark', 'system'];
+                const icons = {light: '/assets/deps/fontawesome/light.svg#sun-bright', dark: '/assets/deps/fontawesome/light.svg#moon-stars', system: '/assets/deps/fontawesome/light.svg#circle-half-stroke'};
+                const btn = document.getElementById('theme-btn');
+                const icon = document.getElementById('theme-icon');
+                const next = document.getElementById('theme-next');
+
+                function getMode() { return localStorage.getItem('themeMode') || 'light'; }
+                function getTheme(m) { return m === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : m; }
+                function update(m) {
+                  icon.setAttributeNS('http://www.w3.org/1999/xlink', 'href', icons[m]);
+                  const n = modes[(modes.indexOf(m) + 1) % 3];
+                  next.textContent = n.charAt(0).toUpperCase() + n.slice(1);
+                  btn.title = 'Switch to ' + n;
+                  const t = getTheme(m);
+                  document.body.setAttribute('data-theme', t);
+                  localStorage.setItem('darkMode', t === 'dark' ? 'true' : 'false');
+                }
+
+                btn.onclick = () => { const n = modes[(modes.indexOf(getMode()) + 1) % 3]; localStorage.setItem('themeMode', n); update(n); };
+                matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => getMode() === 'system' && update('system'));
+                update(getMode());
+              })();
             </script>
           </div>
         </div>
