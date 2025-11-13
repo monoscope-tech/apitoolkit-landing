@@ -190,6 +190,25 @@
   matchMedia('(prefers-color-scheme: dark)').onchange = () => {
     if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system');
   };
+
+  // Fetch GitHub stars
+  async function fetchGitHubStars() {
+    try {
+      const response = await fetch('https://api.github.com/repos/monoscope-tech/monoscope');
+      const data = await response.json();
+      const stars = data.stargazers_count;
+      const formattedStars = stars >= 1000 ? (stars / 1000).toFixed(1) + 'k' : stars;
+
+      // Update both main nav and docs nav star counts
+      const starsElement = document.getElementById('github-stars');
+      const starsDocsElement = document.getElementById('github-stars-docs');
+      if (starsElement) starsElement.textContent = formattedStars;
+      if (starsDocsElement) starsDocsElement.textContent = formattedStars;
+    } catch (error) {
+      console.error('Failed to fetch GitHub stars:', error);
+    }
+  }
+  fetchGitHubStars();
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
