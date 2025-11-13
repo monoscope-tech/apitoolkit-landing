@@ -169,7 +169,7 @@ platforms:
 <script src="https://unpkg.com/@rive-app/canvas"></script>
 <section class="flex flex-col space-y-48 items-center">
   <section class="space-y-20 mt-8 sm:mt-32">
-      <div class="flex flex-col md:flex-row max-w-7xl w-full gap-5 px-3">
+      <div class="flex flex-col md:flex-row max-w-8xl w-full gap-5 px-3">
         <div class="space-y-10 flex-1">
           <h1 class="text-[3.0rem]  font-normal leading-tight sm:leading-none sm:space-y-3">
             <span class="block">Find and fix production issues<span class="text-textDisabled">,</span></span>
@@ -239,7 +239,7 @@ platforms:
         </script>
       </div>
 
-      <div class="max-w-7xl px-3 w-full text-textWeak">
+      <div class="max-w-8xl px-3 w-full text-textWeak">
         <div class="space-y-8">
           <p class="">Trusted by 5000+ developers at proactive engineering companies</p>
           <div class="grid grid-cols-4 sm:grid-cols-8 *:col-span-1  gap-4 md:gap-8  items-center *:brightness-0 *:dark:invert opacity-50">
@@ -280,7 +280,7 @@ platforms:
       </div>
     </section>
 
-    <div class="max-w-7xl px-3  py-24 w-full text-xl sm:text-3xl leading-relaxed flex flex-col items-start justify-begin text-textWeak">
+    <div class="max-w-8xl px-3  py-24 w-full text-xl sm:text-3xl leading-relaxed flex flex-col items-start justify-begin text-textWeak">
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/split-type"></script>
@@ -313,7 +313,7 @@ platforms:
     <div id="monitoring-section" class="w-full">
       <!-- Sticky header and tabs wrapper -->
       <div class="sticky top-10 md:top-16 z-10  pt-5 pb-1 bg-bgBase/95 backdrop-blur-lg">
-        <div class="max-w-7xl mx-auto px-3 text-textWeak space-y-5">
+        <div class="max-w-8xl mx-auto px-3 text-textWeak space-y-5">
           <h2 class="text-2xl md:text-4xl leading-tight font-normal text-textStrong">Monitoring and Observability<span class="text-textDisabled">, <br/>built to know what's happening, the moment it happens</span></h2>
 
           <div role="tablist" class="tabs tabs-box tabs-outline inline-flex">
@@ -328,11 +328,11 @@ platforms:
       </div>
 
       <!-- Scrollable content sections -->
-      <div class="max-w-7xl mx-auto px-3 text-textWeak pt-4">
+      <div class="max-w-8xl mx-auto px-3 text-textWeak pt-4">
         {% for platform in this.frontmatter.platforms %}
         <!-- {{platform.title}} -->
         <div id="{{platform.id}}" class="scroll-section min-h-screen py-16 flex gap-5 flex-col md:flex-row" data-section-id="{{platform.id}}">
-          <div class="sm:w-1/4 divide-y divide-y-strokeDisabled [&_p]:leading-normal">
+          <div class="sm:w-1/4 divide-y divide-strokeWeak [&_p]:leading-normal">
            {% for c in platform.children %}
             <label class="flex px-2 py-6 gap-3 group cursor-pointer hover:bg-fillBrand-weak rounded-lg">
               <input type="radio" name="{{platform.id}}" {% if forloop.first %}checked{% endif %}  class="hidden" value="1"/>
@@ -460,7 +460,7 @@ platforms:
 
     <!-- Powered by AI -->
     <div class="w-full text-textWeak space-y-5">
-      <div class="max-w-7xl mx-auto px-3 flex justify-between">
+      <div class="max-w-8xl mx-auto px-3 flex justify-between">
         <div class="flex-1 space-y-5">
           <h2 class="text-4xl leading-tight font-normal text-textStrong">Put AI to work. <span class="text-textDisabled">seriously</span></h2>
           <p class="hidden max-w-prose text-2xl leading-normal">Generate queries, create visualizations, fix bugs, monitor logs, payloads, and kickstart whole analyses - all from a prompt.</p>
@@ -501,7 +501,7 @@ platforms:
     </div>
 
     <!-- FEATURES -->
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5">
+    <div class="max-w-8xl px-3 w-full text-textWeak space-y-5">
       <h2 class="text-[2rem] leading-tight font-normal text-textStrong">Built with features that matter to engineers like us</h2>
       <p class="text-xl leading-normal">Collect, store, and analyze every single log or event <br/>without limits on a platform that gives you complete control.</p>
 
@@ -618,7 +618,7 @@ platforms:
     </div>
 
     <!-- FLEXIBLE DEPLOYMENTS-->
-    <div class="max-w-7xl px-3 w-full text-textWeak space-y-5">
+    <div class="max-w-8xl px-3 w-full text-textWeak space-y-5">
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Flexible deployment options <span class="text-textDisabled">for every company</span></h2>
       <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, APItoolkit operates <br/>within your business and regulatory constraints.</p>
       <div>
@@ -715,7 +715,7 @@ platforms:
 
     <!-- INTEGRATIONS-->
     <div class="text-textWeak space-y-5 w-full flex flex-col items-center justify-center">
-      <div class="max-w-7xl px-3 w-full space-y-5">
+      <div class="max-w-8xl px-3 w-full space-y-5">
         <h2 class="text-4xl leading-tight font-normal text-textStrong">780+ Integrations with your favorite tech stacks, <br/><span class="text-textDisabled">powered by OpenTelemetry</span></h2>
         <a class="block text-textBrand underline underline-offset-2">View all integrations.</a>
       </div>
@@ -761,7 +761,7 @@ platforms:
     </div>
 
     <!-- REAL RESULTS FROM CUSTOMERS -->
-    <div class="max-w-7xl px-3 w-full text-textStrong space-y-5">
+    <div class="max-w-8xl px-3 w-full text-textStrong space-y-5">
       <h2 class="text-4xl leading-tight font-normal text-textStrong">Real results for <span class="text-textDisabled">real companies<span></h2>
       <a href="https://www.trustpilot.com/review/apitoolkit.io" target="_blank" rel="noopener noreferrer" class="block text-textBrand underline underline-offset-2">View all reviews.</a>
       <div class="relative hidden sm:flex items-end justify-end !-mt-5b">

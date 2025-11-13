@@ -16,6 +16,9 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
+  /* Custom max-width */
+  --max-width-8xl: 88rem;
+
   /* Simple colors */
   --color-gray-25: oklch(99.1% 0.002 247);
   --color-gray-150: oklch(94.5% 0.005 247);

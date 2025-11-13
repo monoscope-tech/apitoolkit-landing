@@ -21,7 +21,7 @@ faqs:
 ```=html
 <div class="w-full">
     <header class="w-full mt-32">
-        <div class="max-w-7xl mx-auto px-3">
+        <div class="max-w-8xl mx-auto px-3">
             <div class="w-full flex flex-col items-center text-center gap-5 text-textWeak">
                 <h1 class="text-4xl leading-tight font-normal text-textStrong">Flexible pricing <span class="text-textDisabled">for every company</span></h1>
                 <p class="text-2xl leading-normal">Regardless of your company's size or compliance requirements, monoscope operates <br/>within your business and regulatory constraints.</p>
@@ -29,7 +29,7 @@ faqs:
             </div>
         </div>
     </header>
-    <div class="max-w-7xl mx-auto px-3">
+    <div class="max-w-8xl mx-auto px-3">
         <section class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 pt-5 pb-12">
 
             <!-- MONOSCOPE CLOUD -->
@@ -320,7 +320,7 @@ faqs:
         </section>
 
         <!-- Trusted by developers section -->
-        <div class="max-w-7xl px-3 w-full text-textWeak py-12 mx-auto">
+        <div class="max-w-8xl px-3 w-full text-textWeak py-12 mx-auto">
             <div class="space-y-8">
                 <p class="">Trusted by 5000+ developers at proactive engineering companies</p>
                 <div class="grid grid-cols-4 sm:grid-cols-8 *:col-span-1  gap-4 md:gap-8  items-center *:brightness-0 *:dark:invert opacity-50">

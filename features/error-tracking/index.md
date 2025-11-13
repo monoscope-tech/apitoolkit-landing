@@ -6,7 +6,7 @@ hide-date: true
 
 ```=html
 <section class="flex flex-col items-center mt-8 sm:mt-32 px-3">
-  <div class="max-w-7xl w-full space-y-10">
+  <div class="max-w-8xl w-full space-y-10">
     <div class="space-y-10">
       <span class="inline-block text-textWeak uppercase tracking-wide text-xs font-semibold">Error Tracking</span>
       <h1 class="text-[3.0rem] font-normal leading-tight sm:leading-none">
@@ -25,7 +25,7 @@ hide-date: true
   </div>
 </section>
 <section class="flex flex-col items-center py-20">
-  <div class="max-w-7xl w-full px-3 space-y-20">
+  <div class="max-w-8xl w-full px-3 space-y-20">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="space-y-6">
         <h2 class="text-3xl font-normal">See All Errors and API Changelog at a Glance</h2>

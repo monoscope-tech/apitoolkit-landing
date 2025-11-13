@@ -86,6 +86,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --max-width-8xl: 88rem;
     --color-bgAlternate: oklch(97.7% 0.006 247);
     --color-bgBase: oklch(99.1% 0.002 247);
     --color-bgInverse: oklch(16.4% 0.012 263);
@@ -6081,8 +6082,8 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
-  .max-w-7xl {
-    max-width: var(--container-7xl);
+  .max-w-8xl {
+    max-width: var(--max-width-8xl);
   }
   .max-w-\[85ch\] {
     max-width: 85ch;
@@ -6524,6 +6525,11 @@
   .divide-gray-200 {
     :where(& > :not(:last-child)) {
       border-color: var(--color-gray-200);
+    }
+  }
+  .divide-strokeWeak {
+    :where(& > :not(:last-child)) {
+      border-color: var(--color-strokeWeak);
     }
   }
   .self-center {
