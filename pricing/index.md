@@ -121,35 +121,30 @@ faqs:
                 <div class="mt-8 mb-6">
                     <p class="text-sm font-medium text-textDisabled dark:text-textWeak uppercase tracking-wide">SELF-HOSTED</p>
                     <h3 class="text-2xl font-semibold text-textStrong">Bring your own servers</h3>
-                    <a href="https://github.com/monoscope-tech/monoscope" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-sm text-textWeak hover:text-textBrand transition-colors">
-                        <svg class="w-4 h-4"><use xlink:href="/assets/deps/sprite.svg#github"></use></svg>
-                        <span>Star us on GitHub</span>
-                    </a>
                 </div>
 
                 <div class="mb-6 space-y-4">
                     <div>
                         <p class="text-sm font-semibold text-textStrong uppercase tracking-wide mb-2">Community Edition (Free)</p>
                         <ul class="space-y-2 text-base list-disc list-inside marker:text-iconSuccess">
-                            <li>Deploy to your own servers</li>
                             <li><strong>100% open source</strong> (Apache 2.0)</li>
                             <li>All core monitoring features</li>
-                            <li>Basic authentication</li>
+                            <li>Deploy to your own servers</li>
                             <li>Complete data control</li>
                         </ul>
                     </div>
+                    <br/>
                     <div>
                         <p class="text-sm font-semibold text-textStrong uppercase tracking-wide mb-2">Enterprise Edition</p>
                         <ul class="space-y-2 text-base list-disc list-inside marker:text-iconBrand">
                             <li>Premium features & integrations</li>
-                            <li><strong>SSO</strong> & advanced authentication</li>
+                            <li><strong>SSO</strong> & advanced auth</li>
                             <li><strong>Priority support</strong> & SLA</li>
                             <li>Advanced security & compliance</li>
-                            <li>Ideal for <strong>regulatory requirements</strong></li>
                         </ul>
                     </div>
                 </div>
-
+                <br/>
                 <div class="border-t border-strokeWeak pt-6 space-y-4 mt-auto">
                     <div class="space-y-2">
                         <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>

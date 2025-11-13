@@ -685,28 +685,46 @@ platforms:
           </div>
         </div>
 
-        <div class="rounded-xl border border-strokeWarning-weak bg-fillWarning-weak p-8 flex flex-col">
+        <div class="rounded-xl border border-strokeWarning-weak bg-fillWarning-weak p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fillSuccess-strong text-textInverse-strong px-4 py-1 rounded-full text-sm font-medium">OPEN SOURCE</div>
           <div class="inline-block p-3 bg-fillBrand-weak rounded-full w-fit"><svg class="w-5 h-5 text-iconBrand"><use xlink:href="/assets/deps/sprite.svg#server"></use></svg></div>
           <div class="mt-8 mb-6">
             <p class="text-sm font-medium text-textDisabled uppercase tracking-wide">SELF-HOSTED</p>
             <h3 class="text-2xl font-semibold text-textStrong">Bring your own servers</h3>
           </div>
 
-          <ul class="space-y-3 text-lg mb-8 flex-1 list-disc list-inside marker:text-iconBrand">
-            <li>Deploy to your own servers</li>
-            <li><strong>Open source</strong> community edition available</li>
-            <li>Enterprise edition with premium features & Support</li>
-            <li>Ideal for <strong>regulatory compliance</strong></li>
-            <li>Complete data control</li>
-          </ul>
-
-          <div class="border-t border-strokeWeak pt-6 space-y-4">
+          <div class="mb-6 space-y-4">
+            <div>
+              <p class="text-sm font-semibold text-textStrong uppercase tracking-wide mb-2">Community Edition (Free)</p>
+              <ul class="space-y-2 text-base list-disc list-inside marker:text-iconSuccess">
+                <li><strong>100% open source</strong> (Apache 2.0)</li>
+                <li>All core monitoring features</li>
+                <li>Deploy to your own servers</li>
+                <li>Complete data control</li>
+              </ul>
+            </div>
+            <br/>
+            <div>
+              <p class="text-sm font-semibold text-textStrong uppercase tracking-wide mb-2">Enterprise Edition</p>
+              <ul class="space-y-2 text-base list-disc list-inside marker:text-iconBrand">
+                <li>Premium features & integrations</li>
+                <li><strong>SSO</strong> & advanced auth</li>
+                <li><strong>Priority support</strong> & SLA</li>
+                <li>Advanced security & compliance</li>
+              </ul>
+            </div>
+          </div>
+          <br/>
+          <div class="border-t border-strokeWeak pt-6 space-y-4 mt-auto">
             <div class="space-y-2">
               <p class="text-sm text-textDisabled uppercase tracking-wide">Pricing</p>
-              <p class="text-base text-textWeak">Community Edition: <strong class="text-textStrong text-2xl">Free</strong></p>
+              <p class="text-base text-textWeak">Community Edition: <strong class="text-textStrong text-2xl">Free</strong> <span class="text-sm">(forever)</span></p>
               <p class="text-base text-textWeak">Enterprise: <strong class="text-textStrong">starts at $500/month</strong></p>
             </div>
-            <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" class="block text-center py-3 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors">Talk to an engineer</a>
+            <div class="flex flex-col gap-2">
+              <a href="https://github.com/monoscope-tech/monoscope" target="_blank" rel="noopener noreferrer" class="block text-center py-3 px-6 bg-fillBrand-strong text-textInverse-strong rounded-lg font-medium hover:bg-fillBrand-weak transition-colors">View on GitHub</a>
+              <a href="https://calendar.app.google/1a4HG5GZYv1sjjZG6" target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 px-6 bg-transparent text-fillBrand-strong border border-fillBrand-strong rounded-lg font-medium hover:bg-fillBrand-weak hover:text-textStrong transition-colors text-sm">Discuss Enterprise with an engineer</a>
+            </div>
           </div>
         </div>
 
